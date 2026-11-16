@@ -94,7 +94,7 @@ class ConfigFileChangeListener {
 
 public:
     ConfigFileChangeListener();
-    ~ConfigFileChangeListener();
+    virtual ~ConfigFileChangeListener();
     virtual void on_config_file_changed(ConfigManager* new_config_manager) = 0;
     static void notify_config_file_changed(ConfigManager* new_config_manager);
 };
@@ -240,7 +240,7 @@ protected:
 
 public:
 
-    QString get_view_stylesheet_type_name() {
+    QString get_view_stylesheet_type_name() override {
         return "QTableView";
     }
 
@@ -351,7 +351,7 @@ public:
 
     }
 
-    virtual std::wstring get_selected_text() {
+    virtual std::wstring get_selected_text() override {
         auto index = this->get_selected_index();
 
         if (index) {
@@ -377,7 +377,7 @@ public:
         }
     }
 
-    void on_select(const QModelIndex& index) {
+    void on_select(const QModelIndex& index) override {
         this->hide();
         this->parentWidget()->setFocus();
         auto source_index = this->proxy_model->mapToSource(index);
@@ -514,7 +514,7 @@ protected:
 
 public:
 
-    QString get_view_stylesheet_type_name() {
+    QString get_view_stylesheet_type_name() override {
         return "QListView";
     }
 
@@ -556,7 +556,7 @@ public:
         }
     }
 
-    void on_select(const QModelIndex& index) {
+    void on_select(const QModelIndex& index) override {
         this->hide();
         this->parentWidget()->setFocus();
         auto source_index = this->proxy_model->mapToSource(index);

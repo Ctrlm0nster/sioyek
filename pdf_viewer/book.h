@@ -53,6 +53,7 @@ struct OpenedBookState {
 };
 
 struct Annotation {
+    virtual ~Annotation() = default;
     std::string creation_time;
     std::string modification_time;
     std::string uuid;
@@ -83,8 +84,8 @@ struct Mark : Annotation {
     std::optional<float> x_offset = {};
     std::optional<float> zoom_level = {};
 
-    QJsonObject to_json(std::string doc_checksum) const;
-    void from_json(const QJsonObject& json_object);
+    QJsonObject to_json(std::string doc_checksum) const override;
+    void from_json(const QJsonObject& json_object) override;
     void add_to_tuples(std::vector<std::pair<std::string, QVariant>>& tuples) override;
 };
 
@@ -107,8 +108,8 @@ struct BookMark : Annotation {
     AbsoluteDocumentPos begin_pos();
     AbsoluteDocumentPos end_pos();
     AbsoluteRect rect();
-    QJsonObject to_json(std::string doc_checksum) const;
-    void from_json(const QJsonObject& json_object);
+    QJsonObject to_json(std::string doc_checksum) const override;
+    void from_json(const QJsonObject& json_object) override;
     void add_to_tuples(std::vector<std::pair<std::string, QVariant>>& tuples) override;
     float get_y_offset() const;
 
@@ -128,9 +129,9 @@ struct Highlight : Annotation {
     char type;
     std::vector<AbsoluteRect> highlight_rects;
 
-    QJsonObject to_json(std::string doc_checksum) const;
+    QJsonObject to_json(std::string doc_checksum) const override;
     void add_to_tuples(std::vector<std::pair<std::string, QVariant>>& tuples) override;
-    void from_json(const QJsonObject& json_object);
+    void from_json(const QJsonObject& json_object) override;
 
 };
 
@@ -249,8 +250,8 @@ struct Portal : Annotation {
 
     bool is_visible() const;
 
-    QJsonObject to_json(std::string doc_checksum) const;
-    void from_json(const QJsonObject& json_object);
+    QJsonObject to_json(std::string doc_checksum) const override;
+    void from_json(const QJsonObject& json_object) override;
     void add_to_tuples(std::vector<std::pair<std::string, QVariant>>& tuples) override;
 
     AbsoluteRect get_rectangle() const;

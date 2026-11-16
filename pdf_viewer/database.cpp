@@ -1512,7 +1512,9 @@ void DatabaseManager::export_json(std::wstring json_file_path, CachedChecksummer
 
 
     QFile output_file(QString::fromStdWString(json_file_path));
-    output_file.open(QFile::WriteOnly);
+    if (!output_file.open(QFile::WriteOnly)) {
+        return;
+    }
     output_file.write(json_document.toJson());
     output_file.close();
 }
@@ -1539,7 +1541,9 @@ void DatabaseManager::import_json(std::wstring json_file_path, CachedChecksummer
     std::lock_guard<std::recursive_mutex> lock(db_mutex);
 
     QFile json_file(QString::fromStdWString(json_file_path));
-    json_file.open(QFile::ReadOnly);
+    if (!json_file.open(QFile::ReadOnly)) {
+        return;
+    }
     QJsonDocument json_document = QJsonDocument().fromJson(json_file.readAll());
     json_file.close();
 

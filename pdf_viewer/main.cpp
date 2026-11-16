@@ -255,7 +255,19 @@ void configure_paths() {
     Path home_path(QDir::homePath().toStdWString());
     standard_data_path = home_path.slash(L".local").slash(L"share").slash(L"sioyek");
     Path standard_config_path = Path(L"/etc/sioyek");
+#ifdef SIOYEK_INSTALL_DATA_DIR
+    Path read_only_data_path(utf8_decode(SIOYEK_INSTALL_DATA_DIR));
+    Path installed_resources = parent_path.slash(utf8_decode(SIOYEK_RELATIVE_DATA_DIR));
+    if (installed_resources.slash(L"prefs.config").file_exists()) {
+        read_only_data_path = installed_resources;
+    }
+    Path build_resources = parent_path.slash(L"resources");
+    if (build_resources.slash(L"prefs.config").file_exists()) {
+        read_only_data_path = build_resources;
+    }
+#else
     Path read_only_data_path = Path(L"/usr/share/sioyek");
+#endif
     standard_data_path.create_directories();
 
     default_config_path = read_only_data_path.slash(L"prefs.config");

@@ -1,0 +1,92 @@
+name: Linux CMake
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: linux-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  arch:
+    timeout-minutes: 45
+    runs-on: ubuntu-24.04
+    container: archlinux:base-devel
+    strategy:
+      fail-fast: false
+      matrix:
+        compiler: [gcc, clang]
+    env:
+      CC: ${{ matrix.compiler == 'clang' && 'clang' || 'gcc' }}
+      CXX: ${{ matrix.compiler == 'clang' && 'clang++' || 'g++' }}
+    steps:
+      - name: Install dependencies in disposable container
+        run: pacman -Syu --noconfirm --needed git python cmake ninja pkgconf clang namcap desktop-file-utils qt6-base qt6-declarative qt6-svg qt6-speech harfbuzz sqlite zlib
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with:
+          fetch-depth: 0 # commit-count versions require full history
+          submodules: recursive
+          persist-credentials: false
+      - name: Build real package as unprivileged user
+        shell: bash
+        run: |
+          set -euo pipefail
+          useradd -m builder
+          chown -R builder:builder "$GITHUB_WORKSPACE"
+          runuser -u builder -- python3 scripts/prepare-arch-package.py --release
+          cd build/arch
+          runuser -u builder -- env CC="$CC" CXX="$CXX" makepkg --noconfirm --log
+          runuser -u builder -- makepkg --printsrcinfo > .SRCINFO
+      - name: Validate package, source and compiler configuration
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd build/arch
+          package=$(find "$PWD" -maxdepth 1 -name 'sioyek-ctrlm0nster-[0-9]*.pkg.tar.zst')
+          test -n "$package"
+          compiler=$(sed -n 's/^CMAKE_CXX_COMPILER:[^=]*=//p' src/build/CMakeCache.txt)
+          test "$(readlink -f "$(command -v "$compiler")")" = "$(readlink -f "$(command -v "$CXX")")"
+          cd ../..
+          python3 scripts/verify-release.py "$package" build/arch/sioyek-source.tar.gz | tee build/arch/verification.log
+          namcap build/arch/PKGBUILD "$package" | tee build/arch/namcap.log
+          ! grep -q ' E:' build/arch/namcap.log
+          if runuser -u builder -- unshare --user --map-root-user true; then
+            runuser -u builder -- python3 scripts/test-package-lifecycle.py "$package" | tee build/arch/lifecycle.log
+          else
+            echo 'SKIPPED: runner disallows unprivileged user namespaces' | tee build/arch/lifecycle.log
+          fi
+      - name: Collect release candidates and evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          destination="build/release-${{ matrix.compiler }}"
+          mkdir -p "$destination"
+          cp build/arch/*.pkg.tar.zst build/arch/sioyek-source.tar.gz build/arch/PKGBUILD build/arch/.SRCINFO "$destination/"
+          cp build/arch/*.log build/arch/src/build/CMakeCache.txt "$destination/"
+          pacman -Q > "$destination/dependencies.txt"
+          cd "$destination"
+          sha256sum -- *.pkg.tar.zst sioyek-source.tar.gz PKGBUILD .SRCINFO > SHA256SUMS
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: arch-${{ matrix.compiler }}-${{ github.sha }}
+          path: build/release-${{ matrix.compiler }}/
+          include-hidden-files: true # .SRCINFO is deliberately included
+          if-no-files-found: error
+          retention-days: 14
+  sanitizer-tests:
+    timeout-minutes: 15
+    runs-on: ubuntu-24.04
+    container: archlinux:base-devel
+    steps:
+      - name: Install dependencies in disposable container
+        run: pacman -Syu --noconfirm --needed git cmake ninja pkgconf clang compiler-rt qt6-base qt6-declarative qt6-svg qt6-speech harfbuzz sqlite zlib
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with:
+          persist-credentials: false
+      - name: Configure ASan and UBSan tests
+        run: cmake -S . -B build/sanitize -G Ninja -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -DSIOYEK_SANITIZERS=ON -DSIOYEK_BUILD_TESTS=ON
+      - name: Build and run focused runtime checks
+        run: |
+          cmake --build build/sanitize --parallel 2 --target sioyek_modern_api_test
+          ctest --test-dir build/sanitize --output-on-failure

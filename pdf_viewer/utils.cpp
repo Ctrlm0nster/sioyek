@@ -556,7 +556,7 @@ bool is_index_reverse_reference_number(const std::vector<fz_stext_char*>& flat_c
     if (flat_chars[index]->c > 128) return false;
     if (!std::isdigit(flat_chars[index]->c)) return false;
 
-    std::vector<char> chars_between_last_dot_and_index;
+    std::vector<int> chars_between_last_dot_and_index;
 
     int current_index = index-1;
     bool reached_dot = false;
@@ -3580,7 +3580,7 @@ QStringList extract_paper_string_from_json_response(QJsonObject json_object, std
     return extract_paper_data_from_json_response(json_object, parts);
 }
 
-QString file_size_to_human_readable_string(int file_size) {
+QString file_size_to_human_readable_string(qint64 file_size) {
     if (file_size < 1000) {
         return QString::number(file_size);
     }
@@ -3590,7 +3590,7 @@ QString file_size_to_human_readable_string(int file_size) {
     else if (file_size < 1000 * 1000 * 1000) {
         return QString::number(file_size / (1000 * 1000)) + "M";
     }
-    else if (file_size < 1000 * 1000 * 1000 * 1000) {
+    else if (file_size < 1000LL * 1000 * 1000 * 1000) {
         return QString::number(file_size / (1000 * 1000 * 1000)) + "G";
     }
     else {
@@ -3706,7 +3706,7 @@ std::wstring get_paper_name_from_reference_text(std::wstring reference_text) {
 
         QString str = QString::fromStdWString(reference_text);
         //QRegularExpression reference_ending_dot_regex = QRegularExpression("(\.\w*In )|(\.\w*[aA]r[xX]iv )|(\.\w*[aA]r[X]iv )");
-        QRegularExpression reference_ending_dot_regex = QRegularExpression("(\\.\\w*In )|(\\.\w*[aA]r[xX]iv )");
+        QRegularExpression reference_ending_dot_regex = QRegularExpression(R"((\.\w*In )|(\.\w*[aA]r[xX]iv ))");
 
         int ending_index = str.lastIndexOf(reference_ending_dot_regex);
         if (ending_index == -1) {

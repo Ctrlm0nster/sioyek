@@ -6,7 +6,7 @@ Sioyek is a PDF viewer with a focus on textbooks and research papers.
 
 ## Q: There are build errors with Qt 5.*.
 
-A: If you are building the development branch you need to use Qt 6.7 or 6.8.
+A: If you are building the development branch you need to use Qt 6.7 or newer.
 
 ## Q: On MacOS I get "sioyek is damaged and cannot be opened. It is recommended to eject the image.".
 
@@ -125,6 +125,13 @@ You can customize all key bindings and some UI elements by editing `keys_user.co
 
 ### Linux
 
+For the preferred Arch Linux / Qt 6 CMake + Ninja workflow, see
+[BUILDING.md](BUILDING.md). The qmake instructions below are legacy workflows.
+For independent Arch packages, versioning and upstream updates, see
+[PACKAGING.md](PACKAGING.md). Release gates and signing are documented in
+[RELEASE.md](RELEASE.md); fork changes are tracked in [CHANGELOG.md](CHANGELOG.md).
+
+
 #### Fedora
 
 Run the following commands to install dependencies, clone the repository and compile sioyek on Fedora (tested on Fedora Workstation 36).
@@ -191,3 +198,7 @@ sudo codesign --force --sign - --deep /Applications/sioyek.app
 If you enjoy sioyek, please consider donating to support its development.
 
 <a href="https://www.buymeacoffee.com/ahrm" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+
+Release verification, approval gates and signing are described in
+[RELEASE.md](RELEASE.md). Third-party attribution and license provenance are in
+[LICENSES.md](LICENSES.md).

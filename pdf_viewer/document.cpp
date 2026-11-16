@@ -2072,7 +2072,7 @@ void Document::get_text_selection(fz_context* ctx, AbsoluteDocumentPos selection
                     selected_text.push_back(current_char->c);
                     selected_characters.push_back(to_absolute(i, current_char->quad));
                 }
-                if ((current_char->next == nullptr)) {
+                if (current_char->next == nullptr) {
                     if (current_char->c != '-')
                     {
                         selected_text.push_back(' ');
@@ -3849,7 +3849,9 @@ void Document::persist_annotations(bool force) {
     QJsonDocument json_document(book_object);
 
     QFile output_file(QString::fromStdWString(get_annotations_file_path()));
-    output_file.open(QFile::WriteOnly);
+    if (!output_file.open(QFile::WriteOnly)) {
+        return;
+    }
     output_file.write(json_document.toJson());
     output_file.close();
 
@@ -3898,7 +3900,9 @@ void Document::persist_drawings(bool force) {
     json_doc.setObject(root_object);
 
     QFile json_file(QString::fromStdWString(drawing_file_path));
-    json_file.open(QFile::WriteOnly);
+    if (!json_file.open(QFile::WriteOnly)) {
+        return;
+    }
     json_file.write(json_doc.toJson());
     json_file.close();
 
@@ -4531,7 +4535,7 @@ int Document::get_page_text_and_line_rects_after_rect(int page_number,
                 line_rects.push_back(line->bbox);
                 char_rects.push_back(fz_rect_from_quad(chr->quad));
 
-                if ((chr->next == nullptr)) {
+                if (chr->next == nullptr) {
                     text.push_back(' ');
 
                     line_rects.push_back(line->bbox);

@@ -397,3 +397,13 @@ flake*
 # ctags
 tags
 .vscode
+
+# Out-of-source CMake/Ninja development trees
+/build-*/
+/CMakeUserPresets.json
+
+# Arch packaging artifacts (recipes live in packaging/arch)
+*.pkg.tar.*
+
+# Maintained CMake modules (generated *.cmake files remain ignored)
+!/cmake/*.cmake

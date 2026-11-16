@@ -1,0 +1,54 @@
+# Maintainer: Ctrlm0nster (https://github.com/Ctrlm0nster)
+# Generated source snapshot/checksum: scripts/prepare-arch-package.py
+pkgname=sioyek-ctrlm0nster
+pkgver=2.0.0.r0.g000000000000
+pkgrel=3
+pkgdesc='Keyboard-driven PDF reader (Ctrlm0nster fork)'
+arch=('x86_64')
+url='https://github.com/Ctrlm0nster/sioyek'
+license=('GPL-3.0-or-later' 'AGPL-3.0-or-later' 'MIT' 'BSL-1.0' 'OFL-1.1')
+depends=('libgcc' 'libstdc++' 'glibc' 'qt6-base>=6.7' 'qt6-declarative' 'qt6-svg'
+         'qt6-speech' 'harfbuzz' 'sqlite' 'zlib' 'libglvnd')
+# qt6-svg supplies the dynamically loaded SVG icon/image plugins.
+makedepends=('cmake' 'ninja' 'pkgconf')
+optdepends=('qt6-wayland: native Wayland support'
+            'xorg-xwayland: X11 backend on Wayland'
+            'speech-dispatcher: speech output backend')
+provides=('sioyek')
+conflicts=('sioyek' 'sioyek-git')
+source=('sioyek-source.tar.gz')
+sha256sums=('GENERATED_BY_PREPARE_SCRIPT')
+# Avoid LTO across independently built MuPDF archives. Keep other makepkg flags.
+options=('!lto')
+
+build() {
+  cmake -S sioyek-source -B build -G Ninja \
+    -DCMAKE_BUILD_TYPE=None -DCMAKE_INSTALL_PREFIX=/usr -DSIOYEK_BUILD_TESTS=ON \
+    -DSIOYEK_MUPDF_JOBS="${SIOYEK_JOBS:-2}"
+  cmake --build build --parallel "${SIOYEK_JOBS:-2}"
+}
+
+check() {
+  ctest --test-dir build --output-on-failure
+  ./build/sioyek --version
+  test -s build/resources/tutorial.pdf
+  cmp sioyek-source/pdf_viewer/prefs.config build/resources/prefs.config
+}
+
+package() {
+  DESTDIR="$pkgdir" cmake --install build
+  install -Dm644 sioyek-source/LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+  install -Dm644 sioyek-source/mupdf/COPYING "$pkgdir/usr/share/licenses/$pkgname/MuPDF-COPYING"
+  install -Dm644 sioyek-source/resources/fonts/OFL.txt "$pkgdir/usr/share/licenses/$pkgname/JetBrainsMono-OFL.txt"
+  install -Dm644 sioyek-source/fzf/LICENSE "$pkgdir/usr/share/licenses/$pkgname/fzf-LICENSE"
+  install -Dm644 sioyek-source/pdf_viewer/rapidfuzz-LICENSE "$pkgdir/usr/share/licenses/$pkgname/RapidFuzz-LICENSE"
+  install -Dm644 sioyek-source/packaging/arch/THIRD_PARTY_NOTICES.txt "$pkgdir/usr/share/licenses/$pkgname/THIRD_PARTY_NOTICES.txt"
+  # Preserve the bundled libraries/font notices alongside the binary, not just
+  # in the separate corresponding-source archive. Keep component paths intact.
+  while IFS= read -r -d '' notice; do
+    install -Dm644 "$notice" "$pkgdir/usr/share/licenses/$pkgname/${notice#sioyek-source/}"
+  done < <(find sioyek-source/mupdf/thirdparty sioyek-source/mupdf/resources/fonts \
+    -type f \( -iname 'copying*' -o -iname 'license' -o -iname 'license.*' \
+      -o -iname 'notice*' -o -iname 'ofl*' \) -print0)
+  install -Dm644 sioyek-source/SOURCE-MANIFEST.txt "$pkgdir/usr/share/doc/$pkgname/SOURCE-MANIFEST.txt"
+}

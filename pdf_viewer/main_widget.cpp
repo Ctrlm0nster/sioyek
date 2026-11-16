@@ -569,8 +569,8 @@ void MainWidget::set_overview_link(PdfLink link) {
 }
 
 void MainWidget::handle_selection_mouse_edge_scrolling(QMouseEvent* mouse_event){
-    bool are_we_above_the_window = mapFromGlobal(mouse_event->globalPos()).y() < 30;
-    bool are_we_below_the_window = mapFromGlobal(mouse_event->globalPos()).y() > main_window_height - 30;
+    bool are_we_above_the_window = mapFromGlobal(mouse_event->globalPosition().toPoint()).y() < 30;
+    bool are_we_below_the_window = mapFromGlobal(mouse_event->globalPosition().toPoint()).y() > main_window_height - 30;
     if (are_we_above_the_window){
         validation_interval_timer->setInterval(0);
         set_fixed_velocity(SMOOTH_MOVE_MAX_VELOCITY, 0);
@@ -1157,12 +1157,12 @@ MainWidget::MainWidget(fz_context* mupdf_context,
                     if (dynamic_cast<FilteredSelectTableWindowClass<std::wstring>*>(current_widget_stack.back())) {
                         FilteredSelectTableWindowClass<std::wstring>* list_view = dynamic_cast<FilteredSelectTableWindowClass<std::wstring>*>(current_widget_stack.back());
                         list_view->set_value_second_item(url.toStdWString(),
-                            file_size_to_human_readable_string(reply->header(QNetworkRequest::ContentLengthHeader).toUInt()));
+                            file_size_to_human_readable_string(reply->header(QNetworkRequest::ContentLengthHeader).toLongLong()));
                     }
                     if (dynamic_cast<TouchFilteredSelectWidget<std::wstring>*>(current_widget_stack.back())) {
                         TouchFilteredSelectWidget<std::wstring>* list_view = dynamic_cast<TouchFilteredSelectWidget<std::wstring>*>(current_widget_stack.back());
                         list_view->set_value_second_item(url.toStdWString(),
-                            file_size_to_human_readable_string(reply->header(QNetworkRequest::ContentLengthHeader).toUInt()));
+                            file_size_to_human_readable_string(reply->header(QNetworkRequest::ContentLengthHeader).toLongLong()));
                     }
                     });
 
@@ -8217,7 +8217,9 @@ void MainWidget::handle_export_marked_data() {
     json_doc.setObject(json);
 
     QFile json_file(file_path);
-    json_file.open(QFile::WriteOnly);
+    if (!json_file.open(QFile::WriteOnly)) {
+        return;
+    }
     json_file.write(json_doc.toJson());
     json_file.close();
 
@@ -8351,13 +8353,13 @@ void MainWidget::handle_pen_drawing_event(QTabletEvent* te) {
     }
 
     if (te->type() == QEvent::TabletRelease) {
-        finish_drawing(te->pos());
+        finish_drawing(te->position().toPoint());
         invalidate_render();
     }
 
     if (te->type() == QEvent::TabletMove) {
         if (is_drawing) {
-            handle_drawing_move(te->pos(), te->pressure());
+            handle_drawing_move(te->position().toPoint(), te->pressure());
             validate_render();
         }
 
@@ -9826,7 +9828,9 @@ void MainWidget::export_python_api() {
     output.close();
 
     std::string command = "python -m pip install " + std::string(sioyek_python_path);
-    std::system(command.c_str());
+    if (std::system(command.c_str()) != 0) {
+        show_error_message(L"Failed to install the generated Python API");
+    }
 }
 
 bool MainWidget::execute_macro_from_origin(std::wstring macro_command_string, QLocalSocket* origin) {
@@ -9877,9 +9881,9 @@ QJsonObject MainWidget::get_json_state() {
         result["y_offset"] = offset_y;
 
         std::optional<AbsoluteRect> selected_rect_abs = get_selected_rect_absolute();
-        if (selected_rect_abs) {
-            int selected_rect_page;
-            PagelessDocumentRect  selected_rect_doc = get_selected_rect_document()->rect;
+        auto selected_document_rect = get_selected_rect_document();
+        if (selected_rect_abs && selected_document_rect) {
+            const auto& selected_rect_doc = selected_document_rect->rect;
 
             QJsonObject absrect_json;
             QJsonObject docrect_json;
@@ -9893,7 +9897,7 @@ QJsonObject MainWidget::get_json_state() {
             docrect_json["x1"] = selected_rect_doc.x1;
             docrect_json["y0"] = selected_rect_doc.y0;
             docrect_json["y1"] = selected_rect_doc.y1;
-            docrect_json["page"] = selected_rect_page;
+            docrect_json["page"] = selected_document_rect->page;
 
             result["selected_rect_absolute"] = absrect_json;
             result["selected_rect_document"] = docrect_json;
@@ -10987,7 +10991,9 @@ void MainWidget::save_scratchpad() {
     json_doc.setObject(root_object);
 
     QFile json_file(QString::fromStdWString(scratchpad_file_name));
-    json_file.open(QFile::WriteOnly);
+    if (!json_file.open(QFile::WriteOnly)) {
+        return;
+    }
     json_file.write(json_doc.toJson());
     json_file.close();
 }

@@ -2,6 +2,7 @@
 #include "utils.h"
 #include <cassert>
 #include <map>
+#include <stdexcept>
 #include <qdir.h>
 //#include <ui.h>
 
@@ -698,7 +699,7 @@ private:
         case EnableRectangle: return rect_serializer;
         case Range: return fvec2_serializer;
         case Macro: return string_serializer;
-        default: assert(false);
+        default: throw std::logic_error("Invalid configuration type");
         }
     }
 
@@ -718,7 +719,7 @@ private:
         case EnableRectangle: return rect_deserializer;
         case Range: return fvec2_deserializer;
         case Macro: return string_deserializer;
-        default: assert(false);
+        default: throw std::logic_error("Invalid configuration type");
         }
 
     }
@@ -739,7 +740,7 @@ private:
         case EnableRectangle: return nullptr;
         case Range: return nullptr;
         case Macro: return nullptr;
-        default: assert(false);
+        default: throw std::logic_error("Invalid configuration type");
         }
 
     }
@@ -1574,6 +1575,7 @@ std::wstring Config::get_type_string() const{
     if (config_type == ConfigType::FVec2) return L"fvec2";
     if (config_type == ConfigType::EnableRectangle) return L"enablerectangle";
     if (config_type == ConfigType::Range) return L"range";
+    throw std::logic_error("Invalid configuration type");
 }
 
 QRect UIRect::to_window(int window_width, int window_height) {
