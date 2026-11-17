@@ -259,6 +259,11 @@ The default is 64 MiB. This controls when MuPDF starts evicting decoded resource
 such as images and fonts. Process RSS includes the rendered-page cache, Vulkan
 and other allocations.
 
+For fast navigation and rapid jumping without waiting between moves, add `--rapid-jumps 8`.
+This executes a rapid sequence of forward and backward jumps without waiting, then
+measures the time required for the final visible page to settle and render, along with an
+isolated direct-jump baseline to isolate any queue delays caused by stale requests.
+
 ### Local fixes for Qt 6.12.0 and Wayland 1.26.0
 
 The unmodified system Qt 6.12.0 with validation layers 1.4.363.1 reports

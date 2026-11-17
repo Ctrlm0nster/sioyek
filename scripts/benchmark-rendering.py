@@ -41,6 +41,8 @@ def arguments():
                         help='Measure normal mode only for profiling/workload sweeps')
     parser.add_argument('--page-turns', type=int, default=0,
                         help='Visit pages 2 through N+1, then revisit up to five early pages')
+    parser.add_argument('--rapid-jumps', type=int, default=0,
+                        help='Execute rapid jumps forward and back without waiting between moves, then measure final render wait')
     args = parser.parse_args()
     if not ((args.opengl and args.vulkan and not args.baseline and not args.candidate) or
             (args.baseline and not args.opengl and not args.vulkan)):
@@ -49,6 +51,8 @@ def arguments():
         parser.error('Trial counts and cadence must be positive')
     if args.page_turns < 0:
         parser.error('Page turn count must be nonnegative')
+    if args.rapid_jumps < 0:
+        parser.error('Rapid jumps count must be nonnegative')
     return args
 
 
@@ -160,6 +164,48 @@ def measure_page_turns(instance, pid, pages):
     return samples
 
 
+def measure_rapid_jumps(instance, pid, jump_targets):
+    """Execute rapid jumps forward and back without waiting between moves,
+    then measure how long the final visible page takes to render."""
+    if not jump_targets:
+        return None
+    for page in jump_targets[:-1]:
+        command(instance, 'set_state_json', json.dumps({'page_number': page}))
+        time.sleep(0.01)
+
+    final_page = jump_targets[-1]
+    start = time.perf_counter()
+    command(instance, 'set_state_json', json.dumps({'page_number': final_page}))
+    command(instance, 'wait_for_renders_to_finish')
+    wait_ms = (time.perf_counter() - start) * 1000
+
+    state = command(instance, 'get_state_json')[0]
+    if state['page_number'] != final_page:
+        raise RuntimeError(f'Expected final page {final_page + 1}, got {state["page_number"] + 1}')
+
+    return {
+        'jumps': [p + 1 for p in jump_targets],
+        'final_page': final_page + 1,
+        'final_render_wait_ms': wait_ms,
+        **usage(pid)
+    }
+
+
+def measure_isolated_jump(instance, pid, reset_page, target_page):
+    """Measure how long a direct jump to target_page takes from an idle/settled state."""
+    command(instance, 'set_state_json', json.dumps({'page_number': reset_page}))
+    command(instance, 'wait_for_renders_to_finish')
+    time.sleep(1.0)
+    start = time.perf_counter()
+    command(instance, 'set_state_json', json.dumps({'page_number': target_page}))
+    command(instance, 'wait_for_renders_to_finish')
+    wait_ms = (time.perf_counter() - start) * 1000
+    state = command(instance, 'get_state_json')[0]
+    if state['page_number'] != target_page:
+        raise RuntimeError(f'Expected page {target_page + 1}, got {state["page_number"] + 1}')
+    return wait_ms
+
+
 def trial(args, backend, binary, trial_index, work):
     home = work / f'{trial_index:02d}-{backend}'
     config = home / '.config/sioyek'
@@ -231,6 +277,19 @@ def trial(args, backend, binary, trial_index, work):
                 revisits = measure_page_turns(instance, process.pid, range(min(5, args.page_turns)))
                 result['page_traversal'] = {'before': after, 'turns': turns,
                                             'settled': settled, 'revisits': revisits}
+                command(instance, 'set_view_state', '0 500 1.5 0')
+            if args.rapid_jumps:
+                max_jump_page = max(1, min(30, args.page_turns if args.page_turns else 30))
+                stride = 7
+                jump_targets = [((i * stride + 3) % max_jump_page) for i in range(args.rapid_jumps)]
+                if len(jump_targets) > 1 and jump_targets[-1] == jump_targets[-2]:
+                    jump_targets[-1] = (jump_targets[-1] + 1) % max_jump_page
+                rapid_res = measure_rapid_jumps(instance, process.pid, jump_targets)
+                time.sleep(1)
+                isolated_wait = measure_isolated_jump(instance, process.pid, 0, jump_targets[-1])
+                rapid_res['isolated_render_wait_ms'] = isolated_wait
+                rapid_res['queue_delay_ms'] = rapid_res['final_render_wait_ms'] - isolated_wait
+                result['rapid_navigation'] = rapid_res
                 command(instance, 'set_view_state', '0 500 1.5 0')
             modes = [('normal', None)] if args.normal_only else [
                 ('normal', None), ('dark', 'toggle_dark_mode'), ('custom', 'toggle_custom_color')]
@@ -314,6 +373,7 @@ def main():
             'rounds': args.rounds, 'frames_per_mode': args.frames, 'target_updates_per_second': args.fps,
             'captures_per_mode': args.captures, 'platform': args.platform,
             'page_turns': args.page_turns,
+            'rapid_jumps': args.rapid_jumps,
             'vulkan_validation': args.validation, 'trials': []}
     data['normal_only'] = args.normal_only
     try:
@@ -346,6 +406,18 @@ def main():
                 'scroll_cpu_median_percent_one_core': statistics.median(s['scroll_cpu_percent_one_core'] for s in samples),
                 'rss_median_mib': statistics.median(s['rss_mib'] for s in samples)}
         print(mode, json.dumps(summary), flush=True)
+
+    if args.rapid_jumps:
+        for backend in binaries:
+            rapid_samples = [t['rapid_navigation'] for t in data['trials'] if t['backend'] == backend and 'rapid_navigation' in t]
+            if rapid_samples:
+                print('rapid_navigation', backend, json.dumps({
+                    'jumps': rapid_samples[0]['jumps'],
+                    'final_page': rapid_samples[0]['final_page'],
+                    'final_render_wait_median_ms': statistics.median(s['final_render_wait_ms'] for s in rapid_samples),
+                    'isolated_render_wait_median_ms': statistics.median(s['isolated_render_wait_ms'] for s in rapid_samples),
+                    'queue_delay_median_ms': statistics.median(s['queue_delay_ms'] for s in rapid_samples),
+                }), flush=True)
 
 
 if __name__ == '__main__':
