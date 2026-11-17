@@ -1,21 +1,38 @@
 # Building and maintaining Sioyek on Arch Linux
 
-CMake + Ninja is the preferred Linux development workflow. The qmake scripts
-remain for older packaging workflows; `build_linux.sh` removes `build/`, so do
-not mix it with the development workflow below.
+CMake + Ninja is required for the Vulkan renderer and its embedded SPIR-V
+shaders. The legacy qmake project stops with a migration message. Do not use
+`build_linux.sh`: it is a legacy qmake script that removes `build/`.
 
 ## Dependencies
 
 Install these packages yourself if missing (this project does not install them):
 
 ```sh
-sudo pacman -S --needed base-devel git cmake ninja pkgconf qt6-base \
-  qt6-declarative qt6-svg qt6-speech qt6-wayland harfbuzz sqlite zlib
+sudo pacman -S --needed base-devel git python cmake ninja pkgconf qt6-base \
+  qt6-declarative qt6-svg qt6-speech qt6-wayland qt6-shadertools \
+  vulkan-headers vulkan-icd-loader harfbuzz sqlite zlib libjpeg-turbo
 ```
 
 `qt6-wayland` supplies the native Wayland platform plugin. Qt's xcb plugin uses
 X11 or XWayland; install `xorg-xwayland` if your Wayland session needs it.
-A working desktop OpenGL driver is required. `clang` is optional for Clang builds.
+A working Vulkan ICD is required: for example `vulkan-intel` for supported Intel
+GPUs or `vulkan-radeon` for AMD. Keep the driver appropriate to your laptop;
+these build scripts do not install or change drivers. `vulkaninfo --summary`
+(from optional `vulkan-tools`) reports the selected GPU. `clang` is optional.
+
+Rendering uses Qt's `QRhiWidget` with the Vulkan backend, including page textures,
+highlights, clipping, previews and freehand geometry. MuPDF still rasterizes PDF
+pages on CPU workers. Qt paints labels/icons into transparent layers composed
+by Vulkan. The two GLSL sources in `pdf_viewer/shaders/vulkan/` are build inputs
+only. CMake compiles them to embedded SPIR-V with `qsb`; the executable contains
+no application GLSL shader payload or runtime shader compiler.
+
+QRhi requires `Qt6::GuiPrivate`, whose binary interface is tied to the Qt build.
+**Rebuild Sioyek after Qt updates.** The Arch binary package records the exact
+Qt version used at build time to prevent silently loading incompatible internals.
+This fork supports desktop Linux only. Windows and macOS build/deployment code
+has been removed; CMake rejects other target platforms.
 Speech output additionally needs a configured Qt speech backend, such as
 `speech-dispatcher`. PDF reading does not require an active speech service.
 
@@ -27,10 +44,21 @@ git submodule update --init --recursive
 ```
 
 CMake invokes GNU Make for the vendored MuPDF static libraries, uses system
-HarfBuzz and zlib, and uses MuPDF's bundled remaining libraries. No system MuPDF
+HarfBuzz, zlib and libjpeg-turbo, and uses MuPDF's bundled remaining libraries. No system MuPDF
 package is needed. Keep the pinned revision until API and rendering changes have
 been tested. The separate top-level zlib submodule belongs to legacy workflows;
-CMake uses the system zlib. Source licensing and attribution remain in LICENSE
+CMake uses the system zlib. JPEG uses MuPDF's supported `USE_SYSTEM_LIBJPEG=yes`
+configuration: the bundled IJG 9f decoder triggers signed-shift UBSan errors on
+the tutorial's images. This selection does not change the MuPDF pin.
+CMake also uses MuPDF's supported
+`FZ_POINTER_ALIGN_MOD=FZ_MEMORY_BLOCK_ALIGN_MOD` override for the library and its
+consumers. MuPDF's x86-64 default packs pointers on four-byte boundaries, which
+triggers UBSan when a complex path in a Type 3 font needs eight-byte alignment.
+Native alignment keeps display-list and pool accesses valid in every build;
+this is independent of the hardening/sanitizer switches. The flags fingerprint
+selects fresh MuPDF objects when this setting changes. PDF and user database
+formats are unaffected.
+Source licensing and attribution remain in LICENSE
 and the respective dependency directories.
 
 ## Build and run
@@ -65,7 +93,7 @@ SIOYEK_BUILD_DIR="$PWD/build/clang" scripts/dev-build.sh \
 SIOYEK_BUILD_DIR="$PWD/build/clang" scripts/dev-run.sh "$PWD/tutorial.pdf"
 ```
 
-CMake stages defaults, shaders and the tutorial in `build/dev/resources` on each
+CMake stages defaults and the tutorial in `build/dev/resources` on each
 build. The executable uses that directory when present, otherwise the configured
 installation data directory. It does not need an installed `sioyek-git` package.
 The run script requests a new instance so an installed reader cannot receive the
@@ -87,9 +115,212 @@ QT_QPA_PLATFORM=wayland scripts/dev-run.sh "$PWD/tutorial.pdf"
 QT_QPA_PLATFORM=xcb scripts/dev-run.sh "$PWD/tutorial.pdf"
 ```
 
-Qt's offscreen plugin does not provide a useful QOpenGLWidget rendering test.
+Qt's offscreen platform plugin does not provide this Vulkan widget test.
 Check tutorial rendering, `j`/`k` scrolling, page navigation, `/` search and
-`n`/`N` results in an actual OpenGL-capable session.
+`n`/`N` results in a Wayland or X11 session. On Hyprland, the optional
+`python3 scripts/test-wayland.py "$PWD/build/dev/sioyek"` checks native keyboard
+input with `wtype` and captures additional rendering scenes in a temporary
+profile. It focuses the test window and restores previous focus; avoid typing
+while it runs.
+Add `--onscreen` (requires optional `grim` and Python Pillow) to capture the
+test reader's fullscreen compositor output. This checks status text updates,
+command editor appearance and clean dismissal without triggering a Qt framebuffer
+grab, which could hide a missing repaint. It captures only the test window's
+region and restores previous focus.
+
+To build and run the GPU regression test in your desktop session:
+
+```sh
+cmake -S . -B build/dev -G Ninja -DSIOYEK_BUILD_TESTS=ON -DSIOYEK_BUILD_GPU_TESTS=ON
+cmake --build build/dev --parallel 2
+SIOYEK_VULKAN_VALIDATION=1 ctest --test-dir build/dev --output-on-failure
+```
+
+The validation setting requires optional `vulkan-validation-layers`. Leave it
+unset for ordinary use. The GPU test checks framebuffer pixels for color modes,
+blending, stencil/depth clears, painter ordering and resize. CI uses Xvfb and
+Mesa's software Vulkan ICD; that complements testing on a real laptop GPU.
+
+The canvas acquires its CPU painter lazily through `overlayPainter()`. Scene code
+must acquire it again when painting after `beginGpuSection()`; that boundary
+composes the pending layer while preserving painter state. GPU-only frames create
+no painter and skip overlay scans/clears. Nonempty layers are cropped for upload,
+and only their painted pixel bounds are cleared. The regression test covers
+clipping/transforms across boundaries, text/images, disappearing layers and resize.
+Run it with `QT_SCALE_FACTOR=1.5` as well when changing overlay coordinates.
+
+### Worker scheduling and performance checks
+
+The four MuPDF render workers and the background search worker wait on condition
+variables instead of polling every 100 ms. Queue changes, deferred pixmap cleanup
+and shutdown notify the workers. Queue/busy state uses the same mutex as each
+wait predicate. Closing a view cancels its queued search and waits for an active
+search to release its borrowed result pointers before destroying them. Cancellation
+finishes the current page; it does not interrupt MuPDF in the middle of a page.
+The existing GUI readiness timer (100 ms) and cache collection timer remain.
+
+In-flight render/search operations retain their own MuPDF document references;
+clearing the cache releases only its references. An epoch check prevents an open
+that overlapped invalidation from publishing an outdated cached document. Gamma
+and search-case settings are captured in requests. UI cancellation waits before
+clearing shared results, and workers protect progress updates with the result
+mutex. `num_cached_pages 0` keeps no minimum set of cached pages; unused responses
+still expire according to the existing cache timeout. Failed responses leave the
+pending state, and invalid entries cannot receive a retry's completed pixels.
+While an exact-zoom render is pending, fallback textures must match the document,
+page, slice layout, display scale, gamma and annotation setting. Choose the
+nearest absolute zoom difference, preferring higher resolution on a tie; reject
+invalid, pending or empty responses. `renderer_response_state` tests this policy.
+
+Document frames update the canvas and individual UI children. Avoid adding a
+whole-window `update()` to `validate_render()`: Qt then fills/composes the parent
+background on every scroll frame. Child widgets schedule their own repaints;
+the optional onscreen test above checks that status and command widgets still
+update and disappear correctly.
+
+Exercise non-indexed search, request replacement and idle/busy shutdown with
+temporary profiles in a working desktop session:
+
+```sh
+python3 scripts/test-render-workers.py "$PWD/build/dev/sioyek"
+python3 scripts/test-render-workers.py "$PWD/build/sanitize/sioyek"
+```
+
+The scripts reject Vulkan validation and sanitizer diagnostics. They require
+`vulkan-validation-layers`; use the optional local runtime fixes below if your
+distribution libraries still exhibit those issues. `SIOYEK_TEST_LIBRARY_PATH`
+also works with this test. It does not inject keyboard events.
+It covers gamma changes during search, cancellation, zero-cache startup and
+renaming a copied tutorial, in addition to queued-work/shutdown cases. The
+display-independent `renderer_response_state` CTest checks failed-render recovery
+and matching completed work to the correct pending response. CI runs the worker
+script on the sanitizer reader through Xvfb with software Vulkan.
+
+For a controlled before/after measurement, preserve an optimized baseline binary
+**and its adjacent `resources/` directory** before changing code. Then run the two
+optimized binaries with the same libraries, PDF, display and validation settings,
+without concurrent builds or tests:
+
+```sh
+python3 scripts/benchmark-workers.py \
+  --baseline /path/to/before/sioyek --candidate "$PWD/build/dev/sioyek" \
+  --pdf "$PWD/tutorial.pdf" --output build/perf-workers --rounds 3
+python3 scripts/benchmark-rendering.py \
+  --baseline /path/to/before/sioyek --candidate "$PWD/build/dev/sioyek" \
+  --pdf "$PWD/tutorial.pdf" --output build/perf-rendering --rounds 3 --validation
+```
+
+Both use temporary profiles, alternate trial order and save raw JSON, reader logs
+and framebuffer PNGs. Equal logical and framebuffer dimensions are required across
+trials. The worker benchmark disables indexed search and measures time to the first
+result, render readiness and per-thread idle context switches. Readiness uses
+the existing 100 ms timer and can precede the final paint/exact-zoom texture, so
+it is a coarse IPC observation. Compare settled frames separately. Avoid mouse
+and keyboard interaction with the readers during measurements; selection overlays
+can change the workload and captured pixels.
+The rendering benchmark periodically verifies the requested view and rejects
+unexpected offsets, zoom, selections, search or ruler state; its JSON records
+these checks and the settled capture state. Compare the saved PNGs as well.
+The rendering benchmark measures process CPU during paced scrolling and separately
+times synchronous framebuffer readback plus PNG encoding. These are not FPS,
+GPU timestamps or energy measurements. Validation defaults to enabled. A historical
+OpenGL binary can be supplied with `--opengl`/`--vulkan`, but other source/dependency
+differences make that a reference comparison rather than an isolated backend test.
+
+Generate a bounded, deterministic corpus without downloading documents or using
+personal PDFs:
+
+```sh
+python3 scripts/create-benchmark-fixtures.py build/benchmark-fixtures
+python3 scripts/benchmark-rendering.py \
+  --baseline /path/to/before/sioyek --candidate "$PWD/build/dev/sioyek" \
+  --pdf "$PWD/build/benchmark-fixtures/annotated.pdf" \
+  --output build/perf-annotated --rounds 3 --normal-only --validation
+```
+
+The corpus contains 240 text pages, 32 synthetic scan-like image pages and 32
+pages with 1,152 native PDF highlight annotations. The manifest records sizes and
+SHA-256 hashes; generation refuses to replace differing existing files. These
+fixtures do not represent every real-world PDF or application overlay workload.
+Repeat with `large-text.pdf`, `image-only.pdf` and the tutorial. Use
+`--skip-search` for image-only documents in the worker benchmark (there is no
+text/OCR). `--baseline` alone records a fresh baseline; `--normal-only` shortens
+workload sweeps. Startup-to-index-ready includes explicit cache warmup and IPC
+waits, so it is not a pure indexing-time measurement.
+
+### Local fixes for Qt 6.12.0 and Wayland 1.26.0
+
+The unmodified system Qt 6.12.0 with validation layers 1.4.363.1 reports
+`VUID-VkImageCreateInfo-initialLayout-12478`. Qt's
+[Vulkan texture implementation](https://github.com/qt/qtbase/blob/v6.12.0/src/gui/rhi/qrhivulkan.cpp)
+creates optimal-tiled images with `VK_IMAGE_LAYOUT_PREINITIALIZED` (in
+`QVkTexture::create()`); the validation layer requires linear tiling for that
+initial layout. This is inside the system Qt library, including widget-owned
+textures. `patches/qt/6.12.0-vulkan-initial-layout.patch` changes both creation
+and tracked initial layout to `UNDEFINED`, which matches optimal tiling.
+
+The native Wayland exit leak also reproduces in a minimal Qt Vulkan widget.
+`patches/wayland/1.26.0-destroyed-event-argument.patch` releases an event's
+proxy reference before replacing an already-destroyed object argument with null.
+Without that release, final event cleanup loses the pointer it must unref.
+The renderer fixture now exercises a normal Qt event loop and window close.
+Typing exposes another Qt leak: `QWaylandInputContext` never released its XKB
+compose state/table. `patches/qt/6.12.0-wayland-compose-cleanup.patch` adds those
+matching unrefs; the display's borrowed XKB context retains its original owner.
+
+These are explicit, optional dependency builds, with exact source checksums.
+They never replace host libraries and are restricted to the tested Qt version
+because the application uses Qt private APIs. The helper needs `curl`, `patch`,
+Meson, libffi, Expat and libxml2 development files in addition to normal build
+dependencies. If Meson is absent, use an isolated environment:
+
+```sh
+python3 -m venv build/runtime-tools
+build/runtime-tools/bin/pip install meson==1.9.1
+MESON="$PWD/build/runtime-tools/bin/meson" scripts/build-runtime-deps.sh
+```
+
+Use the resulting libraries only for the test command or development process:
+
+```sh
+runtime="$PWD/build/runtime-deps"
+LD_LIBRARY_PATH="$runtime/qt-build/lib:$runtime/wayland-build/src" \
+  QT_PLUGIN_PATH="$(qmake6 -query QT_INSTALL_PLUGINS)" \
+  QT_QPA_PLATFORM=wayland QT_FORCE_STDERR_LOGGING=1 SIOYEK_VULKAN_VALIDATION=1 \
+  ctest --test-dir build/sanitize --verbose
+```
+
+The same environment can prefix `scripts/dev-run.sh` or the temporary-profile
+`scripts/test-wayland.py` command. In this workspace, the tested dependency tree
+is `build/runtime-blockers`; set `runtime` to that path to reuse it.
+System-library runs still need distribution fixes; an ordinary Arch package
+does not silently bundle these local libraries. CI treats Vulkan validation
+errors as failures. Validation, leak detection and UBSan remain enabled.
+
+For the Python smoke tests, `SIOYEK_TEST_LIBRARY_PATH` sets the reader's library
+path without affecting tools such as `wtype`. This matters when testing
+instrumented dependency libraries against an instrumented reader:
+
+```sh
+runtime="$PWD/build/runtime-blockers"
+SIOYEK_TEST_LIBRARY_PATH="$runtime/jpeg-sanitize-checked:$runtime/qt-build/lib:$runtime/wayland-sanitize/src" \
+  QT_PLUGIN_PATH="$(qmake6 -query QT_INSTALL_PLUGINS)" \
+  QT_FORCE_STDERR_LOGGING=1 SIOYEK_VULKAN_VALIDATION=1 \
+  python3 scripts/test-wayland.py "$PWD/build/sanitize/sioyek"
+```
+
+The `jpeg-sanitize-checked` and `wayland-sanitize` directories above are the
+additional local diagnostic builds used for this investigation; the dependency
+helper builds `qt-build` and `wayland-build`. Those normal local libraries are
+also suitable for the smoke tests without instrumenting the dependencies.
+
+Legacy OpenGL `*.vertex`/`*.fragment` shaders have been removed. Active Vulkan
+GLSL sources are `pdf_viewer/shaders/vulkan/canvas.vert` and `canvas.frag`; edit
+those files and rebuild to change the shaders. Only compiled SPIR-V packages are
+embedded. Shader sources are neither staged beside the executable nor installed
+under `/usr/share/sioyek`; they remain in corresponding-source archives for
+reproducible builds and GPL compliance. Old benchmark/source artifacts under
+ignored `build/` directories are historical snapshots, not current runtime data.
 
 ## Installation
 
@@ -188,6 +419,36 @@ MuPDF output directories include a safety-flag fingerprint so changing hardening
 or sanitizer settings cannot silently reuse the other configuration's archives.
 Its older bundled C libraries retain their trailing-array policy; the application
 C++ strict-flexible-array flag is not imposed on those libraries.
+
+Reviewed patches under `patches/mupdf/` guard nullable objects before forming
+member addresses (including absent Type 3 glyph display lists), use unsigned
+arithmetic for the text alpha shift, skip sorting
+an empty layer list, and replace LittleCMS's incompatible function-pointer cast
+with a typed adapter. CMake applies them to a separate `mupdf-source` build tree
+using `scripts/prepare-mupdf.py`; recursive submodule pins remain unchanged.
+Repeated builds preserve unchanged timestamps. Tests cover patch transitions
+without modifying original files, null cleanup, archive reference counts, layer
+loading, rendering and text extraction from all six tutorial pages, and search.
+The MuPDF runtime test also records/replays large pointer-bearing and small flat
+packed paths and checks their pixels. This synthetic case reproduces the
+alignment failure without private lecture PDFs and runs in the existing CTest/CI
+suite. Null display-list keep/drop calls cover Type 3 font cleanup as well.
+Test additional copied PDFs with a word on their first page, or an explicit
+empty query for image-only documents:
+
+```sh
+./build/sanitize/sioyek_mupdf_test /path/to/copy.pdf 'expected first-page word'
+./build/sanitize/sioyek_mupdf_test /path/to/image-only-copy.pdf ''
+```
+
+The helper renders and extracts text from every page. Set
+`SIOYEK_MUPDF_TEST_TRACE=1` to log page numbers while diagnosing failures.
+System JPEG is ordinarily uninstrumented; local validation also used an
+independently instrumented libjpeg-turbo 3.2.1 build, without sanitizer exclusions.
+JPEG output comparison at 612×792 found five tutorial pages byte-identical. Page
+2 differed only within its JPEG illustration (maximum channel difference 38/255;
+mean absolute channel difference across the page 0.273/255). Decoder output is
+therefore visually comparable, but not byte-identical for JPEG images.
 
 There is no valid universal "all flags" combination: TSan and ASan are mutually
 exclusive, MSan requires an instrumented dependency stack, and full libstdc++ debug

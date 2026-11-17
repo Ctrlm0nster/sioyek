@@ -44,6 +44,9 @@ uncommitted work are for local testing.
 
 MuPDF is built by GNU Make under the CMake build tree. The recipe disables LTO
 across the separately built static archives. Qt libraries remain system-provided.
+The Vulkan renderer uses QtGuiPrivate, so the generated binary package depends
+on the exact Qt version used to build it. Rebuild the package after a Qt version
+update. A working Vulkan ICD for your GPU is also required; see BUILDING.md.
 GPL-3.0 and attribution are retained; package metadata also records bundled
 MuPDF's AGPL license and includes both top-level license texts. The complete
 snapshot retains dependency license notices and corresponding source.
@@ -65,7 +68,9 @@ HOME="$profile" XDG_CONFIG_HOME="$profile/.config" \
 ```
 
 The default tutorial should open from the extracted package. Startup logs should
-resolve defaults, tutorial and shaders under `$root/usr/bin/../share/sioyek`.
+resolve defaults and tutorial under `$root/usr/bin/../share/sioyek`. Shaders are
+embedded SPIR-V; the installed package contains no shader source directory. The
+corresponding-source archive retains the two build-time Vulkan GLSL inputs.
 The relative path is computed from CMake's configured bindir and datadir. There
 is no dependency on an existing `/usr/share/sioyek`. Repeat with
 `QT_QPA_PLATFORM=xcb` to test XWayland. `namcap "$pkg"` is an optional packaging

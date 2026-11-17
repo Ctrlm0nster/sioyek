@@ -51,6 +51,5 @@ its upstream MIT notice is restored under pdf_viewer/rapidfuzz-LICENSE. The stal
 
 The binary package now includes JetBrains Mono's OFL, FZF and RapidFuzz notices,
 UTF-8/SyncTeX/FTS header notices, and the available bundled MuPDF library/font
-notice files with component paths retained. The existing windows_runtime DLLs
-remain untouched in Git but are excluded from the Arch source export: they are
-not used by this Linux build, and their redistribution was not audited here.
+notice files with component paths retained. Unused Windows runtime DLLs have
+been removed from this Linux-only fork.

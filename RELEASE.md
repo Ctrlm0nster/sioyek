@@ -7,26 +7,44 @@ release procedure; no command here has been run to tag, sign or publish a releas
 
 ## Verification status and known issues
 
-Local verification on 2026-11-16 passed GCC/Clang builds, CTest, reproducible source
-exports, an Arch devtools clean-chroot package build, namcap, and isolated package
-installation/upgrade/removal with dependency checks and hooks enabled. Generated
-preferences, bookmarks and reading history were preserved. Extracted-package
-Wayland keyboard/navigation/search and XWayland default-profile checks passed.
-Historical personal-profile tests were waived because the previous installation
-was unused; synthetic split-schema versions 0, 1 and 2 were tested instead.
+The three original runtime blockers have reviewed local fixes. Qt 6.12.0's
+optimal-image initial layout and Wayland keyboard-compose cleanup are patched
+in an optional local Qt build. Wayland 1.26.0's discarded-event proxy reference
+is patched in an optional local client build. System libraries remain unchanged;
+ordinary packages and remote CI still require compatible distribution fixes.
+See [BUILDING.md](BUILDING.md) for exact versions, checksums and local commands.
 
-These results cover the tested working-tree application code. A new candidate
-still needs a clean checkout and remote CI verification for its exact commit.
-Detailed local logs and packages are retained under `build/rc-preflight/`, which
-is intentionally excluded from version control.
+Local validation on 2026-11-16 passed all five regression tests under GCC,
+Clang, and Clang ASan/UBSan/LeakSanitizer. Vulkan validation remained enabled.
+The instrumented checks also used local instrumented Wayland and libjpeg-turbo
+libraries. All six tutorial pages were rendered and their text extracted.
+The complete native Wayland keyboard/navigation/search, color modes, rotation,
+two-page view, scratchpad and shutdown smoke test passed with the original
+shutdown timeout and without validation or sanitizer reports. Detailed evidence
+is retained in ignored `build/runtime-blockers/`.
+Fresh defaults and synthetic split-database versions 0/1/2, including repeat
+starts, passed the instrumented Wayland profile checks. Integrity, bookmarks,
+marks, highlights and reading history were preserved in all generated fixtures;
+historical personal profiles were not used.
 
-Full ASan/UBSan reader startup remains blocked by pinned MuPDF 1.26.11:
-`source/fitz/archive.c:234` forms `&arch->refs` when `arch` is NULL. Focused sanitizer
-unit tests pass, but they do not establish clean full-reader startup. No sanitizer
-was disabled. Resolve this dependency issue or explicitly document a maintainer
-exception for a limited development prerelease before publication. Ten upstream
-MuPDF C diagnostics also remain visible; the tested application C++ builds reject
-warnings and compile without them.
+MuPDF remains pinned to 1.26.11. Reviewed source patches are applied out of tree;
+no recursive gitlink was moved. The supported system-JPEG configuration replaces
+the bundled decoder after an explicit tutorial comparison. Five pages are
+byte-identical; page 2 differs only within its JPEG illustration. Application
+cleanup now releases IPC/parser owners, worker contexts, cached text/images,
+input/contents trees, views and SQLite connections, without changing user formats.
+
+The normal patched Wayland upstream suite passed 26/26. Its optional fully
+instrumented upstream suite did not pass: 15 passed, eight failed on duplicate
+client/server protocol globals reported by ASan, and three timed out. Those
+checks were not disabled. The application regressions and keyboard smoke test
+passed with the instrumented client library; do not describe the entire
+instrumented Wayland upstream suite as clean.
+
+Earlier OpenGL clean-chroot/package-lifecycle evidence predates the Vulkan
+migration. Repeat package, clean-checkout, chroot and lifecycle gates for the
+exact candidate. GitHub Actions changes were checked locally for syntax and
+have not run remotely; no publication is authorized by these local results.
 
 Licensing provenance and notice restoration are recorded in [LICENSES.md](LICENSES.md).
 
