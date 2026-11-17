@@ -715,14 +715,14 @@ SearchButtons::SearchButtons(MainWidget* parent) : QWidget(parent) {
     buttons_widget = new TouchSearchButtons(this);
 
     QObject::connect(buttons_widget, &TouchSearchButtons::nextPressed, [&]() {
-        //main_widget->opengl_widget->goto_search_result(1);
+        //main_widget->render_widget->goto_search_result(1);
         main_widget->run_command_with_name("next_item");
         main_widget->validate_render();
         });
 
     QObject::connect(buttons_widget, &TouchSearchButtons::previousPressed, [&]() {
         main_widget->run_command_with_name("previous_item");
-        //main_widget->opengl_widget->goto_search_result(-1);
+        //main_widget->render_widget->goto_search_result(-1);
         main_widget->validate_render();
         });
 

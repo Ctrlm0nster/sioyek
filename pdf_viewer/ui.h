@@ -12,10 +12,6 @@
 #include <qapplication.h>
 #include <qqmlengine.h>
 #include <qpushbutton.h>
-#include <qopenglwidget.h>
-#include <qopenglextrafunctions.h>
-#include <qopenglfunctions.h>
-#include <qopengl.h>
 #include <qwindow.h>
 #include <QKeyEvent>
 #include <qinputmethod.h>
@@ -23,7 +19,6 @@
 #include <qtreeview.h>
 #include <qsortfilterproxymodel.h>
 #include <qabstractitemmodel.h>
-#include <qopenglshaderprogram.h>
 #include <qtimer.h>
 #include <qdatetime.h>
 #include <qstackedwidget.h>

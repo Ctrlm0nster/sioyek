@@ -51,7 +51,7 @@ class PdfRenderer;
 class CachedChecksummer;
 class CommandManager;
 class Command;
-class PdfViewOpenGLWidget;
+class PdfViewWidget;
 class DatabaseManager;
 class DocumentManager;
 class TextToSpeechHandler;
@@ -78,11 +78,7 @@ struct SioyekVisibleObjectIndex {
     int index;
 };
 
-struct MenuNode {
-    QString name;
-    QString doc;
-    std::vector<MenuNode*> children;
-};
+
 
 struct TextUnderPointerInfo{
     ReferenceType reference_type;
@@ -149,11 +145,7 @@ enum class PaperDownloadFinishedAction {
 // if we inherit from QWidget there are problems on high refresh rate smartphone displays
 struct WindowState;
 
-#ifdef SIOYEK_ANDROID
-class MainWidget : public QQuickWidget {
-#else
 class MainWidget : public QMainWindow {
-#endif
     Q_OBJECT
 public:
     static MainWidget* create_restored_window(MainWidget* sibling, const WindowState& state);
@@ -167,7 +159,6 @@ public:
     InputHandler* input_handler = nullptr;
     CachedChecksummer* checksummer = nullptr;
     QWidget* central_widget = nullptr;
-    QMenuBar* menu_bar = nullptr;
     int window_id;
 
     TextToSpeechHandler* tts = nullptr;
@@ -181,8 +172,8 @@ public:
     std::vector<PagelessDocumentRect> tts_corresponding_char_rects;
     std::optional<PagelessDocumentRect> last_focused_rect = {};
 
-    PdfViewOpenGLWidget* opengl_widget = nullptr;
-    PdfViewOpenGLWidget* helper_opengl_widget_ = nullptr;
+    PdfViewWidget* render_widget = nullptr;
+    PdfViewWidget* helper_render_widget_ = nullptr;
     QScrollBar* scroll_bar = nullptr;
 
     QJsonDocument commands_doc_json_document;
@@ -802,10 +793,6 @@ public:
     std::optional<PdfLink> get_selected_link(const std::wstring& text);
 
     int num_visible_links();
-#ifdef SIOYEK_ANDROID
-    //    void onApplicationStateChanged(Qt::ApplicationState applicationState);
-    bool pending_intents_checked = false;
-#endif
 
 protected:
     TouchTextSelectionButtons* text_selection_buttons_ = nullptr;
@@ -826,12 +813,9 @@ protected:
     void changeEvent(QEvent* event) override;
     void mouseMoveEvent(QMouseEvent* mouse_event) override;
 
-    // we already handle drag and drop on macos elsewhere
-// #ifndef Q_OS_MACOS
     void dragEnterEvent(QDragEnterEvent* e) override;
     void dragMoveEvent(QDragMoveEvent* e) override;
     void dropEvent(QDropEvent* event) override;
-// #endif
 
     void closeEvent(QCloseEvent* close_event) override;
     void keyPressEvent(QKeyEvent* kevent) override;
@@ -873,7 +857,7 @@ public:
     std::optional<Portal> get_target_portal(bool limit);
 
     AbsoluteDocumentPos get_cursor_abspos();
-    void update_opengl_pending_download_portals();
+    void update_pending_download_portals();
     void cleanup_expired_pending_portals();
     int get_pending_portal_index_at_pos(AbsoluteDocumentPos abspos);
     void update_pending_portal_indices_after_removed_indices(std::vector<int>& removed_indices);
@@ -973,7 +957,7 @@ public:
     void import_json(std::wstring json_file_path);
     bool does_current_widget_consume_quicktap_event();
     bool is_moving_annotations();
-    PdfViewOpenGLWidget* helper_opengl_widget();
+    PdfViewWidget* helper_render_widget();
     DocumentView* helper_document_view();
     void initialize_helper();
     void hide_command_line_edit();
@@ -1047,9 +1031,6 @@ public:
     std::optional<FixedVelocityState> get_continuous_fixed_velocity_state() const;
     void restore_fixed_velocity_state(const FixedVelocityState& fixed_velocity_state);
     void set_fixed_velocity(float vel_y, float vel_x, std::optional<float> y_move_amount={});
-    QMenuBar* create_main_menu_bar();
-    void create_menu_from_menu_node(QMenu* parent, MenuNode* items, std::unordered_map<std::string, std::vector<std::string>>& command_key_mappings);
-    void delete_menu_nodes(MenuNode* items);
     void set_pending_portal(std::optional<std::wstring> doc_path, Portal portal);
     void set_pending_portal(std::optional<std::pair<std::optional<std::wstring>, Portal>> pending_portal);
     void update_text_selection_with_begin_and_end(AbsoluteDocumentPos begin, AbsoluteDocumentPos end);
