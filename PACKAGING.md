@@ -55,10 +55,10 @@ snapshot retains dependency license notices and corresponding source.
 
 ```sh
 cd build/arch
-pacman -Qip ./sioyek-ctrlm0nster-2*.pkg.tar.zst
-bsdtar -tf ./sioyek-ctrlm0nster-2*.pkg.tar.zst
+pacman -Qip ./sioyek-ctrlm0nster-3*.pkg.tar.zst
+bsdtar -tf ./sioyek-ctrlm0nster-3*.pkg.tar.zst
 # Set this explicitly if several package versions exist:
-pkg=$(find "$PWD" -maxdepth 1 -name 'sioyek-ctrlm0nster-2*.pkg.tar.zst' | sort -V | tail -n 1)
+pkg=$(find "$PWD" -maxdepth 1 -name 'sioyek-ctrlm0nster-3*.pkg.tar.zst' | sort -V | tail -n 1)
 root=$(mktemp -d)
 bsdtar -xf "$pkg" -C "$root"
 profile=$(mktemp -d)
@@ -118,9 +118,9 @@ Reinstall your preferred upstream package separately if desired.
 
 ## Versioning and upstream synchronization
 
-`VERSION` records the upstream-compatible base (`2.0.0`). Snapshot package versions
+`VERSION` records the base version (`3.0.0`). Snapshot package versions
 are `BASE.r<parent-commit-count>.g<12-character-commit>`; for example,
-`2.0.0.r2100.g1e2f80373537`. This avoids depending on upstream tags or MuPDF tags.
+`3.0.0.r2101.g614e4249fdca`. This avoids depending on upstream tags or MuPDF tags.
 Use a merge-based history and do not rewrite published history so the revision
 count increases. For the same source revision, increment `pkgrel` for packaging
 fixes. Local dirty snapshots share the parent version: do not distribute them as

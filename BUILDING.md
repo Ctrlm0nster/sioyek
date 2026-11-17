@@ -46,8 +46,8 @@ git submodule update --init --recursive
 CMake invokes GNU Make for the vendored MuPDF static libraries, uses system
 HarfBuzz, zlib and libjpeg-turbo, and uses MuPDF's bundled remaining libraries. No system MuPDF
 package is needed. Keep the pinned revision until API and rendering changes have
-been tested. The separate top-level zlib submodule belongs to legacy workflows;
-CMake uses the system zlib. JPEG uses MuPDF's supported `USE_SYSTEM_LIBJPEG=yes`
+been tested. The legacy top-level zlib submodule has been removed; CMake uses
+the system zlib. JPEG uses MuPDF's supported `USE_SYSTEM_LIBJPEG=yes`
 configuration: the bundled IJG 9f decoder triggers signed-shift UBSan errors on
 the tutorial's images. This selection does not change the MuPDF pin.
 CMake also uses MuPDF's supported
@@ -182,13 +182,15 @@ Exercise non-indexed search, request replacement and idle/busy shutdown with
 temporary profiles in a working desktop session:
 
 ```sh
-python3 scripts/test-render-workers.py "$PWD/build/dev/sioyek"
-python3 scripts/test-render-workers.py "$PWD/build/sanitize/sioyek"
+python3 scripts/test-render-workers.py "$PWD/build/dev/sioyek" --allow-qt-vuid
+python3 scripts/test-render-workers.py "$PWD/build/sanitize/sioyek" --allow-qt-vuid
 ```
 
-The scripts reject Vulkan validation and sanitizer diagnostics. They require
-`vulkan-validation-layers`; use the optional local runtime fixes below if your
-distribution libraries still exhibit those issues. `SIOYEK_TEST_LIBRARY_PATH`
+The scripts reject Vulkan validation and sanitizer diagnostics. When running
+against unpatched system Qt 6 with `vulkan-validation-layers`, pass `--allow-qt-vuid`
+to ignore upstream Qt bug `VUID-VkImageCreateInfo-initialLayout-12478` (or `--no-validation`
+to run without validation layers). Alternatively, use the optional local runtime
+fixes below to test with a fully patched Qt. `SIOYEK_TEST_LIBRARY_PATH`
 also works with this test. It does not inject keyboard events.
 It covers gamma changes during search, cancellation, zero-cache startup and
 renaming a copied tutorial, in addition to queued-work/shutdown cases. The

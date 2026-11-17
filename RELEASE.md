@@ -132,7 +132,7 @@ exact commit on GitHub. The workflow uploads candidates but does not publish the
 
 ## Version and tag policy
 
-`VERSION` holds the upstream-compatible base version, currently `2.0.0`.
+`VERSION` holds the base version, currently `3.0.0`.
 Package versions use `BASE.rCOUNT.gHASH-PKGREL` with a 12-character parent commit
 hash and full-history revision count. Source changes require a new commit/version;
 packaging-only fixes to the same source version increment `pkgrel`. The helper

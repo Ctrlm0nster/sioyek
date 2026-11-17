@@ -192,6 +192,7 @@ python3 scripts/test-render-workers.py build/dev/sioyek
 
 ## Documentation & References
 
+* [docs/architecture.md](docs/architecture.md) — Technical overview of Sioyek 3.0 Vulkan presentation, condition-variable worker queues, and concurrency model.
 * [BUILDING.md](BUILDING.md) — Detailed build options, compiler configurations (GCC/Clang), and sanitizer options.
 * [PACKAGING.md](PACKAGING.md) — Offline packaging architecture and reproducible build manifests.
 * [RELEASE.md](RELEASE.md) — Release validation checklists, verification logs, and signing procedures.
