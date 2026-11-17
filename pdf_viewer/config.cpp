@@ -40,17 +40,8 @@ bool RESTORE_ALL_WINDOWS_ON_STARTUP = false;
 bool DISABLE_CURSOR_BLINKING = false;
 bool FREE_TOUCHPAD_MOVEMENT = false;
 
-#ifdef SIOYEK_MOBILE
-bool TOUCH_MODE = true;
-#else
 bool TOUCH_MODE = false;
-#endif
-
-#ifdef SIOYEK_MOBILE
-bool SLICED_RENDERING = true;
-#else
 bool SLICED_RENDERING = false;
-#endif
 int NUM_V_SLICES = 5;
 int NUM_H_SLICES = 1;
 bool SHOULD_RENDER_PDF_ANNOTATIONS = true;
@@ -81,13 +72,8 @@ std::wstring PERIODIC_COMMANDS = L"";
 std::wstring MIDDLE_CLICK_SEARCH_ENGINE = L"s";
 std::wstring SHIFT_MIDDLE_CLICK_SEARCH_ENGINE = L"l";
 std::wstring PAPERS_FOLDER_PATH = L"";
-#ifndef SIOYEK_MOBILE
 std::wstring STATUS_BAR_FORMAT = L"[ %{current_page} / %{num_pages} ]%{chapter_name}%{search_results}%{search_progress}%{link_status}%{waiting_for_symbol}%{indexing}%{preview_index}%{synctex}%{drag}%{presentation}%{visual_scroll}%{locked_scroll}%{highlight}%{freehand_drawing}%{closest_bookmark}%{close_portal}%{rect_select}%{custom_message}%{download}";
 std::wstring RIGHT_STATUS_BAR_FORMAT = L"";
-#else
-std::wstring STATUS_BAR_FORMAT = L"# %{current_page} / %{num_pages}%{search_results}%{search_progress}%{link_status}%{indexing}%{current_requirement_desc}";
-std::wstring RIGHT_STATUS_BAR_FORMAT = L"%{auto_name}";
-#endif
 
 float BLACK_COLOR[3] = { 0.0f, 0.0f, 0.0f };
 float HIGHLIGHT_COLORS[26 * 3] = { \
@@ -179,11 +165,7 @@ bool ALLOW_HORIZONTAL_DRAG_WHEN_DOCUMENT_IS_SMALL = false;
 bool INVERT_SELECTED_TEXT = false;
 bool IGNORE_SCROLL_EVENTS = false;
 
-#ifdef SIOYEK_MOBILE
-std::wstring STARTUP_COMMANDS = L"toggle_mouse_drag_mode;toggle_fullscreen";
-#else
 std::wstring STARTUP_COMMANDS = L"";
-#endif
 
 bool ALIGN_LINK_DEST_TO_TOP = false;
 int MAX_TAB_COUNT = 100;
@@ -204,11 +186,7 @@ bool FORCE_CUSTOM_LINE_ALGORITHM = false;
 float OVERVIEW_SIZE[2] = { 0.8f, 0.4f };
 float OVERVIEW_OFFSET[2] = { 0.0f, 0.0f };
 bool IGNORE_WHITESPACE_IN_PRESENTATION_MODE = false;
-#ifdef SIOYEK_MOBILE
-bool EXACT_HIGHLIGHT_SELECT = true;
-#else
 bool EXACT_HIGHLIGHT_SELECT = false;
-#endif
 bool SHOW_DOC_PATH = false;
 float FASTREAD_OPACITY = 0.5f;
 bool SHOULD_WARN_ABOUT_USER_KEY_OVERRIDE = true;
@@ -240,11 +218,7 @@ std::wstring CONTEXT_MENU_ITEMS_FOR_BOOKMARKS = L"delete_visible_annotation|edit
 std::wstring CONTEXT_MENU_ITEMS_FOR_OVERVIEW = L"";
 
 bool RIGHT_CLICK_CONTEXT_MENU = false;
-#ifdef SIOYEK_MOBILE
-int NUM_CACHED_PAGES = 3;
-#else
 int NUM_CACHED_PAGES = 5;
-#endif
 
 float PAGE_SEPARATOR_WIDTH = 0.0f;
 float PAGE_SEPARATOR_COLOR[3] = { 0.9f, 0.9f, 0.9f };
@@ -273,6 +247,7 @@ float KEYBOARD_SELECTED_TAG_BACKGROUND_COLRO[] = { 0.0f , 0.0f, 0.0f, 1.0f };
 
 bool AUTOCENTER_VISUAL_SCROLL = false;
 bool ALPHABETIC_LINK_TAGS = false;
+// Retain this no-op legacy preference for existing config compatibility.
 bool VIMTEX_WSL_FIX = false;
 float RULER_AUTO_MOVE_SENSITIVITY = 40.0f;
 float TTS_RATE = 0.0f;
@@ -310,10 +285,6 @@ float EPUB_LINE_SPACING = 2.0f;
 int RELOAD_INTERVAL_MILISECONDS = 200;
 bool ADJUST_ANNOTATION_COLORS_FOR_DARK_MODE = true;
 
-#ifdef Q_OS_MACOS
-float MACOS_TITLEBAR_COLOR[3] = { -1.0f, -1.0f, -1.0f };
-bool MACOS_HIDE_TITLEBAR = false;
-#endif
 
 std::wstring RULER_DISPLAY_MODE = L"underline";
 std::wstring EPUB_CSS = L"";
@@ -373,11 +344,7 @@ std::wstring VISUAL_MARK_PREV_TAP_COMMAND = L"";
 std::wstring VISUAL_MARK_PREV_HOLD_COMMAND = L"";
 std::wstring MIDDLE_LEFT_RECT_TAP_COMMAND = L"";
 std::wstring MIDDLE_LEFT_RECT_HOLD_COMMAND = L"";
-#ifdef SIOYEK_MOBILE
-std::wstring MIDDLE_RIGHT_RECT_TAP_COMMAND = L"overview_definition";
-#else
 std::wstring MIDDLE_RIGHT_RECT_TAP_COMMAND = L"";
-#endif
 std::wstring MIDDLE_RIGHT_RECT_HOLD_COMMAND = L"";
 
 
@@ -1154,10 +1121,6 @@ ConfigManager::ConfigManager(const Path& default_path, const Path& auto_path, co
     add_rect(L"landscape_visual_mark_next", &LANDSCAPE_VISUAL_MARK_NEXT);
     add_rect(L"landscape_visual_mark_prev", &LANDSCAPE_VISUAL_MARK_PREV);
 
-#ifdef Q_OS_MACOS
-    add_color3(L"macos_titlebar_color", MACOS_TITLEBAR_COLOR);
-    add_bool(L"macos_hide_titlebar", &MACOS_HIDE_TITLEBAR);
-#endif
 
     std::wstring highlight_config_string = L"highlight_color_a";
     std::wstring search_url_config_string = L"search_url_a";
@@ -1181,19 +1144,9 @@ ConfigManager::ConfigManager(const Path& default_path, const Path& auto_path, co
 }
 
 void ConfigManager::persist_config() {
-#ifdef SIOYEK_ANDROID
-    serialize(android_config_path);
-#else
-    //Path path(L"test.config");
-    //serialize(path);
-#endif
-
 }
 
 void ConfigManager::restore_default() {
-#ifdef SIOYEK_ANDROID
-    clear_file(android_config_path);
-#endif
 }
 
 void ConfigManager::clear_file(const Path& path) {

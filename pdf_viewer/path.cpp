@@ -52,30 +52,14 @@ Path Path::file_parent() const
 
 std::wstring Path::get_path() const
 {
-#ifdef SIOYEK_ANDROID
-    if (canon_path.substr(0, 2) == L"/:") {
-        return canon_path.substr(1, canon_path.size() - 1);
-    }
-    if (canon_path.substr(0, 9) == L"content:/") {
-        return canon_path;
-    }
-    if (canon_path[0] == ':') {
-        return canon_path;
-    }
-#endif
-
     if (canon_path.size() == 0) return canon_path;
 
-#ifdef Q_OS_WIN
-    return canon_path;
-#else
     if (canon_path[0] != '/') {
         return L"/" + canon_path;
     }
     else {
         return  canon_path;
     }
-#endif
 }
 
 std::string Path::get_path_utf8() const
@@ -124,7 +108,6 @@ void copy_file(Path src, Path dst)
 //
 //	std::wstring file_name = sane_path.filename();
 //
-////#ifdef Q_OS_WIN
 ////	wchar_t separator = '\\';
 ////#else
 ////	wchar_t separator = '/';
