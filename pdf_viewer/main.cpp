@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <iostream>
 #include <vector>
 #include <string>
@@ -114,6 +115,7 @@ extern std::wstring PAPERS_FOLDER_PATH;
 extern bool NO_AUTO_CONFIG;
 extern bool DEFAULT_DARK_MODE;
 extern int NUM_CACHED_PAGES;
+extern int MUPDF_STORE_MIB;
 extern bool DISABLE_CURSOR_BLINKING;
 
 std::wstring strip_uri(std::wstring pdf_file_name, std::optional<int>* out_page) {
@@ -674,8 +676,11 @@ int main(int argc, char* args[]) {
     locks.lock = lock_mutex;
     locks.unlock = unlock_mutex;
 
+    // Cloned worker contexts share this cache of decoded images, fonts and
+    // other MuPDF resources. The rendered-page cache has its own policy.
+    const auto store_bytes = static_cast<size_t>(std::clamp(MUPDF_STORE_MIB, 16, 1024)) * 1024 * 1024;
     std::unique_ptr<fz_context, decltype(&fz_drop_context)> context_owner(
-        fz_new_context(nullptr, &locks, FZ_STORE_DEFAULT), fz_drop_context);
+        fz_new_context(nullptr, &locks, store_bytes), fz_drop_context);
     fz_context* mupdf_context = context_owner.get();
 
     if (!mupdf_context) {

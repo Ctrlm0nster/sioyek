@@ -39,12 +39,16 @@ def arguments():
                         help='Keep Vulkan validation enabled (default); record the setting in results')
     parser.add_argument('--normal-only', action='store_true',
                         help='Measure normal mode only for profiling/workload sweeps')
+    parser.add_argument('--page-turns', type=int, default=0,
+                        help='Visit pages 2 through N+1, then revisit up to five early pages')
     args = parser.parse_args()
     if not ((args.opengl and args.vulkan and not args.baseline and not args.candidate) or
             (args.baseline and not args.opengl and not args.vulkan)):
         parser.error('Supply --baseline [--candidate] or --opengl/--vulkan')
     if min(args.rounds, args.frames, args.fps, args.captures) < 1:
         parser.error('Trial counts and cadence must be positive')
+    if args.page_turns < 0:
+        parser.error('Page turn count must be nonnegative')
     return args
 
 
@@ -142,6 +146,20 @@ def restore_focus(address):
         hypr('dispatch', 'focuswindow', 'address:' + address)
 
 
+def measure_page_turns(instance, pid, pages):
+    samples = []
+    for page in pages:
+        start = time.perf_counter()
+        command(instance, 'set_state_json', json.dumps({'page_number': page}))
+        command(instance, 'wait_for_renders_to_finish')
+        wait_ms = (time.perf_counter() - start) * 1000
+        state = command(instance, 'get_state_json')[0]
+        if state['page_number'] != page:
+            raise RuntimeError(f'Expected page {page + 1}, got {state["page_number"] + 1}')
+        samples.append({'page': page + 1, 'render_wait_ms': wait_ms, **usage(pid)})
+    return samples
+
+
 def trial(args, backend, binary, trial_index, work):
     home = work / f'{trial_index:02d}-{backend}'
     config = home / '.config/sioyek'
@@ -205,6 +223,15 @@ def trial(args, backend, binary, trial_index, work):
             time.sleep(1)
             after = usage(process.pid)
             result['idle_cpu_s_over_1s'] = after['cpu_s'] - before['cpu_s']
+            if args.page_turns:
+                turns = measure_page_turns(instance, process.pid, range(1, args.page_turns + 1))
+                # Give the one-second cache collector time to expire old responses.
+                time.sleep(3)
+                settled = usage(process.pid)
+                revisits = measure_page_turns(instance, process.pid, range(min(5, args.page_turns)))
+                result['page_traversal'] = {'before': after, 'turns': turns,
+                                            'settled': settled, 'revisits': revisits}
+                command(instance, 'set_view_state', '0 500 1.5 0')
             modes = [('normal', None)] if args.normal_only else [
                 ('normal', None), ('dark', 'toggle_dark_mode'), ('custom', 'toggle_custom_color')]
             for mode, toggle in modes:
@@ -286,6 +313,7 @@ def main():
                          for name, path in binaries.items()},
             'rounds': args.rounds, 'frames_per_mode': args.frames, 'target_updates_per_second': args.fps,
             'captures_per_mode': args.captures, 'platform': args.platform,
+            'page_turns': args.page_turns,
             'vulkan_validation': args.validation, 'trials': []}
     data['normal_only'] = args.normal_only
     try:

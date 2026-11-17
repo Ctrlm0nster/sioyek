@@ -2,7 +2,7 @@
 # Generated source snapshot/checksum: scripts/prepare-arch-package.py
 pkgname=sioyek-ctrlm0nster
 pkgver=3.0.0.r0.g000000000000
-pkgrel=4
+pkgrel=5
 pkgdesc='Keyboard-driven PDF reader (Ctrlm0nster fork)'
 arch=('x86_64')
 url='https://github.com/Ctrlm0nster/sioyek'

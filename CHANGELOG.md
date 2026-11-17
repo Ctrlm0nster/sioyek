@@ -5,7 +5,12 @@ Upstream: https://github.com/ahrm/sioyek (ahrm and contributors)
 
 ## [3.0.0-dev] — Vulkan & Linux Modernization
 
-Current development packaging revision: 4. No release tag or public assets yet.
+Current development packaging revision: 5. No release tag or public assets yet.
+
+- Default MuPDF's shared decoded-resource cache to 64 MiB to reduce retained
+  memory while reading image-heavy PDFs. Set `mupdf_store_mib` and restart to
+  tune the memory and page-revisit tradeoff. Add sequential page traversal and
+  revisit measurements to the rendering benchmark.
 
 - Use MuPDF's native packed-pointer alignment in all builds and propagate the
   same definition to its consumers. Fix the UBSan alignment failure triggered by

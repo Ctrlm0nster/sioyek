@@ -250,6 +250,15 @@ text/OCR). `--baseline` alone records a fresh baseline; `--normal-only` shortens
 workload sweeps. Startup-to-index-ready includes explicit cache warmup and IPC
 waits, so it is not a pure indexing-time measurement.
 
+For memory growth across pages, add `--page-turns 31` to the rendering benchmark
+for the 32-page scan fixture. The report records Linux process RSS and peak RSS
+at each turn, after a three-second idle period, and while revisiting up to five
+early pages. Render wait includes IPC and the GUI polling interval. To tune the
+decoded-resource cache, set `mupdf_store_mib` in `prefs_user.config` and restart.
+The default is 64 MiB. This controls when MuPDF starts evicting decoded resources
+such as images and fonts. Process RSS includes the rendered-page cache, Vulkan
+and other allocations.
+
 ### Local fixes for Qt 6.12.0 and Wayland 1.26.0
 
 The unmodified system Qt 6.12.0 with validation layers 1.4.363.1 reports
