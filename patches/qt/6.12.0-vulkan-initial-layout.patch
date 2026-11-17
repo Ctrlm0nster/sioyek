@@ -1,0 +1,20 @@
+--- a/src/gui/rhi/qrhivulkan.cpp
++++ b/src/gui/rhi/qrhivulkan.cpp
+@@ -7604,7 +7604,7 @@
+         return false;
+     }
+ 
+-    usageState.layout = VK_IMAGE_LAYOUT_PREINITIALIZED;
++    usageState.layout = VK_IMAGE_LAYOUT_UNDEFINED;
+     usageState.access = 0;
+     usageState.stage = 0;
+ 
+@@ -7708,7 +7708,7 @@
+     imageInfo.arrayLayers = isCube ? 6 : (isArray ? qMax(0, m_arraySize) : 1);
+     imageInfo.samples = samples;
+     imageInfo.tiling = VK_IMAGE_TILING_OPTIMAL;
+-    imageInfo.initialLayout = VK_IMAGE_LAYOUT_PREINITIALIZED;
++    imageInfo.initialLayout = VK_IMAGE_LAYOUT_UNDEFINED;
+ 
+     imageInfo.usage = VK_IMAGE_USAGE_SAMPLED_BIT | VK_IMAGE_USAGE_TRANSFER_DST_BIT;
+     if (isRenderTarget) {

@@ -499,16 +499,29 @@ bool handle_error(const QString& func_name, int error_code, char* error_message)
     return true;
 }
 
+DatabaseManager::~DatabaseManager() {
+    close();
+}
+
+void DatabaseManager::close() {
+    std::lock_guard<std::recursive_mutex> lock(db_mutex);
+    if (global_db && global_db != local_db)
+        sqlite3_close_v2(global_db);
+    if (local_db)
+        sqlite3_close_v2(local_db);
+    local_db = global_db = nullptr;
+}
+
 bool DatabaseManager::open(const std::wstring& local_db_file_path, const std::wstring& global_db_file_path) {
     std::lock_guard<std::recursive_mutex> lock(db_mutex);
+    close();
 
     std::string local_database_file_path_utf8 = utf8_encode(local_db_file_path);
     int local_rc = sqlite3_open(local_database_file_path_utf8.c_str(), &local_db);
 
     if (local_rc) {
         std::cerr << "could not create local database" << sqlite3_errmsg(local_db) << std::endl;
-        local_db = nullptr;
-        global_db = nullptr;
+        close();
         return false;
     }
 
@@ -518,8 +531,7 @@ bool DatabaseManager::open(const std::wstring& local_db_file_path, const std::ws
 
         if (global_rc) {
             std::cerr << "could not create global database" << sqlite3_errmsg(global_db) << std::endl;
-            local_db = nullptr;
-            global_db = nullptr;
+            close();
             return false;
         }
     }
@@ -1390,7 +1402,7 @@ void DatabaseManager::split_database(const std::wstring& local_database_path, co
             portals.push_back(std::make_pair(hash, portal));
         }
     }
-    sqlite3_close(local_db);
+    close();
 
 
     // ---------------------- CREATE NEW DATABASE FILES ----------------------------

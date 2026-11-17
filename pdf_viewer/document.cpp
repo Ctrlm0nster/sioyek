@@ -7,6 +7,7 @@
 #include <qfileinfo.h>
 #include <qdatetime.h>
 #include <map>
+#include <memory>
 #include <regex>
 #include <qcryptographichash.h>
 #include <qjsondocument.h>
@@ -976,27 +977,16 @@ Document::~Document() {
         stop_indexing();
         document_indexing_thread.value().join();
     }
+    for (auto* node : created_top_level_toc_nodes)
+        clear_toc_node(node);
 
-    if (doc != nullptr) {
-        fz_try(context) {
-
-            for (auto [_, stext_page] : cached_stext_pages) {
-                fz_drop_stext_page(context, stext_page);
-            }
-
-            for (auto [_, small_pixmap] : cached_small_pixmaps) {
-                fz_drop_pixmap(context, small_pixmap);
-            }
-
-            for (auto [_, link] : cached_page_links) {
-                fz_drop_link(context, link);
-            }
-
-            fz_drop_document(context, doc);
-        }
-        fz_catch(context) {
-            LOG(std::cerr << "Error: could not drop document" << std::endl);
-        }
+    // Caches may exist even when no document is currently open.
+    fz_try(context) {
+        clear_document_caches();
+        fz_drop_document(context, doc);
+    }
+    fz_catch(context) {
+        LOG(std::cerr << "Error: could not drop document" << std::endl);
     }
 }
 void Document::reload(std::string password) {
@@ -1277,7 +1267,7 @@ fz_stext_page* Document::get_stext_with_page_number(fz_context* ctx, int page_nu
     }
 
     fz_try(ctx) {
-        fz_stext_options options;
+        fz_stext_options options{};
         options.flags = FZ_STEXT_PRESERVE_IMAGES;
         options.scale = 0.0f;
         stext_page = fz_new_stext_page_from_page_number(ctx, doc_, page_number, &options);
@@ -2941,7 +2931,10 @@ int Document::add_stext_page_to_created_toc(fz_stext_page* stext_page,
                 toc_node_stack.pop_back();
             }
 
-            if (are_same) return;
+            if (are_same) {
+                delete node;
+                return;
+            }
             num_new_entries += 1;
 
             if (toc_node_stack.size() > 0) {
@@ -3587,24 +3580,10 @@ std::wstring Document::get_addtional_sioyek_file_path(QString type) {
 }
 
 std::wstring Document::get_drawings_file_path() {
-    Path path = Path(file_name);
-#ifdef SIOYEK_ANDROID
-    if (file_name == L":/tutorial.pdf") {
-        QString parent_path = QStandardPaths::standardLocations(QStandardPaths::AppDataLocation).at(0);
-        return Path(parent_path.toStdWString()).slash(L"tutorial.pdf.sioyek.drawings").get_path();
-    }
-#endif
     return get_addtional_sioyek_file_path("drawings");
 }
 
 std::wstring Document::get_scratchpad_file_path() {
-    Path path = Path(file_name);
-#ifdef SIOYEK_ANDROID
-    if (file_name == L":/tutorial.pdf") {
-        QString parent_path = QStandardPaths::standardLocations(QStandardPaths::AppDataLocation).at(0);
-        return Path(parent_path.toStdWString()).slash(L"tutorial.pdf.sioyek.scratchpad").get_path();
-    }
-#endif
     return get_addtional_sioyek_file_path("scratchpad");
 }
 
@@ -3630,13 +3609,6 @@ bool Document::annotations_file_is_newer_than_database() {
 }
 
 std::wstring Document::get_annotations_file_path() {
-    Path path = Path(file_name);
-#ifdef SIOYEK_ANDROID
-    if (file_name == L":/tutorial.pdf") {
-        QString parent_path = QStandardPaths::standardLocations(QStandardPaths::AppDataLocation).at(0);
-        return Path(parent_path.toStdWString()).slash(L"tutorial.pdf.sioyek.annotations").get_path();
-    }
-#endif
     return get_addtional_sioyek_file_path("annotations");
 }
 
@@ -4447,6 +4419,10 @@ std::wstring Document::detect_paper_name(fz_context* context, fz_document* doc) 
     if (detected_paper_name.size() > 0) return detected_paper_name;
 
     fz_stext_page* stext_page = get_stext_with_page_number(context, 0, doc);
+    // Pages from a worker's document bypass the main document's text cache.
+    auto drop_text = [context](fz_stext_page* page) { fz_drop_stext_page(context, page); };
+    std::unique_ptr<fz_stext_page, decltype(drop_text)> uncached_page(
+        doc && doc != this->doc ? stext_page : nullptr, drop_text);
     if (stext_page) {
 
         //std::wstring max_block_text = L"";

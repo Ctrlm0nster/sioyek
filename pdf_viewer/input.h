@@ -167,6 +167,7 @@ public:
     //char create_bookmark_symbol = 0;
 
     InputHandler(const Path& default_path, const std::vector<Path>& user_paths, CommandManager* cm);
+    ~InputHandler();
     void reload_config_files(const Path& default_path, const std::vector<Path>& user_path);
     //std::vector<std::unique_ptr<Command>> handle_key(QKeyEvent* key_event, bool shift_pressed, bool control_pressed, bool alt_pressed ,int* num_repeats);
     int get_event_key(QKeyEvent* key_event, bool* shift_pressed, bool* control_pressed, bool* is_command_pressed, bool* alt_pressed);

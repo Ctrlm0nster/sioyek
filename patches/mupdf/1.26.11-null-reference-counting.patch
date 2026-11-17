@@ -1,0 +1,683 @@
+--- a/source/fitz/archive.c
++++ b/source/fitz/archive.c
+@@ -225,13 +225,13 @@
+ fz_archive *
+ fz_keep_archive(fz_context *ctx, fz_archive *arch)
+ {
+-	return (fz_archive *)fz_keep_imp(ctx, arch, &arch->refs);
++	return (fz_archive *)fz_keep_imp(ctx, arch, arch ? &arch->refs : NULL);
+ }
+ 
+ void
+ fz_drop_archive(fz_context *ctx, fz_archive *arch)
+ {
+-	if (fz_drop_imp(ctx, arch, &arch->refs))
++	if (fz_drop_imp(ctx, arch, arch ? &arch->refs : NULL))
+ 	{
+ 		if (arch->drop_archive)
+ 			arch->drop_archive(ctx, arch);
+@@ -550,7 +550,7 @@
+ 	if (!ctx)
+ 		return;
+ 
+-	if (fz_drop_imp(ctx, ctx->archive, &ctx->archive->refs))
++	if (fz_drop_imp(ctx, ctx->archive, ctx->archive ? &ctx->archive->refs : NULL))
+ 	{
+ 		fz_free(ctx, ctx->archive);
+ 		ctx->archive = NULL;
+--- a/source/fitz/bitmap.c
++++ b/source/fitz/bitmap.c
+@@ -318,13 +318,13 @@
+ fz_bitmap *
+ fz_keep_bitmap(fz_context *ctx, fz_bitmap *bit)
+ {
+-	return fz_keep_imp(ctx, bit, &bit->refs);
++	return fz_keep_imp(ctx, bit, bit ? &bit->refs : NULL);
+ }
+ 
+ void
+ fz_drop_bitmap(fz_context *ctx, fz_bitmap *bit)
+ {
+-	if (fz_drop_imp(ctx, bit, &bit->refs))
++	if (fz_drop_imp(ctx, bit, bit ? &bit->refs : NULL))
+ 	{
+ 		fz_free(ctx, bit->samples);
+ 		fz_free(ctx, bit);
+--- a/source/fitz/buffer.c
++++ b/source/fitz/buffer.c
+@@ -196,13 +196,13 @@
+ fz_buffer *
+ fz_keep_buffer(fz_context *ctx, fz_buffer *buf)
+ {
+-	return fz_keep_imp(ctx, buf, &buf->refs);
++	return fz_keep_imp(ctx, buf, buf ? &buf->refs : NULL);
+ }
+ 
+ void
+ fz_drop_buffer(fz_context *ctx, fz_buffer *buf)
+ {
+-	if (fz_drop_imp(ctx, buf, &buf->refs))
++	if (fz_drop_imp(ctx, buf, buf ? &buf->refs : NULL))
+ 	{
+ 		if (!buf->shared)
+ 			fz_free(ctx, buf->data);
+--- a/source/fitz/colorspace.c
++++ b/source/fitz/colorspace.c
+@@ -298,25 +298,25 @@
+ fz_colorspace *
+ fz_keep_colorspace(fz_context *ctx, fz_colorspace *cs)
+ {
+-	return fz_keep_key_storable(ctx, &cs->key_storable);
++	return fz_keep_key_storable(ctx, cs ? &cs->key_storable : NULL);
+ }
+ 
+ void
+ fz_drop_colorspace(fz_context *ctx, fz_colorspace *cs)
+ {
+-	fz_drop_key_storable(ctx, &cs->key_storable);
++	fz_drop_key_storable(ctx, cs ? &cs->key_storable : NULL);
+ }
+ 
+ fz_colorspace *
+ fz_keep_colorspace_store_key(fz_context *ctx, fz_colorspace *cs)
+ {
+-	return fz_keep_key_storable_key(ctx, &cs->key_storable);
++	return fz_keep_key_storable_key(ctx, cs ? &cs->key_storable : NULL);
+ }
+ 
+ void
+ fz_drop_colorspace_store_key(fz_context *ctx, fz_colorspace *cs)
+ {
+-	fz_drop_key_storable_key(ctx, &cs->key_storable);
++	fz_drop_key_storable_key(ctx, cs ? &cs->key_storable : NULL);
+ }
+ 
+ void
+@@ -635,13 +635,13 @@
+ 
+ fz_default_colorspaces *fz_keep_default_colorspaces(fz_context *ctx, fz_default_colorspaces *default_cs)
+ {
+-	return fz_keep_imp(ctx, default_cs, &default_cs->refs);
++	return fz_keep_imp(ctx, default_cs, default_cs ? &default_cs->refs : NULL);
+ }
+ 
+ void
+ fz_drop_default_colorspaces(fz_context *ctx, fz_default_colorspaces *default_cs)
+ {
+-	if (fz_drop_imp(ctx, default_cs, &default_cs->refs))
++	if (fz_drop_imp(ctx, default_cs, default_cs ? &default_cs->refs : NULL))
+ 	{
+ 		fz_drop_colorspace(ctx, default_cs->gray);
+ 		fz_drop_colorspace(ctx, default_cs->rgb);
+--- a/source/fitz/compressed-buffer.c
++++ b/source/fitz/compressed-buffer.c
+@@ -28,13 +28,13 @@
+ fz_compressed_buffer *
+ fz_keep_compressed_buffer(fz_context *ctx, fz_compressed_buffer *cbuf)
+ {
+-	return (fz_compressed_buffer *)fz_keep_imp(ctx, cbuf, &cbuf->refs);
++	return (fz_compressed_buffer *)fz_keep_imp(ctx, cbuf, cbuf ? &cbuf->refs : NULL);
+ }
+ 
+ void
+ fz_drop_compressed_buffer(fz_context *ctx, fz_compressed_buffer *buf)
+ {
+-	if (fz_drop_imp(ctx, buf, &buf->refs))
++	if (fz_drop_imp(ctx, buf, buf ? &buf->refs : NULL))
+ 	{
+ 		if (buf->params.type == FZ_IMAGE_JBIG2)
+ 			fz_drop_jbig2_globals(ctx, buf->params.u.jbig2.globals);
+--- a/source/fitz/context.c
++++ b/source/fitz/context.c
+@@ -51,14 +51,14 @@
+ {
+ 	if (!ctx)
+ 		return NULL;
+-	return fz_keep_imp(ctx, ctx->style, &ctx->style->refs);
++	return fz_keep_imp(ctx, ctx->style, ctx->style ? &ctx->style->refs : NULL);
+ }
+ 
+ static void fz_drop_style_context(fz_context *ctx)
+ {
+ 	if (!ctx)
+ 		return;
+-	if (fz_drop_imp(ctx, ctx->style, &ctx->style->refs))
++	if (fz_drop_imp(ctx, ctx->style, ctx->style ? &ctx->style->refs : NULL))
+ 	{
+ 		fz_free(ctx, ctx->style->user_css);
+ 		fz_free(ctx, ctx->style);
+@@ -121,14 +121,14 @@
+ {
+ 	if (!ctx)
+ 		return NULL;
+-	return fz_keep_imp(ctx, ctx->tuning, &ctx->tuning->refs);
++	return fz_keep_imp(ctx, ctx->tuning, ctx->tuning ? &ctx->tuning->refs : NULL);
+ }
+ 
+ static void fz_drop_tuning_context(fz_context *ctx)
+ {
+ 	if (!ctx)
+ 		return;
+-	if (fz_drop_imp(ctx, ctx->tuning, &ctx->tuning->refs))
++	if (fz_drop_imp(ctx, ctx->tuning, ctx->tuning ? &ctx->tuning->refs : NULL))
+ 	{
+ 		fz_free(ctx, ctx->tuning);
+ 	}
+--- a/source/fitz/device.c
++++ b/source/fitz/device.c
+@@ -86,13 +86,13 @@
+ fz_device *
+ fz_keep_device(fz_context *ctx, fz_device *dev)
+ {
+-	return fz_keep_imp(ctx, dev, &dev->refs);
++	return fz_keep_imp(ctx, dev, dev ? &dev->refs : NULL);
+ }
+ 
+ void
+ fz_drop_device(fz_context *ctx, fz_device *dev)
+ {
+-	if (fz_drop_imp(ctx, dev, &dev->refs))
++	if (fz_drop_imp(ctx, dev, dev ? &dev->refs : NULL))
+ 	{
+ 		if (dev->close_device)
+ 			fz_warn(ctx, "dropping unclosed device");
+--- a/source/fitz/document.c
++++ b/source/fitz/document.c
+@@ -620,13 +620,13 @@
+ fz_document *
+ fz_keep_document(fz_context *ctx, fz_document *doc)
+ {
+-	return fz_keep_imp(ctx, doc, &doc->refs);
++	return fz_keep_imp(ctx, doc, doc ? &doc->refs : NULL);
+ }
+ 
+ void
+ fz_drop_document(fz_context *ctx, fz_document *doc)
+ {
+-	if (fz_drop_imp(ctx, doc, &doc->refs))
++	if (fz_drop_imp(ctx, doc, doc ? &doc->refs : NULL))
+ 	{
+ 		fz_reap_dead_pages(ctx, doc);
+ 		if (doc->open)
+@@ -1086,13 +1086,13 @@
+ fz_page *
+ fz_keep_page(fz_context *ctx, fz_page *page)
+ {
+-	return fz_keep_imp(ctx, page, &page->refs);
++	return fz_keep_imp(ctx, page, page ? &page->refs : NULL);
+ }
+ 
+ void
+ fz_drop_page(fz_context *ctx, fz_page *page)
+ {
+-	if (fz_drop_imp(ctx, page, &page->refs))
++	if (fz_drop_imp(ctx, page, page ? &page->refs : NULL))
+ 	{
+ 		fz_document *doc = page->doc;
+ 
+--- a/source/fitz/font.c
++++ b/source/fitz/font.c
+@@ -140,7 +140,7 @@
+ fz_font *
+ fz_keep_font(fz_context *ctx, fz_font *font)
+ {
+-	return fz_keep_imp(ctx, font, &font->refs);
++	return fz_keep_imp(ctx, font, font ? &font->refs : NULL);
+ }
+ 
+ static void
+@@ -197,7 +197,7 @@
+ 	int fterr;
+ 	int i;
+ 
+-	if (!fz_drop_imp(ctx, font, &font->refs))
++	if (!fz_drop_imp(ctx, font, font ? &font->refs : NULL))
+ 		return;
+ 
+ 	free_resources(ctx, font);
+--- a/source/fitz/glyph.c
++++ b/source/fitz/glyph.c
+@@ -32,13 +32,13 @@
+ fz_glyph *
+ fz_keep_glyph(fz_context *ctx, fz_glyph *glyph)
+ {
+-	return fz_keep_storable(ctx, &glyph->storable);
++	return fz_keep_storable(ctx, glyph ? &glyph->storable : NULL);
+ }
+ 
+ void
+ fz_drop_glyph(fz_context *ctx, fz_glyph *glyph)
+ {
+-	fz_drop_storable(ctx, &glyph->storable);
++	fz_drop_storable(ctx, glyph ? &glyph->storable : NULL);
+ }
+ 
+ static void
+--- a/source/fitz/halftone.c
++++ b/source/fitz/halftone.c
+@@ -49,14 +49,14 @@
+ fz_halftone *
+ fz_keep_halftone(fz_context *ctx, fz_halftone *ht)
+ {
+-	return fz_keep_imp(ctx, ht, &ht->refs);
++	return fz_keep_imp(ctx, ht, ht ? &ht->refs : NULL);
+ }
+ 
+ void
+ fz_drop_halftone(fz_context *ctx, fz_halftone *ht)
+ {
+ 	int i;
+-	if (fz_drop_imp(ctx, ht, &ht->refs))
++	if (fz_drop_imp(ctx, ht, ht ? &ht->refs : NULL))
+ 	{
+ 		for (i = 0; i < ht->n; i++)
+ 			fz_drop_pixmap(ctx, ht->comp[i]);
+--- a/source/fitz/image.c
++++ b/source/fitz/image.c
+@@ -65,19 +65,19 @@
+ fz_image *
+ fz_keep_image(fz_context *ctx, fz_image *image)
+ {
+-	return fz_keep_key_storable(ctx, &image->key_storable);
++	return fz_keep_key_storable(ctx, image ? &image->key_storable : NULL);
+ }
+ 
+ fz_image *
+ fz_keep_image_store_key(fz_context *ctx, fz_image *image)
+ {
+-	return fz_keep_key_storable_key(ctx, &image->key_storable);
++	return fz_keep_key_storable_key(ctx, image ? &image->key_storable : NULL);
+ }
+ 
+ void
+ fz_drop_image_store_key(fz_context *ctx, fz_image *image)
+ {
+-	fz_drop_key_storable_key(ctx, &image->key_storable);
++	fz_drop_key_storable_key(ctx, image ? &image->key_storable : NULL);
+ }
+ 
+ static int
+@@ -145,7 +145,7 @@
+ void
+ fz_drop_image(fz_context *ctx, fz_image *image)
+ {
+-	fz_drop_key_storable(ctx, &image->key_storable);
++	fz_drop_key_storable(ctx, image ? &image->key_storable : NULL);
+ }
+ 
+ static void
+--- a/source/fitz/link.c
++++ b/source/fitz/link.c
+@@ -45,13 +45,13 @@
+ fz_link *
+ fz_keep_link(fz_context *ctx, fz_link *link)
+ {
+-	return fz_keep_imp(ctx, link, &link->refs);
++	return fz_keep_imp(ctx, link, link ? &link->refs : NULL);
+ }
+ 
+ void
+ fz_drop_link(fz_context *ctx, fz_link *link)
+ {
+-	while (fz_drop_imp(ctx, link, &link->refs))
++	while (fz_drop_imp(ctx, link, link ? &link->refs : NULL))
+ 	{
+ 		fz_link *next = link->next;
+ 
+--- a/source/fitz/list-device.c
++++ b/source/fitz/list-device.c
+@@ -1679,14 +1679,14 @@
+ fz_display_list *
+ fz_keep_display_list(fz_context *ctx, fz_display_list *list)
+ {
+-	return fz_keep_storable(ctx, &list->storable);
++	return fz_keep_storable(ctx, list ? &list->storable : NULL);
+ }
+ 
+ void
+ fz_drop_display_list(fz_context *ctx, fz_display_list *list)
+ {
+ 	fz_defer_reap_start(ctx);
+-	fz_drop_storable(ctx, &list->storable);
++	fz_drop_storable(ctx, list ? &list->storable : NULL);
+ 	fz_defer_reap_end(ctx);
+ }
+ 
+--- a/source/fitz/memory.c
++++ b/source/fitz/memory.c
+@@ -231,12 +231,12 @@
+ 
+ fz_string *fz_keep_string(fz_context *ctx, fz_string *str)
+ {
+-	return fz_keep_imp(ctx, str, &str->refs);
++	return fz_keep_imp(ctx, str, str ? &str->refs : NULL);
+ }
+ 
+ void fz_drop_string(fz_context *ctx, fz_string *str)
+ {
+-	if (fz_drop_imp(ctx, str, &str->refs))
++	if (fz_drop_imp(ctx, str, str ? &str->refs : NULL))
+ 		fz_free(ctx, str);
+ }
+ 
+--- a/source/fitz/outline.c
++++ b/source/fitz/outline.c
+@@ -172,13 +172,13 @@
+ fz_outline *
+ fz_keep_outline(fz_context *ctx, fz_outline *outline)
+ {
+-	return fz_keep_imp(ctx, outline, &outline->refs);
++	return fz_keep_imp(ctx, outline, outline ? &outline->refs : NULL);
+ }
+ 
+ void
+ fz_drop_outline(fz_context *ctx, fz_outline *outline)
+ {
+-	while (fz_drop_imp(ctx, outline, &outline->refs))
++	while (fz_drop_imp(ctx, outline, outline ? &outline->refs : NULL))
+ 	{
+ 		fz_outline *next = outline->next;
+ 		fz_drop_outline(ctx, outline->down);
+--- a/source/fitz/path.c
++++ b/source/fitz/path.c
+@@ -156,7 +156,7 @@
+ {
+ 	fz_path *path = (fz_path *)pathc; /* Explicit cast away of const */
+ 
+-	if (fz_drop_imp8(ctx, path, &path->refs))
++	if (fz_drop_imp8(ctx, path, path ? &path->refs : NULL))
+ 	{
+ 		if (path->packed != FZ_PATH_PACKED_FLAT)
+ 		{
+@@ -1483,7 +1483,7 @@
+ {
+ 	fz_stroke_state *stroke = (fz_stroke_state *)strokec; /* Explicit cast away of const */
+ 
+-	if (fz_drop_imp(ctx, stroke, &stroke->refs))
++	if (fz_drop_imp(ctx, stroke, stroke ? &stroke->refs : NULL))
+ 		fz_free(ctx, stroke);
+ }
+ 
+--- a/source/fitz/pixmap.c
++++ b/source/fitz/pixmap.c
+@@ -34,13 +34,13 @@
+ fz_pixmap *
+ fz_keep_pixmap(fz_context *ctx, fz_pixmap *pix)
+ {
+-	return fz_keep_storable(ctx, &pix->storable);
++	return fz_keep_storable(ctx, pix ? &pix->storable : NULL);
+ }
+ 
+ void
+ fz_drop_pixmap(fz_context *ctx, fz_pixmap *pix)
+ {
+-	fz_drop_storable(ctx, &pix->storable);
++	fz_drop_storable(ctx, pix ? &pix->storable : NULL);
+ }
+ 
+ void
+--- a/source/fitz/separation.c
++++ b/source/fitz/separation.c
+@@ -59,12 +59,12 @@
+ 
+ fz_separations *fz_keep_separations(fz_context *ctx, fz_separations *sep)
+ {
+-	return fz_keep_imp(ctx, sep, &sep->refs);
++	return fz_keep_imp(ctx, sep, sep ? &sep->refs : NULL);
+ }
+ 
+ void fz_drop_separations(fz_context *ctx, fz_separations *sep)
+ {
+-	if (fz_drop_imp(ctx, sep, &sep->refs))
++	if (fz_drop_imp(ctx, sep, sep ? &sep->refs : NULL))
+ 	{
+ 		int i;
+ 		for (i = 0; i < sep->num_separations; i++)
+--- a/source/fitz/shade.c
++++ b/source/fitz/shade.c
+@@ -1100,7 +1100,7 @@
+ fz_shade *
+ fz_keep_shade(fz_context *ctx, fz_shade *shade)
+ {
+-	return fz_keep_storable(ctx, &shade->storable);
++	return fz_keep_storable(ctx, shade ? &shade->storable : NULL);
+ }
+ 
+ void
+@@ -1119,7 +1119,7 @@
+ void
+ fz_drop_shade(fz_context *ctx, fz_shade *shade)
+ {
+-	fz_drop_storable(ctx, &shade->storable);
++	fz_drop_storable(ctx, shade ? &shade->storable : NULL);
+ }
+ 
+ fz_rect
+--- a/source/fitz/stext-device.c
++++ b/source/fitz/stext-device.c
+@@ -279,7 +279,7 @@
+ fz_stext_page *
+ fz_keep_stext_page(fz_context *ctx, fz_stext_page *page)
+ {
+-	return fz_keep_imp(ctx, page, &page->refs);
++	return fz_keep_imp(ctx, page, page ? &page->refs : NULL);
+ }
+ 
+ void
+--- a/source/fitz/store.c
++++ b/source/fitz/store.c
+@@ -92,12 +92,12 @@
+ 	 * sanely throughout the code. */
+ 	fz_storable *s = (fz_storable *)sc;
+ 
+-	return fz_keep_imp(ctx, s, &s->refs);
++	return fz_keep_imp(ctx, s, s ? &s->refs : NULL);
+ }
+ 
+ void *fz_keep_key_storable(fz_context *ctx, const fz_key_storable *sc)
+ {
+-	return fz_keep_storable(ctx, &sc->storable);
++	return fz_keep_storable(ctx, sc ? &sc->storable : NULL);
+ }
+ 
+ /*
+@@ -716,7 +716,7 @@
+ {
+ 	if (!ctx)
+ 		return;
+-	if (fz_drop_imp(ctx, ctx->store, &ctx->store->refs))
++	if (fz_drop_imp(ctx, ctx->store, ctx->store ? &ctx->store->refs : NULL))
+ 	{
+ 		fz_empty_store(ctx);
+ 		fz_drop_hash_table(ctx, ctx->store->hash);
+--- a/source/fitz/stream-open.c
++++ b/source/fitz/stream-open.c
+@@ -90,13 +90,13 @@
+ fz_stream *
+ fz_keep_stream(fz_context *ctx, fz_stream *stm)
+ {
+-	return fz_keep_imp(ctx, stm, &stm->refs);
++	return fz_keep_imp(ctx, stm, stm ? &stm->refs : NULL);
+ }
+ 
+ void
+ fz_drop_stream(fz_context *ctx, fz_stream *stm)
+ {
+-	if (fz_drop_imp(ctx, stm, &stm->refs))
++	if (fz_drop_imp(ctx, stm, stm ? &stm->refs : NULL))
+ 	{
+ 		if (stm->drop)
+ 			stm->drop(ctx, stm->state);
+--- a/source/fitz/text.c
++++ b/source/fitz/text.c
+@@ -37,7 +37,7 @@
+ {
+ 	fz_text *text = (fz_text *)textc; /* Explicit cast away of const */
+ 
+-	return fz_keep_imp(ctx, text, &text->refs);
++	return fz_keep_imp(ctx, text, text ? &text->refs : NULL);
+ }
+ 
+ void
+@@ -45,7 +45,7 @@
+ {
+ 	fz_text *text = (fz_text *)textc; /* Explicit cast away of const */
+ 
+-	if (fz_drop_imp(ctx, text, &text->refs))
++	if (fz_drop_imp(ctx, text, text ? &text->refs : NULL))
+ 	{
+ 		fz_text_span *span = text->head;
+ 		while (span)
+--- a/source/pdf/pdf-cmap.c
++++ b/source/pdf/pdf-cmap.c
+@@ -58,14 +58,14 @@
+ pdf_cmap *
+ pdf_keep_cmap(fz_context *ctx, pdf_cmap *cmap)
+ {
+-	return fz_keep_storable(ctx, &cmap->storable);
++	return fz_keep_storable(ctx, cmap ? &cmap->storable : NULL);
+ }
+ 
+ /* Could be a macro for speed */
+ void
+ pdf_drop_cmap(fz_context *ctx, pdf_cmap *cmap)
+ {
+-	fz_drop_storable(ctx, &cmap->storable);
++	fz_drop_storable(ctx, cmap ? &cmap->storable : NULL);
+ }
+ 
+ void
+--- a/source/pdf/pdf-font.c
++++ b/source/pdf/pdf-font.c
+@@ -593,13 +593,13 @@
+ pdf_font_desc *
+ pdf_keep_font(fz_context *ctx, pdf_font_desc *fontdesc)
+ {
+-	return fz_keep_storable(ctx, &fontdesc->storable);
++	return fz_keep_storable(ctx, fontdesc ? &fontdesc->storable : NULL);
+ }
+ 
+ void
+ pdf_drop_font(fz_context *ctx, pdf_font_desc *fontdesc)
+ {
+-	fz_drop_storable(ctx, &fontdesc->storable);
++	fz_drop_storable(ctx, fontdesc ? &fontdesc->storable : NULL);
+ }
+ 
+ static int
+--- a/source/pdf/pdf-function.c
++++ b/source/pdf/pdf-function.c
+@@ -109,13 +109,13 @@
+ pdf_function *
+ pdf_keep_function(fz_context *ctx, pdf_function *func)
+ {
+-	return (pdf_function *)fz_keep_function(ctx, &func->super);
++	return (pdf_function *)fz_keep_function(ctx, func ? &func->super : NULL);
+ }
+ 
+ void
+ pdf_drop_function(fz_context *ctx, pdf_function *func)
+ {
+-	fz_drop_function(ctx, &func->super);
++	fz_drop_function(ctx, func ? &func->super : NULL);
+ }
+ 
+ size_t
+--- a/source/pdf/pdf-page.c
++++ b/source/pdf/pdf-page.c
+@@ -1379,7 +1379,7 @@
+ 	{
+ 		if (fz_caught(ctx) != FZ_ERROR_TRYLATER)
+ 		{
+-			fz_drop_page(ctx, &page->super);
++			fz_drop_page(ctx, page ? &page->super : NULL);
+ 			fz_rethrow(ctx);
+ 		}
+ 		fz_ignore_error(ctx);
+@@ -1445,7 +1445,7 @@
+ 	{
+ 		if (fz_caught(ctx) != FZ_ERROR_TRYLATER)
+ 		{
+-			fz_drop_page(ctx, &page->super);
++			fz_drop_page(ctx, page ? &page->super : NULL);
+ 			fz_rethrow(ctx);
+ 		}
+ 		fz_ignore_error(ctx);
+@@ -1985,11 +1985,11 @@
+ pdf_page *
+ pdf_keep_page(fz_context *ctx, pdf_page *page)
+ {
+-	return (pdf_page *) fz_keep_page(ctx, &page->super);
++	return (pdf_page *) fz_keep_page(ctx, page ? &page->super : NULL);
+ }
+ 
+ void
+ pdf_drop_page(fz_context *ctx, pdf_page *page)
+ {
+-	fz_drop_page(ctx, &page->super);
+-}
++	fz_drop_page(ctx, page ? &page->super : NULL);
++}
+--- a/source/pdf/pdf-pattern.c
++++ b/source/pdf/pdf-pattern.c
+@@ -26,13 +26,13 @@
+ pdf_pattern *
+ pdf_keep_pattern(fz_context *ctx, pdf_pattern *pat)
+ {
+-	return fz_keep_storable(ctx, &pat->storable);
++	return fz_keep_storable(ctx, pat ? &pat->storable : NULL);
+ }
+ 
+ void
+ pdf_drop_pattern(fz_context *ctx, pdf_pattern *pat)
+ {
+-	fz_drop_storable(ctx, &pat->storable);
++	fz_drop_storable(ctx, pat ? &pat->storable : NULL);
+ }
+ 
+ static void
+--- a/source/pdf/pdf-xref.c
++++ b/source/pdf/pdf-xref.c
+@@ -2025,13 +2025,13 @@
+ void
+ pdf_drop_document(fz_context *ctx, pdf_document *doc)
+ {
+-	fz_drop_document(ctx, &doc->super);
++	fz_drop_document(ctx, doc ? &doc->super : NULL);
+ }
+ 
+ pdf_document *
+ pdf_keep_document(fz_context *ctx, pdf_document *doc)
+ {
+-	return (pdf_document *)fz_keep_document(ctx, &doc->super);
++	return (pdf_document *)fz_keep_document(ctx, doc ? &doc->super : NULL);
+ }
+ 
+ /*
+@@ -3171,7 +3171,7 @@
+ 		char message[256];
+ 		int code;
+ 		fz_strlcpy(message, fz_convert_error(ctx, &code), sizeof message);
+-		fz_drop_document(ctx, &doc->super);
++		fz_drop_document(ctx, doc ? &doc->super : NULL);
+ 		fz_throw(ctx, code, "%s", message);
+ 	}
+ 	return doc;
+@@ -3208,7 +3208,7 @@
+ 		char message[256];
+ 		int code;
+ 		fz_strlcpy(message, fz_convert_error(ctx, &code), sizeof message);
+-		fz_drop_document(ctx, &doc->super);
++		fz_drop_document(ctx, doc ? &doc->super : NULL);
+ 		fz_throw(ctx, code, "%s", message);
+ 	}
+ 
+@@ -3681,7 +3681,7 @@
+ 	fz_catch(ctx)
+ 	{
+ 		pdf_drop_obj(ctx, trailer);
+-		fz_drop_document(ctx, &doc->super);
++		fz_drop_document(ctx, doc ? &doc->super : NULL);
+ 		fz_rethrow(ctx);
+ 	}
+ 	return doc;

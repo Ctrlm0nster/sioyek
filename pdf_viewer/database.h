@@ -23,8 +23,9 @@ struct MarkInDatabase {
 class DatabaseManager {
 private:
     std::recursive_mutex db_mutex;
-    sqlite3* local_db;
-    sqlite3* global_db;
+    sqlite3* local_db = nullptr;
+    sqlite3* global_db = nullptr;
+    void close();
     bool create_opened_books_table();
     bool create_marks_table();
     bool create_bookmarks_table();
@@ -33,6 +34,7 @@ private:
     bool create_document_hash_table();
     bool create_highlights_table();
 public:
+    ~DatabaseManager();
     bool open(const std::wstring& local_db_file_path, const std::wstring& global_db_file_path);
     bool select_opened_book(const std::string& book_path, std::vector<OpenedBookState>& out_result);
     bool insert_mark(const std::string& checksum,

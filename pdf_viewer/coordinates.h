@@ -2,7 +2,7 @@
 
 #include <qpoint.h>
 #include <mupdf/fitz.h>
-#include <qopengl.h>
+#include "render_types.h"
 #include <algorithm>
 #include <cmath>
 
@@ -19,27 +19,27 @@ bool rects_intersect(fz_irect rect1, fz_irect rect2);
 bool range_intersects(float range1_start, float range1_end, float range2_start, float range2_end);
 
 struct CompiledDrawingData {
-    GLuint vao = 0;
-    GLuint vertex_buffer = 0;
-    GLuint index_buffer = 0;
-    GLuint dots_vertex_buffer = 0;
-    GLuint dots_uv_buffer = 0;
-    GLuint dots_index_buffer = 0;
-    GLuint lines_type_index_buffer = 0;
-    GLuint dots_type_index_buffer = 0;
+    RenderHandle vao = 0;
+    RenderHandle vertex_buffer = 0;
+    RenderHandle index_buffer = 0;
+    RenderHandle dots_vertex_buffer = 0;
+    RenderHandle dots_uv_buffer = 0;
+    RenderHandle dots_index_buffer = 0;
+    RenderHandle lines_type_index_buffer = 0;
+    RenderHandle dots_type_index_buffer = 0;
     int n_elements = 0;
     int n_dot_elements = 0;
 };
 
 struct PagelessDocumentPos {
-    float x;
-    float y;
+    float x = 0.0f;
+    float y = 0.0f;
 };
 
 struct DocumentPos {
-    int page;
-    float x;
-    float y;
+    int page = -1;
+    float x = 0.0f;
+    float y = 0.0f;
 
     PagelessDocumentPos pageless() const;
     AbsoluteDocumentPos to_absolute(Document* doc) const;
@@ -48,9 +48,9 @@ struct DocumentPos {
 };
 
 struct AbsoluteDocumentPos {
-    float x;
+    float x = 0.0f;
     // this is the concatenated y-coordinate of the current page (sum of all page heights up to current location)
-    float y;
+    float y = 0.0f;
 
     DocumentPos to_document(Document* doc) const;
     NormalizedWindowPos to_window_normalized(DocumentView* document_view) const;
@@ -59,8 +59,8 @@ struct AbsoluteDocumentPos {
 
 // normalized window coordinates. x and y are in the range [-1, 1]
 struct NormalizedWindowPos {
-    float x;
-    float y;
+    float x = 0.0f;
+    float y = 0.0f;
 
     DocumentPos to_document(DocumentView* document_view);
     AbsoluteDocumentPos to_absolute(DocumentView* document_view);
@@ -69,8 +69,8 @@ struct NormalizedWindowPos {
 
 // window coordinate in pixels
 struct WindowPos {
-    int x;
-    int y;
+    int x = 0;
+    int y = 0;
 
     WindowPos(float x_, float y_);
     WindowPos(int x_, int y_);

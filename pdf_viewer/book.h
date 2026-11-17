@@ -6,7 +6,7 @@
 #include <variant>
 #include <mupdf/fitz.h>
 //#include <gl/glew.h>
-#include <qopengl.h>
+#include "render_types.h"
 #include <variant>
 #include <qjsonobject.h>
 #include <qdatetime.h>
@@ -311,24 +311,15 @@ struct SmartViewCandidate {
     AbsoluteDocumentPos get_abspos(DocumentView* view);
 };
 
-/*
-    A cached page consists of cached_page_data which is the header that describes the rendered location
-    and the actual rendered page. We have two different rendered formats: the pixmap we got from mupdf and
-    the cached_page_texture which is an OpenGL texture. The reason we need both formats in the structure is because
-    we render the pixmaps in a background mupdf thread, but in order to be able to use a texture in the main thread,
-    the texture has to be created in the main thread. Therefore, we fill this structure's cached_page_pixmap value in the
-    background thread and then send it to the main thread where we create the texture (which is a relatively fast operation
-    so it doesn't matter that it is in the main thread). When cached_page_texture is created, we can safely delete the
-    cached_page_pixmap, but the pixmap can only be deleted in the thread that it was created in, so we have to once again,
-    send the cached_page_texture back to the background thread to be deleted.
-*/
+// Legacy page metadata. RenderHandle identifies an owned CPU image; each
+// Vulkan widget creates its own device-local texture from that image.
 struct CachedPage {
     CachedPageData cached_page_data;
     fz_pixmap* cached_page_pixmap = nullptr;
 
     // last_access_time is used to garbage collect old pages
     unsigned int last_access_time;
-    GLuint cached_page_texture;
+    RenderHandle cached_page_texture;
 };
 bool operator==(const CachedPageData& lhs, const CachedPageData& rhs);
 

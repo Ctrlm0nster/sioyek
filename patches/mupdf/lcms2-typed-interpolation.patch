@@ -1,0 +1,28 @@
+--- a/thirdparty/lcms2/src/cmsopt.c
++++ b/thirdparty/lcms2/src/cmsopt.c
+@@ -644,6 +644,16 @@
+ // This function should be used on 16-bits LUTS only, as floating point losses precision when simplified
+ // -----------------------------------------------------------------------------------------------------------------------------------------------
+ 
++// Pipeline evaluators receive opaque data; interpolation callbacks receive a
++// typed parameter pointer. Adapt the data instead of casting function pointers.
++static
++void EvalCLUT16(cmsContext ContextID, const cmsUInt16Number In[],
++                cmsUInt16Number Out[], const void* Data)
++{
++    const cmsInterpParams* Params = (const cmsInterpParams*) Data;
++    Params->Interpolation.Lerp16(ContextID, In, Out, Params);
++}
++
+ static
+ cmsBool OptimizeByResampling(cmsContext ContextID, cmsPipeline** Lut, cmsUInt32Number Intent, cmsUInt32Number* InputFormat, cmsUInt32Number* OutputFormat, cmsUInt32Number* dwFlags)
+ {
+@@ -774,7 +784,7 @@
+ 
+     if (DataSetIn == NULL && DataSetOut == NULL) {
+ 
+-        _cmsPipelineSetOptimizationParameters(ContextID, Dest, (_cmsPipelineEval16Fn) DataCLUT->Params->Interpolation.Lerp16, DataCLUT->Params, NULL, NULL);
++        _cmsPipelineSetOptimizationParameters(ContextID, Dest, EvalCLUT16, DataCLUT->Params, NULL, NULL);
+     }
+     else {
+ 

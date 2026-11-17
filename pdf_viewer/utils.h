@@ -58,7 +58,6 @@ int argminf(const std::vector<T>& collection, std::function<float(T)> f) {
 }
 void rect_to_quad(fz_rect rect, float quad[8]);
 void copy_to_clipboard(const std::wstring& text, bool selection = false);
-void install_app(const char* argv0);
 int get_f_key(std::wstring name);
 void show_error_message(const std::wstring& error_message);
 std::wstring utf8_decode(const std::string& encoded_str);
@@ -213,16 +212,6 @@ fz_document* open_document_with_file_name(fz_context* context, std::wstring file
 
 QString get_list_item_stylesheet();
 
-#ifdef SIOYEK_ANDROID
-QString android_file_name_from_uri(QString uri);
-void android_tts_say(QString text);
-void check_pending_intents(const QString workingDirPath);
-void android_tts_pause();
-void android_tts_stop();
-void android_tts_set_rate(float rate);
-void android_tts_set_rest_of_document(QString rest);
-#endif
-
 float dampen_velocity(float v, float dt);
 
 template<typename T>
@@ -241,10 +230,6 @@ fz_irect get_index_irect(fz_rect original, int index, fz_matrix transform, int n
 fz_rect get_index_rect(fz_rect original, int index, int num_h_slices, int num_v_slices);
 QStandardItemModel* create_table_model(std::vector<std::wstring> lefts, std::vector<std::wstring> rights);
 QStandardItemModel* create_table_model(const std::vector<std::vector<std::wstring>> column_texts);
-
-#ifdef SIOYEK_ANDROID
-QString android_file_uri_from_content_uri(QString uri);
-#endif
 
 char get_highlight_color_type(float color[3]);
 float* get_highlight_type_color(char type);
@@ -493,38 +478,7 @@ public:
     virtual void set_on_app_resume_callback(std::function<void(bool, bool, int)>) override;
 };
 
-
-#ifdef SIOYEK_ANDROID
-class AndroidTextToSpeechHandler : public TextToSpeechHandler {
-public:
-    // std::optional<std::function<void(int, int)>> word_callback = {};
-    // std::optional<std::function<void(QString)>> state_change_callback = {};
-
-    AndroidTextToSpeechHandler();
-
-    void say(QString text) override;
-
-    void stop() override;
-
-    void pause() override;
-
-    void set_rate(float rate);
-
-    bool is_pausable();
-
-    bool is_word_by_word();
-
-    void set_word_callback(std::function<void(int, int)> callback);
-
-    void set_state_change_callback(std::function<void(QString)> callback);
-    void set_external_state_change_callback(std::function<void(QString)> callback);
-    virtual void set_on_app_pause_callback(std::function<QString()>);
-    virtual void set_on_app_resume_callback(std::function<void(bool, bool, int)>);
-};
-#endif
-
 std::wstring get_path_extras_file_name(const std::wstring& path);
-QString translate_key_mapping_to_macos(QString mapping);
 
 bool is_platform_meta_pressed(QKeyEvent* kevent);
 bool is_platform_control_pressed(QKeyEvent* kevent);

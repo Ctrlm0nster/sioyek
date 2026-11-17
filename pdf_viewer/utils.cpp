@@ -1,10 +1,4 @@
-//#include <Windows.h>
 #include <cwctype>
-
-#ifdef SIOYEK_ANDROID
-#include <unistd.h>
-#endif
-
 #include <cmath>
 #include <cassert>
 #include "utils.h"
@@ -34,11 +28,6 @@
 #include <quuid.h>
 #include <qjsondocument.h>
 #include "path.h"
-
-#ifdef SIOYEK_ANDROID
-#include <QtCore/private/qandroidextras_p.h>
-#include <qjniobject.h>
-#endif
 
 #include <mupdf/pdf.h>
 
@@ -79,9 +68,6 @@ extern bool VERBOSE;
 
 extern QString global_font_family;
 
-#ifdef Q_OS_WIN
-#include <windows.h>
-#endif
 
 
 std::wstring to_lower(const std::wstring& inp) {
@@ -279,44 +265,6 @@ void copy_to_clipboard(const std::wstring& text, bool selection) {
             clipboard->setText(qtext, QClipboard::Selection);
         }
     }
-}
-
-#define OPEN_KEY(parent, name, ptr) \
-	RegCreateKeyExA(parent, name, 0, 0, 0, KEY_WRITE, 0, &ptr, 0)
-
-#define SET_KEY(parent, name, value) \
-	RegSetValueExA(parent, name, 0, REG_SZ, (const BYTE *)(value), (DWORD)strlen(value) + 1)
-
-void install_app(const char* argv0)
-{
-#ifdef Q_OS_WIN
-    char buf[512];
-    HKEY software, classes, testpdf, dotpdf;
-    HKEY shell, open, command, supported_types;
-    HKEY pdf_progids;
-
-    OPEN_KEY(HKEY_CURRENT_USER, "Software", software);
-    OPEN_KEY(software, "Classes", classes);
-    OPEN_KEY(classes, ".pdf", dotpdf);
-    OPEN_KEY(dotpdf, "OpenWithProgids", pdf_progids);
-    OPEN_KEY(classes, "Sioyek", testpdf);
-    OPEN_KEY(testpdf, "SupportedTypes", supported_types);
-    OPEN_KEY(testpdf, "shell", shell);
-    OPEN_KEY(shell, "open", open);
-    OPEN_KEY(open, "command", command);
-
-    sprintf(buf, "\"%s\" \"%%1\"", argv0);
-
-    SET_KEY(open, "FriendlyAppName", "Sioyek");
-    SET_KEY(command, "", buf);
-    SET_KEY(supported_types, ".pdf", "");
-    SET_KEY(pdf_progids, "sioyek", "");
-
-    RegCloseKey(dotpdf);
-    RegCloseKey(testpdf);
-    RegCloseKey(classes);
-    RegCloseKey(software);
-#endif
 }
 
 int get_f_key(std::wstring name) {
@@ -1163,33 +1111,6 @@ void split_key_string(std::wstring haystack, const std::wstring& needle, std::ve
 void run_command(std::wstring command, QStringList parameters, bool wait) {
 
 
-#ifdef Q_OS_WIN
-    std::wstring parameters_string = parameters.join(" ").toStdWString();
-    SHELLEXECUTEINFO ShExecInfo = { 0 };
-    ShExecInfo.cbSize = sizeof(SHELLEXECUTEINFO);
-    if (wait) {
-        ShExecInfo.fMask = SEE_MASK_NOCLOSEPROCESS | SEE_MASK_NO_CONSOLE;
-    }
-    else {
-        ShExecInfo.fMask = SEE_MASK_ASYNCOK | SEE_MASK_NO_CONSOLE;
-    }
-
-    ShExecInfo.hwnd = NULL;
-    ShExecInfo.lpVerb = NULL;
-    ShExecInfo.lpFile = command.c_str();
-    ShExecInfo.lpParameters = NULL;
-    ShExecInfo.lpDirectory = NULL;
-    ShExecInfo.nShow = SW_HIDE;
-    ShExecInfo.hInstApp = NULL;
-    ShExecInfo.lpParameters = parameters_string.c_str();
-
-    ShellExecuteExW(&ShExecInfo);
-    if (wait) {
-        WaitForSingleObject(ShExecInfo.hProcess, INFINITE);
-        CloseHandle(ShExecInfo.hProcess);
-    }
-
-#else
     // todo: use setProcessChanellMode to use the same console as the parent process
     QProcess* process = new QProcess;
     QString qcommand = QString::fromStdWString(command);
@@ -1216,7 +1137,6 @@ void run_command(std::wstring command, QStringList parameters, bool wait) {
     else {
         process->startDetached(qcommand, qparameters);
     }
-#endif
 
 }
 
@@ -1568,12 +1488,8 @@ void index_references(fz_stext_page* page, int page_number, std::map<std::wstrin
 }
 
 void sleep_ms(unsigned int ms) {
-#ifdef Q_OS_WIN
-    Sleep(ms);
-#else
     struct timespec ts = { ms / 1000, (ms % 1000) * 1000 * 1000 };
     nanosleep(&ts, NULL);
-#endif
 }
 
 void get_pixmap_pixel(fz_pixmap* pixmap, int x, int y, unsigned char* r, unsigned char* g, unsigned char* b) {
@@ -1999,11 +1915,7 @@ QCommandLineParser* get_command_line_parser() {
 
 std::wstring concatenate_path(const std::wstring& prefix, const std::wstring& suffix) {
     std::wstring result = prefix;
-#ifdef Q_OS_WIN
-    wchar_t separator = '\\';
-#else
     wchar_t separator = '/';
-#endif
     if (prefix == L"") {
         return suffix;
     }
@@ -2016,23 +1928,6 @@ std::wstring concatenate_path(const std::wstring& prefix, const std::wstring& su
 }
 
 std::wstring get_canonical_path(const std::wstring& path) {
-#ifdef SIOYEK_ANDROID
-    if (path.size() > 0) {
-        if (path[0] == ':') { // it is a resouce file
-            return path;
-        }
-        if (path.substr(0, 9) == L"content:/") {
-            return path;
-        }
-        else {
-            QDir dir(QString::fromStdWString(path));
-            return std::move(dir.absolutePath().toStdWString());
-        }
-    }
-    else {
-        return L"";
-    }
-#else
     std::wstring expanded_path = path;
 
     if (path.size() > 0 && path[0] == '~'){
@@ -2042,8 +1937,6 @@ std::wstring get_canonical_path(const std::wstring& path) {
     QDir dir(QString::fromStdWString(expanded_path));
     //return std::move(dir.canonicalPath().toStdWString());
     return std::move(dir.absolutePath().toStdWString());
-#endif
-
 }
 
 std::wstring add_redundant_dot_to_path(const std::wstring& path) {
@@ -2246,22 +2139,14 @@ fz_quad quad_from_rect(fz_rect r)
 
 std::wifstream open_wifstream(const std::wstring& file_name) {
 
-#ifdef Q_OS_WIN
-    return std::move(std::wifstream(file_name));
-#else
     std::string encoded_file_name = utf8_encode(file_name);
     return std::move(std::wifstream(encoded_file_name.c_str()));
-#endif
 }
 
 std::wofstream open_wofstream(const std::wstring& file_name) {
 
-#ifdef Q_OS_WIN
-    return std::move(std::wofstream(file_name));
-#else
     std::string encoded_file_name = utf8_encode(file_name);
     return std::move(std::wofstream(encoded_file_name.c_str()));
-#endif
 }
 
 std::wstring truncate_string(const std::wstring& inp, int size) {
@@ -2714,96 +2599,7 @@ void convert_color3(const float* in_color, int* out_color) {
     out_color[2] = (int)(in_color[2] * 255);
 }
 
-#ifdef SIOYEK_ANDROID
-
-std::optional<std::function<void(int, int)>> android_global_word_callback = {};
-std::optional<std::function<void(QString)>> android_global_state_change_callback = {};
-std::optional<std::function<void(QString)>> android_global_external_state_change_callback = {};
-std::optional<std::function<QString()>> android_global_on_android_app_pause_callback = {};
-std::optional<std::function<void(bool, bool, int)>> android_global_resume_state_callback = {};
-
-QJniObject parseUriString(const QString& uriString) {
-    return QJniObject::callStaticObjectMethod
-    ("android/net/Uri", "parse",
-        "(Ljava/lang/String;)Landroid/net/Uri;",
-        QJniObject::fromString(uriString).object());
-}
-
-QString android_file_uri_from_content_uri(QString uri) {
-
-    //    mainActivityObj = QtAndroid::androidActivity();
-    QJniObject activity = QNativeInterface::QAndroidApplication::context();
-    QJniObject uri_object = parseUriString(uri);
-
-    QJniObject file_uri_object = QJniObject::callStaticObjectMethod("info/sioyek/sioyek/SioyekActivity",
-        "getPathFromUri",
-        "(Landroid/content/Context;Landroid/net/Uri;)Ljava/lang/String;", activity.object(), uri_object.object());
-    return file_uri_object.toString();
-}
-
-void android_tts_say(QString text) {
-
-    QJniObject text_jni = QJniObject::fromString(text);
-    QJniObject activity = QNativeInterface::QAndroidApplication::context();
-    //QJniObject contentResolverObj = activity.callObjectMethod("saySomethingElse", "(Ljava/lang/String;)V", text_jni.object<jstring>());
-    activity.callMethod<void>("ttsSay", "(Ljava/lang/String;)V", text_jni.object<jstring>());
-}
-
-void android_tts_pause(){
-    QJniObject activity = QNativeInterface::QAndroidApplication::context();
-    activity.callMethod<void>("ttsPause");
-}
-
-void android_tts_stop(){
-    QJniObject activity = QNativeInterface::QAndroidApplication::context();
-    activity.callMethod<void>("ttsStop");
-}
-
-void android_tts_set_rate(float rate){
-    QJniObject activity = QNativeInterface::QAndroidApplication::context();
-    activity.callMethod<void>("ttsSetRate", "(F)V", rate);
-}
-
-// void android_tts_stop_service(){
-//     QJniObject activity = QNativeInterface::QAndroidApplication::context();
-//     activity.callMethod<void>("stopTtsService", "()V");
-// }
-
-void android_tts_set_rest_of_document(QString rest){
-    QJniObject rest_jni = QJniObject::fromString(rest);
-    QJniObject activity = QNativeInterface::QAndroidApplication::context();
-    activity.callMethod<void>("ttsSetRestOfDocument", "(Ljava/lang/String;)V", rest_jni.object<jstring>());
-}
-
-#endif
-
 fz_document* open_document_with_file_name(fz_context* context, std::wstring file_name) {
-
-#ifdef SIOYEK_ANDROID
-
-    QFile pdf_qfile(QString::fromStdWString(file_name));
-
-    pdf_qfile.open(QIODeviceBase::ReadOnly);
-    int qfile_handle = pdf_qfile.handle();
-    fz_stream* stream = nullptr;
-
-
-    if (qfile_handle != -1) {
-        FILE* file_ptr = fdopen(dup(qfile_handle), "rb");
-        stream = fz_open_file_ptr_no_close(context, file_ptr);
-    }
-    else {
-        QByteArray bytes = pdf_qfile.readAll();
-        int size = bytes.size();
-        unsigned char* new_buffer = new unsigned char[size];
-        memcpy(new_buffer, bytes.data(), bytes.size());
-        stream = fz_open_memory(context, new_buffer, bytes.size());
-    }
-
-    //return fz_open_document_with_stream(context, "application/pdf", stream);
-    std::string file_name_str = utf8_encode(file_name);
-    return fz_open_document_with_stream(context, file_name_str.c_str(), stream);
-#else
     float epub_width, epub_height;
     get_path_epub_size(file_name, &epub_width, &epub_height);
 
@@ -2820,7 +2616,6 @@ fz_document* open_document_with_file_name(fz_context* context, std::wstring file
         //int a = 2;
     }
     return doc;
-#endif
 }
 
 void convert_qcolor_to_float3(const QColor& color, float* out_floats) {
@@ -2851,187 +2646,6 @@ void convert_qcolor_to_float4(const QColor& color, float* out_floats) {
     *(out_floats + 2) = static_cast<float>(color.blue()) / 255.0f;
     *(out_floats + 3) = static_cast<float>(color.alpha()) / 255.0f;
 }
-
-#ifdef SIOYEK_ANDROID
-
-#include "main_widget.h"
-extern std::vector<MainWidget*> windows;
-
-// modified from https://github.com/mahdize/CrossQFile/blob/main/CrossQFile.cpp
-
-
-QString android_file_name_from_uri(QString uri) {
-
-    //    mainActivityObj = QtAndroid::androidActivity();
-    QJniObject activity = QNativeInterface::QAndroidApplication::context();
-
-    QJniObject contentResolverObj = activity.callObjectMethod
-    ("getContentResolver", "()Landroid/content/ContentResolver;");
-
-
-    //	QAndroidJniObject cursorObj {contentResolverObj.callObjectMethod
-    //		("query",
-    //		 "(Landroid/net/Uri;[Ljava/lang/String;Landroid/os/Bundle;Landroid/os/CancellationSignal;)Landroid/database/Cursor;",
-    //		 parseUriString(fileName()).object(), QAndroidJniObject().object(), QAndroidJniObject().object(),
-    //		 QAndroidJniObject().object(), QAndroidJniObject().object())};
-
-    QJniObject cursorObj{ contentResolverObj.callObjectMethod
-        ("query",
-         "(Landroid/net/Uri;[Ljava/lang/String;Landroid/os/Bundle;Landroid/os/CancellationSignal;)Landroid/database/Cursor;",
-         parseUriString(uri).object(), QJniObject().object(), QJniObject().object(),
-         QJniObject().object(), QJniObject().object()) };
-
-    cursorObj.callMethod<jboolean>("moveToFirst");
-
-    QJniObject retObj{ cursorObj.callObjectMethod
-        ("getString","(I)Ljava/lang/String;", cursorObj.callMethod<jint>
-         ("getColumnIndex","(Ljava/lang/String;)I",
-          QJniObject::getStaticObjectField<jstring>
-          ("android/provider/OpenableColumns","DISPLAY_NAME").object())) };
-
-    QString ret{ retObj.toString() };
-    return ret;
-}
-
-void check_pending_intents(const QString workingDirPath)
-{
-    //    QJniObject activity = QNativeInterface::QAndroidApplication::context();
-    QJniObject activity = QNativeInterface::QAndroidApplication::context();
-    if (activity.isValid()) {
-        // create a Java String for the Working Dir Path
-        QJniObject jniWorkingDir = QJniObject::fromString(workingDirPath);
-        if (!jniWorkingDir.isValid()) {
-            //            emit shareError(0, tr("Share: an Error occured\nWorkingDir not valid"));
-            return;
-        }
-        activity.callMethod<void>("checkPendingIntents", "(Ljava/lang/String;)V", jniWorkingDir.object<jstring>());
-        return;
-    }
-}
-
-
-void setFileUrlReceived(const QString& url)
-{
-    if (windows.size() > 0) {
-        windows[0]->open_document(url.toStdWString());
-    }
-}
-
-void on_android_tts(int begin, int end){
-    if (android_global_word_callback){
-        android_global_word_callback.value()(begin, end - begin);
-    }
-    // qDebug() << "ttsed from " << begin << " to " << end;
-}
-
-void on_android_state_change(QString new_state){
-    if (android_global_state_change_callback){
-        android_global_state_change_callback.value()(new_state);
-    }
-}
-
-void on_android_external_state_change(QString new_state){
-    if (android_global_external_state_change_callback){
-        android_global_external_state_change_callback.value()(new_state);
-    }
-}
-
-void on_android_resume_state(bool is_playing, bool is_on_rest, int offset){
-    if (android_global_resume_state_callback){
-        android_global_resume_state_callback.value()(is_playing, is_on_rest, offset);
-    }
-}
-
-QString on_android_get_rest_on_pause(){
-    if (android_global_on_android_app_pause_callback){
-        QString res = android_global_on_android_app_pause_callback.value()();
-        return res;
-    }
-    return "";
-}
-
-extern "C" {
-    JNIEXPORT void JNICALL
-        Java_info_sioyek_sioyek_SioyekActivity_setFileUrlReceived(JNIEnv* env,
-            jobject obj,
-            jstring url)
-    {
-        const char* urlStr = env->GetStringUTFChars(url, NULL);
-        Q_UNUSED(obj)
-            setFileUrlReceived(urlStr);
-        env->ReleaseStringUTFChars(url, urlStr);
-        return;
-    }
-
-    JNIEXPORT void JNICALL
-        Java_info_sioyek_sioyek_SioyekActivity_qDebug(JNIEnv* env,
-            jobject obj,
-            jstring url)
-    {
-        const char* urlStr = env->GetStringUTFChars(url, NULL);
-        qDebug() << urlStr;
-        Q_UNUSED(obj)
-            env->ReleaseStringUTFChars(url, urlStr);
-        return;
-    }
-
-    JNIEXPORT void JNICALL
-        Java_info_sioyek_sioyek_SioyekActivity_onTts(JNIEnv* env,
-            jobject obj,
-            jint begin, jint end)
-    {
-        on_android_tts((int)begin, (int)end);
-    }
-
-    JNIEXPORT void JNICALL
-        Java_info_sioyek_sioyek_SioyekActivity_onTtsStateChange(JNIEnv* env,
-            jobject obj,
-            jstring new_state)
-    {
-
-        const char* state_str = env->GetStringUTFChars(new_state, NULL);
-        Q_UNUSED(obj)
-            env->ReleaseStringUTFChars(new_state, state_str);
-        on_android_state_change(state_str);
-    }
-
-    JNIEXPORT void JNICALL
-        Java_info_sioyek_sioyek_SioyekActivity_onExternalTtsStateChange(JNIEnv* env,
-            jobject obj,
-            jstring new_state)
-    {
-
-        const char* state_str = env->GetStringUTFChars(new_state, NULL);
-        Q_UNUSED(obj)
-            env->ReleaseStringUTFChars(new_state, state_str);
-        on_android_external_state_change(state_str);
-    }
-
-    JNIEXPORT void JNICALL
-        Java_info_sioyek_sioyek_SioyekActivity_onResumeState(JNIEnv* env,
-            jobject obj,
-            jboolean is_playing,
-            jboolean reading_rest,
-            jint offset)
-    {
-
-        Q_UNUSED(obj)
-        on_android_resume_state(is_playing, reading_rest, offset);
-    }
-
-    JNIEXPORT jstring JNICALL
-        Java_info_sioyek_sioyek_SioyekActivity_getRestOnPause(JNIEnv* env,
-              jobject obj)
-    {
-
-        Q_UNUSED(obj)
-        QString res = on_android_get_rest_on_pause();
-        std::string res_std = res.toStdString();
-        return env->NewStringUTF(res_std.c_str());
-    }
-
-}
-#endif
 
 float dampen_velocity(float v, float dt) {
     if (v == 0) return 0;
@@ -3960,13 +3574,7 @@ std::vector<SearchResult> search_text_with_index(const std::wstring& super_fast_
 
     auto pred = get_pred(case_sensitive, query);
     auto hash = get_hash(case_sensitive, query);
-#ifdef SIOYEK_ANDROID
-    // for some reason at the time of this commit std::boyer_moore_searcher doesn't
-    // compile on android even though we are using c++17
-    auto searcher = std::default_searcher(query.begin(), query.end(), pred);
-#else
     auto searcher = std::boyer_moore_searcher(query.begin(), query.end(), hash, pred);
-#endif
     auto it = std::search(
         super_fast_search_index.begin() + begin_index,
         super_fast_search_index.begin() + end_index,
@@ -4262,18 +3870,6 @@ bool should_trigger_delete(QKeyEvent *key_event) {
         return true;
     }
 
-    // On macOS, treat Shift+Backspace as Delete as well
-#ifdef Q_OS_MAC
-    auto key = key_event->key();
-    bool backspace_p = (key == Qt::Key_Backspace);
-
-    bool is_control_cmd_pressed = key_event->modifiers().testFlag(Qt::ControlModifier) || key_event->modifiers().testFlag(Qt::MetaModifier);
-    // I did extensive tests on trying to detect Shift+Backspace on QT 6.6 on macOS 14. But the event for Shift+Backspace was simply not sent to us. I tested both =event->type() == QEvent::KeyRelease= and =event->type() == QEvent::KeyPress=.
-
-    if (backspace_p && is_control_cmd_pressed) {
-        return true;
-    }
-#endif
 
     return false;
 
@@ -4364,101 +3960,14 @@ void QtTextToSpeechHandler::set_on_app_resume_callback(std::function<void(bool, 
 
 }
 
-QString translate_key_mapping_to_macos(QString mapping){
-
-    mapping = mapping.replace("D", "⌘");
-    mapping = mapping.replace("C", "^");
-    mapping = mapping.replace("S", "⇧");
-
-    mapping = mapping.replace("<left>", "◀");
-    mapping = mapping.replace("<up>", "▲");
-    mapping = mapping.replace("<right>", "▶");
-    mapping = mapping.replace("<down>", "▼");
-    
-
-    mapping = mapping.replace("<backspace>", "⌫");
-    mapping = mapping.replace("<pageup>", "↑");
-    mapping = mapping.replace("<pagedown>", "↓");
-
-    mapping.replace("--", "<temp>");
-    if (mapping.size() > 1){
-        mapping.replace("-", "");
-    }
-    mapping.replace("<temp>", "-");
-
-
-    if (mapping.startsWith("<") && mapping.endsWith(">")){
-        return mapping.mid(1, mapping.size()-2);
-    }
-
-    return mapping;
-}
-
-#ifdef SIOYEK_ANDROID
-
-AndroidTextToSpeechHandler::AndroidTextToSpeechHandler() {
-}
-
-void AndroidTextToSpeechHandler::say(QString text) {
-    android_tts_say(text);
-}
-
-void AndroidTextToSpeechHandler::stop() {
-    android_tts_stop();
-}
-
-void AndroidTextToSpeechHandler::pause() {
-    android_tts_pause();
-}
-
-void AndroidTextToSpeechHandler::set_rate(float rate) {
-    android_tts_set_rate(std::pow(4.0f, rate));
-}
-
-bool AndroidTextToSpeechHandler::is_pausable() {
-    return true;
-}
-
-bool AndroidTextToSpeechHandler::is_word_by_word() {
-    return true;
-}
-
-void AndroidTextToSpeechHandler::set_word_callback(std::function<void(int, int)> callback) {
-    android_global_word_callback = callback;
-}
-
-void AndroidTextToSpeechHandler::set_state_change_callback(std::function<void(QString)> callback) {
-    android_global_state_change_callback = callback;
-}
-
-void AndroidTextToSpeechHandler::set_external_state_change_callback(std::function<void(QString)> callback) {
-    android_global_external_state_change_callback = callback;
-}
-
-void AndroidTextToSpeechHandler::set_on_app_pause_callback(std::function<QString()> callback){
-    android_global_on_android_app_pause_callback = callback;
-}
-
-void AndroidTextToSpeechHandler::set_on_app_resume_callback(std::function<void(bool, bool, int)> callback){
-    android_global_resume_state_callback = callback;
-}
-#endif
 
 
 bool is_platform_meta_pressed(QKeyEvent* kevent){
-#ifdef Q_OS_MACOS
-        return (kevent->modifiers() & Qt::ControlModifier);
-#else
         return (kevent->modifiers() & Qt::MetaModifier);
-#endif
 }
 
 bool is_platform_control_pressed(QKeyEvent* kevent){
-#ifdef Q_OS_MACOS
-        return (kevent->modifiers() & Qt::MetaModifier);
-#else
         return (kevent->modifiers() & Qt::ControlModifier);
-#endif
 }
 
 std::vector<std::wstring> get_last_opened_file_name() {

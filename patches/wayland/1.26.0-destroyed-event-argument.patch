@@ -1,0 +1,14 @@
+--- a/src/wayland-client.c
++++ b/src/wayland-client.c
+@@ -265,8 +265,10 @@
+ 		case WL_ARG_NEW_ID:
+ 		case WL_ARG_OBJECT:
+ 			proxy = (struct wl_proxy *) closure->args[i].o;
+-			if (proxy && proxy->flags & WL_PROXY_FLAG_DESTROYED)
++			if (proxy && proxy->flags & WL_PROXY_FLAG_DESTROYED) {
+ 				closure->args[i].o = NULL;
++				wl_proxy_unref(proxy);
++			}
+ 			break;
+ 		default:
+ 			break;

@@ -1,0 +1,12 @@
+--- a/source/pdf/pdf-layer.c
++++ b/source/pdf/pdf-layer.c
+@@ -796,7 +796,8 @@
+ 			doc->ocg->ocgs[i].n = pdf_to_num(ctx, o);
+ 			doc->ocg->ocgs[i].state = 1;
+ 		}
+-		qsort(doc->ocg->ocgs, len, sizeof(doc->ocg->ocgs[0]), ocgcmp);
++		if (len > 1)
++			qsort(doc->ocg->ocgs, len, sizeof(doc->ocg->ocgs[0]), ocgcmp);
+ 
+ 		pdf_select_layer_config(ctx, doc, 0);
+ 	}

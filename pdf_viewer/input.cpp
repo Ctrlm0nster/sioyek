@@ -9,6 +9,7 @@
 
 #include <qjsondocument.h>
 #include <QKeyEvent>
+#include <QKeySequence>
 #include <qstring.h>
 #include <qstringlist.h>
 #include <qlocalsocket.h>
@@ -24,9 +25,6 @@
 #include "document.h"
 #include "document_view.h"
 
-#ifdef Q_OS_MACOS
-extern "C" void showLookupForString(WId winId, const char* text, double x, double y);
-#endif
 
 extern bool SHOULD_WARN_ABOUT_USER_KEY_OVERRIDE;
 extern bool USE_LEGACY_KEYBINDS;
@@ -4156,44 +4154,6 @@ public:
 
 };
 
-#ifdef Q_OS_MACOS
-class MacosLookupCommand : public Command {
-public:
-    static inline const std::string cname = "macos_lookup";
-    static inline const std::string hname = "Look up selected text (macOS)";
-
-    MacosLookupCommand(MainWidget* w) : Command(cname, w) {};
-
-    void perform() {
-        std::wstring selected_text = widget->get_selected_text();
-
-        if (selected_text.empty()){
-            widget->select_word_under_cursor();
-            selected_text = widget->get_selected_text();
-        }
-
-        if (!selected_text.empty()) {
-            std::string utf8_text = utf8_encode(selected_text);
-
-            double x = widget->width() / 2.0;
-            double y = widget->height() / 2.0;
-
-            std::vector<AbsoluteRect> char_rects;
-            std::deque<AbsoluteRect> individual_char_rects = *widget->main_document_view->get_selected_character_rects();
-            merge_selected_character_rects(individual_char_rects, char_rects);
-
-            if (!char_rects.empty()) {
-                AbsoluteDocumentPos center_pos = char_rects.front().center();
-                WindowPos window_pos = center_pos.to_window(widget->main_document_view);
-                x = window_pos.x;
-                y = window_pos.y;
-            }
-
-            showLookupForString(widget->winId(), utf8_text.c_str(), x, y);
-        }
-    }
-};
-#endif
 
 class CopyAllTextCommand : public Command {
 public:
@@ -4818,12 +4778,9 @@ public:
 
     void perform() {
         widget->handle_close_event();
-        if (QGuiApplication::instance() && QGuiApplication::applicationState() == Qt::ApplicationState::ApplicationActive) {
-            QGuiApplication::quit();
-        }
-        else{
-            exit(0);
-        }
+        // Let main unwind its owners in background/IPC launches as well.
+        // Queue the request so startup macros can also quit once exec begins.
+        QTimer::singleShot(0, QCoreApplication::instance(), &QCoreApplication::quit);
     }
 
 
@@ -7323,9 +7280,6 @@ CommandManager::CommandManager(ConfigManager* config_manager) {
     register_command<OpenDocumentEmbeddedCommand>();
     register_command<OpenDocumentEmbeddedFromCurrentPathCommand>();
     register_command<CopyCommand>();
-#ifdef Q_OS_MACOS
-    register_command<MacosLookupCommand>();
-#endif
     register_command<CopyAllTextCommand>();
     register_command<CopyCurrentChapterTextCommand>();
     register_command<ToggleFullscreenCommand>();
@@ -8025,6 +7979,10 @@ void InputHandler::reload_config_files(const Path& default_config_path, const st
     current_node = root;
 }
 
+InputHandler::~InputHandler() {
+    delete_current_parse_tree(root);
+}
+
 
 bool is_digit(int key) {
     return key >= Qt::Key::Key_0 && key <= Qt::Key::Key_9;
@@ -8124,7 +8082,20 @@ std::unique_ptr<Command> InputHandler::handle_key(MainWidget* w, QKeyEvent* key_
             }
         }
     }
-    LOG(std::wcerr << "Warning: invalid command (key:" << (char)key << "); resetting to root" << std::endl);
+    std::wstring key_str;
+    if (key >= 32 && key <= 126) {
+        key_str = std::wstring(1, static_cast<wchar_t>(key));
+    } else {
+        QString seq = QKeySequence(static_cast<int>(key)).toString();
+        if (!seq.isEmpty()) {
+            key_str = seq.toStdWString();
+        } else {
+            std::wstringstream ss;
+            ss << L"0x" << std::hex << key;
+            key_str = ss.str();
+        }
+    }
+    LOG(std::wcerr << L"Warning: invalid command (key:" << key_str << L"); resetting to root" << std::endl);
     number_stack.clear();
     current_node = root;
     return nullptr;

@@ -1,5 +1,3 @@
-#ifndef SIOYEK_ANDROID
-
 #include "RunGuard.h"
 
 #include <QCryptographicHash>
@@ -47,12 +45,12 @@ memoryKey(generateKeyHash(key, "_sharedMemKey"))
         //qDebug() << "Secondary application attaching to shared memory block...";
         if (!memory->attach()) {
             qCritical() << "Secondary application cannot attach to shared memory block.";
-            QCoreApplication::exit();
+            return;
         }
         //qDebug() << "Secondary application successfully attached to shared memory block.";
     }
 
-    memory->lock();
+    if (memory->isAttached()) memory->lock();
     if (isPrimary) { // Start primary server.
         //qDebug() << "Starting IPC server...";
         QLocalServer::removeServer(key);
@@ -68,23 +66,19 @@ memoryKey(generateKeyHash(key, "_sharedMemKey"))
         QObject::connect(server, &QLocalServer::newConnection,
             this, &RunGuard::onNewConnection);
     }
-    memory->unlock();
+    if (memory->isAttached()) memory->unlock();
 }
 
 RunGuard::~RunGuard()
 {
-    bool was_server = false;
-    memory->lock();
+    if (memory && memory->isAttached()) memory->lock();
     if (server) {
-        was_server = true;
         server->close();
         delete server;
         server = nullptr;
     }
-    memory->unlock();
-    if (was_server){
-        delete memory;
-    }
+    if (memory && memory->isAttached()) memory->unlock();
+    delete memory;
 }
 
 bool RunGuard::isPrimary()
@@ -144,5 +138,3 @@ std::string RunGuard::sendMessage(const QByteArray& message, bool wait)
     }
     return "";
 }
-
-#endif // SIOYEK_ANDROID

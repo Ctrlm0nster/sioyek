@@ -56,6 +56,11 @@ set(SIOYEK_MUPDF_SAFETY_FLAGS ${SIOYEK_HARDENING_FLAGS} ${SIOYEK_SANITIZER_FLAGS
 # MuPDF's bundled C libraries use over-allocated trailing [1] arrays. Do not
 # change their layout assumptions with the stricter C++ flexible-array policy.
 list(REMOVE_ITEM SIOYEK_MUPDF_SAFETY_FLAGS -fstrict-flex-arrays=3)
+# MuPDF defaults to 4-byte packed pointer alignment on x86-64. Hardware permits
+# those accesses, but pointer-bearing paths require native alignment in C.
+# Use its supported override for display lists and pools in every build.
+set(SIOYEK_MUPDF_ALIGNMENT_DEFINITION "FZ_POINTER_ALIGN_MOD=FZ_MEMORY_BLOCK_ALIGN_MOD")
+list(APPEND SIOYEK_MUPDF_SAFETY_FLAGS "-D${SIOYEK_MUPDF_ALIGNMENT_DEFINITION}")
 if(SIOYEK_HARDENING AND CMAKE_SYSTEM_NAME STREQUAL "Linux")
   list(APPEND SIOYEK_MUPDF_SAFETY_FLAGS -fPIC -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=3)
 endif()
