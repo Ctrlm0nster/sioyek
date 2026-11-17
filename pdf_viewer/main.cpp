@@ -27,9 +27,6 @@
 #include <qtextedit.h>
 #include <qfilesystemwatcher.h>
 
-#ifndef SIOYEK_QT6
-#include <qdesktopwidget.h>
-#endif
 
 #include <qfontdatabase.h>
 #include <qstandarditemmodel.h>

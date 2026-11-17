@@ -298,6 +298,8 @@ void VulkanCanvas::render(QRhiCommandBuffer* cb) {
     };
     std::vector<QRhiShaderResourceBindings*> bindings;
     std::vector<QRhiGraphicsPipeline*> pipelines;
+    bindings.reserve(impl->draws.size());
+    pipelines.reserve(impl->draws.size());
     quint32 vertex_offset = 0, uniform_offset = 0;
     const QMatrix4x4 correction = rhi()->clipSpaceCorrMatrix();
     for (auto& draw : impl->draws) {

@@ -9,9 +9,6 @@
 
 #include "vulkan_canvas.h"
 
-#ifndef SIOYEK_QT6
-#include <qdesktopwidget.h>
-#endif
 
 #include <qpainter.h>
 

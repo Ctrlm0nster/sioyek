@@ -983,11 +983,7 @@ void PdfViewWidget::render_page(int page_number, bool in_overview, ColorPalette 
         }
 
 
-#ifdef SIOYEK_QT6
         float device_pixel_ratio = static_cast<float>(devicePixelRatio());
-#else
-        float device_pixel_ratio = QApplication::desktop()->devicePixelRatioF();
-#endif
 
         if (DISPLAY_RESOLUTION_SCALE > 0) {
             device_pixel_ratio *= DISPLAY_RESOLUTION_SCALE;
@@ -1951,11 +1947,7 @@ void PdfViewWidget::draw_empty_helper_message(QString message) {
     // should be called with native painting disabled
 
     QFontMetrics fm(QApplication::font());
-#ifdef SIOYEK_QT6
     int message_width = fm.boundingRect(message).width();
-#else
-    int message_width = fm.width(message);
-#endif
     int message_height = fm.height();
 
     int view_width = document_view ? document_view->get_view_width() : width();

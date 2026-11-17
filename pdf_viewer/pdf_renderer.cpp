@@ -85,30 +85,32 @@ void PdfRenderer::add_request(std::wstring document_path, int page, bool should_
         req.display_scale = display_scale;
         req.should_render_annotations = should_render_annotations;
 
-        pending_requests_mutex.lock();
-        // if the zoom level has changed, there is no point in previous requests with a different zoom level
-        for (int i = pending_render_requests.size() - 1; i >= 0; i--) {
-            if (pending_render_requests[i].path == req.path && pending_render_requests[i].page == req.page && (pending_render_requests[i].zoom_level != zoom_level)) {
-                pending_render_requests.erase(pending_render_requests.begin() + i);
-            }
-        }
         bool should_add = true;
-        for (size_t i = 0; i < pending_render_requests.size(); i++) {
-            if (pending_render_requests[i] == req) {
-                should_add = false;
+        {
+            std::lock_guard lock(pending_requests_mutex);
+            // if the zoom level has changed, there is no point in previous requests with a different zoom level
+            for (int i = pending_render_requests.size() - 1; i >= 0; i--) {
+                if (pending_render_requests[i].path == req.path && pending_render_requests[i].page == req.page && (pending_render_requests[i].zoom_level != zoom_level)) {
+                    pending_render_requests.erase(pending_render_requests.begin() + i);
+                }
+            }
+            for (size_t i = 0; i < pending_render_requests.size(); i++) {
+                if (pending_render_requests[i] == req) {
+                    should_add = false;
+                    break;
+                }
+            }
+            if (should_add) {
+                pending_render_requests.push_back(req);
+            }
+            if (pending_render_requests.size() > (size_t) MAX_PENDING_REQUESTS) {
+                pending_render_requests.erase(pending_render_requests.begin());
             }
         }
-        if (should_add) {
-            pending_render_requests.push_back(req);
-        }
-        if (pending_render_requests.size() > (size_t) MAX_PENDING_REQUESTS) {
-            pending_render_requests.erase(pending_render_requests.begin());
-        }
-        pending_requests_mutex.unlock();
         if (should_add) render_work_ready.notify_one();
     }
     else {
-        std::wcout << "Error: could not find documnet" << std::endl;
+        std::wcout << "Error: could not find document" << std::endl;
     }
 }
 void PdfRenderer::add_request(std::wstring document_path,
@@ -137,9 +139,10 @@ void PdfRenderer::add_request(std::wstring document_path,
         req.case_sensitive = CASE_SENSITIVE_SEARCH;
         req.smart_case = SMARTCASE_SEARCH;
 
-        search_request_mutex.lock();
-        pending_search_request = req;
-        search_request_mutex.unlock();
+        {
+            std::lock_guard lock(search_request_mutex);
+            pending_search_request = req;
+        }
         search_work_ready.notify_one();
     }
     else {
@@ -162,37 +165,38 @@ RenderHandle PdfRenderer::find_rendered_page(std::wstring path, int page, bool s
         req.num_v_slices = num_v_slices;
         req.display_scale = display_scale;
         req.should_render_annotations = should_render_annotations;
-        cached_response_mutex.lock();
         RenderHandle result = 0;
-        for (auto& cached_resp : cached_responses) {
-            if (cached_resp.pending) continue;
+        {
+            std::lock_guard lock(cached_response_mutex);
+            for (auto& cached_resp : cached_responses) {
+                if (cached_resp.pending) continue;
 
-            if ((cached_resp.request == req) && (cached_resp.invalid == false)) {
-                cached_resp.last_access_time = QDateTime::currentMSecsSinceEpoch();
+                if ((cached_resp.request == req) && (cached_resp.invalid == false)) {
+                    cached_resp.last_access_time = QDateTime::currentMSecsSinceEpoch();
 
-                if (page_width) *page_width = cached_resp.width;
-                if (page_height) *page_height = cached_resp.height;
+                    if (page_width) *page_width = cached_resp.width;
+                    if (page_height) *page_height = cached_resp.height;
 
-                if (cached_resp.texture != 0) {
-                    result = cached_resp.texture;
+                    if (cached_resp.texture != 0) {
+                        result = cached_resp.texture;
+                    }
+                    else {
+                        // Own the pixels before returning them to the MuPDF worker.
+                        // Vulkan uploads happen in the receiving widget's render pass.
+                        const auto* pixmap = cached_resp.pixmap;
+                        QImage image(pixmap->samples, pixmap->w, pixmap->h,
+                                     pixmap->stride, QImage::Format_RGB888);
+                        result = RenderImages::insert(image.copy());
+
+                        // don't need the pixmap anymore
+                        queue_pixmap_drop(cached_resp.thread, cached_resp.pixmap);
+                        cached_resp.texture = result;
+
+                    }
+                    break;
                 }
-                else {
-                    // Own the pixels before returning them to the MuPDF worker.
-                    // Vulkan uploads happen in the receiving widget's render pass.
-                    const auto* pixmap = cached_resp.pixmap;
-                    QImage image(pixmap->samples, pixmap->w, pixmap->h,
-                                 pixmap->stride, QImage::Format_RGB888);
-                    result = RenderImages::insert(image.copy());
-
-                    // don't need the pixmap anymore
-                    queue_pixmap_drop(cached_resp.thread, cached_resp.pixmap);
-                    cached_resp.texture = result;
-
-                }
-                break;
             }
         }
-        cached_response_mutex.unlock();
         if (result == 0) {
             if (TOUCH_MODE) {
                 if (!no_rerender) {

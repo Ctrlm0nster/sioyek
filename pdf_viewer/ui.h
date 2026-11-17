@@ -159,9 +159,6 @@ public:
     QString get_selected_item();
 
 
-#ifndef SIOYEK_QT6
-    void keyReleaseEvent(QKeyEvent* event) override;
-#endif
 
     virtual void on_config_file_changed();
     void resizeEvent(QResizeEvent* resize_event) override;

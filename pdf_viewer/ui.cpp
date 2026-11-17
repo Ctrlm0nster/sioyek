@@ -105,11 +105,7 @@ void ConfigFileChangeListener::notify_config_file_changed(ConfigManager* new_con
 bool HierarchialSortFilterProxyModel::filterAcceptsRow(int source_row, const QModelIndex& source_parent) const
 {
     // custom behaviour :
-#ifdef SIOYEK_QT6
     if (filterRegularExpression().pattern().size() == 0)
-#else
-    if (filterRegExp().isEmpty() == false)
-#endif
     {
         // get source-model index for current row
         QModelIndex source_index = sourceModel()->index(source_row, this->filterKeyColumn(), source_parent);
@@ -118,11 +114,7 @@ bool HierarchialSortFilterProxyModel::filterAcceptsRow(int source_row, const QMo
             // check current index itself :
             QString key = sourceModel()->data(source_index, filterRole()).toString();
 
-#ifdef SIOYEK_QT6
             bool parent_contains = key.contains(filterRegularExpression());
-#else
-            bool parent_contains = key.contains(filterRegExp());
-#endif
 
             if (parent_contains) return true;
 
@@ -1585,7 +1577,6 @@ std::wstring BaseSelectorWidget::get_selected_text() {
 
 bool BaseSelectorWidget::eventFilter(QObject* obj, QEvent* event) {
     if (obj == line_edit) {
-#ifdef SIOYEK_QT6
         if (event->type() == QEvent::KeyRelease) {
             QKeyEvent* key_event = static_cast<QKeyEvent*>(event);
             if (should_trigger_delete(key_event)) {
@@ -1595,7 +1586,6 @@ bool BaseSelectorWidget::eventFilter(QObject* obj, QEvent* event) {
                 handle_edit();
             }
         }
-#endif
         if (event->type() == QEvent::InputMethod) {
             if (TOUCH_MODE) {
                 QInputMethodEvent* input_event = static_cast<QInputMethodEvent*>(event);
@@ -1626,11 +1616,7 @@ bool BaseSelectorWidget::eventFilter(QObject* obj, QEvent* event) {
                 if (!line_edit->hasSelectedText()){
                     bool is_tree = get_view_stylesheet_type_name() == "QTreeView";
                     if (is_tree || (key_event->key() == Qt::Key_Down) || (key_event->key() == Qt::Key_Up)){
-#ifdef SIOYEK_QT6
                         QKeyEvent* newEvent = key_event->clone();
-#else
-                        QKeyEvent* newEvent = new QKeyEvent(*key_event);
-#endif
                         QCoreApplication::postEvent(get_view(), newEvent);
                         //QCoreApplication::postEvent(tree_view, key_event);
                         return true;
@@ -1827,14 +1813,7 @@ void BaseSelectorWidget::handle_edit() {
     }
 }
 
-#ifndef SIOYEK_QT6
-    void BaseSelectorWidget::keyReleaseEvent(QKeyEvent* event) {
-		if (should_trigger_delete(event)) {
-            handle_delete();
-        }
-        QWidget::keyReleaseEvent(event);
-    }
-#endif
+
 
 void BaseSelectorWidget::on_config_file_changed() {
     QString font_size_stylesheet = "";
