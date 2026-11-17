@@ -2,7 +2,3 @@
 	path = mupdf
 	url = https://github.com/ArtifexSoftware/mupdf
     ignore = dirty
-[submodule "zlib"]
-	path = zlib
-	url = https://github.com/madler/zlib
-	ignore = untracked
