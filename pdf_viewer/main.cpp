@@ -6,27 +6,17 @@
 #include <optional>
 #include <utility>
 #include <filesystem>
-
-#ifdef SIOYEK_ANDROID
-#include <QtCore/private/qandroidextras_p.h>
-#endif
+#include <memory>
 
 #include <QDebug>
 #include <qapplication.h>
 #include <qpushbutton.h>
-#ifndef SIOYEK_QT6
-#include <qopenglwidget.h>
-#endif
-#include <qopenglextrafunctions.h>
-#include <qopenglfunctions.h>
-#include <qopengl.h>
 #include <qwindow.h>
 #include <QKeyEvent>
 #include <qlineedit.h>
 #include <qtreeview.h>
 #include <qsortfilterproxymodel.h>
 #include <qabstractitemmodel.h>
-#include <qopenglshaderprogram.h>
 #include <qtimer.h>
 #include <qdatetime.h>
 #include <qstackedwidget.h>
@@ -49,7 +39,6 @@
 #include <qstandardpaths.h>
 #include <qcommandlineparser.h>
 #include <qdir.h>
-#include <qsurfaceformat.h>
 
 #include <mupdf/fitz.h>
 #include "sqlite3.h"
@@ -63,7 +52,7 @@
 #include "ui.h"
 #include "document.h"
 #include "document_view.h"
-#include "pdf_view_opengl_widget.h"
+#include "pdf_view_widget.h"
 #include "config.h"
 #include "main_widget.h"
 #include "path.h"
@@ -83,7 +72,7 @@
 //#define LINUX_STANDARD_PATHS
 
 
-std::string APPLICATION_VERSION = "2.0.0";
+std::string APPLICATION_VERSION = "3.0.0-dev";
 int DATABASE_VERSION = 2;
 std::wstring APPLICATION_NAME = L"sioyek";
 std::string LOG_FILE_NAME = "sioyek_log.txt";
@@ -97,20 +86,9 @@ std::vector<Path> user_keys_paths = {};
 Path database_file_path(L"");
 Path local_database_file_path(L"");
 Path global_database_file_path(L"");
-
-#ifdef SIOYEK_MOBILE
-Path tutorial_path(L":/tutorial.pdf");
-Path android_config_path(L"");
-#else
 Path tutorial_path(L"");
-#endif
-
-#ifdef SIOYEK_ANDROID
-extern Path android_config_path;
-#endif
 
 Path last_opened_file_address_path(L"");
-Path shader_path(L"");
 Path auto_config_path(L"");
 Path downloaded_papers_path(L"");
 ScratchPad global_scratchpad;
@@ -170,7 +148,7 @@ std::wstring strip_uri(std::wstring pdf_file_name, std::optional<int>* out_page)
 QStringList convert_arguments(QStringList input_args) {
     // convert the relative path of filename (if it exists) to absolute path
 
-    QCommandLineParser* parser = get_command_line_parser();
+    std::unique_ptr<QCommandLineParser> parser(get_command_line_parser());
     parser->parse(input_args);
 
     QStringList output_args;
@@ -191,60 +169,15 @@ QStringList convert_arguments(QStringList input_args) {
         }
     }
 
-    delete parser;
-
     return output_args;
 }
 
-#ifdef SIOYEK_ANDROID
-void configure_paths_android() {
-
-    char* APPDIR = std::getenv("XDG_CONFIG_HOME");
-    Path linux_home_path(QDir::homePath().toStdWString());
-
-    if (!APPDIR) {
-        APPDIR = std::getenv("HOME");
-    }
-
-    standard_data_path = Path(utf8_decode(APPDIR));
-    standard_data_path = standard_data_path.slash(L".local").slash(L"share").slash(L"Sioyek");
-    standard_data_path.create_directories();
-
-    database_file_path = standard_data_path.slash(L"test.db");
-    last_opened_file_address_path = standard_data_path.slash(L"last_document_path.txt");
-    local_database_file_path = standard_data_path.slash(L"local.db");
-    global_database_file_path = standard_data_path.slash(L"shared.db");
-    android_config_path = standard_data_path.slash(L"saved.config");
-    tutorial_path = Path(L":/tutorial.pdf");
-    downloaded_papers_path = standard_data_path.slash(L"downloads");
-}
-#endif
-
 void configure_paths() {
-#ifdef SIOYEK_ANDROID
-    configure_paths_android();
-#else
-
-
     Path parent_path(QCoreApplication::applicationDirPath().toStdWString());
-    std::string exe_path = utf8_encode(QCoreApplication::applicationFilePath().toStdWString());
-
-    shader_path = parent_path.slash(L"shaders");
 
 
-#ifdef Q_OS_MACOS
-    Path mac_resources_path = parent_path.slash(L"..").slash(L"Resources");
-    shader_path = mac_resources_path.slash(L"shaders");
-    default_config_path = mac_resources_path.slash(L"prefs.config");
-    default_keys_path = mac_resources_path.slash(L"keys.config");
-    tutorial_path = mac_resources_path.slash(L"tutorial.pdf");
-    Path mac_home_path(QDir::homePath().toStdWString());
-    Path mac_standard_config_path = mac_home_path.slash(L".config").slash(L"sioyek");
-    user_keys_paths.push_back(mac_standard_config_path.slash(L"keys_user.config"));
-    user_config_paths.push_back(mac_standard_config_path.slash(L"prefs_user.config"));
-#endif
 
-#ifdef Q_OS_LINUX
+
     QStringList all_config_paths = QStandardPaths::standardLocations(QStandardPaths::AppConfigLocation);
     for (int i = all_config_paths.size() - 1; i >= 0; i--) {
         user_config_paths.push_back(Path(all_config_paths.at(i).toStdWString()).slash(L"prefs_user.config"));
@@ -278,7 +211,6 @@ void configure_paths() {
     global_database_file_path = standard_data_path.slash(L"shared.db");
     tutorial_path = read_only_data_path.slash(L"tutorial.pdf");
     last_opened_file_address_path = standard_data_path.slash(L"last_document_path.txt");
-    shader_path = read_only_data_path.slash(L"shaders");
 #else
     char* APPDIR = std::getenv("XDG_DATA_HOME");
     Path linux_home_path(QDir::homePath().toStdWString());
@@ -306,8 +238,6 @@ void configure_paths() {
     last_opened_file_address_path = standard_data_path.slash(L"last_document_path.txt");
 
     Path linux_standard_config_path = linux_home_path.slash(L".config").slash(L"sioyek");
-    //user_keys_paths.push_back(mac_standard_config_path.slash(L"keys_user.config"));
-    //user_config_paths.push_back(mac_standard_config_path.slash(L"prefs_user.config"));
     user_keys_paths.push_back(linux_standard_config_path.slash(L"keys_user.config"));
     user_config_paths.push_back(linux_standard_config_path.slash(L"prefs_user.config"));
 
@@ -315,51 +245,12 @@ void configure_paths() {
         copy_file(parent_path.slash(L"tutorial.pdf"), tutorial_path);
     }
 #endif
-#else //windows
-#ifdef NDEBUG
-    //install_app(exe_path.c_str());
-#endif
-    standard_data_path = Path(QStandardPaths::standardLocations(QStandardPaths::AppDataLocation).at(0).toStdWString());
-    QStringList all_config_paths = QStandardPaths::standardLocations(QStandardPaths::AppConfigLocation);
-
-    standard_data_path.create_directories();
-
-#ifndef Q_OS_MACOS
-    default_config_path = parent_path.slash(L"prefs.config");
-    default_keys_path = parent_path.slash(L"keys.config");
-    tutorial_path = parent_path.slash(L"tutorial.pdf");
-#endif
-
-#if defined(NON_PORTABLE) || defined(Q_OS_MACOS)
-    user_config_paths.push_back(standard_data_path.slash(L"prefs_user.config"));
-    user_keys_paths.push_back(standard_data_path.slash(L"keys_user.config"));
-    for (int i = all_config_paths.size() - 1; i > 0; i--) {
-        user_config_paths.push_back(Path(all_config_paths.at(i).toStdWString()).slash(L"prefs_user.config"));
-        user_keys_paths.push_back(Path(all_config_paths.at(i).toStdWString()).slash(L"keys_user.config"));
-    }
-    database_file_path = standard_data_path.slash(L"test.db");
-    local_database_file_path = standard_data_path.slash(L"local.db");
-    global_database_file_path = standard_data_path.slash(L"shared.db");
-    last_opened_file_address_path = standard_data_path.slash(L"last_document_path.txt");
-#else
-    user_config_paths.push_back(parent_path.slash(L"prefs_user.config"));
-    user_keys_paths.push_back(parent_path.slash(L"keys_user.config"));
-    database_file_path = parent_path.slash(L"test.db");
-    local_database_file_path = parent_path.slash(L"local.db");
-    global_database_file_path = parent_path.slash(L"shared.db");
-    last_opened_file_address_path = parent_path.slash(L"last_document_path.txt");
-#endif
-
-#endif
     auto_config_path = standard_data_path.slash(L"auto.config");
     // user_config_paths.insert(user_config_paths.begin(), auto_config_path);
     downloaded_papers_path = standard_data_path.slash(L"downloads");
-#endif
-
 }
 
 void verify_config_paths() {
-#define CHECK_DIR_EXIST(path) do{ if(!(path).dir_exists() ) std::wcout << L"Error: " << #path << ": " << path << L" doesn't exist!\n"; } while(false)
 #define CHECK_FILE_EXIST(path) do{ if(!(path).file_exists() ) std::wcout << L"Error: " << #path << ": " << path << L" doesn't exist!\n"; } while(false)
 
     LOG(std::wcout << L"default_config_path: " << default_config_path << L"\n");
@@ -380,10 +271,7 @@ void verify_paths() {
     LOG(std::wcout << L"global_database_file_path: " << global_database_file_path << L"\n");
     LOG(std::wcout << L"tutorial_path: " << tutorial_path << L"\n");
     LOG(std::wcout << L"last_opened_file_address_path: " << last_opened_file_address_path << L"\n");
-    LOG(std::wcout << L"shader_path: " << shader_path << L"\n");
-    CHECK_DIR_EXIST(shader_path);
 }
-#undef CHECK_DIR_EXIST
 #undef CHECK_FILE_EXIST
 
 std::mutex mupdf_mutexes[FZ_LOCK_MAX];
@@ -422,13 +310,8 @@ MainWidget* get_window_with_opened_file_path(const std::wstring& file_path) {
 
             if (window->doc()) {
 
-#ifdef Q_OS_WIN
-                std::wstring path1 = window->doc()->get_path();
-                std::wstring path2 = file_path;
-#else
                 std::string path1 = utf8_encode(window->doc()->get_path());
                 std::string path2 = utf8_encode(file_path);
-#endif
                 if (std::filesystem::exists(path1) && std::filesystem::exists(path2)) {
                     if (std::filesystem::equivalent(path1, path2)) {
                         return window;
@@ -459,7 +342,7 @@ MainWidget* handle_args(const QStringList& arguments, QLocalSocket* origin=nullp
 
     //todo: handle out of bounds error
 
-    QCommandLineParser* parser = get_command_line_parser();
+    std::unique_ptr<QCommandLineParser> parser(get_command_line_parser());
 
     if (!parser->parse(arguments)) {
         std::wcout << parser->errorText().toStdWString() << L"\n";
@@ -546,13 +429,7 @@ MainWidget* handle_args(const QStringList& arguments, QLocalSocket* origin=nullp
     pdf_file_name = strip_uri(pdf_file_name, &page);
 
     if ((pdf_file_name.size() > 0) && (!QFile::exists(QString::fromStdWString(pdf_file_name)))) {
-#ifdef SIOYEK_ANDROID
-        if (!((pdf_file_name[0] == ':') || (pdf_file_name.substr(0, 2) == L"/:"))) {
-            return nullptr;
-        }
-#else
         return nullptr;
-#endif
     }
 
     MainWidget* target_window = nullptr;
@@ -665,16 +542,11 @@ MainWidget* handle_args(const QStringList& arguments, QLocalSocket* origin=nullp
 
     invalidate_render();
 
-    delete parser;
     return target_window;
 }
 
 void focus_on_widget(QWidget* widget) {
-#ifdef Q_OS_WIN
-    widget->activateWindow();
-#else
     widget->raise();
-#endif
     widget->setWindowState(widget->windowState() & ~Qt::WindowMinimized | Qt::WindowActive);
 }
 
@@ -683,18 +555,6 @@ int main(int argc, char* args[]) {
 
     SEARCH_URLS['s' - 'a'] = L"https://scholar.google.com/scholar?q=";
     SEARCH_URLS['g' - 'a'] = L"https://www.google.com/search?q=";
-#ifdef SIOYEK_ANDROID
-
-    auto r = QtAndroidPrivate::checkPermission("android.permission.WRITE_EXTERNAL_STORAGE").result();
-    if (r == QtAndroidPrivate::Denied) {
-        r = QtAndroidPrivate::requestPermission("android.permission.WRITE_EXTERNAL_STORAGE").result();
-
-        if (r == QtAndroidPrivate::Denied) {
-            qDebug() << "Could not get storage permission\n";
-        }
-    }
-
-#endif
 
     if (has_arg(argc, args, "--version")) {
         std::cout << "sioyek " << APPLICATION_VERSION << "\n";
@@ -713,21 +573,7 @@ int main(int argc, char* args[]) {
     //load_npy(":/data/embedding.npy", embedding_weights, &nrows, &ncols);
     //load_npy(":/data/linear.npy", linear_weights, &nrows, &ncols);
 
-    QSurfaceFormat format;
-#ifdef SIOYEK_ANDROID
-    format.setVersion(3, 1);
-#else
-    format.setVersion(3, 3);
-#endif
-
-    //    auto behaviour = format.swapBehavior();
-    //    format.setSwapBehavior(QSurfaceFormat::SwapBehavior::SingleBuffer);
-    //    format.setSwapInterval(0);
-    format.setProfile(QSurfaceFormat::CoreProfile);
-    format.setSamples(4);
-    QSurfaceFormat::setDefaultFormat(format);
-
-    QCoreApplication::setAttribute(Qt::AA_ShareOpenGLContexts, true);
+    QQuickWindow::setGraphicsApi(QSGRendererInterface::Vulkan);
     OpenWithApplication app(argc, args);
 
     int font_id = QFontDatabase::addApplicationFont(":/resources/fonts/JetBrainsMono.ttf");
@@ -749,25 +595,17 @@ int main(int argc, char* args[]) {
     }
 
 
-#ifdef Q_OS_WIN
-    // handles dark mode on windows. see: https://github.com/ahrm/sioyek/issues/3
-    app.setStyle("fusion");
-#endif
 
     qmlRegisterType<MySortFilterProxyModel>("MySortFilterProxyModel", 1, 0, "MySortFilterProxyModel");
-    QCommandLineParser* parser = get_command_line_parser();
+    std::unique_ptr<QCommandLineParser> parser(get_command_line_parser());
     parser->process(app.arguments());
 
     configure_paths();
     verify_config_paths();
 
 
-#ifdef SIOYEK_ANDROID
-    ConfigManager config_manager(android_config_path, auto_config_path, user_config_paths);
-#else
     ConfigManager config_manager(default_config_path, auto_config_path, user_config_paths);
-#endif
-    CommandManager* command_manager = new CommandManager(&config_manager);
+    CommandManager command_manager(&config_manager);
 
     if (PAPERS_FOLDER_PATH.size() > 0) {
         downloaded_papers_path = PAPERS_FOLDER_PATH;
@@ -793,7 +631,6 @@ int main(int argc, char* args[]) {
         use_single_instance = false;
     }
 
-#ifndef SIOYEK_ANDROID
     std::string instance_name_string = "sioyek";
     char* instance_name = get_argv_value(argc, args, "--instance-name");
 
@@ -815,13 +652,6 @@ int main(int argc, char* args[]) {
         std::wcout << utf8_decode(res);
         return 0;
     }
-#endif
-
-#ifdef SIOYEK_ANDROID
-    if (VOLUME_UP_COMMAND.size() > 0 || VOLUME_DOWN_COMMAND.size() > 0){
-        qputenv("QT_ANDROID_VOLUME_KEYS", "1");
-    }
-#endif
 
 
     QCoreApplication::setApplicationName(QString::fromStdWString(APPLICATION_NAME));
@@ -829,7 +659,7 @@ int main(int argc, char* args[]) {
     app.setDesktopFileName(QString::fromStdWString(APPLICATION_NAME));
 
     QStringList positional_args = parser->positionalArguments();
-    delete parser;
+    parser.reset();
 
     DatabaseManager db_manager;
     if (local_database_file_path.file_exists() && global_database_file_path.file_exists()) {
@@ -847,16 +677,17 @@ int main(int argc, char* args[]) {
     locks.lock = lock_mutex;
     locks.unlock = unlock_mutex;
 
-    fz_context* mupdf_context = fz_new_context(nullptr, &locks, FZ_STORE_DEFAULT);
-
-    if (!VERBOSE) {
-        fz_set_warning_callback(mupdf_context, nullptr, nullptr);
-        fz_set_error_callback(mupdf_context, nullptr, nullptr);
-    }
+    std::unique_ptr<fz_context, decltype(&fz_drop_context)> context_owner(
+        fz_new_context(nullptr, &locks, FZ_STORE_DEFAULT), fz_drop_context);
+    fz_context* mupdf_context = context_owner.get();
 
     if (!mupdf_context) {
         std::cerr << "could not create mupdf context" << std::endl;
         return -1;
+    }
+    if (!VERBOSE) {
+        fz_set_warning_callback(mupdf_context, nullptr, nullptr);
+        fz_set_error_callback(mupdf_context, nullptr, nullptr);
     }
     bool fail = false;
     fz_try(mupdf_context) {
@@ -873,12 +704,12 @@ int main(int argc, char* args[]) {
 
     bool quit = false;
 
-    PdfRenderer* pdf_renderer = new PdfRenderer(4, &quit, mupdf_context);
+    PdfRenderer* pdf_renderer = new PdfRenderer(4, mupdf_context);
     pdf_renderer->set_num_cached_pages(NUM_CACHED_PAGES);
     pdf_renderer->start_threads();
 
     qDebug() << "SIOYEK";
-    InputHandler input_handler(default_keys_path, user_keys_paths, command_manager);
+    InputHandler input_handler(default_keys_path, user_keys_paths, &command_manager);
 
     std::vector<std::pair<std::wstring, std::wstring>> prev_path_hash_pairs;
     db_manager.get_prev_path_hash_pairs(prev_path_hash_pairs);
@@ -892,21 +723,18 @@ int main(int argc, char* args[]) {
 
     QFileSystemWatcher key_file_watcher;
     add_paths_to_file_system_watcher(key_file_watcher, default_keys_path, user_keys_paths);
-    QQuickWindow::setGraphicsApi(QSGRendererInterface::OpenGL);
 
 
-    MainWidget* main_widget = new MainWidget(mupdf_context, &db_manager, &document_manager, &config_manager, command_manager, &input_handler, &checksummer, &quit, pdf_renderer);
+    MainWidget* main_widget = new MainWidget(mupdf_context, &db_manager, &document_manager, &config_manager, &command_manager, &input_handler, &checksummer, &quit, pdf_renderer);
     windows.push_back(main_widget);
     main_widget->open_tabs(get_last_opened_file_name());
 
-#ifndef SIOYEK_ANDROID
     guard.on_delete = std::move([&](QLocalSocket* deleted_socket) {
         if (windows.size() > 0) {
             windows[0]->on_socket_deleted(deleted_socket);
         }
         //main_widget->on_socket_deleted(deleted_socket);
         });
-#endif
 
     if (DEFAULT_DARK_MODE && !USE_SYSTEM_THEME) {
         main_widget->toggle_dark_mode();
@@ -917,7 +745,6 @@ int main(int argc, char* args[]) {
     NewFileChecker new_file_checker(PAPERS_FOLDER_PATH, main_widget);
 
 
-#ifndef SIOYEK_ANDROID
     if (guard.isPrimary()) {
         QObject::connect(&guard, &RunGuard::messageReceived, [&main_widget](const QByteArray& message, QLocalSocket* socket) {
             QStringList args = deserialize_string_array(message);
@@ -935,7 +762,6 @@ int main(int argc, char* args[]) {
             }
             });
     }
-#endif
 
 
     main_widget->topLevelWidget()->resize(500, 500);
@@ -949,7 +775,7 @@ int main(int argc, char* args[]) {
 
     main_widget->show();
 
-    // load input file from `QFileOpenEvent` for macOS drag and drop & "open with"
+    // Handle file-open requests delivered by Qt.
     QObject::connect(&app, &OpenWithApplication::file_ready, [&main_widget](const QString& file_name) {
         handle_args(QStringList() << QCoreApplication::applicationFilePath() << file_name);
         });
@@ -962,7 +788,6 @@ int main(int argc, char* args[]) {
     //main_widget->run_multiple_commands(STARTUP_COMMANDS);
 
     // live reload the config files, no need to live reload on android because we are not changing config files anyway
-#ifndef SIOYEK_ANDROID
     QObject::connect(&pref_file_watcher, &QFileSystemWatcher::fileChanged, [&]() {
 
         std::vector<std::string> changed_config_file_names;
@@ -981,7 +806,6 @@ int main(int argc, char* args[]) {
         input_handler.reload_config_files(default_keys_path, user_keys_paths);
         add_paths_to_file_system_watcher(key_file_watcher, default_keys_path, user_keys_paths);
         });
-#endif
 
 
     if (SHOULD_CHECK_FOR_LATEST_VERSION_ON_STARTUP) {
@@ -994,6 +818,8 @@ int main(int argc, char* args[]) {
     app.exec();
 
     quit = true;
+    // Search/render workers can still hold pointers into a window's state.
+    pdf_renderer->join_threads();
 
     std::vector<MainWidget*> windows_to_delete;
     for (size_t i = 0; i < windows.size(); i++) {
@@ -1003,7 +829,6 @@ int main(int argc, char* args[]) {
         delete windows_to_delete[i];
     }
 
-    pdf_renderer->join_threads();
     delete pdf_renderer;
 
     return 0;

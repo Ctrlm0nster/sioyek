@@ -1,5 +1,9 @@
 cmake_minimum_required(VERSION 3.20)
-project(sioyek VERSION 2.0.0 LANGUAGES C CXX)
+project(sioyek VERSION 3.0.0 LANGUAGES C CXX)
+
+if(NOT CMAKE_SYSTEM_NAME STREQUAL "Linux" OR ANDROID)
+  message(FATAL_ERROR "This fork supports desktop Linux only (Arch Linux, Qt 6, Vulkan).")
+endif()
 
 include(GNUInstallDirs)
 if(NOT CMAKE_CONFIGURATION_TYPES AND NOT CMAKE_BUILD_TYPE)
@@ -23,15 +27,11 @@ set(CMAKE_AUTOUIC ON)
 
 find_package(QT NAMES Qt6 REQUIRED COMPONENTS Core)
 find_package(Qt6 6.7 REQUIRED COMPONENTS
-    Core Gui Widgets Network OpenGL QuickWidgets Svg TextToSpeech OpenGLWidgets)
-
-if(APPLE AND TARGET WrapOpenGL::WrapOpenGL)
-  set_property(TARGET WrapOpenGL::WrapOpenGL PROPERTY INTERFACE_LINK_LIBRARIES "-framework OpenGL")
-endif()
+    Core Gui GuiPrivate Widgets Network QuickWidgets Svg TextToSpeech ShaderTools)
 
 qt_standard_project_setup()
 
-qt_add_executable(sioyek WIN32 MACOSX_BUNDLE
+qt_add_executable(sioyek
     resources.qrc
     pdf_viewer/OpenWithApplication.cpp pdf_viewer/OpenWithApplication.h
     pdf_viewer/RunGuard.cpp pdf_viewer/RunGuard.h
@@ -50,7 +50,9 @@ qt_add_executable(sioyek WIN32 MACOSX_BUNDLE
     pdf_viewer/new_file_checker.cpp pdf_viewer/new_file_checker.h
     pdf_viewer/path.cpp pdf_viewer/path.h
     pdf_viewer/pdf_renderer.cpp pdf_viewer/pdf_renderer.h
-    pdf_viewer/pdf_view_opengl_widget.cpp pdf_viewer/pdf_view_opengl_widget.h
+    pdf_viewer/pdf_view_widget.cpp pdf_viewer/pdf_view_widget.h
+    pdf_viewer/vulkan_canvas.cpp pdf_viewer/vulkan_canvas.h
+    pdf_viewer/render_types.cpp pdf_viewer/render_types.h
     pdf_viewer/rapidfuzz_amalgamated.hpp
     pdf_viewer/touchui/TouchAudioButtons.cpp pdf_viewer/touchui/TouchAudioButtons.h
     pdf_viewer/touchui/TouchCheckbox.cpp pdf_viewer/touchui/TouchCheckbox.h
@@ -79,32 +81,14 @@ qt_add_executable(sioyek WIN32 MACOSX_BUNDLE
     pdf_viewer/utils.cpp pdf_viewer/utils.h
 )
 
-if(APPLE)
-    file(GLOB_RECURSE SIOYEK_SHADER_FILES CONFIGURE_DEPENDS
-      "${CMAKE_CURRENT_SOURCE_DIR}/pdf_viewer/shaders/*"
-    )
+# Compile GLSL into embedded SPIR-V shader packages; no runtime shader compiler
+# or files from a previous Sioyek installation are needed.
+qt_add_shaders(sioyek sioyek_vulkan_shaders
+    PREFIX "/sioyek/vulkan"
+    BASE "pdf_viewer/shaders/vulkan"
+    NOGLSL NOHLSL NOMSL
+    FILES pdf_viewer/shaders/vulkan/canvas.vert pdf_viewer/shaders/vulkan/canvas.frag)
 
-    target_sources(sioyek PRIVATE
-      pdf_viewer/keys.config
-      pdf_viewer/prefs.config
-      ${SIOYEK_SHADER_FILES}
-    )
-
-    set_source_files_properties(
-      pdf_viewer/keys.config
-      pdf_viewer/prefs.config
-        PROPERTIES MACOSX_PACKAGE_LOCATION "Resources"
-    )
-
-    set_source_files_properties(
-      ${SIOYEK_SHADER_FILES}
-        PROPERTIES MACOSX_PACKAGE_LOCATION "Resources/shaders"
-    )
-
-  target_sources(sioyek PRIVATE
-        pdf_viewer/macos_specific.mm
-  )
-endif()
 
 # Keep deprecated APIs out of application code without hiding any warnings.
 sioyek_enable_safety(sioyek)
@@ -124,51 +108,26 @@ target_include_directories(sioyek PRIVATE
     ${SQLite3_INCLUDE_DIRS}
 )
 
-target_compile_definitions(sioyek PRIVATE
-    QT_OPENGLEXTENSIONS_LIB
-    QT_OPENGL_LIB
-    QT_WIDGETS_LIB
-)
-
 target_link_libraries(sioyek PRIVATE
     Qt::Core
     Qt::Gui
     Qt::Network
-    Qt::OpenGL
+    Qt::GuiPrivate
     Qt::QuickWidgets
     Qt::Svg
     Qt::TextToSpeech
     Qt::Widgets
 )
 
-if(NOT ANDROID)
-  target_sources(sioyek PUBLIC
-        pdf_viewer/synctex/synctex_parser.c pdf_viewer/synctex/synctex_parser.h
-        pdf_viewer/synctex/synctex_parser_utils.c pdf_viewer/synctex/synctex_parser_utils.h
-  )
-else()
-  target_compile_definitions(sioyek PRIVATE
-        SIOYEK_ANDROID
-  )
-endif()
+target_sources(sioyek PUBLIC
+      pdf_viewer/synctex/synctex_parser.c pdf_viewer/synctex/synctex_parser.h
+      pdf_viewer/synctex/synctex_parser_utils.c pdf_viewer/synctex/synctex_parser_utils.h
+)
 
-if(WIN32)
-  target_compile_definitions(sioyek PRIVATE
-        _CRT_SECURE_NO_WARNINGS
-        _CRT_NONSTDC_NO_DEPRECATE
-        NOMINMAX
-  )
 
-  if(MSVC)
-    target_compile_options(sioyek PRIVATE /bigobj /MP)
-  endif()
-endif()
-
-if(UNIX AND NOT APPLE)
-  target_compile_definitions(sioyek PRIVATE
-        LINUX_STANDARD_PATHS
-  )
-endif()
+target_compile_definitions(sioyek PRIVATE
+      LINUX_STANDARD_PATHS
+)
 
 find_package(ZLIB REQUIRED)
 find_package(HarfBuzz REQUIRED)
@@ -194,9 +153,6 @@ if((QT_VERSION_MAJOR GREATER 5))
         SIOYEK_QT6
   )
 
-  target_link_libraries(sioyek PRIVATE
-        Qt::OpenGLWidgets
-  )
 endif()
 
 add_library(fzf STATIC
@@ -215,96 +171,86 @@ target_link_libraries(sioyek PRIVATE
     ${SIOYEK_SQLITE_TARGET}
 )
 
-if(APPLE)
-  # target_link_libraries(sioyek PRIVATE
-  #       "-framework AppKit"
-  #       mupdf-third
-  #       mupdf-threads
-  # )
-  target_link_libraries(sioyek PRIVATE
-      "-framework AppKit"
-      -ldl
-      -L${CMAKE_CURRENT_SOURCE_DIR}/mupdf/build/release
-      -lmupdf
-      -lmupdf-third
-      -lmupdf-threads
-      -lz
-  )
-else()
-  if(UNIX AND NOT ANDROID)
-    find_program(SIOYEK_MAKE NAMES gmake make REQUIRED)
-    find_package(Threads REQUIRED)
-    set(SIOYEK_MUPDF_JOBS "2" CACHE STRING "Parallel jobs for vendored MuPDF")
-    set(mupdf_out "${CMAKE_CURRENT_BINARY_DIR}/mupdf/${SIOYEK_MUPDF_FLAGS_HASH}")
-    # Always ask Make to check its dependencies, including nested submodule edits.
-    add_custom_target(sioyek_mupdf
-      COMMAND ${SIOYEK_MAKE} -C "${CMAKE_CURRENT_SOURCE_DIR}/mupdf"
-        -j${SIOYEK_MUPDF_JOBS} build=release OUT=${mupdf_out}
-        CC=${CMAKE_C_COMPILER} CXX=${CMAKE_CXX_COMPILER}
-        "XCFLAGS=${SIOYEK_MUPDF_SAFETY_FLAGS}"
-        USE_SYSTEM_HARFBUZZ=yes USE_SYSTEM_ZLIB=yes
-        libs ${mupdf_out}/libmupdf-threads.a
-      BYPRODUCTS ${mupdf_out}/libmupdf.a ${mupdf_out}/libmupdf-third.a
-        ${mupdf_out}/libmupdf-threads.a
-      VERBATIM USES_TERMINAL)
-    add_library(mupdf STATIC IMPORTED)
-    set_target_properties(mupdf PROPERTIES IMPORTED_LOCATION "${mupdf_out}/libmupdf.a")
-    add_dependencies(mupdf sioyek_mupdf)
-    target_link_libraries(sioyek PRIVATE
-      "${mupdf_out}/libmupdf-third.a" "${mupdf_out}/libmupdf-threads.a"
-      ${SIOYEK_HARFBUZZ_LIBS} ZLIB::ZLIB Threads::Threads m)
-    file(RELATIVE_PATH SIOYEK_RELATIVE_DATA_DIR
-      "${CMAKE_INSTALL_FULL_BINDIR}" "${CMAKE_INSTALL_FULL_DATADIR}/sioyek")
-    target_compile_definitions(sioyek PRIVATE
-      SIOYEK_RELATIVE_DATA_DIR="${SIOYEK_RELATIVE_DATA_DIR}"
-      SIOYEK_INSTALL_DATA_DIR="${CMAKE_INSTALL_FULL_DATADIR}/sioyek")
-    # Keep resources up to date even when only a shader or config changes.
-    add_custom_target(sioyek_resources
-      COMMAND ${CMAKE_COMMAND} -E make_directory "${CMAKE_CURRENT_BINARY_DIR}/resources"
-      COMMAND ${CMAKE_COMMAND} -E copy_if_different
-        "${CMAKE_CURRENT_SOURCE_DIR}/pdf_viewer/prefs.config"
-        "${CMAKE_CURRENT_SOURCE_DIR}/pdf_viewer/keys.config"
-        "${CMAKE_CURRENT_SOURCE_DIR}/tutorial.pdf"
-        "${CMAKE_CURRENT_BINARY_DIR}/resources"
-      COMMAND ${CMAKE_COMMAND} -E copy_directory
-        "${CMAKE_CURRENT_SOURCE_DIR}/pdf_viewer/shaders"
-        "${CMAKE_CURRENT_BINARY_DIR}/resources/shaders")
-    add_dependencies(sioyek sioyek_resources)
-  endif()
-endif()
+find_program(SIOYEK_MAKE NAMES gmake make REQUIRED)
+find_program(SIOYEK_PATCH NAMES patch REQUIRED)
+find_package(Python3 REQUIRED COMPONENTS Interpreter)
+find_package(Threads REQUIRED)
+find_package(JPEG REQUIRED)
+# Switching JPEG implementations changes Make's source/header selection.
+# Use fresh archives so ar cannot retain objects from the bundled decoder.
+string(SHA256 SIOYEK_MUPDF_FLAGS_HASH "${SIOYEK_MUPDF_FLAGS_HASH};system-libjpeg;${JPEG_VERSION}")
+string(SUBSTRING "${SIOYEK_MUPDF_FLAGS_HASH}" 0 12 SIOYEK_MUPDF_FLAGS_HASH)
+set(SIOYEK_MUPDF_JOBS "2" CACHE STRING "Parallel jobs for vendored MuPDF")
+set(mupdf_patches
+  "${CMAKE_CURRENT_SOURCE_DIR}/patches/mupdf/1.26.11-null-reference-counting.patch"
+  "${CMAKE_CURRENT_SOURCE_DIR}/patches/mupdf/1.26.11-text-color-shift.patch"
+  "${CMAKE_CURRENT_SOURCE_DIR}/patches/mupdf/1.26.11-empty-layer-sort.patch"
+  "${CMAKE_CURRENT_SOURCE_DIR}/patches/mupdf/lcms2-typed-interpolation.patch")
+set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS ${mupdf_patches})
+set(mupdf_source "${CMAKE_CURRENT_BINARY_DIR}/mupdf-source")
+set(mupdf_out "${CMAKE_CURRENT_BINARY_DIR}/mupdf/${SIOYEK_MUPDF_FLAGS_HASH}")
+# Always ask Make to check its dependencies, including nested submodule edits.
+add_custom_target(sioyek_mupdf
+  COMMAND ${Python3_EXECUTABLE} "${CMAKE_CURRENT_SOURCE_DIR}/scripts/prepare-mupdf.py"
+    "${CMAKE_CURRENT_SOURCE_DIR}/mupdf" "${mupdf_source}" ${mupdf_patches}
+  COMMAND ${SIOYEK_MAKE} -C "${mupdf_source}"
+    -j${SIOYEK_MUPDF_JOBS} build=release OUT=${mupdf_out}
+    CC=${CMAKE_C_COMPILER} CXX=${CMAKE_CXX_COMPILER}
+    "XCFLAGS=${SIOYEK_MUPDF_SAFETY_FLAGS}"
+    USE_SYSTEM_HARFBUZZ=yes USE_SYSTEM_ZLIB=yes USE_SYSTEM_LIBJPEG=yes
+    libs ${mupdf_out}/libmupdf-threads.a
+  BYPRODUCTS ${mupdf_out}/libmupdf.a ${mupdf_out}/libmupdf-third.a
+    ${mupdf_out}/libmupdf-threads.a
+  VERBATIM USES_TERMINAL)
+add_library(mupdf STATIC IMPORTED)
+set_target_properties(mupdf PROPERTIES IMPORTED_LOCATION "${mupdf_out}/libmupdf.a")
+# Keep public headers consistent with the configuration passed to MuPDF's Make.
+target_compile_definitions(mupdf INTERFACE "${SIOYEK_MUPDF_ALIGNMENT_DEFINITION}")
+add_dependencies(mupdf sioyek_mupdf)
+target_link_libraries(sioyek PRIVATE
+  "${mupdf_out}/libmupdf-third.a" "${mupdf_out}/libmupdf-threads.a"
+  ${SIOYEK_HARFBUZZ_LIBS} ZLIB::ZLIB JPEG::JPEG Threads::Threads m)
+file(RELATIVE_PATH SIOYEK_RELATIVE_DATA_DIR
+  "${CMAKE_INSTALL_FULL_BINDIR}" "${CMAKE_INSTALL_FULL_DATADIR}/sioyek")
+target_compile_definitions(sioyek PRIVATE
+  SIOYEK_RELATIVE_DATA_DIR="${SIOYEK_RELATIVE_DATA_DIR}"
+  SIOYEK_INSTALL_DATA_DIR="${CMAKE_INSTALL_FULL_DATADIR}/sioyek")
+# Shaders are embedded SPIR-V. Only data files are staged for local runs.
+add_custom_target(sioyek_resources
+  COMMAND ${CMAKE_COMMAND} -E make_directory "${CMAKE_CURRENT_BINARY_DIR}/resources"
+  COMMAND ${CMAKE_COMMAND} -E copy_if_different
+    "${CMAKE_CURRENT_SOURCE_DIR}/pdf_viewer/prefs.config"
+    "${CMAKE_CURRENT_SOURCE_DIR}/pdf_viewer/keys.config"
+    "${CMAKE_CURRENT_SOURCE_DIR}/tutorial.pdf"
+    "${CMAKE_CURRENT_BINARY_DIR}/resources")
+add_dependencies(sioyek sioyek_resources)
 
 install(TARGETS sioyek
-    BUNDLE DESTINATION .
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
 
-if(UNIX AND NOT APPLE AND NOT ANDROID)
-  install(DIRECTORY pdf_viewer/shaders/
-          DESTINATION ${CMAKE_INSTALL_DATADIR}/sioyek/shaders)
-  install(FILES tutorial.pdf
-          DESTINATION ${CMAKE_INSTALL_DATADIR}/sioyek)
-  install(FILES pdf_viewer/keys.config pdf_viewer/prefs.config
-          DESTINATION ${CMAKE_INSTALL_DATADIR}/sioyek)
-  install(FILES resources/sioyek.desktop
-          DESTINATION ${CMAKE_INSTALL_DATADIR}/applications)
-  install(FILES resources/sioyek-icon-linux.png
-          DESTINATION ${CMAKE_INSTALL_DATADIR}/pixmaps)
-  install(FILES resources/sioyek.1
-          DESTINATION ${CMAKE_INSTALL_MANDIR}/man1)
-endif()
+install(FILES tutorial.pdf
+        DESTINATION ${CMAKE_INSTALL_DATADIR}/sioyek)
+install(FILES pdf_viewer/keys.config pdf_viewer/prefs.config
+        DESTINATION ${CMAKE_INSTALL_DATADIR}/sioyek)
+install(FILES resources/sioyek.desktop
+        DESTINATION ${CMAKE_INSTALL_DATADIR}/applications)
+install(FILES resources/sioyek-icon-linux.png
+        DESTINATION ${CMAKE_INSTALL_DATADIR}/pixmaps)
+install(FILES resources/sioyek.1
+        DESTINATION ${CMAKE_INSTALL_MANDIR}/man1)
 
-if(APPLE OR WIN32)
-  qt_generate_deploy_app_script(
-      TARGET sioyek
-      OUTPUT_SCRIPT deploy_script
-      NO_UNSUPPORTED_PLATFORM_ERROR
-  )
-  install(SCRIPT ${deploy_script})
-endif()
 
-option(SIOYEK_BUILD_TESTS "Build checksum and UTF-8 compatibility tests" OFF)
+option(SIOYEK_BUILD_TESTS "Build checksum, UTF-8 and MuPDF runtime tests" OFF)
 if(SIOYEK_BUILD_TESTS)
   enable_testing()
+  add_executable(sioyek_renderer_response_test tests/renderer_response.cpp)
+  target_include_directories(sioyek_renderer_response_test PRIVATE pdf_viewer mupdf/include)
+  target_link_libraries(sioyek_renderer_response_test PRIVATE Qt::Gui)
+  sioyek_enable_safety(sioyek_renderer_response_test)
+  target_compile_definitions(sioyek_renderer_response_test PRIVATE
+    QT_DISABLE_DEPRECATED_UP_TO=${SIOYEK_QT_API_VERSION})
+  add_test(NAME renderer_response_state COMMAND sioyek_renderer_response_test)
   add_executable(sioyek_modern_api_test tests/modern_api.cpp pdf_viewer/checksum.cpp)
   target_include_directories(sioyek_modern_api_test PRIVATE pdf_viewer)
   target_link_libraries(sioyek_modern_api_test PRIVATE Qt::Core)
@@ -313,4 +259,41 @@ if(SIOYEK_BUILD_TESTS)
     QT_DISABLE_DEPRECATED_UP_TO=${SIOYEK_QT_API_VERSION})
   add_test(NAME modern_api_compatibility
     COMMAND sioyek_modern_api_test "${CMAKE_CURRENT_SOURCE_DIR}/tutorial.pdf")
+  if(TARGET sioyek_mupdf)
+    add_test(NAME mupdf_source_staging
+      COMMAND ${Python3_EXECUTABLE} "${CMAKE_CURRENT_SOURCE_DIR}/tests/prepare_mupdf.py"
+        "${CMAKE_CURRENT_SOURCE_DIR}/scripts/prepare-mupdf.py")
+    add_executable(sioyek_mupdf_test tests/mupdf_runtime.c)
+    target_include_directories(sioyek_mupdf_test PRIVATE mupdf/include)
+    target_link_libraries(sioyek_mupdf_test PRIVATE mupdf
+      "${mupdf_out}/libmupdf-third.a" "${mupdf_out}/libmupdf-threads.a"
+      ${SIOYEK_HARFBUZZ_LIBS} ZLIB::ZLIB JPEG::JPEG Threads::Threads m)
+    sioyek_enable_safety(sioyek_mupdf_test)
+    add_test(NAME mupdf_runtime
+      COMMAND sioyek_mupdf_test "${CMAKE_CURRENT_SOURCE_DIR}/tutorial.pdf")
+  endif()
+endif()
+
+option(SIOYEK_BUILD_GPU_TESTS "Build Vulkan rendering tests (requires a display and Vulkan ICD)" OFF)
+if(SIOYEK_BUILD_GPU_TESTS)
+  enable_testing()
+  qt_add_executable(sioyek_vulkan_test tests/vulkan_canvas.cpp
+    pdf_viewer/vulkan_canvas.cpp pdf_viewer/render_types.cpp)
+  target_include_directories(sioyek_vulkan_test PRIVATE pdf_viewer)
+  target_link_libraries(sioyek_vulkan_test PRIVATE Qt::Widgets Qt::GuiPrivate)
+  sioyek_enable_safety(sioyek_vulkan_test)
+  target_compile_definitions(sioyek_vulkan_test PRIVATE
+    QT_DISABLE_DEPRECATED_UP_TO=${SIOYEK_QT_API_VERSION})
+  qt_add_shaders(sioyek_vulkan_test sioyek_vulkan_test_shaders
+    PREFIX "/sioyek/vulkan" BASE "pdf_viewer/shaders/vulkan"
+    NOGLSL NOHLSL NOMSL
+    FILES pdf_viewer/shaders/vulkan/canvas.vert pdf_viewer/shaders/vulkan/canvas.frag)
+  add_test(NAME vulkan_rendering COMMAND sioyek_vulkan_test)
+  qt_add_executable(sioyek_qt_vulkan_lifecycle_test tests/qt_vulkan_lifecycle.cpp)
+  target_link_libraries(sioyek_qt_vulkan_lifecycle_test PRIVATE Qt::Widgets Qt::GuiPrivate)
+  sioyek_enable_safety(sioyek_qt_vulkan_lifecycle_test)
+  target_compile_definitions(sioyek_qt_vulkan_lifecycle_test PRIVATE
+    QT_DISABLE_DEPRECATED_UP_TO=${SIOYEK_QT_API_VERSION})
+  add_test(NAME qt_vulkan_lifecycle COMMAND sioyek_qt_vulkan_lifecycle_test)
+  set_tests_properties(vulkan_rendering qt_vulkan_lifecycle PROPERTIES LABELS "gpu" TIMEOUT 60)
 endif()

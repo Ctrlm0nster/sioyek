@@ -1,19 +1,20 @@
 # Maintainer: Ctrlm0nster (https://github.com/Ctrlm0nster)
 # Generated source snapshot/checksum: scripts/prepare-arch-package.py
 pkgname=sioyek-ctrlm0nster
-pkgver=2.0.0.r0.g000000000000
-pkgrel=3
+pkgver=3.0.0.r0.g000000000000
+pkgrel=4
 pkgdesc='Keyboard-driven PDF reader (Ctrlm0nster fork)'
 arch=('x86_64')
 url='https://github.com/Ctrlm0nster/sioyek'
 license=('GPL-3.0-or-later' 'AGPL-3.0-or-later' 'MIT' 'BSL-1.0' 'OFL-1.1')
 depends=('libgcc' 'libstdc++' 'glibc' 'qt6-base>=6.7' 'qt6-declarative' 'qt6-svg'
-         'qt6-speech' 'harfbuzz' 'sqlite' 'zlib' 'libglvnd')
+         'qt6-speech' 'harfbuzz' 'sqlite' 'zlib' 'libjpeg-turbo' 'vulkan-icd-loader')
 # qt6-svg supplies the dynamically loaded SVG icon/image plugins.
-makedepends=('cmake' 'ninja' 'pkgconf')
+makedepends=('cmake' 'ninja' 'pkgconf' 'python' 'qt6-shadertools' 'vulkan-headers')
 optdepends=('qt6-wayland: native Wayland support'
             'xorg-xwayland: X11 backend on Wayland'
-            'speech-dispatcher: speech output backend')
+            'speech-dispatcher: speech output backend'
+            'vulkan-validation-layers: optional Vulkan diagnostics')
 provides=('sioyek')
 conflicts=('sioyek' 'sioyek-git')
 source=('sioyek-source.tar.gz')
@@ -36,6 +37,13 @@ check() {
 }
 
 package() {
+  # QRhi uses QtGuiPrivate: rebuild this package when Qt's version changes.
+  local index
+  for index in "${!depends[@]}"; do
+    if [[ ${depends[index]} == qt6-base* ]]; then
+      depends[index]="qt6-base=$(pkg-config --modversion Qt6Core)"
+    fi
+  done
   DESTDIR="$pkgdir" cmake --install build
   install -Dm644 sioyek-source/LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
   install -Dm644 sioyek-source/mupdf/COPYING "$pkgdir/usr/share/licenses/$pkgname/MuPDF-COPYING"

@@ -19,8 +19,7 @@ root = Path(__file__).resolve().parents[1]
 with tarfile.open(package) as tar:
     names = set(tar.getnames())
     required = ['usr/bin/sioyek', 'usr/share/sioyek/prefs.config', 'usr/share/sioyek/keys.config',
-                'usr/share/sioyek/tutorial.pdf', 'usr/share/sioyek/shaders/simple.vertex',
-                'usr/share/sioyek/shaders/simple.fragment', 'usr/share/applications/sioyek.desktop',
+                'usr/share/sioyek/tutorial.pdf', 'usr/share/applications/sioyek.desktop',
                 'usr/share/pixmaps/sioyek-icon-linux.png', 'usr/share/man/man1/sioyek.1.gz',
                 'usr/share/licenses/sioyek-ctrlm0nster/LICENSE',
                 'usr/share/licenses/sioyek-ctrlm0nster/MuPDF-COPYING',
@@ -30,8 +29,12 @@ with tarfile.open(package) as tar:
                 'usr/share/licenses/sioyek-ctrlm0nster/THIRD_PARTY_NOTICES.txt',
                 'usr/share/doc/sioyek-ctrlm0nster/SOURCE-MANIFEST.txt', '.BUILDINFO', '.PKGINFO']
     assert set(required) <= names, set(required)-names
+    assert not any(n.rstrip('/') == 'usr/share/sioyek/shaders' or
+                   n.startswith('usr/share/sioyek/shaders/') for n in names), 'Runtime shader sources must not be packaged'
     metadata = tar.extractfile('.PKGINFO').read().decode()
     assert 'pkgname = sioyek-ctrlm0nster\n' in metadata
+    assert re.search(r'^depend = qt6-base=\d+\.\d+\.\d+$', metadata, re.M), 'Missing QRhi Qt ABI pin'
+    assert 'depend = vulkan-icd-loader\n' in metadata
     for conflict in ('sioyek', 'sioyek-git'):
         assert f'conflict = {conflict}\n' in metadata
     assert not any(n.startswith(('etc/', 'home/')) for n in names)
@@ -87,6 +90,8 @@ seen = set()
 manifest = ''
 source_license = None
 archive_names = set()
+shader_sources = {f'pdf_viewer/shaders/vulkan/canvas.{suffix}' for suffix in ('vert', 'frag')}
+seen_shader_sources = set()
 with tarfile.open(source, 'r|gz') as tar:
     for member in tar:
         assert member.name not in archive_names, member.name
@@ -95,6 +100,10 @@ with tarfile.open(source, 'r|gz') as tar:
         assert '.git' not in Path(member.name).parts, member.name
         assert member.name.startswith('sioyek-source/'), member.name
         name = member.name.removeprefix('sioyek-source/')
+        if name.startswith('pdf_viewer/shaders/') and not member.isdir():
+            assert name in shader_sources, f'Obsolete shader in source archive: {name}'
+            assert tar.extractfile(member).read() == (root/name).read_bytes(), name
+            seen_shader_sources.add(name)
         if name == 'LICENSE':
             source_license = tar.extractfile(member).read()
         if name == 'SOURCE-MANIFEST.txt':
@@ -107,6 +116,7 @@ with tarfile.open(source, 'r|gz') as tar:
                 assert member.isfile() and hashlib.sha256(tar.extractfile(member).read()).digest() == value, name
             seen.add(name)
 assert source_license == (root/'LICENSE').read_bytes()
+assert seen_shader_sources == shader_sources, 'Required Vulkan shader sources missing from corresponding source'
 assert package_manifest == manifest
 assert seen == expected.keys(), expected.keys()-seen
 for path, commit in revisions.items():

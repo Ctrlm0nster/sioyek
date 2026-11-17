@@ -27,7 +27,7 @@ import subprocess
 
 # if set to true, we re-add the bookmarks into sioyek, so we have both types of bookmarks
 ADD_BOOKMARKS_TO_SIOYEK = False
-PATH_TO_SIOYEK = r'path/to/sioyek.exe'
+PATH_TO_SIOYEK = 'sioyek'
 
 def add_bookmark(doc_path, page_number, location, text):
 	doc = fitz.open(doc_path)

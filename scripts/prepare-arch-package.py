@@ -41,8 +41,6 @@ def collect(repo, prefix='', parent=False):
     for name in sorted(set(names.decode().split('\0')) - {''}):
         path = repo / name
         rel = prefix + name
-        if parent and name.startswith('windows_runtime/'):
-            continue # Windows-only prebuilt DLLs are not Arch source inputs.
         if path.is_dir() and not path.is_symlink():
             if (path / '.git').exists():
                 collect(path, rel + '/')
@@ -55,7 +53,6 @@ def collect(repo, prefix='', parent=False):
         else:
             raise SystemExit(f'Missing tracked source: {rel}')
 collect(root, parent=True)
-manifest.append('windows_runtime/: excluded Windows-only prebuilt DLLs from Arch source')
 base = (root / 'VERSION').read_text().strip()
 if not re.fullmatch(r'\d+\.\d+\.\d+', base):
     raise SystemExit('VERSION must contain MAJOR.MINOR.PATCH')

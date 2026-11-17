@@ -22,7 +22,7 @@ jobs:
       CXX: ${{ matrix.compiler == 'clang' && 'clang++' || 'g++' }}
     steps:
       - name: Install dependencies in disposable container
-        run: pacman -Syu --noconfirm --needed git python cmake ninja pkgconf clang namcap desktop-file-utils qt6-base qt6-declarative qt6-svg qt6-speech harfbuzz sqlite zlib
+        run: pacman -Syu --noconfirm --needed git python cmake ninja pkgconf clang namcap desktop-file-utils vulkan-swrast xorg-server-xvfb vulkan-validation-layers qt6-base qt6-shadertools vulkan-headers qt6-declarative qt6-svg qt6-speech harfbuzz sqlite zlib libjpeg-turbo
       - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
         with:
           fetch-depth: 0 # commit-count versions require full history
@@ -56,6 +56,14 @@ jobs:
           else
             echo 'SKIPPED: runner disallows unprivileged user namespaces' | tee build/arch/lifecycle.log
           fi
+      - name: Test Vulkan rendering with a software ICD
+        shell: bash
+        run: |
+          set -euo pipefail
+          cmake -S . -B build/gpu -G Ninja -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_CXX_COMPILER="$CXX" -DSIOYEK_BUILD_GPU_TESTS=ON
+          cmake --build build/gpu --parallel 2 --target sioyek_vulkan_test sioyek_qt_vulkan_lifecycle_test
+          QT_FORCE_STDERR_LOGGING=1 QT_QPA_PLATFORM=xcb SIOYEK_VULKAN_VALIDATION=1 xvfb-run -a ctest --test-dir build/gpu -L gpu --verbose | tee build/arch/vulkan-rendering.log
+          ! grep -Eq 'VUID-|Validation Error' build/arch/vulkan-rendering.log
       - name: Collect release candidates and evidence
         shell: bash
         run: |
@@ -75,18 +83,21 @@ jobs:
           if-no-files-found: error
           retention-days: 14
   sanitizer-tests:
-    timeout-minutes: 15
+    timeout-minutes: 30
     runs-on: ubuntu-24.04
     container: archlinux:base-devel
     steps:
       - name: Install dependencies in disposable container
-        run: pacman -Syu --noconfirm --needed git cmake ninja pkgconf clang compiler-rt qt6-base qt6-declarative qt6-svg qt6-speech harfbuzz sqlite zlib
+        run: pacman -Syu --noconfirm --needed git python cmake ninja pkgconf clang compiler-rt qt6-base qt6-shadertools vulkan-headers qt6-declarative qt6-svg qt6-speech harfbuzz sqlite zlib libjpeg-turbo vulkan-swrast xorg-server-xvfb vulkan-validation-layers
       - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
         with:
           persist-credentials: false
+          submodules: recursive
       - name: Configure ASan and UBSan tests
         run: cmake -S . -B build/sanitize -G Ninja -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -DSIOYEK_SANITIZERS=ON -DSIOYEK_BUILD_TESTS=ON
       - name: Build and run focused runtime checks
         run: |
-          cmake --build build/sanitize --parallel 2 --target sioyek_modern_api_test
+          cmake --build build/sanitize --parallel 2
           ctest --test-dir build/sanitize --output-on-failure
+      - name: Test sanitized reader workers and cache invalidation
+        run: QT_FORCE_STDERR_LOGGING=1 xvfb-run -a python3 scripts/test-render-workers.py "$PWD/build/sanitize/sioyek" --platform xcb

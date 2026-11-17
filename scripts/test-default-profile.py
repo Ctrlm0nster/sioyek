@@ -27,6 +27,8 @@ def run_reader(home, label):
                XDG_CONFIG_DIRS=str(home/'empty-system-config'),
                XDG_DATA_HOME=str(home/'.local/share'), XDG_CACHE_HOME=str(home/'.cache'),
                QT_QPA_PLATFORM=args.platform)
+    if os.environ.get('SIOYEK_TEST_LIBRARY_PATH'):
+        env['LD_LIBRARY_PATH'] = os.environ['SIOYEK_TEST_LIBRARY_PATH']
     instance = f'rc-default-{os.getpid()}-{label}'
     base = [exe, '--instance-name', instance, '--no-auto-config', '--nofocus']
     # Data/config trees are generated here, so no saved tabs or external paths exist.
