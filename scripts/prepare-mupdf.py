@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Apply reviewed patches in a build tree, leaving the pinned submodule intact."""
 import argparse
+import os
 from pathlib import Path
 import re
 import shutil
@@ -36,6 +37,7 @@ def copy_changed(src, dst):
     if not dst.exists() or src.read_bytes() != dst.read_bytes():
         shutil.copyfile(src, dst)
         shutil.copymode(src, dst)
+        shutil.copystat(src, dst)
 
 # Keep writable/generated sources separate. Large, unchanged dependency and
 # font directories are read through symlinks; Make writes all objects to OUT.
@@ -78,3 +80,18 @@ with tempfile.TemporaryDirectory(prefix='sioyek-mupdf-patch-') as temporary:
                        cwd=work, check=True)
     for rel in patched:
         copy_changed(work / rel, destination / rel)
+
+# Upstream MuPDF provides pre-generated headers for ICC profiles, CMaps, and JS
+# so builds do not require host generator tools (xxd, etc.). Ensure these headers
+# are never older than their input resources.
+for pattern, res_dir in [
+    ('source/fitz/icc/*.icc.h', 'resources/icc'),
+    ('source/pdf/cmaps/*.h', 'resources/cmaps'),
+    ('source/pdf/js/*.js.h', 'source/pdf/js'),
+]:
+    for header in destination.glob(pattern):
+        res_file = destination / res_dir / header.name[:-2]
+        if res_file.exists():
+            r_mtime = res_file.stat().st_mtime
+            if header.stat().st_mtime <= r_mtime:
+                os.utime(header, (r_mtime + 1, r_mtime + 1))
