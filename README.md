@@ -91,7 +91,7 @@ https://user-images.githubusercontent.com/6392321/125337160-e4832700-e363-11eb-8
 Ensure standard build tools, Qt 6.7+, and Vulkan loader libraries are installed:
 
 ```sh
-sudo pacman -S --needed base-devel git python cmake ninja pkgconf \
+sudo pacman -S --needed base-devel git python cmake ninja pkgconf unzip \
   qt6-base qt6-declarative qt6-svg qt6-speech qt6-wayland qt6-shadertools \
   vulkan-headers vulkan-icd-loader harfbuzz sqlite zlib libjpeg-turbo
 ```

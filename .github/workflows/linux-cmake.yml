@@ -22,7 +22,7 @@ jobs:
       CXX: ${{ matrix.compiler == 'clang' && 'clang++' || 'g++' }}
     steps:
       - name: Install dependencies in disposable container
-        run: pacman -Syu --noconfirm --needed git python cmake ninja pkgconf clang namcap desktop-file-utils vulkan-swrast xorg-server-xvfb vulkan-validation-layers qt6-base qt6-shadertools vulkan-headers qt6-declarative qt6-svg qt6-speech harfbuzz sqlite zlib libjpeg-turbo
+        run: pacman -Syu --noconfirm --needed git python cmake ninja pkgconf clang unzip namcap desktop-file-utils vulkan-swrast xorg-server-xvfb vulkan-validation-layers qt6-base qt6-shadertools vulkan-headers qt6-declarative qt6-svg qt6-speech harfbuzz sqlite zlib libjpeg-turbo
       - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
         with:
           fetch-depth: 0 # commit-count versions require full history
@@ -48,7 +48,7 @@ jobs:
           compiler=$(sed -n 's/^CMAKE_CXX_COMPILER:[^=]*=//p' src/build/CMakeCache.txt)
           test "$(readlink -f "$(command -v "$compiler")")" = "$(readlink -f "$(command -v "$CXX")")"
           cd ../..
-          python3 scripts/verify-release.py "$package" build/arch/sioyek-source.tar.gz | tee build/arch/verification.log
+          runuser -u builder -- python3 scripts/verify-release.py "$package" build/arch/sioyek-source.tar.gz | tee build/arch/verification.log
           namcap build/arch/PKGBUILD "$package" | tee build/arch/namcap.log
           ! grep -q ' E:' build/arch/namcap.log
           if runuser -u builder -- unshare --user --map-root-user true; then
@@ -88,7 +88,7 @@ jobs:
     container: archlinux:base-devel
     steps:
       - name: Install dependencies in disposable container
-        run: pacman -Syu --noconfirm --needed git python cmake ninja pkgconf clang compiler-rt qt6-base qt6-shadertools vulkan-headers qt6-declarative qt6-svg qt6-speech harfbuzz sqlite zlib libjpeg-turbo vulkan-swrast xorg-server-xvfb vulkan-validation-layers
+        run: pacman -Syu --noconfirm --needed git python cmake ninja pkgconf clang compiler-rt unzip qt6-base qt6-shadertools vulkan-headers qt6-declarative qt6-svg qt6-speech harfbuzz sqlite zlib libjpeg-turbo vulkan-swrast xorg-server-xvfb vulkan-validation-layers
       - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
         with:
           persist-credentials: false

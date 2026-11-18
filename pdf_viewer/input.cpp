@@ -2923,7 +2923,7 @@ public:
         finished = true;
     }
 
-    virtual bool is_ready() = 0;
+    bool is_ready() override = 0;
 
     void handle_generic_requirement() override{
         if (finished) return;

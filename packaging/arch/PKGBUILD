@@ -10,7 +10,7 @@ license=('GPL-3.0-or-later' 'AGPL-3.0-or-later' 'MIT' 'BSL-1.0' 'OFL-1.1')
 depends=('libgcc' 'libstdc++' 'glibc' 'qt6-base>=6.7' 'qt6-declarative' 'qt6-svg'
          'qt6-speech' 'harfbuzz' 'sqlite' 'zlib' 'libjpeg-turbo' 'vulkan-icd-loader')
 # qt6-svg supplies the dynamically loaded SVG icon/image plugins.
-makedepends=('cmake' 'ninja' 'pkgconf' 'python' 'qt6-shadertools' 'vulkan-headers')
+makedepends=('cmake' 'ninja' 'pkgconf' 'python' 'unzip' 'qt6-shadertools' 'vulkan-headers')
 optdepends=('qt6-wayland: native Wayland support'
             'xorg-xwayland: X11 backend on Wayland'
             'speech-dispatcher: speech output backend'

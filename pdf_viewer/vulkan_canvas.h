@@ -13,7 +13,8 @@
  * VulkanCanvas replaces legacy OpenGL with Qt 6's QRhi targeting the Vulkan graphics
  * backend. Vertex and fragment shaders are compiled ahead-of-time from GLSL into
  * SPIR-V bytecode bundles via Qt's `qsb` tool and embedded directly into the binary
- * as Qt resources (`:/shaders/vulkan/*.qsb`). No runtime GLSL compilation or driver-level
+ * as Qt resources with the `.qsb` extension under `:/shaders/vulkan/`.
+ * No runtime GLSL compilation or driver-level
  * shader parsing occurs at runtime.
  *
  * It provides a decoupled GPU abstraction layer (Gpu namespace) that enables the

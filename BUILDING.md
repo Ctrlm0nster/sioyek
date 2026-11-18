@@ -9,7 +9,7 @@ shaders. The legacy qmake project stops with a migration message. Do not use
 Install these packages yourself if missing (this project does not install them):
 
 ```sh
-sudo pacman -S --needed base-devel git python cmake ninja pkgconf qt6-base \
+sudo pacman -S --needed base-devel git python cmake ninja pkgconf unzip qt6-base \
   qt6-declarative qt6-svg qt6-speech qt6-wayland qt6-shadertools \
   vulkan-headers vulkan-icd-loader harfbuzz sqlite zlib libjpeg-turbo
 ```
