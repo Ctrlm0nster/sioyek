@@ -366,6 +366,8 @@ public:
     // being invalid could be a latex document that is changed since being loaded). This just means that
     // the current drawing of MainWidget is not correct (for example due to moving vertically)
     bool is_render_invalidated = false;
+    bool is_validating_render = false;
+    bool is_advancing_waiting_command = false;
 
     // determines if the UI is invalid and needs to be updated
     // this can be the case for example when updating the search progress

@@ -1666,7 +1666,6 @@ void MainWidget::keyReleaseEvent(QKeyEvent* kevent) {
 }
 
 void MainWidget::validate_render() {
-    static bool is_validating_render = false;
     if (is_validating_render) return;
     is_validating_render = true;
     is_render_invalidated = false;
@@ -9805,14 +9804,13 @@ bool MainWidget::is_search_ready() {
 }
 
 void MainWidget::advance_waiting_command(std::string waiting_command_name) {
-    static bool is_advancing = false;
-    if (is_advancing) return;
+    if (is_advancing_waiting_command) return;
     if (pending_command_instance && (waiting_command_name.empty() || pending_command_instance->get_name().find(waiting_command_name) != -1 || pending_command_instance->is_ready())) {
-        is_advancing = true;
+        is_advancing_waiting_command = true;
         auto cmd = std::move(pending_command_instance);
         cmd->set_generic_requirement("");
         advance_command(std::move(cmd));
-        is_advancing = false;
+        is_advancing_waiting_command = false;
     }
 }
 

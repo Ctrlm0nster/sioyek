@@ -265,8 +265,9 @@ private:
     //}
 
     std::optional<std::wstring> get_result() override{
-        if (actual_command) {
-            return actual_command->get_result();
+        auto com = get_command();
+        if (com) {
+            return com->get_result();
         }
         return {};
     }
@@ -395,16 +396,26 @@ public:
 
     void set_result_socket(QLocalSocket* rsocket) override {
         result_socket = rsocket;
-        for (auto& subcommand : commands) {
-            subcommand->set_result_socket(result_socket);
+        if (is_modal) {
+            for (auto& subcommand : commands) {
+                subcommand->set_result_socket(result_socket);
+            }
+        }
+        else if (!commands.empty()) {
+            commands.back()->set_result_socket(result_socket);
         }
     }
 
     void set_result_mutex(bool* id, std::wstring* result_location) override {
         is_done = id;
         result_holder = result_location;
-        for (auto& subcommand : commands) {
-            subcommand->set_result_mutex(id, result_location);
+        if (is_modal) {
+            for (auto& subcommand : commands) {
+                subcommand->set_result_mutex(id, result_location);
+            }
+        }
+        else if (!commands.empty()) {
+            commands.back()->set_result_mutex(id, result_location);
         }
     }
 
@@ -8477,6 +8488,7 @@ void Command::on_result_computed() {
     if (result_socket && result_socket->isOpen()){
         if (!result.has_value()) {
             result_socket->write("<NULL>");
+            result_socket->flush();
             return;
         }
         std::string result_str = utf8_encode(result.value());
@@ -8486,6 +8498,7 @@ void Command::on_result_computed() {
         else {
             result_socket->write("<NULL>");
         }
+        result_socket->flush();
     }
     if (is_done) {
         if (result) {
