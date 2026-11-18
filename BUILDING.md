@@ -260,9 +260,10 @@ such as images and fonts. Process RSS includes the rendered-page cache, Vulkan
 and other allocations.
 
 For fast navigation and rapid jumping without waiting between moves, add `--rapid-jumps 8`.
-This executes a rapid sequence of forward and backward jumps without waiting, then
-measures the time required for the final visible page to settle and render, along with an
-isolated direct-jump baseline to isolate any queue delays caused by stale requests.
+This executes rapid sequences of forward and backward jumps without waiting across
+multiple destination pages (`--rapid-destinations 4`), then measures the median and
+95th-percentile render waits for the final visible page, along with an isolated direct-jump
+baseline to verify there is no queue penalty caused by stale requests.
 
 ### Local fixes for Qt 6.12.0 and Wayland 1.26.0
 

@@ -43,6 +43,8 @@ def arguments():
                         help='Visit pages 2 through N+1, then revisit up to five early pages')
     parser.add_argument('--rapid-jumps', type=int, default=0,
                         help='Execute rapid jumps forward and back without waiting between moves, then measure final render wait')
+    parser.add_argument('--rapid-destinations', type=int, default=4,
+                        help='Number of distinct destination pages to test in rapid jump workload')
     args = parser.parse_args()
     if not ((args.opengl and args.vulkan and not args.baseline and not args.candidate) or
             (args.baseline and not args.opengl and not args.vulkan)):
@@ -53,6 +55,8 @@ def arguments():
         parser.error('Page turn count must be nonnegative')
     if args.rapid_jumps < 0:
         parser.error('Rapid jumps count must be nonnegative')
+    if args.rapid_destinations < 1:
+        parser.error('Rapid destinations count must be positive')
     return args
 
 
@@ -148,6 +152,19 @@ def restore_focus(address):
         hypr('dispatch', 'hl.dsp.focus({window=' + json.dumps('address:' + address) + '})')
     else:
         hypr('dispatch', 'focuswindow', 'address:' + address)
+
+
+def percentile_95(values):
+    if not values:
+        return 0.0
+    if len(values) == 1:
+        return values[0]
+    s = sorted(values)
+    k = (len(s) - 1) * 0.95
+    f = int(k)
+    c = min(f + 1, len(s) - 1)
+    weight = k - f
+    return s[f] * (1.0 - weight) + s[c] * weight
 
 
 def measure_page_turns(instance, pid, pages):
@@ -279,17 +296,25 @@ def trial(args, backend, binary, trial_index, work):
                                             'settled': settled, 'revisits': revisits}
                 command(instance, 'set_view_state', '0 500 1.5 0')
             if args.rapid_jumps:
-                max_jump_page = max(1, min(30, args.page_turns if args.page_turns else 30))
-                stride = 7
-                jump_targets = [((i * stride + 3) % max_jump_page) for i in range(args.rapid_jumps)]
-                if len(jump_targets) > 1 and jump_targets[-1] == jump_targets[-2]:
-                    jump_targets[-1] = (jump_targets[-1] + 1) % max_jump_page
-                rapid_res = measure_rapid_jumps(instance, process.pid, jump_targets)
-                time.sleep(1)
-                isolated_wait = measure_isolated_jump(instance, process.pid, 0, jump_targets[-1])
-                rapid_res['isolated_render_wait_ms'] = isolated_wait
-                rapid_res['queue_delay_ms'] = rapid_res['final_render_wait_ms'] - isolated_wait
-                result['rapid_navigation'] = rapid_res
+                max_jump_page = max(1, min(31, args.page_turns if args.page_turns else 31))
+                dest_count = max(1, args.rapid_destinations)
+                destinations = [(max_jump_page * (d + 1)) // (dest_count + 1) for d in range(dest_count)]
+                dest_trials = []
+                for d, dest_page in enumerate(destinations):
+                    stride = 7 + d * 2
+                    seq = [((i * stride + 3 + d * 5) % max_jump_page) for i in range(args.rapid_jumps - 1)]
+                    for idx in range(len(seq)):
+                        if seq[idx] == dest_page:
+                            seq[idx] = (seq[idx] + 3) % max_jump_page
+                    seq.append(dest_page)
+                    rapid_res = measure_rapid_jumps(instance, process.pid, seq)
+                    time.sleep(1)
+                    isolated_wait = measure_isolated_jump(instance, process.pid, 0, dest_page)
+                    rapid_res['isolated_render_wait_ms'] = isolated_wait
+                    rapid_res['queue_delay_ms'] = rapid_res['final_render_wait_ms'] - isolated_wait
+                    dest_trials.append(rapid_res)
+                    time.sleep(0.5)
+                result['rapid_navigation'] = dest_trials
                 command(instance, 'set_view_state', '0 500 1.5 0')
             modes = [('normal', None)] if args.normal_only else [
                 ('normal', None), ('dark', 'toggle_dark_mode'), ('custom', 'toggle_custom_color')]
@@ -374,6 +399,7 @@ def main():
             'captures_per_mode': args.captures, 'platform': args.platform,
             'page_turns': args.page_turns,
             'rapid_jumps': args.rapid_jumps,
+            'rapid_destinations': args.rapid_destinations,
             'vulkan_validation': args.validation, 'trials': []}
     data['normal_only'] = args.normal_only
     try:
@@ -409,14 +435,22 @@ def main():
 
     if args.rapid_jumps:
         for backend in binaries:
-            rapid_samples = [t['rapid_navigation'] for t in data['trials'] if t['backend'] == backend and 'rapid_navigation' in t]
-            if rapid_samples:
+            rapid_trials = [t['rapid_navigation'] for t in data['trials'] if t['backend'] == backend and 'rapid_navigation' in t]
+            flat_samples = [s for trial_list in rapid_trials for s in trial_list]
+            if flat_samples:
+                final_waits = [s['final_render_wait_ms'] for s in flat_samples]
+                isolated_waits = [s['isolated_render_wait_ms'] for s in flat_samples]
+                queue_delays = [s['queue_delay_ms'] for s in flat_samples]
+                destinations = sorted(list({s['final_page'] for s in flat_samples}))
                 print('rapid_navigation', backend, json.dumps({
-                    'jumps': rapid_samples[0]['jumps'],
-                    'final_page': rapid_samples[0]['final_page'],
-                    'final_render_wait_median_ms': statistics.median(s['final_render_wait_ms'] for s in rapid_samples),
-                    'isolated_render_wait_median_ms': statistics.median(s['isolated_render_wait_ms'] for s in rapid_samples),
-                    'queue_delay_median_ms': statistics.median(s['queue_delay_ms'] for s in rapid_samples),
+                    'destinations': destinations,
+                    'sample_count': len(flat_samples),
+                    'final_wait_median_ms': statistics.median(final_waits),
+                    'final_wait_p95_ms': percentile_95(final_waits),
+                    'isolated_wait_median_ms': statistics.median(isolated_waits),
+                    'isolated_wait_p95_ms': percentile_95(isolated_waits),
+                    'queue_delay_median_ms': statistics.median(queue_delays),
+                    'queue_delay_p95_ms': percentile_95(queue_delays),
                 }), flush=True)
 
 
