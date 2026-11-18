@@ -265,6 +265,21 @@ multiple destination pages (`--rapid-destinations 4`), then measures the median 
 95th-percentile render waits for the final visible page, along with an isolated direct-jump
 baseline to verify there is no queue penalty caused by stale requests.
 
+For search responsiveness, background indexing, and render contention on large documents:
+
+```sh
+python3 scripts/benchmark-search.py \
+  --baseline /usr/bin/sioyek --candidate "$PWD/build/dev/sioyek" \
+  --text-pdf "$PWD/textbook_of_engineering_matematics.pdf" \
+  --mixed-pdf "$PWD/build/real-documents/copies/02.pdf" \
+  --output build/perf-search --rounds 3
+```
+
+This benchmark evaluates three aspects:
+1. **Background Indexing**: Measures startup-to-index-ready duration and post-indexing memory usage (RSS).
+2. **Search Responsiveness**: Compares unindexed time-to-first-match (page-by-page traversal) against indexed in-memory super-fast search across early and deep terms.
+3. **Render Contention**: Measures page-turn render settle latency while background search actively traverses the document versus an idle reader baseline.
+
 ### Local fixes for Qt 6.12.0 and Wayland 1.26.0
 
 The unmodified system Qt 6.12.0 with validation layers 1.4.363.1 reports

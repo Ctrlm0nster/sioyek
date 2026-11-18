@@ -407,3 +407,4 @@ tags
 
 # Maintained CMake modules (generated *.cmake files remain ignored)
 !/cmake/*.cmake
+textbook_of_engineering_matematics.pdf
