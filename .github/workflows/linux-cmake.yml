@@ -62,6 +62,10 @@ jobs:
           set -euo pipefail
           cmake -S . -B build/gpu -G Ninja -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_CXX_COMPILER="$CXX" -DSIOYEK_BUILD_GPU_TESTS=ON
           cmake --build build/gpu --parallel 2 --target sioyek_vulkan_test sioyek_qt_vulkan_lifecycle_test
+          # Qt 6.12.0's QRhi creates optimal-tiled images with PREINITIALIZED.
+          if [[ "$(pkg-config --modversion Qt6Core)" == 6.12.0 ]]; then
+            export VK_LAYER_MESSAGE_ID_FILTER=VUID-VkImageCreateInfo-initialLayout-12478
+          fi
           QT_FORCE_STDERR_LOGGING=1 QT_QPA_PLATFORM=xcb SIOYEK_VULKAN_VALIDATION=1 xvfb-run -a ctest --test-dir build/gpu -L gpu --verbose | tee build/arch/vulkan-rendering.log
           ! grep -Eq 'VUID-|Validation Error' build/arch/vulkan-rendering.log
       - name: Collect release candidates and evidence
@@ -100,4 +104,8 @@ jobs:
           cmake --build build/sanitize --parallel 2
           ctest --test-dir build/sanitize --output-on-failure
       - name: Test sanitized reader workers and cache invalidation
-        run: QT_FORCE_STDERR_LOGGING=1 xvfb-run -a python3 scripts/test-render-workers.py "$PWD/build/sanitize/sioyek" --platform xcb
+        run: |
+          # Keep Lavapipe mapped through LeakSanitizer's exit check. Unloading
+          # the ICD first loses its allocation roots and produces a leak report.
+          QT_FORCE_STDERR_LOGGING=1 xvfb-run -a env LD_PRELOAD=/usr/lib/libvulkan_lvp.so \
+            python3 scripts/test-render-workers.py "$PWD/build/sanitize/sioyek" --platform xcb

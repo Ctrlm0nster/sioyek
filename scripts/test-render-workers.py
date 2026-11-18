@@ -132,7 +132,11 @@ def main():
                             bench.command(instance, 'framebuffer_screenshot', str(image))
                             assert image.stat().st_size > 1000, 'No completed render'
                     bench.command(instance, 'close_window' if case == 'busy-close' else 'quit')
-                    assert process.wait(timeout=15) == 0, f'{case}: shutdown/sanitizer failure; inspect {work}'
+                    exit_code = process.wait(timeout=15)
+                    if exit_code != 0:
+                        raise RuntimeError(
+                            f'{case}: reader exited with status {exit_code}\n'
+                            + Path(log.name).read_text(errors='replace'))
                 finally:
                     if process.poll() is None:
                         process.terminate()

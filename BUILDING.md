@@ -444,9 +444,10 @@ LD_LIBRARY_PATH="$runtime/qt-build/lib:$runtime/wayland-build/src" \
 The same environment can prefix `scripts/dev-run.sh` or the temporary-profile
 `scripts/test-wayland.py` command. In this workspace, the tested dependency tree
 is `build/runtime-blockers`; set `runtime` to that path to reuse it.
-System-library runs still need distribution fixes; an ordinary Arch package
-does not silently bundle these local libraries. CI treats Vulkan validation
-errors as failures. Validation, leak detection and UBSan remain enabled.
+Arch packages use the system libraries. CI fails on Vulkan validation errors
+with a diagnostic-specific exception for the Qt 6.12.0 texture issue above.
+The sanitized Xvfb job keeps the Lavapipe ICD mapped through the exit check to
+preserve its allocation roots. Validation, leak detection and UBSan stay enabled.
 
 For the Python smoke tests, `SIOYEK_TEST_LIBRARY_PATH` sets the reader's library
 path without affecting tools such as `wtype`. This matters when testing
