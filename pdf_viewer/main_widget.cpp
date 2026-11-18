@@ -1974,7 +1974,13 @@ void MainWidget::invalidate_render() {
 }
 
 void MainWidget::invalidate_ui() {
-    is_render_invalidated = true;
+    is_ui_invalidated = true;
+    if (render_widget != nullptr) {
+        render_widget->update();
+    }
+    if (is_helper_visible() && helper_render_widget() != nullptr) {
+        helper_render_widget()->update();
+    }
 }
 
 void MainWidget::open_document(const PortalViewState& lvs) {
@@ -9766,7 +9772,19 @@ void MainWidget::framebuffer_screenshot(std::wstring file_path) {
 }
 
 bool MainWidget::is_render_ready(){
-    return  (!is_render_invalidated) && (!pdf_renderer->is_busy());
+    if (is_render_invalidated) {
+        validate_render();
+    }
+    if (is_render_invalidated) {
+        return false;
+    }
+    if (render_widget != nullptr && !render_widget->are_visible_pages_rendered()) {
+        return false;
+    }
+    if (is_helper_visible() && helper_render_widget() != nullptr && !helper_render_widget()->are_visible_pages_rendered()) {
+        return false;
+    }
+    return !pdf_renderer->is_busy();
 }
 
 bool MainWidget::is_index_ready(){

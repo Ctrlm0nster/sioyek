@@ -735,6 +735,29 @@ bool PdfRenderer::is_busy() {
     return !pending_render_requests.empty();
 }
 
+bool PdfRenderer::is_page_rendered(std::wstring path, int page, bool should_render_annotations, int index, int num_h_slices, int num_v_slices, float zoom_level, float display_scale) {
+    if (path.empty()) return true;
+
+    RenderRequest req;
+    req.path = path;
+    req.gamma = GAMMA;
+    req.page = page;
+    req.zoom_level = zoom_level;
+    req.slice_index = index;
+    req.num_h_slices = num_h_slices;
+    req.num_v_slices = num_v_slices;
+    req.display_scale = display_scale;
+    req.should_render_annotations = should_render_annotations;
+
+    std::lock_guard lock(cached_response_mutex);
+    for (const auto& cached_resp : cached_responses) {
+        if (!cached_resp.pending && !cached_resp.invalid && (cached_resp.request == req)) {
+            return true;
+        }
+    }
+    return false;
+}
+
 void PdfRenderer::free_all_resources_for_document(std::wstring doc_path) {
     searching_mutex.lock();
     for (int i = 0; i < num_threads; i++) {

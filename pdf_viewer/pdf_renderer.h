@@ -183,6 +183,7 @@ public:
 
     bool is_busy();
     bool is_search_busy();
+    bool is_page_rendered(std::wstring path, int page, bool should_render_annotations, int index, int num_h_slices, int num_v_slices, float zoom_level, float display_scale);
     // Wait until the worker releases this view's borrowed search state.
     void cancel_search(std::vector<SearchResult>* results);
     //should only be called from the main thread

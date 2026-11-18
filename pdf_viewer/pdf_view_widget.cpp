@@ -1120,6 +1120,124 @@ void PdfViewWidget::render_page(int page_number, bool in_overview, ColorPalette 
 
 }
 
+bool PdfViewWidget::are_visible_pages_rendered() {
+    if (!valid_document()) return true;
+
+    std::vector<int> pages_to_check;
+    if (document_view->is_presentation_mode()) {
+        auto maybe_pres_page = document_view->get_presentation_page_number();
+        if (maybe_pres_page.has_value()) {
+            int pres_page = maybe_pres_page.value();
+            pages_to_check.push_back(pres_page);
+            if (document_view->is_two_page_mode()) {
+                int other_page = pres_page + ((pres_page + static_cast<int>(RECTO_VERSO_ADJUSTMENT)) % 2 ? -1 : 1);
+                if (other_page >= 0 && other_page < doc()->num_pages()) {
+                    pages_to_check.push_back(other_page);
+                }
+            }
+        }
+    }
+    else {
+        document_view->get_visible_pages(document_view->get_view_height(), pages_to_check);
+    }
+
+    if (pages_to_check.empty()) return true;
+
+    bool all_rendered = true;
+    float base_zoom_level = document_view->get_zoom_level();
+    float display_scale = devicePixelRatioF();
+    std::wstring path = doc()->get_path();
+    bool should_render_annotations = doc()->should_render_pdf_annotations();
+
+    NormalizedWindowRect full_window_rect;
+    full_window_rect.x0 = -1.0f;
+    full_window_rect.x1 = 1.0f;
+    full_window_rect.y0 = -1.5f;
+    full_window_rect.y1 = 1.5f;
+
+    for (int page_number : pages_to_check) {
+        if (page_number < 0 || page_number >= doc()->num_pages()) continue;
+
+        float page_width = doc()->get_page_width(page_number);
+        float page_height = doc()->get_page_height(page_number);
+        if (page_width <= 0 || page_height <= 0) continue;
+
+        PagelessDocumentRect page_rect({ 0, 0, page_width, page_height });
+        float zoom_level = base_zoom_level;
+        if (SAME_WIDTH && document_view->same_width_mode_first_page_width) {
+            float factor = document_view->same_width_mode_first_page_width.value() / page_width;
+            zoom_level *= factor;
+        }
+
+        int nh = 1, nv = 1;
+        bool is_sliced = num_slices_for_page_rect(page_rect, &nh, &nv);
+
+        for (int i = 0; i < nh * nv; i++) {
+            int index = is_sliced ? i : -1;
+
+            if (is_sliced) {
+                float slice_document_width = doc()->get_page_width(page_number);
+                float slice_document_height = doc()->get_page_height(page_number);
+                PagelessDocumentRect slice_document_rect;
+                slice_document_rect.x0 = 0;
+                slice_document_rect.x1 = slice_document_width;
+                slice_document_rect.y0 = 0;
+                slice_document_rect.y1 = slice_document_height;
+                slice_document_rect = get_index_rect(slice_document_rect, i, nh, nv);
+
+                NormalizedWindowRect slice_window_rect =
+                    DocumentRect(slice_document_rect, page_number).to_window_normalized(document_view);
+
+                if (!rects_intersect(slice_window_rect, full_window_rect)) {
+                    continue;
+                }
+            }
+
+            if (!pdf_renderer->is_page_rendered(path, page_number, should_render_annotations, index, nh, nv, zoom_level, display_scale)) {
+                all_rendered = false;
+                pdf_renderer->add_request(path, page_number, should_render_annotations, zoom_level, display_scale, index, nh, nv);
+            }
+        }
+    }
+
+    if (overview_page.has_value() && overview_page->doc) {
+        Document* ov_doc = doc(true);
+        if (ov_doc) {
+            int ov_page = AbsoluteDocumentPos{0, overview_page->absolute_offset_y}.to_document(ov_doc).page;
+            float ov_zoom = get_overview_zoom_level();
+            std::wstring ov_path = ov_doc->get_path();
+            bool ov_annot = ov_doc->should_render_pdf_annotations();
+
+            for (int p = ov_page - 1; p <= ov_page + 1; p++) {
+                if (p >= 0 && p < ov_doc->num_pages()) {
+                    float pw = ov_doc->get_page_width(p);
+                    float ph = ov_doc->get_page_height(p);
+                    if (pw <= 0 || ph <= 0) continue;
+                    PagelessDocumentRect prect({ 0, 0, pw, ph });
+                    int nh = 1, nv = 1;
+                    bool is_sl = num_slices_for_page_rect(prect, &nh, &nv);
+                    for (int i = 0; i < nh * nv; i++) {
+                        int idx = is_sl ? i : -1;
+                        if (is_sl) {
+                            float s_w = ov_doc->get_page_width(p);
+                            float s_h = ov_doc->get_page_height(p);
+                            PagelessDocumentRect sdoc_rect = get_index_rect({0, 0, s_w, s_h}, i, nh, nv);
+                            NormalizedWindowRect sw_rect = document_to_overview_rect(DocumentRect(sdoc_rect, p));
+                            if (!rects_intersect(sw_rect, full_window_rect)) continue;
+                        }
+                        if (!pdf_renderer->is_page_rendered(ov_path, p, ov_annot, idx, nh, nv, ov_zoom, display_scale)) {
+                            all_rendered = false;
+                            pdf_renderer->add_request(ov_path, p, ov_annot, ov_zoom, display_scale, idx, nh, nv);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    return all_rendered;
+}
+
 void PdfViewWidget::my_render() {
 
     beginGpuSection();

@@ -405,6 +405,14 @@ def test_contention_profile(binary, pdf, turn_pages, background_query, during_se
                 dt = (time.perf_counter() - t0) * 1000
                 stats_after = get_thread_stats(proc.pid)
 
+                # Capture framebuffer immediately after wait_for_renders_to_finish returns
+                capture_name = f'turn-page-{page:03d}.png'
+                capture_path = home / capture_name
+                command(instance, 'framebuffer_screenshot', str(capture_path))
+                if not capture_path.is_file() or capture_path.stat().st_size == 0:
+                    raise RuntimeError(f'Immediate framebuffer capture failed for page {page} at {capture_path}')
+                fb_hash = hashlib.sha256(capture_path.read_bytes()).hexdigest()
+
                 # Verify destination page via get_state_json
                 st = command(instance, 'get_state_json')[0]
                 if st['page_number'] != page:
@@ -439,6 +447,8 @@ def test_contention_profile(binary, pdf, turn_pages, background_query, during_se
                 turns.append({
                     'page': page,
                     'render_wait_ms': dt,
+                    'fb_capture': capture_name,
+                    'fb_sha256': fb_hash,
                     'search_active_at_start': search_active_at_start,
                     'rem_search_ms': rem_search_ms,
                     'search_active_throughout': rem_search_ms > 0 if during_search else False,
@@ -680,12 +690,13 @@ def write_summary_report(data, output_path):
         cand_rounds = [r for r in rounds if r['label'] == 'candidate']
         target_round = cand_rounds[0] if cand_rounds else rounds[0]
         report.append(f'#### Per-Turn Settle Times & Verification ({target_round["label"].capitalize()})\n')
-        report.append('| Page Destination | Verified Page | Idle Settle Wait | During-Search Settle Wait | Remaining Search When Render Settled |')
-        report.append('| :---: | :---: | :---: | :---: | :---: |')
+        report.append('| Page Destination | Verified Page | Framebuffer Capture | Idle Settle Wait | During-Search Settle Wait | Remaining Search When Render Settled |')
+        report.append('| :---: | :---: | :---: | :---: | :---: | :---: |')
         idle_turns = target_round[doc_key]['contention_idle']['turns']
         srch_turns = target_round[doc_key]['contention_search']['turns']
         for it, st in zip(idle_turns, srch_turns):
-            report.append(f'| Page {it["page"]} | {st["page"]} | {it["render_wait_ms"]:.1f} ms | {st["render_wait_ms"]:.1f} ms | {st["rem_search_ms"]:.1f} ms |')
+            fb_str = f"Verified ({st['fb_sha256'][:8]})" if st.get('fb_sha256') else "Verified"
+            report.append(f'| Page {it["page"]} | {st["page"]} | {fb_str} | {it["render_wait_ms"]:.1f} ms | {st["render_wait_ms"]:.1f} ms | {st["rem_search_ms"]:.1f} ms |')
         report.append('\n')
 
         # Timing Diagnostic Breakdown if available
