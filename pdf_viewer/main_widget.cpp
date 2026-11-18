@@ -1666,6 +1666,10 @@ void MainWidget::keyReleaseEvent(QKeyEvent* kevent) {
 }
 
 void MainWidget::validate_render() {
+    static bool is_validating_render = false;
+    if (is_validating_render) return;
+    is_validating_render = true;
+    is_render_invalidated = false;
 
     if (smooth_scroll_mode) {
         if (main_document_view_has_document()) {
@@ -1817,6 +1821,7 @@ void MainWidget::validate_render() {
             set_fixed_velocity(0, 0);
         }
     }
+    is_validating_render = false;
 }
 
 void MainWidget::validate_ui() {
@@ -9800,12 +9805,15 @@ bool MainWidget::is_search_ready() {
 }
 
 void MainWidget::advance_waiting_command(std::string waiting_command_name) {
-    //if ()
-    if (pending_command_instance && (pending_command_instance->get_name().find(waiting_command_name) != -1)) {
-        pending_command_instance->set_generic_requirement("");
-        advance_command(std::move(pending_command_instance));
+    static bool is_advancing = false;
+    if (is_advancing) return;
+    if (pending_command_instance && (waiting_command_name.empty() || pending_command_instance->get_name().find(waiting_command_name) != -1 || pending_command_instance->is_ready())) {
+        is_advancing = true;
+        auto cmd = std::move(pending_command_instance);
+        cmd->set_generic_requirement("");
+        advance_command(std::move(cmd));
+        is_advancing = false;
     }
-
 }
 
 std::string MainWidget::get_user_agent_string() {

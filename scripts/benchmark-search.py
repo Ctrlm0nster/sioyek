@@ -41,25 +41,33 @@ def command(instance, name, data=None, timeout=45):
               '--execute-command', name, '--wait-for-response']
     if data is not None:
         values += ['--execute-command-data', str(data)]
-    with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as channel:
-        channel.settimeout(timeout)
-        channel.connect(str(Path(tempfile.gettempdir()) / instance))
-        channel.sendall(wire_arguments(values))
-        response = b''
-        while len(response) < 1024 * 1024:
-            part = channel.recv(65536)
-            if not part:
-                if name in ('quit', 'close_window'):
-                    return None
-                raise RuntimeError(f'{name}: reader disconnected without a response')
-            response += part
-            if response == b'<NULL>':
-                return None
-            try:
-                return json.loads(response)
-            except (ValueError, UnicodeError):
-                pass
-        raise RuntimeError(f'{name}: response exceeds benchmark limit')
+    wire = wire_arguments(values)
+    sock_path = str(Path(tempfile.gettempdir()) / instance)
+    for attempt in range(3):
+        try:
+            with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as channel:
+                channel.settimeout(timeout)
+                channel.connect(sock_path)
+                channel.sendall(wire)
+                response = b''
+                while len(response) < 1024 * 1024:
+                    part = channel.recv(65536)
+                    if not part:
+                        if name in ('quit', 'close_window'):
+                            return None
+                        raise RuntimeError(f'{name}: reader disconnected without a response')
+                    response += part
+                    if response == b'<NULL>':
+                        return None
+                    try:
+                        return json.loads(response)
+                    except (ValueError, UnicodeError):
+                        pass
+                raise RuntimeError(f'{name}: response exceeds benchmark limit')
+        except (ConnectionResetError, ConnectionRefusedError, FileNotFoundError):
+            if attempt == 2:
+                raise
+            time.sleep(0.05)
 
 
 def usage(pid):
@@ -325,6 +333,8 @@ def test_unindexed_search(binary, pdf, queries, args, work, label, trial_idx):
                     cnt = st.get('num_search_results', 0)
                     if cnt > 0 and first_match_ms is None:
                         first_match_ms = (time.perf_counter() - t_q0) * 1000
+                        break
+                    if not st.get('searching', True):
                         break
                     time.sleep(0.015)
 

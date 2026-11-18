@@ -355,6 +355,14 @@ public:
         }
     }
 
+    bool is_ready() override {
+        auto com = get_command();
+        if (com) {
+            return com->is_ready();
+        }
+        return false;
+    }
+
 
 };
 
@@ -2985,6 +2993,7 @@ class WaitForRendersToFinishCommand : public GenericWaitCommand {
     int64_t start_ns = 0;
     int64_t start_us = 0;
     int poll_ticks = 0;
+    bool initial_check_done = false;
     bool ready_reported = false;
 public:
     static inline const std::string cname = "wait_for_renders_to_finish";
@@ -3001,11 +3010,13 @@ public:
     };
 
     std::optional<Requirement> next_requirement(MainWidget* widget) override {
-        if (finished) {
-            return {};
+        if (!initial_check_done) {
+            initial_check_done = true;
+            if (is_ready()) {
+                finished = true;
+            }
         }
-        if (is_ready()) {
-            finished = true;
+        if (finished) {
             return {};
         }
         return Requirement{ RequirementType::Generic, "dummy" };

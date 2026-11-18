@@ -261,7 +261,7 @@ def trial(args, backend, binary, trial_index, work):
                 if args.platform == 'wayland' and client['xwayland']:
                     raise RuntimeError('Benchmark reader is not native Wayland')
             command(instance, 'toggle_fullscreen')
-            time.sleep(.25)
+            time.sleep(.6)
             command(instance, 'set_view_state', '0 500 1.5 0')
             command(instance, 'wait_for_renders_to_finish')
             screenshot = home / 'first-frame.png'

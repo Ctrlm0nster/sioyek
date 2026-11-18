@@ -145,7 +145,8 @@ def run_benchmark(binary_path, label):
     print(f'Running Benchmark on [{label}]: {binary_path}', flush=True)
     print(f'========================================', flush=True)
 
-    work = Path(tempfile.mkdtemp(prefix=f'sioyek-bench-{label}-'))
+    safe_label = re.sub(r'[^a-zA-Z0-9_-]', '_', label)
+    work = Path(tempfile.mkdtemp(prefix=f'sioyek-bench-{safe_label}-'))
     pdf_path = work / 'test_document.pdf'
 
     # Build a 30-page mixed PDF:
@@ -187,7 +188,8 @@ def run_benchmark(binary_path, label):
     if 'WAYLAND_DISPLAY' not in env:
         env['WAYLAND_DISPLAY'] = 'wayland-1'
 
-    instance = f'bench-{label}-{os.getpid()}'
+    safe_label = re.sub(r'[^a-zA-Z0-9_-]', '_', label)
+    instance = f'bench-{safe_label}-{os.getpid()}'
     log_path = work / 'reader.log'
 
     results = {}
@@ -333,23 +335,31 @@ def analyze_log(log_text, label):
         prec_starts = [s for s in wait_starts if s['t_ns'] <= rep_ns]
         start_ns = prec_starts[-1]['t_ns'] if prec_starts else rep_ns
 
-        # Find all preceding raster_dones
-        prec_rasters = [r for r in rasters if r['t_ns'] <= rep_ns]
-        last_raster = prec_rasters[-1] if prec_rasters else None
-        last_raster_ns = last_raster['t_ns'] if last_raster else start_ns
+        # Find raster_dones during this wait period
+        concurrent_rasters = [r for r in rasters if start_ns <= r['t_ns'] <= rep_ns]
+        if concurrent_rasters:
+            last_raster = concurrent_rasters[-1]
+            raster_to_reply_ms = (rep_ns - last_raster['t_ns']) / 1000000.0
+            last_raster_page = last_raster['kv'].get('page')
+            last_raster_ms = float(last_raster['kv'].get('raster_ms', 0.0))
+            raster_desc = f"last_raster_done->reply={raster_to_reply_ms:.3f} ms (page={last_raster_page}, raster_ms={last_raster_ms:.2f})"
+        else:
+            # View was already rendered/cached before wait_for_renders arrived
+            last_raster = None
+            raster_to_reply_ms = 0.0
+            last_raster_page = None
+            last_raster_ms = 0.0
+            raster_desc = "view already ready on arrival (0.000 ms raster wait)"
 
-        raster_to_reply_ms = (rep_ns - last_raster_ns) / 1000000.0 if last_raster else 0.0
         records.append({
             'reply_ns': rep_ns,
             'poll_ticks': poll_ticks,
             'wait_ms': wait_ms,
             'raster_to_reply_ms': raster_to_reply_ms,
-            'last_raster_page': last_raster['kv'].get('page') if last_raster else None,
-            'last_raster_ms': float(last_raster['kv'].get('raster_ms', 0.0)) if last_raster else 0.0
+            'last_raster_page': last_raster_page,
+            'last_raster_ms': last_raster_ms
         })
-        print(f"  Event: poll_ticks={poll_ticks}, wait_ms={wait_ms:.3f} ms, "
-              f"last_raster_done->reply={raster_to_reply_ms:.3f} ms "
-              f"(last raster page={records[-1]['last_raster_page']} took {records[-1]['last_raster_ms']:.2f} ms)")
+        print(f"  Event: poll_ticks={poll_ticks}, wait_ms={wait_ms:.3f} ms, {raster_desc}")
     return records
 
 
