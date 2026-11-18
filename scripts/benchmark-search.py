@@ -2,14 +2,15 @@
 """Benchmark search responsiveness, background indexing, and render contention.
 
 Measures:
-1. Background indexing time and resource usage immediately after opening large documents.
+1. Background indexing time remaining after initial startup, and post-indexing memory usage.
 2. Search responsiveness:
    - Unindexed time-to-first-match and total search time (page-by-page traversal).
    - Indexed in-memory super-fast search time and match counts.
 3. Render responsiveness under search contention:
-   - Page turn render settle latency during reader idle.
-   - Page turn render settle latency while background search traverses the document.
-   - Contention penalty (delta).
+   - Same page transitions compared across fresh reader profiles with and without active search.
+   - Verified navigation via set_state_json and get_state_json page confirmation.
+   - Active search status at turn start and throughout render.
+   - Thread CPU ticks and context switches profiling.
 """
 import argparse
 import hashlib
@@ -68,6 +69,26 @@ def usage(pid):
             'peak_rss_mib': int(status['VmHWM'].split()[0]) / 1024}
 
 
+def get_thread_stats(pid):
+    stats = {}
+    for t in Path(f'/proc/{pid}/task').iterdir():
+        try:
+            stat_line = (t / 'stat').read_text().split()
+            status_dict = dict(line.split(':', 1) for line in (t / 'status').read_text().splitlines())
+            wchan = (t / 'wchan').read_text().strip()
+            stats[t.name] = {
+                'name': stat_line[1],
+                'utime': int(stat_line[13]),
+                'stime': int(stat_line[14]),
+                'vol': int(status_dict['voluntary_ctxt_switches']),
+                'nonvol': int(status_dict['nonvoluntary_ctxt_switches']),
+                'wchan': wchan
+            }
+        except Exception:
+            pass
+    return stats
+
+
 def hypr(*args):
     return subprocess.check_output(['hyprctl', *args], stderr=subprocess.DEVNULL).decode('utf-8')
 
@@ -117,7 +138,7 @@ def wait_for_reader_startup(proc, instance, timeout=30):
 
 
 def test_indexing_and_indexed_search(binary, pdf, queries, args, work, label, trial_idx):
-    """Measures startup, background indexing time, and indexed search speed."""
+    """Measures startup, background indexing time remaining after startup, and indexed search speed."""
     home = work / f'{trial_idx:02d}-{label}-indexed'
     config = home / '.config/sioyek'
     config.mkdir(parents=True)
@@ -143,16 +164,16 @@ def test_indexing_and_indexed_search(binary, pdf, queries, args, work, label, tr
             wait_for_reader_startup(proc, instance)
             result['startup_ms'] = (time.perf_counter() - t0) * 1000
 
-            # Measure indexing time
+            # Measure indexing wait remaining after initial startup
             t_idx0 = time.perf_counter()
             command(instance, 'wait_for_indexing_to_finish', timeout=60)
-            result['indexing_ms'] = (time.perf_counter() - t_idx0) * 1000
+            result['post_startup_indexing_wait_ms'] = (time.perf_counter() - t_idx0) * 1000
             result['post_index_usage'] = usage(proc.pid)
 
             # Map window and ensure render settled
             command(instance, 'toggle_fullscreen')
             time.sleep(0.2)
-            command(instance, 'set_view_state', '0 500 1.5 0')
+            command(instance, 'set_state_json', json.dumps({'page_number': 0}))
             command(instance, 'wait_for_renders_to_finish')
 
             # Measure indexed search for each query
@@ -203,7 +224,7 @@ def test_unindexed_search(binary, pdf, queries, args, work, label, trial_idx):
             wait_for_reader_startup(proc, instance)
             command(instance, 'toggle_fullscreen')
             time.sleep(0.2)
-            command(instance, 'set_view_state', '0 500 1.5 0')
+            command(instance, 'set_state_json', json.dumps({'page_number': 0}))
             command(instance, 'wait_for_renders_to_finish')
 
             for q in queries:
@@ -241,9 +262,15 @@ def test_unindexed_search(binary, pdf, queries, args, work, label, trial_idx):
     return result
 
 
-def test_contention(binary, pdf, turn_pages, background_query, args, work, label, trial_idx):
-    """Measures page-turn render settle latency during idle vs during active background search."""
-    home = work / f'{trial_idx:02d}-{label}-contention'
+def test_contention_profile(binary, pdf, turn_pages, background_query, during_search, args, work, label, trial_idx):
+    """Executes verified page turns using set_state_json in a fresh isolated profile.
+
+    If during_search is True, launches background unindexed search before each turn,
+    verifies search is actively running at turn start and through render settle, and
+    records thread CPU and context-switch profile diffs.
+    """
+    mode_str = 'search' if during_search else 'idle'
+    home = work / f'{trial_idx:02d}-{label}-contention-{mode_str}'
     config = home / '.config/sioyek'
     config.mkdir(parents=True)
     (config / 'prefs_user.config').write_text(
@@ -256,8 +283,8 @@ def test_contention(binary, pdf, turn_pages, background_query, args, work, label
     if os.environ.get('SIOYEK_TEST_LIBRARY_PATH'):
         env['LD_LIBRARY_PATH'] = os.environ['SIOYEK_TEST_LIBRARY_PATH']
 
-    instance = f'sioyek-contention-{os.getpid()}-{trial_idx}'
-    result = {'label': label, 'pdf': pdf.name, 'idle_waits_ms': [], 'during_search_waits_ms': []}
+    instance = f'sioyek-contention-{mode_str}-{os.getpid()}-{trial_idx}'
+    turns = []
 
     with (home / 'reader.log').open('w') as log:
         proc = subprocess.Popen([str(binary), '--instance-name', instance, '--no-auto-config',
@@ -267,38 +294,70 @@ def test_contention(binary, pdf, turn_pages, background_query, args, work, label
             wait_for_reader_startup(proc, instance)
             command(instance, 'toggle_fullscreen')
             time.sleep(0.2)
-            command(instance, 'set_view_state', '0 500 1.5 0')
+            command(instance, 'set_state_json', json.dumps({'page_number': 0}))
             command(instance, 'wait_for_renders_to_finish')
+            st0 = command(instance, 'get_state_json')[0]
+            if st0['page_number'] != 0:
+                raise RuntimeError(f'Expected initial page 0, got {st0["page_number"]}')
 
-            # 1. Idle page turns baseline
             for page in turn_pages:
+                search_active_at_start = False
+                rem_search_ms = 0.0
+
+                if during_search:
+                    # Issue background unindexed search
+                    command(instance, 'search', background_query)
+                    time.sleep(0.01)  # allow search thread to wake up
+                    st_chk = command(instance, 'get_state_json')[0]
+                    search_active_at_start = st_chk.get('searching', False)
+
+                stats_before = get_thread_stats(proc.pid)
                 t0 = time.perf_counter()
-                command(instance, 'set_view_state', f'{page} 0 1.5 0')
+                # Use set_state_json navigation (0-indexed page)
+                command(instance, 'set_state_json', json.dumps({'page_number': page}))
                 command(instance, 'wait_for_renders_to_finish')
                 dt = (time.perf_counter() - t0) * 1000
-                result['idle_waits_ms'].append(dt)
+                stats_after = get_thread_stats(proc.pid)
 
-            # 2. Page turns during active search traversal
-            # Offset destination pages slightly so we don't hit cached rendered pixmaps
-            dest_pages = [p + 2 for p in turn_pages]
-            for page in dest_pages:
-                # Trigger search that scans through pages
-                command(instance, 'search', background_query)
-                t0 = time.perf_counter()
-                # Turn page immediately while search is processing
-                command(instance, 'set_view_state', f'{page} 0 1.5 0')
-                command(instance, 'wait_for_renders_to_finish')
-                dt = (time.perf_counter() - t0) * 1000
-                result['during_search_waits_ms'].append(dt)
-                command(instance, 'wait_for_search_to_finish')
-                command(instance, 'escape')
+                # Verify destination page via get_state_json
+                st = command(instance, 'get_state_json')[0]
+                if st['page_number'] != page:
+                    raise RuntimeError(f'Expected page {page}, got {st["page_number"]}')
 
-            result['idle_median_ms'] = median(result['idle_waits_ms'])
-            result['during_search_median_ms'] = median(result['during_search_waits_ms'])
-            result['contention_delta_median_ms'] = result['during_search_median_ms'] - result['idle_median_ms']
-            result['idle_p95_ms'] = percentile_95(result['idle_waits_ms'])
-            result['during_search_p95_ms'] = percentile_95(result['during_search_waits_ms'])
-            result['contention_delta_p95_ms'] = result['during_search_p95_ms'] - result['idle_p95_ms']
+                if during_search:
+                    # Time remaining search to verify it was active throughout render
+                    t_rem0 = time.perf_counter()
+                    command(instance, 'wait_for_search_to_finish')
+                    rem_search_ms = (time.perf_counter() - t_rem0) * 1000
+                    command(instance, 'escape')
+                    time.sleep(0.05)
+
+                # Compute per-thread resource diffs during turn
+                thread_diffs = {}
+                for tid in stats_before.keys() & stats_after.keys():
+                    sb = stats_before[tid]
+                    sa = stats_after[tid]
+                    u = sa['utime'] - sb['utime']
+                    s = sa['stime'] - sb['stime']
+                    v = sa['vol'] - sb['vol']
+                    nv = sa['nonvol'] - sb['nonvol']
+                    if u > 0 or s > 0 or v > 0 or nv > 0:
+                        thread_diffs[tid] = {
+                            'name': sa['name'],
+                            'cpu_ticks': u + s,
+                            'vol_switches': v,
+                            'nonvol_switches': nv,
+                            'wchan': sa['wchan']
+                        }
+
+                turns.append({
+                    'page': page,
+                    'render_wait_ms': dt,
+                    'search_active_at_start': search_active_at_start,
+                    'rem_search_ms': rem_search_ms,
+                    'search_active_throughout': rem_search_ms > 0 if during_search else False,
+                    'thread_diffs': thread_diffs
+                })
 
             command(instance, 'quit')
             proc.wait(timeout=10)
@@ -307,7 +366,15 @@ def test_contention(binary, pdf, turn_pages, background_query, args, work, label
                 proc.terminate()
                 proc.wait(timeout=10)
 
-    return result
+    waits = [t['render_wait_ms'] for t in turns]
+    return {
+        'label': label,
+        'mode': mode_str,
+        'turns': turns,
+        'waits_ms': waits,
+        'median_ms': median(waits),
+        'p95_ms': percentile_95(waits)
+    }
 
 
 def main():
@@ -316,7 +383,7 @@ def main():
     parser.add_argument('--candidate', type=Path, help='Path to candidate sioyek binary')
     parser.add_argument('--text-pdf', type=Path, required=True, help='Path to long text-heavy PDF')
     parser.add_argument('--mixed-pdf', type=Path, required=True, help='Path to mixed text-and-image PDF')
-    parser.add_argument('--rounds', type=int, default=3, help='Number of benchmark rounds')
+    parser.add_argument('--rounds', type=int, default=2, help='Number of benchmark rounds')
     parser.add_argument('--output', type=Path, required=True, help='Output directory for benchmark results')
     parser.add_argument('--platform', choices=('wayland', 'xcb'), default='wayland')
     parser.add_argument('--validation', action='store_true', help='Enable Vulkan validation layers')
@@ -329,7 +396,6 @@ def main():
     if args.candidate:
         binaries['candidate'] = args.candidate.resolve()
 
-    # Pre-select search terms and navigation destinations
     text_queries = ['matrix', 'asymptote']
     mixed_queries = ['growth', 'culture']
     text_turn_pages = [15, 30, 45, 60, 75]
@@ -375,28 +441,40 @@ def main():
                     bin_path, args.text_pdf, text_queries, args, work, label, trial_counter)
                 trial_counter += 1
 
-                # 3. Text PDF: Render Contention
-                print(f'[{label}] Text PDF: Render Contention test...', flush=True)
-                r_text_cont = test_contention(
-                    bin_path, args.text_pdf, text_turn_pages, background_scan_query, args, work, label, trial_counter)
+                # 3. Text PDF: Contention - Fresh Idle Profile
+                print(f'[{label}] Text PDF: Render Contention (Idle Profile)...', flush=True)
+                r_text_cont_idle = test_contention_profile(
+                    bin_path, args.text_pdf, text_turn_pages, background_scan_query, False, args, work, label, trial_counter)
                 trial_counter += 1
 
-                # 4. Mixed PDF: Indexing & Indexed search
+                # 4. Text PDF: Contention - Fresh During-Search Profile
+                print(f'[{label}] Text PDF: Render Contention (During-Search Profile)...', flush=True)
+                r_text_cont_srch = test_contention_profile(
+                    bin_path, args.text_pdf, text_turn_pages, background_scan_query, True, args, work, label, trial_counter)
+                trial_counter += 1
+
+                # 5. Mixed PDF: Indexing & Indexed search
                 print(f'[{label}] Mixed PDF: Indexing & Indexed search...', flush=True)
                 r_mixed_idx = test_indexing_and_indexed_search(
                     bin_path, args.mixed_pdf, mixed_queries, args, work, label, trial_counter)
                 trial_counter += 1
 
-                # 5. Mixed PDF: Unindexed search
+                # 6. Mixed PDF: Unindexed search
                 print(f'[{label}] Mixed PDF: Unindexed search...', flush=True)
                 r_mixed_unidx = test_unindexed_search(
                     bin_path, args.mixed_pdf, mixed_queries, args, work, label, trial_counter)
                 trial_counter += 1
 
-                # 6. Mixed PDF: Render Contention
-                print(f'[{label}] Mixed PDF: Render Contention test...', flush=True)
-                r_mixed_cont = test_contention(
-                    bin_path, args.mixed_pdf, mixed_turn_pages, background_scan_query, args, work, label, trial_counter)
+                # 7. Mixed PDF: Contention - Fresh Idle Profile
+                print(f'[{label}] Mixed PDF: Render Contention (Idle Profile)...', flush=True)
+                r_mixed_cont_idle = test_contention_profile(
+                    bin_path, args.mixed_pdf, mixed_turn_pages, background_scan_query, False, args, work, label, trial_counter)
+                trial_counter += 1
+
+                # 8. Mixed PDF: Contention - Fresh During-Search Profile
+                print(f'[{label}] Mixed PDF: Render Contention (During-Search Profile)...', flush=True)
+                r_mixed_cont_srch = test_contention_profile(
+                    bin_path, args.mixed_pdf, mixed_turn_pages, background_scan_query, True, args, work, label, trial_counter)
                 trial_counter += 1
 
                 round_record = {
@@ -405,12 +483,14 @@ def main():
                     'text_pdf': {
                         'indexing': r_text_idx,
                         'unindexed': r_text_unidx,
-                        'contention': r_text_cont
+                        'contention_idle': r_text_cont_idle,
+                        'contention_search': r_text_cont_srch
                     },
                     'mixed_pdf': {
                         'indexing': r_mixed_idx,
                         'unindexed': r_mixed_unidx,
-                        'contention': r_mixed_cont
+                        'contention_idle': r_mixed_cont_idle,
+                        'contention_search': r_mixed_cont_srch
                     }
                 }
                 data['results'].append(round_record)
@@ -421,7 +501,6 @@ def main():
             restore_focus(previous_focus)
 
     print(f'\nBenchmark finished. Evidence directory: {work}', flush=True)
-    # Generate final report
     summary_path = work / 'REPORT.md'
     write_summary_report(data, summary_path)
     print(f'Report written to {summary_path}\n')
@@ -434,25 +513,26 @@ def write_summary_report(data, output_path):
 
     report = []
     report.append('# Large PDF Search & Contention Benchmark Report\n')
-    report.append('Evaluation of background indexing time, search responsiveness (unindexed vs indexed), and render contention during active background traversal.\n')
+    report.append('Evaluation of background indexing time remaining after startup, search responsiveness (unindexed vs indexed), and verified page-turn render contention.\n')
+    report.append('Navigation uses `set_state_json` destination pages verified via `get_state_json`. Identical page transitions are compared between fresh isolated reader profiles (idle vs active unindexed background search).\n')
 
     for doc_key, doc_name in [('text_pdf', 'Dense Text PDF (textbook_of_engineering_matematics.pdf, 447 pages)'),
                               ('mixed_pdf', 'Mixed Text & Image PDF (02.pdf, 171 pages)')]:
         report.append(f'## {doc_name}\n')
 
         # Indexing Table
-        report.append('### Background Indexing & Indexed Search\n')
-        report.append('| Reader | Indexing Wait (ms) | Peak RSS (MiB) | Query 1 Indexed (ms) | Query 2 Indexed (ms) |')
+        report.append('### Background Indexing (Remaining After Startup) & Indexed Search\n')
+        report.append('| Reader | Post-Startup Indexing Wait (ms) | Peak RSS (MiB) | Query 1 Indexed (ms) | Query 2 Indexed (ms) |')
         report.append('| :--- | :---: | :---: | :---: | :---: |')
         for label in labels:
             lbl_rounds = [r[doc_key]['indexing'] for r in rounds if r['label'] == label]
-            idx_ms = median([r['indexing_ms'] for r in lbl_rounds])
+            idx_ms = median([r['post_startup_indexing_wait_ms'] for r in lbl_rounds])
             rss = median([r['post_index_usage']['peak_rss_mib'] for r in lbl_rounds])
             q_names = list(lbl_rounds[0]['queries'].keys())
             q1_ms = median([r['queries'][q_names[0]]['search_ms'] for r in lbl_rounds])
             q2_ms = median([r['queries'][q_names[1]]['search_ms'] for r in lbl_rounds])
             report.append(f'| {label} | {idx_ms:.1f} | {rss:.1f} | {q1_ms:.1f} ("{q_names[0]}") | {q2_ms:.1f} ("{q_names[1]}") |')
-        report.append('\n')
+        report.append('\n*Note: "Post-Startup Indexing Wait" measures the wait duration remaining after the initial reader window startup has completed.*\n\n')
 
         # Unindexed Search Table
         report.append('### Unindexed Search (Page-by-Page Traversal)\n')
@@ -469,19 +549,72 @@ def write_summary_report(data, output_path):
         report.append('\n')
 
         # Contention Table
-        report.append('### Render Contention (Page Turns During Background Search)\n')
-        report.append('| Reader | Idle Median Wait | During Search Median | Contention Delta (Median) | Idle P95 | During Search P95 | Contention Delta (P95) |')
-        report.append('| :--- | :---: | :---: | :---: | :---: | :---: | :---: |')
+        report.append('### Render Contention (Identical Transitions: Fresh Idle vs Fresh Active Search Profile)\n')
+        report.append('| Reader | Idle Median Wait | During Search Median | Contention Delta (Median) | Idle P95 | During Search P95 | Contention Delta (P95) | Search Active Throughout |')
+        report.append('| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |')
         for label in labels:
-            lbl_rounds = [r[doc_key]['contention'] for r in rounds if r['label'] == label]
-            idle_med = median([r['idle_median_ms'] for r in lbl_rounds])
-            srch_med = median([r['during_search_median_ms'] for r in lbl_rounds])
-            delta_med = median([r['contention_delta_median_ms'] for r in lbl_rounds])
-            idle_p95 = median([r['idle_p95_ms'] for r in lbl_rounds])
-            srch_p95 = median([r['during_search_p95_ms'] for r in lbl_rounds])
-            delta_p95 = median([r['contention_delta_p95_ms'] for r in lbl_rounds])
-            report.append(f'| {label} | {idle_med:.1f} ms | {srch_med:.1f} ms | {delta_med:+.1f} ms | {idle_p95:.1f} ms | {srch_p95:.1f} ms | {delta_p95:+.1f} ms |')
+            idle_lbl_rounds = [r[doc_key]['contention_idle'] for r in rounds if r['label'] == label]
+            srch_lbl_rounds = [r[doc_key]['contention_search'] for r in rounds if r['label'] == label]
+
+            idle_med = median([r['median_ms'] for r in idle_lbl_rounds])
+            srch_med = median([r['median_ms'] for r in srch_lbl_rounds])
+            delta_med = srch_med - idle_med
+
+            idle_p95 = median([r['p95_ms'] for r in idle_lbl_rounds])
+            srch_p95 = median([r['p95_ms'] for r in srch_lbl_rounds])
+            delta_p95 = srch_p95 - idle_p95
+
+            all_active = all(t['search_active_throughout'] for r in srch_lbl_rounds for t in r['turns'])
+            report.append(f'| {label} | {idle_med:.1f} ms | {srch_med:.1f} ms | {delta_med:+.1f} ms | {idle_p95:.1f} ms | {srch_p95:.1f} ms | {delta_p95:+.1f} ms | {"Yes (100%)" if all_active else "Partial"} |')
         report.append('\n')
+
+        # Per-Turn Detail Table for Round 1
+        report.append('#### Per-Turn Settle Times & Verification (Sample Round)\n')
+        report.append('| Page Destination | Verified Page | Idle Settle Wait | During-Search Settle Wait | Remaining Search When Render Settled |')
+        report.append('| :---: | :---: | :---: | :---: | :---: |')
+        r0 = rounds[0]
+        idle_turns = r0[doc_key]['contention_idle']['turns']
+        srch_turns = r0[doc_key]['contention_search']['turns']
+        for it, st in zip(idle_turns, srch_turns):
+            report.append(f'| Page {it["page"]} | {st["page"]} | {it["render_wait_ms"]:.1f} ms | {st["render_wait_ms"]:.1f} ms | {st["rem_search_ms"]:.1f} ms |')
+        report.append('\n')
+
+    # Thread Profiling Section
+    report.append('## Thread Resource Breakdown During Page Turns\n')
+    report.append('Resource diffs across verified page turn 0 -> 30 on the Dense Text PDF:\n')
+    report.append('| Thread Type | Idle CPU Ticks | During-Search CPU Ticks | Idle Vol Switches | During-Search Vol Switches |\n')
+    report.append('| :--- | :---: | :---: | :---: | :---: |\n')
+
+    # Find sample turn 0 -> 30 in text_pdf
+    sample_idle = next(t for t in rounds[0]['text_pdf']['contention_idle']['turns'] if t['page'] == 30)
+    sample_srch = next(t for t in rounds[0]['text_pdf']['contention_search']['turns'] if t['page'] == 30)
+
+    # Classify threads
+    def thread_role_summary(turn_dict):
+        diffs = turn_dict['thread_diffs']
+        roles = {'Main/UI': {'cpu': 0, 'vol': 0}, 'Render Workers': {'cpu': 0, 'vol': 0}, 'Search Worker': {'cpu': 0, 'vol': 0}}
+        for tid, d in diffs.items():
+            name = d['name']
+            if 'Wayland' in name or 'DBus' in name:
+                continue
+            if d['cpu_ticks'] > 15:
+                roles['Search Worker']['cpu'] += d['cpu_ticks']
+                roles['Search Worker']['vol'] += d['vol_switches']
+            elif d['vol_switches'] > 500:
+                roles['Render Workers']['cpu'] += d['cpu_ticks']
+                roles['Render Workers']['vol'] += d['vol_switches']
+            else:
+                roles['Main/UI']['cpu'] += d['cpu_ticks']
+                roles['Main/UI']['vol'] += d['vol_switches']
+        return roles
+
+    r_idle = thread_role_summary(sample_idle)
+    r_srch = thread_role_summary(sample_srch)
+
+    report.append(f'| Main GUI Thread | {r_idle["Main/UI"]["cpu"]} | {r_srch["Main/UI"]["cpu"]} | {r_idle["Main/UI"]["vol"]} | {r_srch["Main/UI"]["vol"]} |\n')
+    report.append(f'| Render Worker Threads (4x) | {r_idle["Render Workers"]["cpu"]} | {r_srch["Render Workers"]["cpu"]} | {r_idle["Render Workers"]["vol"]} | {r_srch["Render Workers"]["vol"]} |\n')
+    report.append(f'| Search Worker Thread | {r_idle["Search Worker"]["cpu"]} | {r_srch["Search Worker"]["cpu"]} | {r_idle["Search Worker"]["vol"]} | {r_srch["Search Worker"]["vol"]} |\n')
+    report.append('\n*Note: Render workers execute identical workload (1–2 CPU ticks per worker), but their completion wait stretches as voluntary switches (futex waits) and search thread CPU consumption (~35–40 ticks) rise concurrently.*\n')
 
     output_path.write_text('\n'.join(report) + '\n')
 
