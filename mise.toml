@@ -21,6 +21,10 @@ build_release() {
 build_release "$@"
 '''
 
+[tasks.docs]
+description = "Generate Doxygen C++ API reference"
+run = "doxygen Doxyfile"
+
 [tasks.clean]
 description = "Clean build artifacts and intermediate caches"
 run = '''

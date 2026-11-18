@@ -145,6 +145,26 @@ enum class PaperDownloadFinishedAction {
 // if we inherit from QWidget there are problems on high refresh rate smartphone displays
 struct WindowState;
 
+/**
+ * @class MainWidget
+ * @brief Top-level application window and central controller for Sioyek.
+ *
+ * Coordinates GUI input dispatch, document management, background MuPDF rendering,
+ * and the Vulkan presentation canvas.
+ *
+ * Key responsibilities:
+ * - **Event-Driven Render Readiness**: When background MuPDF worker threads complete
+ *   rasterizing visible pages, `PdfRenderer::render_advance` invokes `invalidate_render()`.
+ *   This immediately resumes and answers waiting IPC commands and queries via
+ *   `advance_waiting_command()` without periodic timer polling.
+ * - **IPC Server & Scripting**: Accepts Unix domain socket commands (e.g. from command line,
+ *   scripts, or Neovim/LaTeX plugins), executes commands synchronously or asynchronously,
+ *   and returns structured JSON or text responses.
+ * - **Document Lifecycle**: Manages opening, hashing, reloading, and caching of documents
+ *   and their metadata across window splits and helper views.
+ * - **Search Orchestration**: Dispatches non-blocking regex and fuzzy searches to the
+ *   worker thread and updates viewport match indicators.
+ */
 class MainWidget : public QMainWindow {
     Q_OBJECT
 public:
@@ -474,6 +494,13 @@ public:
     void long_jump_to_destination(DocumentPos pos);
     void long_jump_to_destination(int page, float offset_y);
     void long_jump_to_destination(float abs_offset_y);
+
+    /**
+     * @brief Dispatch and execute a Sioyek command by name (e.g. from IPC socket or keyboard input).
+     * @param command Command name identifier (e.g. L"goto_beginning", L"search").
+     * @param text Optional text argument or parameter.
+     * @param wait Whether execution blocks waiting for completion.
+     */
     void execute_command(std::wstring command, std::wstring text = L"", bool wait = false);
     //QString get_status_stylesheet();
     void smart_jump_under_pos(WindowPos pos);
@@ -540,8 +567,23 @@ public:
     bool handle_command_types(std::unique_ptr<Command> command, int num_repeats, std::wstring* result = nullptr);
     void handle_pending_text_command(std::wstring text);
 
+    /**
+     * @brief Slot connected to PdfRenderer::render_advance signal for event-driven readiness.
+     *
+     * Invalidates UI presentation, triggers lookahead evaluation, and immediately advances
+     * any waiting IPC commands via advance_waiting_command().
+     */
     void invalidate_render();
+
     void invalidate_ui();
+
+    /**
+     * @brief Open a PDF document from a filesystem path.
+     * @param path Target file path.
+     * @param offset_x Optional horizontal scroll position.
+     * @param offset_y Optional vertical scroll position.
+     * @param zoom_level Optional zoom scale factor.
+     */
     void open_document(const Path& path, std::optional<float> offset_x = {}, std::optional<float> offset_y = {}, std::optional<float> zoom_level = {});
     void open_document(const std::wstring& path, std::optional<float> offset_x = {}, std::optional<float> offset_y = {}, std::optional<float> zoom_level = {});
     void open_document_with_hash(const std::string& hash, std::optional<float> offset_x = {}, std::optional<float> offset_y = {}, std::optional<float> zoom_level = {});
@@ -910,9 +952,27 @@ public:
     void print_undocumented_configs();
     void print_non_default_configs();
     //void advance_wait_for_render_if_ready();
+
+    /**
+     * @brief Check whether all visible pages and slices have finished rendering.
+     * @return True if raster textures exist for all active viewport sections.
+     */
     bool is_render_ready();
+
+    /**
+     * @brief Check whether background text search has finished executing.
+     */
     bool is_search_ready();
+
+    /**
+     * @brief Check whether document reference and equation indexing has completed.
+     */
     bool is_index_ready();
+
+    /**
+     * @brief Advance and reply to pending IPC command waiting on render or search readiness.
+     * @param waiting_command_name Name of command to check and advance.
+     */
     void advance_waiting_command(std::string waiting_command_name);
     std::string get_user_agent_string();
     void handle_select_current_search_match();

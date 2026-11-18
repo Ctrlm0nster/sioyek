@@ -33,12 +33,18 @@ struct BookState {
     std::string uuid;
 };
 
+/**
+ * @brief State descriptor for the interactive overview (portal/preview) overlay.
+ *
+ * Overview allows previewing a separate section of the same document or an external
+ * document inside a floating window with independent zoom, scroll position, and document pointer.
+ */
 struct OverviewState {
-    float absolute_offset_y;
-    float absolute_offset_x = 0;
-    float zoom_level = -1;
-    Document* doc = nullptr;
-    std::optional<std::string> overview_type;
+    float absolute_offset_y;               ///< Vertical document scroll offset in absolute coordinates.
+    float absolute_offset_x = 0;           ///< Horizontal document scroll offset in absolute coordinates.
+    float zoom_level = -1;                 ///< Overview zoom level (-1 indicates auto-matched to main view).
+    Document* doc = nullptr;               ///< Target Document instance (owned externally).
+    std::optional<std::string> overview_type; ///< Optional identifier for the overview context (e.g. portal, link preview).
 };
 
 struct OpenedBookState {

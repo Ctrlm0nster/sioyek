@@ -21,7 +21,7 @@ This repository is a modernized, Linux-focused fork by [@Ctrlm0nster](https://gi
 
 ---
 
-## Architecture & Modernization
+## Architecture & Modernization {#architecture--modernization}
 
 This fork rebuilds the rendering and concurrency engine for modern desktop Linux environments:
 
@@ -40,7 +40,7 @@ This fork rebuilds the rendering and concurrency engine for modern desktop Linux
 
 ---
 
-## Features & Workflow
+## Features & Workflow {#features--workflow}
 
 ### Quick Open
 Search and jump immediately to any recently opened document or document in your library:
@@ -85,7 +85,7 @@ https://user-images.githubusercontent.com/6392321/125337160-e4832700-e363-11eb-8
 
 ---
 
-## Building from Source
+## Building from Source {#building-from-source}
 
 ### 1. Prerequisites (Arch Linux)
 Ensure standard build tools, Qt 6.7+, and Vulkan loader libraries are installed:
@@ -124,7 +124,7 @@ cmake --build build/dev --parallel $(nproc)
 
 ---
 
-## Running Sioyek
+## Running Sioyek {#running-sioyek}
 
 ### Development Runner
 Launch Sioyek directly in an isolated instance (so an already running system reader does not swallow the launch):
@@ -145,7 +145,7 @@ Execute the ELF binary directly from the build directory:
 
 ---
 
-## Arch Linux Packaging
+## Arch Linux Packaging {#arch-linux-packaging}
 
 This fork provides an independent Arch package: **`sioyek-ctrlm0nster`**. It provides `sioyek` and cleanly conflicts with the upstream AUR `sioyek` and `sioyek-git` packages.
 
@@ -168,7 +168,7 @@ For more details on package lifecycle and pinning, see [PACKAGING.md](PACKAGING.
 
 ---
 
-## Testing & Quality Assurance
+## Testing & Quality Assurance {#testing--quality-assurance}
 
 ### Headless CTest Suite
 Run headless CTest unit tests:
@@ -190,9 +190,10 @@ python3 scripts/test-render-workers.py build/dev/sioyek
 
 ---
 
-## Documentation & References
+## Documentation & References {#documentation--references}
 
 * [docs/architecture.md](docs/architecture.md) — Technical overview of Sioyek 3.0 Vulkan presentation, condition-variable worker queues, and concurrency model.
+* **C++ API Reference**: Generate full Doxygen API reference and UML inheritance/call graphs locally with `mise run docs` (or `doxygen Doxyfile`). Documentation is emitted to `build/doxygen/html/index.html`.
 * [BUILDING.md](BUILDING.md) — Detailed build options, compiler configurations (GCC/Clang), and sanitizer options.
 * [PACKAGING.md](PACKAGING.md) — Offline packaging architecture and reproducible build manifests.
 * [RELEASE.md](RELEASE.md) — Release validation checklists, verification logs, and signing procedures.
@@ -201,7 +202,7 @@ python3 scripts/test-render-workers.py build/dev/sioyek
 
 ---
 
-## Upstream & Attribution
+## Upstream & Attribution {#upstream--attribution}
 
 Sioyek was originally created by **Ali H. Rad** ([@ahrm](https://github.com/ahrm)) and released under the GNU General Public License v3.0.
 * Upstream repository: [github.com/ahrm/sioyek](https://github.com/ahrm/sioyek)

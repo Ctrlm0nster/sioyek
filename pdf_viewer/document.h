@@ -10,7 +10,6 @@
 #include <deque>
 #include <regex>
 
-//#include <Windows.h>
 #include <qstandarditemmodel.h>
 #include <qdatetime.h>
 
@@ -23,9 +22,23 @@
 #include "book.h"
 #include "coordinates.h"
 
+/**
+ * @file document.h
+ * @brief Thread-safe MuPDF 1.26.11 document wrapper, page geometry, and structured text indexer.
+ *
+ * Encapsulates MuPDF's `fz_document` handle, handling thread-safe lifetime management
+ * using `fz_keep_document` and `fz_drop_document`. Provides page dimension caching,
+ * continuous vertical document coordinate mapping, Table of Contents hierarchy trees,
+ * fast structured text search indexing, and annotation persistence in SQLite.
+ */
+
 class CachedChecksummer;
 class DatabaseManager;
 
+/**
+ * @class CharacterIterator
+ * @brief Forward iterator traversing structured text characters (`fz_stext_char`) on a page.
+ */
 class CharacterIterator {
     fz_stext_block* block = nullptr;
     fz_stext_line* line = nullptr;
@@ -47,6 +60,10 @@ public:
     using iterator_category = std::forward_iterator_tag;
 };
 
+/**
+ * @class PageIterator
+ * @brief Helper container providing STL-style begin() and end() character iterators for a page.
+ */
 class PageIterator {
     fz_stext_page* page;
 public:
@@ -55,11 +72,21 @@ public:
     CharacterIterator end() const;
 };
 
+/**
+ * @brief Cached plain text and character bounding boxes for an individual document page.
+ */
 struct CachedPageIndex {
-    std::wstring text;
-    std::vector<PagelessDocumentRect> rects;
+    std::wstring text;                          ///< Unicode string representation of page contents.
+    std::vector<PagelessDocumentRect> rects;    ///< Bounding rectangles corresponding to characters in text.
 };
 
+/**
+ * @class Document
+ * @brief Thread-safe document model managing MuPDF structures, layout geometry, and annotations.
+ *
+ * Wraps an underlying `fz_document*` handle. Worker threads access the document safely
+ * through cloned contexts and reference-counted retention (`fz_keep_document`).
+ */
 class Document {
 
 private:
@@ -253,32 +280,107 @@ public:
     bool has_toc();
     const std::vector<std::wstring>& get_flat_toc_names();
     const std::vector<int>& get_flat_toc_pages();
+    /**
+     * @brief Open a PDF document from disk using MuPDF.
+     * @param invalid_flag Pointer to a boolean flag notified if the document becomes invalid during async parsing.
+     * @param force_load_dimensions If true, synchronously calculates geometry for all pages.
+     * @param password Optional decryption password for protected files.
+     * @param temp If true, marks file as ephemeral.
+     * @return True if document opened and decrypted successfully; false otherwise.
+     */
     bool open(bool* invalid_flag, bool force_load_dimensions = false, std::string password = "", bool temp = false);
+
+    /**
+     * @brief Reload the document from disk (e.g. after external LaTeX compilation).
+     * @param password Optional decryption password.
+     */
     void reload(std::string password = "");
+
     QDateTime get_last_edit_time();
     unsigned int get_milies_since_last_document_update_time();
     unsigned int get_milies_since_last_edit_time();
+
+    /**
+     * @brief Get the physical height of a specific page in points.
+     * @param page_index Zero-based page index.
+     */
     float get_page_height(int page_index);
+
     fz_pixmap* get_small_pixmap(int page);
+
+    /**
+     * @brief Get the physical width of a specific page in points.
+     * @param page_index Zero-based page index.
+     */
     float get_page_width(int page_index);
+
     float get_page_width_median();
     std::wstring get_page_label(int page_index);
     int get_page_number_with_label(std::wstring page_label);
     bool is_reflowable();
     //float get_page_width_smart(int page_index, float* left_ratio, float* right_ratio, int* normal_page_width);
     float get_page_size_smart(bool width, int page_index, float* left_ratio, float* right_ratio, int* normal_page_width);
+
+    /**
+     * @brief Get the cumulative vertical document offset up to the top of the given page.
+     * @param page_index Zero-based page index.
+     * @return Accumulated vertical height in continuous document coordinate space.
+     */
     float get_accum_page_height(int page_index);
+
     void rotate();
+
+    /**
+     * @brief Determine which pages intersect the specified continuous vertical view range.
+     * @param doc_y_range_begin Top of vertical view range.
+     * @param doc_y_range_end Bottom of vertical view range.
+     * @param[out] visible_pages Output vector populated with intersecting zero-based page indices.
+     */
     void get_visible_pages(float doc_y_range_begin, float doc_y_range_end, std::vector<int>& visible_pages);
+
+    /**
+     * @brief Parse and cache bounding box dimensions for all pages in the document.
+     * @param force_load_now If true, forces synchronous calculation on the calling thread.
+     */
     void load_page_dimensions(bool force_load_now);
+
+    /**
+     * @brief Get total number of pages in the document.
+     */
     int num_pages();
+
+    /**
+     * @brief Compute the absolute bounding rectangle of a page in continuous document space.
+     * @param page Zero-based page index.
+     */
     AbsoluteRect get_page_absolute_rect(int page);
+
+    /**
+     * @brief Transform continuous absolute document coordinates to page-relative coordinates.
+     * @param absolute_pos Position in continuous absolute space.
+     */
     DocumentPos absolute_to_page_pos(AbsoluteDocumentPos absolute_pos);
+
     DocumentPos absolute_to_page_pos_uncentered(AbsoluteDocumentPos absolute_pos);
+
+    /**
+     * @brief Transform an absolute rectangle to page-relative rectangle coordinates.
+     * @param abs_rect Rectangle in continuous document space.
+     */
     DocumentRect absolute_to_page_rect(AbsoluteRect abs_rect);
+
     QStandardItemModel* get_toc_model();
     int get_offset_page_number(float y_offset);
+
+    /**
+     * @brief Asynchronously extract and index document text, equations, and references in a background thread.
+     * @param invalid_flag Pointer to flag checked periodically for cancellation.
+     */
     void index_document(bool* invalid_flag);
+
+    /**
+     * @brief Stop and join any active background document indexing thread.
+     */
     void stop_indexing();
     void delete_page_intersecting_drawings(int page, AbsoluteRect absolute_rect, bool mask[26]);
     void delete_all_page_drawings(int page);

@@ -90,11 +90,13 @@ mise tasks
 
 - **`mise run build`**: Builds the development/debug binary using CMake and Ninja (`scripts/dev-build.sh`) into `${SIOYEK_BUILD_DIR:-build/dev}`.
 - **`mise run build-release`** (alias: **`release`**): Configures and compiles an optimized release binary using CMake and Ninja into `${SIOYEK_RELEASE_DIR:-build/release}`.
-- **`mise run clean`**: Cleans build artifacts via CMake/Ninja across `build/dev` and `build/release`, and removes intermediate Python bytecode caches (`__pycache__`), benchmark caches, and package build directories.
+- **`mise run docs`**: Generates Doxygen C++ API reference and architecture documentation into `build/doxygen/html/index.html`.
+- **`mise run clean`**: Cleans build artifacts via CMake/Ninja across `build/dev` and `build/release`, and removes intermediate Python bytecode caches (`__pycache__`), benchmark caches, package build directories, and Doxygen documentation (`build/doxygen`).
 
 ```sh
 mise run build
 mise run build-release
+mise run docs
 mise run clean
 ```
 
@@ -531,6 +533,75 @@ These checks cover the existing tutorial checksum (used for persisted document
 identity), empty/chunked file hashing and multilingual UTF-8 iteration. Arch
 package builds enable and run them in `check()`. Previously built package archives
 must be rebuilt to include subsequent source changes.
+
+## C++ reference with Doxygen
+
+Sioyek provides comprehensive Doxygen documentation covering project architecture,
+the multi-threaded MuPDF concurrency engine, Qt 6 QRhi Vulkan hardware presentation,
+and event-driven render readiness.
+
+### Prerequisites
+
+Ensure `doxygen` (and optionally `graphviz` for dot diagrams) is installed:
+
+```sh
+sudo pacman -S --needed doxygen graphviz
+```
+
+If Graphviz `dot` is present on the system, Doxygen generates UML class inheritance
+hierarchies, call graphs, caller graphs, and directory dependency diagrams. If `dot`
+is absent, documentation builds continue cleanly without diagrams.
+
+### Generating documentation
+
+Generate the documentation using the Mise task runner:
+
+```sh
+mise run docs
+```
+
+Or invoke Doxygen directly from the repository root:
+
+```sh
+doxygen Doxyfile
+```
+
+### Viewing documentation
+
+HTML documentation is emitted to `build/doxygen/html/index.html`. Open it with any
+browser:
+
+```sh
+xdg-open build/doxygen/html/index.html
+```
+
+Or host it locally:
+
+```sh
+python3 -m http.server -d build/doxygen/html 8080
+```
+
+The documentation main page links directly to the detailed architecture overview
+in `docs/architecture.md`, indexing classes and interfaces across `pdf_viewer/`:
+- `PdfRenderer`: Condition-variable worker pools, thread-local MuPDF context cloning, speculative pre-rendering lookahead, and LRU cache eviction.
+- `PdfViewWidget`: Viewport calculations, dynamic page slicing, zoom transformations, and floating overview portals.
+- `VulkanCanvas`: Qt 6 `QRhiWidget` integration, pre-compiled SPIR-V pipeline caches, and transparent `QPainter` overlay composition.
+- `Document`: Thread-safe MuPDF `fz_document` handle management, reference counting, and page geometry.
+- `MainWidget`: Central modal dispatcher, Unix domain socket IPC, and event-driven render readiness notifications.
+
+### Cleaning documentation
+
+To delete generated documentation and caches:
+
+```sh
+mise run clean
+```
+
+Or manually remove the directory:
+
+```sh
+rm -rf build/doxygen
+```
 
 ## Hardened and sanitizer builds
 
