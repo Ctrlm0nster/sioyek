@@ -39,6 +39,7 @@ extern float OVERVIEW_SIZE[2];
 extern float OVERVIEW_OFFSET[2];
 extern float FASTREAD_OPACITY;
 extern bool PRERENDER_NEXT_PAGE;
+extern bool DIRECTIONAL_LOOKAHEAD;
 extern int PRERENDERED_PAGE_COUNT;
 extern bool SHOULD_HIGHLIGHT_LINKS;
 extern bool SHOULD_HIGHLIGHT_UNSELECTED_SEARCH;
@@ -1142,8 +1143,131 @@ void PdfViewWidget::render_page(int page_number, bool in_overview, ColorPalette 
 
 }
 
+void PdfViewWidget::update_navigation_state() {
+    if (!valid_document() || is_helper) return;
+
+    int current_page = document_view->get_center_page_number();
+    float current_zoom = document_view->get_zoom_level();
+    if (current_page < 0) return;
+
+    // 1. Zoom change check: cancel speculative requests if zoom level changed
+    if (last_zoom_level > 0.0f && std::abs(current_zoom - last_zoom_level) > 1e-4f) {
+        if (pdf_renderer) {
+            pdf_renderer->cancel_speculative_requests();
+        }
+        last_lookahead_page = -1;
+    }
+    last_zoom_level = current_zoom;
+
+    // 2. Navigation delta & direction check
+    if (last_center_page >= 0) {
+        int delta = current_page - last_center_page;
+        if (std::abs(delta) > 1) {
+            // Non-sequential jump: cancel speculative queue
+            if (pdf_renderer) {
+                pdf_renderer->cancel_speculative_requests();
+            }
+            last_lookahead_page = -1;
+        } else if (delta == 1) {
+            if (reading_direction != 1) {
+                // Direction reversed to forward
+                if (pdf_renderer) {
+                    pdf_renderer->cancel_speculative_requests();
+                }
+                reading_direction = 1;
+                last_lookahead_page = -1;
+            }
+        } else if (delta == -1) {
+            if (reading_direction != -1) {
+                // Direction reversed to backward
+                if (pdf_renderer) {
+                    pdf_renderer->cancel_speculative_requests();
+                }
+                reading_direction = -1;
+                last_lookahead_page = -1;
+            }
+        }
+    }
+    last_center_page = current_page;
+}
+
+void PdfViewWidget::maybe_trigger_lookahead(bool visible_already_rendered) {
+    if (!valid_document() || is_helper) return;
+    if (document_view->is_presentation_mode()) return;
+    if (!DIRECTIONAL_LOOKAHEAD) return;
+    if (!pdf_renderer) return;
+
+    // Condition 1: Visible pages must be completely rendered
+    if (!visible_already_rendered && !are_visible_pages_rendered()) return;
+
+    // Condition 2: No pending normal requests
+    if (pdf_renderer->has_pending_normal_requests()) return;
+
+    // Condition 3: At least one worker must be idle
+    if (!pdf_renderer->has_idle_worker()) return;
+
+    std::vector<int> visible_pages;
+    document_view->get_visible_pages(document_view->get_view_height(), visible_pages);
+    if (visible_pages.empty()) return;
+
+    Document* d = doc(false);
+    if (!d) return;
+    int num_pages = d->num_pages();
+
+    int target_page = -1;
+    if (reading_direction >= 0) {
+        target_page = visible_pages.back() + 1;
+    } else {
+        target_page = visible_pages.front() - 1;
+    }
+
+    if (target_page < 0 || target_page >= num_pages) return;
+    if (target_page == last_lookahead_page) return;
+
+    float page_width = d->get_page_width(target_page);
+    float page_height = d->get_page_height(target_page);
+    if (page_width <= 0 || page_height <= 0) return;
+
+    PagelessDocumentRect page_rect({ 0, 0, page_width, page_height });
+    float zoom_level = document_view->get_zoom_level();
+    if (SAME_WIDTH && document_view->same_width_mode_first_page_width) {
+        float factor = document_view->same_width_mode_first_page_width.value() / page_width;
+        zoom_level *= factor;
+    }
+
+    int nh = 1, nv = 1;
+    bool is_sliced = num_slices_for_page_rect(page_rect, &nh, &nv);
+    float display_scale = devicePixelRatioF();
+    bool should_render_annotations = d->should_render_pdf_annotations();
+    std::wstring path = d->get_path();
+
+    last_lookahead_page = target_page;
+
+    if (reading_direction >= 0) {
+        // Push bottom slices first so top slices pop first from LIFO stack
+        for (int i = nh * nv - 1; i >= 0; --i) {
+            int slice_index = is_sliced ? i : -1;
+            if (!pdf_renderer->is_page_rendered(path, target_page, should_render_annotations, slice_index, nh, nv, zoom_level, display_scale)) {
+                pdf_renderer->add_speculative_request(path, target_page, should_render_annotations, zoom_level, display_scale, slice_index, nh, nv);
+            }
+        }
+    } else {
+        // Push top slices first so bottom slices pop first from LIFO stack
+        for (int i = 0; i < nh * nv; ++i) {
+            int slice_index = is_sliced ? i : -1;
+            if (!pdf_renderer->is_page_rendered(path, target_page, should_render_annotations, slice_index, nh, nv, zoom_level, display_scale)) {
+                pdf_renderer->add_speculative_request(path, target_page, should_render_annotations, zoom_level, display_scale, slice_index, nh, nv);
+            }
+        }
+    }
+}
+
 bool PdfViewWidget::are_visible_pages_rendered() {
     if (!valid_document()) return true;
+
+    if (!is_helper) {
+        update_navigation_state();
+    }
 
     float display_scale = devicePixelRatioF();
     bool all_rendered = true;
@@ -1202,6 +1326,10 @@ bool PdfViewWidget::are_visible_pages_rendered() {
                 }
             }
         }
+    }
+
+    if (all_rendered && !is_helper) {
+        maybe_trigger_lookahead(true);
     }
 
     return all_rendered;
@@ -1335,32 +1463,38 @@ void PdfViewWidget::my_render() {
             }
         }
         // prerender pages
-        if (visible_pages.size() > 0) {
-            int num_pages = document_view->get_document()->num_pages();
-            int max_page = visible_pages[visible_pages.size() - 1];
-            for (int i = 0; i < (PRERENDERED_PAGE_COUNT + 1); i++) {
-                if (max_page + i < num_pages) {
-                    float page_width = document_view->get_document()->get_page_width(max_page + i);
-                    float page_height = document_view->get_document()->get_page_height(max_page + i);
-                    PagelessDocumentRect page_rect({ 0, 0, page_width, page_height });
-                    int nh, nv;
-                    num_slices_for_page_rect(page_rect, &nh, &nv);
+        if (!DIRECTIONAL_LOOKAHEAD) {
+            if (visible_pages.size() > 0 && PRERENDERED_PAGE_COUNT > 0) {
+                int num_pages = document_view->get_document()->num_pages();
+                int max_page = visible_pages[visible_pages.size() - 1];
+                for (int i = 0; i < (PRERENDERED_PAGE_COUNT + 1); i++) {
+                    if (max_page + i < num_pages) {
+                        float page_width = document_view->get_document()->get_page_width(max_page + i);
+                        float page_height = document_view->get_document()->get_page_height(max_page + i);
+                        PagelessDocumentRect page_rect({ 0, 0, page_width, page_height });
+                        int nh, nv;
+                        num_slices_for_page_rect(page_rect, &nh, &nv);
 
-                    for (int k = 0; k < nh * nv; k++) {
-                        pdf_renderer->find_rendered_page(
-                            document_view->get_document()->get_path(),
-                            max_page + i,
-                            document_view->get_document()->should_render_pdf_annotations(),
-                            k,
-                            nh,
-                            nv,
-                            document_view->get_zoom_level(),
-                            devicePixelRatioF(),
-                            nullptr,
-                            nullptr);
+                        for (int k = 0; k < nh * nv; k++) {
+                            pdf_renderer->find_rendered_page(
+                                document_view->get_document()->get_path(),
+                                max_page + i,
+                                document_view->get_document()->should_render_pdf_annotations(),
+                                k,
+                                nh,
+                                nv,
+                                document_view->get_zoom_level(),
+                                devicePixelRatioF(),
+                                nullptr,
+                                nullptr);
+                        }
                     }
                 }
             }
+        }
+        else if (!is_helper) {
+            update_navigation_state();
+            maybe_trigger_lookahead();
         }
     }
 
@@ -1900,9 +2034,19 @@ void PdfViewWidget::set_synctex_highlights(std::vector<DocumentRect> highlights)
 
 void PdfViewWidget::on_document_view_reset() {
     this->synctex_highlights.clear();
+    last_center_page = -1;
+    last_zoom_level = -1.0f;
+    reading_direction = 1;
+    last_lookahead_page = -1;
+    if (pdf_renderer) {
+        pdf_renderer->cancel_speculative_requests();
+    }
 }
 
 PdfViewWidget::~PdfViewWidget() {
+    if (pdf_renderer) {
+        pdf_renderer->cancel_speculative_requests();
+    }
     // Qt can delete a closed window before main's final renderer join.
     pdf_renderer->cancel_search(&search_results);
 }

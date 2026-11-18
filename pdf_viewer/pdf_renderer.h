@@ -37,6 +37,7 @@ struct RenderRequest {
     int num_v_slices = 1;
     int64_t enqueue_ns = 0;
     int64_t enqueue_us = 0;
+    bool speculative = false;
     bool operator==(const RenderRequest& o) const {
         return path == o.path &&
                should_render_annotations == o.should_render_annotations &&
@@ -130,6 +131,7 @@ class PdfRenderer : public QObject {
     std::map<std::pair<int, std::wstring>, fz_document*> opened_documents;
 
     std::vector<RenderRequest> pending_render_requests;
+    std::vector<RenderRequest> pending_speculative_requests;
     std::optional<SearchRequest> pending_search_request;
     std::vector<SearchResult>* active_search_results = nullptr;
     bool search_cancelled = false;
@@ -184,11 +186,15 @@ public:
 
     bool is_busy();
     bool is_search_busy();
+    bool has_idle_worker();
+    bool has_pending_normal_requests();
+    void cancel_speculative_requests();
     bool is_page_rendered(std::wstring path, int page, bool should_render_annotations, int index, int num_h_slices, int num_v_slices, float zoom_level, float display_scale);
     // Wait until the worker releases this view's borrowed search state.
     void cancel_search(std::vector<SearchResult>* results);
     //should only be called from the main thread
     void add_request(std::wstring document_path, int page, bool should_render_annotations, float zoom_level, float display_scale, int index, int num_h_slices, int num_v_slices);
+    void add_speculative_request(std::wstring document_path, int page, bool should_render_annotations, float zoom_level, float display_scale, int index, int num_h_slices, int num_v_slices);
     void add_request(std::wstring document_path,
         int page,
         std::wstring term,

@@ -177,6 +177,11 @@ private:
 
     std::optional<AbsoluteRect> selected_rectangle = {};
 
+    int last_center_page = -1;
+    float last_zoom_level = -1.0f;
+    int reading_direction = 1;
+    int last_lookahead_page = -1;
+
 protected:
     void initializeScene() override;
     void resizeScene(int w, int h) override;
@@ -256,6 +261,8 @@ public:
     void render_page(int page_number, bool in_overview=false, ColorPalette forced_palette=ColorPalette::None, bool stencils_allowed=true);
     bool get_page_render_params(int page_number, bool in_overview, PageRenderParams& out);
     bool are_visible_pages_rendered();
+    void update_navigation_state();
+    void maybe_trigger_lookahead(bool visible_already_rendered = false);
     bool get_is_searching(float* prog);
     void search_text(const std::wstring& text, SearchCaseSensitivity case_sensitive = SearchCaseSensitivity::CaseInsensitive, bool regex = false, std::optional<std::pair<int, int>> range = {});
     void set_dark_mode(bool mode);

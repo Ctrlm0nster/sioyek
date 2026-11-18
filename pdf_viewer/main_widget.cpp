@@ -1980,6 +1980,10 @@ void MainWidget::invalidate_render() {
     if (pending_command_instance && pending_command_instance->is_ready()) {
         advance_waiting_command(pending_command_instance->get_name());
     }
+    if (render_widget != nullptr) {
+        render_widget->update_navigation_state();
+        render_widget->maybe_trigger_lookahead();
+    }
 }
 
 void MainWidget::invalidate_ui() {

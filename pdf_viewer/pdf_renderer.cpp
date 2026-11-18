@@ -98,10 +98,23 @@ void PdfRenderer::add_request(std::wstring document_path, int page, bool should_
         bool should_add = true;
         {
             std::lock_guard lock(pending_requests_mutex);
+            // Promote speculative request to normal priority if already pending
+            for (auto it = pending_speculative_requests.begin(); it != pending_speculative_requests.end(); ) {
+                if (*it == req) {
+                    it = pending_speculative_requests.erase(it);
+                } else {
+                    ++it;
+                }
+            }
             // if the zoom level has changed, there is no point in previous requests with a different zoom level
             for (int i = pending_render_requests.size() - 1; i >= 0; i--) {
                 if (pending_render_requests[i].path == req.path && pending_render_requests[i].page == req.page && (pending_render_requests[i].zoom_level != zoom_level)) {
                     pending_render_requests.erase(pending_render_requests.begin() + i);
+                }
+            }
+            for (int i = pending_speculative_requests.size() - 1; i >= 0; i--) {
+                if (pending_speculative_requests[i].path == req.path && pending_speculative_requests[i].page == req.page && (pending_speculative_requests[i].zoom_level != zoom_level)) {
+                    pending_speculative_requests.erase(pending_speculative_requests.begin() + i);
                 }
             }
             for (size_t i = 0; i < pending_render_requests.size(); i++) {
@@ -121,6 +134,60 @@ void PdfRenderer::add_request(std::wstring document_path, int page, bool should_
     }
     else {
         std::wcout << "Error: could not find document" << std::endl;
+    }
+}
+
+void PdfRenderer::add_speculative_request(std::wstring document_path, int page, bool should_render_annotations, float zoom_level, float display_scale, int index, int num_h_slices, int num_v_slices) {
+    if (document_path.size() > 0) {
+        RenderRequest req;
+        req.path = document_path;
+        req.gamma = GAMMA;
+        req.page = page;
+        req.zoom_level = zoom_level;
+        req.slice_index = index;
+        req.num_h_slices = num_h_slices;
+        req.num_v_slices = num_v_slices;
+        req.display_scale = display_scale;
+        req.should_render_annotations = should_render_annotations;
+        req.speculative = true;
+        req.enqueue_ns = timing_diag_now_ns();
+        req.enqueue_us = req.enqueue_ns / 1000;
+
+        bool should_add = true;
+        {
+            std::lock_guard lock(pending_requests_mutex);
+            for (const auto& r : pending_render_requests) {
+                if (r == req) {
+                    should_add = false;
+                    break;
+                }
+            }
+            if (should_add) {
+                for (const auto& r : pending_speculative_requests) {
+                    if (r == req) {
+                        should_add = false;
+                        break;
+                    }
+                }
+            }
+            if (should_add) {
+                pending_speculative_requests.push_back(req);
+                if (pending_speculative_requests.size() > 16) {
+                    pending_speculative_requests.erase(pending_speculative_requests.begin());
+                }
+            }
+        }
+        if (should_add) {
+            if (is_timing_diag_enabled()) {
+                std::ostringstream ss;
+                ss << "speculative_enqueue page=" << req.page
+                   << " slice=" << req.slice_index
+                   << " t_ns=" << req.enqueue_ns
+                   << " t_us=" << req.enqueue_us;
+                log_timing_diag(ss.str());
+            }
+            render_work_ready.notify_one();
+        }
     }
 }
 void PdfRenderer::add_request(std::wstring document_path,
@@ -260,6 +327,10 @@ void PdfRenderer::delete_old_pages(bool force_all, bool invalidate_all) {
 
     const size_t N = static_cast<size_t>(std::max(0, num_cached_pages)) *
                      std::max(1, NUM_V_SLICES) * std::max(1, NUM_H_SLICES);
+
+    if (invalidate_all || force_all) {
+        cancel_speculative_requests();
+    }
 
     if (invalidate_all) {
         for (size_t i = 0; i < cached_responses.size(); i++) {
@@ -548,12 +619,18 @@ void PdfRenderer::run(int thread_index) {
             thread_busy_status[thread_index] = false;
             render_work_ready.wait(lock, [this, thread_index] {
                 return stopping || !pending_render_requests.empty() ||
+                       !pending_speculative_requests.empty() ||
                        !pixmaps_to_drop[thread_index].empty();
             });
             if (stopping) break;
             if (!pending_render_requests.empty()) {
                 req = std::move(pending_render_requests.back());
                 pending_render_requests.pop_back();
+                thread_busy_status[thread_index] = true;
+                has_request = true;
+            } else if (!pending_speculative_requests.empty()) {
+                req = std::move(pending_speculative_requests.back());
+                pending_speculative_requests.pop_back();
                 thread_busy_status[thread_index] = true;
                 has_request = true;
             }
@@ -568,6 +645,7 @@ void PdfRenderer::run(int thread_index) {
             ss << "worker_start page=" << req.page
                << " slice=" << req.slice_index
                << " thread=" << thread_index
+               << (req.speculative ? " speculative=1" : "")
                << " t_ns=" << worker_start_ns
                << " t_us=" << worker_start_us
                << " queue_wait_ms=" << ((worker_start_ns - req.enqueue_ns) / 1000000.0);
@@ -738,6 +816,25 @@ bool PdfRenderer::is_busy() {
     return !pending_render_requests.empty();
 }
 
+bool PdfRenderer::has_idle_worker() {
+    std::lock_guard lock(pending_requests_mutex);
+    if (!pending_render_requests.empty()) return false;
+    for (bool busy : thread_busy_status) {
+        if (!busy) return true;
+    }
+    return false;
+}
+
+bool PdfRenderer::has_pending_normal_requests() {
+    std::lock_guard lock(pending_requests_mutex);
+    return !pending_render_requests.empty();
+}
+
+void PdfRenderer::cancel_speculative_requests() {
+    std::lock_guard lock(pending_requests_mutex);
+    pending_speculative_requests.clear();
+}
+
 bool PdfRenderer::is_page_rendered(std::wstring path, int page, bool should_render_annotations, int index, int num_h_slices, int num_v_slices, float zoom_level, float display_scale) {
     if (path.empty()) return true;
 
@@ -768,6 +865,24 @@ void PdfRenderer::free_all_resources_for_document(std::wstring doc_path) {
     }
 
     delete_old_pages(true, true); // todo: this is overkill, just delete the pixmaps for the document
+
+    {
+        std::lock_guard lock(pending_requests_mutex);
+        for (auto it = pending_speculative_requests.begin(); it != pending_speculative_requests.end(); ) {
+            if (it->path == doc_path) {
+                it = pending_speculative_requests.erase(it);
+            } else {
+                ++it;
+            }
+        }
+        for (auto it = pending_render_requests.begin(); it != pending_render_requests.end(); ) {
+            if (it->path == doc_path) {
+                it = pending_render_requests.erase(it);
+            } else {
+                ++it;
+            }
+        }
+    }
 
     {
         std::lock_guard lock(opened_documents_mutex);

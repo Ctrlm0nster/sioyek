@@ -203,6 +203,7 @@ std::map<std::wstring, JsCommandInfo> ADDITIONAL_ASYNC_JAVASCRIPT_COMMANDS;
 std::map<std::wstring, std::wstring> ADDITIONAL_MACROS;
 std::vector<AdditionalKeymapData> ADDITIONAL_KEYMAPS;
 bool PRERENDER_NEXT_PAGE = true;
+bool DIRECTIONAL_LOOKAHEAD = true;
 bool HIGHLIGHT_MIDDLE_CLICK = false;
 float HYPERDRIVE_SPEED_FACTOR = 10.0f;
 float SMOOTH_SCROLL_SPEED = 3.0f;
@@ -990,6 +991,7 @@ ConfigManager::ConfigManager(const Path& default_path, const Path& auto_path, co
     add_bool(L"start_with_helper_window", &START_WITH_HELPER_WINDOW);
     add_bool(L"lighten_colors_when_embedding_annotations", &LIGHTEN_COLORS_WHEN_EMBEDDING_ANNOTATIONS);
     add_bool(L"prerender_next_page_presentation", &PRERENDER_NEXT_PAGE);
+    add_bool(L"directional_lookahead", &DIRECTIONAL_LOOKAHEAD);
     add_bool(L"highlight_middle_click", &HIGHLIGHT_MIDDLE_CLICK);
     add_bool(L"auto_rename_downloaded_papers", &AUTO_RENAME_DOWNLOADED_PAPERS);
     add_bool(L"super_fast_search", &SUPER_FAST_SEARCH);
