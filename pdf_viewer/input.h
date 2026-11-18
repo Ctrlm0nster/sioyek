@@ -58,6 +58,7 @@ public:
     virtual void set_point_requirement(AbsoluteDocumentPos value);
     virtual void set_generic_requirement(QVariant value);
     virtual void handle_generic_requirement();
+    virtual bool is_ready() { return false; }
     virtual void set_num_repeats(int nr);
     virtual int get_num_repeats();
     virtual std::vector<char> special_symbols();

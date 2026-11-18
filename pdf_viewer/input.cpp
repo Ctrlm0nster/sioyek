@@ -523,6 +523,23 @@ public:
         }
     }
 
+    bool is_ready() override {
+        if (is_modal) {
+            int current_mode_index = get_current_mode_index();
+            if (current_mode_index >= 0 && current_mode_index < commands.size()) {
+                return commands[current_mode_index]->is_ready();
+            }
+        }
+        else {
+            for (size_t i = 0; i < commands.size(); i++) {
+                if (i < performed.size() && !performed[i]) {
+                    return commands[i]->is_ready();
+                }
+            }
+        }
+        return false;
+    }
+
     void set_symbol_requirement(char value) override {
         if (is_modal) {
             int current_mode_index = get_current_mode_index();
@@ -1795,10 +1812,11 @@ public:
 
     void perform() {
         if (is_timing_diag_enabled()) {
-            int64_t turn_start_us = std::chrono::duration_cast<std::chrono::microseconds>(
-                std::chrono::steady_clock::now().time_since_epoch()).count();
+            int64_t turn_start_ns = timing_diag_now_ns();
+            int64_t turn_start_us = turn_start_ns / 1000;
             std::ostringstream ss;
-            ss << "turn_command t_us=" << turn_start_us
+            ss << "turn_command t_ns=" << turn_start_ns
+               << " t_us=" << turn_start_us
                << " data=" << QString::fromStdWString(text.value()).toStdString();
             log_timing_diag(ss.str());
         }
@@ -2964,32 +2982,64 @@ public:
 };
 
 class WaitForRendersToFinishCommand : public GenericWaitCommand {
+    int64_t start_ns = 0;
     int64_t start_us = 0;
     int poll_ticks = 0;
+    bool ready_reported = false;
 public:
     static inline const std::string cname = "wait_for_renders_to_finish";
     static inline const std::string hname = "";
     WaitForRendersToFinishCommand(MainWidget* w) : GenericWaitCommand(cname, w) {
-        start_us = std::chrono::duration_cast<std::chrono::microseconds>(
-            std::chrono::steady_clock::now().time_since_epoch()).count();
+        start_ns = timing_diag_now_ns();
+        start_us = start_ns / 1000;
         if (is_timing_diag_enabled()) {
             std::ostringstream ss;
-            ss << "wait_for_renders_start t_us=" << start_us;
+            ss << "wait_for_renders_start t_ns=" << start_ns
+               << " t_us=" << start_us;
             log_timing_diag(ss.str());
         }
     };
 
+    std::optional<Requirement> next_requirement(MainWidget* widget) override {
+        if (finished) {
+            return {};
+        }
+        if (is_ready()) {
+            finished = true;
+            return {};
+        }
+        return Requirement{ RequirementType::Generic, "dummy" };
+    }
+
+    void handle_generic_requirement() override {
+        if (finished) return;
+
+        timer = new QTimer();
+        timer->setInterval(100);
+        timer_connection = QObject::connect(timer, &QTimer::timeout, [this]() {
+            poll_ticks++;
+            if (is_ready()) {
+                widget->advance_waiting_command(get_name());
+            }
+        });
+        timer->start();
+    }
+
     bool is_ready() override {
-        poll_ticks++;
+        if (ready_reported) return true;
         bool ready = widget->is_render_ready();
-        if (ready && is_timing_diag_enabled()) {
-            int64_t reply_us = std::chrono::duration_cast<std::chrono::microseconds>(
-                std::chrono::steady_clock::now().time_since_epoch()).count();
-            std::ostringstream ss;
-            ss << "ipc_reply t_us=" << reply_us
-               << " poll_ticks=" << poll_ticks
-               << " wait_ms=" << ((reply_us - start_us) / 1000.0);
-            log_timing_diag(ss.str());
+        if (ready) {
+            ready_reported = true;
+            if (is_timing_diag_enabled()) {
+                int64_t reply_ns = timing_diag_now_ns();
+                int64_t reply_us = reply_ns / 1000;
+                std::ostringstream ss;
+                ss << "ipc_reply t_ns=" << reply_ns
+                   << " t_us=" << reply_us
+                   << " poll_ticks=" << poll_ticks
+                   << " wait_ms=" << ((reply_ns - start_ns) / 1000000.0);
+                log_timing_diag(ss.str());
+            }
         }
         return ready;
     }

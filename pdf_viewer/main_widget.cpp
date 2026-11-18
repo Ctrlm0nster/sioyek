@@ -1801,10 +1801,11 @@ void MainWidget::validate_render() {
 
     is_render_invalidated = false;
     if (is_timing_diag_enabled()) {
-        int64_t paint_cleared_us = std::chrono::duration_cast<std::chrono::microseconds>(
-            std::chrono::steady_clock::now().time_since_epoch()).count();
+        int64_t paint_cleared_ns = timing_diag_now_ns();
+        int64_t paint_cleared_us = paint_cleared_ns / 1000;
         std::ostringstream ss;
-        ss << "paint_cleared t_us=" << paint_cleared_us;
+        ss << "paint_cleared t_ns=" << paint_cleared_ns
+           << " t_us=" << paint_cleared_us;
         log_timing_diag(ss.str());
     }
     if (smooth_scroll_mode && (smooth_scroll_speed != 0)) {
@@ -1971,6 +1972,9 @@ void MainWidget::update_closest_link_with_opened_book_state(const OpenedBookStat
 void MainWidget::invalidate_render() {
     invalidate_ui();
     is_render_invalidated = true;
+    if (pending_command_instance && pending_command_instance->is_ready()) {
+        advance_waiting_command(pending_command_instance->get_name());
+    }
 }
 
 void MainWidget::invalidate_ui() {
@@ -9784,7 +9788,7 @@ bool MainWidget::is_render_ready(){
     if (is_helper_visible() && helper_render_widget() != nullptr && !helper_render_widget()->are_visible_pages_rendered()) {
         return false;
     }
-    return !pdf_renderer->is_busy();
+    return true;
 }
 
 bool MainWidget::is_index_ready(){

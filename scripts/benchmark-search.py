@@ -116,11 +116,13 @@ def parse_diag_log(text):
                 turns[current_turn] = {
                     'page': page,
                     't_turn': int(kv['t_us']),
+                    't_turn_ns': int(kv.get('t_ns', int(kv['t_us']) * 1000)),
                     'enqueues': [],
                     'worker_starts': [],
                     'raster_dones': [],
                     'paint_cleared': [],
                     'wait_start': None,
+                    'wait_start_ns': None,
                     'reply': None
                 }
         elif current_turn is not None:
@@ -129,7 +131,8 @@ def parse_diag_log(text):
                 t_rec['enqueues'].append({
                     'page': int(kv['page']),
                     'slice': int(kv['slice']),
-                    't_us': int(kv['t_us'])
+                    't_us': int(kv['t_us']),
+                    't_ns': int(kv.get('t_ns', int(kv['t_us']) * 1000))
                 })
             elif tag == 'worker_start':
                 t_rec['worker_starts'].append({
@@ -137,6 +140,7 @@ def parse_diag_log(text):
                     'slice': int(kv['slice']),
                     'thread': int(kv['thread']),
                     't_us': int(kv['t_us']),
+                    't_ns': int(kv.get('t_ns', int(kv['t_us']) * 1000)),
                     'queue_wait_ms': float(kv['queue_wait_ms'])
                 })
             elif tag == 'raster_done':
@@ -145,15 +149,18 @@ def parse_diag_log(text):
                     'slice': int(kv['slice']),
                     'thread': int(kv['thread']),
                     't_us': int(kv['t_us']),
+                    't_ns': int(kv.get('t_ns', int(kv['t_us']) * 1000)),
                     'raster_ms': float(kv['raster_ms'])
                 })
             elif tag == 'paint_cleared':
                 t_rec['paint_cleared'].append(int(kv['t_us']))
             elif tag == 'wait_for_renders_start':
                 t_rec['wait_start'] = int(kv['t_us'])
+                t_rec['wait_start_ns'] = int(kv.get('t_ns', int(kv['t_us']) * 1000))
             elif tag == 'ipc_reply':
                 t_rec['reply'] = {
                     't_us': int(kv['t_us']),
+                    't_ns': int(kv.get('t_ns', int(kv['t_us']) * 1000)),
                     'poll_ticks': int(kv['poll_ticks']),
                     'wait_ms': float(kv['wait_ms'])
                 }
@@ -319,7 +326,7 @@ def test_unindexed_search(binary, pdf, queries, args, work, label, trial_idx):
                     if cnt > 0 and first_match_ms is None:
                         first_match_ms = (time.perf_counter() - t_q0) * 1000
                         break
-                    time.sleep(0.003)
+                    time.sleep(0.015)
 
                 command(instance, 'wait_for_search_to_finish', timeout=60)
                 total_search_ms = (time.perf_counter() - t_q0) * 1000
@@ -476,12 +483,18 @@ def test_contention_profile(binary, pdf, turn_pages, background_query, during_se
                 all_done_rel_ms = (max([r['t_us'] for r in d['raster_dones']], default=d['t_turn']) - d['t_turn']) / 1000.0 if d['raster_dones'] else 0.0
                 poll_ticks = d['reply']['poll_ticks'] if d.get('reply') else 0
                 ipc_wait_ms = d['reply']['wait_ms'] if d.get('reply') else 0.0
+                last_raster_ns = max([r['t_ns'] for r in target_raster]) if target_raster else (max([r['t_ns'] for r in d['raster_dones']]) if d['raster_dones'] else d['t_turn_ns'])
+                reply_ns = d['reply']['t_ns'] if d.get('reply') else last_raster_ns
+                raster_to_reply_ms = (reply_ns - last_raster_ns) / 1000000.0
+                nav_to_frame_ms = (reply_ns - d['t_turn_ns']) / 1000000.0
                 t['timing_diag'] = {
                     'queue_wait_ms': q_wait_ms,
                     'raster_ms': raster_ms,
                     'all_done_rel_ms': all_done_rel_ms,
                     'poll_ticks': poll_ticks,
-                    'ipc_wait_ms': ipc_wait_ms
+                    'ipc_wait_ms': ipc_wait_ms,
+                    'raster_to_reply_ms': raster_to_reply_ms,
+                    'nav_to_frame_ms': nav_to_frame_ms
                 }
     except Exception:
         pass
@@ -703,20 +716,20 @@ def write_summary_report(data, output_path):
         has_diag = any(t.get('timing_diag') for t in idle_turns + srch_turns)
         if has_diag:
             report.append(f'#### Timing Diagnostic Breakdown ({target_round["label"].capitalize()}: Render Worker vs Readiness Timer)\n')
-            report.append('| Page Destination | Mode | Worker Queue Wait | Target Page Raster | All Slices Done Rel to Turn | Readiness Poll Ticks | IPC Reply Wait |')
-            report.append('| :---: | :---: | :---: | :---: | :---: | :---: | :---: |')
+            report.append('| Page Destination | Mode | Worker Queue Wait | Target Page Raster | All Slices Done Rel to Turn | Readiness Poll Ticks | Raster -> IPC Reply | Navigation -> Frame | IPC Reply Wait |')
+            report.append('| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |')
             for it, st in zip(idle_turns, srch_turns):
                 p = it['page']
                 it_d = it.get('timing_diag')
                 st_d = st.get('timing_diag')
                 if it_d:
-                    report.append(f'| Page {p} | Idle | {it_d["queue_wait_ms"]:.2f} ms | {it_d["raster_ms"]:.1f} ms | +{it_d["all_done_rel_ms"]:.1f} ms | {it_d["poll_ticks"]} tick(s) | {it_d["ipc_wait_ms"]:.1f} ms |')
+                    report.append(f'| Page {p} | Idle | {it_d["queue_wait_ms"]:.2f} ms | {it_d["raster_ms"]:.1f} ms | +{it_d["all_done_rel_ms"]:.1f} ms | {it_d["poll_ticks"]} tick(s) | {it_d.get("raster_to_reply_ms", 0.0):.2f} ms | {it_d.get("nav_to_frame_ms", 0.0):.1f} ms | {it_d["ipc_wait_ms"]:.1f} ms |')
                 else:
-                    report.append(f'| Page {p} | Idle | N/A | N/A | N/A | N/A | {it["render_wait_ms"]:.1f} ms |')
+                    report.append(f'| Page {p} | Idle | N/A | N/A | N/A | N/A | N/A | N/A | {it["render_wait_ms"]:.1f} ms |')
                 if st_d:
-                    report.append(f'| Page {p} | **Active Search** | {st_d["queue_wait_ms"]:.2f} ms | {st_d["raster_ms"]:.1f} ms | +{st_d["all_done_rel_ms"]:.1f} ms | **{st_d["poll_ticks"]} tick(s)** | **{st_d["ipc_wait_ms"]:.1f} ms** |')
+                    report.append(f'| Page {p} | **Active Search** | {st_d["queue_wait_ms"]:.2f} ms | {st_d["raster_ms"]:.1f} ms | +{st_d["all_done_rel_ms"]:.1f} ms | **{st_d["poll_ticks"]} tick(s)** | **{st_d.get("raster_to_reply_ms", 0.0):.2f} ms** | **{st_d.get("nav_to_frame_ms", 0.0):.1f} ms** | **{st_d["ipc_wait_ms"]:.1f} ms** |')
                 else:
-                    report.append(f'| Page {p} | **Active Search** | N/A | N/A | N/A | N/A | {st["render_wait_ms"]:.1f} ms |')
+                    report.append(f'| Page {p} | **Active Search** | N/A | N/A | N/A | N/A | N/A | N/A | {st["render_wait_ms"]:.1f} ms |')
             report.append('\n')
 
     # Thread Profiling Section

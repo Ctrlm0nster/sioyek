@@ -35,6 +35,7 @@ struct RenderRequest {
     int slice_index = -1;
     int num_h_slices = 1;
     int num_v_slices = 1;
+    int64_t enqueue_ns = 0;
     int64_t enqueue_us = 0;
     bool operator==(const RenderRequest& o) const {
         return path == o.path &&

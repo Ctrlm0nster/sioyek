@@ -38,6 +38,11 @@ inline bool is_timing_diag_enabled() {
     return enabled;
 }
 
+inline int64_t timing_diag_now_ns() {
+    return std::chrono::duration_cast<std::chrono::nanoseconds>(
+        std::chrono::steady_clock::now().time_since_epoch()).count();
+}
+
 inline void log_timing_diag(const std::string& msg) {
     if (is_timing_diag_enabled()) {
         static std::mutex m;
