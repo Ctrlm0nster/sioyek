@@ -1,19 +1,372 @@
+# Sioyek mise task runner configuration
+# Covers the complete developer lifecycle: build, execution, testing, packaging, and benchmarking.
+
+# -----------------------------------------------------------------------------
+# 1. Development & Build
+# -----------------------------------------------------------------------------
+
 [tasks.build]
-description = "Build Sioyek with CMake and Ninja"
+description = "Build debug/dev binary with CMake and Ninja"
 run = "scripts/dev-build.sh"
+
+[tasks.build-release]
+description = "Build optimized release binary with CMake and Ninja"
+alias = ["release"]
+run = '''
+build_release() {
+  local build_dir="${SIOYEK_RELEASE_DIR:-build/release}"
+  cmake -S . -B "$build_dir" -G Ninja -DCMAKE_BUILD_TYPE=Release "$@"
+  cmake --build "$build_dir" --parallel "${SIOYEK_JOBS:-2}"
+}
+build_release "$@"
+'''
+
+[tasks.clean]
+description = "Clean build artifacts and intermediate caches"
+run = '''
+clean_all() {
+  for dir in "${SIOYEK_BUILD_DIR:-build/dev}" "${SIOYEK_RELEASE_DIR:-build/release}"; do
+    if [ -f "$dir/build.ninja" ]; then
+      cmake --build "$dir" --target clean
+    fi
+  done
+  find scripts tests pdf_viewer -type d -name "__pycache__" -exec rm -rf {} + 2>/dev/null || true
+  rm -rf build/dev/tests build/doxygen build/benchmark-fixtures build/mise-bench-* build/arch/src build/arch/pkg
+}
+clean_all "$@"
+'''
+
+# -----------------------------------------------------------------------------
+# 2. Execution
+# -----------------------------------------------------------------------------
 
 [tasks.reader]
 description = "Launch the development reader"
 run = "scripts/dev-run.sh"
 
+# -----------------------------------------------------------------------------
+# 3. Testing
+# -----------------------------------------------------------------------------
+
 [tasks.test]
-description = "Run CTest in the development build directory"
+description = "Run CTest unit tests in the development build directory"
+alias = ["check"]
 run = 'ctest --test-dir "${SIOYEK_BUILD_DIR:-build/dev}" --output-on-failure'
 
+[tasks.test-all]
+description = "Run CTest plus all standalone regression test suites"
+alias = ["check-all"]
+run = '''
+run_all_tests() {
+  local bin="${SIOYEK_BUILD_DIR:-build/dev}/sioyek"
+  if [ ! -x "$bin" ]; then
+    echo "Development binary not found at $bin. Run 'mise run build' first." >&2
+    exit 1
+  fi
+  local baseline="${SIOYEK_BASELINE_BIN:-$(if [ -x /usr/bin/sioyek ]; then echo /usr/bin/sioyek; else echo "$bin"; fi)}"
+
+  echo "=== 1/6 CTest Unit Tests ==="
+  ctest --test-dir "${SIOYEK_BUILD_DIR:-build/dev}" --output-on-failure "$@"
+
+  echo "=== 2/6 Default Profile Regression Test ==="
+  python3 scripts/test-default-profile.py "$bin"
+
+  echo "=== 3/6 Render Workers Regression Test ==="
+  python3 scripts/test-render-workers.py "$bin" --allow-qt-vuid
+
+  echo "=== 4/6 Same-Width Overview Regression Test ==="
+  python3 scripts/test-overview-same-width.py "$bin"
+
+  echo "=== 5/6 Event Readiness Regression Test ==="
+  python3 scripts/test-event-readiness.py "$baseline" "$bin"
+
+  echo "=== 6/6 Wayland Native Keyboard Test ==="
+  if [ -n "${HYPRLAND_INSTANCE_SIGNATURE:-}" ] && command -v wtype >/dev/null 2>&1; then
+    python3 scripts/test-wayland.py "$bin"
+  else
+    echo "Notice: skipping test-wayland (requires active Hyprland session and wtype)"
+  fi
+
+  echo "All tests passed successfully!"
+}
+run_all_tests "$@"
+'''
+
+[tasks.test-overview]
+description = "Run same-width overview regression test"
+run = '''
+test_overview() {
+  local bin="${SIOYEK_BUILD_DIR:-build/dev}/sioyek"
+  if [ $# -gt 0 ] && [ "${1#-}" = "$1" ]; then
+    bin="$1"
+    shift
+  fi
+  if [ ! -x "$bin" ]; then
+    echo "Development binary not found at $bin. Run 'mise run build' first." >&2
+    exit 1
+  fi
+  python3 scripts/test-overview-same-width.py "$bin" "$@"
+}
+test_overview "$@"
+'''
+
+[tasks.test-readiness]
+description = "Run event-driven render readiness regression test"
+run = '''
+test_readiness() {
+  local bin="${SIOYEK_BUILD_DIR:-build/dev}/sioyek"
+  local baseline="${SIOYEK_BASELINE_BIN:-$(if [ -x /usr/bin/sioyek ]; then echo /usr/bin/sioyek; else echo "$bin"; fi)}"
+  if [ ! -x "$bin" ]; then
+    echo "Development binary not found at $bin. Run 'mise run build' first." >&2
+    exit 1
+  fi
+  python3 scripts/test-event-readiness.py "$baseline" "$bin" "$@"
+}
+test_readiness "$@"
+'''
+
+[tasks.test-workers]
+description = "Run render worker scheduling and search regression test"
+run = '''
+test_workers() {
+  local bin="${SIOYEK_BUILD_DIR:-build/dev}/sioyek"
+  if [ $# -gt 0 ] && [ "${1#-}" = "$1" ]; then
+    bin="$1"
+    shift
+  fi
+  if [ ! -x "$bin" ]; then
+    echo "Development binary not found at $bin. Run 'mise run build' first." >&2
+    exit 1
+  fi
+  local vuid_arg=()
+  case " $* " in
+    *"--allow-qt-vuid"*|*"--no-allow-qt-vuid"*) ;;
+    *) vuid_arg=(--allow-qt-vuid) ;;
+  esac
+  python3 scripts/test-render-workers.py "$bin" "${vuid_arg[@]}" "$@"
+}
+test_workers "$@"
+'''
+
+[tasks.test-wayland]
+description = "Run native Wayland keyboard and onscreen smoke test (Hyprland)"
+run = '''
+test_wayland() {
+  local bin="${SIOYEK_BUILD_DIR:-build/dev}/sioyek"
+  if [ $# -gt 0 ] && [ "${1#-}" = "$1" ]; then
+    bin="$1"
+    shift
+  fi
+  if [ ! -x "$bin" ]; then
+    echo "Development binary not found at $bin. Run 'mise run build' first." >&2
+    exit 1
+  fi
+  python3 scripts/test-wayland.py "$bin" "$@"
+}
+test_wayland "$@"
+'''
+
+# -----------------------------------------------------------------------------
+# 4. Packaging & Validation
+# -----------------------------------------------------------------------------
+
+[tasks.package]
+description = "Prepare Arch package snapshot and build with makepkg"
+run = '''
+pkg_build() {
+  python3 scripts/prepare-arch-package.py
+  (cd build/arch && makepkg -f "$@")
+}
+pkg_build "$@"
+'''
+
+[tasks.test-package]
+description = "Run package lifecycle test in isolated user namespace"
+run = '''
+test_pkg() {
+  local pkg="${1:-$(python3 -c "from pathlib import Path; pkgs = sorted([p for p in Path('build/arch').glob('sioyek-ctrlm0nster-*.pkg.tar.zst') if '-debug-' not in p.name]); print(pkgs[-1] if pkgs else '')")}"
+  if [ -z "$pkg" ] || [ ! -f "$pkg" ]; then
+    echo "No package found in build/arch. Run 'mise run package' first." >&2
+    exit 1
+  fi
+  python3 scripts/test-package-lifecycle.py "$pkg"
+}
+test_pkg "$@"
+'''
+
+[tasks.verify-release]
+description = "Run release verification script on built package and source snapshot"
+run = '''
+verify_rel() {
+  local pkg="${1:-$(python3 -c "from pathlib import Path; pkgs = sorted([p for p in Path('build/arch').glob('sioyek-ctrlm0nster-*.pkg.tar.zst') if '-debug-' not in p.name]); print(pkgs[-1] if pkgs else '')")}"
+  local src="${2:-build/arch/sioyek-source.tar.gz}"
+  if [ -z "$pkg" ] || [ ! -f "$pkg" ]; then
+    echo "No package found in build/arch. Run 'mise run package' first." >&2
+    exit 1
+  fi
+  if [ ! -f "$src" ]; then
+    echo "No source archive found at $src. Run 'mise run package' first." >&2
+    exit 1
+  fi
+  python3 scripts/verify-release.py "$pkg" "$src"
+}
+verify_rel "$@"
+'''
+
+# -----------------------------------------------------------------------------
+# 5. Benchmarking & Fixtures
+# -----------------------------------------------------------------------------
+
 [tasks.fixtures]
-description = "Generate the synthetic PDF benchmark fixtures"
+description = "Generate synthetic PDF benchmark fixtures"
 run = "python3 scripts/create-benchmark-fixtures.py build/benchmark-fixtures"
 
 [tasks.bench-scan]
-description = "Run the rendering benchmark on the synthetic scan"
-run = "python3 scripts/benchmark-rendering.py --pdf build/benchmark-fixtures/image-only.pdf"
+description = "Run rendering benchmark on synthetic scan fixture"
+run = '''
+bench_scan() {
+  local out_arg=()
+  local base_arg=()
+  local cand_arg=()
+  case " $* " in
+    *" --output "*) ;;
+    *) out_arg=(--output build/mise-bench-scan) ;;
+  esac
+  case " $* " in
+    *" --baseline "*) ;;
+    *) base_arg=(--baseline "${SIOYEK_BASELINE_BIN:-/usr/bin/sioyek}") ;;
+  esac
+  case " $* " in
+    *" --candidate "*) ;;
+    *) cand_arg=(--candidate "${SIOYEK_CANDIDATE_BIN:-${SIOYEK_BUILD_DIR:-build/dev}/sioyek}") ;;
+  esac
+  if [ $# -eq 0 ]; then
+    python3 scripts/benchmark-rendering.py \
+      "${base_arg[@]}" "${cand_arg[@]}" \
+      --pdf build/benchmark-fixtures/image-only.pdf \
+      "${out_arg[@]}" --normal-only
+  else
+    python3 scripts/benchmark-rendering.py \
+      "${base_arg[@]}" "${cand_arg[@]}" \
+      --pdf build/benchmark-fixtures/image-only.pdf \
+      "${out_arg[@]}" "$@"
+  fi
+}
+bench_scan "$@"
+'''
+
+[tasks.bench-textbook]
+description = "Run rendering benchmark on dense textbook"
+run = '''
+bench_textbook() {
+  local out_arg=()
+  local base_arg=()
+  local cand_arg=()
+  case " $* " in
+    *" --output "*) ;;
+    *) out_arg=(--output build/mise-bench-textbook) ;;
+  esac
+  case " $* " in
+    *" --baseline "*) ;;
+    *) base_arg=(--baseline "${SIOYEK_BASELINE_BIN:-/usr/bin/sioyek}") ;;
+  esac
+  case " $* " in
+    *" --candidate "*) ;;
+    *) cand_arg=(--candidate "${SIOYEK_CANDIDATE_BIN:-${SIOYEK_BUILD_DIR:-build/dev}/sioyek}") ;;
+  esac
+  if [ $# -eq 0 ]; then
+    python3 scripts/benchmark-rendering.py \
+      "${base_arg[@]}" "${cand_arg[@]}" \
+      --pdf textbook_of_engineering_matematics.pdf \
+      "${out_arg[@]}" --normal-only
+  else
+    python3 scripts/benchmark-rendering.py \
+      "${base_arg[@]}" "${cand_arg[@]}" \
+      --pdf textbook_of_engineering_matematics.pdf \
+      "${out_arg[@]}" "$@"
+  fi
+}
+bench_textbook "$@"
+'''
+
+[tasks.bench-search]
+description = "Run search responsiveness and indexing benchmark suite"
+run = '''
+bench_search() {
+  local mixed_pdf="${SIOYEK_MIXED_PDF:-$(if [ -f build/real-documents/copies/02.pdf ]; then echo build/real-documents/copies/02.pdf; else echo build/benchmark-fixtures/annotated.pdf; fi)}"
+  local base_arg=()
+  local cand_arg=()
+  local text_arg=()
+  local mixed_arg=()
+  local out_arg=()
+  case " $* " in
+    *" --baseline "*) ;;
+    *) base_arg=(--baseline "${SIOYEK_BASELINE_BIN:-/usr/bin/sioyek}") ;;
+  esac
+  case " $* " in
+    *" --candidate "*) ;;
+    *) cand_arg=(--candidate "${SIOYEK_CANDIDATE_BIN:-${SIOYEK_BUILD_DIR:-build/dev}/sioyek}") ;;
+  esac
+  case " $* " in
+    *" --text-pdf "*) ;;
+    *) text_arg=(--text-pdf textbook_of_engineering_matematics.pdf) ;;
+  esac
+  case " $* " in
+    *" --mixed-pdf "*) ;;
+    *) mixed_arg=(--mixed-pdf "$mixed_pdf") ;;
+  esac
+  case " $* " in
+    *" --output "*) ;;
+    *) out_arg=(--output build/mise-bench-search) ;;
+  esac
+  if [ $# -eq 0 ]; then
+    python3 scripts/benchmark-search.py \
+      "${base_arg[@]}" "${cand_arg[@]}" \
+      "${text_arg[@]}" "${mixed_arg[@]}" \
+      "${out_arg[@]}" --rounds 1
+  else
+    python3 scripts/benchmark-search.py \
+      "${base_arg[@]}" "${cand_arg[@]}" \
+      "${text_arg[@]}" "${mixed_arg[@]}" \
+      "${out_arg[@]}" "$@"
+  fi
+}
+bench_search "$@"
+'''
+
+[tasks.bench-workers]
+description = "Run worker thread sweep and scheduling benchmark"
+run = '''
+bench_workers() {
+  local base_arg=()
+  local cand_arg=()
+  local pdf_arg=()
+  local out_arg=()
+  case " $* " in
+    *" --baseline "*) ;;
+    *) base_arg=(--baseline "${SIOYEK_BASELINE_BIN:-/usr/bin/sioyek}") ;;
+  esac
+  case " $* " in
+    *" --candidate "*) ;;
+    *) cand_arg=(--candidate "${SIOYEK_CANDIDATE_BIN:-${SIOYEK_BUILD_DIR:-build/dev}/sioyek}") ;;
+  esac
+  case " $* " in
+    *" --pdf "*) ;;
+    *) pdf_arg=(--pdf tutorial.pdf) ;;
+  esac
+  case " $* " in
+    *" --output "*) ;;
+    *) out_arg=(--output build/mise-bench-workers) ;;
+  esac
+  if [ $# -eq 0 ]; then
+    python3 scripts/benchmark-workers.py \
+      "${base_arg[@]}" "${cand_arg[@]}" \
+      "${pdf_arg[@]}" "${out_arg[@]}" --rounds 1
+  else
+    python3 scripts/benchmark-workers.py \
+      "${base_arg[@]}" "${cand_arg[@]}" \
+      "${pdf_arg[@]}" "${out_arg[@]}" "$@"
+  fi
+}
+bench_workers "$@"
+'''

@@ -70,25 +70,103 @@ scripts/dev-build.sh
 scripts/dev-run.sh "$PWD/tutorial.pdf"
 ```
 
-### Optional mise tasks
+### Mise task runner
 
-From the repository root, review `mise.toml` and trust it once. The tasks use
-the existing Arch dependencies and development scripts.
+The repository provides a complete developer task runner in `mise.toml` covering the entire lifecycle: build, run, test, package, and benchmark.
+
+To use it, trust the configuration once:
 
 ```sh
 mise trust ./mise.toml
+```
+
+View all available tasks at any time:
+
+```sh
+mise tasks
+```
+
+#### 1. Development & Build
+
+- **`mise run build`**: Builds the development/debug binary using CMake and Ninja (`scripts/dev-build.sh`) into `${SIOYEK_BUILD_DIR:-build/dev}`.
+- **`mise run build-release`** (alias: **`release`**): Configures and compiles an optimized release binary using CMake and Ninja into `${SIOYEK_RELEASE_DIR:-build/release}`.
+- **`mise run clean`**: Cleans build artifacts via CMake/Ninja across `build/dev` and `build/release`, and removes intermediate Python bytecode caches (`__pycache__`), benchmark caches, and package build directories.
+
+```sh
 mise run build
-mise run test
+mise run build-release
+mise run clean
+```
+
+#### 2. Execution
+
+- **`mise run reader [-- <arguments>]`**: Launches the development reader (`scripts/dev-run.sh`) with `--new-instance` protection.
+
+```sh
 mise run reader -- "$PWD/tutorial.pdf"
 ```
 
-To compare two builds on the synthetic scan in a Wayland session:
+#### 3. Testing
+
+- **`mise run test`** (alias: **`check`**): Runs CTest unit tests in the development build directory (`renderer_response_state`, `modern_api_compatibility`, `mupdf_source_staging`, `mupdf_runtime`, `vulkan_rendering`, `qt_vulkan_lifecycle`). Additional CTest arguments can be passed after `--`.
+- **`mise run test-all`** (alias: **`check-all`**): Runs CTest plus all standalone regression test suites sequentially:
+  1. CTest unit tests
+  2. Fresh default profile regression test (`scripts/test-default-profile.py`)
+  3. Render worker queue and scheduling test (`scripts/test-render-workers.py`)
+  4. Same-width overview regression test (`scripts/test-overview-same-width.py`)
+  5. Event readiness regression test (`scripts/test-event-readiness.py`)
+  6. Native Wayland keyboard smoke test (`scripts/test-wayland.py`, automatically runs when Hyprland and `wtype` are active)
+- **`mise run test-overview`**: Runs the same-width overview regression test on `build/dev/sioyek`.
+- **`mise run test-readiness`**: Compares event-driven render readiness between baseline (`/usr/bin/sioyek`) and candidate (`build/dev/sioyek`).
+- **`mise run test-workers`**: Tests render worker scheduling, dynamic gamma, and cancellation.
+- **`mise run test-wayland [-- --onscreen]`**: Runs native Wayland keyboard input smoke test on Hyprland (`--onscreen` captures compositor pixel updates with grim).
+
+```sh
+mise run test
+mise run test-all
+mise run test-overview
+mise run test-readiness
+mise run test-workers
+mise run test-wayland
+```
+
+#### 4. Packaging & Validation
+
+- **`mise run package [-- <makepkg-flags>]`**: Prepares a complete, reproducible source archive snapshot via `scripts/prepare-arch-package.py` and builds the Arch Linux package in `build/arch` using `makepkg`.
+- **`mise run test-package [-- <pkg-path>]`**: Runs the pacman package lifecycle test in an isolated, unprivileged user namespace (`scripts/test-package-lifecycle.py`). Automatically selects the latest non-debug package from `build/arch/` if no argument is passed.
+- **`mise run verify-release [-- <pkg> <src>]`**: Runs release verification (`scripts/verify-release.py`) checking package paths, conflicts, ELF hardening (PIE, Full RELRO, non-exec stack), desktop integration, and exact submodule checksums against `sioyek-source.tar.gz`.
+
+```sh
+mise run package
+mise run test-package
+mise run verify-release
+```
+
+#### 5. Benchmarking & Fixtures
+
+- **`mise run fixtures`**: Generates synthetic deterministic benchmark fixtures (`large-text.pdf`, `annotated.pdf`, `image-only.pdf`) in `build/benchmark-fixtures`.
+- **`mise run bench-scan [-- <args>]`**: Runs the rendering benchmark on the synthetic image scan fixture. When invoked without arguments, it benchmarks `/usr/bin/sioyek` against `build/dev/sioyek` in normal mode.
+- **`mise run bench-textbook [-- <args>]`**: Runs the rendering benchmark on `textbook_of_engineering_matematics.pdf`.
+- **`mise run bench-search [-- <args>]`**: Runs the search responsiveness, indexing, and contention benchmark suite (`scripts/benchmark-search.py`).
+- **`mise run bench-workers [-- <args>]`**: Runs worker thread sweep and idle scheduling benchmark (`scripts/benchmark-workers.py`).
 
 ```sh
 mise run fixtures
-mise run bench-scan -- --baseline /usr/bin/sioyek --candidate build/dev/sioyek \
-  --output build/mise-bench-scan --normal-only --page-turns 31
+mise run bench-scan
+mise run bench-textbook
+mise run bench-search
+mise run bench-workers
 ```
+
+#### Environment Overrides
+
+The mise tasks honor the following environment variables:
+
+- `SIOYEK_BUILD_DIR`: Development build directory (default: `build/dev`)
+- `SIOYEK_RELEASE_DIR`: Release build directory (default: `build/release`)
+- `SIOYEK_BASELINE_BIN`: Baseline executable path for comparisons (default: `/usr/bin/sioyek`)
+- `SIOYEK_CANDIDATE_BIN`: Candidate executable path for comparisons (default: `${SIOYEK_BUILD_DIR:-build/dev}/sioyek`)
+- `SIOYEK_JOBS`: Parallel compilation jobs for Ninja (default: 2)
 
 ### Direct CMake commands
 
@@ -179,7 +257,24 @@ and shutdown notify the workers. Queue/busy state uses the same mutex as each
 wait predicate. Closing a view cancels its queued search and waits for an active
 search to release its borrowed result pointers before destroying them. Cancellation
 finishes the current page; it does not interrupt MuPDF in the middle of a page.
-The existing GUI readiness timer (100 ms) and cache collection timer remain.
+Render readiness checks exact visible slices when the IPC command arrives and
+when a render completion is handled on the GUI thread. A 100 ms timer is the
+fallback. Search progress updates can refresh the UI independently.
+
+Directional lookahead is enabled by default. During sequential reading, the
+renderer can prepare one adjacent page in the direction of travel. Visible
+requests take priority. Navigation changes can discard stale queued lookahead,
+while an in-flight raster may still complete. Speculative rasters stay as CPU
+pixmaps until a view draws them. Set `directional_lookahead 0` in
+`prefs_user.config` to disable it.
+
+In a native Wayland comparison of `bdd77cd1` and `698d5680`, the sampled
+sequential turns on a scan took 33–73 ms before lookahead and 16–24 ms after.
+The dense-textbook rapid-jump median fell from 73 to 31 ms, with P95 moving
+from 73 to 68 ms. The tested scan's median rapid-jump wait stayed near 40 ms,
+and sampled framebuffer captures matched. These timings describe the tested
+workloads and include IPC readiness, with display presentation measured separately
+only if compositor feedback is collected.
 
 In-flight render/search operations retain their own MuPDF document references;
 clearing the cache releases only its references. An epoch check prevents an open
@@ -237,9 +332,9 @@ python3 scripts/benchmark-rendering.py \
 Both use temporary profiles, alternate trial order and save raw JSON, reader logs
 and framebuffer PNGs. Equal logical and framebuffer dimensions are required across
 trials. The worker benchmark disables indexed search and measures time to the first
-result, render readiness and per-thread idle context switches. Readiness uses
-the existing 100 ms timer and can precede the final paint/exact-zoom texture, so
-it is a coarse IPC observation. Compare settled frames separately. Avoid mouse
+result, render readiness and per-thread idle context switches. Readiness
+timings end at the IPC reply. Framebuffer captures verify output after the reply
+and do not measure when the compositor presented the frame. Avoid mouse
 and keyboard interaction with the readers during measurements; selection overlays
 can change the workload and captured pixels.
 The rendering benchmark periodically verifies the requested view and rejects
