@@ -1,0 +1,19 @@
+[tasks.build]
+description = "Build Sioyek with CMake and Ninja"
+run = "scripts/dev-build.sh"
+
+[tasks.reader]
+description = "Launch the development reader"
+run = "scripts/dev-run.sh"
+
+[tasks.test]
+description = "Run CTest in the development build directory"
+run = 'ctest --test-dir "${SIOYEK_BUILD_DIR:-build/dev}" --output-on-failure'
+
+[tasks.fixtures]
+description = "Generate the synthetic PDF benchmark fixtures"
+run = "python3 scripts/create-benchmark-fixtures.py build/benchmark-fixtures"
+
+[tasks.bench-scan]
+description = "Run the rendering benchmark on the synthetic scan"
+run = "python3 scripts/benchmark-rendering.py --pdf build/benchmark-fixtures/image-only.pdf"

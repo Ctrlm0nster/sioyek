@@ -70,6 +70,28 @@ scripts/dev-build.sh
 scripts/dev-run.sh "$PWD/tutorial.pdf"
 ```
 
+### Optional mise tasks
+
+From the repository root, review `mise.toml` and trust it once. The tasks use
+the existing Arch dependencies and development scripts.
+
+```sh
+mise trust ./mise.toml
+mise run build
+mise run test
+mise run reader -- "$PWD/tutorial.pdf"
+```
+
+To compare two builds on the synthetic scan in a Wayland session:
+
+```sh
+mise run fixtures
+mise run bench-scan -- --baseline /usr/bin/sioyek --candidate build/dev/sioyek \
+  --output build/mise-bench-scan --normal-only --page-turns 31
+```
+
+### Direct CMake commands
+
 Equivalent direct commands:
 
 ```sh
