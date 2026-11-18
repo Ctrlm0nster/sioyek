@@ -9,7 +9,7 @@ Tests:
 
 Measures:
 - Last required raster completion -> IPC reply
-- Navigation -> first correct frame
+- Navigation -> Readiness Reply
 - Nanosecond timestamps and millisecond latencies
 - Frame production vs polling wait breakdown
 - Immediate framebuffer screenshot verification
@@ -354,19 +354,28 @@ def analyze_log(log_text, label):
 
 
 def main():
-    baseline_bin = Path(sys.argv[1]) if len(sys.argv) > 1 else Path('/usr/bin/sioyek')
-    candidate_bin = Path(sys.argv[2]) if len(sys.argv) > 2 else Path('build/dev/sioyek')
+    parser = argparse.ArgumentParser(description='Benchmark event-driven render readiness vs baseline/parent')
+    parser.add_argument('baseline_bin', nargs='?', default='/usr/bin/sioyek', help='Baseline/parent binary path')
+    parser.add_argument('candidate_bin', nargs='?', default='build/dev/sioyek', help='Candidate binary path')
+    parser.add_argument('--baseline-label', default='Baseline', help='Label for baseline/parent')
+    parser.add_argument('--candidate-label', default='Candidate', help='Label for candidate')
+    args = parser.parse_args()
 
-    res_base = run_benchmark(baseline_bin, 'Baseline (-5)')
-    diag_base = analyze_log(res_base['log'], 'Baseline (-5)')
+    baseline_bin = Path(args.baseline_bin)
+    candidate_bin = Path(args.candidate_bin)
+    base_lbl = args.baseline_label
+    cand_lbl = args.candidate_label
 
-    res_cand = run_benchmark(candidate_bin, 'Candidate')
-    diag_cand = analyze_log(res_cand['log'], 'Candidate')
+    res_base = run_benchmark(baseline_bin, base_lbl)
+    diag_base = analyze_log(res_base['log'], base_lbl)
+
+    res_cand = run_benchmark(candidate_bin, cand_lbl)
+    diag_cand = analyze_log(res_cand['log'], cand_lbl)
 
     print("\n" + "="*80)
-    print("COMPARATIVE SUMMARY TABLE: BASELINE (-5) vs CANDIDATE")
+    print(f"COMPARATIVE SUMMARY TABLE: {base_lbl.upper()} vs {cand_lbl.upper()}")
     print("="*80)
-    print(f"{'Scenario':<25} | {'Metric':<30} | {'Baseline (-5)':<15} | {'Candidate':<15} | {'Improvement'}")
+    print(f"{'Scenario':<25} | {'Metric':<30} | {base_lbl:<15} | {cand_lbl:<15} | {'Improvement'}")
     print("-" * 105)
 
     scenarios = [
@@ -381,7 +390,7 @@ def main():
         b_nav = res_base[key]['nav_ms']
         c_nav = res_cand[key]['nav_ms']
         diff_nav = b_nav - c_nav
-        print(f"{title:<25} | {'Navigation -> Frame':<30} | {b_nav:>11.2f} ms   | {c_nav:>11.2f} ms   | {diff_nav:+8.2f} ms ({diff_nav/b_nav*100:+.1f}%)")
+        print(f"{title:<25} | {'Navigation -> Readiness Reply':<30} | {b_nav:>11.2f} ms   | {c_nav:>11.2f} ms   | {diff_nav:+8.2f} ms ({diff_nav/b_nav*100:+.1f}%)")
 
         b_wait = res_base[key]['wait_ms']
         c_wait = res_cand[key]['wait_ms']
@@ -392,10 +401,10 @@ def main():
     print("\n" + "="*80)
     print("INTERNAL DIAGNOSTICS: Last Required Raster -> IPC Reply & Polling")
     print("="*80)
-    print("Baseline (-5) Polling Latencies:")
+    print(f"{base_lbl} Polling Latencies:")
     for i, d in enumerate(diag_base):
         print(f"  Step {i+1}: poll_ticks={d['poll_ticks']}, wait_ms={d['wait_ms']:.3f} ms, raster->reply={d['raster_to_reply_ms']:.3f} ms")
-    print("Candidate Event-Driven Latencies:")
+    print(f"{cand_lbl} Event-Driven Latencies:")
     for i, d in enumerate(diag_cand):
         print(f"  Step {i+1}: poll_ticks={d['poll_ticks']}, wait_ms={d['wait_ms']:.3f} ms, raster->reply={d['raster_to_reply_ms']:.3f} ms")
 

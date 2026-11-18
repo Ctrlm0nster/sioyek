@@ -716,7 +716,7 @@ def write_summary_report(data, output_path):
         has_diag = any(t.get('timing_diag') for t in idle_turns + srch_turns)
         if has_diag:
             report.append(f'#### Timing Diagnostic Breakdown ({target_round["label"].capitalize()}: Render Worker vs Readiness Timer)\n')
-            report.append('| Page Destination | Mode | Worker Queue Wait | Target Page Raster | All Slices Done Rel to Turn | Readiness Poll Ticks | Raster -> IPC Reply | Navigation -> Frame | IPC Reply Wait |')
+            report.append('| Page Destination | Mode | Worker Queue Wait | Target Page Raster | All Slices Done Rel to Turn | Readiness Poll Ticks | Raster -> IPC Reply | Navigation -> Readiness Reply | IPC Reply Wait |')
             report.append('| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |')
             for it, st in zip(idle_turns, srch_turns):
                 p = it['page']
