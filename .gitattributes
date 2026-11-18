@@ -61,3 +61,13 @@
 #*.PDF   diff=astextplain
 #*.rtf   diff=astextplain
 #*.RTF   diff=astextplain
+
+###############################################################################
+# GitHub Linguist overrides: mark vendored third-party code
+###############################################################################
+pdf_viewer/sqlite3.* linguist-vendored
+pdf_viewer/shell.c linguist-vendored
+pdf_viewer/synctex/* linguist-vendored
+pdf_viewer/rapidfuzz_amalgamated.hpp linguist-vendored
+fzf/* linguist-vendored
+
