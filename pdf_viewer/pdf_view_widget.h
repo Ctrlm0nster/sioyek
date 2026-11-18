@@ -36,6 +36,20 @@ enum HighlightRenderFlags
     HRF_INVERTED = 1 << 4
 };
 
+struct PageSliceInfo {
+    int index = -1;
+    int i = 0;
+    NormalizedWindowRect window_rect;
+};
+
+struct PageRenderParams {
+    float zoom_level = 1.0f;
+    int nh = 1;
+    int nv = 1;
+    bool is_sliced = false;
+    std::vector<PageSliceInfo> visible_slices;
+};
+
 
 
 struct SceneResources {
@@ -240,6 +254,7 @@ public:
     void goto_search_result(int offset, bool overview = false);
     void render_overview(OverviewState overview);
     void render_page(int page_number, bool in_overview=false, ColorPalette forced_palette=ColorPalette::None, bool stencils_allowed=true);
+    bool get_page_render_params(int page_number, bool in_overview, PageRenderParams& out);
     bool are_visible_pages_rendered();
     bool get_is_searching(float* prog);
     void search_text(const std::wstring& text, SearchCaseSensitivity case_sensitive = SearchCaseSensitivity::CaseInsensitive, bool regex = false, std::optional<std::pair<int, int>> range = {});

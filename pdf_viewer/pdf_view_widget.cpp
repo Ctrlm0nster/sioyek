@@ -814,16 +814,16 @@ Document* PdfViewWidget::doc(bool overview){
     return document_view->get_document();
 }
 
-void PdfViewWidget::render_page(int page_number, bool in_overview, ColorPalette forced_color_palette, bool stencils_allowed) {
+bool PdfViewWidget::get_page_render_params(int page_number, bool in_overview, PageRenderParams& out) {
+    if (!valid_document()) return false;
+    Document* d = doc(in_overview);
+    if (!d) return false;
+    if (page_number < 0 || page_number >= d->num_pages()) return false;
 
-    if (!valid_document()) return;
-
-    int nh, nv;
-
-    float page_width = doc(in_overview)->get_page_width(page_number);
-    float page_height = doc(in_overview)->get_page_height(page_number);
+    float page_width = d->get_page_width(page_number);
+    float page_height = d->get_page_height(page_number);
     PagelessDocumentRect page_rect({ 0, 0, page_width, page_height });
-    if ((page_width < 0) || (page_height < 0)) return;
+    if ((page_width <= 0) || (page_height <= 0)) return false;
 
     float zoom_level = in_overview ? get_overview_zoom_level() : document_view->get_zoom_level();
 
@@ -834,24 +834,26 @@ void PdfViewWidget::render_page(int page_number, bool in_overview, ColorPalette 
         zoom_level *= factor;
     }
 
+    int nh = 1, nv = 1;
     bool is_sliced = num_slices_for_page_rect(page_rect, &nh, &nv);
 
+    out.zoom_level = zoom_level;
+    out.nh = nh;
+    out.nv = nv;
+    out.is_sliced = is_sliced;
+    out.visible_slices.clear();
+
+    NormalizedWindowRect full_window_rect;
+    full_window_rect.x0 = -1.0f;
+    full_window_rect.x1 = 1.0f;
+    full_window_rect.y0 = -1.5f;
+    full_window_rect.y1 = 1.5f;
+
     for (int i = 0; i < nh * nv; i++) {
-        int v_index = i / nh;
-        int h_index = i % nh;
+        int index = is_sliced ? i : -1;
 
-        int rendered_width = -1;
-        int rendered_height = -1;
-
-        int index = i;
-
-        if (!is_sliced) {
-            index = -1;
-        }
-
-        // todo: just replace this with page_width and page_height from above
-        float slice_document_width = doc(in_overview)->get_page_width(page_number);
-        float slice_document_height = doc(in_overview)->get_page_height(page_number);
+        float slice_document_width = d->get_page_width(page_number);
+        float slice_document_height = d->get_page_height(page_number);
         PagelessDocumentRect slice_document_rect;
         slice_document_rect.x0 = 0;
         slice_document_rect.x1 = slice_document_width;
@@ -863,17 +865,37 @@ void PdfViewWidget::render_page(int page_number, bool in_overview, ColorPalette 
             document_to_overview_rect(DocumentRect(slice_document_rect, page_number)) :
             DocumentRect(slice_document_rect, page_number).to_window_normalized(document_view);
 
-        // we add some slack so we pre-render nearby slices
-        NormalizedWindowRect full_window_rect;
-        full_window_rect.x0 = -1;
-        full_window_rect.x1 = 1;
-        full_window_rect.y0 = -1.5f;
-        full_window_rect.y1 = 1.5f;
-
         // don't render invisible slices
         if (is_sliced && (!rects_intersect(slice_window_rect, full_window_rect))) {
             continue;
         }
+
+        out.visible_slices.push_back({index, i, slice_window_rect});
+    }
+
+    return true;
+}
+
+void PdfViewWidget::render_page(int page_number, bool in_overview, ColorPalette forced_color_palette, bool stencils_allowed) {
+
+    PageRenderParams params;
+    if (!get_page_render_params(page_number, in_overview, params)) return;
+
+    int nh = params.nh;
+    int nv = params.nv;
+    float zoom_level = params.zoom_level;
+    bool is_sliced = params.is_sliced;
+
+    for (const auto& slice : params.visible_slices) {
+        int i = slice.i;
+        int index = slice.index;
+        NormalizedWindowRect slice_window_rect = slice.window_rect;
+
+        int v_index = i / nh;
+        int h_index = i % nh;
+
+        int rendered_width = -1;
+        int rendered_height = -1;
 
         RenderHandle texture = pdf_renderer->find_rendered_page(doc(in_overview)->get_path(),
             page_number,
@@ -1123,6 +1145,27 @@ void PdfViewWidget::render_page(int page_number, bool in_overview, ColorPalette 
 bool PdfViewWidget::are_visible_pages_rendered() {
     if (!valid_document()) return true;
 
+    float display_scale = devicePixelRatioF();
+    bool all_rendered = true;
+
+    auto check_page = [&](int page_number, bool in_overview) {
+        PageRenderParams params;
+        if (!get_page_render_params(page_number, in_overview, params)) return true;
+
+        Document* d = doc(in_overview);
+        std::wstring path = d->get_path();
+        bool should_render_annotations = d->should_render_pdf_annotations();
+
+        bool page_all_rendered = true;
+        for (const auto& slice : params.visible_slices) {
+            if (!pdf_renderer->is_page_rendered(path, page_number, should_render_annotations, slice.index, params.nh, params.nv, params.zoom_level, display_scale)) {
+                page_all_rendered = false;
+                pdf_renderer->add_request(path, page_number, should_render_annotations, params.zoom_level, display_scale, slice.index, params.nh, params.nv);
+            }
+        }
+        return page_all_rendered;
+    };
+
     std::vector<int> pages_to_check;
     if (document_view->is_presentation_mode()) {
         auto maybe_pres_page = document_view->get_presentation_page_number();
@@ -1141,94 +1184,20 @@ bool PdfViewWidget::are_visible_pages_rendered() {
         document_view->get_visible_pages(document_view->get_view_height(), pages_to_check);
     }
 
-    if (pages_to_check.empty()) return true;
-
-    bool all_rendered = true;
-    float base_zoom_level = document_view->get_zoom_level();
-    float display_scale = devicePixelRatioF();
-    std::wstring path = doc()->get_path();
-    bool should_render_annotations = doc()->should_render_pdf_annotations();
-
-    NormalizedWindowRect full_window_rect;
-    full_window_rect.x0 = -1.0f;
-    full_window_rect.x1 = 1.0f;
-    full_window_rect.y0 = -1.5f;
-    full_window_rect.y1 = 1.5f;
-
-    for (int page_number : pages_to_check) {
-        if (page_number < 0 || page_number >= doc()->num_pages()) continue;
-
-        float page_width = doc()->get_page_width(page_number);
-        float page_height = doc()->get_page_height(page_number);
-        if (page_width <= 0 || page_height <= 0) continue;
-
-        PagelessDocumentRect page_rect({ 0, 0, page_width, page_height });
-        float zoom_level = base_zoom_level;
-        if (SAME_WIDTH && document_view->same_width_mode_first_page_width) {
-            float factor = document_view->same_width_mode_first_page_width.value() / page_width;
-            zoom_level *= factor;
-        }
-
-        int nh = 1, nv = 1;
-        bool is_sliced = num_slices_for_page_rect(page_rect, &nh, &nv);
-
-        for (int i = 0; i < nh * nv; i++) {
-            int index = is_sliced ? i : -1;
-
-            if (is_sliced) {
-                float slice_document_width = doc()->get_page_width(page_number);
-                float slice_document_height = doc()->get_page_height(page_number);
-                PagelessDocumentRect slice_document_rect;
-                slice_document_rect.x0 = 0;
-                slice_document_rect.x1 = slice_document_width;
-                slice_document_rect.y0 = 0;
-                slice_document_rect.y1 = slice_document_height;
-                slice_document_rect = get_index_rect(slice_document_rect, i, nh, nv);
-
-                NormalizedWindowRect slice_window_rect =
-                    DocumentRect(slice_document_rect, page_number).to_window_normalized(document_view);
-
-                if (!rects_intersect(slice_window_rect, full_window_rect)) {
-                    continue;
-                }
-            }
-
-            if (!pdf_renderer->is_page_rendered(path, page_number, should_render_annotations, index, nh, nv, zoom_level, display_scale)) {
-                all_rendered = false;
-                pdf_renderer->add_request(path, page_number, should_render_annotations, zoom_level, display_scale, index, nh, nv);
-            }
+    for (int p : pages_to_check) {
+        if (!check_page(p, false)) {
+            all_rendered = false;
         }
     }
 
-    if (overview_page.has_value() && overview_page->doc) {
+    if (overview_page.has_value()) {
         Document* ov_doc = doc(true);
         if (ov_doc) {
             int ov_page = AbsoluteDocumentPos{0, overview_page->absolute_offset_y}.to_document(ov_doc).page;
-            float ov_zoom = get_overview_zoom_level();
-            std::wstring ov_path = ov_doc->get_path();
-            bool ov_annot = ov_doc->should_render_pdf_annotations();
-
             for (int p = ov_page - 1; p <= ov_page + 1; p++) {
                 if (p >= 0 && p < ov_doc->num_pages()) {
-                    float pw = ov_doc->get_page_width(p);
-                    float ph = ov_doc->get_page_height(p);
-                    if (pw <= 0 || ph <= 0) continue;
-                    PagelessDocumentRect prect({ 0, 0, pw, ph });
-                    int nh = 1, nv = 1;
-                    bool is_sl = num_slices_for_page_rect(prect, &nh, &nv);
-                    for (int i = 0; i < nh * nv; i++) {
-                        int idx = is_sl ? i : -1;
-                        if (is_sl) {
-                            float s_w = ov_doc->get_page_width(p);
-                            float s_h = ov_doc->get_page_height(p);
-                            PagelessDocumentRect sdoc_rect = get_index_rect({0, 0, s_w, s_h}, i, nh, nv);
-                            NormalizedWindowRect sw_rect = document_to_overview_rect(DocumentRect(sdoc_rect, p));
-                            if (!rects_intersect(sw_rect, full_window_rect)) continue;
-                        }
-                        if (!pdf_renderer->is_page_rendered(ov_path, p, ov_annot, idx, nh, nv, ov_zoom, display_scale)) {
-                            all_rendered = false;
-                            pdf_renderer->add_request(ov_path, p, ov_annot, ov_zoom, display_scale, idx, nh, nv);
-                        }
+                    if (!check_page(p, true)) {
+                        all_rendered = false;
                     }
                 }
             }
