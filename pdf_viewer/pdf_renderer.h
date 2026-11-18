@@ -35,7 +35,18 @@ struct RenderRequest {
     int slice_index = -1;
     int num_h_slices = 1;
     int num_v_slices = 1;
-    bool operator==(const RenderRequest&) const = default;
+    int64_t enqueue_us = 0;
+    bool operator==(const RenderRequest& o) const {
+        return path == o.path &&
+               should_render_annotations == o.should_render_annotations &&
+               gamma == o.gamma &&
+               page == o.page &&
+               zoom_level == o.zoom_level &&
+               display_scale == o.display_scale &&
+               slice_index == o.slice_index &&
+               num_h_slices == o.num_h_slices &&
+               num_v_slices == o.num_v_slices;
+    }
 };
 
 struct SearchRequest {

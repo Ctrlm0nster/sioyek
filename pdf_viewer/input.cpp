@@ -1794,6 +1794,14 @@ public:
     SetStateJsonCommand(MainWidget* w) : TextCommand(cname, w) {};
 
     void perform() {
+        if (is_timing_diag_enabled()) {
+            int64_t turn_start_us = std::chrono::duration_cast<std::chrono::microseconds>(
+                std::chrono::steady_clock::now().time_since_epoch()).count();
+            std::ostringstream ss;
+            ss << "turn_command t_us=" << turn_start_us
+               << " data=" << QString::fromStdWString(text.value()).toStdString();
+            log_timing_diag(ss.str());
+        }
         QByteArray json_bytes = QString::fromStdWString(text.value()).toUtf8();
         QJsonDocument doc = QJsonDocument::fromJson(json_bytes);
         widget->set_state(doc.object());
@@ -2956,13 +2964,34 @@ public:
 };
 
 class WaitForRendersToFinishCommand : public GenericWaitCommand {
+    int64_t start_us = 0;
+    int poll_ticks = 0;
 public:
     static inline const std::string cname = "wait_for_renders_to_finish";
     static inline const std::string hname = "";
-    WaitForRendersToFinishCommand(MainWidget* w) : GenericWaitCommand(cname, w) {};
+    WaitForRendersToFinishCommand(MainWidget* w) : GenericWaitCommand(cname, w) {
+        start_us = std::chrono::duration_cast<std::chrono::microseconds>(
+            std::chrono::steady_clock::now().time_since_epoch()).count();
+        if (is_timing_diag_enabled()) {
+            std::ostringstream ss;
+            ss << "wait_for_renders_start t_us=" << start_us;
+            log_timing_diag(ss.str());
+        }
+    };
 
     bool is_ready() override {
-        return widget->is_render_ready();
+        poll_ticks++;
+        bool ready = widget->is_render_ready();
+        if (ready && is_timing_diag_enabled()) {
+            int64_t reply_us = std::chrono::duration_cast<std::chrono::microseconds>(
+                std::chrono::steady_clock::now().time_since_epoch()).count();
+            std::ostringstream ss;
+            ss << "ipc_reply t_us=" << reply_us
+               << " poll_ticks=" << poll_ticks
+               << " wait_ms=" << ((reply_us - start_us) / 1000.0);
+            log_timing_diag(ss.str());
+        }
+        return ready;
     }
 };
 

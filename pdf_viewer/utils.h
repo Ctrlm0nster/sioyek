@@ -12,6 +12,10 @@
 #include <regex>
 #include <optional>
 #include <memory>
+#include <mutex>
+#include <chrono>
+#include <cstdint>
+#include <cstdlib>
 #include <qcommandlineparser.h>
 
 #include <QKeyEvent>
@@ -28,6 +32,19 @@
 
 #define LL_ITER(name, start) for(auto name=start;(name);name=name->next)
 #define LOG(expr) if (VERBOSE) {(expr);};
+
+inline bool is_timing_diag_enabled() {
+    static const bool enabled = (std::getenv("SIOYEK_TIMING_DIAG") != nullptr);
+    return enabled;
+}
+
+inline void log_timing_diag(const std::string& msg) {
+    if (is_timing_diag_enabled()) {
+        static std::mutex m;
+        std::lock_guard lock(m);
+        std::cerr << "[TIMING_DIAG] " << msg << std::endl;
+    }
+}
 
 struct JsCommandInfo {
     std::wstring pref_file_path;

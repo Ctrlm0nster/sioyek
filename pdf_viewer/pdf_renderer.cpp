@@ -84,6 +84,15 @@ void PdfRenderer::add_request(std::wstring document_path, int page, bool should_
         req.num_v_slices = num_v_slices;
         req.display_scale = display_scale;
         req.should_render_annotations = should_render_annotations;
+        req.enqueue_us = std::chrono::duration_cast<std::chrono::microseconds>(
+            std::chrono::steady_clock::now().time_since_epoch()).count();
+        if (is_timing_diag_enabled()) {
+            std::ostringstream ss;
+            ss << "enqueue page=" << req.page
+               << " slice=" << req.slice_index
+               << " t_us=" << req.enqueue_us;
+            log_timing_diag(ss.str());
+        }
 
         bool should_add = true;
         {
@@ -551,6 +560,18 @@ void PdfRenderer::run(int thread_index) {
         delete_old_pixmaps(thread_index, mupdf_context);
         if (!has_request) continue;
 
+        int64_t worker_start_us = std::chrono::duration_cast<std::chrono::microseconds>(
+            std::chrono::steady_clock::now().time_since_epoch()).count();
+        if (is_timing_diag_enabled()) {
+            std::ostringstream ss;
+            ss << "worker_start page=" << req.page
+               << " slice=" << req.slice_index
+               << " thread=" << thread_index
+               << " t_us=" << worker_start_us
+               << " queue_wait_ms=" << ((worker_start_us - req.enqueue_us) / 1000.0);
+            log_timing_diag(ss.str());
+        }
+
         // if the request is already rendered, just return the previous result
         cached_response_mutex.lock();
 
@@ -656,6 +677,18 @@ void PdfRenderer::run(int thread_index) {
                 }
 
                 cached_response_mutex.unlock();
+
+                int64_t raster_done_us = std::chrono::duration_cast<std::chrono::microseconds>(
+                    std::chrono::steady_clock::now().time_since_epoch()).count();
+                if (is_timing_diag_enabled()) {
+                    std::ostringstream ss;
+                    ss << "raster_done page=" << req.page
+                       << " slice=" << req.slice_index
+                       << " thread=" << thread_index
+                       << " t_us=" << raster_done_us
+                       << " raster_ms=" << ((raster_done_us - worker_start_us) / 1000.0);
+                    log_timing_diag(ss.str());
+                }
 
                 emit render_advance();
 

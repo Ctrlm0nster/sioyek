@@ -1800,6 +1800,13 @@ void MainWidget::validate_render() {
     }
 
     is_render_invalidated = false;
+    if (is_timing_diag_enabled()) {
+        int64_t paint_cleared_us = std::chrono::duration_cast<std::chrono::microseconds>(
+            std::chrono::steady_clock::now().time_since_epoch()).count();
+        std::ostringstream ss;
+        ss << "paint_cleared t_us=" << paint_cleared_us;
+        log_timing_diag(ss.str());
+    }
     if (smooth_scroll_mode && (smooth_scroll_speed != 0)) {
         is_render_invalidated = true;
     }
