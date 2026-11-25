@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.20)
 project(sioyek VERSION 3.0.0 LANGUAGES C CXX)
 
 if(NOT CMAKE_SYSTEM_NAME STREQUAL "Linux" OR ANDROID)
-  message(FATAL_ERROR "This fork supports desktop Linux only (Arch Linux, Qt 6, Vulkan).")
+  message(FATAL_ERROR "This edition of Sioyek supports desktop Linux only (Arch Linux, Qt 6, Vulkan).")
 endif()
 
 include(GNUInstallDirs)

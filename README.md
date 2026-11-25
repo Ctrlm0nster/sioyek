@@ -5,7 +5,7 @@
 
 **Sioyek** is a keyboard-driven PDF viewer designed specifically for reading textbooks and technical research papers.
 
-This repository is a modernized, Linux-focused fork by [@Ctrlm0nster](https://github.com/Ctrlm0nster) (upstream: [ahrm/sioyek](https://github.com/ahrm/sioyek)). It transitions Sioyek entirely to **desktop Linux (Arch Linux, Qt 6.7+, native Wayland / XCB, and Vulkan via QRhi)** while pruning all legacy platforms (Windows, macOS, Android) and obsolete OpenGL fixed-function/shader pipelines.
+This edition is independently maintained by [@Ctrlm0nster](https://github.com/Ctrlm0nster) and based on the original [ahrm/Sioyek](https://github.com/ahrm/sioyek). It targets **desktop Linux** with Arch Linux packaging, Qt 6.7+, native Wayland and X11 support, and a Vulkan renderer built on Qt QRhi.
 
 ---
 
@@ -23,7 +23,7 @@ This repository is a modernized, Linux-focused fork by [@Ctrlm0nster](https://gi
 
 ## Architecture & Modernization {#architecture--modernization}
 
-This fork rebuilds the rendering and concurrency engine for modern desktop Linux environments:
+The Linux edition uses Vulkan for rendering and condition variables to coordinate rasterization and search workers.
 
 * **Vulkan Hardware Rendering via Qt QRhi**:
   Replaces legacy OpenGL with Qt 6's Rendering Hardware Interface (`QRhiWidget`), targeting Vulkan. Includes embedded SPIR-V shaders compiled ahead of time with `qsb`, eliminating runtime shader compilation and immediate-mode GL overhead.
@@ -147,7 +147,7 @@ Execute the ELF binary directly from the build directory:
 
 ## Arch Linux Packaging {#arch-linux-packaging}
 
-This fork provides an independent Arch package: **`sioyek-ctrlm0nster`**. It provides `sioyek` and cleanly conflicts with the upstream AUR `sioyek` and `sioyek-git` packages.
+The Arch package is **`sioyek-ctrlm0nster`**. It provides `sioyek` and cleanly conflicts with the upstream AUR `sioyek` and `sioyek-git` packages.
 
 To build an offline, checksummed Arch package snapshot:
 

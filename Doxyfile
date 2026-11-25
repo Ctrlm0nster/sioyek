@@ -61,7 +61,12 @@ WARN_AS_ERROR          = NO
 INPUT                  = docs/architecture.md \
                          pdf_viewer \
                          docs \
-                         README.md
+                         README.md \
+                         BUILDING.md \
+                         PACKAGING.md \
+                         RELEASE.md \
+                         CHANGELOG.md \
+                         LICENSES.md
 
 USE_MDFILE_AS_MAINPAGE = docs/architecture.md
 

@@ -29,9 +29,12 @@ only. CMake compiles them to embedded SPIR-V with `qsb`; the executable contains
 no application GLSL shader payload or runtime shader compiler.
 
 QRhi requires `Qt6::GuiPrivate`, whose binary interface is tied to the Qt build.
+Qt does not guarantee binary compatibility for private QRhi headers across versions, even
+for patch releases ([Qt QRhi Documentation](https://doc.qt.io/qt-6/qrhi.html)).
 **Rebuild Sioyek after Qt updates.** The Arch binary package records the exact
-Qt version used at build time to prevent silently loading incompatible internals.
-This fork supports desktop Linux only. Windows and macOS build/deployment code
+Qt version (`qt6-base=X.Y.Z`) used at build time to prevent silently loading incompatible
+internals. When Arch updates Qt, see [PACKAGING.md](PACKAGING.md) for the upgrade procedure.
+This edition supports desktop Linux only. Windows and macOS build/deployment code
 has been removed; CMake rejects other target platforms.
 Speech output additionally needs a configured Qt speech backend, such as
 `speech-dispatcher`. PDF reading does not require an active speech service.
@@ -58,6 +61,9 @@ Native alignment keeps display-list and pool accesses valid in every build;
 this is independent of the hardening/sanitizer switches. The flags fingerprint
 selects fresh MuPDF objects when this setting changes. PDF and user database
 formats are unaffected.
+CMake also applies out-of-tree source fixes from `patches/mupdf/`, including
+`1.26.11-svg-const-qualifier.patch` which preserves const qualifiers in SVG style parsing
+under GCC 15/16 default C23 mode, preventing `-Wdiscarded-qualifiers` compiler warnings.
 Source licensing and attribution remain in LICENSE
 and the respective dependency directories.
 
@@ -542,7 +548,7 @@ scripts/dev-build.sh
 
 Do not use `git submodule update --remote` as a routine update: it moves beyond
 the tested gitlinks. Review MuPDF API changes separately. Before publishing a
-fork release, test both display backends and real PDFs, search, SyncTeX,
+release, test both display backends and real PDFs, search, SyncTeX,
 bookmarks, highlights and persistence using copies of existing user data.
 
 For an installable Arch package, release versioning and CI policy, see

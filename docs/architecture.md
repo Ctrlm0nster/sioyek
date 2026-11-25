@@ -52,6 +52,11 @@ To blend Qt's vector text rendering (status bar, document search highlights, por
 3. Unused transparent pixels are never uploaded to the GPU, preserving PCIe bandwidth and GPU memory.
 4. The overlay is composed over the document geometry using pre-multiplied alpha blending (`One` / `OneMinusSrcAlpha`).
 
+### 2.3 Qt Versioning, QRhi ABI Stability & Vulkan Validation
+Because `QRhiWidget` is part of Qt's private GUI layer (`Qt6::GuiPrivate`), it is subject to the [Qt QRhi Compatibility Contract](https://doc.qt.io/qt-6/qrhi.html):
+* **No Private Binary Compatibility**: Qt guarantees no ABI stability across Qt releases—even between patch releases—for private headers. Sioyek's Arch Linux packaging strictly pins `qt6-base=X.Y.Z` (enforced by `scripts/verify-release.py`) to prevent runtime crashes from incompatible struct layouts.
+* **Qt 6.12.0 Texture Initial Layout (QTBUG-150039)**: Unmodified Qt 6.12.0 creates optimal-tiled Vulkan images with `VK_IMAGE_LAYOUT_PREINITIALIZED`, violating Vulkan specification `VUID-VkImageCreateInfo-initialLayout-12478`. An optional patch (`patches/qt/6.12.0-vulkan-initial-layout.patch`) corrects this for local testing on 6.12.0. Qt 6.12.1 incorporates the upstream fix, allowing test suites to strictly enforce zero Vulkan validation errors without workarounds.
+
 ---
 
 ## 3. Concurrency & Multi-Threaded Engine
@@ -66,6 +71,7 @@ MuPDF requires careful threading hygiene:
 * **Context Isolation**: Each worker thread receives its own cloned `fz_context` sharing the central allocator and font store locks with the master context.
 * **Document Reference Counting**: Opening and caching documents across threads uses `fz_keep_document` and `fz_drop_document`. In-flight rendering jobs retain ownership of the document handle even if an active document view invalidates the cache during file reloads or rapid scrolling.
 * **Native 8-Byte Alignment**: Pinned MuPDF static libraries are compiled with `FZ_POINTER_ALIGN_MOD=FZ_MEMORY_BLOCK_ALIGN_MOD`, ensuring Type 3 font glyph paths align on 8-byte boundaries and preventing UBSan misalignment traps.
+* **C23 Standard Compliance**: An out-of-tree patch (`patches/mupdf/1.26.11-svg-const-qualifier.patch`) updates `source/svg/svg-parse.c` to preserve `const char *` qualifiers returned by C23 type-generic `strstr()`, preventing `-Wdiscarded-qualifiers` compiler warnings under GCC 15 and 16.
 
 ### 3.3 Epoch-Based Cache Invalidation
 When a document is reloaded (e.g. from an external LaTeX compilation) or closed:

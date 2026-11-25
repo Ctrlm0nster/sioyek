@@ -44,9 +44,12 @@ uncommitted work are for local testing.
 
 MuPDF is built by GNU Make under the CMake build tree. The recipe disables LTO
 across the separately built static archives. Qt libraries remain system-provided.
-The Vulkan renderer uses QtGuiPrivate, so the generated binary package depends
-on the exact Qt version used to build it. Rebuild the package after a Qt version
-update. A working Vulkan ICD for your GPU is also required; see BUILDING.md.
+The Vulkan renderer uses QtGuiPrivate (`QRhiWidget`), so the generated binary package depends
+on the exact Qt version used to build it (`qt6-base=X.Y.Z`). This exact pin is required because
+Qt does not guarantee binary compatibility for private QRhi headers across versions, even for
+patch releases ([Qt QRhi Documentation](https://doc.qt.io/qt-6/qrhi.html)), and is enforced by
+`scripts/verify-release.py`. The pin permits Arch package pkgrel bumps (e.g. `6.12.1-1` → `6.12.1-2`),
+but a Qt version bump (`6.12.0` → `6.12.1`) requires a rebuild. See below for handling `pacman -Syu`.
 GPL-3.0 and attribution are retained; package metadata also records bundled
 MuPDF's AGPL license and includes both top-level license texts. The complete
 snapshot retains dependency license notices and corresponding source.
@@ -112,6 +115,37 @@ Nothing automatically publishes or installs packages.
 sudo pacman -R sioyek-ctrlm0nster
 ```
 
+### Upgrading the system when Qt changes
+
+When Arch updates Qt (e.g. `6.12.0` → `6.12.1`), `sudo pacman -Syu` will report:
+```text
+error: failed to prepare transaction (could not satisfy dependencies)
+:: installing qt6-base (6.12.1-1) breaks dependency 'qt6-base=6.12.0' required by sioyek-ctrlm0nster
+```
+
+This prevents runtime crashes from incompatible `QtGuiPrivate` internals. To perform the upgrade and rebuild:
+
+```sh
+# 1. Temporarily remove the installed binary package without removing dependencies:
+sudo pacman -Rdd sioyek-ctrlm0nster
+
+# 2. Run your normal system upgrade:
+sudo pacman -Syu
+
+# 3. Rebuild and reinstall Sioyek against the updated system Qt:
+python3 scripts/prepare-arch-package.py
+(cd build/arch && makepkg -f)
+sudo pacman -U build/arch/sioyek-ctrlm0nster-*.pkg.tar.zst
+```
+
+Alternatively, you can upgrade in a single step using `--assume-installed`:
+```sh
+sudo pacman -Syu --assume-installed sioyek-ctrlm0nster:qt6-base=6.12.0
+python3 scripts/prepare-arch-package.py
+(cd build/arch && makepkg -f)
+sudo pacman -U build/arch/sioyek-ctrlm0nster-*.pkg.tar.zst
+```
+
 This package has no scripts that create, migrate or delete personal configuration.
 Pacman does not own your home-directory preferences, bookmarks or databases.
 Reinstall your preferred upstream package separately if desired.
@@ -126,11 +160,11 @@ count increases. For the same source revision, increment `pkgrel` for packaging
 fixes. Local dirty snapshots share the parent version: do not distribute them as
 immutable releases. Their checksum identifies the exact input, but they are not
 ordered as separate releases. Commit changes before a distributable snapshot;
-then optionally tag that commit as `fork/BASE.rCOUNT.gHASH-pkgPKGREL` yourself. This process
+then optionally tag that commit as `release/BASE.rCOUNT.gHASH-pkgPKGREL` yourself. This process
 never makes a commit or tag automatically. The application's displayed upstream
 version remains unchanged for now.
 
-Before updating upstream, commit your fork work yourself and make a backup of
+Before updating upstream, commit your local changes and make a backup of
 user data. Start from a clean tree on your maintenance branch:
 
 ```sh
@@ -175,4 +209,4 @@ References: [Arch PKGBUILD manual](https://man.archlinux.org/man/PKGBUILD.5.en),
 [GitHub Actions security guidance](https://docs.github.com/en/actions/reference/security/secure-use).
 
 See [RELEASE.md](RELEASE.md) for release gates, signing, debug-package interactions
-and cadence, and [CHANGELOG.md](CHANGELOG.md) for fork-specific changes.
+and cadence, and [CHANGELOG.md](CHANGELOG.md) for changes in this edition.

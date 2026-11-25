@@ -1,9 +1,9 @@
 # Third-party source and license inventory
 
-Upstream remains [ahrm/Sioyek](https://github.com/ahrm/sioyek), with the original
-GPL-3.0 license and attribution retained. No rebranding or license text rewrite is
-part of this candidate. MuPDF remains pinned to the repository gitlink and carries
-its AGPL-3.0 notice; package metadata records both GPL and AGPL licensing.
+This project is based on [ahrm/Sioyek](https://github.com/ahrm/sioyek) and retains
+the original GPL-3.0 license and attribution. MuPDF remains pinned to the
+repository gitlink and carries its AGPL-3.0 notice; package metadata records
+both GPL and AGPL licensing.
 
 The source snapshot exports all tracked files of all recursive dependencies, not
 just the C/C++ files currently compiled. This retains font resources, build files,
@@ -52,4 +52,4 @@ its upstream MIT notice is restored under pdf_viewer/rapidfuzz-LICENSE. The stal
 The binary package now includes JetBrains Mono's OFL, FZF and RapidFuzz notices,
 UTF-8/SyncTeX/FTS header notices, and the available bundled MuPDF library/font
 notice files with component paths retained. Unused Windows runtime DLLs have
-been removed from this Linux-only fork.
+been removed from this Linux-only edition.

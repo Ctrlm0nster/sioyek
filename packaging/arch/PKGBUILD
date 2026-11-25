@@ -3,7 +3,7 @@
 pkgname=sioyek-ctrlm0nster
 pkgver=3.0.0.r0.g000000000000
 pkgrel=6
-pkgdesc='Keyboard-driven PDF reader (Ctrlm0nster fork)'
+pkgdesc='Keyboard-driven PDF reader for desktop Linux (Ctrlm0nster edition)'
 arch=('x86_64')
 url='https://github.com/Ctrlm0nster/sioyek'
 license=('GPL-3.0-or-later' 'AGPL-3.0-or-later' 'MIT' 'BSL-1.0' 'OFL-1.1')

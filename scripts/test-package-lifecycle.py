@@ -130,7 +130,7 @@ for upstream in ('sioyek', 'sioyek-git'):
     result = pac('-Udd', '--noscriptlet', str(package), success=False)
     assert 'conflict' in (result.stdout + result.stderr).lower()
     pac('-Rdd', '--noscriptlet', upstream)
-    print('PASS fork rejection with installed', upstream, 'metadata fixture')
+    print('PASS package conflict with installed', upstream, 'metadata fixture')
 assert not (root/'usr/bin/sioyek').exists()
 assert user_hashes() == original
 for dbfile in (root/'home').rglob('*.db'):

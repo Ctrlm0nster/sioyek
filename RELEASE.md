@@ -1,7 +1,8 @@
 # Development releases
 
-This is a fork of [ahrm/Sioyek](https://github.com/ahrm/sioyek), retaining upstream
-attribution, GPL-3.0 text and branding. Dependency notices, including MuPDF's AGPL
+This is an independently maintained edition based on
+[ahrm/Sioyek](https://github.com/ahrm/sioyek). It retains upstream attribution,
+GPL-3.0 text and branding. Dependency notices, including MuPDF's AGPL
 text, remain in the source snapshot and package notices. This document is a manual
 release procedure; no command here has been run to tag, sign or publish a release.
 
@@ -11,7 +12,10 @@ Qt 6.12.1 includes the upstream Vulkan texture initial-layout fix. The optional
 local build applies the Vulkan patch on Qt 6.12.0 and the Wayland keyboard-compose
 patch on both versions. Wayland 1.26.0's discarded-event proxy reference is
 patched in an optional local client build. Arch packages use system libraries
-and must be rebuilt when Qt changes because the renderer uses QtGuiPrivate.
+and must be rebuilt when Qt changes because the renderer uses QtGuiPrivate (`QRhiWidget`).
+The generated package records an exact `qt6-base=X.Y.Z` dependency to prevent ABI mismatches
+across Qt updates, enforced by `scripts/verify-release.py`. See [PACKAGING.md](PACKAGING.md)
+for the system upgrade procedure.
 See [BUILDING.md](BUILDING.md) for exact versions, checksums and local commands.
 
 Local validation on 2026-11-16 passed all five regression tests under GCC,
@@ -28,7 +32,9 @@ marks, highlights and reading history were preserved in all generated fixtures;
 historical personal profiles were not used.
 
 MuPDF remains pinned to 1.26.11. Reviewed source patches are applied out of tree;
-no recursive gitlink was moved. The supported system-JPEG configuration replaces
+no recursive gitlink was moved. Out-of-tree patches include nullable member addresses,
+text alpha shifts, empty layer sorting, LittleCMS typed interpolation, and C23 SVG style
+const-qualifiers. The supported system-JPEG configuration replaces
 the bundled decoder after an explicit tutorial comparison. Five pages are
 byte-identical; page 2 differs only within its JPEG illustration. Application
 cleanup now releases IPC/parser owners, worker contexts, cached text/images,
@@ -144,7 +150,7 @@ published maintenance branch, force-move release tags, or recycle a package vers
 for different source bytes. Local dirty snapshots share the parent version and are
 only test artifacts. The GUI retains its upstream version string for now.
 
-Tag the exact clean candidate commit, e.g. `fork/BASE.rCOUNT.gHASH-pkgPKGREL-rc1`. Include
+Tag the exact clean candidate commit, e.g. `release/BASE.rCOUNT.gHASH-pkgPKGREL-rc1`. Include
 the pkgrel so a packaging correction has its own immutable tag. Tag names do not
 trigger publishing. Annotated tags are required; signed tags are preferred. Tags,
 key generation and publishing require the maintainer's explicit action.
@@ -197,7 +203,7 @@ sudo pacman -U ./sioyek-ctrlm0nster-VERSION-x86_64.pkg.tar.zst
 sudo pacman -R sioyek-ctrlm0nster
 ```
 
-The fork intentionally conflicts with `sioyek`/`sioyek-git` because it owns the same
+The package intentionally conflicts with `sioyek`/`sioyek-git` because it owns the same
 executable and resources. It does not silently overwrite either. Debug packages
 have their own ownership: different ELF build IDs can coexist, but identical build
 IDs can cause file conflicts. Inspect installed debug packages before switching:
@@ -215,7 +221,7 @@ package; remove that explicitly if installed. Never delete `~/.config/sioyek` or
 
 ## Upstream and dependency maintenance
 
-Use the clean-tree fetch/review/merge sequence in PACKAGING.md. Keep fork build,
+Use the clean-tree fetch/review/merge sequence in PACKAGING.md. Keep local build,
 packaging and CI changes reviewable; inspect upstream release automation before
 adopting it. Initialize only the newly recorded submodules after a merge. For a
 MuPDF update, review release notes/API changes and dependency gitlinks, build both
@@ -227,7 +233,7 @@ Security-sensitive input processing includes MuPDF and its PDF parsers, font
 engines, image codecs, compression libraries, JavaScript engine (MuJS), and any
 bundled XML/HTML parsers. SQLite stores persistent reader data; Qt and system
 HarfBuzz/zlib are also runtime dependencies. Statically bundled fixes require a
-new fork build; updating system libraries alone does not update those copies.
+new Sioyek build; updating system libraries alone does not update those copies.
 Review MuPDF/Artifex security advisories and Arch notices regularly, then test
 updates deliberately rather than blindly advancing every submodule.
 

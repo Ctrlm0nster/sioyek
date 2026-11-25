@@ -1,6 +1,6 @@
 # Changelog
 
-Fork: https://github.com/Ctrlm0nster/sioyek
+Project: https://github.com/Ctrlm0nster/sioyek
 Upstream: https://github.com/ahrm/sioyek (ahrm and contributors)
 
 ## [3.0.0-dev] — Vulkan & Linux Modernization
@@ -105,6 +105,6 @@ Current development packaging revision: 6. No release tag or public assets yet.
   versioning, and real GCC/Clang package artifact validation in CI.
 - Disable inherited automatic publishing workflows; retain them as reference.
 
-No public fork release has been tagged or published. Existing compiler warnings
+No public release of this edition has been tagged or published. Existing compiler warnings
 remain in bundled dependencies. See RELEASE.md for prior release checks; the
 Vulkan backend requires new validation before publishing a release.
