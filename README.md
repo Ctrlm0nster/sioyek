@@ -1,94 +1,60 @@
-# Sioyek (Vulkan & Wayland Edition)
+# 📖 Sioyek (Vulkan & Wayland Edition)
+
+<div align="center">
 
 [![Linux CI](https://github.com/Ctrlm0nster/sioyek/actions/workflows/linux-cmake.yml/badge.svg)](https://github.com/Ctrlm0nster/sioyek/actions/workflows/linux-cmake.yml)
+[![Documentation](https://img.shields.io/badge/Documentation-GitHub%20Pages-informational.svg)](https://Ctrlm0nster.github.io/sioyek/)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
+[![Platform: Linux](https://img.shields.io/badge/Platform-Linux%20%7C%20Wayland%20%7C%20X11-purple.svg)](https://archlinux.org)
+[![Graphics: Vulkan](https://img.shields.io/badge/Renderer-Vulkan%20%28Qt%20QRhi%29-red.svg)](https://www.vulkan.org/)
+[![C++ Standard: 20](https://img.shields.io/badge/C%2B%2B-20-brightgreen.svg)](https://en.wikipedia.org/wiki/C%2B%2B20)
 
-**Sioyek** is a keyboard-driven PDF viewer designed specifically for reading textbooks and technical research papers.
+**The keyboard-driven PDF reader purpose-built for reading research papers, technical textbooks, and complex documents.**
 
-This edition is independently maintained by [@Ctrlm0nster](https://github.com/Ctrlm0nster) and based on the original [ahrm/Sioyek](https://github.com/ahrm/sioyek). It targets **desktop Linux** with Arch Linux packaging, Qt 6.7+, native Wayland and X11 support, and a Vulkan renderer built on Qt QRhi.
+[Quick Start](#quick-start) • [Core Superpowers](#core-superpowers) • [Keybindings](#cheat-sheet) • [Documentation Hub](docs/README.md) • [Architecture](#architecture)
 
----
-
-## Contents
-- [Architecture & Modernization](#architecture--modernization)
-- [Features & Workflow](#features--workflow)
-- [Building from Source](#building-from-source)
-- [Running Sioyek](#running-sioyek)
-- [Arch Linux Packaging](#arch-linux-packaging)
-- [Testing & Quality Assurance](#testing--quality-assurance)
-- [Documentation & References](#documentation--references)
-- [Upstream & Attribution](#upstream--attribution)
+</div>
 
 ---
 
-## Architecture & Modernization {#architecture--modernization}
+## 🌟 Overview
 
-The Linux edition uses Vulkan for rendering and condition variables to coordinate rasterization and search workers.
+**Sioyek** is a document viewer engineered specifically for technical reading. Unlike standard PDF readers built for signing contracts or casually viewing slides, Sioyek eliminates the cognitive friction of navigating dense, multi-page cross-references in textbooks and academic papers.
 
-* **Vulkan Hardware Rendering via Qt QRhi**:
-  Replaces legacy OpenGL with Qt 6's Rendering Hardware Interface (`QRhiWidget`), targeting Vulkan. Includes embedded SPIR-V shaders compiled ahead of time with `qsb`, eliminating runtime shader compilation and immediate-mode GL overhead.
-* **Multi-Threaded Rasterization with Condition Variables**:
-  Replaces CPU worker thread polling with condition-variable synchronization (`std::condition_variable`), eliminating CPU idle churn while ensuring zero-latency response for concurrent page rasterization and text search.
-* **Robust MuPDF Concurrency & Reference Counting**:
-  Built against pinned MuPDF 1.26.11 with thread-safe document reference management (`fz_keep_document`), cache invalidation epoch counters, zero-page cache guards, and 8-byte pointer alignment (`FZ_POINTER_ALIGN_MOD`) to prevent Type 3 font UBSan errors.
-* **Native Wayland & Fractional Scaling**:
-  Engineered for first-class Wayland compositors (Hyprland, Sway, GNOME, KDE Plasma) as well as X11/XWayland via `qt6-wayland` and `qt6-base`, preserving crisp text and overlays across fractional display scales.
-* **Hardened Security & Toolchain**:
-  Built with C++20 under GCC 14 / Clang with `-Werror`, `-fstack-protector-strong`, `-fcf-protection=full`, `-ftrivial-auto-var-init=zero`, and `_FORTIFY_SOURCE=3`.
-* **Zero Platform Bloat**:
-  Completely removed legacy Windows (`.bat`, `.dll`), macOS (`.plist`, `.mm`), Android (`gradle`, `AndroidManifest.xml`, JNI), and legacy OpenGL 2/3 shader pipelines (~10,000+ lines of obsolete code removed).
+This edition is independently modernized and maintained by [@Ctrlm0nster](https://github.com/Ctrlm0nster), based on the original work by [ahrm/Sioyek](https://github.com/ahrm/sioyek). It targets modern **desktop Linux** with native **Wayland** integration, Arch Linux packaging, and a high-performance **Vulkan hardware renderer** built on Qt 6 QRhi.
 
 ---
 
-## Features & Workflow {#features--workflow}
+## ✨ Core Superpowers {#core-superpowers}
 
-### Quick Open
-Search and jump immediately to any recently opened document or document in your library:
-
-https://user-images.githubusercontent.com/6392321/125321111-9b29dc00-e351-11eb-873e-94ea30016a05.mp4
-
-### Smart Jump
-Jump directly to referenced figures, tables, or bibliography entries **even if the PDF does not contain hyperlinks**. Middle-click or Shift+middle-click bibliography names to search directly on Google Scholar or LibGen:
-
-https://user-images.githubusercontent.com/6392321/125321419-e5ab5880-e351-11eb-873e-94ea30016a05.mp4
-
-### Overview Panel
-Right-click on references, equations, or figures to inspect them in a non-disruptive floating overview without losing your current reading location:
-
-https://user-images.githubusercontent.com/6392321/154683015-0bae4f92-78e2-4141-8446-49dd7c2bd7c9.mp4
-
-### Portals (Dual-Monitor / Multi-Window Reading)
-Link two distant sections of a document (e.g., text referring to a figure 20 pages later). The portal window automatically mirrors the corresponding referenced region as you scroll:
-
-https://user-images.githubusercontent.com/6392321/125322657-41c2ac80-e353-11eb-985e-8f3ce9808f67.mp4
-
-### Vim-Style Marks & Global Bookmarks
-* **Marks**: Single-letter vim-like bookmarks. Lowercase marks (`m[a-z]`, `'[a-z]`) are local to the current document; uppercase marks (`m[A-Z]`, `'[A-Z]`) are global across all documents.
-* **Bookmarks**: Named text bookmarks searchable with fuzzy matching.
-
-https://user-images.githubusercontent.com/6392321/125321811-505c9400-e352-11eb-85e0-ffc3ae5f8cb8.mp4
-
-### Highlights
-Highlight passages using multiple semantic highlight types and search/filter across all annotations in your library:
-
-https://user-images.githubusercontent.com/6392321/130956728-7e0a87fa-4ada-4108-a8fc-9d9d04180f56.mp4
-
-### Table of Contents
-Instant fuzzy search across the document outline:
-
-https://user-images.githubusercontent.com/6392321/125321313-cf050180-e351-11eb-9275-c2759c684af5.mp4
-
-### Deep Customization
-Keybindings and visual preferences can be customized by editing `~/.config/sioyek/keys_user.config` and `~/.config/sioyek/prefs_user.config`. Default templates are installed with the application:
-
-https://user-images.githubusercontent.com/6392321/125337160-e4832700-e363-11eb-8801-0bee58121c2d.mp4
+```
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│  🌀 PORTALS                 │ Link two distant sections side-by-side. Read text on     │
+│                             │ page 3 while keeping Figure 8 on page 24 pinned in view. │
+├─────────────────────────────┼──────────────────────────────────────────────────────────┤
+│  ⚡ SMART JUMP               │ Jump straight to referenced figures, tables, or papers   │
+│                             │ even if the author never included hyperlinks.            │
+├─────────────────────────────┼──────────────────────────────────────────────────────────┤
+│  🔍 OVERVIEW WINDOW         │ Right-click equations or citations to preview them in a   │
+│                             │ non-disruptive floating card without losing your place.  │
+├─────────────────────────────┼──────────────────────────────────────────────────────────┤
+│  📏 VISUAL FOCUS RULER      │ Lock onto lines with a subtle focus bar and step line-by-│
+│                             │ line with j/k to eliminate fatigue in 2-column papers.   │
+├─────────────────────────────┼──────────────────────────────────────────────────────────┤
+│  ⌨️ VIM-STYLE NAVIGATION    │ Muscle-memory movement: local marks (ma), global marks   │
+│                             │ (mA), search history, and fuzzy chapter finding.         │
+├─────────────────────────────┼──────────────────────────────────────────────────────────┤
+│  🔄 LATEX & SYNCTEX SYNC    │ Bidirectional jump between LaTeX source and PDF in       │
+│                             │ Neovim, VS Code, and Emacs.                              │
+└─────────────────────────────┴──────────────────────────────────────────────────────────┘
+```
 
 ---
 
-## Building from Source {#building-from-source}
+## ⚡ Quick Start in 60 Seconds {#quick-start}
 
 ### 1. Prerequisites (Arch Linux)
-Ensure standard build tools, Qt 6.7+, and Vulkan loader libraries are installed:
+Install build tools, Qt 6.7+, and the Vulkan loader:
 
 ```sh
 sudo pacman -S --needed base-devel git python cmake ninja pkgconf unzip \
@@ -96,58 +62,94 @@ sudo pacman -S --needed base-devel git python cmake ninja pkgconf unzip \
   vulkan-headers vulkan-icd-loader harfbuzz sqlite zlib libjpeg-turbo
 ```
 
-> [!NOTE]
-> Ensure you have an appropriate Vulkan driver installed for your hardware (e.g., `vulkan-intel` for Intel, `vulkan-radeon` for AMD, or NVIDIA proprietary driver). Run `vulkaninfo --summary` to verify.
+> [!TIP]
+> Ensure you have an appropriate Vulkan driver installed for your GPU (e.g., `vulkan-intel` for Intel, `vulkan-radeon` for AMD, or `nvidia-utils`). Run `vulkaninfo --summary` to verify.
 
-### 2. Clone Repository & Submodules
-MuPDF 1.26.11 and its vendored sources are included as submodules:
-
+### 2. Clone & Initialize Submodules
 ```sh
 git clone https://github.com/Ctrlm0nster/sioyek.git
 cd sioyek
 git submodule update --init --recursive
 ```
 
-### 3. Build with CMake + Ninja
-Using the development build script:
+### 3. Build & Run
+Using the convenient development script:
 ```sh
 scripts/dev-build.sh
+scripts/dev-run.sh tutorial.pdf
 ```
 
-Or using direct CMake commands:
+Or using **[mise](https://mise.jdx.dev/)** task runner:
 ```sh
-cmake -S . -B build/dev -G Ninja \
-  -DCMAKE_BUILD_TYPE=RelWithDebInfo \
-  -DSIOYEK_BUILD_TESTS=ON
-cmake --build build/dev --parallel $(nproc)
+mise run build
+mise run run tutorial.pdf
 ```
 
 ---
 
-## Running Sioyek {#running-sioyek}
+## ⌨️ Essential Cheat Sheet {#cheat-sheet}
 
-### Development Runner
-Launch Sioyek directly in an isolated instance (so an already running system reader does not swallow the launch):
+Sioyek is entirely keyboard-driven. Here are the most essential commands to get you flying:
 
-```sh
-scripts/dev-run.sh [document.pdf]
-```
+| Key | Action | Description |
+| :--- | :--- | :--- |
+| `Space` / `Shift+Space` | **Page Step** | Scroll half a screen down/up (preserves reading continuity) |
+| `j` / `k` | **Fine Scroll** | Move down or up smoothly |
+| `F10` | **Smart Width** | Crop white margins automatically to maximize reading text |
+| `zz` | **Column Snap** | Snap viewport to top of right-hand column in 2-column papers |
+| `p` | **Portal** | Press on source text, jump to figure/equation, press `p` again to link |
+| `Tab` / `Backspace` | **Jump / Return** | Toggle portal view or jump back to previous reading position |
+| `Right-Click` | **Peek Overview** | Inspect referenced equation/citation without moving your cursor |
+| `Shift+F` | **Smart Jump** | Show keyboard badges on unlinked citations and figures |
+| `Middle-Click` | **Scholar Search** | Search clicked citation directly on Google Scholar |
+| `ma` / `'a` | **Local Mark** | Set local mark `a` / return to mark `a` in current document |
+| `mA` / `'A` | **Global Mark** | Set global mark `A` across your entire PDF library |
+| `t` | **Outline / TOC** | Fuzzy-searchable Table of Contents |
+| `/` | **Search** | Fuzzy search text (e.g., `/<10,25>keyword` searches pages 10–25) |
+| `F8` | **Dark Mode** | Invert colors for comfortable late-night reading |
+| `:` | **Command Palette**| Fuzzy-find and run any of Sioyek's 130+ internal commands |
 
-### Direct Execution
-Execute the ELF binary directly from the build directory:
-
-```sh
-./build/dev/sioyek [document.pdf]
-```
-
-> [!IMPORTANT]
-> `./build/dev/sioyek` is an ELF binary executable, **not** a shell script. Always invoke it with `./build/dev/sioyek` or through `scripts/dev-run.sh`. Do **not** source it with `. ` or `source `.
+👉 *For the complete exhaustive table, see the [Keybindings Reference Guide](docs/keybindings.md).*
 
 ---
 
-## Arch Linux Packaging {#arch-linux-packaging}
+## 📚 Complete Documentation Hub
 
-The Arch package is **`sioyek-ctrlm0nster`**. It provides `sioyek` and cleanly conflicts with the upstream AUR `sioyek` and `sioyek-git` packages.
+Detailed documentation is available in the [`docs/`](docs/README.md) directory:
+
+- 📖 **[User Guide & Workflows](docs/user-guide.md)** — Step-by-step walkthrough of Portals, Smart Jump, Overviews, and Annotations.
+- ⌨️ **[Keybindings Reference](docs/keybindings.md)** — Full searchable directory of all 130+ commands and default keys.
+- 🎨 **[Configuration & Curated Themes](docs/configuration.md)** — Settings guide with ready-to-use themes (*Catppuccin, Nord, Tokyo Night, Gruvbox, Solarized*).
+- ⚡ **[LaTeX & SyncTeX Integration](docs/synctex.md)** — Complete bidirectional setup for Neovim (vimtex), VS Code, Emacs, and Helix.
+- 🛠️ **[Troubleshooting & FAQ](docs/troubleshooting.md)** — Practical fixes for Wayland scaling, Vulkan ICD selection, and cache management.
+- 🏗️ **[Architecture & Internals](docs/architecture.md)** — Deep dive into Vulkan QRhi, MuPDF context cloning, and epoch caching.
+- 🔨 **[BUILDING.md](BUILDING.md)** — Advanced compiler configurations, Clang/GCC flags, and sanitizers.
+- 📦 **[PACKAGING.md](PACKAGING.md)** — Arch Linux packaging (`sioyek-ctrlm0nster`) and reproducible manifests.
+
+---
+
+## 🏗️ Modernized Architecture {#architecture}
+
+The Linux edition incorporates modern systems engineering designed for high throughput and zero CPU idle churn:
+
+* **Vulkan Hardware Renderer (`QRhiWidget`)**:
+  Replaces legacy OpenGL with Qt 6's Rendering Hardware Interface targeting Vulkan. Shaders are pre-compiled into SPIR-V bytecodes via `qsb` ahead-of-time, eliminating runtime shader compilation.
+* **Zero-Idle Concurrency Engine**:
+  Replaces CPU worker sleep-polling with OS synchronization primitives (`std::condition_variable`), eliminating CPU idle churn while delivering instant rasterization response.
+* **MuPDF 1.26.11 Concurrency & 8-Byte Pointer Alignment**:
+  Thread-safe document reference management (`fz_keep_document`), epoch-based cache invalidation, and native 8-byte pointer alignment (`FZ_POINTER_ALIGN_MOD`) preventing Type 3 font UBSan traps.
+* **Native Wayland & Fractional Scaling**:
+  Engineered for first-class Wayland compositors (Hyprland, Sway, KDE Plasma, GNOME) with crisp subsurfaces and fractional scale support.
+* **Hardened Security Toolchain**:
+  Compiled with modern C++20 under `-Werror`, `-fstack-protector-strong`, `-fcf-protection=full`, `-ftrivial-auto-var-init=zero`, and `_FORTIFY_SOURCE=3`.
+* **Zero Platform Bloat**:
+  Completely purged obsolete Windows, macOS, Android, and legacy OpenGL 2/3 codebases (~10,000+ lines removed).
+
+---
+
+## 📦 Arch Linux Packaging
+
+The official package for this edition is **`sioyek-ctrlm0nster`**. It replaces and provides `sioyek` while conflicting cleanly with outdated AUR recipes.
 
 To build an offline, checksummed Arch package snapshot:
 
@@ -156,55 +158,38 @@ git submodule update --init --recursive
 python3 scripts/prepare-arch-package.py
 cd build/arch
 makepkg -s
-```
-
-Install the resulting `.pkg.tar.zst` package with `pacman`:
-
-```sh
 sudo pacman -U sioyek-ctrlm0nster-*.pkg.tar.zst
 ```
 
-For more details on package lifecycle and pinning, see [PACKAGING.md](PACKAGING.md).
-
 ---
 
-## Testing & Quality Assurance {#testing--quality-assurance}
+## 🧪 Testing & Verification
 
-### Headless CTest Suite
-Run headless CTest unit tests:
-
+Run the headless CTest unit suite:
 ```sh
 ctest --test-dir build/dev --output-on-failure
 ```
 
-### Interactive Wayland & Concurrency Smoke Tests
-To run native Wayland integration and worker queue concurrency stress tests inside your active graphical desktop session:
-
+Run Wayland integration and worker queue concurrency stress tests:
 ```sh
-# Smoke test on native Wayland (focuses a temporary instance, exercises keyboard navigation)
+# Native Wayland input and window focus smoke test
 python3 scripts/test-wayland.py build/dev/sioyek
 
-# Concurrency & cache invalidation stress test
+# Multi-threaded worker queue and cache invalidation stress test
 python3 scripts/test-render-workers.py build/dev/sioyek
 ```
 
 ---
 
-## Documentation & References {#documentation--references}
+## 🤝 Upstream & Attribution
 
-* [docs/architecture.md](docs/architecture.md) — Technical overview of Sioyek 3.0 Vulkan presentation, condition-variable worker queues, and concurrency model.
-* **C++ API Reference**: Generate full Doxygen API reference and UML inheritance/call graphs locally with `mise run docs` (or `doxygen Doxyfile`). Documentation is emitted to `build/doxygen/html/index.html`.
-* [BUILDING.md](BUILDING.md) — Detailed build options, compiler configurations (GCC/Clang), and sanitizer options.
-* [PACKAGING.md](PACKAGING.md) — Offline packaging architecture and reproducible build manifests.
-* [RELEASE.md](RELEASE.md) — Release validation checklists, verification logs, and signing procedures.
-* [CHANGELOG.md](CHANGELOG.md) — Detailed commit and version change history.
-* [LICENSES.md](LICENSES.md) — Upstream licenses, third-party component attributions, and GPL-3 / AGPL notices.
+**Sioyek** was originally created by **Ali H. Rad** ([@ahrm](https://github.com/ahrm)) and released under the GNU General Public License v3.0.
+* Upstream repository: [github.com/ahrm/sioyek](https://github.com/ahrm/sioyek)
+* Upstream documentation: [sioyek-documentation.readthedocs.io](https://sioyek-documentation.readthedocs.io/)
+* If you find Sioyek valuable in your research work, consider supporting the upstream author: [Buy Me a Coffee](https://www.buymeacoffee.com/ahrm).
 
 ---
 
-## Upstream & Attribution {#upstream--attribution}
-
-Sioyek was originally created by **Ali H. Rad** ([@ahrm](https://github.com/ahrm)) and released under the GNU General Public License v3.0.
-* Upstream repository: [github.com/ahrm/sioyek](https://github.com/ahrm/sioyek)
-* Upstream documentation: [sioyek-documentation.readthedocs.io](https://sioyek-documentation.readthedocs.io/)
-* If you appreciate Sioyek, consider supporting the upstream author: [Buy Me a Coffee](https://www.buymeacoffee.com/ahrm).
+<div align="center">
+Distributed under the <b>GNU General Public License v3.0</b>. See <a href="LICENSE">LICENSE</a> for details.
+</div>

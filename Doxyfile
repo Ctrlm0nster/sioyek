@@ -58,17 +58,16 @@ WARN_NO_PARAMDOC       = NO
 WARN_AS_ERROR          = NO
 
 # Inputs and filters
-INPUT                  = docs/architecture.md \
-                         pdf_viewer \
+INPUT                  = README.md \
                          docs \
-                         README.md \
+                         pdf_viewer \
                          BUILDING.md \
                          PACKAGING.md \
                          RELEASE.md \
                          CHANGELOG.md \
                          LICENSES.md
 
-USE_MDFILE_AS_MAINPAGE = docs/architecture.md
+USE_MDFILE_AS_MAINPAGE = README.md
 
 FILE_PATTERNS          = *.c \
                          *.cc \
@@ -117,7 +116,14 @@ SOURCE_TOOLTIPS        = YES
 GENERATE_HTML          = YES
 HTML_OUTPUT            = html
 HTML_FILE_EXTENSION    = .html
-HTML_COLORSTYLE        = AUTO_LIGHT
+HTML_HEADER            = docs/doxygen-awesome/header.html
+HTML_FOOTER            = docs/doxygen-awesome/footer.html
+HTML_EXTRA_STYLESHEET  = docs/doxygen-awesome/doxygen-awesome.css \
+                         docs/doxygen-awesome/doxygen-awesome-sidebar-only.css
+HTML_EXTRA_FILES       = docs/doxygen-awesome/doxygen-awesome-darkmode-toggle.js \
+                         docs/doxygen-awesome/doxygen-awesome-paragraph-link.js \
+                         docs/doxygen-awesome/doxygen-awesome-interactive-toc.js
+HTML_COLORSTYLE        = LIGHT
 GENERATE_TREEVIEW      = YES
 TREEVIEW_WIDTH         = 250
 EXT_LINKS_IN_WINDOW    = NO
