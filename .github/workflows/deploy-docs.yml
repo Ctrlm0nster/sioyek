@@ -26,6 +26,7 @@ jobs:
 
       - name: Generate Doxygen Documentation
         run: |
+          mkdir -p build/doxygen
           doxygen Doxyfile
 
       - name: Prepare GitHub Pages artifact
