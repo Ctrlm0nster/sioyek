@@ -1,36 +1,20 @@
 name: Deploy Documentation to GitHub Pages
 
-'on':
+on:
   push:
     branches:
       - development
       - main
-    paths:
-      - 'docs/**'
-      - 'pdf_viewer/**'
-      - 'Doxyfile'
-      - 'README.md'
-      - '*.md'
-      - '.github/workflows/deploy-docs.yml'
   workflow_dispatch:
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-concurrency:
-  group: 'pages'
-  cancel-in-progress: false
-
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 jobs:
-  build-and-deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  deploy:
     runs-on: ubuntu-24.04
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -46,17 +30,11 @@ jobs:
 
       - name: Prepare GitHub Pages artifact
         run: |
-          # Prevent GitHub Pages from ignoring files beginning with an underscore
           touch build/doxygen/html/.nojekyll
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: build/doxygen/html
-
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: build/doxygen/html
+          force_orphan: true
