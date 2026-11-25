@@ -108,6 +108,27 @@ mise run clean
 mise run reader -- "$PWD/tutorial.pdf"
 ```
 
+##### After a Qt update
+
+If Qt has stayed at the version Sioyek was built against and the reader is
+working, you can keep using that build. After a full Arch system upgrade that
+changes Qt, check the installed version, then rebuild and launch your local copy
+from the repository root.
+
+```sh
+pkg-config --modversion Qt6Core
+mise run build && mise run reader
+```
+
+For example, the version check prints `6.12.1` after upgrading to Arch's
+`qt6-base 6.12.1-1`. The local reader uses your existing Sioyek profile,
+including preferences, keybindings, bookmarks, and reading history.
+
+If you normally open Sioyek from the desktop launcher, run `mise run package`
+and install the newly built main package from `build/arch/` using the
+[Arch package instructions](PACKAGING.md). The `reader` task launches
+`build/dev/sioyek` by default. A full benchmark is optional for routine use.
+
 #### 3. Testing
 
 - **`mise run test`** (alias: **`check`**): Runs CTest unit tests in the development build directory (`renderer_response_state`, `modern_api_compatibility`, `mupdf_source_staging`, `mupdf_runtime`, `vulkan_rendering`, `qt_vulkan_lifecycle`). Additional CTest arguments can be passed after `--`.
@@ -399,7 +420,7 @@ This benchmark evaluates three aspects:
 2. **Search Responsiveness**: Compares unindexed time-to-first-match (page-by-page traversal) against indexed in-memory super-fast search across early and deep terms.
 3. **Render Contention**: Measures page-turn render settle latency while background search actively traverses the document versus an idle reader baseline.
 
-### Local fixes for Qt 6.12.0 and Wayland 1.26.0
+### Local fixes for Qt 6.12.x and Wayland 1.26.0
 
 The unmodified system Qt 6.12.0 with validation layers 1.4.363.1 reports
 `VUID-VkImageCreateInfo-initialLayout-12478`. Qt's
@@ -409,6 +430,10 @@ creates optimal-tiled images with `VK_IMAGE_LAYOUT_PREINITIALIZED` (in
 initial layout. This is inside the system Qt library, including widget-owned
 textures. `patches/qt/6.12.0-vulkan-initial-layout.patch` changes both creation
 and tracked initial layout to `UNDEFINED`, which matches optimal tiling.
+[Qt 6.12.1 fixes this upstream](https://qt-project.atlassian.net/browse/QTBUG-150039).
+The helper selects the source archive that matches the installed Qt and
+applies the Vulkan patch only on 6.12.0. Both versions still use the
+Wayland keyboard-compose cleanup for local leak testing.
 
 The native Wayland exit leak also reproduces in a minimal Qt Vulkan widget.
 `patches/wayland/1.26.0-destroyed-event-argument.patch` releases an event's
@@ -420,7 +445,7 @@ compose state/table. `patches/qt/6.12.0-wayland-compose-cleanup.patch` adds thos
 matching unrefs; the display's borrowed XKB context retains its original owner.
 
 These are explicit, optional dependency builds, with exact source checksums.
-They never replace host libraries and are restricted to the tested Qt version
+They never replace host libraries and are restricted to Qt 6.12.0 and 6.12.1
 because the application uses Qt private APIs. The helper needs `curl`, `patch`,
 Meson, libffi, Expat and libxml2 development files in addition to normal build
 dependencies. If Meson is absent, use an isolated environment:
@@ -442,8 +467,12 @@ LD_LIBRARY_PATH="$runtime/qt-build/lib:$runtime/wayland-build/src" \
 ```
 
 The same environment can prefix `scripts/dev-run.sh` or the temporary-profile
-`scripts/test-wayland.py` command. In this workspace, the tested dependency tree
-is `build/runtime-blockers`; set `runtime` to that path to reuse it.
+`scripts/test-wayland.py` command. On Qt 6.12.1, use `qt-build-6.12.1/lib`
+in the library path. Test harnesses enforce zero Vulkan validation errors by
+default; when testing against unpatched system Qt 6.12.0, pass `--allow-qt-vuid`
+to allow the known texture diagnostic. In this workspace, the
+tested Qt 6.12.0 dependency tree is `build/runtime-blockers`; set `runtime` to
+that path to reuse it.
 Arch packages use the system libraries. CI fails on Vulkan validation errors
 with a diagnostic-specific exception for the Qt 6.12.0 texture issue above.
 The sanitized Xvfb job keeps the Lavapipe ICD mapped through the exit check to

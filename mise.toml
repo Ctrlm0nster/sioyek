@@ -76,7 +76,7 @@ run_all_tests() {
   python3 scripts/test-default-profile.py "$bin"
 
   echo "=== 3/6 Render Workers Regression Test ==="
-  python3 scripts/test-render-workers.py "$bin" --allow-qt-vuid
+  python3 scripts/test-render-workers.py "$bin"
 
   echo "=== 4/6 Same-Width Overview Regression Test ==="
   python3 scripts/test-overview-same-width.py "$bin"
@@ -142,12 +142,7 @@ test_workers() {
     echo "Development binary not found at $bin. Run 'mise run build' first." >&2
     exit 1
   fi
-  local vuid_arg=()
-  case " $* " in
-    *"--allow-qt-vuid"*|*"--no-allow-qt-vuid"*) ;;
-    *) vuid_arg=(--allow-qt-vuid) ;;
-  esac
-  python3 scripts/test-render-workers.py "$bin" "${vuid_arg[@]}" "$@"
+  python3 scripts/test-render-workers.py "$bin" "$@"
 }
 test_workers "$@"
 '''

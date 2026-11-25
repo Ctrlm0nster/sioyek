@@ -134,7 +134,7 @@ def trial(args, label, binary, index, work):
                 process.wait(timeout=15)
     if 'Sioyek renderer: Vulkan' not in (home / 'reader.log').read_text():
         raise RuntimeError('Vulkan backend not confirmed')
-    bench.check_reader_log(home / 'reader.log')
+    bench.check_reader_log(home / 'reader.log', allow_known_qt_vuid=args.allow_qt_vuid)
     return result
 
 
@@ -149,6 +149,8 @@ def main():
     parser.add_argument('--idle-seconds', type=float, default=5)
     parser.add_argument('--platform', choices=('wayland', 'xcb'), default='wayland')
     parser.add_argument('--skip-search', action='store_true', help='Image-only PDFs have no searchable text')
+    parser.add_argument('--allow-qt-vuid', action=argparse.BooleanOptionalAction, default=False,
+                        help='Allow known upstream Qt 6.12.0 bug VUID-12478 when testing with unpatched system Qt')
     args = parser.parse_args()
     if args.rounds < 1 or args.jobs < 1 or args.idle_seconds <= 0:
         parser.error('Counts and idle duration must be positive')

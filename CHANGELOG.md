@@ -5,7 +5,7 @@ Upstream: https://github.com/ahrm/sioyek (ahrm and contributors)
 
 ## [3.0.0-dev] — Vulkan & Linux Modernization
 
-Current development packaging revision: 5. No release tag or public assets yet.
+Current development packaging revision: 6. No release tag or public assets yet.
 
 - Default MuPDF's shared decoded-resource cache to 64 MiB to reduce retained
   memory while reading image-heavy PDFs. Set `mupdf_store_mib` and restart to
@@ -52,14 +52,18 @@ Current development packaging revision: 5. No release tag or public assets yet.
   connections. Join workers before destroying windows and unwind
   normal application owners when quitting from an inactive window.
 - Keep MuPDF 1.26.11 pinned and apply reviewed fixes in a separate build tree:
-  nullable member addresses, text alpha shifts, empty layer sorting and a typed
-  LittleCMS callback. Select supported system libjpeg-turbo decoding after
-  testing all tutorial pages against the bundled IJG decoder.
-- Provide optional, checksummed local Qt 6.12.0/Wayland 1.26.0 builds for Vulkan
-  image-layout validation and Wayland proxy/keyboard-compose cleanup fixes.
-  Host libraries remain unchanged. Add independent Qt lifetime and MuPDF runtime
-  regressions; CI now rejects Vulkan validation errors and builds pinned MuPDF
-  under sanitizers.
+  nullable member addresses, text alpha shifts, empty layer sorting, a typed
+  LittleCMS callback and const qualifiers for C23 SVG style parsing. Select
+  supported system libjpeg-turbo decoding after testing all tutorial pages against
+  the bundled IJG decoder.
+- Provide optional, checksummed local Qt 6.12.0/6.12.1 and Wayland 1.26.0 builds
+  for Vulkan image-layout validation and Wayland proxy/keyboard-compose cleanup fixes.
+  Qt 6.12.1 incorporates the upstream Vulkan texture initial-layout fix (QTBUG-150039),
+  making the local Vulkan patch redundant on 6.12.1. Test harnesses enforce zero
+  Vulkan validation errors by default, with an explicit `--allow-qt-vuid` opt-in
+  for unpatched system Qt 6.12.0. Host libraries remain unchanged. Add independent
+  Qt lifetime and MuPDF runtime regressions; CI now rejects Vulkan validation
+  errors and builds pinned MuPDF under sanitizers.
 
 - Replace application OpenGL calls with Vulkan rendering through Qt QRhiWidget;
   embed build-time SPIR-V shaders, separate MuPDF images from device resources,

@@ -185,6 +185,7 @@ set(mupdf_patches
   "${CMAKE_CURRENT_SOURCE_DIR}/patches/mupdf/1.26.11-null-reference-counting.patch"
   "${CMAKE_CURRENT_SOURCE_DIR}/patches/mupdf/1.26.11-text-color-shift.patch"
   "${CMAKE_CURRENT_SOURCE_DIR}/patches/mupdf/1.26.11-empty-layer-sort.patch"
+  "${CMAKE_CURRENT_SOURCE_DIR}/patches/mupdf/1.26.11-svg-const-qualifier.patch"
   "${CMAKE_CURRENT_SOURCE_DIR}/patches/mupdf/lcms2-typed-interpolation.patch")
 set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS ${mupdf_patches})
 set(mupdf_source "${CMAKE_CURRENT_BINARY_DIR}/mupdf-source")

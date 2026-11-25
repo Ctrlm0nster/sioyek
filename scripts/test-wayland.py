@@ -18,6 +18,8 @@ parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('executable', type=Path)
 parser.add_argument('--onscreen', action='store_true',
                     help='Also check compositor pixels for status/command widget repaints (grim + Pillow)')
+parser.add_argument('--allow-qt-vuid', action=argparse.BooleanOptionalAction, default=False,
+                    help='Allow known upstream Qt 6.12.0 bug VUID-12478 when testing with unpatched system Qt')
 args = parser.parse_args()
 if args.onscreen:
     from PIL import Image, ImageChops
@@ -158,10 +160,13 @@ with (work / 'launch.log').open('w') as log:
         command('quit')
         assert process.wait(timeout=10) == 0, 'Reader failed at shutdown; inspect launch.log'
         launch_log = (work / 'launch.log').read_text()
-        # Ignore known upstream Qt 6 bug VUID-VkImageCreateInfo-initialLayout-12478
-        launch_log = re.sub(r'VUID-VkImageCreateInfo-initialLayout-12478', '', launch_log)
-        assert not re.search(r'Validation Error|VUID-|AddressSanitizer|LeakSanitizer|runtime error:',
-                             launch_log), 'Validation/sanitizer diagnostics; inspect launch.log'
+        assert not re.search(r'AddressSanitizer|LeakSanitizer|runtime error:', launch_log), (
+            'Sanitizer diagnostics; inspect launch.log')
+        if args.allow_qt_vuid:
+            launch_log = '\n'.join(line for line in launch_log.splitlines()
+                                   if 'VUID-VkImageCreateInfo-initialLayout-12478' not in line)
+        assert not re.search(r'Validation Error|VUID-', launch_log), (
+            'Vulkan validation diagnostics; inspect launch.log')
     finally:
         if process.poll() is None:
             process.terminate()

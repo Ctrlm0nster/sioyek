@@ -26,8 +26,8 @@ def main():
     parser.add_argument('--platform', choices=('wayland', 'xcb'), default='wayland')
     parser.add_argument('--validation', action=argparse.BooleanOptionalAction, default=True,
                         help='Enable or disable Vulkan validation layers')
-    parser.add_argument('--allow-qt-vuid', action=argparse.BooleanOptionalAction, default=True,
-                        help='Allow known upstream Qt 6 bug VUID-12478 when testing with system Qt')
+    parser.add_argument('--allow-qt-vuid', action=argparse.BooleanOptionalAction, default=False,
+                        help='Allow known upstream Qt 6.12.0 bug VUID-12478 when testing with unpatched system Qt')
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
     work = Path(tempfile.mkdtemp(prefix='sioyek-worker-test-'))

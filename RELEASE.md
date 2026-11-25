@@ -7,11 +7,11 @@ release procedure; no command here has been run to tag, sign or publish a releas
 
 ## Verification status and known issues
 
-The three original runtime blockers have reviewed local fixes. Qt 6.12.0's
-optimal-image initial layout and Wayland keyboard-compose cleanup are patched
-in an optional local Qt build. Wayland 1.26.0's discarded-event proxy reference
-is patched in an optional local client build. System libraries remain unchanged;
-ordinary packages and remote CI still require compatible distribution fixes.
+Qt 6.12.1 includes the upstream Vulkan texture initial-layout fix. The optional
+local build applies the Vulkan patch on Qt 6.12.0 and the Wayland keyboard-compose
+patch on both versions. Wayland 1.26.0's discarded-event proxy reference is
+patched in an optional local client build. Arch packages use system libraries
+and must be rebuilt when Qt changes because the renderer uses QtGuiPrivate.
 See [BUILDING.md](BUILDING.md) for exact versions, checksums and local commands.
 
 Local validation on 2026-11-16 passed all five regression tests under GCC,

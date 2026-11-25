@@ -37,6 +37,8 @@ def arguments():
     parser.add_argument('--platform', choices=('wayland', 'xcb'), default='wayland')
     parser.add_argument('--validation', action=argparse.BooleanOptionalAction, default=True,
                         help='Keep Vulkan validation enabled (default); record the setting in results')
+    parser.add_argument('--allow-qt-vuid', action=argparse.BooleanOptionalAction, default=False,
+                        help='Allow known upstream Qt 6.12.0 bug VUID-12478 when testing with unpatched system Qt')
     parser.add_argument('--normal-only', action='store_true',
                         help='Measure normal mode only for profiling/workload sweeps')
     parser.add_argument('--page-turns', type=int, default=0,
@@ -114,16 +116,17 @@ def png_dimensions(path):
     return list(struct.unpack('>II', header[16:24]))
 
 
-def check_reader_log(path, validation=True, allow_known_qt_vuid=True):
+def check_reader_log(path, validation=True, allow_known_qt_vuid=False):
     text = path.read_text()
+    if re.search(r'AddressSanitizer|LeakSanitizer|runtime error:', text):
+        raise RuntimeError(f'Validation/sanitizer diagnostics: {path}')
     if allow_known_qt_vuid:
-        # Ignore known upstream Qt 6 bug VUID-VkImageCreateInfo-initialLayout-12478
+        # Match and ignore the specific known upstream Qt 6.12.0 bug VUID-VkImageCreateInfo-initialLayout-12478
         # (Qt's QVkTexture::create() creates optimal-tiled images with VK_IMAGE_LAYOUT_PREINITIALIZED)
-        text = re.sub(r'VUID-VkImageCreateInfo-initialLayout-12478', '', text)
-    patterns = r'AddressSanitizer|LeakSanitizer|runtime error:'
-    if validation:
-        patterns = r'Validation Error|VUID-|' + patterns
-    if re.search(patterns, text):
+        # by excluding the full diagnostic line so the "Validation Error" preamble does not trip checks.
+        text = '\n'.join(line for line in text.splitlines()
+                         if 'VUID-VkImageCreateInfo-initialLayout-12478' not in line)
+    if validation and re.search(r'Validation Error|VUID-', text):
         raise RuntimeError(f'Validation/sanitizer diagnostics: {path}')
 
 
@@ -376,7 +379,7 @@ def trial(args, backend, binary, trial_index, work):
             if process.poll() is None:
                 process.terminate()
                 process.wait(timeout=15)
-    check_reader_log(home / 'reader.log', validation=args.validation)
+    check_reader_log(home / 'reader.log', validation=args.validation, allow_known_qt_vuid=args.allow_qt_vuid)
     return result
 
 
