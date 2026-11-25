@@ -216,6 +216,17 @@ verify_rel "$@"
 # 5. Benchmarking & Fixtures
 # -----------------------------------------------------------------------------
 
+[tasks.perf]
+description = "Record Sioyek with perf using the isolated test profile"
+run = '''
+record_reader() {
+  mkdir -p build/perf || return
+  exec perf record -e cycles:u -F 99 --call-graph dwarf --user-callchains \
+    -o build/perf/sioyek.data -- scripts/perf-run.sh "$@"
+}
+record_reader "$@"
+'''
+
 [tasks.fixtures]
 description = "Generate synthetic PDF benchmark fixtures"
 run = "python3 scripts/create-benchmark-fixtures.py build/benchmark-fixtures"

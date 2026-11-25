@@ -278,6 +278,23 @@ and only their painted pixel bounds are cleared. The regression test covers
 clipping/transforms across boundaries, text/images, disappearing layers and resize.
 Run it with `QT_SCALE_FACTOR=1.5` as well when changing overlay coordinates.
 
+### Record a session with Linux perf
+
+Build the optimized reader with debug symbols, then record from the repository
+root. Close the reader to finish recording.
+
+```sh
+mise run build
+mise run perf
+perf report -i build/perf/sioyek.data
+```
+
+The launcher opens `tutorial.pdf` by default. To test another document, use
+`mise run perf -- "/path/to/document.pdf"`. The reader starts in a new
+instance and saves its preferences, databases, and cache under
+`build/perf/profile`. Reuse that directory to test with the same reader state.
+For a fresh session, move the directory aside after closing the reader.
+
 ### Worker scheduling and performance checks
 
 The four MuPDF render workers and the background search worker wait on condition

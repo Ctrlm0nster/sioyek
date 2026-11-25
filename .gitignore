@@ -52,6 +52,12 @@ dlldata.c
 # Benchmark Results
 BenchmarkDotNet.Artifacts/
 
+# Linux perf recordings and rotated captures
+perf.data
+perf.data.*
+sioyek.data
+sioyek.data.*
+
 # .NET Core
 project.lock.json
 project.fragment.lock.json
