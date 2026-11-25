@@ -3,7 +3,6 @@
         <file>tutorial.pdf</file>
         <file>pdf_viewer/keys.config</file>
         <file>pdf_viewer/prefs.config</file>
-        <file>begin.png</file>
         <file>pdf_viewer/touchui/TouchSlider.qml</file>
         <file>pdf_viewer/touchui/TouchCheckbox.qml</file>
         <file>pdf_viewer/touchui/TouchListView.qml</file>
@@ -87,7 +86,6 @@
         <file>icons/save.svg</file>
         <file>icons/load.svg</file>
         <file>icons/move.svg</file>
-        <file>end.png</file>
         <file>data/embedding.npy</file>
         <file>data/linear.npy</file>
         <file>data/command_docs.json</file>

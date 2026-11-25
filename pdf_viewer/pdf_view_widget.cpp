@@ -595,7 +595,6 @@ PdfViewWidget::PdfViewWidget(DocumentView* document_view, PdfRenderer* pdf_rende
     }
 
     //bookmark_pixmap = QPixmap(":/icons/B.svg");
-    //portal_pixmap = QPixmap(":/end.png");
     bookmark_icon = QIcon(":/icons/B.svg");
     portal_icon = QIcon(":/icons/P.svg");
     bookmark_icon_white = QIcon(":/icons/B_white.svg");
