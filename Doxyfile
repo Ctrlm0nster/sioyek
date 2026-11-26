@@ -115,6 +115,7 @@ SOURCE_TOOLTIPS        = YES
 # HTML Output
 GENERATE_HTML          = YES
 HTML_OUTPUT            = html
+LAYOUT_FILE            = docs/doxygen-awesome/DoxygenLayout.xml
 HTML_FILE_EXTENSION    = .html
 HTML_HEADER            = docs/doxygen-awesome/header.html
 HTML_FOOTER            = docs/doxygen-awesome/footer.html

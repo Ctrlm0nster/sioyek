@@ -11,7 +11,7 @@
 
 **The keyboard-driven PDF reader purpose-built for reading research papers, technical textbooks, and complex documents.**
 
-[Quick Start](#quick-start) • [Core Superpowers](#core-superpowers) • [Keybindings](#cheat-sheet) • [Documentation Hub](docs/README.md) • [Architecture](#architecture)
+[Quick Start](#quick-start) • [Core Superpowers](#core-superpowers) • [Keybindings](#cheat-sheet) • [Documentation Hub](docs/hub.md) • [Architecture](#architecture)
 
 </div>
 
@@ -115,7 +115,7 @@ Sioyek is entirely keyboard-driven. Here are the most essential commands to get 
 
 ## 📚 Complete Documentation Hub
 
-Detailed documentation is available in the [`docs/`](docs/README.md) directory:
+Detailed documentation is available in the [`docs/`](docs/hub.md) directory:
 
 - 📖 **[User Guide & Workflows](docs/user-guide.md)** — Step-by-step walkthrough of Portals, Smart Jump, Overviews, and Annotations.
 - ⌨️ **[Keybindings Reference](docs/keybindings.md)** — Full searchable directory of all 130+ commands and default keys.
