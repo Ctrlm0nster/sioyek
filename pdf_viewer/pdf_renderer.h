@@ -329,6 +329,17 @@ public:
 
     /**
      * @brief Look up a rendered page handle, returning a closest-zoom placeholder if still rasterizing.
+     * @param path Document path used as the render cache key.
+     * @param page Zero-based page number.
+     * @param should_render_annotations Include PDF annotations in the raster.
+     * @param index Slice index, or -1 for a whole page.
+     * @param num_h_slices Number of horizontal divisions in the slice grid.
+     * @param num_v_slices Number of vertical divisions in the slice grid.
+     * @param zoom_level Requested document zoom.
+     * @param display_scale Device pixel ratio used for rasterization.
+     * @param[out] page_width Optional output for the rendered width in pixels.
+     * @param[out] page_height Optional output for the rendered height in pixels.
+     * @return The cached image handle, or zero when no raster is available.
      */
     RenderHandle find_rendered_page(std::wstring path, int page, bool should_render_annotations,
                                     int index, int num_h_slices, int num_v_slices, float zoom_level,

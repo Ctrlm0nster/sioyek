@@ -4,14 +4,16 @@
 
 [![Linux CI](https://github.com/Ctrlm0nster/sioyek/actions/workflows/linux-cmake.yml/badge.svg)](https://github.com/Ctrlm0nster/sioyek/actions/workflows/linux-cmake.yml)
 [![Documentation](https://img.shields.io/badge/Documentation-GitHub%20Pages-informational.svg)](https://Ctrlm0nster.github.io/sioyek/)
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
+<a href="LICENSE"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="License: GPL v3" /></a>
 [![Platform: Linux](https://img.shields.io/badge/Platform-Linux%20%7C%20Wayland%20%7C%20X11-purple.svg)](https://archlinux.org)
 [![Graphics: Vulkan](https://img.shields.io/badge/Renderer-Vulkan%20%28Qt%20QRhi%29-red.svg)](https://www.vulkan.org/)
 [![C++ Standard: 20](https://img.shields.io/badge/C%2B%2B-20-brightgreen.svg)](https://en.wikipedia.org/wiki/C%2B%2B20)
 
 **The keyboard-driven PDF reader purpose-built for reading research papers, technical textbooks, and complex documents.**
 
-[Quick Start](#quick-start) • [Core Superpowers](#core-superpowers) • [Keybindings](#cheat-sheet) • [Documentation Hub](docs/hub.md) • [Architecture](#architecture)
+🌐 **Live Documentation Website:** [**https://Ctrlm0nster.github.io/sioyek/**](https://Ctrlm0nster.github.io/sioyek/)
+
+[🌐 Online Website](https://Ctrlm0nster.github.io/sioyek/) • [Quick Start](#quick-start) • [Core Superpowers](#core-superpowers) • [Keybindings](#cheat-sheet) • [Documentation Hub](docs/hub.md) • [Architecture](#architecture)
 
 </div>
 
@@ -115,7 +117,10 @@ Sioyek is entirely keyboard-driven. Here are the most essential commands to get 
 
 ## 📚 Complete Documentation Hub
 
-Detailed documentation is available in the [`docs/`](docs/hub.md) directory:
+> [!TIP]
+> 🌐 **Interactive Online Website**: Browse the complete documentation at **[https://Ctrlm0nster.github.io/sioyek/](https://Ctrlm0nster.github.io/sioyek/)** featuring an interactive light/dark theme, live architecture Mermaid diagrams, and searchable C++ API reference.
+
+Detailed guides are also available locally in the [`docs/`](docs/hub.md) directory:
 
 - 📖 **[User Guide & Workflows](docs/user-guide.md)** — Step-by-step walkthrough of Portals, Smart Jump, Overviews, and Annotations.
 - ⌨️ **[Keybindings Reference](docs/keybindings.md)** — Full searchable directory of all 130+ commands and default keys.

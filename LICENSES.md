@@ -11,7 +11,7 @@ licenses, copyright notices and subdependency sources. Representative paths:
 
 | Component | Notice/source location |
 | --- | --- |
-| Sioyek | LICENSE, README.md, pdf_viewer/ |
+| Sioyek | [LICENSE](LICENSE), [README.md](README.md), pdf_viewer/ |
 | MuPDF | mupdf/COPYING, mupdf/include/, mupdf/source/, mupdf/resources/ |
 | FreeType | mupdf/thirdparty/freetype/LICENSE.TXT |
 | HarfBuzz | mupdf/thirdparty/harfbuzz/COPYING (system version linked) |

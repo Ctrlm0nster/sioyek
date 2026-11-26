@@ -106,5 +106,5 @@ Current development packaging revision: 6. No release tag or public assets yet.
 - Disable inherited automatic publishing workflows; retain them as reference.
 
 No public release of this edition has been tagged or published. Existing compiler warnings
-remain in bundled dependencies. See RELEASE.md for prior release checks; the
+remain in bundled dependencies. See [RELEASE.md](RELEASE.md) for prior release checks. The
 Vulkan backend requires new validation before publishing a release.

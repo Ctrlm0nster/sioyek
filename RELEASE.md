@@ -59,7 +59,7 @@ Licensing provenance and notice restoration are recorded in [LICENSES.md](LICENS
 - [ ] Commit reviewed changes with maintainer approval. Require a clean maintenance branch and
       initialized recursive submodules at the recorded gitlinks. No dirty snapshots
       may be published as immutable releases.
-- [ ] Review `CHANGELOG.md`, `VERSION`, PKGBUILD `pkgrel`, and upstream attribution.
+- [ ] Review [CHANGELOG.md](CHANGELOG.md), `VERSION`, PKGBUILD `pkgrel`, and upstream attribution.
 - [ ] Review dependency/source changes; do not move gitlinks with `--remote`.
 - [ ] Generate the source archive and concrete recipe with the clean-release gate:
       `python3 scripts/prepare-arch-package.py --release`.
@@ -92,7 +92,7 @@ Licensing provenance and notice restoration are recorded in [LICENSES.md](LICENS
       the actual artifacts; do not treat a successful configure as a release test.
 - [ ] Extract the package and test tutorial, `j`/`k`, page movement, `/` search,
       scrolling, preferences and persistence using a temporary HOME on Wayland and
-      XWayland. See PACKAGING.md and `scripts/test-wayland.py` for native input.
+      XWayland. See [PACKAGING.md](PACKAGING.md) and `scripts/test-wayland.py` for native input.
 - [ ] Test fresh defaults and synthetic migrations with
       `scripts/test-default-profile.py /absolute/path/to/extracted/usr/bin/sioyek`.
 - [ ] Test a copy of an existing profile and historical database, never live user
@@ -193,7 +193,7 @@ key or real release signature was created during QA.
 
 ## Arch installation, update and removal
 
-See PACKAGING.md for dependency installation, local builds, extraction and full
+See [PACKAGING.md](PACKAGING.md) for dependency installation, local builds, extraction and full
 commands. After signature verification and backing up/closing existing readers:
 
 ```sh
@@ -221,7 +221,7 @@ package; remove that explicitly if installed. Never delete `~/.config/sioyek` or
 
 ## Upstream and dependency maintenance
 
-Use the clean-tree fetch/review/merge sequence in PACKAGING.md. Keep local build,
+Use the clean-tree fetch/review/merge sequence in [PACKAGING.md](PACKAGING.md). Keep local build,
 packaging and CI changes reviewable; inspect upstream release automation before
 adopting it. Initialize only the newly recorded submodules after a merge. For a
 MuPDF update, review release notes/API changes and dependency gitlinks, build both

@@ -59,7 +59,13 @@ WARN_AS_ERROR          = NO
 
 # Inputs and filters
 INPUT                  = README.md \
-                         docs \
+                         docs/hub.md \
+                         docs/user-guide.md \
+                         docs/keybindings.md \
+                         docs/configuration.md \
+                         docs/synctex.md \
+                         docs/troubleshooting.md \
+                         docs/architecture.md \
                          pdf_viewer \
                          BUILDING.md \
                          PACKAGING.md \
@@ -123,10 +129,12 @@ HTML_EXTRA_STYLESHEET  = docs/doxygen-awesome/doxygen-awesome.css \
                          docs/doxygen-awesome/doxygen-awesome-sidebar-only.css
 HTML_EXTRA_FILES       = docs/doxygen-awesome/doxygen-awesome-darkmode-toggle.js \
                          docs/doxygen-awesome/doxygen-awesome-paragraph-link.js \
-                         docs/doxygen-awesome/doxygen-awesome-interactive-toc.js
+                         docs/doxygen-awesome/doxygen-awesome-interactive-toc.js \
+                         LICENSE
 HTML_COLORSTYLE        = LIGHT
+DISABLE_INDEX          = YES
 GENERATE_TREEVIEW      = YES
-TREEVIEW_WIDTH         = 250
+TREEVIEW_WIDTH         = 335
 EXT_LINKS_IN_WINDOW    = NO
 HTML_FORMULA_FORMAT    = png
 SEARCHENGINE           = YES

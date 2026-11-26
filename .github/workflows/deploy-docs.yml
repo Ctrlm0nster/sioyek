@@ -23,12 +23,14 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y graphviz
-          if curl -sL https://github.com/doxygen/doxygen/releases/download/Release_1_13_2/doxygen-1.13.2.linux.bin.tar.gz | tar -xz -C /tmp 2>/dev/null; then
-            sudo mv /tmp/doxygen-1.13.2/bin/doxygen /usr/local/bin/
-          else
-            sudo apt-get install -y doxygen
-          fi
-          doxygen --version
+          cd "$RUNNER_TEMP"
+          curl --fail --silent --show-error --location --retry 3 \
+            --output doxygen-1.18.0.linux.bin.tar.gz \
+            https://github.com/doxygen/doxygen/releases/download/Release_1_18_0/doxygen-1.18.0.linux.bin.tar.gz
+          echo '14fa81bdc34171edb5f1f02b1d60e74802f0439b77fa44e592565d517d72df90  doxygen-1.18.0.linux.bin.tar.gz' | sha256sum --check
+          tar -xzf doxygen-1.18.0.linux.bin.tar.gz
+          sudo install -m 0755 doxygen-1.18.0/bin/doxygen /usr/local/bin/doxygen
+          test "$(doxygen --version | cut -d ' ' -f 1)" = "1.18.0"
 
       - name: Generate Doxygen Documentation
         run: |

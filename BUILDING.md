@@ -595,7 +595,8 @@ and event-driven render readiness.
 
 ### Prerequisites
 
-Ensure `doxygen` (and optionally `graphviz` for dot diagrams) is installed:
+Use Doxygen 1.18.0 to match the published HTML and render the Mermaid diagrams
+in the architecture guide. Graphviz is optional for the generated API graphs:
 
 ```sh
 sudo pacman -S --needed doxygen graphviz
@@ -616,6 +617,7 @@ mise run docs
 Or invoke Doxygen directly from the repository root:
 
 ```sh
+mkdir -p build/doxygen
 doxygen Doxyfile
 ```
 
@@ -634,8 +636,8 @@ Or host it locally:
 python3 -m http.server -d build/doxygen/html 8080
 ```
 
-The documentation main page links directly to the detailed architecture overview
-in `docs/architecture.md`, indexing classes and interfaces across `pdf_viewer/`:
+The documentation includes an [architecture overview](docs/architecture.md)
+and a reference for classes and interfaces across `pdf_viewer/`:
 - `PdfRenderer`: Condition-variable worker pools, thread-local MuPDF context cloning, speculative pre-rendering lookahead, and LRU cache eviction.
 - `PdfViewWidget`: Viewport calculations, dynamic page slicing, zoom transformations, and floating overview portals.
 - `VulkanCanvas`: Qt 6 `QRhiWidget` integration, pre-compiled SPIR-V pipeline caches, and transparent `QPainter` overlay composition.

@@ -1,5 +1,8 @@
 # 📚 Sioyek Documentation Hub
 
+> [!TIP]
+> 🌐 **Live Documentation Website**: Browse this documentation online at **[https://Ctrlm0nster.github.io/sioyek/](https://Ctrlm0nster.github.io/sioyek/)** with interactive dark/light mode and searchable API reference.
+
 Welcome to the comprehensive documentation for **Sioyek (Vulkan & Wayland Edition)** — a keyboard-driven PDF reader tailored for reading textbooks, research papers, and technical manuals.
 
 ---

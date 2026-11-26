@@ -12,17 +12,23 @@
 <link rel="icon" href="$relpath^$projecticon" type="image/x-icon" />
 <!--END PROJECT_ICON-->
 <link href="$relpath^tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="$relpath^jquery.js"></script>
+<!--BEGIN FULL_SIDEBAR-->
+<meta name="doxygen-page-layout" content="1" />
+<!--END FULL_SIDEBAR-->
+<!--BEGIN HTML_DYNAMIC_SECTIONS-->
 <script type="text/javascript" src="$relpath^dynsections.js"></script>
+<!--END HTML_DYNAMIC_SECTIONS-->
+<!--BEGIN HTML_CODE_FOLDING-->
 <script type="text/javascript" src="$relpath^codefolding.js"></script>
+<!--END HTML_CODE_FOLDING-->
+<!--BEGIN COPY_CLIPBOARD-->
 <script type="text/javascript" src="$relpath^clipboard.js"></script>
+<!--END COPY_CLIPBOARD-->
 $treeview
 $search
 $mathjax
-<script type="module">
-import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
-mermaid.initialize({ startOnLoad: true });
-</script>
+$darkmode
+$mermaidjs
 <link href="$relpath^$stylesheet" rel="stylesheet" type="text/css" />
 $extrastylesheet
 <script type="text/javascript" src="$relpath^doxygen-awesome-darkmode-toggle.js"></script>
