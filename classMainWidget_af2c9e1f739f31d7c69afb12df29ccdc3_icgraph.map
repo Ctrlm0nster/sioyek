@@ -1,0 +1,29 @@
+<map id="MainWidget::get_direct_paper_name_under_pos" name="MainWidget::get_direct_paper_name_under_pos">
+<area shape="rect" id="Node000001" title=" " alt="" coords="771,298,955,338"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#ad718354da85b44a91d850232f3b528a8" title=" " alt="" coords="549,174,723,214"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="812,294,673,217,675,212,814,289"/>
+<area shape="rect" id="Node000007" href="$classMainWidget.html#afa7c6525ec606423f6ddbe4f4c40c7a3" title=" " alt="" coords="549,298,723,338"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="757,321,723,321,723,315,757,315"/>
+<area shape="rect" id="Node000009" href="$classMainWidget.html#aceff3feac51f6fd987ecd9a02fbb24d2" title=" " alt="" coords="35,362,228,402"/>
+<area shape="poly" id="edge14_Node000001_Node000009" title=" " alt="" coords="768,344,723,353,613,370,502,379,358,385,228,386,228,381,358,380,501,374,612,365,722,347,767,338"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#af8734692288369ddd7d1607223c829e9" title="Dispatch and execute a Sioyek command by name (e.g." alt="" coords="324,85,483,125"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="569,171,456,127,457,122,571,166"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#a50e717278f9543347db6c133dd27b773" title=" " alt="" coords="31,55,232,95"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="310,97,232,89,233,84,311,92"/>
+<area shape="rect" id="Node000005" href="$classCustomCommand.html#ac1a19c0cde26230159172c5225acdbf6" title=" " alt="" coords="32,120,231,145"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="310,117,231,125,231,120,310,112"/>
+<area shape="rect" id="Node000006" href="$classExecuteCommand.html#adb5f3c61987055002e02fbc60a193be4" title=" " alt="" coords="31,5,231,31"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="347,81,257,46,207,33,208,28,258,41,349,76"/>
+<area shape="rect" id="Node000008" href="$classMainWidget.html#a584a1f00e89eff5c5876887703ff5674" title=" " alt="" coords="318,298,489,338"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="535,321,489,321,489,315,535,315"/>
+<area shape="poly" id="edge13_Node000007_Node000009" title=" " alt="" coords="547,344,502,353,359,370,228,380,228,375,358,365,501,347,546,338"/>
+<area shape="rect" id="Node000011" href="$classMainWidget.html#af4cce9ee689f50f78bfecbbd624faf4f" title=" " alt="" coords="305,234,501,274"/>
+<area shape="poly" id="edge10_Node000007_Node000011" title=" " alt="" coords="549,297,476,277,477,271,550,292"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="305,344,218,365,216,359,304,338"/>
+<area shape="rect" id="Node000010" href="$classDownloadPaperUnderCursorCommand.html#a7ed8d57d4a01de5cfb7d062b46b42813" title=" " alt="" coords="29,298,233,338"/>
+<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="305,321,234,321,234,315,305,315"/>
+<area shape="rect" id="Node000012" href="$classGetOverviewPaperName.html#ad6b951ef0ad7404fd491c6b0e81a13c4" title=" " alt="" coords="40,234,223,274"/>
+<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="292,257,223,257,223,251,292,251"/>
+<area shape="rect" id="Node000013" href="$classDownloadOverviewPaperCommand.html#af7eda3f8d3a62c5ec084a0e57b105348" title=" " alt="" coords="5,170,257,210"/>
+<area shape="poly" id="edge12_Node000011_Node000013" title=" " alt="" coords="304,233,216,213,217,207,305,228"/>
+</map>

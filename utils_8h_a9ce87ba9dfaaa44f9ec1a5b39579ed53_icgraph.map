@@ -1,0 +1,10 @@
+<map id="get_model_from_toc" name="get_model_from_toc">
+<area shape="rect" id="Node000001" title=" " alt="" coords="721,29,877,55"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="839,20,828,11,799,8,776,10,763,15,761,20,767,28,763,31,755,21,759,11,774,5,799,3,830,6,842,15"/>
+<area shape="rect" id="Node000002" href="$classDocument.html#a84937ad0a120a2f463c32e013aa57104" title=" " alt="" coords="480,29,673,55"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="708,45,673,45,673,39,708,39"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#ac0695691cb6a93016fe460b9d188a349" title=" " alt="" coords="280,22,432,62"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="466,45,433,45,433,39,466,39"/>
+<area shape="rect" id="Node000004" href="$classGotoTableOfContentsCommand.html#a1fb718643d0fa5ba46d66f01c5e36ff4" title=" " alt="" coords="5,22,232,62"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="266,45,232,45,232,39,266,39"/>
+</map>

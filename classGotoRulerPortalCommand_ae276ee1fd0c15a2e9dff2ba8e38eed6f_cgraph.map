@@ -1,0 +1,13 @@
+<map id="GotoRulerPortalCommand::next_requirement" name="GotoRulerPortalCommand::next_requirement">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,197,95"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a16ffaa9550f24d06730e99966efb68bc" title=" " alt="" coords="245,55,412,95"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="198,73,232,73,232,78,198,78"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a333a90667ea058f36537cd87251c283f" title=" " alt="" coords="504,5,635,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="410,53,459,41,499,31,501,36,461,46,411,58"/>
+<area shape="rect" id="Node000005" href="$classDocument.html#a3ef1e990b285db179371973c148f817a" title=" " alt="" coords="468,55,671,95"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="412,73,454,73,454,78,412,78"/>
+<area shape="rect" id="Node000006" href="$classDocumentView.html#a63920889d1de3ad80f9134659c1bfa86" title=" " alt="" coords="460,120,679,145"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="411,93,461,105,501,114,499,119,459,110,410,98"/>
+<area shape="rect" id="Node000004" href="$classDocumentView.html#acfa88cf915c8bae19ac83d1aa9b42dd1" title=" " alt="" coords="727,5,948,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="635,15,713,15,713,21,635,21"/>
+</map>

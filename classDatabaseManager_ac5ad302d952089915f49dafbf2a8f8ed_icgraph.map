@@ -1,0 +1,7 @@
+<map id="DatabaseManager::import_json" name="DatabaseManager::import_json">
+<area shape="rect" id="Node000001" title=" " alt="" coords="479,5,705,31"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a885e0314eaa71ed2a39c7eaa951c6357" title=" " alt="" coords="245,5,431,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="465,21,431,21,431,15,465,15"/>
+<area shape="rect" id="Node000003" href="$classImportCommand.html#a462efa205ea0e7170265caf23fde6fb3" title=" " alt="" coords="5,5,197,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="231,21,198,21,198,15,231,15"/>
+</map>

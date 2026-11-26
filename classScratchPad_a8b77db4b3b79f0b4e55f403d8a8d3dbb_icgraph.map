@@ -1,0 +1,25 @@
+<map id="ScratchPad::add_drawing" name="ScratchPad::add_drawing">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1000,144,1184,169"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a88c0f9599d1a7192cec7ae64d7779c4b" title=" " alt="" coords="773,65,916,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1034,143,913,107,915,102,1035,138"/>
+<area shape="rect" id="Node000008" href="$classMainWidget.html#a8740bbd56f3643ce6502c0680785ee97" title=" " alt="" coords="749,129,940,184"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="987,159,940,159,940,154,987,154"/>
+<area shape="rect" id="Node000010" href="$classMainWidget.html#a03699df16aa7010e3a1a0e4b5a492612" title=" " alt="" coords="737,208,952,233"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="1037,176,953,199,906,211,904,205,951,194,1035,171"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#aa555d5dfb9f3da4bcb987a9f5c1496ba" title=" " alt="" coords="515,22,671,62"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="759,73,671,58,672,53,760,68"/>
+<area shape="rect" id="Node000007" href="$classMainWidget.html#a2d1fe0808150002e7cf4b2af8a1202cd" title=" " alt="" coords="245,107,449,147"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="760,95,450,121,449,116,759,89"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#a7278eba4b907f1c77583b2323cfe9d5a" title=" " alt="" coords="275,29,420,55"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="502,45,420,45,420,39,502,39"/>
+<area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="391,20,388,15,381,12,347,8,321,10,307,15,304,20,311,27,308,31,299,21,303,11,320,5,347,3,382,7,392,11,396,17"/>
+<area shape="rect" id="Node000005" href="$classMainWidget.html#a1710c804f090c9c005612b755a46de47" title=" " alt="" coords="5,5,197,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="260,36,197,30,198,25,261,31"/>
+<area shape="rect" id="Node000006" href="$classMainWidget.html#a793192d445eb63f8a62cc8b646f3cea2" title=" " alt="" coords="14,55,189,80"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="261,54,189,61,189,56,261,48"/>
+<area shape="rect" id="Node000009" href="$classMainWidget.html#af3a849474f7b5c14851d8e24ae73a858" title=" " alt="" coords="501,137,686,177"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="736,159,686,159,686,154,736,154"/>
+<area shape="poly" id="edge10_Node000009_Node000007" title=" " alt="" coords="487,147,449,142,450,137,487,141"/>
+<area shape="rect" id="Node000011" href="$classLoadScratchpadCommand.html#a86f6ddbb0b121bb21ba92b1c050f9a39" title=" " alt="" coords="497,201,689,241"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="724,223,689,223,689,218,724,218"/>
+</map>

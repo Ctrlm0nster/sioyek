@@ -1,0 +1,19 @@
+<map id="MainWidget::download_paper_with_name" name="MainWidget::download_paper_with_name">
+<area shape="rect" id="Node000001" title=" " alt="" coords="612,127,783,167"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a33cc9d6159ada574a0f631c9f7d21d83" title=" " alt="" coords="349,19,520,59"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="649,122,563,80,510,61,512,56,565,75,652,118"/>
+<area shape="rect" id="Node000004" href="$classDownloadOverviewPaperCommand.html#a99b09419d9f825c2b0b7283df41ee90e" title=" " alt="" coords="5,69,257,109"/>
+<area shape="poly" id="edge8_Node000001_Node000004" title=" " alt="" coords="598,138,564,135,257,104,258,99,564,129,599,133"/>
+<area shape="rect" id="Node000005" href="$classMainWidget.html#a584a1f00e89eff5c5876887703ff5674" title=" " alt="" coords="349,184,520,224"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="599,171,521,188,520,183,598,166"/>
+<area shape="rect" id="Node000006" href="$classMainWidget.html#aceff3feac51f6fd987ecd9a02fbb24d2" title=" " alt="" coords="35,133,228,173"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="598,150,228,155,228,150,598,145"/>
+<area shape="rect" id="Node000008" href="$classDownloadPaperWithNameCommand.html#aa655b906ebffb78ba96d0deb8a2175e7" title=" " alt="" coords="305,248,564,288"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="663,177,618,209,565,238,533,250,531,245,563,234,615,205,660,173"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a12b0e0862df2a1995a933d1394acb2bb" title=" " alt="" coords="46,5,217,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="336,37,217,32,217,26,336,32"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="336,58,252,72,251,67,335,52"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="335,190,228,172,229,167,336,185"/>
+<area shape="rect" id="Node000007" href="$classDownloadPaperUnderCursorCommand.html#a7ed8d57d4a01de5cfb7d062b46b42813" title=" " alt="" coords="29,197,233,237"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="336,211,233,216,233,210,336,206"/>
+</map>

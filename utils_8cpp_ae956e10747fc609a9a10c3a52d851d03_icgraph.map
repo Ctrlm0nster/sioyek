@@ -1,0 +1,22 @@
+<map id="get_paper_name_from_reference_text" name="get_paper_name_from_reference_text">
+<area shape="rect" id="Node000001" title=" " alt="" coords="771,69,940,109"/>
+<area shape="poly" id="edge5_Node000001_Node000001" title=" " alt="" coords="892,58,879,51,855,48,834,50,822,55,817,61,819,68,814,70,812,60,818,50,833,45,855,43,881,46,895,53"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a12b0e0862df2a1995a933d1394acb2bb" title=" " alt="" coords="551,12,721,52"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="764,68,712,55,714,49,766,63"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#af4cce9ee689f50f78bfecbbd624faf4f" title=" " alt="" coords="305,69,501,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="757,92,501,92,501,87,757,87"/>
+<area shape="rect" id="Node000006" href="$classMainWidget.html#afa7c6525ec606423f6ddbe4f4c40c7a3" title=" " alt="" coords="549,127,723,167"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="766,115,714,129,712,124,764,110"/>
+<area shape="rect" id="Node000004" href="$classGetOverviewPaperName.html#ad6b951ef0ad7404fd491c6b0e81a13c4" title=" " alt="" coords="40,5,223,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="304,69,216,48,217,43,305,64"/>
+<area shape="rect" id="Node000005" href="$classDownloadOverviewPaperCommand.html#af7eda3f8d3a62c5ec084a0e57b105348" title=" " alt="" coords="5,69,257,109"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="292,92,258,92,258,87,292,87"/>
+<area shape="poly" id="edge10_Node000006_Node000003" title=" " alt="" coords="540,126,484,112,486,107,542,121"/>
+<area shape="rect" id="Node000007" href="$classMainWidget.html#a584a1f00e89eff5c5876887703ff5674" title=" " alt="" coords="318,184,489,224"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="542,173,486,187,484,181,540,167"/>
+<area shape="rect" id="Node000008" href="$classMainWidget.html#aceff3feac51f6fd987ecd9a02fbb24d2" title=" " alt="" coords="35,133,228,173"/>
+<area shape="poly" id="edge11_Node000006_Node000008" title=" " alt="" coords="536,151,228,155,228,149,536,145"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="304,188,228,174,229,169,305,183"/>
+<area shape="rect" id="Node000009" href="$classDownloadPaperUnderCursorCommand.html#a7ed8d57d4a01de5cfb7d062b46b42813" title=" " alt="" coords="29,197,233,237"/>
+<area shape="poly" id="edge9_Node000007_Node000009" title=" " alt="" coords="305,211,234,215,233,210,304,206"/>
+</map>

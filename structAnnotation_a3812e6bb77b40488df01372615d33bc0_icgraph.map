@@ -1,0 +1,13 @@
+<map id="Annotation::load_metadata_from_json" name="Annotation::load_metadata_from_json">
+<area shape="rect" id="Node000001" title=" " alt="" coords="220,97,419,137"/>
+<area shape="rect" id="Node000002" href="$structAnnotation.html#a58a78025bc808cb1b6071d505de97340" title=" " alt="" coords="5,5,172,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="270,92,171,44,138,33,140,28,173,40,273,88"/>
+<area shape="rect" id="Node000003" href="$structBookMark.html#a765e76a8566d882d522a8ca0e3ec463d" title=" " alt="" coords="8,55,169,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="211,96,148,83,149,77,212,91"/>
+<area shape="rect" id="Node000004" href="$structHighlight.html#a62068b66365087a842f962bd78f60f0d" title=" " alt="" coords="11,104,166,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="206,119,166,119,166,114,206,114"/>
+<area shape="rect" id="Node000005" href="$structMark.html#a51f343edb6523452812fca484df72e48" title=" " alt="" coords="25,153,153,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="212,142,149,156,148,151,211,137"/>
+<area shape="rect" id="Node000006" href="$structPortal.html#ae8f389344c685b6d14dfb76228617b92" title=" " alt="" coords="22,203,155,228"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="271,146,173,192,137,205,135,200,171,188,269,141"/>
+</map>

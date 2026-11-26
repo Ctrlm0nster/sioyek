@@ -1,0 +1,9 @@
+<map id="DownloadPaperWithNameCommand::perform" name="DownloadPaperWithNameCommand::perform">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,49,264,89"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#ac643f6c9579b82c233101c5321fa457a" title=" " alt="" coords="312,49,483,89"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="264,66,298,66,298,71,264,71"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a94be51c36cb51e556d04f21b7fb8b7cd" title=" " alt="" coords="531,5,712,60"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="483,52,517,47,518,52,483,58"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#a0b1838998afff195d975f208735477a3" title=" " alt="" coords="539,85,703,125"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="483,80,526,87,525,92,483,85"/>
+</map>

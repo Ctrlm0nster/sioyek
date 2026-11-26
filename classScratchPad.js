@@ -1,0 +1,26 @@
+var classScratchPad =
+[
+    [ "ScratchPad", "classScratchPad.html#a20649a9932c303d19081495822e08488", null ],
+    [ "add_drawing", "classScratchPad.html#a8b77db4b3b79f0b4e55f403d8a8d3dbb", null ],
+    [ "add_pixmap", "classScratchPad.html#ac09555de34df5642427e1a198757ae26", null ],
+    [ "clear", "classScratchPad.html#a5a0498c2174a9896c236f5b35675e5d6", null ],
+    [ "delete_intersecting_drawings", "classScratchPad.html#a9b58a550d28ee060805f41147f450845", null ],
+    [ "delete_intersecting_objects", "classScratchPad.html#a83616d6feff34d9e6cddd8f24e589cc3", null ],
+    [ "delete_intersecting_pixmaps", "classScratchPad.html#a5302274df4b30e708066925c5d758e8b", null ],
+    [ "get_all_drawings", "classScratchPad.html#ac66d5915497562d9c55f6b15a91fd82b", null ],
+    [ "get_bounding_box", "classScratchPad.html#a9755dac41273911134f113ebde58f78b", null ],
+    [ "get_intersecting_drawing_indices", "classScratchPad.html#a6ca29eff7cfa2dda28e20918cfbbd5d7", null ],
+    [ "get_intersecting_objects", "classScratchPad.html#afc14cf96700cce2bc41b583b5764cfea", null ],
+    [ "get_intersecting_pixmap_indices", "classScratchPad.html#a674cfe05c83c8374d3d3e9030e9b4741", null ],
+    [ "get_non_compiled_drawings", "classScratchPad.html#a90e56597a4dce287addb71b8a061bed4", null ],
+    [ "get_selected_objects_with_indices", "classScratchPad.html#a62e2e28002683b1afa007db7f5bed414", null ],
+    [ "invalidate_compile", "classScratchPad.html#a44ad4f2d5332387ef4934fb70a64a6b7", null ],
+    [ "is_compile_invalid", "classScratchPad.html#a6b2e3c72d57098866081155af6494ee5", null ],
+    [ "on_compile", "classScratchPad.html#adb8fc1898f355079a202397961353c36", null ],
+    [ "set_offsets", "classScratchPad.html#af4c7c9f88a721d73fa2776afb80433be", null ],
+    [ "set_zoom_level", "classScratchPad.html#af05fd20b97bac1e3c968024d06ab1009", null ],
+    [ "zoom_in", "classScratchPad.html#aff72685bcc7aa26b1206f35c60321a6e", null ],
+    [ "zoom_out", "classScratchPad.html#a9da0d067b3345eef61664e92f1dc3d6c", null ],
+    [ "cached_compiled_drawing_data", "classScratchPad.html#ae4256d29e203f128c11c7b8e0eee7f5a", null ],
+    [ "pixmaps", "classScratchPad.html#a635efa7fa197799fa0556aea1ed422fb", null ]
+];

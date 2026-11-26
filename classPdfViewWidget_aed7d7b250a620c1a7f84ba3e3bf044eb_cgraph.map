@@ -1,0 +1,31 @@
+<map id="PdfViewWidget::compile_drawings" name="PdfViewWidget::compile_drawings">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,146,187,186"/>
+<area shape="rect" id="Node000002" href="$classVulkanCanvas.html#a3088711adf803be64f24c963788ec4b3" title="Bind a vertex or element index buffer." alt="" coords="501,5,689,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,144,166,101,199,79,234,61,297,40,363,27,428,18,487,15,487,20,428,24,364,32,299,45,236,66,201,83,169,105,119,148"/>
+<area shape="rect" id="Node000003" href="$classVulkanCanvas.html#a20ca78e14713a024fe1868cee0c884dc" title="Bind an active vertex layout descriptor for subsequent vertex inputs." alt="" coords="499,55,690,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="126,143,175,115,234,91,298,78,364,70,485,66,486,72,364,75,299,83,235,97,177,120,128,148"/>
+<area shape="rect" id="Node000004" href="$classPdfViewWidget.html#a1fcac9f7c74deb211e992ffa21847fd3" title=" " alt="" coords="248,107,429,161"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="186,151,234,145,235,150,187,157"/>
+<area shape="rect" id="Node000008" href="$classVulkanCanvas.html#afa946b1bf9ea4765bc534320c9d840d5" title="Destroy allocated GPU buffers." alt="" coords="235,185,443,211"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="187,175,229,181,228,186,186,181"/>
+<area shape="rect" id="Node000009" href="$classVulkanCanvas.html#abd238734f70df5a90ccf0a210561fc60" title="Delete vertex layout descriptor objects." alt="" coords="237,235,441,275"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="144,184,236,221,258,229,256,234,234,226,142,189"/>
+<area shape="rect" id="Node000010" href="$pdf__view__widget_8cpp.html#a2e72e9e808b8c29eaf45b96c2e72b3dc" title=" " alt="" coords="265,324,412,349"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="119,184,170,233,236,285,294,316,292,321,233,290,166,237,115,188"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="377,104,429,71,490,41,515,32,516,37,492,46,432,76,380,109"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="429,111,493,96,494,101,430,116"/>
+<area shape="rect" id="Node000005" href="$classVulkanCanvas.html#a327ad225d0f26c0ab2b157294eaa666c" title="Upload raw vertex or index data into the currently bound buffer." alt="" coords="499,120,690,145"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="430,131,486,131,486,136,430,136"/>
+<area shape="rect" id="Node000006" href="$classVulkanCanvas.html#a8311e15ec026681f88c868d0a093133e" title="Allocate discrete GPU buffer handles." alt="" coords="491,169,699,195"/>
+<area shape="poly" id="edge7_Node000004_Node000006" title=" " alt="" coords="430,148,513,164,512,169,429,154"/>
+<area shape="rect" id="Node000007" href="$classVulkanCanvas.html#a67dba2f9ff650163a9aa169a6356430d" title="Create vertex layout descriptor objects." alt="" coords="493,219,697,259"/>
+<area shape="poly" id="edge8_Node000004_Node000007" title=" " alt="" coords="418,159,444,172,468,189,492,205,508,212,505,217,489,210,465,193,441,176,415,164"/>
+<area shape="poly" id="edge16_Node000010_Node000010" title=" " alt="" coords="299,326,291,316,295,306,312,300,339,297,373,301,383,306,386,312,382,315,379,310,372,306,339,303,313,305,299,310,296,315,303,322"/>
+<area shape="rect" id="Node000011" href="$pdf__view__widget_8cpp.html#aab7a406c9d26a3f0e791e68975f93478" title=" " alt="" coords="503,317,686,357"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="412,334,489,334,489,339,412,339"/>
+<area shape="poly" id="edge13_Node000011_Node000011" title=" " alt="" coords="560,317,558,307,564,298,576,292,595,290,616,293,628,300,625,305,614,298,595,295,577,297,567,302,563,308,565,316"/>
+<area shape="rect" id="Node000012" href="$structVec.html#a6e6e5f8bf577ba75a710d2d73008f9c4" title=" " alt="" coords="747,299,808,324"/>
+<area shape="poly" id="edge14_Node000011_Node000012" title=" " alt="" coords="686,321,733,315,734,320,687,327"/>
+<area shape="rect" id="Node000013" href="$structVec.html#ab034ad7661ec4aacc94ce883077a2ae1" title=" " alt="" coords="747,348,808,373"/>
+<area shape="poly" id="edge15_Node000011_Node000013" title=" " alt="" coords="687,346,734,352,733,358,686,351"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="MacroCommand::MacroCommand" name="MacroCommand::MacroCommand">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,35,249,60"/>
+<area shape="rect" id="Node000002" href="$classCommand.html#a176d97aca72ef53dbb4d71a3578d8772" title=" " alt="" coords="312,5,476,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="243,32,298,26,298,31,243,37"/>
+<area shape="rect" id="Node000003" href="$classMacroCommand.html#a6b87c3d3c3036ed6d4ff3efb8bffcd74" title=" " alt="" coords="297,55,491,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="249,57,284,61,283,66,248,63"/>
+<area shape="rect" id="Node000004" href="$classMacroCommand.html#a5b27a3084bbdc104fd7ea71cf4dd4a44" title=" " alt="" coords="539,63,792,88"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="491,73,525,73,525,78,491,78"/>
+<area shape="rect" id="Node000005" href="$structCommandInvocation.html#ae86b8ed0d37afe2c24014b90ceffa4ed" title=" " alt="" coords="845,23,1010,63"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="769,60,831,52,831,58,770,65"/>
+<area shape="rect" id="Node000006" href="$classCommandManager.html#a3f7f6e148b5eec1808b1ac3a34004bdd" title=" " alt="" coords="840,87,1015,127"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="770,85,827,92,826,98,769,91"/>
+</map>

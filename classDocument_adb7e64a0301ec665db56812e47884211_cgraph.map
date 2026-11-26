@@ -1,0 +1,8 @@
+<map id="Document::delete_closest_portal" name="Document::delete_closest_portal">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,22,196,62"/>
+<area shape="rect" id="Node000002" href="$classDocument.html#a8efb42bbd6fa41ce42a1ba3bdfc19768" title=" " alt="" coords="244,22,419,62"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="196,39,230,39,230,45,196,45"/>
+<area shape="rect" id="Node000003" href="$utils_8h.html#a217c3dbdf65795bd4c7ce2863330d18d" title=" " alt="" coords="467,29,540,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="419,39,453,39,453,45,419,45"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="475,31,469,21,472,11,484,5,503,3,527,6,537,15,533,19,524,11,503,8,485,10,476,15,474,20,479,28"/>
+</map>

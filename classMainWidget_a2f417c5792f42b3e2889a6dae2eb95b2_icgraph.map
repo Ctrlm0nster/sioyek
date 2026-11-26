@@ -1,0 +1,17 @@
+<map id="MainWidget::apply_window_params_for_two_window_mode" name="MainWidget::apply_window_params_for_two_window_mode">
+<area shape="rect" id="Node000001" title=" " alt="" coords="503,79,737,119"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#a700a0caa5b70a06d1064e576f9f3cf65" title=" " alt="" coords="334,29,389,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="515,79,389,51,390,45,516,74"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#acbc82fa0edd528855a33bbd9cbe4878c" title=" " alt="" coords="268,79,455,119"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="489,102,455,102,455,97,489,97"/>
+<area shape="rect" id="Node000006" href="$classMainWidget.html#ac5801519f86bc8a14f367652f0e91abf" title=" " alt="" coords="276,143,447,183"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="526,125,443,146,442,141,525,120"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="399,27,405,20,402,15,387,10,361,8,332,11,319,16,320,23,335,32,333,37,315,26,314,14,330,6,361,3,388,5,405,11,410,20,403,30"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#a50e717278f9543347db6c133dd27b773" title=" " alt="" coords="12,111,213,151"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="255,116,214,121,213,116,254,110"/>
+<area shape="rect" id="Node000005" href="$classShowPortalWindowCommand.html#a76b1b893cd2f28b86c3facb41bdaafa8" title=" " alt="" coords="5,47,220,87"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="254,88,220,84,220,78,255,83"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="262,153,213,147,214,142,263,148"/>
+<area shape="rect" id="Node000007" href="$classToggleWindowConfigurationCommand.html#a7524de7697b1df44ba86348d6c236808" title=" " alt="" coords="11,175,214,215"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="262,179,215,185,214,180,262,173"/>
+</map>

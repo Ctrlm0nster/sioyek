@@ -1,0 +1,9 @@
+<map id="KeyboardSelectPointCommand::is_done" name="KeyboardSelectPointCommand::is_done">
+<area shape="rect" id="Node000001" title=" " alt="" coords="555,37,777,77"/>
+<area shape="rect" id="Node000002" href="$classKeyboardSelectPointCommand.html#ad8506bb20d294d509898d35f0128a425" title=" " alt="" coords="284,5,507,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="541,45,507,41,507,36,541,40"/>
+<area shape="rect" id="Node000004" href="$classKeyboardSelectPointCommand.html#a32ae2e6f11f7ac478e6b03fc601870c4" title=" " alt="" coords="284,69,507,109"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="541,75,507,79,507,74,541,69"/>
+<area shape="rect" id="Node000003" href="$classKeyboardSelectPointCommand.html#a6754836e9d5cc970ad29f120c5bea7c4" title=" " alt="" coords="5,5,236,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="270,28,236,28,236,23,270,23"/>
+</map>

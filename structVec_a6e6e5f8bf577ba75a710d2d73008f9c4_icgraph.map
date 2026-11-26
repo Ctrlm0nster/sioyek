@@ -1,0 +1,29 @@
+<map id="Vec::x" name="Vec::x">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1235,131,1296,157"/>
+<area shape="rect" id="Node000002" href="$pdf__view__widget_8cpp.html#aab7a406c9d26a3f0e791e68975f93478" title=" " alt="" coords="1004,37,1187,77"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1236,125,1185,92,1159,80,1161,75,1188,87,1239,120"/>
+<area shape="rect" id="Node000009" href="$utils_8cpp.html#a560199cb7ebf35135a60cc868107921d" title=" " alt="" coords="1018,102,1173,127"/>
+<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="1221,139,1169,130,1170,125,1222,134"/>
+<area shape="rect" id="Node000010" href="$classPdfViewWidget.html#a7b9e49040473f2927a81f9ca07ec97cd" title=" " alt="" coords="1021,152,1170,192"/>
+<area shape="poly" id="edge13_Node000001_Node000010" title=" " alt="" coords="1221,154,1171,162,1170,157,1221,149"/>
+<area shape="rect" id="Node000011" href="$classPdfViewWidget.html#a0b45cf14acf77c3059f1453525898390" title=" " alt="" coords="1019,216,1172,256"/>
+<area shape="poly" id="edge14_Node000001_Node000011" title=" " alt="" coords="1242,168,1188,206,1162,218,1160,213,1185,202,1238,164"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="1123,25,1113,19,1095,16,1079,18,1070,23,1067,29,1068,36,1063,38,1061,28,1066,19,1078,13,1095,11,1115,14,1126,21"/>
+<area shape="rect" id="Node000003" href="$pdf__view__widget_8cpp.html#a2e72e9e808b8c29eaf45b96c2e72b3dc" title=" " alt="" coords="770,45,917,70"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="990,60,917,60,917,55,990,55"/>
+<area shape="poly" id="edge11_Node000003_Node000003" title=" " alt="" coords="888,35,885,31,877,27,843,23,816,25,802,30,799,36,807,43,803,46,794,36,798,26,815,20,843,18,879,22,889,27,893,32"/>
+<area shape="rect" id="Node000004" href="$classPdfViewWidget.html#aed7d7b250a620c1a7f84ba3e3bf044eb" title=" " alt="" coords="501,5,683,45"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="756,49,683,40,683,34,756,44"/>
+<area shape="rect" id="Node000007" href="$classPdfViewWidget.html#a90363c42393521a426a3ed61f08ca134" title=" " alt="" coords="507,69,677,109"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="757,71,678,81,677,76,756,66"/>
+<area shape="rect" id="Node000005" href="$classPdfViewWidget.html#adbe2d74c76fd707e9f69fa87b4daa3aa" title=" " alt="" coords="269,12,439,52"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="488,31,440,32,440,27,488,26"/>
+<area shape="rect" id="Node000006" href="$classPdfViewWidget.html#ab1b6da7af4f4ecce9c051af6d2d5d8b0" title="Pure virtual hook called to record high&#45;level page and document draw calls." alt="" coords="5,49,207,74"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="255,46,207,52,207,47,255,41"/>
+<area shape="poly" id="edge10_Node000007_Node000005" title=" " alt="" coords="495,69,437,55,438,49,496,64"/>
+<area shape="rect" id="Node000008" href="$classPdfViewWidget.html#a7b983e7fb3cc4b306be2d531642a6594" title=" " alt="" coords="255,77,453,102"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="493,92,453,92,453,87,493,87"/>
+<area shape="poly" id="edge9_Node000008_Node000006" title=" " alt="" coords="241,79,206,75,207,70,242,74"/>
+<area shape="rect" id="Node000012" href="$classMainWidget.html#a3084895b4ec2ecea04285fcb7f0ccf55" title=" " alt="" coords="731,223,956,249"/>
+<area shape="poly" id="edge15_Node000011_Node000012" title=" " alt="" coords="1005,239,956,239,956,233,1005,233"/>
+</map>

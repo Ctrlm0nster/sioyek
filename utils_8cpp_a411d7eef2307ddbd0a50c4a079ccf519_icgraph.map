@@ -1,0 +1,19 @@
+<map id="dist_squared" name="dist_squared">
+<area shape="rect" id="Node000001" title=" " alt="" coords="877,77,983,102"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="961,66,952,58,930,55,911,57,902,62,900,68,905,75,901,78,895,68,898,59,910,52,930,50,954,54,964,62"/>
+<area shape="rect" id="Node000002" href="$utils_8cpp.html#aaca813676646e8db2e1e3c257e723f07" title=" " alt="" coords="675,69,829,109"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="863,92,830,92,830,87,863,87"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="781,57,771,51,752,48,735,50,725,55,722,61,724,68,718,70,716,60,722,51,734,45,752,43,773,46,784,53"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a68183c6e53d4d94b962b47f5349f6f8f" title=" " alt="" coords="444,5,627,45"/>
+<area shape="poly" id="edge4_Node000002_Node000003" title=" " alt="" coords="670,68,603,48,604,43,672,63"/>
+<area shape="rect" id="Node000005" href="$classDocument.html#ab780bd9ce91959285476ecbcfa0d99ba" title=" " alt="" coords="455,69,615,109"/>
+<area shape="poly" id="edge6_Node000002_Node000005" title=" " alt="" coords="661,92,615,92,615,87,661,87"/>
+<area shape="rect" id="Node000008" href="$classDocument.html#a23eacccbdc7510158ddcd9477ec7655c" title=" " alt="" coords="460,133,611,173"/>
+<area shape="poly" id="edge9_Node000002_Node000008" title=" " alt="" coords="672,116,604,136,603,131,670,111"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#af5e2978097738b38ba93121ee3b06694" title=" " alt="" coords="244,5,396,45"/>
+<area shape="poly" id="edge5_Node000003_Node000004" title=" " alt="" coords="430,28,396,28,396,23,430,23"/>
+<area shape="rect" id="Node000006" href="$classMainWidget.html#adaab596bee072509415610e4f34af573" title=" " alt="" coords="247,69,393,109"/>
+<area shape="poly" id="edge7_Node000005_Node000006" title=" " alt="" coords="441,92,394,92,394,87,441,87"/>
+<area shape="rect" id="Node000007" href="$classSelectNextCharCommand.html#a4bb2a2eafc584fe3e6c5a53e503d0a09" title=" " alt="" coords="5,69,196,109"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="233,92,196,92,196,87,233,87"/>
+</map>

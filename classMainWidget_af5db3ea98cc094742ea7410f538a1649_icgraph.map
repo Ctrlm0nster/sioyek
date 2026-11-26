@@ -1,0 +1,9 @@
+<map id="MainWidget::highlight_words" name="MainWidget::highlight_words">
+<area shape="rect" id="Node000001" title=" " alt="" coords="276,69,441,109"/>
+<area shape="rect" id="Node000002" href="$classKeyboardOverviewCommand.html#a20416c3656f6646c9aba21943acccd7f" title=" " alt="" coords="11,5,223,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="269,68,192,48,193,43,270,63"/>
+<area shape="rect" id="Node000003" href="$classKeyboardSelectCommand.html#a767fab49425b23bf8aa91f483f21f24f" title=" " alt="" coords="21,69,212,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="262,92,212,92,212,87,262,87"/>
+<area shape="rect" id="Node000004" href="$classKeyboardSmartjumpCommand.html#a0bd7c74d4ef11009dfdf8c91b49411d2" title=" " alt="" coords="5,133,228,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="270,115,193,136,192,131,269,110"/>
+</map>

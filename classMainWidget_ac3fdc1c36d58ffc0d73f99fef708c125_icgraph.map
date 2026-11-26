@@ -1,0 +1,13 @@
+<map id="MainWidget::handle_freehand_drawing_selection_click" name="MainWidget::handle_freehand_drawing_selection_click">
+<area shape="rect" id="Node000001" title=" " alt="" coords="716,63,965,103"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#aac76a1818ebefe139433b9e197db8a6c" title=" " alt="" coords="516,63,668,103"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="703,85,668,85,668,80,703,80"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a2cab78c3ffe04690cdf612e5e7da9c7a" title=" " alt="" coords="280,5,432,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="502,64,432,46,433,41,503,58"/>
+<area shape="rect" id="Node000005" href="$classMainWidget.html#a48ae6c49931be9590a2edda847dadad3" title=" " alt="" coords="244,70,468,95"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="502,85,468,85,468,80,502,80"/>
+<area shape="rect" id="Node000006" href="$classMainWidget.html#a2d1fe0808150002e7cf4b2af8a1202cd" title=" " alt="" coords="254,120,458,160"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="503,107,439,123,438,117,501,102"/>
+<area shape="rect" id="Node000004" href="$classKeyboardSelectCommand.html#a4fb85b30ebe3c0a47fb8ea893db19045" title=" " alt="" coords="5,5,196,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="266,28,196,28,196,23,266,23"/>
+</map>

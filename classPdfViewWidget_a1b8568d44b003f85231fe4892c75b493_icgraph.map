@@ -1,0 +1,12 @@
+<map id="PdfViewWidget::bind_points" name="PdfViewWidget::bind_points">
+<area shape="rect" id="Node000001" title=" " alt="" coords="720,27,877,67"/>
+<area shape="rect" id="Node000002" href="$classPdfViewWidget.html#a90363c42393521a426a3ed61f08ca134" title=" " alt="" coords="501,27,672,67"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="707,50,672,50,672,45,707,45"/>
+<area shape="rect" id="Node000003" href="$classPdfViewWidget.html#a7b983e7fb3cc4b306be2d531642a6594" title=" " alt="" coords="255,5,453,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="487,37,453,33,454,28,488,32"/>
+<area shape="rect" id="Node000005" href="$classPdfViewWidget.html#adbe2d74c76fd707e9f69fa87b4daa3aa" title=" " alt="" coords="269,55,439,95"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="488,62,440,68,439,62,487,57"/>
+<area shape="rect" id="Node000004" href="$classPdfViewWidget.html#ab1b6da7af4f4ecce9c051af6d2d5d8b0" title="Pure virtual hook called to record high&#45;level page and document draw calls." alt="" coords="5,35,207,60"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="242,34,207,38,206,33,241,29"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="255,67,207,61,207,56,255,62"/>
+</map>

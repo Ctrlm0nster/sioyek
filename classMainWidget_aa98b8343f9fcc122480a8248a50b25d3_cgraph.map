@@ -1,0 +1,13 @@
+<map id="MainWidget::add_text_annotation_to_selected_highlight" name="MainWidget::add_text_annotation_to_selected_highlight">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,48,187,103"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a333a90667ea058f36537cd87251c283f" title=" " alt="" coords="276,5,407,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,52,273,31,274,36,188,57"/>
+<area shape="rect" id="Node000004" href="$classDocumentView.html#a0a1d7e46868b8d68d5a68ff53583bcdf" title=" " alt="" coords="235,55,448,95"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="187,73,221,73,221,78,187,78"/>
+<area shape="rect" id="Node000006" href="$classDocument.html#aab316c05d04d1da1ea2c6b2593e95af8" title=" " alt="" coords="238,119,445,159"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="188,96,251,113,250,118,186,102"/>
+<area shape="rect" id="Node000003" href="$classDocumentView.html#acfa88cf915c8bae19ac83d1aa9b42dd1" title=" " alt="" coords="496,5,717,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="407,15,482,15,482,21,407,21"/>
+<area shape="rect" id="Node000005" href="$classDocument.html#a07061e589dc7e1c7ee2068b3cd3252ac" title=" " alt="" coords="512,63,701,88"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="448,73,498,73,498,78,448,78"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="get_item_tree_from_toc_helper" name="get_item_tree_from_toc_helper">
+<area shape="rect" id="Node000001" title=" " alt="" coords="925,29,1076,69"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="1034,18,1022,11,1001,8,982,10,970,15,966,21,968,28,963,30,961,20,967,11,980,5,1001,3,1024,6,1037,13"/>
+<area shape="rect" id="Node000002" href="$utils_8cpp.html#a9ce87ba9dfaaa44f9ec1a5b39579ed53" title=" " alt="" coords="721,37,877,62"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="911,52,878,52,878,47,911,47"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="835,27,825,19,799,15,778,17,767,22,765,28,771,35,766,38,759,28,763,18,777,12,799,10,827,14,838,23"/>
+<area shape="rect" id="Node000003" href="$classDocument.html#a84937ad0a120a2f463c32e013aa57104" title=" " alt="" coords="480,37,673,62"/>
+<area shape="poly" id="edge4_Node000002_Node000003" title=" " alt="" coords="708,52,673,52,673,47,708,47"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#ac0695691cb6a93016fe460b9d188a349" title=" " alt="" coords="280,29,432,69"/>
+<area shape="poly" id="edge5_Node000003_Node000004" title=" " alt="" coords="466,52,433,52,433,47,466,47"/>
+<area shape="rect" id="Node000005" href="$classGotoTableOfContentsCommand.html#a1fb718643d0fa5ba46d66f01c5e36ff4" title=" " alt="" coords="5,29,232,69"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="266,52,232,52,232,47,266,47"/>
+</map>

@@ -1,0 +1,29 @@
+<map id="Document::get_rect_vertically" name="Document::get_rect_vertically">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,87,156,127"/>
+<area shape="rect" id="Node000002" href="$structDocumentRect.html#aafeec2e9a605413812dc732fdbfc9343" title=" " alt="" coords="689,43,912,69"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,84,148,54,175,40,203,29,275,14,350,5,424,3,497,5,631,19,734,38,733,43,630,24,497,10,424,8,350,11,276,19,205,35,177,45,151,59,107,89"/>
+<area shape="rect" id="Node000003" href="$structEnhancedRect.html#abc11ec25315e756e13b3429673891277" title=" " alt="" coords="223,45,386,70"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="156,88,233,70,234,76,157,93"/>
+<area shape="rect" id="Node000004" href="$classDocument.html#a2b1b1faf345a0ab1f5eb04fcc7f42e59" title=" " alt="" coords="213,94,397,119"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="156,104,199,104,199,109,156,109"/>
+<area shape="rect" id="Node000007" href="$coordinates_8cpp.html#ab957db4fd94337118bcb0d0928b994c1" title=" " alt="" coords="243,167,367,193"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="143,124,252,160,251,165,142,129"/>
+<area shape="rect" id="Node000008" href="$structAbsoluteRect.html#aabf9cefaee365adb869d2a0cf53c90ab" title=" " alt="" coords="204,217,405,242"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="103,125,147,165,175,186,205,203,222,210,220,215,203,208,172,190,144,169,99,129"/>
+<area shape="rect" id="Node000005" href="$classPageIterator.html#ad107e38f46e1be4eaa3b16804af79b1d" title=" " alt="" coords="453,70,641,95"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="396,95,439,91,440,96,397,100"/>
+<area shape="rect" id="Node000006" href="$classDocument.html#a68875be3194ab47f70b763345c41098e" title=" " alt="" coords="468,120,627,160"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="397,117,455,125,454,130,396,122"/>
+<area shape="poly" id="edge7_Node000007_Node000007" title=" " alt="" coords="268,169,260,159,264,149,280,143,305,141,336,145,348,154,345,158,334,150,305,146,281,148,268,153,265,158,272,166"/>
+<area shape="rect" id="Node000009" href="$classDocument.html#a21f80dd2d2dda39007fadb4a9abac5cf" title="Transform an absolute rectangle to page&#45;relative rectangle coordinates." alt="" coords="471,184,624,224"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="405,216,457,211,457,216,406,222"/>
+<area shape="poly" id="edge10_Node000009_Node000002" title=" " alt="" coords="620,182,640,170,655,155,663,139,672,123,688,106,717,87,747,72,750,76,719,91,691,110,676,126,668,142,659,158,643,174,622,186"/>
+<area shape="rect" id="Node000010" href="$structEnhancedRect.html#a4d0866a1bcd13c32ebfa6e329d2dff7b" title=" " alt="" coords="716,120,885,160"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="624,182,707,161,708,166,625,187"/>
+<area shape="rect" id="Node000011" href="$structAbsoluteDocumentPos.html#ab384396defecb4fad40f924db42cbc4c" title=" " alt="" coords="716,184,885,224"/>
+<area shape="poly" id="edge12_Node000009_Node000011" title=" " alt="" coords="624,201,702,201,702,207,624,207"/>
+<area shape="rect" id="Node000013" href="$structEnhancedRect.html#a2f9b9a7752abd1b699a5693c1632775d" title=" " alt="" coords="715,249,886,274"/>
+<area shape="poly" id="edge14_Node000009_Node000013" title=" " alt="" coords="625,219,731,243,730,248,624,224"/>
+<area shape="rect" id="Node000012" href="$classDocument.html#a96a3741801def570bd1a2d614dde2d5f" title="Transform continuous absolute document coordinates to page&#45;relative coordinates." alt="" coords="960,184,1113,224"/>
+<area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="886,201,946,201,946,207,886,207"/>
+</map>

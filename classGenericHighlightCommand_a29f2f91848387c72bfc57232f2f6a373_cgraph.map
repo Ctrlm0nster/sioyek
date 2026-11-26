@@ -1,0 +1,9 @@
+<map id="GenericHighlightCommand::perform_with_selected_index" name="GenericHighlightCommand::perform_with_selected_index">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,49,228,89"/>
+<area shape="rect" id="Node000002" href="$classGenericHighlightCommand.html#ae81b1d3fbd5b3aef1385023638acd337" title=" " alt="" coords="276,5,475,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="228,51,262,46,263,51,228,56"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a14ea1c520636c0461655e315ecad8a08" title=" " alt="" coords="280,85,471,125"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="228,82,267,87,266,92,228,87"/>
+<area shape="rect" id="Node000004" href="$classPdfViewWidget.html#a858d414421d2a85215be572b205fdcfd" title=" " alt="" coords="523,85,713,125"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="471,102,509,102,509,107,471,107"/>
+</map>

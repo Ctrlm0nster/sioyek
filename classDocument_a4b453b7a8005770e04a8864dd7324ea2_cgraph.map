@@ -1,0 +1,10 @@
+<map id="Document::delete_closest_bookmark" name="Document::delete_closest_bookmark">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,47,196,87"/>
+<area shape="rect" id="Node000002" href="$classDocument.html#a42b562da4d55b5fa5207c52cb810bddd" title=" " alt="" coords="244,47,419,87"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="196,65,230,65,230,70,196,70"/>
+<area shape="rect" id="Node000003" href="$utils_8h.html#a217c3dbdf65795bd4c7ce2863330d18d" title=" " alt="" coords="518,29,591,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="419,55,504,45,504,50,420,60"/>
+<area shape="rect" id="Node000004" href="$structBookMark.html#a497ba0e38bd87ea9e485b63d365fcc8e" title=" " alt="" coords="467,79,643,104"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="420,74,454,78,453,83,419,79"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="519,31,511,21,515,11,530,5,555,3,585,6,598,15,594,20,583,11,555,8,531,10,518,15,516,20,523,28"/>
+</map>

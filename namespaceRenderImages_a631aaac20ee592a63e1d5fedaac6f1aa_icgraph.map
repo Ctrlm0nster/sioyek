@@ -1,0 +1,5 @@
+<map id="RenderImages::get" name="RenderImages::get">
+<area shape="rect" id="Node000001" title="Retrieve a rasterized image associated with the specified handle." alt="" coords="216,5,361,31"/>
+<area shape="rect" id="Node000002" href="$classVulkanCanvas.html#a7d38fd7b4da9bba66e8b542e37ef6326" title="Execute the frame render pass and submit recorded draw commands." alt="" coords="5,5,168,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="202,21,168,21,168,15,202,15"/>
+</map>

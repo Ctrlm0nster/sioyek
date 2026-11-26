@@ -1,0 +1,9 @@
+<map id="MainWidget::is_index_ready" name="MainWidget::is_index_ready">
+<area shape="rect" id="Node000001" title="Check whether document reference and equation indexing has completed." alt="" coords="5,23,168,63"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a333a90667ea058f36537cd87251c283f" title=" " alt="" coords="250,5,381,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,32,236,24,237,29,169,37"/>
+<area shape="rect" id="Node000004" href="$classDocument.html#afae386fa4c165a479bfbcc9ccc84ab59" title=" " alt="" coords="216,55,415,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="169,49,203,53,202,58,168,55"/>
+<area shape="rect" id="Node000003" href="$classDocumentView.html#acfa88cf915c8bae19ac83d1aa9b42dd1" title=" " alt="" coords="463,5,684,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="381,15,449,15,449,21,381,21"/>
+</map>

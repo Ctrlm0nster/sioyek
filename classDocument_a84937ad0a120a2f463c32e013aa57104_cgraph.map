@@ -1,0 +1,11 @@
+<map id="Document::get_toc_model" name="Document::get_toc_model">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,62,199,87"/>
+<area shape="rect" id="Node000002" href="$utils_8cpp.html#a9ce87ba9dfaaa44f9ec1a5b39579ed53" title=" " alt="" coords="247,37,403,62"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="199,61,233,57,233,62,199,66"/>
+<area shape="rect" id="Node000004" href="$classDocument.html#af9ac91c1e00d8c4322680cc700131ee0" title=" " alt="" coords="252,86,397,111"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="199,82,238,87,238,92,199,88"/>
+<area shape="poly" id="edge4_Node000002_Node000002" title=" " alt="" coords="292,38,285,28,288,18,302,12,325,10,353,14,364,23,360,27,350,19,325,15,303,17,292,22,290,28,296,35"/>
+<area shape="rect" id="Node000003" href="$utils_8cpp.html#aded388ef0a08352e9f588ba5a4da9c93" title=" " alt="" coords="451,29,601,69"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="403,47,436,47,436,52,403,52"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="488,30,486,20,492,11,506,5,526,3,550,6,562,13,560,18,548,11,526,8,507,10,495,15,491,21,493,28"/>
+</map>

@@ -1,0 +1,62 @@
+<map id="VulkanCanvas::drawArrays" name="VulkanCanvas::drawArrays">
+<area shape="rect" id="Node000001" title="Render non&#45;indexed geometric primitives from bound vertex arrays." alt="" coords="1213,307,1408,333"/>
+<area shape="rect" id="Node000002" href="$classPdfViewWidget.html#a235cc2c91a7b709abb10d73464b96dbb" title=" " alt="" coords="986,380,1158,420"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1260,340,1133,382,1132,377,1258,335"/>
+<area shape="rect" id="Node000006" href="$classPdfViewWidget.html#ae2245d6ac27338b4bdbd7e7687471293" title=" " alt="" coords="991,235,1153,275"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="1249,306,1145,277,1146,272,1251,301"/>
+<area shape="rect" id="Node000009" href="$classPdfViewWidget.html#a72f543e8dec4338681f70a9260ab17ec" title="Draw a specific document page onto the Vulkan swapchain." alt="" coords="720,307,931,333"/>
+<area shape="poly" id="edge37_Node000001_Node000009" title=" " alt="" coords="1199,323,931,323,931,317,1199,317"/>
+<area shape="rect" id="Node000010" href="$classPdfViewWidget.html#a90363c42393521a426a3ed61f08ca134" title=" " alt="" coords="501,5,672,45"/>
+<area shape="poly" id="edge14_Node000001_Node000010" title=" " alt="" coords="1298,296,1280,252,1252,198,1213,145,1190,121,1164,101,1104,69,1040,45,974,28,906,18,841,13,778,12,672,17,672,12,778,7,841,8,907,13,975,23,1042,40,1107,64,1167,96,1193,117,1217,141,1256,195,1285,250,1303,293"/>
+<area shape="rect" id="Node000012" href="$classPdfViewWidget.html#a968c1a1a34e80615b7ab28606654cfa2" title=" " alt="" coords="987,567,1157,607"/>
+<area shape="poly" id="edge18_Node000001_Node000012" title=" " alt="" coords="1291,345,1093,568,1089,565,1287,341"/>
+<area shape="rect" id="Node000019" href="$classPdfViewWidget.html#acf68d306731e102f1f61e7d966781788" title=" " alt="" coords="987,713,1157,753"/>
+<area shape="poly" id="edge35_Node000001_Node000019" title=" " alt="" coords="1302,347,1249,467,1211,544,1168,620,1130,673,1094,715,1090,712,1125,669,1163,617,1206,542,1244,465,1297,345"/>
+<area shape="rect" id="Node000020" href="$classPdfViewWidget.html#a491f39fb013f97fd915757b8d628a543" title=" " alt="" coords="979,111,1165,151"/>
+<area shape="poly" id="edge38_Node000001_Node000020" title=" " alt="" coords="1281,301,1097,153,1100,149,1285,297"/>
+<area shape="rect" id="Node000003" href="$classPdfViewWidget.html#aaa2636bdec379330ae204553fdc4949b" title="Render the floating overview portal window." alt="" coords="501,381,672,421"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="972,403,672,404,672,398,972,398"/>
+<area shape="rect" id="Node000004" href="$classPdfViewWidget.html#a7b983e7fb3cc4b306be2d531642a6594" title=" " alt="" coords="255,482,453,507"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="515,429,503,436,479,454,455,472,420,484,418,479,452,467,476,450,500,431,513,425"/>
+<area shape="rect" id="Node000005" href="$classPdfViewWidget.html#ab1b6da7af4f4ecce9c051af6d2d5d8b0" title="Pure virtual hook called to record high&#45;level page and document draw calls." alt="" coords="5,454,207,479"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="241,485,206,481,207,475,242,479"/>
+<area shape="poly" id="edge9_Node000006_Node000003" title=" " alt="" coords="1037,285,989,318,932,346,884,360,817,373,673,394,672,389,816,367,882,355,930,342,986,313,1034,281"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="977,239,868,228,806,227,741,231,676,241,614,260,555,287,503,326,489,343,482,360,480,397,477,434,470,453,455,471,436,484,433,480,452,467,465,450,472,433,475,396,477,359,485,340,499,322,552,283,612,255,675,236,741,226,806,221,869,222,978,233"/>
+<area shape="rect" id="Node000007" href="$classPdfViewWidget.html#a9093142ddd2b558862f689a6dba4e69c" title=" " alt="" coords="745,168,906,208"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="984,234,900,211,901,206,985,228"/>
+<area shape="rect" id="Node000008" href="$classPdfViewWidget.html#a8f99bf492104330993ed3c18b1b62884" title=" " alt="" coords="724,118,927,143"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="1036,228,987,192,930,158,894,146,896,141,932,154,990,187,1039,224"/>
+<area shape="poly" id="edge10_Node000006_Node000009" title=" " alt="" coords="983,281,875,310,873,305,982,276"/>
+<area shape="poly" id="edge12_Node000009_Node000003" title=" " alt="" coords="768,339,721,355,641,384,639,379,719,349,766,334"/>
+<area shape="poly" id="edge11_Node000009_Node000004" title=" " alt="" coords="706,315,655,318,602,328,550,345,503,371,492,382,485,394,479,419,474,446,467,459,455,471,434,484,431,480,452,467,463,456,469,444,474,418,480,392,487,379,500,367,548,340,600,323,654,313,706,310"/>
+<area shape="poly" id="edge13_Node000009_Node000009" title=" " alt="" coords="868,298,857,289,825,286,800,288,786,293,784,298,791,305,787,309,778,299,783,289,799,283,825,281,859,285,871,294"/>
+<area shape="poly" id="edge15_Node000010_Node000004" title=" " alt="" coords="513,55,503,66,487,92,476,119,470,145,468,170,473,220,485,270,495,319,499,369,496,394,488,420,475,445,455,471,440,484,436,480,451,467,470,442,483,418,490,393,494,369,490,320,479,271,468,221,463,170,465,144,471,117,482,90,499,62,509,52"/>
+<area shape="rect" id="Node000011" href="$classPdfViewWidget.html#adbe2d74c76fd707e9f69fa87b4daa3aa" title=" " alt="" coords="269,417,439,457"/>
+<area shape="poly" id="edge16_Node000010_Node000011" title=" " alt="" coords="516,55,503,66,469,109,440,157,416,208,398,259,372,352,361,418,355,417,367,351,392,257,411,206,435,155,464,106,499,62,513,51"/>
+<area shape="poly" id="edge17_Node000011_Node000005" title=" " alt="" coords="255,452,207,457,207,452,255,446"/>
+<area shape="poly" id="edge33_Node000012_Node000003" title=" " alt="" coords="1032,561,984,529,930,500,864,474,795,452,671,420,673,415,797,447,865,469,932,495,987,524,1035,556"/>
+<area shape="poly" id="edge21_Node000012_Node000004" title=" " alt="" coords="1039,618,990,652,962,667,931,679,837,696,714,704,651,704,592,700,540,692,500,678,473,662,448,641,406,593,376,545,358,509,363,506,381,542,411,590,451,637,476,658,502,674,541,686,592,694,651,698,714,699,837,690,930,673,959,662,988,647,1036,614"/>
+<area shape="rect" id="Node000013" href="$classPdfViewWidget.html#a5ad047b6c332a0a81bd95625d2d93625" title=" " alt="" coords="745,509,906,549"/>
+<area shape="poly" id="edge19_Node000012_Node000013" title=" " alt="" coords="973,566,905,551,907,545,974,561"/>
+<area shape="rect" id="Node000014" href="$classPdfViewWidget.html#aa3f20bd3d53d402d144622ad2ddeafc3" title=" " alt="" coords="740,624,911,664"/>
+<area shape="poly" id="edge22_Node000012_Node000014" title=" " alt="" coords="974,612,912,627,910,622,972,607"/>
+<area shape="rect" id="Node000016" href="$classPdfViewWidget.html#afdf980925e0c7d4bb76c2b51f59e62a6" title=" " alt="" coords="501,445,672,485"/>
+<area shape="poly" id="edge34_Node000012_Node000016" title=" " alt="" coords="973,603,913,605,848,602,781,589,719,564,701,549,693,532,685,515,670,499,651,488,654,483,674,495,689,512,697,530,705,545,721,559,783,584,848,596,913,600,973,598"/>
+<area shape="rect" id="Node000018" href="$classPdfViewWidget.html#af73416ee12dd0c9b5f709397efa89db1" title=" " alt="" coords="501,739,672,779"/>
+<area shape="poly" id="edge31_Node000012_Node000018" title=" " alt="" coords="1050,619,1001,674,968,701,932,722,867,746,798,759,732,765,672,766,672,761,731,760,797,754,865,741,930,718,965,696,997,670,1046,616"/>
+<area shape="poly" id="edge20_Node000013_Node000003" title=" " alt="" coords="741,506,718,493,703,478,694,463,685,449,670,435,650,424,653,419,674,431,689,446,698,461,707,475,722,489,743,501"/>
+<area shape="poly" id="edge23_Node000014_Node000004" title=" " alt="" coords="726,626,617,600,500,564,434,536,378,510,381,505,436,532,502,559,618,594,727,621"/>
+<area shape="rect" id="Node000015" href="$classPdfViewWidget.html#a5a3d927baae1ac132f45dbd3e9ab23a6" title=" " alt="" coords="501,624,672,664"/>
+<area shape="poly" id="edge24_Node000014_Node000015" title=" " alt="" coords="726,647,672,647,672,641,726,641"/>
+<area shape="poly" id="edge26_Node000014_Node000016" title=" " alt="" coords="734,619,718,607,706,593,699,579,693,552,688,525,681,512,670,499,654,487,657,483,674,495,686,509,693,524,699,551,704,577,711,590,722,603,737,615"/>
+<area shape="rect" id="Node000017" href="$classPdfViewWidget.html#a6a3dbd8942926b32acb02811350fa622" title=" " alt="" coords="501,509,672,549"/>
+<area shape="poly" id="edge29_Node000014_Node000017" title=" " alt="" coords="746,621,719,608,694,589,671,570,635,552,638,547,673,566,697,585,721,603,749,616"/>
+<area shape="poly" id="edge25_Node000015_Node000004" title=" " alt="" coords="523,620,500,608,424,555,368,510,372,505,428,551,503,603,526,616"/>
+<area shape="poly" id="edge27_Node000016_Node000004" title=" " alt="" coords="488,480,454,485,453,479,487,475"/>
+<area shape="poly" id="edge28_Node000016_Node000011" title=" " alt="" coords="487,456,439,450,440,445,488,451"/>
+<area shape="poly" id="edge30_Node000017_Node000004" title=" " alt="" coords="487,517,439,510,440,505,488,512"/>
+<area shape="poly" id="edge32_Node000018_Node000004" title=" " alt="" coords="517,734,500,722,448,667,407,605,377,549,358,509,363,507,381,547,411,603,452,663,503,718,520,730"/>
+<area shape="poly" id="edge36_Node000019_Node000004" title=" " alt="" coords="1018,761,915,801,851,819,781,833,709,841,636,838,566,823,532,810,500,793,463,763,433,727,409,686,390,644,365,564,354,508,360,507,370,563,394,642,413,684,437,724,467,760,503,788,534,805,567,818,637,833,709,835,780,828,850,814,914,796,1016,756"/>
+<area shape="poly" id="edge39_Node000020_Node000004" title=" " alt="" coords="988,110,928,99,860,92,789,94,721,108,648,134,594,164,549,205,504,267,490,295,484,321,485,371,486,396,484,421,474,446,455,471,438,484,434,480,451,467,470,443,478,420,481,396,480,372,479,320,485,293,499,264,545,201,591,160,646,130,719,103,789,88,860,87,929,93,989,105"/>
+<area shape="poly" id="edge40_Node000020_Node000008" title=" " alt="" coords="965,133,927,133,927,128,965,128"/>
+</map>

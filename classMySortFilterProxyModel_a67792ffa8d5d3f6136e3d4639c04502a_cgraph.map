@@ -1,0 +1,11 @@
+<map id="MySortFilterProxyModel::ensure_scores" name="MySortFilterProxyModel::ensure_scores">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,184,45"/>
+<area shape="rect" id="Node000002" href="$classMySortFilterProxyModel.html#a5d4a3f919d9967d68082b28960fde0ce" title=" " alt="" coords="232,5,411,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="185,23,218,23,218,28,185,28"/>
+<area shape="rect" id="Node000003" href="$classMySortFilterProxyModel.html#a35557ff72faec98026fc7a6b84021242" title=" " alt="" coords="699,5,877,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="410,11,459,7,555,3,651,7,685,9,685,15,651,12,555,8,459,12,411,16"/>
+<area shape="rect" id="Node000004" href="$classMySortFilterProxyModel.html#a31bcd72af67464d18eb9da649e00d586" title=" " alt="" coords="459,45,651,85"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="412,38,446,44,445,49,411,43"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="651,46,685,40,686,46,652,51"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="511,46,509,36,516,26,531,21,555,19,582,22,596,29,594,34,580,27,555,24,532,26,519,31,514,37,516,44"/>
+</map>

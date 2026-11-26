@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['keep_0',['Keep',['../namespaceGpu.html#a118ba67b06e432fa715b723e2cda2edaad6ae150745a2cf516c748a56a12109c8',1,'Gpu']]],
+  ['key_20vim_20marks_1',['1. Single-Key Vim Marks',['../md_docs_2user-guide.html#autotoc_md48',1,'']]],
+  ['key_5fevent_2',['key_event',['../classMainWidget.html#a0452032b756e46c7d39fc7bdd52cceb6',1,'MainWidget']]],
+  ['keybindings_3',['⌨️ Customizing Keybindings',['../md_docs_2configuration.html#autotoc_md85',1,'']]],
+  ['keybindings_20command_20reference_4',['⌨️ Sioyek Keybindings &amp;amp; Command Reference',['../md_docs_2keybindings.html',1,'']]],
+  ['keybindings_20md_20⌨️_20keybindings_20reference_5',['2. &lt;a class=&quot;el&quot; href=&quot;md_docs_2keybindings.html&quot; title=&quot;⌨️ Sioyek Keybindings &amp;amp; Command Reference&quot;&gt;⌨️ Keybindings Reference&lt;/a&gt;',['../md_docs_2hub.html#autotoc_md25',1,'']]],
+  ['keybindings_20reference_6',['2. &lt;a class=&quot;el&quot; href=&quot;md_docs_2keybindings.html&quot; title=&quot;⌨️ Sioyek Keybindings &amp;amp; Command Reference&quot;&gt;⌨️ Keybindings Reference&lt;/a&gt;',['../md_docs_2hub.html#autotoc_md25',1,'']]],
+  ['keybindings_2emd_7',['keybindings.md',['../keybindings_8md.html',1,'']]],
+  ['keyboard_5fselect_5fbackground_5fcolor_8',['KEYBOARD_SELECT_BACKGROUND_COLOR',['../config_8cpp.html#ae19720f9ae568c0916ebffa716bb4da7',1,'KEYBOARD_SELECT_BACKGROUND_COLOR:&#160;config.cpp'],['../pdf__view__widget_8cpp.html#ab4f42d2697bf8b5f292444d40d5bc529',1,'KEYBOARD_SELECT_BACKGROUND_COLOR:&#160;config.cpp']]],
+  ['keyboard_5fselect_5ffont_5fsize_9',['KEYBOARD_SELECT_FONT_SIZE',['../config_8cpp.html#aa5b03c6e17c916f54de477e09536e9e3',1,'KEYBOARD_SELECT_FONT_SIZE:&#160;config.cpp'],['../pdf__view__widget_8cpp.html#aa5b03c6e17c916f54de477e09536e9e3',1,'KEYBOARD_SELECT_FONT_SIZE:&#160;config.cpp']]],
+  ['keyboard_5fselect_5finclusive_10',['KEYBOARD_SELECT_INCLUSIVE',['../config_8cpp.html#abce6c226da17ccafc74833920b19a7dc',1,'KEYBOARD_SELECT_INCLUSIVE:&#160;config.cpp'],['../main__widget_8cpp.html#abce6c226da17ccafc74833920b19a7dc',1,'KEYBOARD_SELECT_INCLUSIVE:&#160;config.cpp']]],
+  ['keyboard_5fselect_5ftext_5fcolor_11',['KEYBOARD_SELECT_TEXT_COLOR',['../config_8cpp.html#ab54049f4fb5243a254563cd4a9b62646',1,'KEYBOARD_SELECT_TEXT_COLOR:&#160;config.cpp'],['../pdf__view__widget_8cpp.html#a1612bc3928496cc42347f8119cf60ed4',1,'KEYBOARD_SELECT_TEXT_COLOR:&#160;config.cpp']]],
+  ['keyboard_5fselected_5ftag_5fbackground_5fcolro_12',['KEYBOARD_SELECTED_TAG_BACKGROUND_COLRO',['../config_8cpp.html#a6fd17a817cf193a09fd350eef11867f5',1,'KEYBOARD_SELECTED_TAG_BACKGROUND_COLRO:&#160;config.cpp'],['../pdf__view__widget_8cpp.html#a22ef22c08867351952088859b40a51b6',1,'KEYBOARD_SELECTED_TAG_BACKGROUND_COLRO:&#160;config.cpp']]],
+  ['keyboard_5fselected_5ftag_5ftext_5fcolor_13',['KEYBOARD_SELECTED_TAG_TEXT_COLOR',['../config_8cpp.html#a8f6aa3f1796f2a010c540cabc4766e4c',1,'KEYBOARD_SELECTED_TAG_TEXT_COLOR:&#160;config.cpp'],['../pdf__view__widget_8cpp.html#abb29301ccb8823c158955788e3ec6e33',1,'KEYBOARD_SELECTED_TAG_TEXT_COLOR:&#160;config.cpp']]],
+  ['keyboardoverviewcommand_14',['KeyboardOverviewCommand',['../classKeyboardOverviewCommand.html',1,'KeyboardOverviewCommand'],['../classKeyboardOverviewCommand.html#ae646cc0c6b509580f836cc77903cf35a',1,'KeyboardOverviewCommand::KeyboardOverviewCommand()']]],
+  ['keyboardselectcommand_15',['KeyboardSelectCommand',['../classKeyboardSelectCommand.html',1,'KeyboardSelectCommand'],['../classKeyboardSelectCommand.html#accfa33eedca169bc3a73640308b8ae30',1,'KeyboardSelectCommand::KeyboardSelectCommand()']]],
+  ['keyboardselectpointcommand_16',['KeyboardSelectPointCommand',['../classKeyboardSelectPointCommand.html',1,'KeyboardSelectPointCommand'],['../classKeyboardSelectPointCommand.html#a6754836e9d5cc970ad29f120c5bea7c4',1,'KeyboardSelectPointCommand::KeyboardSelectPointCommand()']]],
+  ['keyboardsmartjumpcommand_17',['KeyboardSmartjumpCommand',['../classKeyboardSmartjumpCommand.html',1,'KeyboardSmartjumpCommand'],['../classKeyboardSmartjumpCommand.html#ab3bcbb47cd0fdaf82eac8a3091b7ff09',1,'KeyboardSmartjumpCommand::KeyboardSmartjumpCommand()']]],
+  ['keymap_5fstring_18',['keymap_string',['../structAdditionalKeymapData.html#a531c4db993ec5e2702d8e2b4c6215442',1,'AdditionalKeymapData']]],
+  ['keypressevent_19',['keyPressEvent',['../classMainWidget.html#ab611ce437761ff749e7b02703918ba5d',1,'MainWidget::keyPressEvent()'],['../classTouchListView.html#a454fd16f2f7331829a535c4a17b27c4e',1,'TouchListView::keyPressEvent()'],['../classTouchTextEdit.html#a830e2a1c31f4f9a53dc46321c6de5d77',1,'TouchTextEdit::keyPressEvent()'],['../classMyLineEdit.html#a059ccd500b22459fe8d16e3b9f6a925b',1,'MyLineEdit::keyPressEvent()']]],
+  ['keyreleaseevent_20',['keyReleaseEvent',['../classMainWidget.html#af576f313b835f7d08175f33e7488b157',1,'MainWidget']]],
+  ['keyscommand_21',['KeysCommand',['../classKeysCommand.html',1,'KeysCommand'],['../classKeysCommand.html#a8b82075f2a12450696e9b8a8f68ee98c',1,'KeysCommand::KeysCommand()']]],
+  ['keysuserallcommand_22',['KeysUserAllCommand',['../classKeysUserAllCommand.html',1,'KeysUserAllCommand'],['../classKeysUserAllCommand.html#a2f3afe3bcaad5a869ed52f3c50184911',1,'KeysUserAllCommand::KeysUserAllCommand()']]],
+  ['keysusercommand_23',['KeysUserCommand',['../classKeysUserCommand.html',1,'KeysUserCommand'],['../classKeysUserCommand.html#affbce971f8a8b9bf6722a9ab22e4ed18',1,'KeysUserCommand::KeysUserCommand()']]],
+  ['known_20issues_24',['Verification status and known issues',['../md_RELEASE.html#autotoc_md179',1,'']]]
+];

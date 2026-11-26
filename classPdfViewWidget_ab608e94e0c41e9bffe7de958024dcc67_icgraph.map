@@ -1,0 +1,13 @@
+<map id="PdfViewWidget::get_marked_data_rect_map" name="PdfViewWidget::get_marked_data_rect_map">
+<area shape="rect" id="Node000001" title=" " alt="" coords="511,99,693,139"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#affb8dcc3e1cb29a82a2b3a37cc2725c2" title=" " alt="" coords="282,69,445,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="497,108,444,102,445,97,497,103"/>
+<area shape="rect" id="Node000005" href="$classPdfViewWidget.html#a7b983e7fb3cc4b306be2d531642a6594" title=" " alt="" coords="264,134,463,159"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="497,134,463,138,462,132,497,128"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#aceff3feac51f6fd987ecd9a02fbb24d2" title=" " alt="" coords="14,5,207,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="270,68,189,48,191,43,271,63"/>
+<area shape="rect" id="Node000004" href="$classExportMarkedDataCommand.html#a1391be5e87ffbf529af3688c71889304" title=" " alt="" coords="5,69,216,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="268,92,216,92,216,87,268,87"/>
+<area shape="rect" id="Node000006" href="$classPdfViewWidget.html#ab1b6da7af4f4ecce9c051af6d2d5d8b0" title="Pure virtual hook called to record high&#45;level page and document draw calls." alt="" coords="10,134,211,159"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="250,149,211,149,211,144,250,144"/>
+</map>

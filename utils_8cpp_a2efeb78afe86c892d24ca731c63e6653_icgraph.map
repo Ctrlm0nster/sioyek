@@ -1,0 +1,8 @@
+<map id="is_text_rtl" name="is_text_rtl">
+<area shape="rect" id="Node000001" title=" " alt="" coords="501,29,588,55"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="578,19,569,11,545,8,525,10,514,15,512,20,518,28,513,31,507,21,510,11,523,5,545,3,571,6,582,15"/>
+<area shape="rect" id="Node000002" href="$classPdfViewWidget.html#a7b983e7fb3cc4b306be2d531642a6594" title=" " alt="" coords="255,29,453,55"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="487,45,453,45,453,39,487,39"/>
+<area shape="rect" id="Node000003" href="$classPdfViewWidget.html#ab1b6da7af4f4ecce9c051af6d2d5d8b0" title="Pure virtual hook called to record high&#45;level page and document draw calls." alt="" coords="5,29,207,55"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="241,45,207,45,207,39,241,39"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="PdfRenderer::add_password" name="PdfRenderer::add_password">
+<area shape="rect" id="Node000001" title="Register a decryption password for a password&#45;protected PDF." alt="" coords="5,42,208,67"/>
+<area shape="rect" id="Node000002" href="$classPdfRenderer.html#a6b5833abd80bb22311426c76c450010a" title="Evict least&#45;recently&#45;used page responses exceeding the cache capacity." alt="" coords="256,35,407,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="209,52,242,52,242,57,209,57"/>
+<area shape="rect" id="Node000003" href="$classPdfRenderer.html#a32b6e7465ea1f732bed0059c74b26778" title="Cancel all queued speculative (lookahead) render requests." alt="" coords="459,5,625,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="407,42,445,36,446,41,408,47"/>
+<area shape="rect" id="Node000004" href="$namespaceRenderImages.html#ad7a2328b89e15e92fd95421e8ac4c5ab" title="Remove and release the rasterized image associated with the specified handle." alt="" coords="455,70,629,95"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="408,62,442,67,441,72,407,67"/>
+</map>

@@ -1,0 +1,24 @@
+<map id="EnhancedRect::width" name="EnhancedRect::width">
+<area shape="rect" id="Node000001" title=" " alt="" coords="827,159,985,185"/>
+<area shape="rect" id="Node000002" href="$classPdfViewWidget.html#a7b983e7fb3cc4b306be2d531642a6594" title=" " alt="" coords="573,70,771,95"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="871,155,827,132,778,111,736,98,738,93,780,105,829,127,873,150"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#ada14c82097b6453d5e7a0c094c75249f" title=" " alt="" coords="593,5,751,45"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="883,150,837,104,808,80,777,60,750,47,753,42,780,55,812,76,841,100,887,147"/>
+<area shape="rect" id="Node000006" href="$classCopyScreenshotToClipboard.html#ab4bf45daef2f7ff9838ad12e86bdeac6" title=" " alt="" coords="571,120,773,160"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="813,162,773,157,774,151,813,157"/>
+<area shape="rect" id="Node000007" href="$classCopyScreenshotToScratchpad.html#ae3d520b9e0b82672f5ea1692601ee887" title=" " alt="" coords="565,184,779,224"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="813,187,779,192,779,187,813,182"/>
+<area shape="rect" id="Node000008" href="$classPdfViewWidget.html#adbe2d74c76fd707e9f69fa87b4daa3aa" title=" " alt="" coords="587,248,757,288"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="872,194,780,238,746,250,744,245,778,234,870,189"/>
+<area shape="rect" id="Node000009" href="$classPdfViewWidget.html#abee30bd215489f2f1103f1e97c35b249" title=" " alt="" coords="597,312,747,352"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="889,197,844,250,814,278,780,302,748,317,746,312,777,298,810,274,840,246,885,194"/>
+<area shape="rect" id="Node000003" href="$classPdfViewWidget.html#ab1b6da7af4f4ecce9c051af6d2d5d8b0" title="Pure virtual hook called to record high&#45;level page and document draw calls." alt="" coords="297,163,499,189"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="598,101,566,111,491,139,428,166,426,161,489,134,564,105,597,96"/>
+<area shape="rect" id="Node000005" href="$classNewFileChecker.html#abe1c898d8af14dfd035aee181af0ea69" title=" " alt="" coords="279,13,517,38"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="579,28,518,28,518,23,579,23"/>
+<area shape="poly" id="edge8_Node000008_Node000003" title=" " alt="" coords="589,246,564,239,432,191,434,186,566,233,590,241"/>
+<area shape="rect" id="Node000010" href="$classPdfViewWidget.html#a0b45cf14acf77c3059f1453525898390" title=" " alt="" coords="321,312,475,352"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="584,335,475,335,475,329,584,329"/>
+<area shape="rect" id="Node000011" href="$classMainWidget.html#a3084895b4ec2ecea04285fcb7f0ccf55" title=" " alt="" coords="5,319,231,345"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="308,335,231,335,231,329,308,329"/>
+</map>

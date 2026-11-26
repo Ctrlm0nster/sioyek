@@ -1,0 +1,8 @@
+<map id="DrawControlsUI" name="DrawControlsUI">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,556,147,641"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="35,5,106,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="74,85,78,556,73,556,68,85"/>
+<area shape="rect" id="Node000003" href="$classTouchDrawControls.html" title=" " alt="" coords="91,120,317,485"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="95,82,114,119,109,121,91,84"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="127,487,103,542,98,540,122,485"/>
+</map>

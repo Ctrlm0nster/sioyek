@@ -1,0 +1,18 @@
+<map id="PdfViewWidget::window_pos_to_overview_pos" name="PdfViewWidget::window_pos_to_overview_pos">
+<area shape="rect" id="Node000001" title="Transform a normalized window point [0, 1] to target document page coordinates inside the overview." alt="" coords="5,100,184,140"/>
+<area shape="rect" id="Node000002" href="$classDocument.html#aa666969289019e3c56e52d5e8855732d" title=" " alt="" coords="451,5,641,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,97,183,80,231,64,336,43,437,30,437,36,337,48,233,69,184,85,140,102"/>
+<area shape="rect" id="Node000004" href="$classPdfViewWidget.html#afb63aba8098194ed19824709479b5b8a" title=" " alt="" coords="470,95,622,121"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="167,97,232,85,317,80,403,85,457,91,456,96,402,91,317,85,232,91,168,103"/>
+<area shape="rect" id="Node000005" href="$classPdfViewWidget.html#aac773ef7296693771a400b3368b250b6" title="Retrieve the current overview portal state." alt="" coords="242,215,393,255"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="132,138,233,194,260,207,258,211,231,198,129,142"/>
+<area shape="rect" id="Node000006" href="$classPdfViewWidget.html#aa6ac8f1df48e3e7432b914aaa87d9cbe" title=" " alt="" coords="232,100,403,140"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="184,117,218,117,218,123,184,123"/>
+<area shape="rect" id="Node000007" href="$classDocument.html#a9bfa001954e6981ee2cf08f5e1f042f2" title="Get the physical width of a specific page in points." alt="" coords="467,145,625,185"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="170,137,232,149,347,160,454,163,454,169,347,165,232,155,169,143"/>
+<area shape="rect" id="Node000003" href="$classDocument.html#a96a3741801def570bd1a2d614dde2d5f" title="Transform continuous absolute document coordinates to page&#45;relative coordinates." alt="" coords="689,5,843,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="641,23,675,23,675,28,641,28"/>
+<area shape="poly" id="edge6_Node000006_Node000002" title=" " alt="" coords="366,97,483,48,485,53,368,102"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="403,113,456,110,456,115,403,118"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="403,134,454,144,453,150,402,139"/>
+</map>

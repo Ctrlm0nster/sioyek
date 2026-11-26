@@ -1,0 +1,7 @@
+<map id="find_max_horizontal_line_length_at_pos" name="find_max_horizontal_line_length_at_pos">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,160,69"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="46,30,44,20,50,11,63,5,83,3,105,6,118,13,115,17,104,11,83,8,64,10,53,15,49,21,52,28"/>
+<area shape="rect" id="Node000002" href="$utils_8cpp.html#af9dfa6a2d6205b4c2e95e186903845c9" title=" " alt="" coords="208,37,345,62"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="160,47,194,47,194,52,160,52"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="245,38,238,28,242,18,255,12,277,10,303,14,314,22,311,26,301,18,277,15,256,17,246,22,243,28,249,35"/>
+</map>

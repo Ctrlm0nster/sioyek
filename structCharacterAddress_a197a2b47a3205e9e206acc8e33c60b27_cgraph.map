@@ -1,0 +1,9 @@
+<map id="CharacterAddress::next_line" name="CharacterAddress::next_line">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,13,211,38"/>
+<area shape="rect" id="Node000002" href="$structCharacterAddress.html#abad2587f0d4c0d293cafbf5f2f53b69e" title=" " alt="" coords="259,5,433,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="211,23,245,23,245,28,211,28"/>
+<area shape="rect" id="Node000003" href="$structCharacterAddress.html#a3830ad1489b9eedecd8a04299f1486a6" title=" " alt="" coords="481,13,695,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="433,23,467,23,467,28,433,28"/>
+<area shape="rect" id="Node000004" href="$classDocument.html#a68875be3194ab47f70b763345c41098e" title=" " alt="" coords="743,5,901,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="695,23,729,23,729,28,695,28"/>
+</map>

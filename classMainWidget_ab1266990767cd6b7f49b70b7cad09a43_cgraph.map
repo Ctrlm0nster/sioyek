@@ -1,0 +1,9 @@
+<map id="MainWidget::begin_bookmark_move" name="MainWidget::begin_bookmark_move">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,267,56"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a333a90667ea058f36537cd87251c283f" title=" " alt="" coords="349,5,479,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="267,29,335,23,335,28,267,34"/>
+<area shape="rect" id="Node000004" href="$classDocument.html#a8ae6a2825385324e6068453a4bcf51d2" title=" " alt="" coords="315,55,513,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="267,52,301,55,301,60,267,57"/>
+<area shape="rect" id="Node000003" href="$classDocumentView.html#acfa88cf915c8bae19ac83d1aa9b42dd1" title=" " alt="" coords="561,5,783,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="480,15,547,15,547,21,480,21"/>
+</map>

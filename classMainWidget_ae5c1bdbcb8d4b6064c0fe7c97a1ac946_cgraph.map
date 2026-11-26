@@ -1,0 +1,9 @@
+<map id="MainWidget::clear_current_document_drawings" name="MainWidget::clear_current_document_drawings">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,35,199,75"/>
+<area shape="rect" id="Node000002" href="$classDocument.html#a86a164f2d0e6da57c56e8df2d2e875cf" title=" " alt="" coords="247,5,408,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="199,39,233,35,233,40,199,45"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a333a90667ea058f36537cd87251c283f" title=" " alt="" coords="262,70,393,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="199,64,249,70,248,76,199,69"/>
+<area shape="rect" id="Node000004" href="$classDocumentView.html#acfa88cf915c8bae19ac83d1aa9b42dd1" title=" " alt="" coords="456,70,677,95"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="393,80,442,80,442,85,393,85"/>
+</map>

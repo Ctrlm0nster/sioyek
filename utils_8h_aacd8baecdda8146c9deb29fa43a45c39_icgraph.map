@@ -1,0 +1,17 @@
+<map id="open_wofstream" name="open_wofstream">
+<area shape="rect" id="Node000001" title=" " alt="" coords="775,79,905,104"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="877,69,866,61,840,57,818,59,807,64,804,70,810,77,806,80,799,70,803,60,817,54,840,52,869,56,880,65"/>
+<area shape="rect" id="Node000002" href="$classConfigManager.html#a82773abe11d7f3327cd2bacdd04be7dd" title=" " alt="" coords="540,5,727,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="799,75,726,45,689,33,690,28,728,39,801,70"/>
+<area shape="rect" id="Node000003" href="$utils_8h.html#a500a5a1764090c535ad41197d75c10db" title=" " alt="" coords="564,79,703,104"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="761,94,703,94,703,89,761,89"/>
+<area shape="rect" id="Node000007" href="$classConfigManager.html#adcfd2a2d9f5b55594affe095ff47af89" title=" " alt="" coords="542,128,725,153"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="774,110,688,131,687,125,772,105"/>
+<area shape="poly" id="edge6_Node000003_Node000003" title=" " alt="" coords="670,69,660,61,633,57,611,59,600,64,598,70,604,77,600,80,592,70,596,60,610,54,633,52,662,56,673,65"/>
+<area shape="rect" id="Node000004" href="$classDocument.html#a563e7101c12ced620ef7a0b79ff282de" title=" " alt="" coords="265,55,492,80"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="550,86,492,81,493,75,550,81"/>
+<area shape="rect" id="Node000006" href="$utils_8h.html#a3cccc2b48bd37eee595dd3bd2b5c5003" title=" " alt="" coords="309,104,448,129"/>
+<area shape="poly" id="edge7_Node000003_Node000006" title=" " alt="" coords="551,102,449,112,448,107,550,97"/>
+<area shape="rect" id="Node000005" href="$classEmbedAnnotationsCommand.html#a95641a6515ff1081107fa19955c10771" title=" " alt="" coords="5,47,217,87"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="252,70,218,70,218,65,252,65"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="MainWidget::handle_toggle_drawing_mask" name="MainWidget::handle_toggle_drawing_mask">
+<area shape="rect" id="Node000001" title=" " alt="" coords="247,37,419,77"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#aceff3feac51f6fd987ecd9a02fbb24d2" title=" " alt="" coords="5,5,199,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="233,46,199,41,199,36,233,41"/>
+<area shape="rect" id="Node000003" href="$classToggleDrawingMask.html#a26dc3480767d673abbd875d27976d330" title=" " alt="" coords="21,69,183,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="234,74,183,81,183,76,233,68"/>
+</map>

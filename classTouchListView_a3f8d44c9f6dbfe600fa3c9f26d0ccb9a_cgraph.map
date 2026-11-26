@@ -1,0 +1,22 @@
+<map id="TouchListView::TouchListView" name="TouchListView::TouchListView">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,115,219,140"/>
+<area shape="rect" id="Node000002" href="$classMySortFilterProxyModel.html#a1802e526a7b0280724b15534fce61fb3" title=" " alt="" coords="267,78,453,118"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="218,112,253,108,253,113,219,117"/>
+<area shape="rect" id="Node000003" href="$classTouchListView.html#a62f6747278d5a93ae490492abbceb8e2" title=" " alt="" coords="271,143,449,168"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="219,137,258,141,257,146,218,142"/>
+<area shape="rect" id="Node000004" href="$classTouchListView.html#ade71840475bcf2dc10c97c1036f0203a" title=" " alt="" coords="501,5,709,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="429,140,452,128,468,109,475,89,482,68,500,48,524,34,527,38,503,52,487,71,480,91,472,112,455,132,432,145"/>
+<area shape="rect" id="Node000005" href="$classTouchListView.html#a3fd5901f2cd9c9ea34d5f0a75d05e868" title=" " alt="" coords="759,31,962,56"/>
+<area shape="poly" id="edge9_Node000003_Node000005" title=" " alt="" coords="420,140,452,128,466,119,475,109,485,100,500,92,561,71,625,57,745,42,746,48,626,62,563,76,502,96,488,104,479,113,469,123,455,132,421,145"/>
+<area shape="rect" id="Node000006" href="$classTouchListView.html#a76282dec177fda72920cdf416836eb23" title=" " alt="" coords="505,106,705,146"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="449,142,491,137,492,142,449,147"/>
+<area shape="rect" id="Node000007" href="$classTouchListView.html#a565e13ffb2b871b75225fa8ad3000f4b" title=" " alt="" coords="767,150,954,190"/>
+<area shape="poly" id="edge10_Node000003_Node000007" title=" " alt="" coords="449,155,754,164,754,170,449,161"/>
+<area shape="rect" id="Node000008" href="$classTouchListView.html#a2f54ba0de8a617683b6c23a05c8573d5" title=" " alt="" coords="503,221,708,247"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="400,165,502,199,551,215,549,220,501,205,398,171"/>
+<area shape="rect" id="Node000009" href="$classTouchListView.html#a7101095e188d652700df19b4ba0f4380" title=" " alt="" coords="757,236,964,261"/>
+<area shape="poly" id="edge11_Node000003_Node000009" title=" " alt="" coords="375,166,426,214,462,238,502,257,539,267,578,273,656,276,730,271,793,261,793,267,730,276,656,282,577,278,538,272,500,262,460,243,423,218,371,170"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="710,26,746,29,745,35,709,31"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="706,141,754,149,753,154,705,146"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="708,237,744,239,743,245,708,243"/>
+</map>

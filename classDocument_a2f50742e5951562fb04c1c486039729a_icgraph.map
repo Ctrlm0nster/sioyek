@@ -1,0 +1,19 @@
+<map id="Document::add_highlight" name="Document::add_highlight">
+<area shape="rect" id="Node000001" title=" " alt="" coords="761,205,947,230"/>
+<area shape="rect" id="Node000002" href="$classDocumentView.html#aecfec8b38e5691bd0fd738c50985a5ce" title=" " alt="" coords="493,141,709,166"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="789,204,652,169,653,164,790,199"/>
+<area shape="rect" id="Node000008" href="$classDocument.html#a266d1c3a97489173fb89125e056cdbe9" title=" " alt="" coords="489,229,713,254"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="748,230,714,233,713,228,747,225"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a1faf784d8e55fb199849920f9335899b" title=" " alt="" coords="258,5,410,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="570,135,511,97,440,60,409,48,411,43,442,55,514,93,573,131"/>
+<area shape="rect" id="Node000005" href="$classMainWidget.html#a44dee5e7fc13d3684575bb242a8e7d41" title=" " alt="" coords="258,69,410,109"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="533,140,410,110,411,105,534,135"/>
+<area shape="rect" id="Node000006" href="$classMainWidget.html#a2d1fe0808150002e7cf4b2af8a1202cd" title=" " alt="" coords="232,133,436,173"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="479,156,436,156,436,151,479,151"/>
+<area shape="rect" id="Node000007" href="$classAddHighlightWithCurrentTypeCommand.html#a94a6ebb38a621258e6152b5282e596fd" title=" " alt="" coords="227,197,441,237"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="535,172,419,200,418,195,533,167"/>
+<area shape="rect" id="Node000004" href="$classAddHighlightCommand.html#ad255790ceeaed2d2401d5d90185c2875" title=" " alt="" coords="5,5,179,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="244,28,179,28,179,23,244,23"/>
+<area shape="rect" id="Node000009" href="$classImportAnnotationsCommand.html#a9acc3aadfe4bd6021c7447d1f13503a7" title=" " alt="" coords="229,261,439,301"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="503,259,440,268,439,263,502,253"/>
+</map>

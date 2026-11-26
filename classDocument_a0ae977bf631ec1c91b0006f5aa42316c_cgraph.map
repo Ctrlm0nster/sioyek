@@ -1,0 +1,17 @@
+<map id="Document::add_bookmark" name="Document::add_bookmark">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,108,200,133"/>
+<area shape="rect" id="Node000002" href="$classDocument.html#a6837cedaeb30c03fe3e1cba789c0b8b2" title=" " alt="" coords="248,5,439,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="122,106,177,73,247,40,269,32,270,37,249,44,180,78,125,110"/>
+<area shape="rect" id="Node000004" href="$utils_8cpp.html#a87bae26e27fe0d55c4456a312bdd374a" title=" " alt="" coords="285,79,402,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="200,106,271,97,271,103,200,111"/>
+<area shape="rect" id="Node000005" href="$structAnnotation.html#a3b6fe498218278779b40d8bcc121d3f6" title=" " alt="" coords="270,129,417,169"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="200,129,256,136,256,141,200,135"/>
+<area shape="rect" id="Node000007" href="$utils_8cpp.html#ae4a600b735b5ca32d9f2aca75bbdeff2" title=" " alt="" coords="292,217,395,243"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="133,131,303,209,301,214,131,136"/>
+<area shape="rect" id="Node000003" href="$classDocument.html#a19c247a93996cb294e872ae8cb80635a" title=" " alt="" coords="487,5,641,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="439,15,473,15,473,21,439,21"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="308,80,300,70,304,60,319,54,343,52,374,56,386,65,383,69,372,61,343,57,320,59,308,64,305,70,312,77"/>
+<area shape="rect" id="Node000006" href="$structAnnotation.html#aa9293d9583039a7ffb79a58b2813edce" title=" " alt="" coords="491,129,637,169"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="417,146,477,146,477,151,417,151"/>
+<area shape="poly" id="edge8_Node000007_Node000007" title=" " alt="" coords="308,219,300,209,304,199,319,193,343,191,374,194,386,203,383,208,372,199,343,196,320,198,308,203,305,208,312,216"/>
+</map>

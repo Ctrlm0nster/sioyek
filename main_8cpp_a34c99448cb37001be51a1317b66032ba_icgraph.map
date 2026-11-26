@@ -1,0 +1,14 @@
+<map id="strip_uri" name="strip_uri">
+<area shape="rect" id="Node000001" title=" " alt="" coords="305,67,380,92"/>
+<area shape="poly" id="edge8_Node000001_Node000001" title=" " alt="" coords="370,56,362,48,342,45,326,47,317,52,316,58,320,65,316,68,310,58,313,49,324,42,342,40,364,43,373,52"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#a9d8c88fbf60de81a4f641cc5ecb6676b" title=" " alt="" coords="109,29,257,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="291,70,237,57,238,52,292,65"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#ad42a11ac603069e26007216384243202" title=" " alt="" coords="132,103,234,128"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="292,93,235,106,234,101,291,88"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="209,19,201,11,183,8,167,10,159,15,158,20,162,28,158,31,152,21,155,11,166,5,183,3,204,6,212,15"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#a700a0caa5b70a06d1064e576f9f3cf65" title=" " alt="" coords="6,67,61,92"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="119,61,62,75,61,70,118,55"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="59,56,52,48,34,45,18,47,10,52,8,58,13,65,8,68,3,58,6,49,16,42,34,40,54,44,63,52"/>
+<area shape="poly" id="edge7_Node000004_Node000003" title=" " alt="" coords="118,103,60,88,62,83,120,97"/>
+<area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="209,92,201,84,183,81,167,83,159,88,158,94,162,101,158,104,152,94,155,85,166,78,183,76,204,80,212,88"/>
+</map>

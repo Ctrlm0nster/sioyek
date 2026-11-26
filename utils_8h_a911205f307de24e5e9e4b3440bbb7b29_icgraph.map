@@ -1,0 +1,17 @@
+<map id="get_tags" name="get_tags">
+<area shape="rect" id="Node000001" title=" " alt="" coords="787,43,865,68"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="859,32,850,24,826,21,806,23,796,28,794,34,799,41,795,44,789,34,792,24,805,18,826,16,852,20,862,28"/>
+<area shape="rect" id="Node000002" href="$classPdfViewWidget.html#a7b983e7fb3cc4b306be2d531642a6594" title=" " alt="" coords="540,5,739,31"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="772,47,703,33,704,28,773,42"/>
+<area shape="rect" id="Node000004" href="$utils_8h.html#a500a5a1764090c535ad41197d75c10db" title=" " alt="" coords="570,79,709,104"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="774,68,706,81,705,76,773,63"/>
+<area shape="rect" id="Node000003" href="$classPdfViewWidget.html#ab1b6da7af4f4ecce9c051af6d2d5d8b0" title="Pure virtual hook called to record high&#45;level page and document draw calls." alt="" coords="278,5,479,31"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="526,21,480,21,480,15,526,15"/>
+<area shape="poly" id="edge7_Node000004_Node000004" title=" " alt="" coords="672,68,663,60,639,57,620,59,609,64,607,70,613,77,608,80,602,70,605,60,618,54,639,52,665,56,676,64"/>
+<area shape="rect" id="Node000005" href="$classDocument.html#a563e7101c12ced620ef7a0b79ff282de" title=" " alt="" coords="265,67,492,92"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="556,90,492,87,493,82,556,85"/>
+<area shape="rect" id="Node000007" href="$utils_8h.html#a3cccc2b48bd37eee595dd3bd2b5c5003" title=" " alt="" coords="309,116,448,141"/>
+<area shape="poly" id="edge8_Node000004_Node000007" title=" " alt="" coords="557,106,448,121,448,116,556,101"/>
+<area shape="rect" id="Node000006" href="$classEmbedAnnotationsCommand.html#a95641a6515ff1081107fa19955c10771" title=" " alt="" coords="5,59,217,99"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="252,82,218,82,218,77,252,77"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="MainWidget::show_context_menu" name="MainWidget::show_context_menu">
+<area shape="rect" id="Node000001" title=" " alt="" coords="744,45,987,70"/>
+<area shape="rect" id="Node000002" href="$classShowContextMenuCommand.html#afca720010e70be08d6ad997679d24f62" title=" " alt="" coords="481,5,692,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="741,46,692,40,693,35,741,40"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#aae809bd59d76c29c5b67e5350469aa41" title=" " alt="" coords="477,69,696,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="741,74,697,79,696,74,741,69"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#a49169009ea3b7e62cb793399cccc462a" title=" " alt="" coords="277,69,429,109"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="463,92,429,92,429,87,463,87"/>
+<area shape="rect" id="Node000005" href="$classMainWidget.html#a48ae6c49931be9590a2edda847dadad3" title=" " alt="" coords="5,47,229,73"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="263,81,219,75,220,70,264,76"/>
+<area shape="rect" id="Node000006" href="$classMainWidget.html#a2d1fe0808150002e7cf4b2af8a1202cd" title=" " alt="" coords="15,97,219,137"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="264,103,220,108,219,103,263,97"/>
+</map>

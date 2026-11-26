@@ -1,0 +1,20 @@
+<map id="VulkanCanvas::uniform4fv" name="VulkanCanvas::uniform4fv">
+<area shape="rect" id="Node000001" title="Set a 4D float vector uniform." alt="" coords="740,77,933,102"/>
+<area shape="rect" id="Node000002" href="$classPdfViewWidget.html#a90363c42393521a426a3ed61f08ca134" title=" " alt="" coords="513,5,684,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="774,76,673,48,675,43,776,70"/>
+<area shape="rect" id="Node000006" href="$classPdfViewWidget.html#acf68d306731e102f1f61e7d966781788" title=" " alt="" coords="513,69,684,109"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="726,92,684,92,684,87,726,87"/>
+<area shape="rect" id="Node000007" href="$classPdfViewWidget.html#a491f39fb013f97fd915757b8d628a543" title=" " alt="" coords="505,133,692,173"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="776,108,675,136,673,131,774,103"/>
+<area shape="rect" id="Node000003" href="$classPdfViewWidget.html#a7b983e7fb3cc4b306be2d531642a6594" title=" " alt="" coords="257,75,455,101"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="508,51,407,78,405,73,507,46"/>
+<area shape="rect" id="Node000005" href="$classPdfViewWidget.html#adbe2d74c76fd707e9f69fa87b4daa3aa" title=" " alt="" coords="271,8,441,48"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="499,29,441,30,441,24,499,24"/>
+<area shape="rect" id="Node000004" href="$classPdfViewWidget.html#ab1b6da7af4f4ecce9c051af6d2d5d8b0" title="Pure virtual hook called to record high&#45;level page and document draw calls." alt="" coords="5,46,207,71"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="243,77,207,73,207,68,243,72"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="257,43,207,49,207,44,257,37"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="499,91,455,91,455,86,499,86"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="510,132,403,103,405,98,511,127"/>
+<area shape="rect" id="Node000008" href="$classPdfViewWidget.html#a8f99bf492104330993ed3c18b1b62884" title=" " alt="" coords="255,141,457,166"/>
+<area shape="poly" id="edge10_Node000007_Node000008" title=" " alt="" coords="492,156,458,156,458,151,492,151"/>
+</map>

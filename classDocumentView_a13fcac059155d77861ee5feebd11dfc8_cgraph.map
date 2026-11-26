@@ -1,0 +1,33 @@
+<map id="DocumentView::absolute_to_virtual_pos" name="DocumentView::absolute_to_virtual_pos">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,171,189,211"/>
+<area shape="rect" id="Node000002" href="$classDocumentView.html#af9d844a9d730f693ff2aa1e77807dba0" title=" " alt="" coords="237,112,431,152"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,168,239,153,240,158,179,173"/>
+<area shape="rect" id="Node000003" href="$classDocumentView.html#ac800f6c72307254fbdfd362151182e18" title=" " alt="" coords="513,5,666,45"/>
+<area shape="poly" id="edge8_Node000001_Node000003" title=" " alt="" coords="122,168,173,132,236,98,303,74,372,55,498,32,499,38,373,61,305,79,238,102,175,137,125,173"/>
+<area shape="rect" id="Node000009" href="$classDocumentView.html#a7b048cd2f1648153050b1d124c1ea679" title=" " alt="" coords="253,256,415,296"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="154,208,266,249,264,254,153,213"/>
+<area shape="rect" id="Node000014" href="$structAbsoluteDocumentPos.html#ab384396defecb4fad40f924db42cbc4c" title=" " alt="" coords="249,377,419,417"/>
+<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="123,209,301,366,298,370,120,213"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="368,110,419,82,478,55,499,47,501,52,480,60,421,87,370,114"/>
+<area shape="rect" id="Node000004" href="$classDocument.html#a9bfa001954e6981ee2cf08f5e1f042f2" title="Get the physical width of a specific page in points." alt="" coords="511,169,668,209"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="424,149,498,166,497,171,423,155"/>
+<area shape="rect" id="Node000005" href="$structDocumentPos.html#a3b3b747bb52554fd9dac8992308e4c63" title=" " alt="" coords="491,70,687,95"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="430,111,509,95,510,101,431,116"/>
+<area shape="rect" id="Node000008" href="$structEnhancedRect.html#a2f9b9a7752abd1b699a5693c1632775d" title=" " alt="" coords="504,119,675,145"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="431,129,491,129,491,135,431,135"/>
+<area shape="rect" id="Node000006" href="$classDocument.html#a66caf693ee3c3c8ca06881d325325c1f" title=" " alt="" coords="748,63,911,103"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="688,80,734,80,734,85,688,85"/>
+<area shape="rect" id="Node000007" href="$classDocument.html#aa8809fa0693369d107b7820c53b4e06d" title=" " alt="" coords="959,63,1121,103"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="911,80,945,80,945,85,911,85"/>
+<area shape="poly" id="edge12_Node000009_Node000004" title=" " alt="" coords="386,253,478,220,506,211,508,216,480,225,388,258"/>
+<area shape="rect" id="Node000010" href="$classDocument.html#ad2048d0f289faeb7f0b40321bc5447d4" title=" " alt="" coords="479,234,700,259"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="415,264,465,258,466,264,416,269"/>
+<area shape="rect" id="Node000011" href="$classDocument.html#a81ed14e7ce10f1da72821d48bebae3de" title="Get the physical height of a specific page in points." alt="" coords="511,284,668,324"/>
+<area shape="poly" id="edge11_Node000009_Node000011" title=" " alt="" coords="416,282,498,291,497,297,415,288"/>
+<area shape="rect" id="Node000012" href="$classDocument.html#affeb52c635bb9acbb3fed4eb12a7101d" title=" " alt="" coords="511,348,668,388"/>
+<area shape="poly" id="edge13_Node000009_Node000012" title=" " alt="" coords="381,294,480,333,503,341,502,347,478,339,379,299"/>
+<area shape="rect" id="Node000013" href="$classDocument.html#a2f79df9ddd1b39e93b5dfb1dbef13ec3" title="Get total number of pages in the document." alt="" coords="503,413,675,438"/>
+<area shape="poly" id="edge14_Node000009_Node000013" title=" " alt="" coords="358,294,421,353,454,380,480,398,499,406,497,411,477,402,451,385,418,357,354,298"/>
+<area shape="rect" id="Node000015" href="$classDocument.html#a96a3741801def570bd1a2d614dde2d5f" title="Transform continuous absolute document coordinates to page&#45;relative coordinates." alt="" coords="513,463,666,503"/>
+<area shape="poly" id="edge16_Node000014_Node000015" title=" " alt="" coords="388,415,480,448,504,456,503,461,478,453,386,420"/>
+</map>

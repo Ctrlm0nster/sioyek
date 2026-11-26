@@ -1,0 +1,7 @@
+<map id="PortalToLinkCommand" name="PortalToLinkCommand">
+<area shape="rect" id="Node000001" title=" " alt="" coords="25,772,211,897"/>
+<area shape="rect" id="Node000002" href="$classOpenLinkCommand.html" title=" " alt="" coords="17,459,219,724"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="121,738,121,772,115,772,115,738"/>
+<area shape="rect" id="Node000003" href="$classCommand.html" title=" " alt="" coords="5,5,231,411"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="121,424,121,458,115,458,115,424"/>
+</map>

@@ -1,0 +1,28 @@
+<map id="VulkanCanvas::disableAttribute" name="VulkanCanvas::disableAttribute">
+<area shape="rect" id="Node000001" title="Disable the specified vertex attribute array location." alt="" coords="1213,247,1439,272"/>
+<area shape="rect" id="Node000002" href="$classPdfViewWidget.html#ae2245d6ac27338b4bdbd7e7687471293" title=" " alt="" coords="991,126,1153,166"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1283,243,1117,169,1119,164,1285,238"/>
+<area shape="rect" id="Node000009" href="$classPdfViewWidget.html#acf68d306731e102f1f61e7d966781788" title=" " alt="" coords="501,319,672,359"/>
+<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="1257,277,1166,294,1031,310,896,323,673,338,672,333,896,318,1030,305,1165,289,1256,272"/>
+<area shape="rect" id="Node000010" href="$classPdfViewWidget.html#a491f39fb013f97fd915757b8d628a543" title=" " alt="" coords="979,239,1165,279"/>
+<area shape="poly" id="edge14_Node000001_Node000010" title=" " alt="" coords="1200,262,1165,262,1165,257,1200,257"/>
+<area shape="rect" id="Node000003" href="$classPdfViewWidget.html#a9093142ddd2b558862f689a6dba4e69c" title=" " alt="" coords="745,154,906,194"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="978,159,906,168,906,162,977,154"/>
+<area shape="rect" id="Node000004" href="$classPdfViewWidget.html#a7b983e7fb3cc4b306be2d531642a6594" title=" " alt="" coords="255,133,453,159"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="1040,118,991,78,962,60,930,46,867,27,812,15,763,9,716,9,670,14,620,25,502,59,464,75,427,96,372,135,369,131,424,91,461,70,500,54,619,19,669,9,716,4,763,4,813,10,868,22,932,41,964,55,994,74,1044,114"/>
+<area shape="rect" id="Node000006" href="$classPdfViewWidget.html#a8f99bf492104330993ed3c18b1b62884" title=" " alt="" coords="724,219,927,244"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="1017,174,932,209,887,221,886,216,930,203,1015,169"/>
+<area shape="rect" id="Node000007" href="$classPdfViewWidget.html#aaa2636bdec379330ae204553fdc4949b" title="Render the floating overview portal window." alt="" coords="501,69,672,109"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="1032,120,985,92,930,70,864,59,796,57,730,63,673,72,672,66,730,57,795,52,864,54,931,65,987,87,1035,116"/>
+<area shape="rect" id="Node000008" href="$classPdfViewWidget.html#a72f543e8dec4338681f70a9260ab17ec" title="Draw a specific document page onto the Vulkan swapchain." alt="" coords="720,104,931,129"/>
+<area shape="poly" id="edge8_Node000002_Node000008" title=" " alt="" coords="978,137,931,132,931,127,978,132"/>
+<area shape="rect" id="Node000005" href="$classPdfViewWidget.html#ab1b6da7af4f4ecce9c051af6d2d5d8b0" title="Pure virtual hook called to record high&#45;level page and document draw calls." alt="" coords="5,133,207,159"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="241,149,207,149,207,143,241,143"/>
+<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="492,115,407,136,406,131,491,109"/>
+<area shape="poly" id="edge9_Node000008_Node000004" title=" " alt="" coords="706,127,454,143,453,137,706,121"/>
+<area shape="poly" id="edge10_Node000008_Node000007" title=" " alt="" coords="706,105,672,101,672,96,707,100"/>
+<area shape="poly" id="edge11_Node000008_Node000008" title=" " alt="" coords="868,95,857,86,825,83,800,85,786,90,784,95,791,102,787,106,778,96,783,86,799,80,825,77,859,81,871,91"/>
+<area shape="poly" id="edge13_Node000009_Node000004" title=" " alt="" coords="520,315,500,303,456,266,417,226,363,160,367,157,420,223,459,262,503,299,523,311"/>
+<area shape="poly" id="edge15_Node000010_Node000004" title=" " alt="" coords="965,268,847,269,783,265,720,258,623,238,528,211,386,161,388,156,530,206,624,233,720,253,783,260,847,263,965,263"/>
+<area shape="poly" id="edge16_Node000010_Node000006" title=" " alt="" coords="965,250,926,245,927,240,965,245"/>
+</map>

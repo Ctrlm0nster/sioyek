@@ -1,0 +1,19 @@
+<map id="SymbolCommand" name="SymbolCommand">
+<area shape="rect" id="Node000001" title=" " alt="" coords="617,459,818,599"/>
+<area shape="rect" id="Node000003" href="$classAddHighlightCommand.html" title=" " alt="" coords="5,677,195,802"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="603,543,514,556,413,577,308,607,208,649,163,679,160,674,205,644,306,602,412,572,513,551,603,538"/>
+<area shape="rect" id="Node000004" href="$classExternalSearchCommand.html" title=" " alt="" coords="219,687,423,792"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="605,571,520,606,436,649,381,688,377,684,433,644,518,601,603,566"/>
+<area shape="rect" id="Node000005" href="$classGotoMark.html" title=" " alt="" coords="447,647,611,832"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="648,610,613,649,609,645,644,607"/>
+<area shape="rect" id="Node000006" href="$classSetFreehandType.html" title=" " alt="" coords="635,677,799,802"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="720,612,720,676,715,676,715,612"/>
+<area shape="rect" id="Node000007" href="$classSetMark.html" title=" " alt="" coords="824,677,928,802"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="785,608,814,645,836,675,832,678,810,648,781,611"/>
+<area shape="rect" id="Node000008" href="$classSetSelectHighlightTypeCommand.html" title=" " alt="" coords="952,677,1208,802"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="831,584,941,644,990,674,987,679,939,649,829,589"/>
+<area shape="rect" id="Node000009" href="$classToggleDrawingMask.html" title=" " alt="" coords="1233,677,1402,802"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="832,537,920,550,1020,570,1123,601,1173,621,1221,644,1263,674,1260,679,1219,649,1171,626,1121,606,1019,576,919,555,831,542"/>
+<area shape="rect" id="Node000002" href="$classCommand.html" title=" " alt="" coords="605,5,830,411"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="720,424,720,458,715,458,715,424"/>
+</map>

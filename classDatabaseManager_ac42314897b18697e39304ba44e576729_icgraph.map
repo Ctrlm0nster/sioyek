@@ -1,0 +1,23 @@
+<map id="DatabaseManager::generic_update_create_query" name="DatabaseManager::generic_update_create_query">
+<area shape="rect" id="Node000001" title=" " alt="" coords="757,293,955,333"/>
+<area shape="rect" id="Node000002" href="$classDatabaseManager.html#a8bced4b8dbf0a5bf315c950985b9ec68" title=" " alt="" coords="512,197,709,237"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="790,291,662,240,664,235,792,286"/>
+<area shape="rect" id="Node000009" href="$classDatabaseManager.html#a76cb049a420a80c10f29ce390a3c8dde" title=" " alt="" coords="513,325,708,365"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="744,331,709,335,708,330,743,325"/>
+<area shape="rect" id="Node000003" href="$classDatabaseManager.html#a8d0e0a99ea61af7a75b0e721b0948032" title=" " alt="" coords="263,5,457,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="586,187,535,122,501,89,463,60,440,48,442,43,465,55,504,85,539,119,591,184"/>
+<area shape="rect" id="Node000004" href="$classDatabaseManager.html#adff381d8f89e51f6d33e846d5d117c73" title=" " alt="" coords="256,69,464,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="571,191,521,157,463,124,434,112,436,107,465,119,524,152,574,187"/>
+<area shape="rect" id="Node000005" href="$classDatabaseManager.html#aaa2f213c75cee5824c6b1c1b5aed5245" title=" " alt="" coords="263,133,457,173"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="518,196,438,176,440,171,519,191"/>
+<area shape="rect" id="Node000006" href="$classDatabaseManager.html#a8e0eeaf97ee665befcb4fcb439a06403" title=" " alt="" coords="263,197,457,237"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="498,220,458,220,458,215,498,215"/>
+<area shape="rect" id="Node000007" href="$classDatabaseManager.html#a444e652d6b64b8fc8fce221ca9ee5265" title=" " alt="" coords="263,261,457,301"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="519,243,440,264,438,259,518,238"/>
+<area shape="rect" id="Node000008" href="$classDatabaseManager.html#a9f51c7c53a65cb4a2789952cdc37a674" title=" " alt="" coords="257,325,463,365"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="574,248,524,283,465,316,436,328,434,323,463,311,521,278,571,243"/>
+<area shape="rect" id="Node000010" href="$classMainWidget.html#aecdd5523bc6b08638a63ff318c80ccb6" title=" " alt="" coords="284,389,436,429"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="519,371,437,393,436,387,518,366"/>
+<area shape="rect" id="Node000011" href="$classRenameCommand.html#a414ee04db31d352d95a7310c38d6c75e" title=" " alt="" coords="5,397,208,422"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="270,412,208,412,208,407,270,407"/>
+</map>

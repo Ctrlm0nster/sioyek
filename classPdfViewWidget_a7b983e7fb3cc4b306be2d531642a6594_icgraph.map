@@ -1,0 +1,5 @@
+<map id="PdfViewWidget::my_render" name="PdfViewWidget::my_render">
+<area shape="rect" id="Node000001" title=" " alt="" coords="255,5,453,31"/>
+<area shape="rect" id="Node000002" href="$classPdfViewWidget.html#ab1b6da7af4f4ecce9c051af6d2d5d8b0" title="Pure virtual hook called to record high&#45;level page and document draw calls." alt="" coords="5,5,207,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="241,21,207,21,207,15,241,15"/>
+</map>

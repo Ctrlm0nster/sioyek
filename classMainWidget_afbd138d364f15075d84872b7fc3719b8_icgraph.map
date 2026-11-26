@@ -1,0 +1,17 @@
+<map id="MainWidget::hide_command_line_edit" name="MainWidget::hide_command_line_edit">
+<area shape="rect" id="Node000001" title=" " alt="" coords="765,97,973,137"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#aa850519c8eae3521e8cc5af77fb7650b" title=" " alt="" coords="541,67,693,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="751,106,693,99,693,93,752,100"/>
+<area shape="rect" id="Node000007" href="$classMainWidget.html#a0b81a39ba1682bc47cc24b2eca70c938" title=" " alt="" coords="516,132,717,157"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="752,132,718,136,717,131,752,127"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a0452032b756e46c7d39fc7bdd52cceb6" title=" " alt="" coords="283,29,458,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="526,73,440,57,441,52,527,68"/>
+<area shape="rect" id="Node000006" href="$classEscapeCommand.html#ae6540404793739b99e6f2f0d9cbf7c04" title=" " alt="" coords="273,79,468,104"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="527,91,468,92,468,87,527,86"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#ab611ce437761ff749e7b02703918ba5d" title=" " alt="" coords="14,5,217,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="269,35,217,30,217,25,270,30"/>
+<area shape="rect" id="Node000005" href="$classMainWidget.html#af576f313b835f7d08175f33e7488b157" title=" " alt="" coords="5,55,225,80"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="270,55,226,59,225,54,269,49"/>
+<area shape="rect" id="Node000008" href="$classMainWidget.html#a90ee19ed3124206e464a05af4c3f5a60" title=" " alt="" coords="279,132,463,157"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="502,147,463,147,463,142,502,142"/>
+</map>

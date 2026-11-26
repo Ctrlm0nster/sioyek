@@ -1,0 +1,15 @@
+<map id="MainWidget::synctex_under_pos" name="MainWidget::synctex_under_pos">
+<area shape="rect" id="Node000001" title=" " alt="" coords="548,119,707,159"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a49169009ea3b7e62cb793399cccc462a" title=" " alt="" coords="313,55,465,95"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="538,118,463,98,464,93,540,113"/>
+<area shape="rect" id="Node000005" href="$classMainWidget.html#a1f0e6ab531f3f59441db7119476e98a7" title=" " alt="" coords="313,119,465,159"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="533,142,465,142,465,137,533,137"/>
+<area shape="rect" id="Node000007" href="$classSynctexUnderCursorCommand.html#a8cbe18fa7298ac952b7740faf1969bf6" title=" " alt="" coords="277,183,500,223"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="540,166,464,186,463,181,538,160"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a48ae6c49931be9590a2edda847dadad3" title=" " alt="" coords="5,5,229,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="299,59,178,33,179,28,300,54"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#a2d1fe0808150002e7cf4b2af8a1202cd" title=" " alt="" coords="15,55,219,95"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="299,78,220,78,220,73,299,73"/>
+<area shape="rect" id="Node000006" href="$classSynctexUnderRulerCommand.html#ad4c3871e8e75a15a60b059c8864b2709" title=" " alt="" coords="10,119,225,159"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="299,142,225,142,225,137,299,137"/>
+</map>

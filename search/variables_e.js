@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['offset_0',['offset',['../classDocumentView.html#aed364941c85430fec6b76b71ce19f80c',1,'DocumentView']]],
+  ['offset_5fx_1',['offset_x',['../structOpenedBookState.html#aace98bfc6dae6b673dd70ce582535cf7',1,'OpenedBookState::offset_x'],['../structMarkInDatabase.html#a4cbce7dc9b83beebe3b982b380c2b02c',1,'MarkInDatabase::offset_x']]],
+  ['offset_5fy_2',['offset_y',['../structBookState.html#a93ef0897ea74fbc817010b390a4caa90',1,'BookState::offset_y'],['../structOpenedBookState.html#a8ed13ff23e5cffe87a150a4d90e94c59',1,'OpenedBookState::offset_y'],['../structMarkInDatabase.html#ac254604985597e227d7a07215ebdf292',1,'MarkInDatabase::offset_y']]],
+  ['on_5fcommand_5fdone_3',['on_command_done',['../classMainWidget.html#aa9b22e47442ad9a05c6b2c29b85db6ae',1,'MainWidget']]],
+  ['on_5fdelete_4',['on_delete',['../classRunGuard.html#afb3673da84454429f2bfc9616ad84524',1,'RunGuard']]],
+  ['open_5flast_5ffile_5fon_5fstartup_5',['OPEN_LAST_FILE_ON_STARTUP',['../config_8cpp.html#a8c16c2b3eb5d1c560ea9c38f2a0f4c7b',1,'OPEN_LAST_FILE_ON_STARTUP:&#160;config.cpp'],['../utils_8cpp.html#a8c16c2b3eb5d1c560ea9c38f2a0f4c7b',1,'OPEN_LAST_FILE_ON_STARTUP:&#160;config.cpp']]],
+  ['options_6',['options',['../classTouchGenericButtons.html#a99dfe200ed6eb1a6614a3fbedf379665',1,'TouchGenericButtons']]],
+  ['origin_7',['origin',['../classKeyboardSelectPointCommand.html#ace06c334a60b6ead6661d7c8cd8d6150',1,'KeyboardSelectPointCommand']]],
+  ['original_5fdrawing_5fmode_8',['original_drawing_mode',['../classDeleteFreehandDrawingsCommand.html#a1a47e31c34e7a0711fa4a573655f849b',1,'DeleteFreehandDrawingsCommand::original_drawing_mode'],['../classSelectFreehandDrawingsCommand.html#ae1ec25d33748c80286bf35a1de513e52',1,'SelectFreehandDrawingsCommand::original_drawing_mode']]],
+  ['original_5fmouse_5fnormalized_5fpos_9',['original_mouse_normalized_pos',['../structOverviewTouchMoveData.html#a2ace9d55dfa1695f2303b2fd01173512',1,'OverviewTouchMoveData']]],
+  ['original_5fnormal_5fmouse_5fpos_10',['original_normal_mouse_pos',['../structOverviewResizeData.html#a9afa73a1735348540d74f0521e4d1c27',1,'OverviewResizeData::original_normal_mouse_pos'],['../structOverviewMoveData.html#a29051cd96340b03a190d90f2393f3a50',1,'OverviewMoveData::original_normal_mouse_pos']]],
+  ['original_5foffsets_11',['original_offsets',['../structOverviewMoveData.html#ac7c76bbe17bd21c26596516bf9801651',1,'OverviewMoveData']]],
+  ['original_5frect_12',['original_rect',['../structOverviewResizeData.html#a9923c185c3d8e92ecacd4c995a18ec43',1,'OverviewResizeData']]],
+  ['overlay_13',['overlay',['../structVulkanCanvas_1_1Impl.html#a8d57e858810c8a8de1618b3cef350f68',1,'VulkanCanvas::Impl']]],
+  ['overlay_5fimages_14',['overlay_images',['../structVulkanCanvas_1_1Impl.html#a430aaf34f56599d11f034b0e10ab3af6',1,'VulkanCanvas::Impl']]],
+  ['overview_5fhighlight_5frects_15',['overview_highlight_rects',['../structTextUnderPointerInfo.html#ac351ad9dbee710e5693680bdd74d6a4c',1,'TextUnderPointerInfo']]],
+  ['overview_5fmove_5fdata_16',['overview_move_data',['../classMainWidget.html#a25f9246b0198fc390b5c279dbb9c41a3',1,'MainWidget']]],
+  ['overview_5foffset_17',['OVERVIEW_OFFSET',['../config_8cpp.html#a0c3591c0ad4d0484a6b106a459d9a72b',1,'OVERVIEW_OFFSET:&#160;config.cpp'],['../document__view_8cpp.html#a0c3591c0ad4d0484a6b106a459d9a72b',1,'OVERVIEW_OFFSET:&#160;config.cpp'],['../main__widget_8cpp.html#a0c3591c0ad4d0484a6b106a459d9a72b',1,'OVERVIEW_OFFSET:&#160;config.cpp'],['../pdf__view__widget_8cpp.html#a0c3591c0ad4d0484a6b106a459d9a72b',1,'OVERVIEW_OFFSET:&#160;config.cpp']]],
+  ['overview_5foriginal_5fpos_5fabsolute_18',['overview_original_pos_absolute',['../structOverviewTouchMoveData.html#a2d23a8e9d9a591ed6653631338a80c4e',1,'OverviewTouchMoveData']]],
+  ['overview_5fresize_5fdata_19',['overview_resize_data',['../classMainWidget.html#a59e06e2caf57f89ba8f08398a96702d6',1,'MainWidget']]],
+  ['overview_5fsize_20',['OVERVIEW_SIZE',['../config_8cpp.html#a74f580663fbf14dc48d8ebe0f6ade0be',1,'OVERVIEW_SIZE:&#160;config.cpp'],['../document__view_8cpp.html#a74f580663fbf14dc48d8ebe0f6ade0be',1,'OVERVIEW_SIZE:&#160;config.cpp'],['../main__widget_8cpp.html#a74f580663fbf14dc48d8ebe0f6ade0be',1,'OVERVIEW_SIZE:&#160;config.cpp'],['../pdf__view__widget_8cpp.html#a74f580663fbf14dc48d8ebe0f6ade0be',1,'OVERVIEW_SIZE:&#160;config.cpp']]],
+  ['overview_5ftouch_5fmove_5fdata_21',['overview_touch_move_data',['../classMainWidget.html#a6b15e8659dc5b7a936fda6578710508c',1,'MainWidget']]],
+  ['overview_5ftype_22',['overview_type',['../structOverviewState.html#a610ec83cac0148659dec4abe1e8ec496',1,'OverviewState']]]
+];

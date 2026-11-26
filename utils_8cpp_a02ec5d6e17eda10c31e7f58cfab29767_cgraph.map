@@ -1,0 +1,28 @@
+<map id="get_last_saved_windows_states" name="get_last_saved_windows_states">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,71,189,111"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="57,72,55,62,61,52,76,47,97,45,122,48,136,55,133,60,121,53,97,50,77,52,65,57,60,63,62,70"/>
+<area shape="rect" id="Node000002" href="$classPath.html#a3b2b23ad75362462812544d7b4b8186a" title=" " alt="" coords="237,41,385,67"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="189,73,224,66,225,72,190,78"/>
+<area shape="rect" id="Node000010" href="$utils_8cpp.html#ae4a600b735b5ca32d9f2aca75bbdeff2" title=" " alt="" coords="260,115,363,140"/>
+<area shape="poly" id="edge15_Node000001_Node000010" title=" " alt="" coords="190,104,247,114,246,119,189,109"/>
+<area shape="rect" id="Node000003" href="$classPath.html#ab110e4586145d1e61dc3e1ba90d43799" title=" " alt="" coords="433,5,548,31"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="374,39,419,30,420,35,375,44"/>
+<area shape="rect" id="Node000004" href="$utils_8cpp.html#ae77ffb9e9981cb2a68ec4d173b383625" title=" " alt="" coords="439,79,542,104"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="374,64,426,75,425,81,372,69"/>
+<area shape="poly" id="edge14_Node000004_Node000004" title=" " alt="" coords="464,80,458,70,461,61,472,54,491,52,513,55,522,64,519,68,510,60,491,57,474,59,465,64,463,70,468,77"/>
+<area shape="rect" id="Node000005" href="$namespaceutf8.html#a4a1157ef2f85d4bc8366dbbea20dcb48" title=" " alt="" coords="596,79,707,104"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="542,89,582,89,582,94,542,94"/>
+<area shape="poly" id="edge13_Node000005_Node000005" title=" " alt="" coords="625,80,620,70,623,61,634,54,651,52,673,55,682,64,678,68,670,60,651,57,635,59,627,64,625,70,630,77"/>
+<area shape="rect" id="Node000006" href="$namespaceutf8.html#a3827e78596fc38cfdebd721e9c45c901" title="The library API &#45; functions intended to be called by the users." alt="" coords="755,79,859,104"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="707,89,741,89,741,94,707,94"/>
+<area shape="poly" id="edge8_Node000006_Node000006" title=" " alt="" coords="781,80,775,70,778,61,789,54,807,52,828,55,837,64,833,68,826,60,807,57,791,59,782,64,780,70,785,77"/>
+<area shape="rect" id="Node000007" href="$classutf8_1_1invalid__code__point.html#a46f27dd1c5b286936ec58baca3ca6220" title=" " alt="" coords="907,27,1099,67"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="858,77,899,68,901,73,859,82"/>
+<area shape="rect" id="Node000008" href="$namespaceutf8_1_1internal.html#a97b553137aaeda6e8ca6f8d46f78fd79" title=" " alt="" coords="933,115,1072,155"/>
+<area shape="poly" id="edge9_Node000006_Node000008" title=" " alt="" coords="859,100,920,114,919,119,858,105"/>
+<area shape="poly" id="edge10_Node000008_Node000008" title=" " alt="" coords="966,116,964,106,970,97,983,91,1003,89,1026,92,1038,99,1035,103,1024,97,1003,94,984,96,973,101,969,107,971,114"/>
+<area shape="rect" id="Node000009" href="$namespaceutf8_1_1internal.html#a31a185a6bc8b9bf454191a8a95a93595" title=" " alt="" coords="1147,115,1272,155"/>
+<area shape="poly" id="edge11_Node000008_Node000009" title=" " alt="" coords="1072,133,1133,133,1133,138,1072,138"/>
+<area shape="poly" id="edge12_Node000009_Node000009" title=" " alt="" coords="1171,116,1168,106,1175,97,1188,91,1209,89,1233,92,1247,99,1244,104,1232,97,1209,94,1190,96,1178,101,1174,107,1176,114"/>
+<area shape="poly" id="edge16_Node000010_Node000010" title=" " alt="" coords="282,116,275,106,279,97,291,90,311,88,336,92,346,100,343,104,334,96,311,93,292,95,283,100,281,106,286,113"/>
+</map>

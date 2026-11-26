@@ -1,0 +1,17 @@
+<map id="TouchSlider::canceled" name="TouchSlider::canceled">
+<area shape="rect" id="Node000001" title=" " alt="" coords="965,29,1128,55"/>
+<area shape="rect" id="Node000002" href="$classFloatConfigUI.html#a3b8eed8810d2f00365d8fc8d10494ebb" title=" " alt="" coords="244,5,451,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="955,30,917,26,800,18,708,16,499,19,451,20,451,14,499,14,708,11,800,13,918,21,955,25"/>
+<area shape="rect" id="Node000004" href="$classIntConfigUI.html#afbc0622fd94a5a0d22d846102de98883" title=" " alt="" coords="260,55,435,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="1010,63,967,81,918,95,849,105,778,110,638,109,512,97,414,83,415,77,513,92,639,103,778,105,848,100,917,90,965,76,1008,58"/>
+<area shape="rect" id="Node000005" href="$classTouchSlider.html#a92f52762683fe7b725ead91bb58aea26" title=" " alt="" coords="499,29,677,55"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="951,45,678,45,678,39,951,39"/>
+<area shape="rect" id="Node000006" href="$classTouchSlider.html#a80b739090c2e31924c0ab7d153f45277" title=" " alt="" coords="725,55,917,80"/>
+<area shape="poly" id="edge8_Node000001_Node000006" title=" " alt="" coords="952,55,918,59,917,54,951,50"/>
+<area shape="rect" id="Node000003" href="$classConfigCommand.html#aa22f004288468b2f112aa0eefe6dd66e" title=" " alt="" coords="5,31,196,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="231,33,197,36,196,31,230,27"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="246,60,196,55,197,50,247,55"/>
+<area shape="poly" id="edge6_Node000005_Node000002" title=" " alt="" coords="485,34,451,31,451,26,485,29"/>
+<area shape="poly" id="edge7_Node000005_Node000004" title=" " alt="" coords="485,55,435,61,435,56,485,50"/>
+<area shape="poly" id="edge9_Node000006_Node000005" title=" " alt="" coords="711,58,677,54,678,49,712,53"/>
+</map>

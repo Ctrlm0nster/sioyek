@@ -1,0 +1,46 @@
+<map id="DocumentView::set_page_space_y" name="DocumentView::set_page_space_y">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1941,445,2128,485"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#aaeea62b443a42dbef57a650851196cf5" title=" " alt="" coords="1716,445,1893,485"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1927,468,1894,468,1894,463,1927,463"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#aa4df646a0a04c7ce70decf5a4b903fd0" title=" " alt="" coords="1497,445,1668,485"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1702,468,1668,468,1668,463,1702,463"/>
+<area shape="rect" id="Node000004" href="$classConfigUI.html#aa50e995c5b465005d11d7e91020b732e" title=" " alt="" coords="1271,210,1425,235"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="1551,437,1360,238,1364,234,1554,433"/>
+<area shape="rect" id="Node000006" href="$classConfigCommand.html#aa22f004288468b2f112aa0eefe6dd66e" title=" " alt="" coords="732,234,923,259"/>
+<area shape="poly" id="edge23_Node000003_Node000006" title=" " alt="" coords="1483,463,1185,443,1050,429,1002,421,974,413,948,398,924,379,884,336,853,293,833,261,838,258,857,290,888,332,928,375,951,393,976,408,1003,416,1051,424,1186,438,1483,458"/>
+<area shape="rect" id="Node000018" href="$classFitEpubToWindowCommand.html#a8e31721c40f7ec6263a9733fd934c1d3" title=" " alt="" coords="1247,473,1449,513"/>
+<area shape="poly" id="edge24_Node000003_Node000018" title=" " alt="" coords="1484,480,1450,484,1449,479,1483,475"/>
+<area shape="rect" id="Node000019" href="$classToggleConfigCommand.html#a3493d974bd4e2ff801d87cb3530f2310" title=" " alt="" coords="1262,537,1434,577"/>
+<area shape="poly" id="edge25_Node000003_Node000019" title=" " alt="" coords="1529,494,1450,528,1417,540,1415,535,1448,523,1527,489"/>
+<area shape="rect" id="Node000005" href="$classBoolConfigUI.html#ac043be812245b47bbc86a7418a94ba34" title=" " alt="" coords="987,62,1186,87"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="1324,202,1270,151,1235,125,1198,102,1164,90,1166,85,1200,98,1238,120,1273,147,1328,198"/>
+<area shape="rect" id="Node000007" href="$classColor3ConfigUI.html#a05e90ef5f303c1d367ad3e234c81d414" title=" " alt="" coords="975,111,1199,137"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="1312,206,1259,178,1198,152,1155,139,1156,134,1200,147,1261,173,1314,201"/>
+<area shape="rect" id="Node000008" href="$classColor4ConfigUI.html#aac166e05f4f99c3f7f4bec1f02ade6c8" title=" " alt="" coords="975,161,1199,186"/>
+<area shape="poly" id="edge8_Node000004_Node000008" title=" " alt="" coords="1266,210,1154,189,1155,183,1267,205"/>
+<area shape="rect" id="Node000009" href="$classFloatConfigUI.html#a3b8eed8810d2f00365d8fc8d10494ebb" title=" " alt="" coords="983,210,1190,235"/>
+<area shape="poly" id="edge10_Node000004_Node000009" title=" " alt="" coords="1257,225,1190,225,1190,220,1257,220"/>
+<area shape="rect" id="Node000010" href="$classIntConfigUI.html#afbc0622fd94a5a0d22d846102de98883" title=" " alt="" coords="999,259,1174,285"/>
+<area shape="poly" id="edge12_Node000004_Node000010" title=" " alt="" coords="1267,241,1155,262,1154,257,1266,235"/>
+<area shape="rect" id="Node000011" href="$classMacroConfigUI.html#a6f9216f380634962d6b7c6010c6063ab" title=" " alt="" coords="977,309,1197,334"/>
+<area shape="poly" id="edge14_Node000004_Node000011" title=" " alt="" coords="1315,245,1262,273,1200,300,1160,311,1159,306,1198,295,1260,268,1313,240"/>
+<area shape="rect" id="Node000012" href="$classRangeConfigUI.html#af049a1294633a412d62cd4b15fddda3f" title=" " alt="" coords="975,13,1198,38"/>
+<area shape="poly" id="edge16_Node000004_Node000012" title=" " alt="" coords="1330,199,1309,166,1278,126,1241,86,1197,53,1170,40,1172,36,1200,48,1244,82,1282,122,1313,163,1335,197"/>
+<area shape="rect" id="Node000017" href="$classRectangleConfigUI.html#a113edd315f26a5e45d3b5a142de9295a" title=" " alt="" coords="1011,359,1162,399"/>
+<area shape="poly" id="edge21_Node000004_Node000017" title=" " alt="" coords="1327,248,1273,298,1238,326,1200,349,1163,364,1161,359,1197,344,1235,321,1269,294,1324,244"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="993,94,976,102,931,134,892,171,840,235,835,232,888,167,928,129,973,98,991,89"/>
+<area shape="poly" id="edge7_Node000007_Node000006" title=" " alt="" coords="1000,143,976,152,937,171,901,194,845,236,842,232,898,190,935,167,974,147,998,138"/>
+<area shape="poly" id="edge9_Node000008_Node000006" title=" " alt="" coords="1013,192,975,201,865,236,864,231,974,196,1011,187"/>
+<area shape="poly" id="edge11_Node000009_Node000006" title=" " alt="" coords="970,236,923,241,923,235,969,231"/>
+<area shape="poly" id="edge13_Node000010_Node000006" title=" " alt="" coords="986,265,923,259,923,253,986,260"/>
+<area shape="poly" id="edge15_Node000011_Node000006" title=" " alt="" coords="1006,308,974,300,861,262,863,257,975,295,1008,303"/>
+<area shape="rect" id="Node000013" href="$classTouchSettings.html#a182823458c9cfba2465ddc4569176905" title=" " alt="" coords="728,5,927,45"/>
+<area shape="poly" id="edge17_Node000012_Node000013" title=" " alt="" coords="961,28,927,28,927,23,961,23"/>
+<area shape="rect" id="Node000014" href="$classTouchSettings.html#a0d52ee42b73330bd54c63d81faaa87ea" title=" " alt="" coords="469,13,680,38"/>
+<area shape="poly" id="edge18_Node000013_Node000014" title=" " alt="" coords="714,28,680,28,680,23,714,23"/>
+<area shape="rect" id="Node000015" href="$classMainWidget.html#a7830d88fd4e98d6a868eaa0abb4e48f3" title=" " alt="" coords="236,5,421,45"/>
+<area shape="poly" id="edge19_Node000014_Node000015" title=" " alt="" coords="456,28,421,28,421,23,456,23"/>
+<area shape="rect" id="Node000016" href="$classShowTouchSettingsMenu.html#a730d9e22e84c59d2a053f9182449eb56" title=" " alt="" coords="5,5,188,45"/>
+<area shape="poly" id="edge20_Node000015_Node000016" title=" " alt="" coords="222,28,188,28,188,23,222,23"/>
+<area shape="poly" id="edge22_Node000017_Node000006" title=" " alt="" coords="997,359,974,349,935,328,898,304,842,262,845,257,901,300,937,323,976,344,999,354"/>
+</map>

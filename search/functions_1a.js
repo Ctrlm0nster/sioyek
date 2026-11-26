@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['_7eannotation_0',['~Annotation',['../structAnnotation.html#a5c2404d3ccb4bf8b98f4aea2a32d7647',1,'Annotation']]],
+  ['_7ecommand_1',['~Command',['../classCommand.html#ab552bb3a07fdd1acbfd8ea76e69b2278',1,'Command']]],
+  ['_7ecommandselector_2',['~CommandSelector',['../classCommandSelector.html#a329cfe2dc7796a8aaa0c12d427b82e67',1,'CommandSelector']]],
+  ['_7econfigfilechangelistener_3',['~ConfigFileChangeListener',['../classConfigFileChangeListener.html#a2b1c04a347aef497d078b1b0a217e983',1,'ConfigFileChangeListener']]],
+  ['_7edatabasemanager_4',['~DatabaseManager',['../classDatabaseManager.html#ae9b3a5da1e04fbb00faf8a034da1d063',1,'DatabaseManager']]],
+  ['_7edocument_5',['~Document',['../classDocument.html#ac2e3f62307dc22baac21ddc10fa1609c',1,'Document']]],
+  ['_7edocumentmanager_6',['~DocumentManager',['../classDocumentManager.html#a52967fcc0ff34ffedb52e22814411cd7',1,'DocumentManager']]],
+  ['_7edocumentview_7',['~DocumentView',['../classDocumentView.html#acab3a16d09b48ef8db93d89d3aa0a9c5',1,'DocumentView']]],
+  ['_7egenericwaitcommand_8',['~GenericWaitCommand',['../classGenericWaitCommand.html#a040b61cc7a1728e17b48671867611d69',1,'GenericWaitCommand']]],
+  ['_7einputhandler_9',['~InputHandler',['../classInputHandler.html#ac1f7efb54b34d433d6ffba62627452b6',1,'InputHandler']]],
+  ['_7emainwidget_10',['~MainWidget',['../classMainWidget.html#add21c63f8e799303a21a69da3d288c2f',1,'MainWidget']]],
+  ['_7emysortfilterproxymodel_11',['~MySortFilterProxyModel',['../classMySortFilterProxyModel.html#aec44206d1a33325c5a4289815f6ea6c8',1,'MySortFilterProxyModel']]],
+  ['_7epdfrenderer_12',['~PdfRenderer',['../classPdfRenderer.html#a28bf6ffc538f64d0123effb7e599f316',1,'PdfRenderer']]],
+  ['_7epdfviewwidget_13',['~PdfViewWidget',['../classPdfViewWidget.html#aa93417ad92ac7fb1abdc7e33cd814abf',1,'PdfViewWidget']]],
+  ['_7eqttexttospeechhandler_14',['~QtTextToSpeechHandler',['../classQtTextToSpeechHandler.html#a3003add72582d764cb2e5d2ed40ac8e5',1,'QtTextToSpeechHandler']]],
+  ['_7erunguard_15',['~RunGuard',['../classRunGuard.html#a09da3dd86d203906fd9e0021b3175476',1,'RunGuard']]],
+  ['_7etexttospeechhandler_16',['~TextToSpeechHandler',['../classTextToSpeechHandler.html#a276030c14a88a0d0877788304c863409',1,'TextToSpeechHandler']]],
+  ['_7evulkancanvas_17',['~VulkanCanvas',['../classVulkanCanvas.html#a7975b0c6ce7655d88efb92d2d74e872d',1,'VulkanCanvas']]]
+];

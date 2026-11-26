@@ -1,0 +1,13 @@
+<map id="VulkanCanvas::createBuffers" name="VulkanCanvas::createBuffers">
+<area shape="rect" id="Node000001" title="Allocate discrete GPU buffer handles." alt="" coords="936,56,1144,81"/>
+<area shape="rect" id="Node000002" href="$classPdfViewWidget.html#a1fcac9f7c74deb211e992ffa21847fd3" title=" " alt="" coords="705,5,886,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="940,57,886,49,887,43,940,51"/>
+<area shape="rect" id="Node000006" href="$classPdfViewWidget.html#a7a2de044b327cd9de859168654f06d46" title="Pure virtual hook invoked during GPU initialization to build widget&#45;specific scene resources." alt="" coords="703,85,888,125"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="940,86,889,94,888,88,939,81"/>
+<area shape="rect" id="Node000003" href="$classPdfViewWidget.html#aed7d7b250a620c1a7f84ba3e3bf044eb" title=" " alt="" coords="473,13,655,53"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="691,35,655,35,655,30,691,30"/>
+<area shape="rect" id="Node000004" href="$classPdfViewWidget.html#adbe2d74c76fd707e9f69fa87b4daa3aa" title=" " alt="" coords="255,13,425,53"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="460,35,426,35,426,30,460,30"/>
+<area shape="rect" id="Node000005" href="$classPdfViewWidget.html#ab1b6da7af4f4ecce9c051af6d2d5d8b0" title="Pure virtual hook called to record high&#45;level page and document draw calls." alt="" coords="5,20,207,45"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="241,35,207,35,207,30,241,30"/>
+</map>

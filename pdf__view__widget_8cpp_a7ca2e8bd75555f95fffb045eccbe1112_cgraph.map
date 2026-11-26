@@ -1,0 +1,7 @@
+<map id="bezier_lerp" name="bezier_lerp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,100,55"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="32,30,28,21,30,12,39,5,53,3,69,6,76,14,72,18,66,11,53,8,41,10,35,14,33,20,37,28"/>
+<area shape="rect" id="Node000002" href="$pdf__view__widget_8cpp.html#a6ea5d58f733952161df62243cfaf30ed" title=" " alt="" coords="148,29,195,55"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="100,39,134,39,134,45,100,45"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="151,30,147,21,149,12,157,5,171,3,188,6,195,14,191,18,185,11,171,8,160,10,153,14,152,20,156,28"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="PdfViewWidget::write_to_stencil" name="PdfViewWidget::write_to_stencil">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,23,168,63"/>
+<area shape="rect" id="Node000002" href="$classVulkanCanvas.html#acefd530112efc1fb945ac70d03bfd97a" title="Configure stencil comparison function, reference value, and bitmask." alt="" coords="216,5,411,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,32,202,28,203,33,169,37"/>
+<area shape="rect" id="Node000003" href="$classVulkanCanvas.html#aa9a43ab4bd0f62bf0a35b528ff4fa79e" title="Set actions to take on stencil and depth test pass or fail." alt="" coords="222,55,405,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="169,49,209,54,208,59,168,55"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="MainWidget::get_continuous_fixed_velocity_state" name="MainWidget::get_continuous_fixed_velocity_state">
+<area shape="rect" id="Node000001" title=" " alt="" coords="236,5,443,45"/>
+<area shape="rect" id="Node000002" href="$classMoveSmoothCommand.html#a0c73cadbc3f3430cc5081f562c1291a0" title=" " alt="" coords="5,5,188,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="222,28,188,28,188,23,222,23"/>
+</map>

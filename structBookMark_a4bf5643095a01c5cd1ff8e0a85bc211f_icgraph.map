@@ -1,0 +1,13 @@
+<map id="BookMark::get_rectangle" name="BookMark::get_rectangle">
+<area shape="rect" id="Node000001" title=" " alt="" coords="720,99,905,124"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#af7951f6ab399a01a0d86851028bf33f6" title=" " alt="" coords="511,84,672,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="706,114,672,114,672,109,706,109"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a066269ffc4dd044b1cef68119e004406" title=" " alt="" coords="289,5,441,60"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="498,82,440,61,442,56,500,77"/>
+<area shape="rect" id="Node000005" href="$classGenericVisibleAnnotationCommand.html#abbc90a8fed952471860e51264470ed06" title=" " alt="" coords="268,84,463,139"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="497,114,463,114,463,109,497,109"/>
+<area shape="rect" id="Node000006" href="$classMainWidget.html#ac1aad3254ed2ded4581502a8146a6c6b" title=" " alt="" coords="275,163,455,217"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="500,146,445,165,443,160,498,141"/>
+<area shape="rect" id="Node000004" href="$classGenericHighlightCommand.html#a0c7aa7edb3a9b569f5f07cf1479c014c" title=" " alt="" coords="5,13,220,53"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="276,35,220,35,220,30,276,30"/>
+</map>

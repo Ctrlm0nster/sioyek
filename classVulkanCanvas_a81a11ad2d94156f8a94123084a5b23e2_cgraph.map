@@ -1,0 +1,5 @@
+<map id="VulkanCanvas::integerVertexAttribute" name="VulkanCanvas::integerVertexAttribute">
+<area shape="rect" id="Node000001" title="Configure integer vertex attribute layout without floating&#45;point conversion." alt="" coords="5,5,215,45"/>
+<area shape="rect" id="Node000002" href="$classVulkanCanvas.html#a5e7d17054c8584e4e2681422c4b90734" title="Configure floating&#45;point vertex attribute pointer layout." alt="" coords="263,13,483,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="215,23,249,23,249,28,215,28"/>
+</map>

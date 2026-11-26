@@ -1,0 +1,11 @@
+<map id="PendingDownloadPortal" name="PendingDownloadPortal">
+<area shape="rect" id="Node000001" title=" " alt="" coords="43,943,223,1048"/>
+<area shape="rect" id="Node000002" href="$structPortal.html" title=" " alt="" coords="65,687,202,872"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,872,136,926,131,926,131,872"/>
+<area shape="rect" id="Node000003" href="$structAnnotation.html" title=" " alt="" coords="5,281,219,616"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="126,630,130,686,125,687,121,630"/>
+<area shape="rect" id="Node000004" href="$structPortalViewState.html" title=" " alt="" coords="243,416,410,481"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="311,483,233,617,199,674,195,671,228,615,306,481"/>
+<area shape="rect" id="Node000005" href="$structOpenedBookState.html" title=" " alt="" coords="252,5,401,211"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="329,211,329,400,324,400,324,211"/>
+</map>

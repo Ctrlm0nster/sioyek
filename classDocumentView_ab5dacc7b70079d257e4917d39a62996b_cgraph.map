@@ -1,0 +1,35 @@
+<map id="DocumentView::delete_closest_portal" name="DocumentView::delete_closest_portal">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,146,175,186"/>
+<area shape="rect" id="Node000002" href="$classDocument.html#adb7e64a0301ec665db56812e47884211" title=" " alt="" coords="227,115,418,155"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="175,152,213,147,214,152,175,157"/>
+<area shape="rect" id="Node000005" href="$classDocumentView.html#af232e49dedb6a3cb85c299675bb06112" title=" " alt="" coords="223,181,423,207"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="175,174,209,178,209,183,175,179"/>
+<area shape="rect" id="Node000003" href="$classDocument.html#a8efb42bbd6fa41ce42a1ba3bdfc19768" title=" " alt="" coords="471,85,645,125"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="418,120,457,115,458,120,419,126"/>
+<area shape="rect" id="Node000004" href="$utils_8h.html#a217c3dbdf65795bd4c7ce2863330d18d" title=" " alt="" coords="755,63,828,88"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="646,91,741,79,741,84,646,96"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="754,64,745,54,750,44,765,38,791,36,824,40,836,49,833,54,822,45,791,41,766,43,753,48,751,54,758,61"/>
+<area shape="rect" id="Node000006" href="$classDocumentView.html#afb8536808a70c14a51a3b2ec44660e2a" title=" " alt="" coords="473,177,643,217"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="423,192,459,193,459,198,423,198"/>
+<area shape="rect" id="Node000007" href="$classDocumentView.html#ac800f6c72307254fbdfd362151182e18" title=" " alt="" coords="715,113,868,153"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="631,174,704,154,705,159,632,179"/>
+<area shape="rect" id="Node000008" href="$classDocumentView.html#a7b048cd2f1648153050b1d124c1ea679" title=" " alt="" coords="710,177,873,217"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="644,194,696,194,696,199,644,199"/>
+<area shape="rect" id="Node000011" href="$classDocument.html#a9bfa001954e6981ee2cf08f5e1f042f2" title="Get the physical width of a specific page in points." alt="" coords="969,234,1127,274"/>
+<area shape="poly" id="edge14_Node000006_Node000011" title=" " alt="" coords="634,214,694,226,831,241,956,249,955,254,831,247,693,231,633,219"/>
+<area shape="rect" id="Node000014" href="$structDocumentPos.html#a3b3b747bb52554fd9dac8992308e4c63" title=" " alt="" coords="693,299,889,324"/>
+<area shape="poly" id="edge15_Node000006_Node000014" title=" " alt="" coords="593,214,695,270,743,291,741,296,692,275,590,219"/>
+<area shape="rect" id="Node000009" href="$classDocument.html#ad2048d0f289faeb7f0b40321bc5447d4" title=" " alt="" coords="937,5,1159,31"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="871,174,888,163,899,148,906,134,910,103,915,72,922,56,936,41,943,35,947,40,939,45,927,59,920,73,915,104,911,135,904,151,891,167,875,179"/>
+<area shape="rect" id="Node000010" href="$classDocument.html#a81ed14e7ce10f1da72821d48bebae3de" title="Get the physical height of a specific page in points." alt="" coords="969,55,1127,95"/>
+<area shape="poly" id="edge10_Node000008_Node000010" title=" " alt="" coords="866,174,888,163,902,149,911,134,920,120,936,105,955,95,957,99,939,110,924,123,915,137,907,152,891,167,869,179"/>
+<area shape="poly" id="edge11_Node000008_Node000011" title=" " alt="" coords="873,212,957,231,955,236,872,217"/>
+<area shape="rect" id="Node000012" href="$classDocument.html#affeb52c635bb9acbb3fed4eb12a7101d" title=" " alt="" coords="969,119,1127,159"/>
+<area shape="poly" id="edge12_Node000008_Node000012" title=" " alt="" coords="872,176,955,157,957,162,873,181"/>
+<area shape="rect" id="Node000013" href="$classDocument.html#a2f79df9ddd1b39e93b5dfb1dbef13ec3" title="Get total number of pages in the document." alt="" coords="962,184,1134,209"/>
+<area shape="poly" id="edge13_Node000008_Node000013" title=" " alt="" coords="873,194,948,194,948,199,873,199"/>
+<area shape="rect" id="Node000015" href="$classDocument.html#a66caf693ee3c3c8ca06881d325325c1f" title=" " alt="" coords="967,298,1129,338"/>
+<area shape="poly" id="edge16_Node000014_Node000015" title=" " alt="" coords="889,311,953,313,953,318,889,317"/>
+<area shape="rect" id="Node000016" href="$classDocument.html#aa8809fa0693369d107b7820c53b4e06d" title=" " alt="" coords="1207,298,1369,338"/>
+<area shape="poly" id="edge17_Node000015_Node000016" title=" " alt="" coords="1130,315,1193,315,1193,321,1130,321"/>
+</map>

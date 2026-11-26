@@ -1,0 +1,17 @@
+<map id="DocumentManager::free_document" name="DocumentManager::free_document">
+<area shape="rect" id="Node000001" title=" " alt="" coords="829,99,1009,139"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a0676326ed2bc8f97903270b103d2786e" title=" " alt="" coords="575,77,781,102"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="815,109,781,105,782,99,816,103"/>
+<area shape="rect" id="Node000007" href="$classMainWidget.html#ada14c82097b6453d5e7a0c094c75249f" title=" " alt="" coords="599,127,757,167"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="816,133,758,140,757,135,815,128"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a15668856b27904a457a16e220c1b3833" title=" " alt="" coords="317,5,498,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="609,76,492,48,493,43,611,71"/>
+<area shape="rect" id="Node000005" href="$classMainWidget.html#aecdd5523bc6b08638a63ff318c80ccb6" title=" " alt="" coords="331,69,483,109"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="561,92,483,92,483,87,561,87"/>
+<area shape="rect" id="Node000004" href="$classGotoLoadedDocumentCommand.html#a3b762ae0142c7181a9875e90f05c1a4b" title=" " alt="" coords="5,5,240,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="303,28,240,28,240,23,303,23"/>
+<area shape="rect" id="Node000006" href="$classRenameCommand.html#a414ee04db31d352d95a7310c38d6c75e" title=" " alt="" coords="21,77,224,102"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="318,92,224,92,224,87,318,87"/>
+<area shape="rect" id="Node000008" href="$classNewFileChecker.html#abe1c898d8af14dfd035aee181af0ea69" title=" " alt="" coords="288,134,527,159"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="585,149,527,149,527,144,585,144"/>
+</map>

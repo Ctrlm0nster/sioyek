@@ -1,0 +1,7 @@
+<map id="PdfViewWidget::toggle_highlight_links" name="PdfViewWidget::toggle_highlight_links">
+<area shape="rect" id="Node000001" title=" " alt="" coords="441,5,612,45"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a79e0f931c319c3c1041646c1caeb8560" title=" " alt="" coords="244,5,393,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="428,28,394,28,394,23,428,23"/>
+<area shape="rect" id="Node000003" href="$classToggleHighlightCommand.html#af22c5e6165ab1b4cd4b53461ef0b8d90" title=" " alt="" coords="5,5,196,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="230,28,196,28,196,23,230,23"/>
+</map>

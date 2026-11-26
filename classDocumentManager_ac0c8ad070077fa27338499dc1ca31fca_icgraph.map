@@ -1,0 +1,18 @@
+<map id="DocumentManager::add_tab" name="DocumentManager::add_tab">
+<area shape="rect" id="Node000001" title=" " alt="" coords="715,55,921,80"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#ad62f01fe3ce406c87bd1a03bf5d8e56d" title=" " alt="" coords="455,5,667,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="737,55,627,33,628,28,738,49"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a25949f0aae461401164bcf2e23ae260f" title=" " alt="" coords="455,55,667,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="701,70,667,70,667,65,701,65"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#a30233fdcd4a30bf1deb9f75a17106f87" title=" " alt="" coords="473,104,648,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="738,85,628,107,627,101,737,80"/>
+<area shape="rect" id="Node000005" href="$classMainWidget.html#adf5a458285cd49183431fc410e2cae5e" title=" " alt="" coords="257,67,407,107"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="459,106,407,100,407,94,460,101"/>
+<area shape="rect" id="Node000007" href="$main_8cpp.html#a700a0caa5b70a06d1064e576f9f3cf65" title=" " alt="" coords="5,107,60,132"/>
+<area shape="poly" id="edge9_Node000004_Node000007" title=" " alt="" coords="460,121,407,122,60,122,60,117,407,117,460,116"/>
+<area shape="rect" id="Node000006" href="$main_8cpp.html#ad42a11ac603069e26007216384243202" title=" " alt="" coords="108,79,209,104"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="244,92,210,93,210,88,244,87"/>
+<area shape="poly" id="edge6_Node000006_Node000006" title=" " alt="" coords="180,67,173,60,159,57,146,59,139,64,138,70,142,77,137,80,133,70,135,61,144,54,159,52,176,55,184,64"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="95,108,61,116,60,111,94,103"/>
+<area shape="poly" id="edge8_Node000007_Node000007" title=" " alt="" coords="54,95,47,88,33,85,20,87,13,92,12,98,16,105,11,108,7,98,9,89,18,82,33,80,50,83,58,92"/>
+</map>

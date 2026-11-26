@@ -1,0 +1,13 @@
+<map id="DocumentView::delete_highlight_with_index" name="DocumentView::delete_highlight_with_index">
+<area shape="rect" id="Node000001" title=" " alt="" coords="544,49,713,89"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a92159c1a9e591afcc28e22fb64c59a4d" title=" " alt="" coords="309,5,487,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="530,56,487,49,488,44,531,51"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#a885c7ffa9efac30b1d8630b8085bbc2c" title=" " alt="" coords="300,85,496,125"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="531,87,496,92,496,87,530,81"/>
+<area shape="rect" id="Node000003" href="$classDeleteHighlightUnderCursorCommand.html#acbd218c802553141e09b6b3f7a87955b" title=" " alt="" coords="26,13,231,53"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="295,35,231,35,231,30,295,30"/>
+<area shape="rect" id="Node000005" href="$classDeleteHighlightCommand.html#ad246c14120f611ca48eb058f4327f0cb" title=" " alt="" coords="33,77,224,132"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="286,107,224,107,224,102,286,102"/>
+<area shape="rect" id="Node000006" href="$classDeleteVisibleAnnotationCommand.html#aa0823bab1a8bf915e9e47c0b719ae09d" title=" " alt="" coords="5,156,252,211"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="316,131,224,158,222,153,315,126"/>
+</map>

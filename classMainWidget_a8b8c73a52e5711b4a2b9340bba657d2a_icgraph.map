@@ -1,0 +1,13 @@
+<map id="MainWidget::focus_text" name="MainWidget::focus_text">
+<area shape="rect" id="Node000001" title=" " alt="" coords="467,59,643,84"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#ad42a11ac603069e26007216384243202" title=" " alt="" coords="292,29,393,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="453,60,394,52,394,46,453,55"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#a38c32f01f93e7aa330a00f5f827ff4d0" title=" " alt="" coords="267,79,419,119"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="453,87,419,92,419,87,453,82"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="380,20,370,11,343,8,320,10,308,15,306,20,312,28,308,31,301,21,305,11,319,5,343,3,372,6,384,15"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#a700a0caa5b70a06d1064e576f9f3cf65" title=" " alt="" coords="85,29,139,55"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="278,45,139,45,139,39,278,39"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="149,25,152,19,148,14,135,10,112,8,85,11,73,16,73,23,86,31,83,36,68,25,68,13,84,5,112,3,136,5,151,10,158,18,153,27"/>
+<area shape="rect" id="Node000005" href="$classFocusTextCommand.html#af81867649a1dc1315bd42bc1622d0f4a" title=" " alt="" coords="5,87,219,112"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="253,102,219,102,219,97,253,97"/>
+</map>

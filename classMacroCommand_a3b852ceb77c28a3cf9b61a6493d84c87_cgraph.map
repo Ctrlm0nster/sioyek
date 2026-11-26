@@ -1,0 +1,21 @@
+<map id="MacroCommand::get_current_mode_index" name="MacroCommand::get_current_mode_index">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,197,216,237"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#ad23071af570164f376b4182422191f7e" title=" " alt="" coords="264,165,447,205"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,201,250,196,251,202,216,206"/>
+<area shape="rect" id="Node000010" href="$classMacroCommand.html#a4b432beb17e0422f4c1c2a898a1d0089" title=" " alt="" coords="268,229,443,269"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="216,228,255,234,254,239,216,234"/>
+<area shape="rect" id="Node000003" href="$classPdfViewWidget.html#a95e3f362e4f9deb45961c9d2e5331c87" title=" " alt="" coords="555,5,706,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="371,163,421,109,456,80,493,55,541,37,543,42,496,60,459,84,425,113,375,167"/>
+<area shape="rect" id="Node000004" href="$classPdfViewWidget.html#aac773ef7296693771a400b3368b250b6" title="Retrieve the current overview portal state." alt="" coords="555,69,706,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="393,163,441,140,494,119,541,105,543,110,496,124,443,145,396,168"/>
+<area shape="rect" id="Node000005" href="$classPdfViewWidget.html#ac32607d96bf486195ae3334f6339f3a0" title=" " alt="" coords="555,133,706,173"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="446,172,542,161,542,166,447,177"/>
+<area shape="rect" id="Node000006" href="$classMainWidget.html#abe556d72126e31bb0df16a66c961d533" title=" " alt="" coords="549,197,712,237"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="447,193,536,204,535,209,446,199"/>
+<area shape="rect" id="Node000007" href="$classDocumentView.html#aca01c5cad7000d6c8cf193738899f2f4" title=" " alt="" coords="495,262,767,287"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="421,203,448,215,472,232,496,247,523,256,521,261,494,252,469,236,445,220,418,208"/>
+<area shape="rect" id="Node000008" href="$classMainWidget.html#ac5d3fb352a8ed78f7947f7f0b9e1d0ad" title=" " alt="" coords="548,312,713,352"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="430,203,448,215,466,237,473,258,480,279,496,298,536,317,533,322,493,302,475,282,468,260,461,239,445,219,427,208"/>
+<area shape="rect" id="Node000009" href="$classDocumentView.html#a4d9540e29e80c98389cf857da19135a9" title=" " alt="" coords="815,319,1035,345"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="714,329,801,329,801,335,714,335"/>
+</map>

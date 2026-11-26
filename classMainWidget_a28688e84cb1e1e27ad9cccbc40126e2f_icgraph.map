@@ -1,0 +1,26 @@
+<map id="MainWidget::synchronize_pending_link" name="MainWidget::synchronize_pending_link">
+<area shape="rect" id="Node000001" title=" " alt="" coords="783,159,969,199"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#aa850519c8eae3521e8cc5af77fb7650b" title=" " alt="" coords="559,63,711,103"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="820,156,734,118,701,106,703,101,736,113,822,151"/>
+<area shape="rect" id="Node000007" href="$classMainWidget.html#a3cedd5ea0b2414cafcccea4e6b9a0a4f" title=" " alt="" coords="559,127,711,167"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="769,168,711,160,712,155,770,163"/>
+<area shape="rect" id="Node000010" href="$classMainWidget.html#a63de5a152a83180dfe07eda3086ff48e" title=" " alt="" coords="561,191,709,231"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="769,196,710,204,709,199,769,191"/>
+<area shape="rect" id="Node000011" href="$classMainWidget.html#ab8e5291cb22125e09746eba8198af542" title=" " alt="" coords="536,255,735,295"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="822,208,736,246,703,258,701,253,734,241,820,203"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a0452032b756e46c7d39fc7bdd52cceb6" title=" " alt="" coords="293,29,468,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="545,72,459,57,460,52,546,66"/>
+<area shape="rect" id="Node000006" href="$classEscapeCommand.html#ae6540404793739b99e6f2f0d9cbf7c04" title=" " alt="" coords="283,79,478,104"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="546,89,478,91,478,86,546,83"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#ab611ce437761ff749e7b02703918ba5d" title=" " alt="" coords="14,5,217,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="280,36,217,30,217,25,280,30"/>
+<area shape="rect" id="Node000005" href="$classMainWidget.html#af576f313b835f7d08175f33e7488b157" title=" " alt="" coords="5,55,225,80"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="280,54,226,60,225,54,280,49"/>
+<area shape="rect" id="Node000008" href="$classMainWidget.html#a50e717278f9543347db6c133dd27b773" title=" " alt="" coords="280,187,481,227"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="546,171,467,190,466,185,545,166"/>
+<area shape="rect" id="Node000009" href="$classPortalCommand.html#a6199a464e04f5316b736c5ac4b0eb028" title=" " alt="" coords="287,135,474,160"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="546,150,474,150,474,145,546,145"/>
+<area shape="poly" id="edge11_Node000011_Node000008" title=" " alt="" coords="546,254,455,230,457,225,548,249"/>
+<area shape="rect" id="Node000012" href="$classCreateVisiblePortalCommand.html#aa4207da82bfd7e6967cd5975a83108f3" title=" " alt="" coords="273,255,488,295"/>
+<area shape="poly" id="edge12_Node000011_Node000012" title=" " alt="" coords="522,278,488,278,488,273,522,273"/>
+</map>

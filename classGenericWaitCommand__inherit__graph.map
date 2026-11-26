@@ -1,0 +1,13 @@
+<map id="GenericWaitCommand" name="GenericWaitCommand">
+<area shape="rect" id="Node000001" title=" " alt="" coords="370,459,595,684"/>
+<area shape="rect" id="Node000003" href="$classWaitCommand.html" title=" " alt="" coords="5,732,184,877"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="359,641,197,734,186,742,183,737,195,730,356,636"/>
+<area shape="rect" id="Node000004" href="$classWaitForIndexingToFinishCommand.html" title=" " alt="" coords="209,742,471,867"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="409,697,380,743,376,740,404,694"/>
+<area shape="rect" id="Node000005" href="$classWaitForRendersToFinishCommand.html" title=" " alt="" coords="495,732,755,877"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="561,695,583,730,579,733,557,697"/>
+<area shape="rect" id="Node000006" href="$classWaitForSearchToFinishCommand.html" title=" " alt="" coords="780,752,1031,857"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="609,638,812,750,810,754,606,643"/>
+<area shape="rect" id="Node000002" href="$classCommand.html" title=" " alt="" coords="370,5,595,411"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="485,424,485,458,480,458,480,424"/>
+</map>

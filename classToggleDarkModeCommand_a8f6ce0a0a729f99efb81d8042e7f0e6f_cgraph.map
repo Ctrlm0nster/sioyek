@@ -1,0 +1,9 @@
+<map id="ToggleDarkModeCommand::perform" name="ToggleDarkModeCommand::perform">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,204,45"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a555176d9db977dce8f4b897265b565ea" title=" " alt="" coords="252,5,401,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,23,238,23,238,28,204,28"/>
+<area shape="rect" id="Node000003" href="$classPdfViewWidget.html#a2a0c8fea074620870bee3c7c2ef2f382" title=" " alt="" coords="449,5,620,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="402,23,436,23,436,28,402,28"/>
+<area shape="rect" id="Node000004" href="$classPdfViewWidget.html#ac28081129de645e777f5536e5afea34d" title=" " alt="" coords="668,5,817,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="620,23,654,23,654,28,620,28"/>
+</map>

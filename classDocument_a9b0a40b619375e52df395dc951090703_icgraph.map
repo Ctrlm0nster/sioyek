@@ -1,0 +1,13 @@
+<map id="Document::update_highlight_type" name="Document::update_highlight_type">
+<area shape="rect" id="Node000001" title=" " alt="" coords="767,74,1009,99"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a59eae9844dfa8f28099890a52153e862" title=" " alt="" coords="505,37,689,77"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="753,76,689,69,690,64,754,70"/>
+<area shape="rect" id="Node000006" href="$classDocument.html#add32657a3d3d3f0571b31ffd76c30a03" title=" " alt="" coords="476,102,719,127"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="754,102,719,106,719,100,753,97"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a50e717278f9543347db6c133dd27b773" title=" " alt="" coords="227,5,428,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="491,47,428,40,428,35,492,42"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#a1faf784d8e55fb199849920f9335899b" title=" " alt="" coords="251,69,403,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="492,72,404,83,403,78,491,67"/>
+<area shape="rect" id="Node000005" href="$classAddHighlightCommand.html#ad255790ceeaed2d2401d5d90185c2875" title=" " alt="" coords="5,69,179,109"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="237,92,179,92,179,87,237,87"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="ClearCurrentDocumentDrawingsCommand::perform" name="ClearCurrentDocumentDrawingsCommand::perform">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,35,237,75"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#ae5c1bdbcb8d4b6064c0fe7c97a1ac946" title=" " alt="" coords="285,35,479,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="238,52,272,52,272,57,238,57"/>
+<area shape="rect" id="Node000003" href="$classDocument.html#a86a164f2d0e6da57c56e8df2d2e875cf" title=" " alt="" coords="527,5,688,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="479,39,513,35,513,40,479,45"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#a333a90667ea058f36537cd87251c283f" title=" " alt="" coords="542,70,673,95"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="479,64,529,70,528,76,479,69"/>
+<area shape="rect" id="Node000005" href="$classDocumentView.html#acfa88cf915c8bae19ac83d1aa9b42dd1" title=" " alt="" coords="736,70,957,95"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="673,80,722,80,722,85,673,85"/>
+</map>

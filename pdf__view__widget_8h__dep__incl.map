@@ -1,0 +1,9 @@
+<map id="pdf_viewer/pdf_view_widget.h" name="pdf_viewer/pdf_view_widget.h">
+<area shape="rect" id="Node000001" title="High&#45;performance document display widget with Vulkan hardware acceleration and lookahead." alt="" coords="214,5,371,45"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html" title=" " alt="" coords="5,101,164,126"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="236,53,113,103,111,98,233,48"/>
+<area shape="rect" id="Node000003" href="$main__widget_8cpp.html" title=" " alt="" coords="188,101,397,126"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="295,59,295,100,290,100,290,59"/>
+<area shape="rect" id="Node000004" href="$pdf__view__widget_8cpp.html" title=" " alt="" coords="422,93,579,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="352,48,456,91,454,96,350,53"/>
+</map>

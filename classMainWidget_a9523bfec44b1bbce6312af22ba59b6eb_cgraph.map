@@ -1,0 +1,51 @@
+<map id="MainWidget::get_text_selection_buttons" name="MainWidget::get_text_selection_buttons">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,482,168,522"/>
+<area shape="rect" id="Node000002" href="$classTouchTextSelectionButtons.html#acdb6fc276609ebdb97bd96c7606da927" title=" " alt="" coords="216,482,420,522"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,499,203,499,203,504,169,504"/>
+<area shape="rect" id="Node000003" href="$classTouchCopyOptions.html#a589e649a3565485a0485a5a5bfbc7eda" title=" " alt="" coords="468,388,688,428"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="374,479,508,431,509,436,375,484"/>
+<area shape="rect" id="Node000005" href="$classTouchCopyOptions.html#a33315df506859f8d698cabedf90e5c05" title=" " alt="" coords="979,17,1207,42"/>
+<area shape="poly" id="edge19_Node000002_Node000005" title=" " alt="" coords="319,481,331,414,356,321,376,269,400,218,430,171,466,128,494,103,525,81,592,47,665,24,739,10,813,4,884,3,1005,13,1005,18,884,9,814,9,740,15,666,29,594,52,528,86,498,107,470,132,434,174,405,221,381,271,361,322,336,416,324,482"/>
+<area shape="rect" id="Node000007" href="$classTouchCopyOptions.html#aef4240d92e143b2a974910de0eb98d28" title=" " alt="" coords="986,123,1199,163"/>
+<area shape="poly" id="edge20_Node000002_Node000007" title=" " alt="" coords="324,481,343,432,374,367,415,295,466,228,530,161,585,114,649,79,735,49,789,35,833,31,877,36,931,49,966,61,1000,77,1056,112,1053,117,997,82,964,66,930,54,876,41,833,36,790,40,737,54,651,84,588,119,533,165,470,231,420,298,379,369,348,434,329,483"/>
+<area shape="rect" id="Node000009" href="$classTouchCopyOptions.html#adc218a800b20676daceb136c45bb0ccc" title=" " alt="" coords="995,212,1190,252"/>
+<area shape="poly" id="edge21_Node000002_Node000009" title=" " alt="" coords="329,480,384,402,423,356,466,313,534,257,590,218,652,189,735,163,789,152,833,149,877,153,931,163,990,181,1043,204,1041,209,989,186,930,168,876,158,833,154,790,157,737,168,654,194,593,223,537,261,470,317,426,359,388,405,334,483"/>
+<area shape="rect" id="Node000011" href="$classTouchCopyOptions.html#a1b7aa6ab41e1f45ed801158f496e33dc" title=" " alt="" coords="989,566,1196,606"/>
+<area shape="poly" id="edge22_Node000002_Node000011" title=" " alt="" coords="362,520,431,551,523,588,628,623,737,648,791,657,833,660,876,658,930,648,976,633,1034,609,1036,614,978,638,931,654,877,663,833,666,790,662,735,654,627,628,521,593,429,556,360,524"/>
+<area shape="rect" id="Node000013" href="$classTouchCopyOptions.html#a2b07093474fa2af6d89e41a4a6454722" title=" " alt="" coords="994,492,1191,532"/>
+<area shape="poly" id="edge23_Node000002_Node000013" title=" " alt="" coords="420,513,526,524,654,534,792,538,930,534,980,528,981,534,931,539,792,544,653,539,525,530,420,518"/>
+<area shape="rect" id="Node000015" href="$classTouchCopyOptions.html#a54b513a4582c85651a11182f9771066e" title=" " alt="" coords="996,316,1189,356"/>
+<area shape="poly" id="edge28_Node000002_Node000015" title=" " alt="" coords="337,479,392,428,428,399,467,374,537,335,595,310,656,293,736,278,790,269,833,267,877,270,931,278,985,291,1035,309,1033,314,984,296,930,283,876,275,833,272,791,275,736,283,658,298,597,315,540,340,469,379,431,404,396,432,341,483"/>
+<area shape="rect" id="Node000017" href="$classTouchCopyOptions.html#afdeecf5abbc88de77e7d903c6a121ef0" title=" " alt="" coords="982,648,1203,688"/>
+<area shape="poly" id="edge29_Node000002_Node000017" title=" " alt="" coords="335,521,357,550,388,585,426,618,469,645,532,668,597,685,665,695,732,701,861,699,972,688,972,693,861,704,732,706,664,701,596,690,530,673,467,649,423,623,384,588,353,553,331,524"/>
+<area shape="rect" id="Node000018" href="$utils_8cpp.html#a7866e4470b122e3752b8ab94e93cbc58" title=" " alt="" coords="508,789,648,814"/>
+<area shape="poly" id="edge17_Node000002_Node000018" title=" " alt="" coords="330,521,349,565,380,624,420,687,470,744,498,765,529,781,526,786,495,769,466,748,416,690,375,627,344,568,325,523"/>
+<area shape="rect" id="Node000019" href="$utils_8cpp.html#aaaa5a52d506c369244fa21a50c9345cb" title=" " alt="" coords="493,862,663,888"/>
+<area shape="poly" id="edge24_Node000002_Node000019" title=" " alt="" coords="326,521,341,579,368,660,387,704,410,747,438,789,470,825,492,842,517,855,515,860,489,847,466,829,434,792,406,750,382,706,363,662,335,581,321,522"/>
+<area shape="rect" id="Node000004" href="$classTouchCopyOptions.html#ac448cb1965b0601b84e07bbb0db58985" title=" " alt="" coords="736,63,931,103"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="587,387,645,287,687,224,734,164,763,135,792,110,796,114,766,139,738,168,691,228,649,290,592,390"/>
+<area shape="rect" id="Node000006" href="$classTouchCopyOptions.html#a18a666ad657fab51b37ca66f3d6d99ee" title=" " alt="" coords="736,178,931,218"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="602,386,796,224,799,229,605,390"/>
+<area shape="rect" id="Node000008" href="$classTouchCopyOptions.html#a10976e61bdbb6d7e3cb32e3fa053990e" title=" " alt="" coords="736,292,931,332"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="625,386,735,342,756,334,758,339,737,347,627,391"/>
+<area shape="rect" id="Node000010" href="$classTouchCopyOptions.html#af0e3cd8a5f32f1384a076ad51bc7b211" title=" " alt="" coords="736,484,931,524"/>
+<area shape="poly" id="edge9_Node000003_Node000010" title=" " alt="" coords="627,426,737,470,758,477,756,482,735,475,625,431"/>
+<area shape="rect" id="Node000012" href="$classTouchCopyOptions.html#a647841542b6efc4853d65a79fac71634" title=" " alt="" coords="736,420,931,460"/>
+<area shape="poly" id="edge11_Node000003_Node000012" title=" " alt="" coords="689,420,722,424,722,429,688,425"/>
+<area shape="rect" id="Node000014" href="$classTouchCopyOptions.html#a909df1257d495d1a4ccc94384cd6e32f" title=" " alt="" coords="736,356,931,396"/>
+<area shape="poly" id="edge13_Node000003_Node000014" title=" " alt="" coords="688,392,722,388,722,393,689,397"/>
+<area shape="rect" id="Node000016" href="$classTouchCopyOptions.html#af26d34c8cb3a31be5c2b3e76d0e03462" title=" " alt="" coords="736,599,931,639"/>
+<area shape="poly" id="edge15_Node000003_Node000016" title=" " alt="" coords="605,427,799,588,796,592,602,431"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="930,60,1016,43,1018,48,932,66"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="928,175,983,163,985,169,929,180"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="899,290,1013,254,1015,259,900,295"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="899,522,1016,559,1014,564,897,527"/>
+<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="907,458,1007,486,1006,491,905,463"/>
+<area shape="poly" id="edge14_Node000014_Node000015" title=" " alt="" coords="931,359,982,351,983,356,931,364"/>
+<area shape="poly" id="edge16_Node000016_Node000017" title=" " alt="" coords="931,635,975,643,974,648,930,640"/>
+<area shape="poly" id="edge18_Node000018_Node000018" title=" " alt="" coords="537,791,528,781,533,771,550,765,578,762,614,766,624,771,628,777,623,780,620,775,612,771,578,768,551,770,536,775,533,780,541,787"/>
+<area shape="poly" id="edge27_Node000019_Node000019" title=" " alt="" coords="537,864,528,854,533,844,550,838,578,836,614,840,624,844,628,850,623,853,620,848,612,845,578,841,551,843,536,848,533,853,541,860"/>
+<area shape="rect" id="Node000020" href="$utils_8cpp.html#a7d9bd9cacd03478c1fcfeae0004f8946" title=" " alt="" coords="777,862,889,888"/>
+<area shape="poly" id="edge25_Node000019_Node000020" title=" " alt="" coords="663,872,763,872,763,878,663,878"/>
+<area shape="poly" id="edge26_Node000020_Node000020" title=" " alt="" coords="792,864,783,854,788,844,805,838,833,836,869,840,879,844,883,850,879,853,876,848,868,845,833,841,806,843,792,848,789,853,796,860"/>
+</map>

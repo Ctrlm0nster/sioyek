@@ -1,0 +1,7 @@
+<map id="MainWidget::zoom_in_overview" name="MainWidget::zoom_in_overview">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,168,45"/>
+<area shape="rect" id="Node000002" href="$classPdfViewWidget.html#aa5ce5ab6082166d064904d1c582df277" title=" " alt="" coords="216,5,381,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,23,202,23,202,28,168,28"/>
+<area shape="rect" id="Node000003" href="$classPdfViewWidget.html#a4abd68fe51c7c9a317e76887515ac41a" title=" " alt="" coords="429,5,595,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="381,23,416,23,416,28,381,28"/>
+</map>

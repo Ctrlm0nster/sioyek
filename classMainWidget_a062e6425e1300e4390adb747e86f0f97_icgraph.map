@@ -1,0 +1,17 @@
+<map id="MainWidget::handle_drawing_ui_visibilty" name="MainWidget::handle_drawing_ui_visibilty">
+<area shape="rect" id="Node000001" title=" " alt="" coords="753,69,912,109"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#ab20d6fece1131b2884964598bd8c845a" title=" " alt="" coords="507,5,705,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="747,68,677,48,678,43,748,63"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a77ed6a142dcbc10ffb5079074f79be5c" title=" " alt="" coords="523,69,689,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="739,92,689,92,689,87,739,87"/>
+<area shape="rect" id="Node000006" href="$classMainWidget.html#ad20feda3ec640584680fe6a8dd4ccf88" title=" " alt="" coords="527,133,685,173"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="748,116,678,136,677,131,747,111"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#a82ed8795ab717767cb18b29008daf773" title=" " alt="" coords="268,69,459,109"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="509,92,459,92,459,87,509,87"/>
+<area shape="rect" id="Node000005" href="$classToggleFreehandDrawingMode.html#aefdc595f79846ef9dd430ee050312747" title=" " alt="" coords="5,69,220,109"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="254,92,220,92,220,87,254,87"/>
+<area shape="rect" id="Node000007" href="$classMainWidget.html#a74896cdc419cf25f28f6b067df6e0728" title=" " alt="" coords="285,133,441,173"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="512,156,441,156,441,151,512,151"/>
+<area shape="rect" id="Node000008" href="$classTogglePenDrawingMode.html#adf1a0e70bc49c24891c15c861e6b8272" title=" " alt="" coords="23,133,202,173"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="271,156,202,156,202,151,271,151"/>
+</map>

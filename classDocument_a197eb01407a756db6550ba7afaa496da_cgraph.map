@@ -1,0 +1,14 @@
+<map id="Document::get_equation_text_at_position" name="Document::get_equation_text_at_position">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,71,188,111"/>
+<area shape="rect" id="Node000002" href="$classDocument.html#ab78a51707f1b5e905e4629dc12701de9" title=" " alt="" coords="236,71,399,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,88,222,88,222,93,189,93"/>
+<area shape="rect" id="Node000003" href="$utils_8cpp.html#a0bd2c0f1a517d9b51492b65acac2771d" title=" " alt="" coords="447,29,600,69"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="398,72,433,65,434,70,400,77"/>
+<area shape="rect" id="Node000005" href="$coordinates_8cpp.html#ab957db4fd94337118bcb0d0928b994c1" title=" " alt="" coords="461,118,585,143"/>
+<area shape="poly" id="edge6_Node000002_Node000005" title=" " alt="" coords="400,104,448,113,447,119,399,109"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="487,30,484,20,490,11,503,5,523,3,546,6,559,13,556,17,545,11,523,8,505,10,494,15,490,21,492,28"/>
+<area shape="rect" id="Node000004" href="$utils_8cpp.html#a2f292e15138a008032e134e60aa10abe" title=" " alt="" coords="648,29,791,69"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="601,47,634,47,634,52,601,52"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="683,30,680,20,686,11,699,5,719,3,742,6,755,13,752,17,741,11,719,8,701,10,690,15,686,21,688,28"/>
+<area shape="poly" id="edge7_Node000005_Node000005" title=" " alt="" coords="491,119,484,110,488,100,501,94,523,91,550,95,561,104,558,108,548,100,523,97,503,99,492,103,490,109,495,116"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="get_new_elements" name="get_new_elements">
+<area shape="rect" id="Node000001" title=" " alt="" coords="753,29,899,55"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="868,20,857,11,826,8,801,10,788,15,785,20,792,27,788,31,780,21,784,11,800,5,826,3,859,7,871,16"/>
+<area shape="rect" id="Node000002" href="$classDatabaseManager.html#ac5ad302d952089915f49dafbf2a8f8ed" title=" " alt="" coords="479,29,705,55"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="739,45,706,45,706,39,739,39"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a885e0314eaa71ed2a39c7eaa951c6357" title=" " alt="" coords="245,29,431,55"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="465,45,431,45,431,39,465,39"/>
+<area shape="rect" id="Node000004" href="$classImportCommand.html#a462efa205ea0e7170265caf23fde6fb3" title=" " alt="" coords="5,29,197,55"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="231,45,198,45,198,39,231,39"/>
+</map>

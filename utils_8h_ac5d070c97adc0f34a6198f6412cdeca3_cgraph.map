@@ -1,0 +1,13 @@
+<map id="hexademical_to_normalized_color" name="hexademical_to_normalized_color">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,59,212,99"/>
+<area shape="poly" id="edge7_Node000001_Node000001" title=" " alt="" coords="65,60,63,50,70,40,85,35,109,33,136,36,150,43,148,48,134,41,109,38,86,40,73,45,68,51,70,58"/>
+<area shape="rect" id="Node000002" href="$utils_8cpp.html#a963bcebfd811f2becd5bb4c4ee19d5a9" title=" " alt="" coords="260,59,423,99"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="212,77,246,77,246,82,212,82"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="308,60,306,50,312,41,323,35,341,33,362,36,373,43,370,47,360,41,341,38,325,40,315,45,312,51,313,58"/>
+<area shape="rect" id="Node000003" href="$utils_8cpp.html#a4c55dfd50b06f1419167e3604e8c9d78" title=" " alt="" coords="479,29,550,55"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="422,59,465,50,466,55,424,64"/>
+<area shape="rect" id="Node000004" href="$utils_8cpp.html#a071b32ba7e3a83ccf667ca9efc3a701d" title=" " alt="" coords="471,103,559,128"/>
+<area shape="poly" id="edge5_Node000002_Node000004" title=" " alt="" coords="424,94,458,101,457,106,422,99"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="486,31,480,21,483,11,495,5,515,3,539,6,549,15,545,19,536,11,515,8,496,10,487,15,485,20,490,28"/>
+<area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="486,104,480,94,483,85,495,78,515,76,539,80,549,88,545,92,536,84,515,81,496,83,487,88,485,94,490,101"/>
+</map>

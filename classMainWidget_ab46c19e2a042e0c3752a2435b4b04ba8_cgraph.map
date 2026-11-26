@@ -1,0 +1,11 @@
+<map id="MainWidget::handle_bookmark_move_finish" name="MainWidget::handle_bookmark_move_finish">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,47,187,87"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a333a90667ea058f36537cd87251c283f" title=" " alt="" coords="277,5,407,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,47,264,31,265,36,187,52"/>
+<area shape="rect" id="Node000004" href="$classDocument.html#a8ae6a2825385324e6068453a4bcf51d2" title=" " alt="" coords="243,55,441,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="187,65,229,65,229,70,187,70"/>
+<area shape="rect" id="Node000005" href="$classDocument.html#a8b7d65edc6ff48c30bdd3ef56a90b264" title=" " alt="" coords="235,105,449,145"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="183,85,243,99,241,104,182,90"/>
+<area shape="rect" id="Node000003" href="$classDocumentView.html#acfa88cf915c8bae19ac83d1aa9b42dd1" title=" " alt="" coords="497,5,719,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="407,15,483,15,483,21,407,21"/>
+</map>

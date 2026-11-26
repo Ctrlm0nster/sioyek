@@ -1,0 +1,20 @@
+<map id="DatabaseManager::open" name="DatabaseManager::open">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,57,187,82"/>
+<area shape="rect" id="Node000002" href="$utils_8cpp.html#ae77ffb9e9981cb2a68ec4d173b383625" title=" " alt="" coords="235,57,337,82"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,67,221,67,221,72,187,72"/>
+<area shape="poly" id="edge11_Node000002_Node000002" title=" " alt="" coords="260,58,254,48,257,39,268,32,286,30,307,33,316,42,313,46,305,38,286,35,270,37,262,42,260,48,264,55"/>
+<area shape="rect" id="Node000003" href="$namespaceutf8.html#a4a1157ef2f85d4bc8366dbbea20dcb48" title=" " alt="" coords="385,57,496,82"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="338,67,371,67,371,72,338,72"/>
+<area shape="poly" id="edge10_Node000003_Node000003" title=" " alt="" coords="415,58,409,48,412,39,423,32,441,30,462,33,471,42,467,46,460,38,441,35,425,37,416,42,414,48,419,55"/>
+<area shape="rect" id="Node000004" href="$namespaceutf8.html#a3827e78596fc38cfdebd721e9c45c901" title="The library API &#45; functions intended to be called by the users." alt="" coords="544,57,648,82"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="496,67,530,67,530,72,496,72"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="570,58,564,48,567,39,578,32,596,30,617,33,626,42,623,46,615,38,596,35,580,37,572,42,570,48,574,55"/>
+<area shape="rect" id="Node000005" href="$classutf8_1_1invalid__code__point.html#a46f27dd1c5b286936ec58baca3ca6220" title=" " alt="" coords="696,5,888,45"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="648,55,689,46,690,51,649,60"/>
+<area shape="rect" id="Node000006" href="$namespaceutf8_1_1internal.html#a97b553137aaeda6e8ca6f8d46f78fd79" title=" " alt="" coords="723,93,861,133"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="649,78,710,92,708,97,648,83"/>
+<area shape="poly" id="edge7_Node000006_Node000006" title=" " alt="" coords="755,94,753,84,759,75,772,69,792,67,815,70,827,77,825,81,813,75,792,72,773,74,762,79,758,85,760,92"/>
+<area shape="rect" id="Node000007" href="$namespaceutf8_1_1internal.html#a31a185a6bc8b9bf454191a8a95a93595" title=" " alt="" coords="936,93,1061,133"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="862,111,922,111,922,116,862,116"/>
+<area shape="poly" id="edge9_Node000007_Node000007" title=" " alt="" coords="960,94,958,84,964,75,978,69,999,67,1023,70,1036,77,1033,82,1021,75,999,72,979,74,967,79,963,85,965,92"/>
+</map>

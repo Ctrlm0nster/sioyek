@@ -1,0 +1,20 @@
+<map id="TouchAudioButtons::TouchAudioButtons" name="TouchAudioButtons::TouchAudioButtons">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,133,160,173"/>
+<area shape="rect" id="Node000002" href="$classTouchAudioButtons.html#a14af34715e3a18af4d34083e682e082b" title=" " alt="" coords="208,5,363,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,131,150,94,207,55,218,49,220,54,209,60,154,98,108,135"/>
+<area shape="rect" id="Node000004" href="$classTouchAudioButtons.html#a91ab9da02928433a06e152dfacf3fc7d" title=" " alt="" coords="208,69,363,109"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="146,131,208,111,209,116,148,136"/>
+<area shape="rect" id="Node000006" href="$classTouchAudioButtons.html#a7e73d1db120f9c9874caa0895b99af6e" title=" " alt="" coords="208,133,363,173"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="160,151,194,151,194,156,160,156"/>
+<area shape="rect" id="Node000007" href="$classTouchAudioButtons.html#a8bc81ff99d8992cbb5e3e827df411fec" title=" " alt="" coords="411,159,565,199"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="150,171,208,183,306,188,397,185,397,190,306,194,208,188,149,176"/>
+<area shape="rect" id="Node000008" href="$classTouchAudioButtons.html#a2355a1e02f704f41a1f195498f073c68" title=" " alt="" coords="208,248,363,288"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="117,171,209,227,232,239,230,244,207,232,114,176"/>
+<area shape="rect" id="Node000003" href="$classTouchAudioButtons.html#ade26d4b043b93667827a2768bf50ef34" title=" " alt="" coords="411,5,565,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="363,23,396,23,396,28,363,28"/>
+<area shape="rect" id="Node000005" href="$classTouchAudioButtons.html#a5bb4b6218e94ce567070969d7761c82b" title=" " alt="" coords="411,69,565,109"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="363,87,396,87,396,92,363,92"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="363,160,397,165,396,170,363,166"/>
+<area shape="rect" id="Node000009" href="$classTouchAudioButtons.html#a79898addff6e6164aa0edec990c66baa" title=" " alt="" coords="411,248,565,288"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="363,265,396,265,396,271,363,271"/>
+</map>

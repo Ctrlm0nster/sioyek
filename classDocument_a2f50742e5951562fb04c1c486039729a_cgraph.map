@@ -1,0 +1,17 @@
+<map id="Document::add_highlight" name="Document::add_highlight">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,108,191,133"/>
+<area shape="rect" id="Node000002" href="$classDocument.html#a6837cedaeb30c03fe3e1cba789c0b8b2" title=" " alt="" coords="239,5,429,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,105,170,73,238,40,259,32,261,37,240,44,173,78,120,110"/>
+<area shape="rect" id="Node000004" href="$utils_8cpp.html#a87bae26e27fe0d55c4456a312bdd374a" title=" " alt="" coords="275,79,393,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="191,107,261,98,262,103,191,112"/>
+<area shape="rect" id="Node000005" href="$structAnnotation.html#a3b6fe498218278779b40d8bcc121d3f6" title=" " alt="" coords="261,129,407,169"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="191,129,247,136,246,141,191,134"/>
+<area shape="rect" id="Node000007" href="$utils_8cpp.html#ae4a600b735b5ca32d9f2aca75bbdeff2" title=" " alt="" coords="283,217,385,243"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="128,131,294,209,292,214,125,136"/>
+<area shape="rect" id="Node000003" href="$classDocument.html#a19c247a93996cb294e872ae8cb80635a" title=" " alt="" coords="477,5,632,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="430,15,464,15,464,21,430,21"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="298,80,291,70,295,60,309,54,334,52,364,56,376,65,373,69,362,61,334,57,311,59,298,64,296,70,302,77"/>
+<area shape="rect" id="Node000006" href="$structAnnotation.html#aa9293d9583039a7ffb79a58b2813edce" title=" " alt="" coords="481,129,628,169"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="408,146,468,146,468,151,408,151"/>
+<area shape="poly" id="edge8_Node000007_Node000007" title=" " alt="" coords="298,219,291,209,295,199,309,193,334,191,364,194,376,203,373,208,362,199,334,196,311,198,298,203,296,208,302,216"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="PdfViewWidget::get_hint_rect_and_texts" name="PdfViewWidget::get_hint_rect_and_texts">
+<area shape="rect" id="Node000001" title=" " alt="" coords="505,23,663,63"/>
+<area shape="rect" id="Node000002" href="$classPdfViewWidget.html#a7b983e7fb3cc4b306be2d531642a6594" title=" " alt="" coords="257,5,455,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="492,36,455,32,456,26,492,30"/>
+<area shape="rect" id="Node000004" href="$classPdfViewWidget.html#a8f99bf492104330993ed3c18b1b62884" title=" " alt="" coords="255,55,457,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="492,56,458,59,457,54,491,50"/>
+<area shape="rect" id="Node000003" href="$classPdfViewWidget.html#ab1b6da7af4f4ecce9c051af6d2d5d8b0" title="Pure virtual hook called to record high&#45;level page and document draw calls." alt="" coords="5,5,207,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="243,21,207,21,207,15,243,15"/>
+</map>

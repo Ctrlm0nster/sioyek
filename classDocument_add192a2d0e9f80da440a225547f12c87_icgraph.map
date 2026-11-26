@@ -1,0 +1,15 @@
+<map id="Document::undo_pending_bookmark" name="Document::undo_pending_bookmark">
+<area shape="rect" id="Node000001" title=" " alt="" coords="571,107,759,147"/>
+<area shape="rect" id="Node000002" href="$classDocument.html#a9f9ca17cb2e823e9b5a654dca19cbd68" title=" " alt="" coords="315,49,495,89"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="560,106,495,92,496,87,561,101"/>
+<area shape="rect" id="Node000003" href="$classAddBookmarkFreetextCommand.html#ac5a6231f4330327b6ea88db44cfa8859" title=" " alt="" coords="5,5,240,45"/>
+<area shape="poly" id="edge6_Node000001_Node000003" title=" " alt="" coords="628,100,580,67,551,51,522,40,451,24,377,15,305,13,240,16,240,10,305,8,377,10,452,18,523,35,554,47,583,62,631,96"/>
+<area shape="rect" id="Node000004" href="$classAddBookmarkMarkedCommand.html#a2a7ed84da1eecdabed6c40e9dc9f8449" title=" " alt="" coords="8,81,237,121"/>
+<area shape="poly" id="edge7_Node000001_Node000004" title=" " alt="" coords="557,124,237,109,238,104,557,119"/>
+<area shape="rect" id="Node000005" href="$classAddBookmarkFreetextCommand.html#ae937ed8828d1eb04fb842e14f69667fd" title=" " alt="" coords="288,164,523,204"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="561,152,497,167,496,161,560,147"/>
+<area shape="rect" id="Node000006" href="$classAddBookmarkMarkedCommand.html#a77b741170079e153f5cd01b2c57e6a8c" title=" " alt="" coords="291,228,520,268"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="627,157,579,189,524,218,492,230,490,225,522,214,576,184,624,153"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="301,56,240,46,241,41,302,51"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="302,84,238,91,237,86,301,78"/>
+</map>

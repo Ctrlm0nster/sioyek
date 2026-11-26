@@ -1,0 +1,35 @@
+<map id="TouchDrawControls::set_scratchpad_mode" name="TouchDrawControls::set_scratchpad_mode">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1239,243,1403,283"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#ac4a8864319ce332e25694baf26b555a3" title=" " alt="" coords="1023,179,1191,219"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1239,241,1173,221,1175,216,1241,236"/>
+<area shape="rect" id="Node000014" href="$classMainWidget.html#a018ec8062fbbd3b0e9ec849183143ffb" title=" " alt="" coords="1032,275,1181,315"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="1225,280,1182,286,1181,281,1225,274"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a062e6425e1300e4390adb747e86f0f97" title=" " alt="" coords="785,73,943,113"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1055,174,974,134,926,116,928,111,976,130,1058,169"/>
+<area shape="rect" id="Node000011" href="$classMainWidget.html#a9848d5bb52e4761124cc6d4ee533ef11" title=" " alt="" coords="772,145,956,170"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="1008,185,939,173,939,167,1009,179"/>
+<area shape="rect" id="Node000012" href="$classMainWidget.html#a15d30cac01383dc116c209a594d3ed6a" title=" " alt="" coords="773,195,955,235"/>
+<area shape="poly" id="edge11_Node000002_Node000012" title=" " alt="" coords="1009,208,955,211,955,206,1009,202"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#ab20d6fece1131b2884964598bd8c845a" title=" " alt="" coords="507,5,705,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="774,72,682,48,683,43,775,67"/>
+<area shape="rect" id="Node000005" href="$classMainWidget.html#a77ed6a142dcbc10ffb5079074f79be5c" title=" " alt="" coords="523,69,689,109"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="771,95,689,93,690,88,771,89"/>
+<area shape="rect" id="Node000008" href="$classMainWidget.html#ad20feda3ec640584680fe6a8dd4ccf88" title=" " alt="" coords="527,133,685,173"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="772,117,686,138,685,132,771,112"/>
+<area shape="rect" id="Node000006" href="$classMainWidget.html#a82ed8795ab717767cb18b29008daf773" title=" " alt="" coords="268,69,459,109"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="509,92,459,92,459,87,509,87"/>
+<area shape="rect" id="Node000007" href="$classToggleFreehandDrawingMode.html#aefdc595f79846ef9dd430ee050312747" title=" " alt="" coords="5,69,220,109"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="254,92,220,92,220,87,254,87"/>
+<area shape="rect" id="Node000009" href="$classMainWidget.html#a74896cdc419cf25f28f6b067df6e0728" title=" " alt="" coords="285,133,441,173"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="512,156,441,156,441,151,512,151"/>
+<area shape="rect" id="Node000010" href="$classTogglePenDrawingMode.html#adf1a0e70bc49c24891c15c861e6b8272" title=" " alt="" coords="23,133,202,173"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="271,156,202,156,202,151,271,151"/>
+<area shape="rect" id="Node000013" href="$classShowTouchDrawingMenu.html#ad089d6ae0c78f377a7d19a8478f2d95b" title=" " alt="" coords="514,197,698,237"/>
+<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="759,218,698,219,698,214,759,213"/>
+<area shape="rect" id="Node000015" href="$classCopyDrawingsFromScratchpadCommand.html#ac004a1efd48b43144f661a328d26ab81" title=" " alt="" coords="753,259,975,299"/>
+<area shape="poly" id="edge14_Node000014_Node000015" title=" " alt="" coords="1017,291,975,289,975,283,1018,286"/>
+<area shape="rect" id="Node000016" href="$classCopyScreenshotToScratchpad.html#ae3d520b9e0b82672f5ea1692601ee887" title=" " alt="" coords="757,323,971,363"/>
+<area shape="poly" id="edge15_Node000014_Node000016" title=" " alt="" coords="1018,315,966,325,965,320,1017,310"/>
+<area shape="rect" id="Node000017" href="$classToggleScratchpadMode.html#a2c7a94bfb239a8b16432e80c0f701733" title=" " alt="" coords="778,387,950,427"/>
+<area shape="poly" id="edge16_Node000014_Node000017" title=" " alt="" coords="1068,325,1024,352,976,377,944,389,942,384,974,372,1022,347,1065,320"/>
+</map>

@@ -1,0 +1,15 @@
+<map id="Document::get_pdf_link_text" name="Document::get_pdf_link_text">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,104,216,129"/>
+<area shape="rect" id="Node000002" href="$classDocument.html#a2b1b1faf345a0ab1f5eb04fcc7f42e59" title=" " alt="" coords="264,63,448,88"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,101,266,88,267,93,187,107"/>
+<area shape="rect" id="Node000005" href="$coordinates_8cpp.html#ae5afbf1b1c4cb17a8d3810e6e0d5bdc5" title=" " alt="" coords="297,140,415,165"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="198,127,284,139,283,145,197,132"/>
+<area shape="rect" id="Node000003" href="$classPageIterator.html#ad107e38f46e1be4eaa3b16804af79b1d" title=" " alt="" coords="496,5,684,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="408,60,524,31,525,37,409,65"/>
+<area shape="rect" id="Node000004" href="$classDocument.html#a68875be3194ab47f70b763345c41098e" title=" " alt="" coords="511,55,669,95"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="448,73,497,73,497,78,448,78"/>
+<area shape="poly" id="edge7_Node000005_Node000005" title=" " alt="" coords="318,142,310,132,314,122,330,116,356,113,389,117,401,127,398,131,387,122,356,119,331,121,318,126,315,131,322,138"/>
+<area shape="rect" id="Node000006" href="$coordinates_8cpp.html#a8173d73dfb83e8ec7a7106fad1760a33" title=" " alt="" coords="525,144,655,169"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="416,151,511,153,511,158,416,156"/>
+<area shape="poly" id="edge6_Node000006_Node000006" title=" " alt="" coords="552,146,544,136,548,126,564,120,590,117,623,121,635,131,632,135,621,126,590,123,565,125,552,130,549,135,556,142"/>
+</map>

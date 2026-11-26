@@ -1,0 +1,11 @@
+<map id="SmartViewCandidate::get_docpos" name="SmartViewCandidate::get_docpos">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,37,164,77"/>
+<area shape="rect" id="Node000002" href="$classDocument.html#aa666969289019e3c56e52d5e8855732d" title=" " alt="" coords="212,5,403,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="164,43,198,38,199,44,165,49"/>
+<area shape="rect" id="Node000004" href="$structSmartViewCandidate.html#af79f2a075dda548b6672ecc439251c14" title=" " alt="" coords="228,69,387,109"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="165,66,215,73,214,79,164,71"/>
+<area shape="rect" id="Node000003" href="$classDocument.html#a96a3741801def570bd1a2d614dde2d5f" title="Transform continuous absolute document coordinates to page&#45;relative coordinates." alt="" coords="485,5,638,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="403,23,471,23,471,28,403,28"/>
+<area shape="rect" id="Node000005" href="$classDocumentView.html#acfa88cf915c8bae19ac83d1aa9b42dd1" title=" " alt="" coords="451,77,672,102"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="387,87,437,87,437,92,387,92"/>
+</map>

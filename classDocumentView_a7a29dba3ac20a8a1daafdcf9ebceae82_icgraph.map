@@ -1,0 +1,7 @@
+<map id="DocumentView::rotate" name="DocumentView::rotate">
+<area shape="rect" id="Node000001" title=" " alt="" coords="303,45,469,70"/>
+<area shape="rect" id="Node000002" href="$classRotateClockwiseCommand.html#a5032c49005d3d9e9d852d1991ea9d2fc" title=" " alt="" coords="31,5,229,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="289,48,229,40,230,35,289,43"/>
+<area shape="rect" id="Node000003" href="$classRotateCounterClockwiseCommand.html#af2af6476dd62bcf0c4371a8e05664801" title=" " alt="" coords="5,69,255,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="289,72,255,76,255,71,289,67"/>
+</map>

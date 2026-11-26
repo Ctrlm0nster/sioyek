@@ -1,0 +1,7 @@
+<map id="PdfRenderer::is_search_busy" name="PdfRenderer::is_search_busy">
+<area shape="rect" id="Node000001" title="Check whether the background search thread is actively executing." alt="" coords="505,13,715,38"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a3d573ee6e5cb5c4de29523d096b114a3" title="Check whether background text search has finished executing." alt="" coords="288,5,457,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="492,28,457,28,457,23,492,23"/>
+<area shape="rect" id="Node000003" href="$classWaitForSearchToFinishCommand.html#abdad79777d57082a0bf7de813430ac49" title=" " alt="" coords="5,5,240,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="274,28,240,28,240,23,274,23"/>
+</map>

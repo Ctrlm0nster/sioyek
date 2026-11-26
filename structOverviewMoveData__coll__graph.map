@@ -1,0 +1,9 @@
+<map id="OverviewMoveData" name="OverviewMoveData">
+<area shape="rect" id="Node000001" title=" " alt="" coords="121,867,263,932"/>
+<area shape="rect" id="Node000002" href="$structVec.html" title=" " alt="" coords="5,436,184,796"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,795,144,841,150,852,145,855,139,844,120,797"/>
+<area shape="rect" id="Node000003" href="$structVec.html" title=" " alt="" coords="5,5,184,365"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="97,379,97,436,92,436,92,379"/>
+<area shape="rect" id="Node000004" href="$structNormalizedWindowPos.html" title=" " alt="" coords="209,553,373,679"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="297,679,296,718,291,760,281,804,264,844,255,856,251,853,259,841,276,802,286,760,291,718,292,679"/>
+</map>

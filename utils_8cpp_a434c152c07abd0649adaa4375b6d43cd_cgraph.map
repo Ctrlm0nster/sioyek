@@ -1,0 +1,13 @@
+<map id="find_best_vertical_line_location" name="find_best_vertical_line_location">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,71,143,111"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="36,71,34,61,40,52,53,46,74,44,98,47,111,54,108,59,96,52,74,49,55,51,43,56,39,62,41,70"/>
+<area shape="rect" id="Node000002" href="$utils_8cpp.html#a80c001bfbed764698760fe42f70b7de7" title=" " alt="" coords="201,29,355,69"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="142,74,187,65,188,70,143,79"/>
+<area shape="rect" id="Node000004" href="$utils_8cpp.html#af627de8a1411281f0cd2c230ef0c5db7" title=" " alt="" coords="191,118,365,143"/>
+<area shape="poly" id="edge6_Node000001_Node000004" title=" " alt="" coords="143,101,200,113,199,118,142,107"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="240,30,238,20,244,11,257,5,278,3,302,6,315,13,312,18,300,11,278,8,259,10,247,15,243,21,245,28"/>
+<area shape="rect" id="Node000003" href="$utils_8cpp.html#af9dfa6a2d6205b4c2e95e186903845c9" title=" " alt="" coords="413,37,551,62"/>
+<area shape="poly" id="edge4_Node000002_Node000003" title=" " alt="" coords="355,47,399,47,399,52,355,52"/>
+<area shape="poly" id="edge5_Node000003_Node000003" title=" " alt="" coords="449,38,442,28,445,18,459,12,482,10,510,14,522,23,518,27,508,19,482,15,460,17,449,22,447,28,453,35"/>
+<area shape="poly" id="edge7_Node000004_Node000004" title=" " alt="" coords="245,120,238,110,241,100,255,94,278,91,306,95,318,104,314,108,304,100,278,97,256,99,245,103,243,109,249,116"/>
+</map>

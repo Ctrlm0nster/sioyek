@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['zoom_5finc_5ffactor_0',['ZOOM_INC_FACTOR',['../config_8cpp.html#a803d1067855aca20193dd96b5bd5afeb',1,'ZOOM_INC_FACTOR:&#160;config.cpp'],['../document__view_8h.html#a803d1067855aca20193dd96b5bd5afeb',1,'ZOOM_INC_FACTOR:&#160;config.cpp'],['../pdf__view__widget_8cpp.html#a803d1067855aca20193dd96b5bd5afeb',1,'ZOOM_INC_FACTOR:&#160;config.cpp']]],
+  ['zoom_5flevel_1',['zoom_level',['../structOverviewState.html#a30668166f17081cd54ce75700b70dc9a',1,'OverviewState::zoom_level'],['../structOpenedBookState.html#a1baef08b08653d94b43c6047d6ed6250',1,'OpenedBookState::zoom_level'],['../structMark.html#a0a636537f57a606f0794f4e8283ad7a9',1,'Mark::zoom_level'],['../structMarkInDatabase.html#a404d0a95a226b2c0d0f61002ff2d10a6',1,'MarkInDatabase::zoom_level'],['../classDocumentView.html#a2460fade01ba0c8cf1e0f0621e381f47',1,'DocumentView::zoom_level'],['../structRenderRequest.html#a19aa9ae42488a4dc1136b24e05e53054',1,'RenderRequest::zoom_level'],['../structPageRenderParams.html#a7c74158683ce02e1666c8c0d3ec63d31',1,'PageRenderParams::zoom_level']]]
+];

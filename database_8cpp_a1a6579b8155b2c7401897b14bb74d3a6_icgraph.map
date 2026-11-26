@@ -1,0 +1,10 @@
+<map id="global_highlight_select_callback" name="global_highlight_select_callback">
+<area shape="rect" id="Node000001" title=" " alt="" coords="729,29,901,69"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="854,18,840,11,815,8,794,10,780,15,776,21,778,28,773,30,770,20,777,10,792,5,815,3,842,6,856,13"/>
+<area shape="rect" id="Node000002" href="$classDatabaseManager.html#acbec4f4bea1631a45bffc5c00dfa8b39" title=" " alt="" coords="492,29,681,69"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="716,52,682,52,682,47,716,47"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a9c4f1ded085a66aa1939347fc6dee3e6" title=" " alt="" coords="275,29,444,69"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="478,52,444,52,444,47,478,47"/>
+<area shape="rect" id="Node000004" href="$classGotoHighlightGlobalCommand.html#a0f0ea7f881a2fc031d92600af931a404" title=" " alt="" coords="5,29,227,69"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="261,52,227,52,227,47,261,47"/>
+</map>

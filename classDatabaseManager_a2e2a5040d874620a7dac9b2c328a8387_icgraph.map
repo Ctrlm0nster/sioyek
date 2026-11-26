@@ -1,0 +1,7 @@
+<map id="DatabaseManager::global_select_bookmark" name="DatabaseManager::global_select_bookmark">
+<area shape="rect" id="Node000001" title=" " alt="" coords="509,5,699,45"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a405bd1920a428374eee2d8933b14bbe8" title=" " alt="" coords="283,5,461,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="495,28,462,28,462,23,495,23"/>
+<area shape="rect" id="Node000003" href="$classGotoBookmarkGlobalCommand.html#a7db5eebab2ebe06333bab36197db3669" title=" " alt="" coords="5,5,235,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="269,28,235,28,235,23,269,23"/>
+</map>

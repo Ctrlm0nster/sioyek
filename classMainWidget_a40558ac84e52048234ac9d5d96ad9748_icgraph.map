@@ -1,0 +1,5 @@
+<map id="MainWidget::handle_portal_to_overview" name="MainWidget::handle_portal_to_overview">
+<area shape="rect" id="Node000001" title=" " alt="" coords="256,5,411,45"/>
+<area shape="rect" id="Node000002" href="$classPortalToOverviewCommand.html#a0cfbaf556d3c0b9128d4549d8ff876ac" title=" " alt="" coords="5,5,208,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="242,28,208,28,208,23,242,23"/>
+</map>

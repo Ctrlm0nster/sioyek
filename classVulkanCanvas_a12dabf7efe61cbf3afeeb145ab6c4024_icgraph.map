@@ -1,0 +1,36 @@
+<map id="VulkanCanvas::uniform3fv" name="VulkanCanvas::uniform3fv">
+<area shape="rect" id="Node000001" title="Set a 3D float vector uniform." alt="" coords="979,230,1172,256"/>
+<area shape="rect" id="Node000002" href="$classPdfViewWidget.html#a235cc2c91a7b709abb10d73464b96dbb" title=" " alt="" coords="739,142,911,182"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1023,228,930,197,889,184,891,179,931,192,1024,223"/>
+<area shape="rect" id="Node000003" href="$classPdfViewWidget.html#aaa2636bdec379330ae204553fdc4949b" title="Render the floating overview portal window." alt="" coords="501,142,672,182"/>
+<area shape="poly" id="edge13_Node000001_Node000003" title=" " alt="" coords="1060,219,1041,182,1012,140,975,99,953,82,930,68,874,47,827,42,779,50,721,68,688,83,657,102,609,143,605,139,654,98,685,78,719,63,778,45,827,37,875,42,932,63,956,77,978,95,1016,136,1045,180,1065,216"/>
+<area shape="rect" id="Node000004" href="$classPdfViewWidget.html#a7b983e7fb3cc4b306be2d531642a6594" title=" " alt="" coords="255,281,453,306"/>
+<area shape="poly" id="edge7_Node000001_Node000004" title=" " alt="" coords="1000,261,931,271,802,282,673,290,453,296,453,290,672,284,802,277,930,266,999,255"/>
+<area shape="rect" id="Node000006" href="$classPdfViewWidget.html#a5ad047b6c332a0a81bd95625d2d93625" title=" " alt="" coords="745,78,906,118"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="1050,223,997,177,964,153,929,132,902,120,905,115,932,127,967,148,1000,173,1053,219"/>
+<area shape="rect" id="Node000007" href="$classPdfViewWidget.html#a61396366219f72441eb29bde5ffc021d" title=" " alt="" coords="740,446,911,486"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="1064,269,1044,306,1014,351,977,397,932,436,911,448,908,443,929,431,973,393,1010,348,1039,303,1060,267"/>
+<area shape="rect" id="Node000009" href="$classPdfViewWidget.html#a5a3d927baae1ac132f45dbd3e9ab23a6" title=" " alt="" coords="501,331,672,371"/>
+<area shape="poly" id="edge11_Node000001_Node000009" title=" " alt="" coords="1043,265,992,291,931,315,864,331,796,342,673,352,672,347,795,336,863,325,930,310,990,287,1041,260"/>
+<area shape="rect" id="Node000010" href="$classPdfViewWidget.html#a72f543e8dec4338681f70a9260ab17ec" title="Draw a specific document page onto the Vulkan swapchain." alt="" coords="720,230,931,256"/>
+<area shape="poly" id="edge14_Node000001_Node000010" title=" " alt="" coords="965,246,931,246,931,240,965,240"/>
+<area shape="rect" id="Node000011" href="$classPdfViewWidget.html#afdf980925e0c7d4bb76c2b51f59e62a6" title=" " alt="" coords="740,382,911,422"/>
+<area shape="poly" id="edge18_Node000001_Node000011" title=" " alt="" coords="1054,267,1001,316,932,365,893,384,890,379,929,361,998,312,1050,263"/>
+<area shape="rect" id="Node000012" href="$classPdfViewWidget.html#a6a3dbd8942926b32acb02811350fa622" title=" " alt="" coords="501,24,672,64"/>
+<area shape="poly" id="edge21_Node000001_Node000012" title=" " alt="" coords="1063,218,1045,176,1017,125,979,75,955,54,929,37,896,23,861,14,787,8,716,15,655,27,654,22,715,9,787,3,861,9,898,18,932,33,959,50,983,71,1022,122,1050,173,1068,216"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="725,164,672,164,672,159,725,159"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="540,191,379,283,377,278,537,186"/>
+<area shape="rect" id="Node000005" href="$classPdfViewWidget.html#ab1b6da7af4f4ecce9c051af6d2d5d8b0" title="Pure virtual hook called to record high&#45;level page and document draw calls." alt="" coords="5,366,207,392"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="304,313,145,369,143,364,302,308"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="738,124,662,144,661,139,736,119"/>
+<area shape="rect" id="Node000008" href="$classPdfViewWidget.html#adbe2d74c76fd707e9f69fa87b4daa3aa" title=" " alt="" coords="501,446,672,486"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="726,468,672,468,672,463,726,463"/>
+<area shape="poly" id="edge10_Node000008_Node000005" title=" " alt="" coords="487,451,177,394,178,389,488,445"/>
+<area shape="poly" id="edge12_Node000009_Node000004" title=" " alt="" coords="491,330,406,309,407,304,492,325"/>
+<area shape="poly" id="edge16_Node000010_Node000003" title=" " alt="" coords="774,228,645,184,647,179,775,223"/>
+<area shape="poly" id="edge15_Node000010_Node000004" title=" " alt="" coords="706,256,502,278,452,284,451,278,501,272,706,251"/>
+<area shape="poly" id="edge17_Node000010_Node000010" title=" " alt="" coords="868,221,857,212,825,209,800,211,786,216,784,221,791,228,787,232,778,222,783,212,799,206,825,204,859,207,871,217"/>
+<area shape="poly" id="edge19_Node000011_Node000004" title=" " alt="" coords="726,411,616,407,558,399,501,385,461,369,424,348,369,308,372,304,427,344,463,364,502,380,559,394,617,402,726,405"/>
+<area shape="poly" id="edge20_Node000011_Node000008" title=" " alt="" coords="738,428,662,448,661,443,736,423"/>
+<area shape="poly" id="edge22_Node000012_Node000004" title=" " alt="" coords="557,76,503,131,368,282,364,279,499,128,554,72"/>
+</map>

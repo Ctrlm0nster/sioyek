@@ -1,0 +1,13 @@
+<map id="Document::convert_toc_tree" name="Document::convert_toc_tree">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,54,212,79"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="69,56,60,46,65,36,81,30,109,27,143,31,153,36,157,42,152,45,150,40,142,36,109,33,82,35,68,40,66,45,73,52"/>
+<area shape="rect" id="Node000002" href="$classDocument.html#a6da26d472f5495a23eb788c45c4d97b8" title=" " alt="" coords="260,5,449,45"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="185,51,246,41,247,46,185,57"/>
+<area shape="rect" id="Node000005" href="$utils_8cpp.html#ae4a600b735b5ca32d9f2aca75bbdeff2" title=" " alt="" coords="303,94,406,119"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="188,77,290,94,289,99,187,82"/>
+<area shape="rect" id="Node000003" href="$classDocument.html#a80aaedb1e9b297f284d1ee4f7d60d25f" title=" " alt="" coords="497,5,687,45"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="449,23,484,23,484,28,449,28"/>
+<area shape="rect" id="Node000004" href="$classDocument.html#a2f79df9ddd1b39e93b5dfb1dbef13ec3" title="Get total number of pages in the document." alt="" coords="735,13,907,38"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="687,23,721,23,721,28,687,28"/>
+<area shape="poly" id="edge6_Node000005_Node000005" title=" " alt="" coords="316,96,308,86,312,76,328,70,355,67,388,71,401,81,397,85,386,76,355,73,329,75,316,80,313,85,320,92"/>
+</map>

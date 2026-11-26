@@ -1,0 +1,7 @@
+<map id="VulkanCanvas" name="VulkanCanvas">
+<area shape="rect" id="Node000001" title="Abstract Qt 6 QRhiWidget providing a hardware&#45;accelerated Vulkan presentation canvas." alt="" coords="37,119,191,424"/>
+<area shape="rect" id="Node000003" href="$classPdfViewWidget.html" title="Main document visualization surface rendering PDF geometry via Vulkan QRhi." alt="" coords="5,472,223,1216"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="117,438,117,472,111,472,111,438"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="69,5,159,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,84,117,119,111,119,111,84"/>
+</map>

@@ -1,0 +1,21 @@
+<map id="Document::get_highlights_of_type" name="Document::get_highlights_of_type">
+<area shape="rect" id="Node000001" title=" " alt="" coords="748,149,937,189"/>
+<area shape="rect" id="Node000002" href="$classDocument.html#abd72acb1677376b48d4180471df054ed" title=" " alt="" coords="511,149,700,189"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="735,172,700,172,700,167,735,167"/>
+<area shape="rect" id="Node000003" href="$classDocument.html#ad2ea616e2ebac1e9ecd198f5d2e99161" title=" " alt="" coords="308,69,463,109"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="535,147,440,112,442,107,537,142"/>
+<area shape="rect" id="Node000006" href="$classDocument.html#a7436a615425bf0bef7b5fdea09ed819d" title=" " alt="" coords="308,149,463,189"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="497,172,463,172,463,167,497,167"/>
+<area shape="rect" id="Node000009" href="$classMainWidget.html#a08097ca73488b2f9d7c891996a17696f" title=" " alt="" coords="309,245,461,285"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="547,197,433,248,431,243,545,192"/>
+<area shape="rect" id="Node000004" href="$classGotoNextHighlightCommand.html#a3b440b86aa986a7831212a88ce57b737" title=" " alt="" coords="27,5,238,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="294,69,259,60,212,48,214,43,261,55,295,64"/>
+<area shape="rect" id="Node000005" href="$classGotoNextHighlightOfTypeCommand.html#ae54d803e77864431e09e3a61e76d0cee" title=" " alt="" coords="5,69,260,109"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="295,92,260,92,260,87,295,87"/>
+<area shape="rect" id="Node000007" href="$classGotoPrevHighlightCommand.html#a78ef16bed428ddb80175125aa1d9ba27" title=" " alt="" coords="29,133,237,173"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="294,166,237,163,237,157,295,161"/>
+<area shape="rect" id="Node000008" href="$classGotoPrevHighlightOfTypeCommand.html#ab867dc2e79d19249f3a0939107bbf1b7" title=" " alt="" coords="6,197,259,237"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="295,189,239,200,238,195,294,184"/>
+<area shape="rect" id="Node000010" href="$classGotoHighlightCommand.html#ab4c6e882131ca490d5afd91be80146d1" title=" " alt="" coords="25,261,241,301"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="296,274,241,277,241,272,296,268"/>
+</map>

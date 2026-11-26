@@ -1,0 +1,10 @@
+<map id="prune_freehand_drawing_points" name="prune_freehand_drawing_points">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,59,188,99"/>
+<area shape="poly" id="edge5_Node000001_Node000001" title=" " alt="" coords="53,60,51,50,58,40,73,35,97,33,124,36,138,43,136,48,122,41,97,38,74,40,61,45,56,51,58,58"/>
+<area shape="rect" id="Node000002" href="$utils_8cpp.html#af16c5afed543c256d4b72bc1ebefe5da" title=" " alt="" coords="264,29,395,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="188,62,250,52,251,57,189,67"/>
+<area shape="rect" id="Node000003" href="$utils_8cpp.html#a273d9923a9a3cfbf7e35d636d4548a03" title=" " alt="" coords="236,103,423,128"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="189,91,234,98,233,103,188,96"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="292,31,283,21,288,11,303,5,329,3,362,7,374,16,371,20,360,11,329,8,304,10,291,15,289,20,296,27"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="292,104,283,94,288,84,303,78,329,76,362,80,374,89,371,94,360,85,329,81,304,83,291,88,289,94,296,101"/>
+</map>

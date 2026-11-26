@@ -1,0 +1,20 @@
+<map id="BaseSelectorWidget::simulate_select" name="BaseSelectorWidget::simulate_select">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,69,159,109"/>
+<area shape="rect" id="Node000002" href="$classBaseSelectorWidget.html#afa5147eea5c5e785d1bae36ac7dab16d" title=" " alt="" coords="209,5,365,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,67,209,47,210,52,148,72"/>
+<area shape="rect" id="Node000004" href="$classBaseSelectorWidget.html#a612885a6d575ca7d9a82be1b907658f6" title=" " alt="" coords="207,69,368,109"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="159,87,193,87,193,92,159,92"/>
+<area shape="rect" id="Node000005" href="$classBaseSelectorWidget.html#a4a4da68b0e146922775e2ea2f8f348fd" title=" " alt="" coords="416,69,569,109"/>
+<area shape="poly" id="edge10_Node000001_Node000005" title=" " alt="" coords="149,107,207,119,287,125,368,119,413,110,414,115,368,124,287,131,206,124,147,112"/>
+<area shape="rect" id="Node000003" href="$classBaseSelectorWidget.html#ac57eaf267e653f8765bde75f1c948722" title=" " alt="" coords="416,5,569,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="366,23,402,23,402,28,366,28"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="351,67,414,47,416,52,353,72"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="368,95,402,96,402,101,368,101"/>
+<area shape="poly" id="edge8_Node000005_Node000004" title=" " alt="" coords="415,83,382,83,382,78,415,78"/>
+<area shape="rect" id="Node000006" href="$classBaseSelectorWidget.html#a1b77fff54f6f8f6d0767af0255b78d66" title=" " alt="" coords="617,5,771,45"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="555,67,617,47,618,52,557,72"/>
+<area shape="rect" id="Node000007" href="$classBaseSelectorWidget.html#a25a9466a0a1ed9e67d728392dc27d952" title=" " alt="" coords="617,69,771,109"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="570,87,604,87,604,92,570,92"/>
+<area shape="rect" id="Node000008" href="$classBaseSelectorWidget.html#a2be51ff561fc0adb895e369f679c8203" title=" " alt="" coords="617,133,771,173"/>
+<area shape="poly" id="edge9_Node000005_Node000008" title=" " alt="" coords="557,107,618,127,617,132,555,112"/>
+</map>

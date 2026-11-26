@@ -1,0 +1,13 @@
+<map id="GenericPathCommand" name="GenericPathCommand">
+<area shape="rect" id="Node000001" title=" " alt="" coords="443,459,645,564"/>
+<area shape="rect" id="Node000003" href="$classGotoLoadedDocumentCommand.html" title=" " alt="" coords="5,632,256,797"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="431,548,350,577,269,614,236,634,233,630,267,610,348,572,430,543"/>
+<area shape="rect" id="Node000004" href="$classGotoTableOfContentsCommand.html" title=" " alt="" coords="281,612,525,817"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="502,577,476,613,472,610,498,574"/>
+<area shape="rect" id="Node000005" href="$classOpenDocumentEmbeddedCommand.html" title=" " alt="" coords="549,632,825,797"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="591,574,631,630,627,633,586,577"/>
+<area shape="rect" id="Node000006" href="$classOpenDocumentEmbeddedFromCurrentPathCommand.html" title=" " alt="" coords="849,617,1081,812"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="659,539,748,569,839,610,851,617,848,621,836,614,747,574,657,544"/>
+<area shape="rect" id="Node000002" href="$classCommand.html" title=" " alt="" coords="431,5,657,411"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="547,424,547,459,541,459,541,424"/>
+</map>

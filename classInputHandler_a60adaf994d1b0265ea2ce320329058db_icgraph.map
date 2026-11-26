@@ -1,0 +1,8 @@
+<map id="InputHandler::reload_config_files" name="InputHandler::reload_config_files">
+<area shape="rect" id="Node000001" title=" " alt="" coords="252,35,407,75"/>
+<area shape="rect" id="Node000002" href="$classInputHandler.html#a2cad4d117f60559d3bf289471a2d2a4d" title=" " alt="" coords="5,5,204,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="238,43,181,33,182,28,239,38"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#a700a0caa5b70a06d1064e576f9f3cf65" title=" " alt="" coords="77,79,132,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="239,73,133,90,132,84,238,67"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="141,74,144,68,140,63,127,59,105,57,79,60,67,65,67,72,79,80,75,85,62,74,62,62,77,55,105,52,128,54,142,59,149,67,146,76"/>
+</map>

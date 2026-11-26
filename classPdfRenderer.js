@@ -1,0 +1,27 @@
+var classPdfRenderer =
+[
+    [ "PdfRenderer", "classPdfRenderer.html#a026c6832b0224221967da802e5a513d5", null ],
+    [ "~PdfRenderer", "classPdfRenderer.html#a28bf6ffc538f64d0123effb7e599f316", null ],
+    [ "add_password", "classPdfRenderer.html#ae5ca23d547a381427078e84cdef4e371", null ],
+    [ "add_request", "classPdfRenderer.html#a3ded798885c44631b3914f7ce06f5c91", null ],
+    [ "add_request", "classPdfRenderer.html#a633a726c55aebb068794658dcebd2fa7", null ],
+    [ "add_speculative_request", "classPdfRenderer.html#ac3547e459871323c5fe45ff20ad7dcec", null ],
+    [ "cancel_search", "classPdfRenderer.html#a4f9b87efb727fb2106f8b3f24706c6cf", null ],
+    [ "cancel_speculative_requests", "classPdfRenderer.html#a32b6e7465ea1f732bed0059c74b26778", null ],
+    [ "clear_cache", "classPdfRenderer.html#a263fef9a892d21b4b61a811013e9254e", null ],
+    [ "debug", "classPdfRenderer.html#ae3a36b1aefc7a3d47554a5bfa6c2b56d", null ],
+    [ "delete_old_pages", "classPdfRenderer.html#a6b5833abd80bb22311426c76c450010a", null ],
+    [ "find_rendered_page", "classPdfRenderer.html#a1f03b3b9cc836b8fba5e99e15eb61fd5", null ],
+    [ "free_all_resources_for_document", "classPdfRenderer.html#ae032c6d03b3dda0093a83e0698fe2af8", null ],
+    [ "has_idle_worker", "classPdfRenderer.html#a85229d4783561ddc4e919326f64cac12", null ],
+    [ "has_pending_normal_requests", "classPdfRenderer.html#a52043ef879ef193521b2dfc0f3877770", null ],
+    [ "is_busy", "classPdfRenderer.html#a8fb057a6a9dbde422062bdf71d15334f", null ],
+    [ "is_page_rendered", "classPdfRenderer.html#abb28ccc018c73cd73e2375e9b39367c2", null ],
+    [ "is_search_busy", "classPdfRenderer.html#ac6e4cb57341fe4a42bc86b1fc7e5d71b", null ],
+    [ "join_threads", "classPdfRenderer.html#a73e7021b5ef9951580782f3d774361e3", null ],
+    [ "render_advance", "classPdfRenderer.html#af3f759bf8a43fc4f150d9ea0a78566a0", null ],
+    [ "search_advance", "classPdfRenderer.html#a6132f7e2a458cd8dbc35e7be1876f866", null ],
+    [ "set_num_cached_pages", "classPdfRenderer.html#a0a0d99648f5a96a9019e170d8df89b77", null ],
+    [ "start_threads", "classPdfRenderer.html#a96ce6d56b4bb56467d65919ff7556a9d", null ],
+    [ "no_rerender", "classPdfRenderer.html#a596b6f08f52528d37280430c2dd50a10", null ]
+];

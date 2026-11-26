@@ -1,0 +1,11 @@
+<map id="MainWidget::run_javascript_command" name="MainWidget::run_javascript_command">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,37,205,77"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a9cbe04004a844a4619808fd73a6a2758" title=" " alt="" coords="253,5,409,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="206,40,239,36,240,41,206,46"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a04666bf128b020bcb7d511119eb2f89e" title=" " alt="" coords="254,69,409,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="206,69,241,74,240,79,206,74"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#aaf84e7297416ad6060a17782b3881d20" title=" " alt="" coords="457,69,608,109"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="409,87,444,87,444,92,409,92"/>
+<area shape="rect" id="Node000005" href="$classCommandManager.html#a0bcbe48d83f74baca7cd8f3e41c0ec42" title=" " alt="" coords="656,69,831,109"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="609,87,643,87,643,92,609,92"/>
+</map>

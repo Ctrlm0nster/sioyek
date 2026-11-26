@@ -1,0 +1,7 @@
+<map id="MainWidget::toggle_presentation_mode" name="MainWidget::toggle_presentation_mode">
+<area shape="rect" id="Node000001" title=" " alt="" coords="303,37,457,77"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a50e717278f9543347db6c133dd27b773" title=" " alt="" coords="29,5,231,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="289,48,231,41,231,36,289,43"/>
+<area shape="rect" id="Node000003" href="$classTogglePresentationModeCommand.html#a012955fb1afc6b902c9fc192a1e6ad43" title=" " alt="" coords="5,69,255,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="289,72,255,76,255,71,289,66"/>
+</map>

@@ -1,0 +1,19 @@
+<map id="MainWidget::handle_delete_selected_annotation" name="MainWidget::handle_delete_selected_annotation">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,127,215,167"/>
+<area shape="rect" id="Node000002" href="$classDocument.html#ad2bfb297bc9e2c1f19fb32263c1257e7" title=" " alt="" coords="263,5,473,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="140,124,195,89,262,55,280,47,282,52,264,60,198,94,142,129"/>
+<area shape="rect" id="Node000003" href="$classDocument.html#ae267514168a1e57a77a5cc55849b71f6" title=" " alt="" coords="267,69,469,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="200,124,263,110,264,115,201,129"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#a333a90667ea058f36537cd87251c283f" title=" " alt="" coords="303,134,433,159"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="215,144,289,144,289,149,215,149"/>
+<area shape="rect" id="Node000006" href="$classMainWidget.html#a299dcabc8cd3f485362926dc69f70d69" title=" " alt="" coords="273,184,463,224"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="201,164,264,178,263,184,200,169"/>
+<area shape="rect" id="Node000008" href="$classMainWidget.html#a14ea1c520636c0461655e315ecad8a08" title=" " alt="" coords="273,248,463,288"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="142,165,198,199,264,234,282,241,280,246,262,238,195,204,140,169"/>
+<area shape="rect" id="Node000005" href="$classDocumentView.html#acfa88cf915c8bae19ac83d1aa9b42dd1" title=" " alt="" coords="521,134,743,159"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="434,144,508,144,508,149,434,149"/>
+<area shape="rect" id="Node000007" href="$classPdfViewWidget.html#a38206a82dd5b064ae54845a4b046e627" title=" " alt="" coords="532,184,732,224"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="464,201,518,201,518,207,464,207"/>
+<area shape="rect" id="Node000009" href="$classPdfViewWidget.html#a858d414421d2a85215be572b205fdcfd" title=" " alt="" coords="537,248,727,288"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="464,265,523,265,523,271,464,271"/>
+</map>

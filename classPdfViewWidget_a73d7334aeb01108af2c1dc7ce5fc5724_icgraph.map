@@ -1,0 +1,7 @@
+<map id="PdfViewWidget::rotate_counterclockwise" name="PdfViewWidget::rotate_counterclockwise">
+<area shape="rect" id="Node000001" title=" " alt="" coords="497,5,665,45"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a1bf00abaa9a41d241160bd8ad2521445" title=" " alt="" coords="303,5,449,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="484,28,450,28,450,23,484,23"/>
+<area shape="rect" id="Node000003" href="$classRotateCounterClockwiseCommand.html#af2af6476dd62bcf0c4371a8e05664801" title=" " alt="" coords="5,5,255,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="289,28,255,28,255,23,289,23"/>
+</map>

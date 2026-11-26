@@ -1,0 +1,15 @@
+<map id="CharacterAddress::next_page" name="CharacterAddress::next_page">
+<area shape="rect" id="Node000001" title=" " alt="" coords="991,45,1204,70"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#ab12d4944f4028ce6dca8963d298d21cb" title=" " alt="" coords="774,5,937,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="987,45,936,39,937,33,988,40"/>
+<area shape="rect" id="Node000004" href="$structCharacterAddress.html#abad2587f0d4c0d293cafbf5f2f53b69e" title=" " alt="" coords="768,69,943,109"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="988,74,943,80,943,75,987,69"/>
+<area shape="rect" id="Node000003" href="$classToggleTypingModeCommand.html#a2fdc85ffcffb0835e7cab924d5a84e7f" title=" " alt="" coords="511,5,720,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="760,28,720,28,720,23,760,23"/>
+<area shape="rect" id="Node000005" href="$structCharacterAddress.html#a197a2b47a3205e9e206acc8e33c60b27" title=" " alt="" coords="513,77,718,102"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="755,92,718,92,718,87,755,87"/>
+<area shape="rect" id="Node000006" href="$structCharacterAddress.html#a15af358cae2d63a86de2d0738312bbe6" title=" " alt="" coords="253,77,463,102"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="499,92,463,92,463,87,499,87"/>
+<area shape="rect" id="Node000007" href="$structCharacterAddress.html#ace15e3cf0f25159cee2cd8df8943160f" title=" " alt="" coords="5,77,205,102"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="240,92,206,92,206,87,240,87"/>
+</map>

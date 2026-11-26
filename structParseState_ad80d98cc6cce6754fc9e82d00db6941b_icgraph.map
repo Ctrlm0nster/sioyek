@@ -1,0 +1,24 @@
+<map id="ParseState::next_command" name="ParseState::next_command">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1564,43,1764,68"/>
+<area shape="rect" id="Node000002" href="$structParseState.html#ad748341bb46ebcb905f41422eb46bfd2" title=" " alt="" coords="1345,35,1516,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1550,58,1516,58,1516,53,1550,53"/>
+<area shape="rect" id="Node000003" href="$classMacroCommand.html#a03cdacd564888fa187864eacceff05fb" title=" " alt="" coords="1053,5,1297,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1332,44,1262,33,1263,28,1332,38"/>
+<area shape="rect" id="Node000004" href="$input_8cpp.html#aea5adb06bf2e590293570328147ebd0d" title=" " alt="" coords="1102,79,1249,104"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="1332,72,1249,84,1249,78,1331,67"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="1221,69,1218,65,1210,61,1175,57,1148,59,1134,64,1131,70,1138,77,1134,80,1125,70,1130,60,1147,54,1175,52,1211,56,1221,61,1225,66"/>
+<area shape="rect" id="Node000005" href="$classShowCustomContextMenuCommand.html#af7bd1ab51cb7b182dfea4d4e98c0b122" title=" " alt="" coords="744,42,1005,82"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="1088,86,1005,77,1006,72,1089,80"/>
+<area shape="rect" id="Node000006" href="$classMainWidget.html#a2c8ecc47af0b92381a14ce4c09650dea" title=" " alt="" coords="753,107,996,132"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="1089,102,997,111,996,105,1088,97"/>
+<area shape="rect" id="Node000007" href="$classShowContextMenuCommand.html#afca720010e70be08d6ad997679d24f62" title=" " alt="" coords="481,67,692,107"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="746,108,692,102,693,96,747,102"/>
+<area shape="rect" id="Node000008" href="$classMainWidget.html#aae809bd59d76c29c5b67e5350469aa41" title=" " alt="" coords="477,131,696,171"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="747,136,697,142,696,137,746,131"/>
+<area shape="rect" id="Node000009" href="$classMainWidget.html#a49169009ea3b7e62cb793399cccc462a" title=" " alt="" coords="277,131,429,171"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="463,154,429,154,429,149,463,149"/>
+<area shape="rect" id="Node000010" href="$classMainWidget.html#a48ae6c49931be9590a2edda847dadad3" title=" " alt="" coords="5,109,229,135"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="263,143,219,137,220,132,264,138"/>
+<area shape="rect" id="Node000011" href="$classMainWidget.html#a2d1fe0808150002e7cf4b2af8a1202cd" title=" " alt="" coords="15,159,219,199"/>
+<area shape="poly" id="edge11_Node000009_Node000011" title=" " alt="" coords="264,165,220,170,219,165,263,159"/>
+</map>

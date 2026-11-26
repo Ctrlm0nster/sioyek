@@ -1,0 +1,11 @@
+<map id="PdfViewWidget::get_overview_zoom_level" name="PdfViewWidget::get_overview_zoom_level">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,63,176,103"/>
+<area shape="rect" id="Node000002" href="$classDocument.html#aa666969289019e3c56e52d5e8855732d" title=" " alt="" coords="224,5,415,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,60,225,46,227,51,172,65"/>
+<area shape="rect" id="Node000004" href="$classPdfViewWidget.html#afb63aba8098194ed19824709479b5b8a" title=" " alt="" coords="243,70,395,95"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="176,80,229,80,229,85,176,85"/>
+<area shape="rect" id="Node000005" href="$classDocument.html#a9bfa001954e6981ee2cf08f5e1f042f2" title="Get the physical width of a specific page in points." alt="" coords="241,120,398,160"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="172,100,228,114,227,120,170,105"/>
+<area shape="rect" id="Node000003" href="$classDocument.html#a96a3741801def570bd1a2d614dde2d5f" title="Transform continuous absolute document coordinates to page&#45;relative coordinates." alt="" coords="463,5,616,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="415,23,449,23,449,28,415,28"/>
+</map>

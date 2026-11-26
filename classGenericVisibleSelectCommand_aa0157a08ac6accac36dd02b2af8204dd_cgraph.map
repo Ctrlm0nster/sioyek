@@ -1,0 +1,12 @@
+<map id="GenericVisibleSelectCommand::perform" name="GenericVisibleSelectCommand::perform">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,87,228,127"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a6cdbd7861b27b3c63865dd60ad497b3b" title=" " alt="" coords="284,5,491,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,84,275,55,302,47,304,52,277,60,182,89"/>
+<area shape="rect" id="Node000004" href="$utils_8cpp.html#af5a6a6b750d0c5a169daddab9b47ac70" title=" " alt="" coords="311,94,463,119"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="228,104,297,104,297,109,228,109"/>
+<area shape="rect" id="Node000005" href="$classGenericVisibleSelectCommand.html#af675c3636b441c68b54175a5a292b1ca" title=" " alt="" coords="276,144,499,184"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="212,124,279,138,278,144,211,129"/>
+<area shape="rect" id="Node000003" href="$classPdfViewWidget.html#a3d66231245f272913338b2c5ef6a8e2c" title=" " alt="" coords="547,5,729,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="491,23,533,23,533,28,491,28"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="347,96,338,86,342,76,359,70,387,67,423,71,433,76,437,82,432,85,429,80,421,76,387,73,360,75,346,80,343,85,351,92"/>
+</map>

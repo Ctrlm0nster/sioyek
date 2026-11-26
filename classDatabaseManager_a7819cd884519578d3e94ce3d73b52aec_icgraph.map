@@ -1,0 +1,7 @@
+<map id="DatabaseManager::export_json" name="DatabaseManager::export_json">
+<area shape="rect" id="Node000001" title=" " alt="" coords="476,5,701,31"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#ac8ca17f8bc5c0e0f6a5656ebffd1ad57" title=" " alt="" coords="244,5,428,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="462,21,428,21,428,15,462,15"/>
+<area shape="rect" id="Node000003" href="$classExportCommand.html#a527e2564c71abad2a438fe7553058840" title=" " alt="" coords="5,5,196,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="230,21,196,21,196,15,230,15"/>
+</map>

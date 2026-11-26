@@ -1,0 +1,10 @@
+<map id="PdfViewWidget::setup_text_painter" name="PdfViewWidget::setup_text_painter">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,47,171,87"/>
+<area shape="rect" id="Node000002" href="$utils_8cpp.html#a83c1f134c45326ec3744be301895d0b0" title=" " alt="" coords="267,29,385,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="171,56,253,47,253,52,171,61"/>
+<area shape="rect" id="Node000003" href="$classVulkanCanvas.html#ad4670c7d1d6ef39df07fe2fe118318ef" title="Lazily allocate and return a QPainter targeting the transparent overlay surface." alt="" coords="219,79,433,104"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="171,73,205,76,205,82,171,78"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="287,31,279,21,283,11,299,5,326,3,359,7,372,16,369,20,357,11,326,8,301,10,287,15,284,20,291,27"/>
+<area shape="rect" id="Node000004" href="$classVulkanCanvas.html#a922ca3b9ff3c97681fe8959aa9aece1f" title="Hook for subclasses to configure font engines and anti&#45;aliasing on the QPainter overlay." alt="" coords="481,71,659,111"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="434,89,468,89,468,94,434,94"/>
+</map>

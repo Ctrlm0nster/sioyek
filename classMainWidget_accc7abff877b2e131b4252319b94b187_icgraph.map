@@ -1,0 +1,9 @@
+<map id="MainWidget::is_render_ready" name="MainWidget::is_render_ready">
+<area shape="rect" id="Node000001" title="Check whether all visible pages and slices have finished rendering." alt="" coords="587,37,755,77"/>
+<area shape="rect" id="Node000002" href="$classWaitForRendersToFinishCommand.html#a3d329814d91915779dbfc5f7ae53ce60" title=" " alt="" coords="296,37,539,77"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="573,60,539,60,539,55,573,55"/>
+<area shape="rect" id="Node000003" href="$classWaitForRendersToFinishCommand.html#a7c1cfd668429b290c8314a9129f7a809" title=" " alt="" coords="5,5,248,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="282,45,248,41,249,36,283,40"/>
+<area shape="rect" id="Node000004" href="$classWaitForRendersToFinishCommand.html#a8bdc842e81217b2b71b78b9421077d4f" title=" " alt="" coords="5,69,248,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="283,75,249,79,248,73,282,70"/>
+</map>

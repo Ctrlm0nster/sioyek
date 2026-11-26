@@ -1,0 +1,31 @@
+<map id="MainWidget::get_highlight_buttons" name="MainWidget::get_highlight_buttons">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,274,199,314"/>
+<area shape="rect" id="Node000002" href="$classHighlightButtons.html#aca8e44b3c810dacb09d9aba93b1dcf56" title=" " alt="" coords="247,274,445,314"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="199,291,233,291,233,297,199,297"/>
+<area shape="rect" id="Node000003" href="$classTouchHighlightButtons.html#a55836fc863f45bace60004d07b2c050c" title=" " alt="" coords="493,181,669,221"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="396,271,516,223,518,228,398,276"/>
+<area shape="rect" id="Node000007" href="$classTouchHighlightButtons.html#a9b39a24302a681d660b0f55b64a313d5" title=" " alt="" coords="941,6,1109,46"/>
+<area shape="poly" id="edge15_Node000002_Node000007" title=" " alt="" coords="363,272,416,216,498,143,547,106,601,71,657,42,717,19,770,8,824,3,878,4,927,7,927,13,878,9,825,9,770,13,718,24,660,47,603,76,550,110,501,147,420,220,367,276"/>
+<area shape="rect" id="Node000009" href="$classTouchHighlightButtons.html#ad32cd549ba974aff17101d5a38c221cf" title=" " alt="" coords="941,266,1109,306"/>
+<area shape="poly" id="edge16_Node000002_Node000009" title=" " alt="" coords="446,310,539,323,649,333,767,336,885,326,958,308,959,313,886,331,768,341,649,339,538,329,445,315"/>
+<area shape="rect" id="Node000011" href="$classTouchHighlightButtons.html#a101bcb606d9850e9fd197258b4522cef" title=" " alt="" coords="941,357,1109,397"/>
+<area shape="poly" id="edge17_Node000002_Node000011" title=" " alt="" coords="397,312,444,328,494,341,609,358,726,369,926,375,926,381,725,374,609,364,493,346,442,333,396,317"/>
+<area shape="rect" id="Node000004" href="$utils_8cpp.html#ae11dd7e59b71db1da3b3ed5d05f56bfc" title=" " alt="" coords="933,140,1116,165"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="613,178,661,153,717,134,777,125,839,124,898,128,950,135,949,140,897,133,839,129,778,131,718,139,663,158,616,183"/>
+<area shape="rect" id="Node000006" href="$classTouchHighlightButtons.html#a0660866cba5f7022e4a1a5740a2d1890" title=" " alt="" coords="717,34,885,74"/>
+<area shape="poly" id="edge7_Node000003_Node000006" title=" " alt="" coords="603,178,653,136,716,90,738,78,741,82,719,95,656,140,606,183"/>
+<area shape="rect" id="Node000008" href="$classTouchHighlightButtons.html#a4a926eed048a2f28e0349cea4cff249e" title=" " alt="" coords="717,213,885,253"/>
+<area shape="poly" id="edge9_Node000003_Node000008" title=" " alt="" coords="670,211,704,216,703,221,669,216"/>
+<area shape="rect" id="Node000010" href="$classTouchHighlightButtons.html#a6c6458686f64f1f0498c0cba40dea59b" title=" " alt="" coords="717,277,885,317"/>
+<area shape="poly" id="edge11_Node000003_Node000010" title=" " alt="" coords="624,218,718,262,735,269,733,274,716,267,622,223"/>
+<area shape="rect" id="Node000012" href="$classTouchHighlightButtons.html#a8a7a5fd9121f02e0a689cc1e0f202505" title=" " alt="" coords="717,149,885,189"/>
+<area shape="poly" id="edge13_Node000003_Node000012" title=" " alt="" coords="669,185,703,180,704,185,670,190"/>
+<area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="992,141,985,132,989,122,1002,115,1025,113,1052,117,1063,126,1060,130,1050,122,1025,119,1004,121,993,125,990,131,996,138"/>
+<area shape="rect" id="Node000005" href="$utils_8cpp.html#a69d655d02666939218c3a0dac18fc728" title=" " alt="" coords="1164,140,1283,165"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="1117,150,1150,150,1150,155,1117,155"/>
+<area shape="poly" id="edge5_Node000005_Node000005" title=" " alt="" coords="1191,141,1184,132,1187,122,1201,115,1223,113,1250,117,1262,126,1258,130,1248,122,1223,119,1202,121,1191,125,1189,131,1195,138"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="885,41,926,35,927,41,886,46"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="886,250,928,260,927,265,885,255"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="859,314,956,349,955,354,857,319"/>
+<area shape="poly" id="edge14_Node000012_Node000004" title=" " alt="" coords="885,160,919,157,920,163,886,165"/>
+</map>

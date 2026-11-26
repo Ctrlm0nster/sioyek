@@ -1,0 +1,9 @@
+<map id="MainWidget::handle_close_event" name="MainWidget::handle_close_event">
+<area shape="rect" id="Node000001" title=" " alt="" coords="255,55,407,95"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a927a0bfecd2b4d43d6f21ea9f992c7b9" title=" " alt="" coords="17,5,195,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="240,55,206,46,157,33,158,28,207,41,242,50"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a50e717278f9543347db6c133dd27b773" title=" " alt="" coords="5,55,207,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="241,78,207,78,207,73,241,73"/>
+<area shape="rect" id="Node000004" href="$classQuitCommand.html#ab2ea9398d6316940ab97098cd434fb85" title=" " alt="" coords="18,120,194,145"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="242,101,207,110,158,123,157,117,206,105,240,96"/>
+</map>

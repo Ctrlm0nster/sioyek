@@ -1,0 +1,18 @@
+<map id="TouchMainMenu::handleHighlights" name="TouchMainMenu::handleHighlights">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1216,59,1461,84"/>
+<area shape="rect" id="Node000002" href="$classTouchMainMenu.html#a29cb21e3449f403e37da799f6589e739" title=" " alt="" coords="928,59,1168,84"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1202,74,1168,74,1168,69,1202,69"/>
+<area shape="rect" id="Node000003" href="$classAndroidSelector.html#a6d3ea46374f9810a43209a7969ef5173" title=" " alt="" coords="697,51,880,91"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="914,74,880,74,880,69,914,69"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#a3558b9bf94eff39f839e6a245fb97c4b" title=" " alt="" coords="464,51,649,91"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="683,74,649,74,649,69,683,69"/>
+<area shape="rect" id="Node000005" href="$classMainWidget.html#a7278eba4b907f1c77583b2323cfe9d5a" title=" " alt="" coords="258,29,403,55"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="450,60,403,54,404,49,451,55"/>
+<area shape="rect" id="Node000008" href="$classShowTouchMainMenu.html#a1c5e96f8741f634ded6bc6ab8eaaa7ec" title=" " alt="" coords="245,79,416,119"/>
+<area shape="poly" id="edge8_Node000004_Node000008" title=" " alt="" coords="451,87,416,91,416,86,450,82"/>
+<area shape="poly" id="edge7_Node000005_Node000005" title=" " alt="" coords="371,20,360,11,331,8,307,10,294,15,291,20,298,27,294,31,286,21,290,11,306,5,331,3,362,7,374,16"/>
+<area shape="rect" id="Node000006" href="$classMainWidget.html#a1710c804f090c9c005612b755a46de47" title=" " alt="" coords="5,5,197,31"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="244,36,197,31,198,25,244,30"/>
+<area shape="rect" id="Node000007" href="$classMainWidget.html#a793192d445eb63f8a62cc8b646f3cea2" title=" " alt="" coords="14,55,189,80"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="244,54,189,60,189,55,244,49"/>
+</map>

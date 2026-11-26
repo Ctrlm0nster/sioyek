@@ -1,0 +1,7 @@
+<map id="VulkanCanvas::releaseResources" name="VulkanCanvas::releaseResources">
+<area shape="rect" id="Node000001" title="Release all GPU buffers, pipelines, textures, and render targets." alt="" coords="276,31,512,56"/>
+<area shape="rect" id="Node000002" href="$classVulkanCanvas.html#a7975b0c6ce7655d88efb92d2d74e872d" title="Destructor releasing any active QRhi graphics pipelines and swapchain resources." alt="" coords="5,5,228,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="262,34,228,31,228,26,263,29"/>
+<area shape="rect" id="Node000003" href="$classVulkanCanvas.html#a696fb76e346014d6b4c1359511b62cc6" title="Initialize QRhi pipelines, texture samplers, and SPIR&#45;V shader state." alt="" coords="28,55,205,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="263,57,206,62,205,57,262,52"/>
+</map>

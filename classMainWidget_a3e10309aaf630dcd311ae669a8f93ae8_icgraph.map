@@ -1,0 +1,9 @@
+<map id="MainWidget::get_index_document_pos" name="MainWidget::get_index_document_pos">
+<area shape="rect" id="Node000001" title=" " alt="" coords="547,37,719,77"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a4d8568ba7482246277c1deb52963c43f" title=" " alt="" coords="305,5,470,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="533,47,470,39,471,33,533,42"/>
+<area shape="rect" id="Node000004" href="$classKeyboardSelectPointCommand.html#aecd0cc880dabfa6d1df4d5cbebb47849" title=" " alt="" coords="276,69,499,109"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="533,73,499,77,499,72,533,68"/>
+<area shape="rect" id="Node000003" href="$classKeyboardSelectPointCommand.html#a2140e18905b69a4c05100095727dafbc" title=" " alt="" coords="5,5,228,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="291,28,228,28,228,23,291,23"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="get_paper_name_from_reference_text" name="get_paper_name_from_reference_text">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,63,175,103"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="51,64,49,54,55,45,69,39,90,37,114,40,127,47,125,52,112,45,90,42,70,44,59,49,54,55,56,62"/>
+<area shape="rect" id="Node000002" href="$utils_8cpp.html#adf9f4d94354a400dc181f5c6756a8f83" title=" " alt="" coords="224,29,371,55"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="175,64,219,55,220,60,176,69"/>
+<area shape="rect" id="Node000004" href="$utils_8cpp.html#a5c12c509a2617fac2fab0df7e6eef389" title=" " alt="" coords="223,103,372,143"/>
+<area shape="poly" id="edge6_Node000001_Node000004" title=" " alt="" coords="176,97,210,104,209,109,175,102"/>
+<area shape="poly" id="edge5_Node000002_Node000002" title=" " alt="" coords="264,31,256,21,260,11,274,5,297,3,326,6,337,15,334,20,324,11,297,8,275,10,264,15,262,20,268,28"/>
+<area shape="rect" id="Node000003" href="$utils_8cpp.html#aa3a8cd82d2a04a6ecddcf7e8513e0afa" title=" " alt="" coords="420,29,592,55"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="371,39,406,39,406,45,371,45"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="472,31,465,21,468,11,483,5,506,3,535,6,546,15,543,20,533,11,506,8,484,10,472,15,470,20,476,28"/>
+<area shape="poly" id="edge7_Node000004_Node000004" title=" " alt="" coords="259,104,256,94,263,85,276,79,297,77,321,80,335,87,332,92,320,85,297,82,278,84,266,89,262,95,264,102"/>
+</map>

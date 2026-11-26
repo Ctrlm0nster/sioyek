@@ -1,0 +1,18 @@
+<map id="MainWidget::get_selected_rect_absolute" name="MainWidget::get_selected_rect_absolute">
+<area shape="rect" id="Node000001" title=" " alt="" coords="704,40,895,80"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a50e717278f9543347db6c133dd27b773" title=" " alt="" coords="5,97,207,137"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="707,39,612,22,498,10,437,8,376,10,315,17,255,30,220,44,186,62,132,99,129,95,184,57,218,39,254,25,314,12,375,5,437,3,499,4,613,17,708,34"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#ae0f702d05752aa78e2d77f6e286855a1" title=" " alt="" coords="255,40,417,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="690,62,417,62,417,57,690,57"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#a59a21019b49fedb5d6a7a06381679c81" title=" " alt="" coords="465,97,656,137"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="703,86,645,100,644,95,702,80"/>
+<area shape="poly" id="edge8_Node000004_Node000002" title=" " alt="" coords="452,120,207,120,207,114,452,114"/>
+<area shape="poly" id="edge9_Node000004_Node000003" title=" " alt="" coords="468,96,414,82,416,77,469,91"/>
+<area shape="rect" id="Node000005" href="$classMainWidget.html#af8734692288369ddd7d1607223c829e9" title="Dispatch and execute a Sioyek command by name (e.g." alt="" coords="257,154,415,194"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="469,143,416,157,414,152,468,138"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="242,154,186,140,188,135,244,149"/>
+<area shape="rect" id="Node000006" href="$classCustomCommand.html#ac1a19c0cde26230159172c5225acdbf6" title=" " alt="" coords="7,162,205,187"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="243,177,205,177,205,172,243,172"/>
+<area shape="rect" id="Node000007" href="$classExecuteCommand.html#adb5f3c61987055002e02fbc60a193be4" title=" " alt="" coords="6,211,206,236"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="244,197,167,214,165,209,243,192"/>
+</map>

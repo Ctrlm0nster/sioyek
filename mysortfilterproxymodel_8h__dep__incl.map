@@ -1,0 +1,29 @@
+<map id="pdf_viewer/mysortfilterproxymodel.h" name="pdf_viewer/mysortfilterproxymodel.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="482,5,746,31"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html" title=" " alt="" coords="5,174,164,199"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="544,36,458,56,365,81,222,132,112,176,110,171,220,127,364,76,457,51,543,31"/>
+<area shape="rect" id="Node000003" href="$mysortfilterproxymodel_8cpp.html" title=" " alt="" coords="700,86,979,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="660,33,807,83,806,88,659,38"/>
+<area shape="rect" id="Node000004" href="$TouchConfigMenu_8h.html" title=" " alt="" coords="377,79,529,119"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="580,39,493,81,491,76,577,34"/>
+<area shape="rect" id="Node000008" href="$TouchListView_8cpp.html" title=" " alt="" coords="1003,79,1150,119"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="709,30,992,76,1004,78,1003,84,991,81,708,35"/>
+<area shape="rect" id="Node000009" href="$ui_8h.html" title=" " alt="" coords="553,86,675,111"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="617,44,617,86,611,86,611,44"/>
+<area shape="rect" id="Node000005" href="$TouchConfigMenu_8cpp.html" title=" " alt="" coords="188,167,355,207"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="402,127,312,169,310,164,400,122"/>
+<area shape="rect" id="Node000006" href="$TouchSettings_8cpp.html" title=" " alt="" coords="379,167,526,207"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="455,133,455,166,450,166,450,133"/>
+<area shape="rect" id="Node000007" href="$ui_8cpp.html" title=" " alt="" coords="551,174,688,199"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="503,123,598,172,596,176,500,127"/>
+<area shape="poly" id="edge11_Node000009_Node000002" title=" " alt="" coords="560,117,541,121,439,138,359,147,278,155,176,169,137,177,136,171,175,164,278,149,358,141,438,133,540,116,559,112"/>
+<area shape="poly" id="edge13_Node000009_Node000005" title=" " alt="" coords="557,117,541,121,348,169,347,164,540,116,556,112"/>
+<area shape="poly" id="edge14_Node000009_Node000006" title=" " alt="" coords="582,120,489,169,487,164,579,115"/>
+<area shape="poly" id="edge15_Node000009_Node000007" title=" " alt="" coords="618,125,621,173,616,174,613,125"/>
+<area shape="rect" id="Node000010" href="$document__view_8cpp.html" title=" " alt="" coords="713,167,875,207"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="651,115,755,164,753,169,649,120"/>
+<area shape="rect" id="Node000011" href="$input_8cpp.html" title=" " alt="" coords="900,174,1059,199"/>
+<area shape="poly" id="edge10_Node000009_Node000011" title=" " alt="" coords="673,112,689,116,929,171,928,177,688,121,671,117"/>
+<area shape="rect" id="Node000012" href="$main__widget_8cpp.html" title=" " alt="" coords="1083,174,1292,199"/>
+<area shape="poly" id="edge12_Node000009_Node000012" title=" " alt="" coords="670,112,689,116,796,133,880,143,964,151,1072,164,1120,171,1119,177,1071,169,963,156,879,148,795,139,688,121,668,117"/>
+</map>

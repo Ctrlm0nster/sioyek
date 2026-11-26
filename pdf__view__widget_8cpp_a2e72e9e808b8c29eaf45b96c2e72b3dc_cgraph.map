@@ -1,0 +1,11 @@
+<map id="smoothen_drawing" name="smoothen_drawing">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,37,152,62"/>
+<area shape="poly" id="edge5_Node000001_Node000001" title=" " alt="" coords="44,38,37,28,41,18,55,12,79,10,108,14,120,23,116,27,106,19,79,15,56,17,44,22,42,28,48,35"/>
+<area shape="rect" id="Node000002" href="$pdf__view__widget_8cpp.html#aab7a406c9d26a3f0e791e68975f93478" title=" " alt="" coords="200,29,383,69"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,47,186,47,186,52,152,52"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="259,30,257,20,262,11,274,5,291,3,311,6,322,13,319,17,309,11,291,8,275,10,266,15,263,21,264,28"/>
+<area shape="rect" id="Node000003" href="$structVec.html#a6e6e5f8bf577ba75a710d2d73008f9c4" title=" " alt="" coords="431,11,492,37"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="382,33,417,28,418,33,383,38"/>
+<area shape="rect" id="Node000004" href="$structVec.html#ab034ad7661ec4aacc94ce883077a2ae1" title=" " alt="" coords="431,61,492,86"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="383,60,418,65,417,70,382,65"/>
+</map>

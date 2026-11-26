@@ -1,0 +1,14 @@
+<map id="PdfViewWidget::bind_program" name="PdfViewWidget::bind_program">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,111,163,151"/>
+<area shape="rect" id="Node000002" href="$classPdfViewWidget.html#a0d3c15153f7be2470e54cf8a6d5385ac" title=" " alt="" coords="235,15,421,69"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,109,210,78,228,71,230,76,212,83,134,114"/>
+<area shape="rect" id="Node000004" href="$classVulkanCanvas.html#a82b1c049b28eb1afcddd7205c191e732" title="Set a scalar float uniform." alt="" coords="235,93,421,119"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="163,121,221,114,222,120,163,126"/>
+<area shape="rect" id="Node000005" href="$classVulkanCanvas.html#adebb844ae03828f3079b83c29bb32253" title="Set a 4x4 float matrix uniform." alt="" coords="211,143,445,168"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="163,136,197,140,197,145,163,142"/>
+<area shape="rect" id="Node000006" href="$classVulkanCanvas.html#a931f4e090f24750d259718098bc8c7ad" title="Select the active SPIR&#45;V shader program for subsequent draw commands." alt="" coords="229,192,427,217"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="134,149,211,177,248,186,246,191,210,182,132,154"/>
+<area shape="rect" id="Node000003" href="$utils_8h.html#a762d4dd998502d656df7fe23c6a9d0e2" title=" " alt="" coords="493,29,567,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="421,39,480,39,480,45,421,45"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="497,31,490,21,494,11,507,5,530,3,558,6,569,16,566,20,556,11,530,8,509,10,498,15,495,20,501,28"/>
+</map>

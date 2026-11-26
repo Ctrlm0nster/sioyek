@@ -1,0 +1,22 @@
+<map id="MainWidget::get_selected_text" name="MainWidget::get_selected_text">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,112,229,137"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a333a90667ea058f36537cd87251c283f" title=" " alt="" coords="303,31,434,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="157,109,314,58,316,63,158,114"/>
+<area shape="rect" id="Node000004" href="$classDocument.html#a1e6a594b46b8d61f1e63dc43daaa2ad2" title=" " alt="" coords="277,105,460,145"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="230,122,264,122,264,127,230,127"/>
+<area shape="rect" id="Node000009" href="$classDocumentView.html#a5b28f79db9904577ad874135f588a857" title=" " alt="" coords="277,213,460,253"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="149,135,310,205,308,210,147,140"/>
+<area shape="rect" id="Node000003" href="$classDocumentView.html#acfa88cf915c8bae19ac83d1aa9b42dd1" title=" " alt="" coords="508,5,729,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="434,34,494,28,495,33,435,39"/>
+<area shape="rect" id="Node000005" href="$classPageIterator.html#ad107e38f46e1be4eaa3b16804af79b1d" title=" " alt="" coords="525,55,713,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="456,102,507,90,548,81,550,86,509,95,457,107"/>
+<area shape="rect" id="Node000006" href="$classDocument.html#aa666969289019e3c56e52d5e8855732d" title=" " alt="" coords="523,105,714,145"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="460,122,509,122,509,127,460,127"/>
+<area shape="rect" id="Node000008" href="$classDocument.html#a68875be3194ab47f70b763345c41098e" title=" " alt="" coords="539,169,698,209"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="448,142,528,163,526,168,447,147"/>
+<area shape="rect" id="Node000007" href="$classDocument.html#a96a3741801def570bd1a2d614dde2d5f" title="Transform continuous absolute document coordinates to page&#45;relative coordinates." alt="" coords="777,105,931,145"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="714,122,764,122,764,127,714,127"/>
+<area shape="rect" id="Node000010" href="$classDocument.html#ab270060959a7c9e7897d1b05946df73c" title=" " alt="" coords="543,257,694,297"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="461,246,530,258,529,264,460,251"/>
+<area shape="poly" id="edge10_Node000010_Node000010" title=" " alt="" coords="575,257,572,247,579,238,595,232,619,230,646,233,661,240,659,245,645,238,619,235,596,237,582,242,577,248,580,256"/>
+</map>

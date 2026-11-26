@@ -1,0 +1,9 @@
+<map id="ScratchPad::get_intersecting_objects" name="ScratchPad::get_intersecting_objects">
+<area shape="rect" id="Node000001" title=" " alt="" coords="573,37,780,77"/>
+<area shape="rect" id="Node000002" href="$classCopyDrawingsFromScratchpadCommand.html#ac004a1efd48b43144f661a328d26ab81" title=" " alt="" coords="304,5,525,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="560,46,525,42,526,36,560,40"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#ace0bee9b15228a97c639b027d1ff0523" title=" " alt="" coords="338,69,491,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="560,74,492,83,491,77,559,69"/>
+<area shape="rect" id="Node000004" href="$classSelectFreehandDrawingsCommand.html#ac139768c4ef48106a0345a12588818c3" title=" " alt="" coords="5,69,256,109"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="324,92,256,92,256,87,324,87"/>
+</map>

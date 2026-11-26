@@ -1,0 +1,31 @@
+<map id="EmbedGeneratedTocCommand::perform" name="EmbedGeneratedTocCommand::perform">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,100,228,140"/>
+<area shape="rect" id="Node000002" href="$classDocument.html#af823bfac8bf35e326702d8ed46dc46e7" title=" " alt="" coords="276,82,519,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="228,107,262,104,263,109,229,113"/>
+<area shape="rect" id="Node000011" href="$classDocumentView.html#acfa88cf915c8bae19ac83d1aa9b42dd1" title=" " alt="" coords="287,131,508,157"/>
+<area shape="poly" id="edge18_Node000001_Node000011" title=" " alt="" coords="229,127,273,131,273,136,228,132"/>
+<area shape="rect" id="Node000003" href="$document_8cpp.html#a129c1f68d633318213373a191abb7773" title=" " alt="" coords="567,31,733,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="461,79,572,57,573,62,462,84"/>
+<area shape="rect" id="Node000004" href="$utils_8cpp.html#ae77ffb9e9981cb2a68ec4d173b383625" title=" " alt="" coords="781,57,884,82"/>
+<area shape="poly" id="edge17_Node000002_Node000004" title=" " alt="" coords="519,85,767,70,767,76,519,90"/>
+<area shape="rect" id="Node000010" href="$utils_8cpp.html#af5eb848ff2acad495958f75cc6b1dca1" title=" " alt="" coords="570,157,730,182"/>
+<area shape="poly" id="edge15_Node000002_Node000010" title=" " alt="" coords="473,105,519,116,609,149,607,154,518,121,472,110"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="620,33,614,23,617,13,629,7,650,5,675,8,685,17,682,21,673,13,650,10,631,12,621,17,619,22,624,30"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="734,53,768,58,768,63,733,58"/>
+<area shape="poly" id="edge14_Node000004_Node000004" title=" " alt="" coords="807,58,801,48,804,39,815,32,833,30,854,33,863,42,859,46,852,38,833,35,817,37,808,42,806,48,811,55"/>
+<area shape="rect" id="Node000005" href="$namespaceutf8.html#a4a1157ef2f85d4bc8366dbbea20dcb48" title=" " alt="" coords="932,57,1043,82"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="884,67,918,67,918,72,884,72"/>
+<area shape="poly" id="edge13_Node000005_Node000005" title=" " alt="" coords="961,58,956,48,959,39,970,32,987,30,1009,33,1018,42,1014,46,1006,38,987,35,971,37,963,42,961,48,966,55"/>
+<area shape="rect" id="Node000006" href="$namespaceutf8.html#a3827e78596fc38cfdebd721e9c45c901" title="The library API &#45; functions intended to be called by the users." alt="" coords="1091,57,1195,82"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="1043,67,1077,67,1077,72,1043,72"/>
+<area shape="poly" id="edge8_Node000006_Node000006" title=" " alt="" coords="1117,58,1111,48,1114,39,1125,32,1143,30,1164,33,1173,42,1169,46,1162,38,1143,35,1127,37,1118,42,1116,48,1121,55"/>
+<area shape="rect" id="Node000007" href="$classutf8_1_1invalid__code__point.html#a46f27dd1c5b286936ec58baca3ca6220" title=" " alt="" coords="1243,5,1435,45"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="1194,55,1235,46,1237,51,1195,60"/>
+<area shape="rect" id="Node000008" href="$namespaceutf8_1_1internal.html#a97b553137aaeda6e8ca6f8d46f78fd79" title=" " alt="" coords="1269,93,1408,133"/>
+<area shape="poly" id="edge9_Node000006_Node000008" title=" " alt="" coords="1195,78,1256,92,1255,97,1194,83"/>
+<area shape="poly" id="edge10_Node000008_Node000008" title=" " alt="" coords="1302,94,1300,84,1306,75,1319,69,1339,67,1362,70,1374,77,1371,81,1360,75,1339,72,1320,74,1309,79,1305,85,1307,92"/>
+<area shape="rect" id="Node000009" href="$namespaceutf8_1_1internal.html#a31a185a6bc8b9bf454191a8a95a93595" title=" " alt="" coords="1483,93,1608,133"/>
+<area shape="poly" id="edge11_Node000008_Node000009" title=" " alt="" coords="1408,111,1469,111,1469,116,1408,116"/>
+<area shape="poly" id="edge12_Node000009_Node000009" title=" " alt="" coords="1507,94,1504,84,1511,75,1524,69,1545,67,1569,70,1583,77,1580,82,1568,75,1545,72,1526,74,1514,79,1510,85,1512,92"/>
+<area shape="poly" id="edge16_Node000010_Node000010" title=" " alt="" coords="620,158,614,148,617,139,629,132,650,130,675,134,685,142,682,146,673,138,650,135,631,137,621,142,619,148,624,155"/>
+</map>

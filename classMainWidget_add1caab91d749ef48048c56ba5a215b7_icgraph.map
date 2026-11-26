@@ -1,0 +1,7 @@
+<map id="MainWidget::handle_goto_random_page" name="MainWidget::handle_goto_random_page">
+<area shape="rect" id="Node000001" title=" " alt="" coords="259,37,413,77"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#aceff3feac51f6fd987ecd9a02fbb24d2" title=" " alt="" coords="11,5,205,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="244,47,204,42,205,36,245,42"/>
+<area shape="rect" id="Node000003" href="$classGotoRandomPageCommand.html#abe1e5da7a0c59daee606387a08ea9842" title=" " alt="" coords="5,69,211,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="245,73,211,78,210,72,244,67"/>
+</map>

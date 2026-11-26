@@ -1,0 +1,7 @@
+<map id="MainWidget::download_and_portal" name="MainWidget::download_and_portal">
+<area shape="rect" id="Node000001" title=" " alt="" coords="305,37,476,77"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a12b0e0862df2a1995a933d1394acb2bb" title=" " alt="" coords="46,5,217,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="291,48,217,38,217,33,292,43"/>
+<area shape="rect" id="Node000003" href="$classDownloadOverviewPaperCommand.html#a99b09419d9f825c2b0b7283df41ee90e" title=" " alt="" coords="5,69,257,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="292,72,258,76,257,71,291,67"/>
+</map>

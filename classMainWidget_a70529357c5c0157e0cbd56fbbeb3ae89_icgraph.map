@@ -1,0 +1,12 @@
+<map id="MainWidget::num_visible_links" name="MainWidget::num_visible_links">
+<area shape="rect" id="Node000001" title=" " alt="" coords="496,56,683,96"/>
+<area shape="rect" id="Node000002" href="$classOpenLinkCommand.html#ac38d41e93595a80c0313cebfad3b5799" title=" " alt="" coords="240,63,448,89"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="482,79,448,79,448,73,482,73"/>
+<area shape="rect" id="Node000003" href="$classOpenLinkCommand.html#a970b76d55012379bb7b605506bbfb239" title=" " alt="" coords="5,5,192,45"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="482,58,448,53,314,40,192,32,192,27,314,35,448,48,483,53"/>
+<area shape="rect" id="Node000005" href="$classMainWidget.html#a63de5a152a83180dfe07eda3086ff48e" title=" " alt="" coords="270,113,418,153"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="491,102,419,119,417,114,489,97"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="268,63,192,47,193,42,269,58"/>
+<area shape="rect" id="Node000004" href="$classOpenLinkCommand.html#ae3818520a8ebfd1fa91bb15a537c3d2c" title=" " alt="" coords="9,69,188,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="227,85,188,87,188,82,226,80"/>
+</map>

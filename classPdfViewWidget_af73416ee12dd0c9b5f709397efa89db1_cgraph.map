@@ -1,0 +1,53 @@
+<map id="PdfViewWidget::render_highlight_document" name="PdfViewWidget::render_highlight_document">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,298,176,338"/>
+<area shape="rect" id="Node000002" href="$classPdfViewWidget.html#a968c1a1a34e80615b7ab28606654cfa2" title=" " alt="" coords="237,195,407,235"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,296,262,239,265,243,138,300"/>
+<area shape="rect" id="Node000011" href="$structDocumentRect.html#a2e0ce466c8571329267dcc57acfbe4c9" title=" " alt="" coords="224,330,420,370"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="177,327,211,332,210,337,176,332"/>
+<area shape="rect" id="Node000003" href="$classVulkanCanvas.html#a92ae8512130cbcae8ad69eb55238e5b6" title="Set separate color and alpha blending factors." alt="" coords="468,5,713,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="332,193,352,159,383,117,421,75,467,40,479,33,481,38,469,44,425,79,387,121,357,162,336,196"/>
+<area shape="rect" id="Node000004" href="$classVulkanCanvas.html#a327ad225d0f26c0ab2b157294eaa666c" title="Upload raw vertex or index data into the currently bound buffer." alt="" coords="495,55,686,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="339,193,392,140,428,112,467,89,484,82,486,87,469,94,431,117,396,144,343,197"/>
+<area shape="rect" id="Node000005" href="$classVulkanCanvas.html#abbf1c49b9bebbd91e5b0bf9daf1a68eb" title="Disable a hardware graphics capability." alt="" coords="507,104,675,129"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="355,193,406,164,467,138,494,130,496,135,469,143,409,169,357,197"/>
+<area shape="rect" id="Node000006" href="$classVulkanCanvas.html#a097af6f678abdc017d0b0dd61c289a8f" title="Render non&#45;indexed geometric primitives from bound vertex arrays." alt="" coords="493,153,688,179"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="407,197,507,179,508,184,408,202"/>
+<area shape="rect" id="Node000007" href="$classVulkanCanvas.html#a42d8b1052353a366a166e1a78f2869db" title="Enable a hardware graphics capability (e.g." alt="" coords="508,203,673,228"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="407,213,494,213,494,218,407,218"/>
+<area shape="rect" id="Node000008" href="$classVulkanCanvas.html#aae4463152f0e7f9c876cac58f89fa089" title="Enable the specified vertex attribute array location." alt="" coords="479,252,702,277"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="408,228,508,247,507,252,407,234"/>
+<area shape="rect" id="Node000009" href="$classPdfViewWidget.html#a297d2d958ac8cf4a7fce7661dabc721d" title=" " alt="" coords="493,301,688,327"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="358,233,409,261,469,286,500,296,499,301,467,291,407,265,355,238"/>
+<area shape="rect" id="Node000010" href="$classVulkanCanvas.html#a931f4e090f24750d259718098bc8c7ad" title="Select the active SPIR&#45;V shader program for subsequent draw commands." alt="" coords="491,351,690,376"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="343,233,396,285,431,313,469,336,490,344,488,349,467,340,428,317,392,289,339,237"/>
+<area shape="rect" id="Node000012" href="$classDocumentView.html#a48bc3fe5c444995a50074dd29d0431d2" title=" " alt="" coords="494,401,687,441"/>
+<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="400,367,501,395,500,400,398,373"/>
+<area shape="rect" id="Node000013" href="$structNormalizedWindowRect.html#ad94247d3ab55da4914b8acc184458e05" title=" " alt="" coords="763,305,950,345"/>
+<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="677,398,712,385,736,370,760,354,776,347,778,352,763,359,739,375,715,390,679,403"/>
+<area shape="rect" id="Node000014" href="$structDocumentRect.html#afb07b97d1ebcc765839c07c6aa789204" title=" " alt="" coords="770,369,943,409"/>
+<area shape="poly" id="edge13_Node000012_Node000014" title=" " alt="" coords="687,406,756,398,756,403,688,412"/>
+<area shape="rect" id="Node000015" href="$structDocumentPos.html#a358e0c1b6faf510a61381b1fda281f44" title=" " alt="" coords="761,433,952,473"/>
+<area shape="poly" id="edge14_Node000012_Node000015" title=" " alt="" coords="688,430,748,437,747,442,687,435"/>
+<area shape="rect" id="Node000026" href="$structDocumentRect.html#abdf624c76e18845f6289948764daf2e6" title=" " alt="" coords="769,497,944,523"/>
+<area shape="poly" id="edge25_Node000012_Node000026" title=" " alt="" coords="642,438,762,482,792,491,791,496,760,487,640,443"/>
+<area shape="rect" id="Node000016" href="$classDocumentView.html#ace4f27df80cc7a99352b9d410d8f1eb3" title=" " alt="" coords="1000,433,1193,473"/>
+<area shape="poly" id="edge15_Node000015_Node000016" title=" " alt="" coords="952,450,986,450,986,455,952,455"/>
+<area shape="rect" id="Node000017" href="$classDocumentView.html#ac8e8388cd7c3a4b47b309bfc43f4f106" title=" " alt="" coords="1241,425,1435,480"/>
+<area shape="poly" id="edge16_Node000016_Node000017" title=" " alt="" coords="1193,450,1228,450,1228,455,1193,455"/>
+<area shape="rect" id="Node000018" href="$classDocumentView.html#af9d844a9d730f693ff2aa1e77807dba0" title=" " alt="" coords="1483,401,1676,441"/>
+<area shape="poly" id="edge17_Node000017_Node000018" title=" " alt="" coords="1434,437,1469,433,1469,438,1435,443"/>
+<area shape="rect" id="Node000025" href="$classDocumentView.html#ae75bc62679ed09de344d4bbc8e66e301" title=" " alt="" coords="1494,465,1665,505"/>
+<area shape="poly" id="edge24_Node000017_Node000025" title=" " alt="" coords="1435,463,1481,469,1480,474,1434,468"/>
+<area shape="rect" id="Node000019" href="$classDocumentView.html#ac800f6c72307254fbdfd362151182e18" title=" " alt="" coords="1745,307,1899,347"/>
+<area shape="poly" id="edge18_Node000018_Node000019" title=" " alt="" coords="1624,398,1723,357,1744,349,1746,354,1725,362,1626,403"/>
+<area shape="rect" id="Node000020" href="$classDocument.html#a9bfa001954e6981ee2cf08f5e1f042f2" title="Get the physical width of a specific page in points." alt="" coords="1743,371,1901,411"/>
+<area shape="poly" id="edge19_Node000018_Node000020" title=" " alt="" coords="1676,406,1729,400,1730,405,1677,412"/>
+<area shape="rect" id="Node000021" href="$structDocumentPos.html#a3b3b747bb52554fd9dac8992308e4c63" title=" " alt="" coords="1724,436,1920,461"/>
+<area shape="poly" id="edge20_Node000018_Node000021" title=" " alt="" coords="1677,429,1711,433,1710,438,1676,434"/>
+<area shape="rect" id="Node000024" href="$structEnhancedRect.html#a2f9b9a7752abd1b699a5693c1632775d" title=" " alt="" coords="1737,485,1907,511"/>
+<area shape="poly" id="edge23_Node000018_Node000024" title=" " alt="" coords="1643,438,1677,450,1725,470,1754,479,1753,484,1723,475,1675,455,1642,443"/>
+<area shape="rect" id="Node000022" href="$classDocument.html#a66caf693ee3c3c8ca06881d325325c1f" title=" " alt="" coords="1968,429,2131,469"/>
+<area shape="poly" id="edge21_Node000021_Node000022" title=" " alt="" coords="1921,446,1954,446,1954,451,1921,451"/>
+<area shape="rect" id="Node000023" href="$classDocument.html#aa8809fa0693369d107b7820c53b4e06d" title=" " alt="" coords="2179,429,2341,469"/>
+<area shape="poly" id="edge22_Node000022_Node000023" title=" " alt="" coords="2131,446,2165,446,2165,451,2131,451"/>
+</map>

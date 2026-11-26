@@ -1,0 +1,13 @@
+<map id="TouchConfigMenu::handleFloatConfigChanged" name="TouchConfigMenu::handleFloatConfigChanged">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1264,5,1485,45"/>
+<area shape="rect" id="Node000002" href="$classTouchConfigMenu.html#a7a4dc91c743754d57db9592ca1fb8157" title=" " alt="" coords="957,13,1216,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1250,28,1216,28,1216,23,1250,23"/>
+<area shape="rect" id="Node000003" href="$classTouchSettings.html#ae027314042ebf6e77cfd886b7a4ed1cd" title=" " alt="" coords="728,5,909,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="944,28,910,28,910,23,944,23"/>
+<area shape="rect" id="Node000004" href="$classTouchSettings.html#a0d52ee42b73330bd54c63d81faaa87ea" title=" " alt="" coords="469,13,680,38"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="714,28,680,28,680,23,714,23"/>
+<area shape="rect" id="Node000005" href="$classMainWidget.html#a7830d88fd4e98d6a868eaa0abb4e48f3" title=" " alt="" coords="236,5,421,45"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="456,28,421,28,421,23,456,23"/>
+<area shape="rect" id="Node000006" href="$classShowTouchSettingsMenu.html#a730d9e22e84c59d2a053f9182449eb56" title=" " alt="" coords="5,5,188,45"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="222,28,188,28,188,23,222,23"/>
+</map>

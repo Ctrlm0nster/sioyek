@@ -1,0 +1,5 @@
+<map id="VulkanCanvas::overlayPainter" name="VulkanCanvas::overlayPainter">
+<area shape="rect" id="Node000001" title="Lazily allocate and return a QPainter targeting the transparent overlay surface." alt="" coords="5,13,220,38"/>
+<area shape="rect" id="Node000002" href="$classVulkanCanvas.html#a922ca3b9ff3c97681fe8959aa9aece1f" title="Hook for subclasses to configure font engines and anti&#45;aliasing on the QPainter overlay." alt="" coords="268,5,445,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="220,23,254,23,254,28,220,28"/>
+</map>

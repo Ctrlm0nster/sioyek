@@ -1,0 +1,17 @@
+<map id="GenericVisibleSelectCommand::GenericVisibleSelectCommand" name="GenericVisibleSelectCommand::GenericVisibleSelectCommand">
+<area shape="rect" id="Node000001" title=" " alt="" coords="631,177,861,217"/>
+<area shape="rect" id="Node000002" href="$classGenericHighlightCommand.html#aaac736508810050aec8046efd80ccb3e" title=" " alt="" coords="348,113,555,153"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="639,176,543,155,545,150,640,171"/>
+<area shape="rect" id="Node000006" href="$classGenericVisibleAnnotationCommand.html#a8fff17d730a88e7600faf0ccfcd8f368" title=" " alt="" coords="320,205,583,260"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="618,215,583,219,582,214,617,210"/>
+<area shape="rect" id="Node000003" href="$classAddAnnotationToHighlightCommand.html#a995331e60cf59ba6b026316572443070" title=" " alt="" coords="5,5,272,60"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="378,111,271,75,231,63,233,58,273,70,380,106"/>
+<area shape="rect" id="Node000004" href="$classChangeHighlightTypeCommand.html#a1e8e26d8a0b2cd42e4f2e07c6425eec9" title=" " alt="" coords="21,85,256,125"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="334,125,256,118,256,113,334,120"/>
+<area shape="rect" id="Node000005" href="$classDeleteHighlightCommand.html#a21d014868afddff7b1809e9827a60c6d" title=" " alt="" coords="39,149,238,189"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="335,149,238,160,238,155,334,143"/>
+<area shape="rect" id="Node000007" href="$classDeleteVisibleAnnotationCommand.html#ac2786049cb19a9aa8e3d4c1882aa6b4e" title=" " alt="" coords="11,213,266,253"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="307,235,266,235,266,230,307,230"/>
+<area shape="rect" id="Node000008" href="$classEditVisibleAnnotationCommand.html#a8efcabb59b4afa77a195cb9d05404689" title=" " alt="" coords="20,277,257,317"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="307,265,238,279,237,274,306,260"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="VulkanCanvas::integerVertexAttribute" name="VulkanCanvas::integerVertexAttribute">
+<area shape="rect" id="Node000001" title="Configure integer vertex attribute layout without floating&#45;point conversion." alt="" coords="692,5,901,45"/>
+<area shape="rect" id="Node000002" href="$classPdfViewWidget.html#a61396366219f72441eb29bde5ffc021d" title=" " alt="" coords="473,5,644,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="678,28,644,28,644,23,678,23"/>
+<area shape="rect" id="Node000003" href="$classPdfViewWidget.html#adbe2d74c76fd707e9f69fa87b4daa3aa" title=" " alt="" coords="255,5,425,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="460,28,426,28,426,23,460,23"/>
+<area shape="rect" id="Node000004" href="$classPdfViewWidget.html#ab1b6da7af4f4ecce9c051af6d2d5d8b0" title="Pure virtual hook called to record high&#45;level page and document draw calls." alt="" coords="5,13,207,38"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="241,28,207,28,207,23,241,23"/>
+</map>

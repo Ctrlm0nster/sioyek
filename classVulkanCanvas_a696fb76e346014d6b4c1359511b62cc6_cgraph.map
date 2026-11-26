@@ -1,0 +1,9 @@
+<map id="VulkanCanvas::initialize" name="VulkanCanvas::initialize">
+<area shape="rect" id="Node000001" title="Initialize QRhi pipelines, texture samplers, and SPIR&#45;V shader state." alt="" coords="5,70,183,95"/>
+<area shape="rect" id="Node000002" href="$classVulkanCanvas.html#aa3ea9275c45a5065715377e62a27eb57" title="Pure virtual hook invoked during GPU initialization to build widget&#45;specific scene resources." alt="" coords="260,5,437,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,67,246,46,247,51,152,73"/>
+<area shape="rect" id="Node000003" href="$classVulkanCanvas.html#a8d2647c54949a42558a80d4c19f8fe76" title="Release all GPU buffers, pipelines, textures, and render targets." alt="" coords="231,70,467,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="183,80,217,80,217,85,183,85"/>
+<area shape="rect" id="Node000004" href="$classVulkanCanvas.html#a8d178351331ebe6443104b9a2268ff6e" title="Pure virtual hook invoked when the widget surface dimensions change." alt="" coords="249,119,448,145"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="161,93,270,114,269,119,160,98"/>
+</map>

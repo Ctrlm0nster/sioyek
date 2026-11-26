@@ -1,0 +1,6 @@
+<map id="MainWidget::open_document" name="MainWidget::open_document">
+<area shape="rect" id="Node000001" title="Open a PDF document from a filesystem path." alt="" coords="5,29,217,55"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="77,31,69,21,73,11,88,5,111,3,141,6,152,15,149,20,139,11,111,8,89,10,77,15,75,20,81,28"/>
+<area shape="rect" id="Node000002" href="$classPath.html#ab110e4586145d1e61dc3e1ba90d43799" title=" " alt="" coords="265,29,380,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="218,39,252,39,252,45,218,45"/>
+</map>

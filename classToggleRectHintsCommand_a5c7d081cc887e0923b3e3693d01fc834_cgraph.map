@@ -1,0 +1,11 @@
+<map id="ToggleRectHintsCommand::perform" name="ToggleRectHintsCommand::perform">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,69,200,109"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a4fc3783862e58d26f4968908dec87be1" title=" " alt="" coords="248,69,397,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="201,87,234,87,234,92,201,92"/>
+<area shape="rect" id="Node000003" href="$classPdfViewWidget.html#abda29c1544a8ad71d58cb1573b3891f5" title=" " alt="" coords="467,5,625,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="392,67,462,47,463,52,394,72"/>
+<area shape="rect" id="Node000004" href="$classPdfViewWidget.html#a7e955fd92b21dd01cc20e28918f7b5b6" title=" " alt="" coords="445,69,647,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="397,87,432,87,432,92,397,92"/>
+<area shape="rect" id="Node000005" href="$classPdfViewWidget.html#a97b889db1fdce3301e5d6c0b325ea712" title=" " alt="" coords="465,133,627,173"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="394,107,463,127,462,132,392,112"/>
+</map>

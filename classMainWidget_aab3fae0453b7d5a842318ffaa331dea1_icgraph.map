@@ -1,0 +1,25 @@
+<map id="MainWidget::return_to_last_visual_mark" name="MainWidget::return_to_last_visual_mark">
+<area shape="rect" id="Node000001" title=" " alt="" coords="537,92,697,132"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a50e717278f9543347db6c133dd27b773" title=" " alt="" coords="288,5,489,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="559,89,488,60,455,48,456,43,490,55,561,84"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#ab42fd73669cbeb0417787214e94565ac" title=" " alt="" coords="299,70,478,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="523,103,478,97,479,91,524,97"/>
+<area shape="rect" id="Node000006" href="$classMainWidget.html#a49169009ea3b7e62cb793399cccc462a" title=" " alt="" coords="313,120,465,160"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="524,126,465,133,464,128,523,121"/>
+<area shape="rect" id="Node000009" href="$classMainWidget.html#a3291bc50028c82edd7a6ee1caea550aa" title=" " alt="" coords="293,265,484,305"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="580,143,418,267,415,263,577,139"/>
+<area shape="rect" id="Node000004" href="$classSearchCommand.html#a6c9d4498f37582c30afe7aafe16a5ed2" title=" " alt="" coords="19,21,226,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="306,70,192,49,193,43,307,65"/>
+<area shape="rect" id="Node000005" href="$classGotoMark.html#aec61ae707d425611ac2e39e16daaf225" title=" " alt="" coords="49,70,196,95"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="286,85,196,85,196,80,286,80"/>
+<area shape="rect" id="Node000007" href="$classMainWidget.html#a48ae6c49931be9590a2edda847dadad3" title=" " alt="" coords="11,119,235,145"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="299,140,235,138,235,133,299,135"/>
+<area shape="rect" id="Node000008" href="$classMainWidget.html#a2d1fe0808150002e7cf4b2af8a1202cd" title=" " alt="" coords="21,169,225,209"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="299,159,225,173,225,168,298,154"/>
+<area shape="rect" id="Node000010" href="$classMoveVisualMarkDownCommand.html#a5666a2f1049a01c2f5808a4cf7b6bdc4" title=" " alt="" coords="5,233,240,273"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="279,275,240,270,241,265,280,270"/>
+<area shape="rect" id="Node000011" href="$classMoveVisualMarkUpCommand.html#a086d1790566b208d3f357d2d3ca82cc3" title=" " alt="" coords="15,297,231,337"/>
+<area shape="poly" id="edge10_Node000009_Node000011" title=" " alt="" coords="280,301,231,307,231,302,279,296"/>
+<area shape="rect" id="Node000012" href="$classMainWidget.html#a90ee19ed3124206e464a05af4c3f5a60" title=" " alt="" coords="31,362,215,387"/>
+<area shape="poly" id="edge11_Node000009_Node000012" title=" " alt="" coords="336,314,241,352,193,365,192,359,239,347,334,309"/>
+</map>

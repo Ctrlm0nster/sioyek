@@ -1,0 +1,13 @@
+<map id="PdfViewWidget::set_typing_rect" name="PdfViewWidget::set_typing_rect">
+<area shape="rect" id="Node000001" title=" " alt="" coords="496,35,645,75"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#ab12d4944f4028ce6dca8963d298d21cb" title=" " alt="" coords="279,5,442,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="482,45,442,39,443,34,483,40"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#a0452032b756e46c7d39fc7bdd52cceb6" title=" " alt="" coords="273,70,448,95"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="482,69,449,74,448,68,482,64"/>
+<area shape="rect" id="Node000003" href="$classToggleTypingModeCommand.html#a2fdc85ffcffb0835e7cab924d5a84e7f" title=" " alt="" coords="11,5,220,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="266,28,220,28,220,23,266,23"/>
+<area shape="rect" id="Node000005" href="$classMainWidget.html#ab611ce437761ff749e7b02703918ba5d" title=" " alt="" coords="14,70,217,95"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="260,85,217,85,217,80,260,80"/>
+<area shape="rect" id="Node000006" href="$classMainWidget.html#af576f313b835f7d08175f33e7488b157" title=" " alt="" coords="5,119,225,145"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="284,101,180,122,179,117,283,95"/>
+</map>

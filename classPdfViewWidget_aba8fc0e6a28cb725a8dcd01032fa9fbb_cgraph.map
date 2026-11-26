@@ -1,0 +1,7 @@
+<map id="PdfViewWidget::bind_default" name="PdfViewWidget::bind_default">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,23,163,63"/>
+<area shape="rect" id="Node000002" href="$classVulkanCanvas.html#a3088711adf803be64f24c963788ec4b3" title="Bind a vertex or element index buffer." alt="" coords="227,5,415,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,32,213,27,213,32,164,38"/>
+<area shape="rect" id="Node000003" href="$classVulkanCanvas.html#a5e7d17054c8584e4e2681422c4b90734" title="Configure floating&#45;point vertex attribute pointer layout." alt="" coords="211,55,431,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="164,49,197,52,197,57,163,54"/>
+</map>

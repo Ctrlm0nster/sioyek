@@ -1,0 +1,12 @@
+<map id="MainWidget::open_tabs" name="MainWidget::open_tabs">
+<area shape="rect" id="Node000001" title=" " alt="" coords="455,55,629,80"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#adf5a458285cd49183431fc410e2cae5e" title=" " alt="" coords="257,18,407,58"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="441,56,407,51,407,46,441,51"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#a700a0caa5b70a06d1064e576f9f3cf65" title=" " alt="" coords="5,57,60,83"/>
+<area shape="poly" id="edge6_Node000001_Node000004" title=" " alt="" coords="441,72,407,73,60,73,60,68,407,67,441,67"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#ad42a11ac603069e26007216384243202" title=" " alt="" coords="108,29,209,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="244,43,210,44,210,38,244,37"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="180,18,173,11,159,8,146,10,139,14,138,20,142,28,137,30,133,21,135,11,144,5,159,3,176,6,184,14"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="95,59,61,67,60,61,94,54"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="54,46,47,39,33,36,20,38,13,42,12,48,16,56,11,58,7,49,9,39,18,33,33,31,50,34,58,42"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="CommandSelector" name="CommandSelector">
+<area shape="rect" id="Node000001" title=" " alt="" coords="17,707,187,867"/>
+<area shape="rect" id="Node000002" href="$classBaseSelectorWidget.html" title=" " alt="" coords="5,119,199,659"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,673,105,707,99,707,99,673"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="67,5,137,71"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="105,84,105,118,99,118,99,84"/>
+</map>

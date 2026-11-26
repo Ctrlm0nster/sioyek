@@ -1,0 +1,7 @@
+<map id="MainWidget::set_status_message" name="MainWidget::set_status_message">
+<area shape="rect" id="Node000001" title=" " alt="" coords="256,37,431,77"/>
+<area shape="rect" id="Node000002" href="$classClearStatusStringCommand.html#a1b390cf2e2ab0fdab581bfa89de24a94" title=" " alt="" coords="5,5,208,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="242,46,208,42,209,36,242,41"/>
+<area shape="rect" id="Node000003" href="$classSetStatusStringCommand.html#a1dd570880d489a7e407f1592f3c65435" title=" " alt="" coords="12,69,201,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="243,74,202,79,201,74,242,68"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="PdfRenderer::delete_old_pages" name="PdfRenderer::delete_old_pages">
+<area shape="rect" id="Node000001" title="Evict least&#45;recently&#45;used page responses exceeding the cache capacity." alt="" coords="5,35,156,75"/>
+<area shape="rect" id="Node000002" href="$classPdfRenderer.html#a32b6e7465ea1f732bed0059c74b26778" title="Cancel all queued speculative (lookahead) render requests." alt="" coords="208,5,375,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,42,194,36,195,41,157,47"/>
+<area shape="rect" id="Node000003" href="$namespaceRenderImages.html#ad7a2328b89e15e92fd95421e8ac4c5ab" title="Remove and release the rasterized image associated with the specified handle." alt="" coords="204,70,379,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="157,62,191,67,190,72,156,67"/>
+</map>

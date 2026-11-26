@@ -1,0 +1,29 @@
+<map id="DatabaseManager::insert_portal" name="DatabaseManager::insert_portal">
+<area shape="rect" id="Node000001" title=" " alt="" coords="772,184,959,224"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a2bdaf788adb031ce38cd9cded33389d3" title=" " alt="" coords="522,102,699,127"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="794,182,647,130,649,125,795,177"/>
+<area shape="rect" id="Node000008" href="$classDatabaseManager.html#ac5ad302d952089915f49dafbf2a8f8ed" title=" " alt="" coords="497,191,724,217"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="758,207,724,207,724,201,758,201"/>
+<area shape="rect" id="Node000011" href="$classDatabaseManager.html#adbcb73891ae9b6ead2b8fb5c3997ea85" title=" " alt="" coords="522,245,699,285"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="769,230,695,248,694,243,768,225"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a50e717278f9543347db6c133dd27b773" title=" " alt="" coords="6,5,207,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="571,99,514,74,449,53,387,42,324,34,207,27,208,22,324,29,388,36,450,48,516,69,573,94"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#a3cedd5ea0b2414cafcccea4e6b9a0a4f" title=" " alt="" coords="277,63,429,103"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="508,105,429,95,429,89,509,99"/>
+<area shape="rect" id="Node000006" href="$classMainWidget.html#a40558ac84e52048234ac9d5d96ad9748" title=" " alt="" coords="275,127,430,167"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="509,130,431,140,430,134,508,125"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="262,64,192,48,194,43,264,59"/>
+<area shape="rect" id="Node000005" href="$classPortalCommand.html#a6199a464e04f5316b736c5ac4b0eb028" title=" " alt="" coords="13,70,200,95"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="263,85,200,85,200,80,263,80"/>
+<area shape="rect" id="Node000007" href="$classPortalToOverviewCommand.html#a0cfbaf556d3c0b9128d4549d8ff876ac" title=" " alt="" coords="5,127,208,167"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="261,149,208,149,208,144,261,144"/>
+<area shape="rect" id="Node000009" href="$classMainWidget.html#a885e0314eaa71ed2a39c7eaa951c6357" title=" " alt="" coords="260,191,445,217"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="484,207,445,207,445,201,484,201"/>
+<area shape="rect" id="Node000010" href="$classImportCommand.html#a462efa205ea0e7170265caf23fde6fb3" title=" " alt="" coords="11,191,203,217"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="246,207,203,207,203,201,246,201"/>
+<area shape="rect" id="Node000012" href="$classDatabaseManager.html#aab1258137450325512140acbe68b12af" title=" " alt="" coords="256,253,449,293"/>
+<area shape="poly" id="edge12_Node000011_Node000012" title=" " alt="" coords="508,271,450,273,450,268,508,266"/>
+<area shape="rect" id="Node000013" href="$main_8cpp.html#a700a0caa5b70a06d1064e576f9f3cf65" title=" " alt="" coords="79,265,134,290"/>
+<area shape="poly" id="edge13_Node000012_Node000013" title=" " alt="" coords="242,278,134,280,134,274,242,272"/>
+<area shape="poly" id="edge14_Node000013_Node000013" title=" " alt="" coords="144,262,150,255,147,250,132,245,107,243,77,246,65,252,65,258,80,267,78,272,61,261,60,249,76,241,107,238,133,240,150,246,155,255,148,265"/>
+</map>

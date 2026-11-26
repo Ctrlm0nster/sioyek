@@ -1,0 +1,9 @@
+<map id="KeyboardSelectCommand::on_cancel" name="KeyboardSelectCommand::on_cancel">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,23,196,63"/>
+<area shape="rect" id="Node000002" href="$classCommand.html#afb19c25d326eb40366e27c65e605a5ef" title=" " alt="" coords="284,5,447,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="196,32,270,24,270,30,196,37"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a35372c246fef110d2c5993f70546e55d" title=" " alt="" coords="244,55,487,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="196,49,230,52,230,58,196,55"/>
+<area shape="rect" id="Node000004" href="$classPdfViewWidget.html#a2f7c44a75514024755c86989879479bc" title=" " alt="" coords="535,47,684,87"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="487,65,520,65,520,70,487,70"/>
+</map>

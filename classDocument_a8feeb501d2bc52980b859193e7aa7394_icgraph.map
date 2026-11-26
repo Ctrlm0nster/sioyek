@@ -1,0 +1,9 @@
+<map id="Document::undo_freehand_drawing" name="Document::undo_freehand_drawing">
+<area shape="rect" id="Node000001" title=" " alt="" coords="447,37,641,77"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a0b9cce1074355ba69b6d768f4bb44661" title=" " alt="" coords="247,37,399,77"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="433,60,399,60,399,55,433,55"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#aceff3feac51f6fd987ecd9a02fbb24d2" title=" " alt="" coords="5,5,199,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="232,47,199,42,199,37,233,42"/>
+<area shape="rect" id="Node000004" href="$classUndoDrawingCommand.html#a419ac2d5fc5c6779dade5233c1939175" title=" " alt="" coords="13,69,191,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="233,73,191,79,190,74,232,68"/>
+</map>

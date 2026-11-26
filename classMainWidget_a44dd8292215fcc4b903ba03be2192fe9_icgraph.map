@@ -1,0 +1,7 @@
+<map id="MainWidget::next_state" name="MainWidget::next_state">
+<area shape="rect" id="Node000001" title=" " alt="" coords="268,42,445,67"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a50e717278f9543347db6c133dd27b773" title=" " alt="" coords="12,5,213,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="254,45,213,40,214,35,255,40"/>
+<area shape="rect" id="Node000003" href="$classNextStateCommand.html#a1472e5e2f8d73995b345fe6a5d9de409" title=" " alt="" coords="5,70,220,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="255,69,220,73,220,68,254,64"/>
+</map>

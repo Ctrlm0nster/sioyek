@@ -1,0 +1,18 @@
+<map id="TouchListView::initialize" name="TouchListView::initialize">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,143,183,168"/>
+<area shape="rect" id="Node000002" href="$classTouchListView.html#ade71840475bcf2dc10c97c1036f0203a" title=" " alt="" coords="231,5,439,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,140,158,96,192,70,229,48,266,32,268,37,232,52,195,75,161,100,110,144"/>
+<area shape="rect" id="Node000003" href="$classTouchListView.html#a3fd5901f2cd9c9ea34d5f0a75d05e868" title=" " alt="" coords="489,31,691,56"/>
+<area shape="poly" id="edge7_Node000001_Node000003" title=" " alt="" coords="117,140,168,115,230,91,292,76,356,64,474,48,475,54,356,69,293,81,231,97,170,120,119,145"/>
+<area shape="rect" id="Node000004" href="$classTouchListView.html#a76282dec177fda72920cdf416836eb23" title=" " alt="" coords="235,106,435,146"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="183,142,221,137,222,142,183,147"/>
+<area shape="rect" id="Node000005" href="$classTouchListView.html#a565e13ffb2b871b75225fa8ad3000f4b" title=" " alt="" coords="497,150,683,190"/>
+<area shape="poly" id="edge8_Node000001_Node000005" title=" " alt="" coords="183,155,483,164,483,170,183,161"/>
+<area shape="rect" id="Node000006" href="$classTouchListView.html#a2f54ba0de8a617683b6c23a05c8573d5" title=" " alt="" coords="232,221,437,247"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="132,166,232,199,279,215,277,220,230,205,131,171"/>
+<area shape="rect" id="Node000007" href="$classTouchListView.html#a7101095e188d652700df19b4ba0f4380" title=" " alt="" coords="487,236,693,261"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="108,166,158,214,193,238,232,257,269,267,307,273,386,277,460,271,522,261,523,267,460,277,386,282,307,279,268,272,230,262,190,243,155,218,105,170"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="439,26,475,29,475,35,439,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="435,141,484,149,483,154,434,146"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="438,237,473,239,473,245,438,243"/>
+</map>

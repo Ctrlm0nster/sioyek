@@ -1,0 +1,7 @@
+<map id="MainWidget::download_paper_under_cursor" name="MainWidget::download_paper_under_cursor">
+<area shape="rect" id="Node000001" title=" " alt="" coords="257,37,428,77"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#aceff3feac51f6fd987ecd9a02fbb24d2" title=" " alt="" coords="11,5,204,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="243,46,204,41,205,36,244,41"/>
+<area shape="rect" id="Node000003" href="$classDownloadPaperUnderCursorCommand.html#a7ed8d57d4a01de5cfb7d062b46b42813" title=" " alt="" coords="5,69,209,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="244,73,210,78,209,73,243,68"/>
+</map>

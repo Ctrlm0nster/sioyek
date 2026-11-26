@@ -1,0 +1,16 @@
+<map id="Document::add_freetext_bookmark" name="Document::add_freetext_bookmark">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,71,185,111"/>
+<area shape="rect" id="Node000002" href="$classDocument.html#ae2277ad29c8aaea5eb994fefa6f1ee36" title=" " alt="" coords="233,71,413,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,89,220,89,220,94,186,94"/>
+<area shape="rect" id="Node000003" href="$classDocument.html#a6837cedaeb30c03fe3e1cba789c0b8b2" title=" " alt="" coords="461,5,652,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="376,69,461,39,488,32,489,37,462,45,378,74"/>
+<area shape="rect" id="Node000005" href="$utils_8cpp.html#a87bae26e27fe0d55c4456a312bdd374a" title=" " alt="" coords="498,79,615,104"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="414,89,484,89,484,94,414,94"/>
+<area shape="rect" id="Node000006" href="$structAnnotation.html#a3b6fe498218278779b40d8bcc121d3f6" title=" " alt="" coords="483,129,630,169"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="406,109,471,125,470,130,405,114"/>
+<area shape="rect" id="Node000004" href="$classDocument.html#a19c247a93996cb294e872ae8cb80635a" title=" " alt="" coords="700,5,855,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="652,15,686,15,686,21,652,21"/>
+<area shape="poly" id="edge5_Node000005_Node000005" title=" " alt="" coords="521,80,513,70,517,60,532,54,557,52,587,56,599,65,596,69,585,61,557,57,533,59,521,64,518,70,525,77"/>
+<area shape="rect" id="Node000007" href="$structAnnotation.html#aa9293d9583039a7ffb79a58b2813edce" title=" " alt="" coords="704,129,851,169"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="631,146,690,146,690,151,631,151"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="MainWidget::get_default_paper_download_finish_action" name="MainWidget::get_default_paper_download_finish_action">
+<area shape="rect" id="Node000001" title=" " alt="" coords="557,62,740,117"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a584a1f00e89eff5c5876887703ff5674" title=" " alt="" coords="298,37,469,77"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="544,79,469,70,469,65,544,74"/>
+<area shape="rect" id="Node000005" href="$classDownloadOverviewPaperCommand.html#a99b09419d9f825c2b0b7283df41ee90e" title=" " alt="" coords="257,101,509,141"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="544,105,510,109,509,103,543,99"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#aceff3feac51f6fd987ecd9a02fbb24d2" title=" " alt="" coords="11,5,204,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="284,49,204,39,204,34,285,43"/>
+<area shape="rect" id="Node000004" href="$classDownloadPaperUnderCursorCommand.html#a7ed8d57d4a01de5cfb7d062b46b42813" title=" " alt="" coords="5,69,209,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="285,71,210,80,209,75,284,66"/>
+</map>

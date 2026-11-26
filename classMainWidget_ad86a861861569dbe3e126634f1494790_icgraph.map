@@ -1,0 +1,7 @@
+<map id="MainWidget::handle_move_text_mark_forward" name="MainWidget::handle_move_text_mark_forward">
+<area shape="rect" id="Node000001" title=" " alt="" coords="324,37,521,77"/>
+<area shape="rect" id="Node000002" href="$classMoveTextMarkForwardCommand.html#a789e771388a12c92cac1e07128d21054" title=" " alt="" coords="22,5,259,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="310,47,260,41,260,36,310,42"/>
+<area shape="rect" id="Node000003" href="$classMoveTextMarkForwardWordCommand.html#a85e3f675541ef65b0b8dc10b6408b88b" title=" " alt="" coords="5,69,276,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="311,73,277,77,276,71,310,67"/>
+</map>

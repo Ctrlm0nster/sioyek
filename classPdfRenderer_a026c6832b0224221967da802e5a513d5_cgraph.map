@@ -1,0 +1,9 @@
+<map id="PdfRenderer::PdfRenderer" name="PdfRenderer::PdfRenderer">
+<area shape="rect" id="Node000001" title="Construct a new PdfRenderer concurrency engine." alt="" coords="5,42,196,67"/>
+<area shape="rect" id="Node000002" href="$classPdfRenderer.html#a6b5833abd80bb22311426c76c450010a" title="Evict least&#45;recently&#45;used page responses exceeding the cache capacity." alt="" coords="244,35,395,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="196,52,230,52,230,57,196,57"/>
+<area shape="rect" id="Node000003" href="$classPdfRenderer.html#a32b6e7465ea1f732bed0059c74b26778" title="Cancel all queued speculative (lookahead) render requests." alt="" coords="447,5,613,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="395,42,433,36,434,41,396,47"/>
+<area shape="rect" id="Node000004" href="$namespaceRenderImages.html#ad7a2328b89e15e92fd95421e8ac4c5ab" title="Remove and release the rasterized image associated with the specified handle." alt="" coords="443,70,617,95"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="396,62,430,67,429,72,395,67"/>
+</map>

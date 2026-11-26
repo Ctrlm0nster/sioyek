@@ -1,0 +1,24 @@
+<map id="TouchHighlightButtons::TouchHighlightButtons" name="TouchHighlightButtons::TouchHighlightButtons">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,114,181,154"/>
+<area shape="rect" id="Node000002" href="$utils_8cpp.html#ae11dd7e59b71db1da3b3ed5d05f56bfc" title=" " alt="" coords="445,29,628,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,112,162,71,194,50,229,35,287,23,347,18,404,20,456,25,455,30,404,25,347,23,287,28,230,41,196,55,165,75,116,116"/>
+<area shape="rect" id="Node000004" href="$classTouchHighlightButtons.html#a0660866cba5f7022e4a1a5740a2d1890" title=" " alt="" coords="229,114,397,154"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="182,131,216,131,216,137,182,137"/>
+<area shape="rect" id="Node000006" href="$classTouchHighlightButtons.html#a4a926eed048a2f28e0349cea4cff249e" title=" " alt="" coords="229,178,397,218"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="164,152,232,172,230,177,162,157"/>
+<area shape="rect" id="Node000008" href="$classTouchHighlightButtons.html#a6c6458686f64f1f0498c0cba40dea59b" title=" " alt="" coords="229,242,397,282"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="120,152,170,189,231,228,243,234,241,239,228,232,167,194,117,156"/>
+<area shape="rect" id="Node000010" href="$classTouchHighlightButtons.html#a8a7a5fd9121f02e0a689cc1e0f202505" title=" " alt="" coords="229,50,397,90"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="162,111,230,91,232,96,164,116"/>
+<area shape="poly" id="edge4_Node000002_Node000002" title=" " alt="" coords="504,31,497,21,501,11,514,5,537,3,564,6,575,15,572,19,562,11,537,8,516,10,505,15,502,20,508,28"/>
+<area shape="rect" id="Node000003" href="$utils_8cpp.html#a69d655d02666939218c3a0dac18fc728" title=" " alt="" coords="676,29,795,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="629,39,662,39,662,45,629,45"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="703,31,696,21,699,11,713,5,735,3,762,6,774,15,770,19,760,11,735,8,714,10,703,15,701,20,707,28"/>
+<area shape="rect" id="Node000005" href="$classTouchHighlightButtons.html#a9b39a24302a681d660b0f55b64a313d5" title=" " alt="" coords="453,114,621,154"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="397,131,439,131,439,137,397,137"/>
+<area shape="rect" id="Node000007" href="$classTouchHighlightButtons.html#ad32cd549ba974aff17101d5a38c221cf" title=" " alt="" coords="453,178,621,218"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="397,195,439,195,439,201,397,201"/>
+<area shape="rect" id="Node000009" href="$classTouchHighlightButtons.html#a101bcb606d9850e9fd197258b4522cef" title=" " alt="" coords="453,242,621,282"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="397,259,439,259,439,265,397,265"/>
+<area shape="poly" id="edge12_Node000010_Node000002" title=" " alt="" coords="397,57,431,53,432,58,398,62"/>
+</map>

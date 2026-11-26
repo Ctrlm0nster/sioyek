@@ -1,0 +1,11 @@
+<map id="MainWidget::deselect_document_indices" name="MainWidget::deselect_document_indices">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,37,168,77"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a299dcabc8cd3f485362926dc69f70d69" title=" " alt="" coords="216,5,407,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,43,202,38,203,43,169,48"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#a14ea1c520636c0461655e315ecad8a08" title=" " alt="" coords="216,69,407,109"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="169,66,203,71,202,76,168,72"/>
+<area shape="rect" id="Node000003" href="$classPdfViewWidget.html#a38206a82dd5b064ae54845a4b046e627" title=" " alt="" coords="455,5,655,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="407,23,441,23,441,28,407,28"/>
+<area shape="rect" id="Node000005" href="$classPdfViewWidget.html#a858d414421d2a85215be572b205fdcfd" title=" " alt="" coords="459,69,650,109"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="407,87,446,87,446,92,407,92"/>
+</map>

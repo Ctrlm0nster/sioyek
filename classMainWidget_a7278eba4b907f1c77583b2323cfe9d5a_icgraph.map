@@ -1,0 +1,8 @@
+<map id="MainWidget::event" name="MainWidget::event">
+<area shape="rect" id="Node000001" title=" " alt="" coords="245,31,391,56"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="357,21,346,13,318,9,295,11,283,16,280,22,287,29,283,32,275,22,279,12,294,6,318,4,348,8,360,17"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a1710c804f090c9c005612b755a46de47" title=" " alt="" coords="5,5,197,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="231,36,197,32,198,27,232,31"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a793192d445eb63f8a62cc8b646f3cea2" title=" " alt="" coords="14,55,189,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="232,56,189,60,189,55,231,50"/>
+</map>

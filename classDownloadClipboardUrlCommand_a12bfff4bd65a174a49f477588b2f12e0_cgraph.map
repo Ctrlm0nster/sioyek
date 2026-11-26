@@ -1,0 +1,15 @@
+<map id="DownloadClipboardUrlCommand::perform" name="DownloadClipboardUrlCommand::perform">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,153,240,193"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a26e047792a5b082c46b5795f8d33ce58" title=" " alt="" coords="288,153,459,193"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="240,171,274,171,274,176,240,176"/>
+<area shape="rect" id="Node000003" href="$utils_8cpp.html#a3eeb74487e026e5425e965f35260de7b" title=" " alt="" coords="528,29,667,69"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="398,151,446,115,505,79,519,72,522,77,508,84,449,120,401,155"/>
+<area shape="rect" id="Node000004" href="$utils_8cpp.html#a173e701ff9fee1e81342b3900c15090f" title=" " alt="" coords="517,117,678,157"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="459,157,503,150,504,155,459,162"/>
+<area shape="rect" id="Node000005" href="$classMainWidget.html#a94be51c36cb51e556d04f21b7fb8b7cd" title=" " alt="" coords="507,182,688,237"/>
+<area shape="poly" id="edge6_Node000002_Node000005" title=" " alt="" coords="459,184,494,190,493,195,459,190"/>
+<area shape="rect" id="Node000006" href="$classMainWidget.html#a0b1838998afff195d975f208735477a3" title=" " alt="" coords="515,261,679,301"/>
+<area shape="poly" id="edge7_Node000002_Node000006" title=" " alt="" coords="408,191,508,246,527,254,525,259,505,250,406,196"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="555,30,553,20,560,10,575,5,597,3,623,6,638,13,635,18,622,11,597,8,576,10,563,15,558,21,561,28"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="555,118,553,108,560,98,575,93,597,91,623,94,638,101,635,106,622,99,597,96,576,98,563,103,558,109,561,116"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="EditSelectedHighlightCommand::pre_perform" name="EditSelectedHighlightCommand::pre_perform">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,47,235,87"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a333a90667ea058f36537cd87251c283f" title=" " alt="" coords="312,5,443,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="224,45,298,30,299,36,225,50"/>
+<area shape="rect" id="Node000004" href="$classDocument.html#a07061e589dc7e1c7ee2068b3cd3252ac" title=" " alt="" coords="283,55,472,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="235,65,269,65,269,70,235,70"/>
+<area shape="rect" id="Node000005" href="$classMainWidget.html#a5b86f7ca1ff81ac1c28e8e80951e1aed" title=" " alt="" coords="297,105,458,145"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="211,85,284,101,283,106,210,90"/>
+<area shape="rect" id="Node000003" href="$classDocumentView.html#acfa88cf915c8bae19ac83d1aa9b42dd1" title=" " alt="" coords="520,5,741,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="443,15,506,15,506,21,443,21"/>
+<area shape="rect" id="Node000006" href="$classTouchTextEdit.html#a4c25804cc5498b8af803a2b875b2ea22" title=" " alt="" coords="545,112,717,137"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="458,122,531,122,531,127,458,127"/>
+</map>

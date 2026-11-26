@@ -1,0 +1,16 @@
+<map id="Document::delete_bookmark" name="Document::delete_bookmark">
+<area shape="rect" id="Node000001" title=" " alt="" coords="529,113,740,138"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#ac9a04fb734fb3a7b3d04d495513d213e" title=" " alt="" coords="291,64,481,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="544,113,481,102,482,97,545,108"/>
+<area shape="rect" id="Node000005" href="$classMainWidget.html#a7278eba4b907f1c77583b2323cfe9d5a" title=" " alt="" coords="313,153,459,178"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="542,143,459,156,459,151,542,138"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a50e717278f9543347db6c133dd27b773" title=" " alt="" coords="23,5,225,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="282,64,213,48,214,43,283,58"/>
+<area shape="rect" id="Node000004" href="$classEditSelectedBookmarkCommand.html#a3aa73d0bc2e155f0197742b1de4e93b1" title=" " alt="" coords="5,69,243,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="277,89,243,90,243,84,277,84"/>
+<area shape="poly" id="edge7_Node000005_Node000005" title=" " alt="" coords="430,143,427,139,420,135,386,131,359,133,345,138,342,144,350,151,346,154,337,144,342,134,358,128,386,126,421,130,431,135,435,140"/>
+<area shape="rect" id="Node000006" href="$classMainWidget.html#a1710c804f090c9c005612b755a46de47" title=" " alt="" coords="28,146,220,171"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="300,166,220,164,221,158,300,160"/>
+<area shape="rect" id="Node000007" href="$classMainWidget.html#a793192d445eb63f8a62cc8b646f3cea2" title=" " alt="" coords="37,195,211,221"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="300,182,203,198,202,193,300,177"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="ToggleStatusbarCommand::perform" name="ToggleStatusbarCommand::perform">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,69,199,109"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a7e6865d9c3378f543eb39a1632647fd8" title=" " alt="" coords="247,69,396,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="199,87,233,87,233,92,199,92"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a663518aa8c5fb049fc1b74c04807e2f1" title=" " alt="" coords="444,69,595,109"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="397,87,430,87,430,92,397,92"/>
+<area shape="rect" id="Node000004" href="$classPdfViewWidget.html#a95e3f362e4f9deb45961c9d2e5331c87" title=" " alt="" coords="657,5,807,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="586,67,651,47,653,52,587,72"/>
+<area shape="rect" id="Node000005" href="$classMainWidget.html#a12eee0517ee900941fe331201e61bbf2" title=" " alt="" coords="643,69,821,109"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="595,87,629,87,629,92,595,92"/>
+<area shape="rect" id="Node000006" href="$classMainWidget.html#a2b2d256e4b79b06092a70f12a054b2a7" title=" " alt="" coords="643,133,821,173"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="587,107,653,127,651,132,586,112"/>
+</map>

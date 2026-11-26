@@ -1,0 +1,12 @@
+<map id="MainWidget::set_synctex_mode" name="MainWidget::set_synctex_mode">
+<area shape="rect" id="Node000001" title=" " alt="" coords="489,41,720,66"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a50e717278f9543347db6c133dd27b773" title=" " alt="" coords="5,5,207,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="539,40,441,24,348,21,255,24,207,25,207,20,255,19,348,15,442,19,540,35"/>
+<area shape="rect" id="Node000003" href="$classTurnOnSynctexCommand.html#a371b146ec4d0f7a3bd6b0cecf270961e" title=" " alt="" coords="255,33,441,73"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="475,56,441,56,441,51,475,51"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#a118c8a1a4cc5c2183b27be2c4c54131a" title=" " alt="" coords="273,97,423,137"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="540,72,424,101,422,96,539,67"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="274,95,254,88,154,48,156,43,256,83,276,90"/>
+<area shape="rect" id="Node000005" href="$classToggleSynctexCommand.html#a464def85ec861e98660ade175f47fab3" title=" " alt="" coords="15,97,197,137"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="259,120,198,120,198,115,259,115"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="MainWidget::is_in_middle_left_rect" name="MainWidget::is_in_middle_left_rect">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,27,196,67"/>
+<area shape="rect" id="Node000002" href="$structUIRect.html#a358907c52f713c01074e2fb2546e8a8e" title=" " alt="" coords="285,5,413,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="196,33,271,24,271,30,196,39"/>
+<area shape="rect" id="Node000003" href="$classDocumentView.html#a29a5bc37728551cd2f8d6f81bdd7ada3" title=" " alt="" coords="244,55,453,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="196,55,231,59,230,65,196,61"/>
+</map>

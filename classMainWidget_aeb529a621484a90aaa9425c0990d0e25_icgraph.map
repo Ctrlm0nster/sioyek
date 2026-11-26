@@ -1,0 +1,22 @@
+<map id="MainWidget::get_main_window_rect" name="MainWidget::get_main_window_rect">
+<area shape="rect" id="Node000001" title=" " alt="" coords="733,73,903,113"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a50e717278f9543347db6c133dd27b773" title=" " alt="" coords="12,69,213,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="720,80,625,68,512,58,390,54,268,60,195,72,195,67,268,55,390,49,512,52,626,62,720,75"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a3223f60d49da82e94a6b42cd738333cc" title=" " alt="" coords="503,98,685,153"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="720,110,686,115,685,110,719,105"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#acbc82fa0edd528855a33bbd9cbe4878c" title=" " alt="" coords="268,69,455,109"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="489,112,455,106,455,101,490,106"/>
+<area shape="rect" id="Node000006" href="$classMainWidget.html#a6b8c7fb4ee60c6f823eeab487ae9f818" title=" " alt="" coords="284,133,439,173"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="489,141,439,147,439,141,489,135"/>
+<area shape="rect" id="Node000008" href="$classMainWidget.html#ac5801519f86bc8a14f367652f0e91abf" title=" " alt="" coords="276,197,447,237"/>
+<area shape="poly" id="edge9_Node000003_Node000008" title=" " alt="" coords="521,161,456,188,423,200,421,195,454,183,519,156"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="254,92,213,92,213,87,254,87"/>
+<area shape="rect" id="Node000005" href="$classShowPortalWindowCommand.html#a76b1b893cd2f28b86c3facb41bdaafa8" title=" " alt="" coords="5,5,220,45"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="269,68,190,48,192,43,271,63"/>
+<area shape="poly" id="edge7_Node000006_Node000002" title=" " alt="" coords="270,133,190,112,192,107,271,128"/>
+<area shape="rect" id="Node000007" href="$classToggleOneWindowCommand.html#a2c8302c531fc8149587982fc1f03724e" title=" " alt="" coords="8,133,217,173"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="270,156,217,156,217,151,270,151"/>
+<area shape="poly" id="edge10_Node000008_Node000002" title=" " alt="" coords="275,193,266,187,250,171,242,154,234,139,218,123,198,112,200,107,222,119,238,135,247,152,255,168,270,183,278,189"/>
+<area shape="rect" id="Node000009" href="$classToggleWindowConfigurationCommand.html#a7524de7697b1df44ba86348d6c236808" title=" " alt="" coords="11,197,214,237"/>
+<area shape="poly" id="edge11_Node000008_Node000009" title=" " alt="" coords="262,220,214,220,214,215,262,215"/>
+</map>

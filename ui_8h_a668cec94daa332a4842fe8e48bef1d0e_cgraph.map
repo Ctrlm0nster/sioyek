@@ -1,0 +1,10 @@
+<map id="select_command_file_name" name="select_command_file_name">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,67,209,92"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="67,68,58,58,62,48,79,42,107,40,143,44,153,49,157,54,152,57,149,53,141,49,107,45,80,47,66,52,63,58,71,65"/>
+<area shape="rect" id="Node000002" href="$ui_8cpp.html#ac1de8d0f8b3b98edf7bd1ce9ec6d7a63" title=" " alt="" coords="278,29,441,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,64,264,53,265,59,194,69"/>
+<area shape="rect" id="Node000003" href="$ui_8cpp.html#ad00352336e8f079c87009745464b6cda" title=" " alt="" coords="257,103,461,128"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="197,89,257,98,256,103,196,95"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="319,31,310,21,314,11,331,5,359,3,395,7,405,11,409,17,404,20,401,15,393,12,359,8,332,10,318,15,315,20,323,27"/>
+<area shape="poly" id="edge5_Node000003_Node000003" title=" " alt="" coords="319,104,310,94,314,84,331,78,359,76,395,80,405,85,409,90,404,93,401,89,393,85,359,81,332,83,318,88,315,94,323,101"/>
+</map>

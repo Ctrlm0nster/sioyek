@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['f5_0',['Presentation Mode (&lt;span class=&quot;tt&quot;&gt;F5&lt;/span&gt;)',['../md_docs_2user-guide.html#autotoc_md54',1,'']]],
+  ['f7_1',['Visual Scroll Mode (&lt;span class=&quot;tt&quot;&gt;F7&lt;/span&gt;)',['../md_docs_2user-guide.html#autotoc_md46',1,'']]],
+  ['failures_2',['6. Missing Submodules or Build Failures',['../md_docs_2troubleshooting.html#sec-missing-submodules',1,'']]],
+  ['faq_3',['5. &lt;a class=&quot;el&quot; href=&quot;md_docs_2troubleshooting.html&quot; title=&quot;🛠️ Sioyek Troubleshooting &amp;amp; FAQ Guide&quot;&gt;🛠️ Troubleshooting &amp;amp; FAQ&lt;/a&gt;',['../md_docs_2hub.html#autotoc_md28',1,'']]],
+  ['faq_20guide_4',['🛠️ Sioyek Troubleshooting &amp;amp; FAQ Guide',['../md_docs_2troubleshooting.html',1,'']]],
+  ['fast_20navigation_5',['Fast Navigation',['../md_docs_2user-guide.html#autotoc_md38',1,'']]],
+  ['file_20locations_6',['📁 File Locations',['../md_docs_2configuration.html#autotoc_md71',1,'']]],
+  ['file_20or_20directory_7',['Error: &lt;span class=&quot;tt&quot;&gt;mupdf/Makefile: No such file or directory&lt;/span&gt;',['../md_docs_2troubleshooting.html#autotoc_md131',1,'']]],
+  ['finding_20documents_8',['Opening and Finding Documents',['../md_docs_2user-guide.html#autotoc_md37',1,'']]],
+  ['fixes_20for_20qt_206_2012_20x_20and_20wayland_201_2026_200_9',['Local fixes for Qt 6.12.x and Wayland 1.26.0',['../md_BUILDING.html#autotoc_md161',1,'']]],
+  ['fixtures_10',['5. Benchmarking &amp;amp; Fixtures',['../md_BUILDING.html#autotoc_md156',1,'']]],
+  ['focus_20aids_11',['Visual Ruler &amp;amp; Focus Aids',['../md_docs_2keybindings.html#visual-ruler--focus-aids',1,'']]],
+  ['focus_20ruler_12',['The Focus Ruler',['../md_docs_2user-guide.html#autotoc_md45',1,'']]],
+  ['following_20upstream_13',['Following upstream',['../md_BUILDING.html#autotoc_md163',1,'']]],
+  ['for_20high_20battery_20life_14',['🖤 5. Pure Black OLED (True Deep Black for High Battery Life)',['../md_docs_2configuration.html#autotoc_md78',1,'']]],
+  ['for_20portals_15',['3. Hyprland / Sway Window Rules for Portals',['../md_docs_2troubleshooting.html#sec-window-rules',1,'']]],
+  ['for_20qt_206_2012_20x_20and_20wayland_201_2026_200_16',['Local fixes for Qt 6.12.x and Wayland 1.26.0',['../md_BUILDING.html#autotoc_md161',1,'']]],
+  ['forcing_20x11_20xwayland_17',['Forcing X11 / XWayland',['../md_docs_2troubleshooting.html#autotoc_md120',1,'']]],
+  ['forward_20search_18',['🎯 Command Line Forward Search',['../md_docs_2synctex.html#autotoc_md110',1,'']]],
+  ['fractional_20displays_20125_20150_20175_19',['Blurry Text on Fractional Displays (125%, 150%, 175%)',['../md_docs_2troubleshooting.html#autotoc_md119',1,'']]],
+  ['fractional_20scaling_20',['2. Wayland Compositors &amp;amp; Fractional Scaling',['../md_docs_2troubleshooting.html#sec-wayland-scaling',1,'']]],
+  ['ftplugin_20tex_20lua_20or_20init_20lua_20_3a_21',['In Neovim configuration (&lt;span class=&quot;tt&quot;&gt;~/.config/nvim/after/ftplugin/tex.lua&lt;/span&gt; or &lt;span class=&quot;tt&quot;&gt;init.lua&lt;/span&gt;):',['../md_docs_2synctex.html#autotoc_md97',1,'']]]
+];

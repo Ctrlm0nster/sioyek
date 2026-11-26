@@ -1,0 +1,9 @@
+<map id="AddBookmarkFreetextCommand::on_text_change" name="AddBookmarkFreetextCommand::on_text_change">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,23,240,63"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a333a90667ea058f36537cd87251c283f" title=" " alt="" coords="322,5,453,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="240,29,308,23,308,28,240,35"/>
+<area shape="rect" id="Node000004" href="$classDocument.html#a8ae6a2825385324e6068453a4bcf51d2" title=" " alt="" coords="288,55,487,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="240,51,274,54,274,60,240,57"/>
+<area shape="rect" id="Node000003" href="$classDocumentView.html#acfa88cf915c8bae19ac83d1aa9b42dd1" title=" " alt="" coords="535,5,756,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="453,15,521,15,521,21,453,21"/>
+</map>

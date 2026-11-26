@@ -1,0 +1,9 @@
+<map id="MainWidget::move_visual_mark_command" name="MainWidget::move_visual_mark_command">
+<area shape="rect" id="Node000001" title=" " alt="" coords="288,69,479,109"/>
+<area shape="rect" id="Node000002" href="$classMoveVisualMarkDownCommand.html#a5666a2f1049a01c2f5808a4cf7b6bdc4" title=" " alt="" coords="5,5,240,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="287,69,204,48,205,43,289,63"/>
+<area shape="rect" id="Node000003" href="$classMoveVisualMarkUpCommand.html#a086d1790566b208d3f357d2d3ca82cc3" title=" " alt="" coords="15,69,231,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="274,92,231,92,231,87,274,87"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#a90ee19ed3124206e464a05af4c3f5a60" title=" " alt="" coords="31,134,215,159"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="281,115,241,124,183,137,182,131,239,119,279,110"/>
+</map>

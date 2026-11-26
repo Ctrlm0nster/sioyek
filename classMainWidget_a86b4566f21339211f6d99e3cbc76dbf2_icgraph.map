@@ -1,0 +1,9 @@
+<map id="MainWidget::on_next_text_suggestion" name="MainWidget::on_next_text_suggestion">
+<area shape="rect" id="Node000001" title=" " alt="" coords="475,37,635,77"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a50e717278f9543347db6c133dd27b773" title=" " alt="" coords="225,5,427,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="460,47,427,42,427,37,461,42"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#afdb97c4ee29c84c551f248cddb158c19" title=" " alt="" coords="250,69,402,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="461,73,403,81,402,76,461,68"/>
+<area shape="rect" id="Node000004" href="$classControlMenuCommand.html#a9689d2ec17682fa45db64aa93259c480" title=" " alt="" coords="5,69,177,109"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="236,92,178,92,178,87,236,87"/>
+</map>

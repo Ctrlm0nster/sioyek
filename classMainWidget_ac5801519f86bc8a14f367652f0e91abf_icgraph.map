@@ -1,0 +1,7 @@
+<map id="MainWidget::toggle_window_configuration" name="MainWidget::toggle_window_configuration">
+<area shape="rect" id="Node000001" title=" " alt="" coords="256,37,427,77"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a50e717278f9543347db6c133dd27b773" title=" " alt="" coords="6,5,207,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="242,46,207,42,208,36,243,41"/>
+<area shape="rect" id="Node000003" href="$classToggleWindowConfigurationCommand.html#a7524de7697b1df44ba86348d6c236808" title=" " alt="" coords="5,69,208,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="242,73,208,78,208,73,242,68"/>
+</map>

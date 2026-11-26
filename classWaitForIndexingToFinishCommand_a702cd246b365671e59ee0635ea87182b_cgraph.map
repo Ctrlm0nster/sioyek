@@ -1,0 +1,11 @@
+<map id="WaitForIndexingToFinishCommand::is_ready" name="WaitForIndexingToFinishCommand::is_ready">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,23,252,63"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#afa288cb70a42aace31263ce5dec44e11" title="Check whether document reference and equation indexing has completed." alt="" coords="300,23,463,63"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="252,41,286,41,286,46,252,46"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a333a90667ea058f36537cd87251c283f" title=" " alt="" coords="545,5,675,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="463,32,531,24,531,29,463,37"/>
+<area shape="rect" id="Node000005" href="$classDocument.html#afae386fa4c165a479bfbcc9ccc84ab59" title=" " alt="" coords="511,55,709,80"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="463,49,497,53,497,58,463,55"/>
+<area shape="rect" id="Node000004" href="$classDocumentView.html#acfa88cf915c8bae19ac83d1aa9b42dd1" title=" " alt="" coords="757,5,979,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="676,15,743,15,743,21,676,21"/>
+</map>

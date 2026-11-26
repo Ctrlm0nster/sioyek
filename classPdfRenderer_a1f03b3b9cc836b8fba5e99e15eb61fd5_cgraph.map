@@ -1,0 +1,17 @@
+<map id="PdfRenderer::find_rendered_page" name="PdfRenderer::find_rendered_page">
+<area shape="rect" id="Node000001" title="Look up a rendered page handle, returning a closest&#45;zoom placeholder if still rasterizing." alt="" coords="5,92,244,117"/>
+<area shape="rect" id="Node000002" href="$classPdfRenderer.html#a3ded798885c44631b3914f7ce06f5c91" title="Enqueue a high&#45;priority render request for a visible page or slice." alt="" coords="292,67,483,92"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="244,90,278,87,279,92,244,96"/>
+<area shape="rect" id="Node000006" href="$namespaceRenderImages.html#aa562a6c4eced40109083d2a999963389" title="Insert a rasterized QImage into the global image registry." alt="" coords="307,116,468,141"/>
+<area shape="poly" id="edge9_Node000001_Node000006" title=" " alt="" coords="244,113,293,117,293,123,244,118"/>
+<area shape="rect" id="Node000003" href="$utils_8h.html#acc73828ae75f80861741658a826cab35" title=" " alt="" coords="733,29,909,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="415,64,468,44,530,27,579,22,629,20,722,25,721,31,629,26,579,27,531,33,469,49,417,69"/>
+<area shape="rect" id="Node000004" href="$utils_8h.html#a39a5b112fe951f467ae0db37d5869dea" title=" " alt="" coords="545,67,671,92"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="483,77,530,77,530,82,483,82"/>
+<area shape="rect" id="Node000005" href="$utils_8h.html#a0fa7a29c491aed321ee4d854decb9d80" title=" " alt="" coords="531,140,685,165"/>
+<area shape="poly" id="edge7_Node000002_Node000005" title=" " alt="" coords="444,90,484,101,566,132,564,137,482,106,443,95"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="786,31,779,21,783,11,797,5,821,3,851,6,863,15,860,20,849,11,821,8,799,10,787,15,784,20,791,28"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="671,66,734,54,735,60,672,71"/>
+<area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="573,68,566,58,569,48,584,42,608,40,638,44,649,53,646,57,636,49,608,45,585,47,573,52,571,58,577,65"/>
+<area shape="poly" id="edge8_Node000005_Node000005" title=" " alt="" coords="573,142,566,132,569,122,584,116,608,113,638,117,649,126,646,130,636,122,608,119,585,121,573,126,571,131,577,138"/>
+</map>

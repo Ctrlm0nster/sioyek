@@ -1,0 +1,7 @@
+<map id="Portal::get_rectangle" name="Portal::get_rectangle">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,20,163,45"/>
+<area shape="rect" id="Node000002" href="$structAbsoluteRect.html#a25ab1a0f75b68895abb220e9b2237a32" title=" " alt="" coords="211,20,413,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,30,197,30,197,35,163,35"/>
+<area shape="rect" id="Node000003" href="$structEnhancedRect.html#ab425995677d1b2660335322e95478e5d" title=" " alt="" coords="461,5,639,60"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="413,30,448,30,448,35,413,35"/>
+</map>

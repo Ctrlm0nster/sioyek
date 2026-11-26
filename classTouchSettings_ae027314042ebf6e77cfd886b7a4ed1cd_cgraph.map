@@ -1,0 +1,21 @@
+<map id="TouchSettings::handleAllConfigs" name="TouchSettings::handleAllConfigs">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,229,187,269"/>
+<area shape="rect" id="Node000002" href="$classTouchConfigMenu.html#a7a4dc91c743754d57db9592ca1fb8157" title=" " alt="" coords="235,237,493,262"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,247,221,247,221,252,187,252"/>
+<area shape="rect" id="Node000003" href="$classMySortFilterProxyModel.html#a1802e526a7b0280724b15534fce61fb3" title=" " alt="" coords="563,5,750,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="371,235,396,199,434,150,483,99,540,55,551,49,554,54,543,60,486,103,438,154,400,202,376,238"/>
+<area shape="rect" id="Node000004" href="$classTouchConfigMenu.html#a8eb043459c073a02bfe1ea36f6de8ef5" title=" " alt="" coords="548,69,765,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="378,234,444,179,491,147,540,119,557,112,559,117,543,124,493,152,448,183,381,239"/>
+<area shape="rect" id="Node000005" href="$classTouchConfigMenu.html#a1cbf065d2a5aa8f940667814931749ed" title=" " alt="" coords="541,133,772,173"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="397,234,540,183,567,175,569,180,542,188,399,239"/>
+<area shape="rect" id="Node000006" href="$classTouchConfigMenu.html#a969b98604e9c55c48f5615836d361c18" title=" " alt="" coords="541,197,772,237"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="480,234,527,229,528,234,481,239"/>
+<area shape="rect" id="Node000007" href="$classTouchConfigMenu.html#a72ba8cf22edb44cdf2176223f7ba8e88" title=" " alt="" coords="546,261,767,301"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="481,259,532,265,532,270,480,265"/>
+<area shape="rect" id="Node000008" href="$classTouchConfigMenu.html#ac1806a7a1f0db55a54906b1c9ff30300" title=" " alt="" coords="547,325,767,365"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="399,260,542,311,569,319,567,324,540,316,397,265"/>
+<area shape="rect" id="Node000009" href="$classTouchConfigMenu.html#a70bb401e0643d665d095b6002ab8f859" title=" " alt="" coords="552,389,761,429"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="381,260,448,315,493,347,543,375,559,382,557,387,540,380,491,352,444,319,378,264"/>
+<area shape="rect" id="Node000010" href="$classTouchConfigMenu.html#a3b55189540e5e6245d4f6bf5a40c8867" title=" " alt="" coords="549,453,764,493"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="376,261,400,296,438,345,486,396,543,439,554,445,551,450,540,444,483,400,434,348,396,300,371,264"/>
+</map>

@@ -1,0 +1,19 @@
+<map id="PdfViewWidget::draw_stencil_rects" name="PdfViewWidget::draw_stencil_rects">
+<area shape="rect" id="Node000001" title=" " alt="" coords="979,113,1140,153"/>
+<area shape="rect" id="Node000002" href="$classPdfViewWidget.html#a9093142ddd2b558862f689a6dba4e69c" title=" " alt="" coords="745,5,906,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1011,109,930,66,884,48,886,43,932,62,1013,104"/>
+<area shape="rect" id="Node000003" href="$classPdfViewWidget.html#a7b983e7fb3cc4b306be2d531642a6594" title=" " alt="" coords="255,179,453,205"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="965,115,930,111,825,103,720,111,629,125,539,144,397,182,396,177,538,139,628,119,720,105,825,98,931,105,965,110"/>
+<area shape="rect" id="Node000005" href="$classPdfViewWidget.html#a8f99bf492104330993ed3c18b1b62884" title=" " alt="" coords="724,121,927,146"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="965,136,927,136,927,131,965,131"/>
+<area shape="rect" id="Node000006" href="$classPdfViewWidget.html#aaa2636bdec379330ae204553fdc4949b" title="Render the floating overview portal window." alt="" coords="501,172,672,212"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="965,154,931,160,795,177,672,188,672,183,794,171,930,155,965,149"/>
+<area shape="rect" id="Node000007" href="$classPdfViewWidget.html#a72f543e8dec4338681f70a9260ab17ec" title="Draw a specific document page onto the Vulkan swapchain." alt="" coords="720,246,931,271"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="1011,162,932,205,852,248,849,243,929,200,1008,158"/>
+<area shape="rect" id="Node000004" href="$classPdfViewWidget.html#ab1b6da7af4f4ecce9c051af6d2d5d8b0" title="Pure virtual hook called to record high&#45;level page and document draw calls." alt="" coords="5,179,207,205"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="241,195,207,195,207,189,241,189"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="487,195,454,195,454,189,487,189"/>
+<area shape="poly" id="edge8_Node000007_Node000003" title=" " alt="" coords="706,252,606,241,501,227,406,207,407,202,502,221,606,236,706,246"/>
+<area shape="poly" id="edge9_Node000007_Node000006" title=" " alt="" coords="765,245,659,215,660,210,767,240"/>
+<area shape="poly" id="edge10_Node000007_Node000007" title=" " alt="" coords="867,237,856,228,825,225,800,227,787,232,785,237,792,244,788,248,779,238,784,228,799,222,825,219,858,223,870,233"/>
+</map>

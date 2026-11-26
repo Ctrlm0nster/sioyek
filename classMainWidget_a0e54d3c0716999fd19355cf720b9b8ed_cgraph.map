@@ -1,0 +1,9 @@
+<map id="MainWidget::change_selected_highlight_text_annot" name="MainWidget::change_selected_highlight_text_annot">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,20,160,75"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a333a90667ea058f36537cd87251c283f" title=" " alt="" coords="246,5,377,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,35,232,25,233,31,161,40"/>
+<area shape="rect" id="Node000004" href="$classDocument.html#aab316c05d04d1da1ea2c6b2593e95af8" title=" " alt="" coords="208,55,415,95"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="161,54,195,58,194,64,160,59"/>
+<area shape="rect" id="Node000003" href="$classDocumentView.html#acfa88cf915c8bae19ac83d1aa9b42dd1" title=" " alt="" coords="463,5,684,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="377,15,449,15,449,21,377,21"/>
+</map>

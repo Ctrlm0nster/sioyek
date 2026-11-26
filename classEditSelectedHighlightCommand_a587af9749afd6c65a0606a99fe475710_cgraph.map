@@ -1,0 +1,11 @@
+<map id="EditSelectedHighlightCommand::perform" name="EditSelectedHighlightCommand::perform">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,27,235,67"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a0e54d3c0716999fd19355cf720b9b8ed" title=" " alt="" coords="283,20,437,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="235,45,269,45,269,50,235,50"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a333a90667ea058f36537cd87251c283f" title=" " alt="" coords="523,5,654,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="438,35,510,25,510,31,438,40"/>
+<area shape="rect" id="Node000005" href="$classDocument.html#aab316c05d04d1da1ea2c6b2593e95af8" title=" " alt="" coords="485,55,692,95"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="438,54,472,58,471,64,438,59"/>
+<area shape="rect" id="Node000004" href="$classDocumentView.html#acfa88cf915c8bae19ac83d1aa9b42dd1" title=" " alt="" coords="740,5,961,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="654,15,726,15,726,21,654,21"/>
+</map>

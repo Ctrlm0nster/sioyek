@@ -1,0 +1,15 @@
+<map id="command_requires_text" name="command_requires_text">
+<area shape="rect" id="Node000001" title=" " alt="" coords="764,54,944,79"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="894,45,884,36,854,33,830,35,817,40,815,45,822,52,817,56,810,46,814,36,829,30,854,27,886,31,898,41"/>
+<area shape="rect" id="Node000002" href="$classCustomCommand.html#a96d5ca48e91205280c774037e2b7fbb3" title=" " alt="" coords="540,5,716,45"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="770,54,716,44,717,39,771,49"/>
+<area shape="rect" id="Node000003" href="$utils_8h.html#a500a5a1764090c535ad41197d75c10db" title=" " alt="" coords="559,94,697,119"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="768,84,698,97,697,92,767,79"/>
+<area shape="poly" id="edge6_Node000003_Node000003" title=" " alt="" coords="668,85,658,76,628,73,604,75,591,80,589,85,596,92,591,96,584,86,588,76,603,70,628,67,660,71,672,81"/>
+<area shape="rect" id="Node000004" href="$classDocument.html#a563e7101c12ced620ef7a0b79ff282de" title=" " alt="" coords="265,69,492,94"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="545,101,492,96,493,90,546,96"/>
+<area shape="rect" id="Node000006" href="$utils_8h.html#a3cccc2b48bd37eee595dd3bd2b5c5003" title=" " alt="" coords="309,118,448,143"/>
+<area shape="poly" id="edge7_Node000003_Node000006" title=" " alt="" coords="545,117,449,127,448,121,545,112"/>
+<area shape="rect" id="Node000005" href="$classEmbedAnnotationsCommand.html#a95641a6515ff1081107fa19955c10771" title=" " alt="" coords="5,61,217,101"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="252,84,218,84,218,79,252,79"/>
+</map>

@@ -1,0 +1,15 @@
+<map id="TouchSearchButtons::TouchSearchButtons" name="TouchSearchButtons::TouchSearchButtons">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,69,167,109"/>
+<area shape="rect" id="Node000002" href="$classTouchSearchButtons.html#a3e59291b9362e8c8fcc5ab17e3c790f7" title=" " alt="" coords="215,5,368,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,67,213,47,214,52,152,72"/>
+<area shape="rect" id="Node000004" href="$classTouchSearchButtons.html#a77b4efd06f77e5e10270820b9e6093ab" title=" " alt="" coords="215,69,368,109"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="167,87,200,87,200,92,167,92"/>
+<area shape="rect" id="Node000006" href="$classTouchSearchButtons.html#a45b5c6f9647842b734e189e6e225de65" title=" " alt="" coords="215,133,368,173"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="152,107,214,127,213,132,150,112"/>
+<area shape="rect" id="Node000003" href="$classTouchSearchButtons.html#a8227d61cc483ae793c0278c98e010646" title=" " alt="" coords="416,5,569,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="368,23,402,23,402,28,368,28"/>
+<area shape="rect" id="Node000005" href="$classTouchSearchButtons.html#a57b5240b5db523c0841e7f0d2a2b15ce" title=" " alt="" coords="416,69,569,109"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="368,87,402,87,402,92,368,92"/>
+<area shape="rect" id="Node000007" href="$classTouchSearchButtons.html#ae072733696572464126a37e8926e98b1" title=" " alt="" coords="416,133,569,173"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="368,151,402,151,402,156,368,156"/>
+</map>

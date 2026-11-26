@@ -1,0 +1,7 @@
+<map id="MainWidget::goto_page_with_label" name="MainWidget::goto_page_with_label">
+<area shape="rect" id="Node000001" title=" " alt="" coords="239,37,415,77"/>
+<area shape="rect" id="Node000002" href="$classGotoBeginningCommand.html#a32522a3a105773de4aa0e78a2e29c604" title=" " alt="" coords="5,5,191,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="225,46,190,41,191,36,226,41"/>
+<area shape="rect" id="Node000003" href="$classGotoPageWithLabel.html#a0eeae66d36aa09161abe4aa22abe0c1c" title=" " alt="" coords="19,69,177,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="226,74,177,81,177,76,225,69"/>
+</map>

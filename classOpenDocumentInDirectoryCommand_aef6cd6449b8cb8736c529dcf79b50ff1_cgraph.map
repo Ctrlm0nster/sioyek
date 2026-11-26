@@ -1,0 +1,8 @@
+<map id="OpenDocumentInDirectoryCommand::perform" name="OpenDocumentInDirectoryCommand::perform">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,22,268,62"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a707c7945190b5da6799af20f42e1f2cc" title="Open a PDF document from a filesystem path." alt="" coords="316,29,528,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="268,39,302,39,302,45,268,45"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="387,31,380,21,384,11,398,5,422,3,451,6,463,15,460,20,449,11,422,8,400,10,388,15,385,20,392,28"/>
+<area shape="rect" id="Node000003" href="$classPath.html#ab110e4586145d1e61dc3e1ba90d43799" title=" " alt="" coords="576,29,691,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="528,39,562,39,562,45,528,45"/>
+</map>

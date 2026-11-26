@@ -1,0 +1,7 @@
+<map id="DocumentView::get_page_offset" name="DocumentView::get_page_offset">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,35,193,75"/>
+<area shape="rect" id="Node000002" href="$classDocument.html#adbcc93f0b9462518db6e06db7387732d" title="Get the cumulative vertical document offset up to the top of the given page." alt="" coords="243,5,411,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,40,229,35,230,41,194,45"/>
+<area shape="rect" id="Node000003" href="$classDocument.html#a2f79df9ddd1b39e93b5dfb1dbef13ec3" title="Get total number of pages in the document." alt="" coords="241,70,413,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="194,64,228,68,228,73,193,69"/>
+</map>

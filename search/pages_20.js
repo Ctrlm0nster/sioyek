@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['validation_0',['4. Packaging &amp;amp; Validation',['../md_BUILDING.html#autotoc_md155',1,'']]],
+  ['vector_20overlay_20blending_1',['5. Transparent Vector Overlay Blending',['../md_docs_2architecture.html#sec-overlay',1,'']]],
+  ['verification_2',['🧪 Testing &amp;amp; Verification',['../index.html#autotoc_md15',1,'']]],
+  ['verification_20status_20and_20known_20issues_3',['Verification status and known issues',['../md_RELEASE.html#autotoc_md179',1,'']]],
+  ['verify_20a_20clean_20candidate_20checkout_4',['Verify a clean candidate checkout',['../md_RELEASE.html#autotoc_md182',1,'']]],
+  ['verifying_20vulkan_20hardware_20support_5',['Verifying Vulkan Hardware Support',['../md_docs_2troubleshooting.html#autotoc_md115',1,'']]],
+  ['version_20and_20tag_20policy_6',['Version and tag policy',['../md_RELEASE.html#autotoc_md183',1,'']]],
+  ['versioning_20and_20upstream_20synchronization_7',['Versioning and upstream synchronization',['../md_PACKAGING.html#autotoc_md176',1,'']]],
+  ['viewing_20documentation_8',['Viewing documentation',['../md_BUILDING.html#autotoc_md168',1,'']]],
+  ['vim_20marks_9',['1. Single-Key Vim Marks',['../md_docs_2user-guide.html#autotoc_md48',1,'']]],
+  ['vimtex_10',['1. Neovim with &lt;span class=&quot;tt&quot;&gt;vimtex&lt;/span&gt;',['../md_docs_2synctex.html#autotoc_md95',1,'']]],
+  ['visual_20ruler_20focus_20aids_11',['Visual Ruler &amp;amp; Focus Aids',['../md_docs_2keybindings.html#visual-ruler--focus-aids',1,'']]],
+  ['visual_20ruler_20visual_20scroll_3a_20eliminating_20eye_20strain_12',['6. Visual Ruler &amp;amp; Visual Scroll: Eliminating Eye Strain',['../md_docs_2user-guide.html#sec-visual-ruler',1,'']]],
+  ['visual_20scroll_20mode_20f7_13',['Visual Scroll Mode (&lt;span class=&quot;tt&quot;&gt;F7&lt;/span&gt;)',['../md_docs_2user-guide.html#autotoc_md46',1,'']]],
+  ['visual_20scroll_3a_20eliminating_20eye_20strain_14',['6. Visual Ruler &amp;amp; Visual Scroll: Eliminating Eye Strain',['../md_docs_2user-guide.html#sec-visual-ruler',1,'']]],
+  ['visual_20studio_20code_20with_20latex_20workshop_15',['2. Visual Studio Code with LaTeX Workshop',['../md_docs_2synctex.html#autotoc_md99',1,'']]],
+  ['vs_20code_20settings_20json_3a_16',['In VS Code &lt;span class=&quot;tt&quot;&gt;settings.json&lt;/span&gt;:',['../md_docs_2synctex.html#autotoc_md101',1,'']]],
+  ['vulkan_20hardware_20rendering_20qrhiwidget_17',['2. Vulkan Hardware Rendering (&lt;span class=&quot;tt&quot;&gt;QRhiWidget&lt;/span&gt;)',['../md_docs_2architecture.html#sec-vulkan',1,'']]],
+  ['vulkan_20hardware_20support_18',['Verifying Vulkan Hardware Support',['../md_docs_2troubleshooting.html#autotoc_md115',1,'']]],
+  ['vulkan_20icd_20driver_19',['Missing Vulkan ICD Driver',['../md_docs_2troubleshooting.html#autotoc_md116',1,'']]],
+  ['vulkan_20linux_20modernization_20',['[3.0.0-dev] — Vulkan &amp;amp; Linux Modernization',['../md_CHANGELOG.html#autotoc_md188',1,'']]],
+  ['vulkan_20setup_20gpu_20driver_20diagnostics_21',['1. Vulkan Setup &amp;amp; GPU Driver Diagnostics',['../md_docs_2troubleshooting.html#sec-vulkan-setup',1,'']]],
+  ['vulkan_20wayland_20edition_22',['📖 Sioyek (Vulkan &amp;amp; Wayland Edition)',['../index.html',1,'']]]
+];

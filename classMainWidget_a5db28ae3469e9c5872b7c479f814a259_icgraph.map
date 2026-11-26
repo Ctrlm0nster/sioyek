@@ -1,0 +1,7 @@
+<map id="MainWidget::show_command_palette" name="MainWidget::show_command_palette">
+<area shape="rect" id="Node000001" title=" " alt="" coords="255,37,469,77"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#aceff3feac51f6fd987ecd9a02fbb24d2" title=" " alt="" coords="9,5,203,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="241,45,203,40,203,35,241,40"/>
+<area shape="rect" id="Node000003" href="$classCommandPaletteCommand.html#a9e93d8ad50e8b4c1810910874f5e70fb" title=" " alt="" coords="5,69,207,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="241,75,207,79,207,74,241,70"/>
+</map>

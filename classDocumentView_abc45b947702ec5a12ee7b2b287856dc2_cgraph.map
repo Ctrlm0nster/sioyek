@@ -1,0 +1,11 @@
+<map id="DocumentView::normalized_to_window_rect" name="DocumentView::normalized_to_window_rect">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,69,207,109"/>
+<area shape="rect" id="Node000002" href="$structEnhancedRect.html#a4d0866a1bcd13c32ebfa6e329d2dff7b" title=" " alt="" coords="256,5,425,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,67,253,46,255,51,181,72"/>
+<area shape="rect" id="Node000003" href="$structNormalizedWindowPos.html#a2193e14a1234713edb6661dd5b48860c" title=" " alt="" coords="255,69,427,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="207,87,241,87,241,92,207,92"/>
+<area shape="rect" id="Node000005" href="$structEnhancedRect.html#a2f9b9a7752abd1b699a5693c1632775d" title=" " alt="" coords="255,134,426,159"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="189,107,275,128,274,133,188,112"/>
+<area shape="rect" id="Node000004" href="$classDocumentView.html#a2d5a9024e2807a2e5308f28002267886" title=" " alt="" coords="475,69,676,109"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="427,87,461,87,461,92,427,92"/>
+</map>

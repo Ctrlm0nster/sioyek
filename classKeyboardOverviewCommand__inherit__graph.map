@@ -1,0 +1,7 @@
+<map id="KeyboardOverviewCommand" name="KeyboardOverviewCommand">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,652,235,797"/>
+<area shape="rect" id="Node000002" href="$classTextCommand.html" title=" " alt="" coords="22,459,218,604"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="123,618,123,651,117,651,117,618"/>
+<area shape="rect" id="Node000003" href="$classCommand.html" title=" " alt="" coords="7,5,233,411"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="123,424,123,458,117,458,117,424"/>
+</map>

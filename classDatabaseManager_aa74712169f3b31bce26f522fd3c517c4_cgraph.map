@@ -1,0 +1,9 @@
+<map id="DatabaseManager::get_version" name="DatabaseManager::get_version">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,59,176,99"/>
+<area shape="rect" id="Node000002" href="$database_8cpp.html#ad77f45a9efe658d1de01992ff6d673c4" title=" " alt="" coords="237,29,341,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,61,223,52,224,57,177,66"/>
+<area shape="rect" id="Node000003" href="$database_8cpp.html#ad32172fe41dce440d0d4e118142c3619" title=" " alt="" coords="224,103,355,128"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="177,92,211,98,210,104,176,97"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="257,31,250,21,253,11,267,5,289,3,316,6,328,15,324,19,314,11,289,8,268,10,257,15,255,20,261,28"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="257,104,250,94,253,84,267,78,289,76,316,80,328,88,324,93,314,84,289,81,268,83,257,88,255,94,261,101"/>
+</map>

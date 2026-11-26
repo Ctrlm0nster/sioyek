@@ -1,0 +1,13 @@
+<map id="TouchCheckbox::canceled" name="TouchCheckbox::canceled">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1037,31,1227,56"/>
+<area shape="rect" id="Node000002" href="$classBoolConfigUI.html#ac043be812245b47bbc86a7418a94ba34" title=" " alt="" coords="244,5,443,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1032,32,989,27,840,19,691,16,443,18,443,12,691,10,840,14,990,22,1033,26"/>
+<area shape="rect" id="Node000004" href="$classTouchCheckbox.html#ae284553284c773cc005827d4ea438ae2" title=" " alt="" coords="491,31,723,56"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="1023,46,723,46,723,41,1023,41"/>
+<area shape="rect" id="Node000005" href="$classTouchCheckbox.html#a4c23ff0cff28ceeef16aad02f2c7ec78" title=" " alt="" coords="771,81,989,107"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="1055,61,944,84,943,79,1054,56"/>
+<area shape="rect" id="Node000003" href="$classConfigCommand.html#aa22f004288468b2f112aa0eefe6dd66e" title=" " alt="" coords="5,5,196,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="230,21,196,21,196,15,230,15"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="477,34,442,30,443,25,477,28"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="797,81,675,59,676,53,798,76"/>
+</map>

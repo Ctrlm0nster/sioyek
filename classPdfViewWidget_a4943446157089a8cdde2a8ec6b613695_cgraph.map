@@ -1,0 +1,7 @@
+<map id="PdfViewWidget::is_window_point_in_overview_border" name="PdfViewWidget::is_window_point_in_overview_border">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,37,203,77"/>
+<area shape="rect" id="Node000002" href="$classPdfViewWidget.html#a594294555eedce1ef938e61962b2fcdd" title=" " alt="" coords="251,5,428,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="203,41,237,37,238,42,203,47"/>
+<area shape="rect" id="Node000003" href="$classPdfViewWidget.html#aac773ef7296693771a400b3368b250b6" title="Retrieve the current overview portal state." alt="" coords="264,69,415,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="203,68,251,75,250,80,203,73"/>
+</map>

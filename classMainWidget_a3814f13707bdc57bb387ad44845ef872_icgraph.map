@@ -1,0 +1,15 @@
+<map id="MainWidget::handle_vertical_move" name="MainWidget::handle_vertical_move">
+<area shape="rect" id="Node000001" title=" " alt="" coords="559,127,711,167"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a3291bc50028c82edd7a6ee1caea550aa" title=" " alt="" coords="304,69,495,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="544,127,481,112,482,107,546,122"/>
+<area shape="rect" id="Node000006" href="$classMoveDownCommand.html#ac5968da15acc40a91c1b3ff48b6a4c31" title=" " alt="" coords="288,134,511,159"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="545,149,511,149,511,144,545,144"/>
+<area shape="rect" id="Node000007" href="$classMoveUpCommand.html#a08de93e05786cb345d17737999f573c9" title=" " alt="" coords="298,183,501,209"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="546,168,461,186,460,181,545,163"/>
+<area shape="rect" id="Node000003" href="$classMoveVisualMarkDownCommand.html#a5666a2f1049a01c2f5808a4cf7b6bdc4" title=" " alt="" coords="5,5,240,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="298,69,209,48,210,43,299,64"/>
+<area shape="rect" id="Node000004" href="$classMoveVisualMarkUpCommand.html#a086d1790566b208d3f357d2d3ca82cc3" title=" " alt="" coords="15,69,231,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="290,92,231,92,231,87,290,87"/>
+<area shape="rect" id="Node000005" href="$classMainWidget.html#a90ee19ed3124206e464a05af4c3f5a60" title=" " alt="" coords="31,134,215,159"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="291,114,185,137,184,131,290,109"/>
+</map>

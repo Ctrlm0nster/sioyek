@@ -1,0 +1,14 @@
+<map id="SelectRulerTextCommand::perform" name="SelectRulerTextCommand::perform">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,47,196,87"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#ad177d4d828ad598ff636ef4bbef7a671" title=" " alt="" coords="244,47,396,87"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="196,65,230,65,230,70,196,70"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a333a90667ea058f36537cd87251c283f" title=" " alt="" coords="488,5,619,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="396,49,479,31,480,36,397,54"/>
+<area shape="rect" id="Node000005" href="$classDocumentView.html#a63920889d1de3ad80f9134659c1bfa86" title=" " alt="" coords="444,55,663,80"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="396,65,430,65,430,70,396,70"/>
+<area shape="rect" id="Node000006" href="$classDocument.html#ab270060959a7c9e7897d1b05946df73c" title=" " alt="" coords="478,129,629,169"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="379,85,483,122,481,127,377,90"/>
+<area shape="rect" id="Node000004" href="$classDocumentView.html#acfa88cf915c8bae19ac83d1aa9b42dd1" title=" " alt="" coords="711,5,932,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="619,15,697,15,697,21,619,21"/>
+<area shape="poly" id="edge6_Node000006_Node000006" title=" " alt="" coords="510,129,507,119,514,110,530,104,553,102,580,105,595,112,593,117,579,110,553,107,531,109,518,114,513,120,515,128"/>
+</map>

@@ -1,0 +1,18 @@
+<map id="MainWidget::set_color_mode_to_system_theme" name="MainWidget::set_color_mode_to_system_theme">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,63,196,103"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#aa294a163ec9600c80200dde45750ed5c" title=" " alt="" coords="257,120,439,160"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="188,100,249,114,248,120,187,105"/>
+<area shape="rect" id="Node000005" href="$classMainWidget.html#ac976171898983d190dc50e9a02a4d2b9" title=" " alt="" coords="244,70,452,95"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="196,80,231,80,231,85,196,85"/>
+<area shape="rect" id="Node000007" href="$classMainWidget.html#ae649e7af6111baaecc900a7b30a2929d" title=" " alt="" coords="244,21,452,46"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="196,61,270,46,271,51,197,66"/>
+<area shape="rect" id="Node000003" href="$classPdfViewWidget.html#aea6a2a5bf26e4933cddcc0ff71c17d77" title="Retrieve the currently active color palette." alt="" coords="501,69,659,109"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="439,117,487,107,488,112,441,123"/>
+<area shape="rect" id="Node000004" href="$classPdfViewWidget.html#accddf092c58f7c770b74de93bbab6349" title=" " alt="" coords="500,133,660,173"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="440,143,486,145,486,151,440,148"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="452,83,487,84,487,89,452,88"/>
+<area shape="rect" id="Node000006" href="$classPdfViewWidget.html#ac28081129de645e777f5536e5afea34d" title=" " alt="" coords="505,5,655,45"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="400,67,451,55,491,45,492,50,453,60,402,73"/>
+<area shape="poly" id="edge8_Node000007_Node000003" title=" " alt="" coords="405,44,453,55,488,63,486,69,451,60,404,49"/>
+<area shape="poly" id="edge9_Node000007_Node000006" title=" " alt="" coords="452,27,491,26,492,31,452,32"/>
+</map>

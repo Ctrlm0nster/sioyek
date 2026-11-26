@@ -1,0 +1,13 @@
+<map id="TouchTextEdit::TouchTextEdit" name="TouchTextEdit::TouchTextEdit">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,56,213,81"/>
+<area shape="rect" id="Node000002" href="$classTouchTextEdit.html#a70ef2c2bd2e180df8a335aaa32814256" title=" " alt="" coords="525,5,707,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,53,194,32,261,15,325,8,391,4,512,7,512,12,391,10,326,13,262,21,196,37,140,58"/>
+<area shape="rect" id="Node000003" href="$classTouchTextEdit.html#aff270c3beae5e0300d5f288104ad4048" title=" " alt="" coords="524,107,708,132"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="214,76,511,106,510,111,214,82"/>
+<area shape="rect" id="Node000004" href="$classTouchTextEdit.html#af31a86844933f34fa557a0bc506e0b5c" title=" " alt="" coords="265,31,472,56"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="213,56,251,52,252,57,214,61"/>
+<area shape="rect" id="Node000005" href="$classTouchTextEdit.html#ac0a4fbc9d46f523baa3caa7c3a26247a" title=" " alt="" coords="261,132,476,157"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="154,79,312,126,311,131,153,84"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="472,30,511,26,512,31,473,35"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="476,131,510,127,511,133,477,136"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="PdfViewWidget::bind_program" name="PdfViewWidget::bind_program">
+<area shape="rect" id="Node000001" title=" " alt="" coords="979,22,1136,62"/>
+<area shape="rect" id="Node000002" href="$classPdfViewWidget.html#a72f543e8dec4338681f70a9260ab17ec" title="Draw a specific document page onto the Vulkan swapchain." alt="" coords="720,29,931,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="965,45,931,45,931,39,965,39"/>
+<area shape="poly" id="edge6_Node000002_Node000002" title=" " alt="" coords="867,20,856,11,825,8,800,10,787,15,785,20,792,27,788,31,779,21,784,11,799,5,825,3,858,7,870,16"/>
+<area shape="rect" id="Node000003" href="$classPdfViewWidget.html#a7b983e7fb3cc4b306be2d531642a6594" title=" " alt="" coords="255,29,453,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="706,41,672,41,501,41,454,42,453,36,501,35,672,35,706,36"/>
+<area shape="rect" id="Node000005" href="$classPdfViewWidget.html#aaa2636bdec379330ae204553fdc4949b" title="Render the floating overview portal window." alt="" coords="501,50,672,90"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="707,59,672,63,672,57,706,53"/>
+<area shape="rect" id="Node000004" href="$classPdfViewWidget.html#ab1b6da7af4f4ecce9c051af6d2d5d8b0" title="Pure virtual hook called to record high&#45;level page and document draw calls." alt="" coords="5,29,207,55"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="241,45,207,45,207,39,241,39"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="487,61,453,57,454,51,488,55"/>
+</map>

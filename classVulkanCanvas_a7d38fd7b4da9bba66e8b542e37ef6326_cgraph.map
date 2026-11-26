@@ -1,0 +1,13 @@
+<map id="VulkanCanvas::render" name="VulkanCanvas::render">
+<area shape="rect" id="Node000001" title="Execute the frame render pass and submit recorded draw commands." alt="" coords="5,104,168,129"/>
+<area shape="rect" id="Node000002" href="$namespaceRenderImages.html#afbb9dc17ac89254921bf8f8fbee8e1c9" title="Check whether an image with the specified handle exists in the registry." alt="" coords="226,5,405,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,102,153,71,215,40,236,32,238,37,217,44,156,75,108,106"/>
+<area shape="rect" id="Node000003" href="$namespaceRenderImages.html#a631aaac20ee592a63e1d5fedaac6f1aa" title="Retrieve a rasterized image associated with the specified handle." alt="" coords="243,55,388,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="146,101,242,80,243,86,147,107"/>
+<area shape="rect" id="Node000004" href="$classVulkanCanvas.html#ae45d79c1f186c793302e2164edaa08fe" title="Pure virtual hook called to record high&#45;level page and document draw calls." alt="" coords="219,104,412,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="168,114,205,114,205,119,168,119"/>
+<area shape="rect" id="Node000005" href="$namespaceRenderImages.html#ad7a2328b89e15e92fd95421e8ac4c5ab" title="Remove and release the rasterized image associated with the specified handle." alt="" coords="228,153,403,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="147,127,243,148,242,153,146,132"/>
+<area shape="rect" id="Node000006" href="$classVulkanCanvas.html#a8d178351331ebe6443104b9a2268ff6e" title="Pure virtual hook invoked when the widget surface dimensions change." alt="" coords="216,203,415,228"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="108,127,156,157,217,188,242,196,240,201,215,192,154,162,105,132"/>
+</map>

@@ -1,0 +1,57 @@
+<map id="PdfViewWidget::render_line" name="PdfViewWidget::render_line">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,455,208,480"/>
+<area shape="rect" id="Node000002" href="$classPdfViewWidget.html#a6cb29b49f6415a0ad4d7212a0dde802d" title=" " alt="" coords="261,65,437,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,453,163,338,205,259,254,182,284,145,314,113,318,116,288,148,258,185,210,262,168,341,116,455"/>
+<area shape="rect" id="Node000004" href="$classPdfViewWidget.html#ae2245d6ac27338b4bdbd7e7687471293" title=" " alt="" coords="269,195,430,235"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="112,453,165,367,206,313,254,263,287,240,291,244,258,267,210,316,169,370,117,456"/>
+<area shape="rect" id="Node000011" href="$classPdfViewWidget.html#a52b9b6462ef951ecbb4a60f6f4658b69" title=" " alt="" coords="263,447,436,487"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="208,465,249,465,249,470,208,470"/>
+<area shape="rect" id="Node000014" href="$classPdfViewWidget.html#a3d03fa9c3c2cb84272cdecbc053dc316" title=" " alt="" coords="271,511,428,551"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="157,478,260,505,259,510,155,483"/>
+<area shape="rect" id="Node000015" href="$classPdfViewWidget.html#a491f39fb013f97fd915757b8d628a543" title=" " alt="" coords="256,277,443,317"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="124,452,307,323,310,327,128,457"/>
+<area shape="rect" id="Node000020" href="$classPdfViewWidget.html#a7bab0ba4705c602a6d5682ab59f820a8" title=" " alt="" coords="273,639,425,679"/>
+<area shape="poly" id="edge27_Node000001_Node000020" title=" " alt="" coords="119,478,172,548,212,589,258,625,268,631,265,636,254,630,208,593,168,551,114,482"/>
+<area shape="rect" id="Node000023" href="$classPdfViewWidget.html#a38892c8c41c14a721702c25a09d03553" title=" " alt="" coords="268,575,431,615"/>
+<area shape="poly" id="edge30_Node000001_Node000023" title=" " alt="" coords="126,478,183,518,257,561,273,568,270,573,255,566,180,522,123,482"/>
+<area shape="rect" id="Node000003" href="$classVulkanCanvas.html#abbf1c49b9bebbd91e5b0bf9daf1a68eb" title="Disable a hardware graphics capability." alt="" coords="519,5,687,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="412,62,490,39,525,31,526,36,491,45,413,67"/>
+<area shape="rect" id="Node000005" href="$classVulkanCanvas.html#a3088711adf803be64f24c963788ec4b3" title="Bind a vertex or element index buffer." alt="" coords="509,55,697,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="365,193,417,141,452,112,489,89,505,82,508,87,492,94,455,117,421,145,369,197"/>
+<area shape="rect" id="Node000006" href="$classVulkanCanvas.html#a327ad225d0f26c0ab2b157294eaa666c" title="Upload raw vertex or index data into the currently bound buffer." alt="" coords="508,104,699,129"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="381,193,431,165,490,138,515,130,516,135,492,143,433,169,384,197"/>
+<area shape="rect" id="Node000007" href="$classVulkanCanvas.html#aa1495b5928cf9b4e31befa8254e803fe" title="Disable the specified vertex attribute array location." alt="" coords="491,153,716,179"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="430,197,523,179,524,184,431,202"/>
+<area shape="rect" id="Node000008" href="$classVulkanCanvas.html#a097af6f678abdc017d0b0dd61c289a8f" title="Render non&#45;indexed geometric primitives from bound vertex arrays." alt="" coords="506,203,701,228"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="430,213,492,213,492,218,430,218"/>
+<area shape="rect" id="Node000009" href="$classVulkanCanvas.html#aae4463152f0e7f9c876cac58f89fa089" title="Enable the specified vertex attribute array location." alt="" coords="492,252,715,277"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="431,228,524,247,523,252,430,234"/>
+<area shape="rect" id="Node000010" href="$classVulkanCanvas.html#a931f4e090f24750d259718098bc8c7ad" title="Select the active SPIR&#45;V shader program for subsequent draw commands." alt="" coords="504,301,703,327"/>
+<area shape="poly" id="edge9_Node000004_Node000010" title=" " alt="" coords="389,233,492,286,521,295,519,300,490,291,387,238"/>
+<area shape="rect" id="Node000012" href="$classVulkanCanvas.html#a42d8b1052353a366a166e1a78f2869db" title="Enable a hardware graphics capability (e.g." alt="" coords="521,499,686,524"/>
+<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="437,480,517,494,516,499,436,485"/>
+<area shape="rect" id="Node000013" href="$classVulkanCanvas.html#afa7dc856697cff8838d4ccf57c8021cc" title="Control the writing of individual bits in the stencil planes." alt="" coords="504,548,703,573"/>
+<area shape="poly" id="edge12_Node000011_Node000013" title=" " alt="" coords="418,485,444,497,468,517,478,526,492,534,510,541,508,546,489,539,475,530,465,521,441,502,416,490"/>
+<area shape="poly" id="edge19_Node000015_Node000003" title=" " alt="" coords="405,274,424,262,441,246,456,219,462,193,460,142,458,116,460,91,469,65,489,40,505,28,508,33,493,44,474,68,466,92,464,116,466,141,467,193,461,221,445,249,428,266,407,279"/>
+<area shape="poly" id="edge15_Node000015_Node000005" title=" " alt="" coords="403,274,424,262,441,246,453,225,459,206,461,167,465,128,473,108,489,89,495,84,499,88,493,93,477,111,470,129,467,167,465,207,458,228,445,249,427,266,406,279"/>
+<area shape="poly" id="edge18_Node000015_Node000006" title=" " alt="" coords="401,274,422,262,441,246,451,232,457,218,462,191,469,165,476,151,489,139,496,134,499,138,492,143,481,155,474,167,467,193,462,220,456,235,445,249,425,266,403,279"/>
+<area shape="poly" id="edge20_Node000015_Node000007" title=" " alt="" coords="395,274,441,245,455,230,463,216,473,201,489,188,501,182,504,186,492,192,477,205,468,219,459,234,444,249,398,279"/>
+<area shape="poly" id="edge21_Node000015_Node000008" title=" " alt="" coords="393,274,490,237,520,229,521,234,491,242,395,279"/>
+<area shape="poly" id="edge23_Node000015_Node000009" title=" " alt="" coords="442,282,488,276,489,282,443,288"/>
+<area shape="poly" id="edge26_Node000015_Node000010" title=" " alt="" coords="443,300,491,304,490,309,443,306"/>
+<area shape="poly" id="edge22_Node000015_Node000012" title=" " alt="" coords="366,315,435,414,470,461,492,485,508,494,506,498,489,489,466,464,431,417,362,318"/>
+<area shape="rect" id="Node000016" href="$classVulkanCanvas.html#a906c3ac2457bc5d718d6e78d05c69e9a" title="Set color blending factors for source and destination." alt="" coords="510,351,697,376"/>
+<area shape="poly" id="edge16_Node000015_Node000016" title=" " alt="" coords="416,314,491,335,530,345,529,350,490,341,415,319"/>
+<area shape="rect" id="Node000018" href="$classVulkanCanvas.html#a82b1c049b28eb1afcddd7205c191e732" title="Set a scalar float uniform." alt="" coords="511,400,696,425"/>
+<area shape="poly" id="edge24_Node000015_Node000018" title=" " alt="" coords="377,315,428,352,492,386,513,394,511,399,490,391,425,356,374,319"/>
+<area shape="rect" id="Node000019" href="$classVulkanCanvas.html#ad717b87c16b6da0d894b1583001f43ab" title="Set a 4D float vector uniform." alt="" coords="507,449,700,475"/>
+<area shape="poly" id="edge25_Node000015_Node000019" title=" " alt="" coords="366,315,417,376,452,408,492,436,506,442,503,447,489,440,449,413,413,379,362,318"/>
+<area shape="rect" id="Node000017" href="$classVulkanCanvas.html#a92ae8512130cbcae8ad69eb55238e5b6" title="Set separate color and alpha blending factors." alt="" coords="764,351,1009,376"/>
+<area shape="poly" id="edge17_Node000016_Node000017" title=" " alt="" coords="697,361,750,361,750,366,697,366"/>
+<area shape="rect" id="Node000021" href="$classVulkanCanvas.html#acefd530112efc1fb945ac70d03bfd97a" title="Configure stencil comparison function, reference value, and bitmask." alt="" coords="506,597,701,623"/>
+<area shape="poly" id="edge28_Node000020_Node000021" title=" " alt="" coords="425,642,524,623,525,628,426,647"/>
+<area shape="rect" id="Node000022" href="$classVulkanCanvas.html#aa9a43ab4bd0f62bf0a35b528ff4fa79e" title="Set actions to take on stencil and depth test pass or fail." alt="" coords="512,647,695,672"/>
+<area shape="poly" id="edge29_Node000020_Node000022" title=" " alt="" coords="425,657,498,657,498,662,425,662"/>
+<area shape="poly" id="edge31_Node000023_Node000021" title=" " alt="" coords="431,597,493,601,492,606,431,603"/>
+<area shape="poly" id="edge32_Node000023_Node000022" title=" " alt="" coords="418,613,491,633,527,641,526,646,490,638,417,618"/>
+</map>

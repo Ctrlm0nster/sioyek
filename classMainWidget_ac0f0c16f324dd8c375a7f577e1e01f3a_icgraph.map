@@ -1,0 +1,9 @@
+<map id="MainWidget::prev_state" name="MainWidget::prev_state">
+<area shape="rect" id="Node000001" title=" " alt="" coords="265,70,443,95"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a50e717278f9543347db6c133dd27b773" title=" " alt="" coords="11,5,212,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="286,69,196,48,197,43,287,64"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#ad62f01fe3ce406c87bd1a03bf5d8e56d" title=" " alt="" coords="5,70,217,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="251,85,218,85,218,80,251,80"/>
+<area shape="rect" id="Node000004" href="$classPrevStateCommand.html#afcb541afd6d46c910890bafc8e00f7af" title=" " alt="" coords="5,119,217,145"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="278,101,175,122,174,117,277,95"/>
+</map>

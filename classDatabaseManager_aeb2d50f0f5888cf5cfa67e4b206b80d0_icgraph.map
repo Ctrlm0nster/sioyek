@@ -1,0 +1,22 @@
+<map id="DatabaseManager::get_prev_path_hash_pairs" name="DatabaseManager::get_prev_path_hash_pairs">
+<area shape="rect" id="Node000001" title=" " alt="" coords="824,90,995,130"/>
+<area shape="rect" id="Node000002" href="$classDatabaseManager.html#aab1258137450325512140acbe68b12af" title=" " alt="" coords="327,33,521,73"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="875,83,830,49,803,34,775,23,738,14,700,10,623,11,551,21,490,35,488,30,550,16,623,5,700,4,739,9,777,18,805,29,833,45,878,78"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#a700a0caa5b70a06d1064e576f9f3cf65" title=" " alt="" coords="109,69,164,95"/>
+<area shape="poly" id="edge9_Node000001_Node000003" title=" " alt="" coords="810,109,164,85,164,80,810,104"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#aed824f25000e450c573cc842801aa6e0" title=" " alt="" coords="580,147,776,187"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="815,136,760,150,759,145,814,131"/>
+<area shape="rect" id="Node000007" href="$classMainWidget.html#a3a9ffe6c90958f61660bab5efb02b411" title=" " alt="" coords="602,211,754,251"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="874,140,829,172,777,202,749,214,747,209,775,197,826,167,871,136"/>
+<area shape="rect" id="Node000009" href="$classDatabaseManager.html#adbcb73891ae9b6ead2b8fb5c3997ea85" title=" " alt="" coords="589,33,767,73"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="814,89,759,75,760,70,815,84"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="314,66,165,82,164,76,313,61"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="175,69,187,61,185,55,169,50,137,48,102,51,86,57,86,60,89,63,110,73,108,78,85,67,81,61,82,54,100,46,137,43,170,45,189,52,192,63,179,73"/>
+<area shape="rect" id="Node000005" href="$classMainWidget.html#abbc988a935d8f34dd0c03bff3c3525da" title=" " alt="" coords="326,147,522,187"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="566,170,522,170,522,165,566,165"/>
+<area shape="rect" id="Node000006" href="$classScanNewFilesFromScanDirCommand.html#a5ced583435f5ef2f1668642454ea9faf" title=" " alt="" coords="5,147,268,187"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="312,170,268,170,268,165,312,165"/>
+<area shape="rect" id="Node000008" href="$classOpenAllDocsCommand.html#ace344b0ab35267332b963af090fc6e4c" title=" " alt="" coords="316,211,532,251"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="588,234,532,234,532,229,588,229"/>
+<area shape="poly" id="edge11_Node000009_Node000002" title=" " alt="" coords="575,55,521,55,521,50,575,50"/>
+</map>

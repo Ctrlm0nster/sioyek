@@ -1,0 +1,10 @@
+<map id="MainWidget::export_python_api" name="MainWidget::export_python_api">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,69,156,109"/>
+<area shape="rect" id="Node000002" href="$classCommandManager.html#a0bcbe48d83f74baca7cd8f3e41c0ec42" title=" " alt="" coords="204,5,379,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,67,211,47,213,52,148,72"/>
+<area shape="rect" id="Node000003" href="$classCommandManager.html#a3f7f6e148b5eec1808b1ac3a34004bdd" title=" " alt="" coords="204,69,379,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="157,87,191,87,191,92,157,92"/>
+<area shape="rect" id="Node000004" href="$utils_8cpp.html#af5eb848ff2acad495958f75cc6b1dca1" title=" " alt="" coords="211,158,371,183"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="134,107,245,150,244,155,132,112"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="257,160,249,150,253,140,268,134,291,131,321,135,332,144,329,148,319,140,291,137,269,139,257,143,255,149,261,156"/>
+</map>

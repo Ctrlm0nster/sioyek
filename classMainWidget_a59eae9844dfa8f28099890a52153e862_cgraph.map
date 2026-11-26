@@ -1,0 +1,9 @@
+<map id="MainWidget::change_selected_highlight_type" name="MainWidget::change_selected_highlight_type">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,23,189,63"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a333a90667ea058f36537cd87251c283f" title=" " alt="" coords="293,5,424,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,32,279,23,280,28,190,37"/>
+<area shape="rect" id="Node000004" href="$classDocument.html#a9b0a40b619375e52df395dc951090703" title=" " alt="" coords="237,55,480,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="190,49,224,52,223,58,189,54"/>
+<area shape="rect" id="Node000003" href="$classDocumentView.html#acfa88cf915c8bae19ac83d1aa9b42dd1" title=" " alt="" coords="528,5,749,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="424,15,514,15,514,21,424,21"/>
+</map>

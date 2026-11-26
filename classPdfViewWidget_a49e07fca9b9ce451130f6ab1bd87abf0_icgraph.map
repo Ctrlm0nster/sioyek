@@ -1,0 +1,13 @@
+<map id="PdfViewWidget::get_current_search_result" name="PdfViewWidget::get_current_search_result">
+<area shape="rect" id="Node000001" title=" " alt="" coords="768,37,937,77"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a2877d18e4fadd016fed85437549d056f" title=" " alt="" coords="501,5,720,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="754,47,720,42,721,37,755,42"/>
+<area shape="rect" id="Node000004" href="$classPdfViewWidget.html#aaa2636bdec379330ae204553fdc4949b" title="Render the floating overview portal window." alt="" coords="525,69,696,109"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="755,73,697,81,696,75,754,68"/>
+<area shape="rect" id="Node000003" href="$classSelectCurrentSearchMatchCommand.html#a7ec8dc4c1b121163e313138afe1040c7" title=" " alt="" coords="257,5,451,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="488,28,452,28,452,23,488,23"/>
+<area shape="rect" id="Node000005" href="$classPdfViewWidget.html#a7b983e7fb3cc4b306be2d531642a6594" title=" " alt="" coords="255,77,453,102"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="511,92,453,92,453,87,511,87"/>
+<area shape="rect" id="Node000006" href="$classPdfViewWidget.html#ab1b6da7af4f4ecce9c051af6d2d5d8b0" title="Pure virtual hook called to record high&#45;level page and document draw calls." alt="" coords="5,77,207,102"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="241,92,207,92,207,87,241,87"/>
+</map>

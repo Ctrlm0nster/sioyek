@@ -1,0 +1,10 @@
+<map id="prev_doc_with_name_callback" name="prev_doc_with_name_callback">
+<area shape="rect" id="Node000001" title=" " alt="" coords="708,29,868,69"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="826,18,812,11,788,8,767,10,754,15,749,21,752,28,747,30,744,20,751,10,766,5,788,3,814,6,828,13"/>
+<area shape="rect" id="Node000002" href="$classDatabaseManager.html#a1944a67087292e23c7988df81b4bedec" title=" " alt="" coords="469,22,660,77"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="694,52,660,52,660,47,694,47"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a37d8cc6a2d16eed35ecda0b11a2c4187" title=" " alt="" coords="269,29,421,69"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="456,52,422,52,422,47,456,47"/>
+<area shape="rect" id="Node000004" href="$classOpenPrevDocCommand.html#a7e56edf0c79680e58d6d1820586ab8f7" title=" " alt="" coords="5,29,221,69"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="256,52,222,52,222,47,256,47"/>
+</map>

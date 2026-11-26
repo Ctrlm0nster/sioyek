@@ -1,0 +1,16 @@
+<map id="TouchMacroEditor::TouchMacroEditor" name="TouchMacroEditor::TouchMacroEditor">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,63,228,103"/>
+<area shape="rect" id="Node000002" href="$classTouchMacroEditor.html#aa8347a647665468958057e3aa3dd987e" title=" " alt="" coords="539,10,741,35"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,60,211,36,275,16,339,7,404,4,525,7,525,12,404,9,340,12,277,21,212,41,157,65"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#ac122b2f672b273b1602b723d6facc458" title=" " alt="" coords="286,95,455,135"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="229,94,272,100,272,105,228,99"/>
+<area shape="rect" id="Node000005" href="$classTouchMacroEditor.html#aea88fe2115d694cf06d83b415292d690" title=" " alt="" coords="276,31,465,71"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="228,66,262,62,262,67,229,71"/>
+<area shape="rect" id="Node000006" href="$classTouchMacroEditor.html#a5c354f06caef831a70c69732bd40216b" title=" " alt="" coords="276,159,465,199"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="166,100,277,144,298,152,296,157,275,149,164,105"/>
+<area shape="rect" id="Node000004" href="$classCommandManager.html#a0bcbe48d83f74baca7cd8f3e41c0ec42" title=" " alt="" coords="553,95,727,135"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="456,112,539,112,539,117,456,117"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="465,38,525,32,525,37,466,44"/>
+<area shape="rect" id="Node000007" href="$classTouchMacroEditor.html#ae09febf7595442330f3cbb213510d3ef" title=" " alt="" coords="513,166,767,191"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="466,176,499,176,499,181,466,181"/>
+</map>

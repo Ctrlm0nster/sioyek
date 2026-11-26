@@ -1,0 +1,9 @@
+<map id="TouchListView" name="TouchListView">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,591,179,856"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="35,287,106,353"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="76,366,88,590,82,591,70,366"/>
+<area shape="rect" id="Node000003" href="$classMySortFilterProxyModel.html" title=" " alt="" coords="131,120,336,520"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="166,521,146,576,141,574,161,520"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="153,5,313,71"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="236,84,236,120,231,120,231,84"/>
+</map>

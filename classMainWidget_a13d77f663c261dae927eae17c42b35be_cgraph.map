@@ -1,0 +1,21 @@
+<map id="MainWidget::handle_goto_ruler_portal" name="MainWidget::handle_goto_ruler_portal">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,79,157,119"/>
+<area shape="rect" id="Node000002" href="$utils_8cpp.html#af5a6a6b750d0c5a169daddab9b47ac70" title=" " alt="" coords="235,29,387,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="157,77,205,65,243,55,244,60,206,70,159,82"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a16ffaa9550f24d06730e99966efb68bc" title=" " alt="" coords="228,79,395,119"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="158,97,214,97,214,102,158,102"/>
+<area shape="rect" id="Node000008" href="$classMainWidget.html#a707c7945190b5da6799af20f42e1f2cc" title="Open a PDF document from a filesystem path." alt="" coords="205,175,417,200"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="136,117,265,167,264,172,134,122"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="274,31,266,21,270,11,286,5,311,3,344,7,356,16,353,20,342,11,311,8,287,10,274,15,271,20,278,27"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#a333a90667ea058f36537cd87251c283f" title=" " alt="" coords="509,23,640,48"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="390,77,465,58,505,49,506,54,466,63,391,82"/>
+<area shape="rect" id="Node000006" href="$classDocument.html#a3ef1e990b285db179371973c148f817a" title=" " alt="" coords="473,73,676,113"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="395,95,460,93,460,98,395,100"/>
+<area shape="rect" id="Node000007" href="$classDocumentView.html#a63920889d1de3ad80f9134659c1bfa86" title=" " alt="" coords="465,137,684,163"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="395,113,495,132,494,137,394,118"/>
+<area shape="rect" id="Node000005" href="$classDocumentView.html#acfa88cf915c8bae19ac83d1aa9b42dd1" title=" " alt="" coords="732,23,953,48"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="640,33,718,33,718,38,640,38"/>
+<area shape="poly" id="edge10_Node000008_Node000008" title=" " alt="" coords="274,176,266,166,270,156,286,150,311,148,344,152,356,161,353,166,342,157,311,153,287,155,274,160,271,166,278,173"/>
+<area shape="rect" id="Node000009" href="$classPath.html#ab110e4586145d1e61dc3e1ba90d43799" title=" " alt="" coords="517,187,632,212"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="418,189,504,193,504,199,417,195"/>
+</map>

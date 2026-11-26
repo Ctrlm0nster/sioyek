@@ -1,0 +1,7 @@
+<map id="PdfViewWidget::enable_stencil" name="PdfViewWidget::enable_stencil">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,23,179,63"/>
+<area shape="rect" id="Node000002" href="$classVulkanCanvas.html#a42d8b1052353a366a166e1a78f2869db" title="Enable a hardware graphics capability (e.g." alt="" coords="243,5,409,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,31,229,26,230,31,179,37"/>
+<area shape="rect" id="Node000003" href="$classVulkanCanvas.html#afa7dc856697cff8838d4ccf57c8021cc" title="Control the writing of individual bits in the stencil planes." alt="" coords="227,55,425,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="179,50,213,53,213,58,179,55"/>
+</map>

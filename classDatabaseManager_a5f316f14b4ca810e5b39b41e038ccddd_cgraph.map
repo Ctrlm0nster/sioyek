@@ -1,0 +1,11 @@
+<map id="DatabaseManager::migrate_version_1_to_2" name="DatabaseManager::migrate_version_1_to_2">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,59,205,99"/>
+<area shape="rect" id="Node000002" href="$classDatabaseManager.html#a14543d1b0a9b69b9383d7464454e3960" title=" " alt="" coords="253,59,424,99"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="205,77,240,77,240,82,205,82"/>
+<area shape="rect" id="Node000003" href="$database_8cpp.html#ad77f45a9efe658d1de01992ff6d673c4" title=" " alt="" coords="473,29,577,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="424,60,459,52,461,58,425,65"/>
+<area shape="rect" id="Node000004" href="$database_8cpp.html#a00a323bdb137d2be95edb3baaaf1a17e" title=" " alt="" coords="472,103,579,128"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="425,93,459,100,458,105,424,98"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="494,31,488,21,491,11,504,5,525,3,551,6,562,15,558,19,549,11,525,8,506,10,495,15,493,20,499,28"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="494,104,488,94,491,84,504,78,525,76,551,80,562,88,558,92,549,84,525,81,506,83,495,88,493,94,499,101"/>
+</map>

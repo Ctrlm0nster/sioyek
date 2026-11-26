@@ -1,0 +1,9 @@
+<map id="PdfRenderer::free_all_resources_for_document" name="PdfRenderer::free_all_resources_for_document">
+<area shape="rect" id="Node000001" title="Evict all cached documents, responses, and textures associated with the given path." alt="" coords="5,35,195,75"/>
+<area shape="rect" id="Node000002" href="$classPdfRenderer.html#a6b5833abd80bb22311426c76c450010a" title="Evict least&#45;recently&#45;used page responses exceeding the cache capacity." alt="" coords="243,35,393,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="195,52,229,52,229,57,195,57"/>
+<area shape="rect" id="Node000003" href="$classPdfRenderer.html#a32b6e7465ea1f732bed0059c74b26778" title="Cancel all queued speculative (lookahead) render requests." alt="" coords="445,5,612,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="393,42,432,36,432,41,394,47"/>
+<area shape="rect" id="Node000004" href="$namespaceRenderImages.html#ad7a2328b89e15e92fd95421e8ac4c5ab" title="Remove and release the rasterized image associated with the specified handle." alt="" coords="441,70,616,95"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="394,62,428,67,428,72,393,67"/>
+</map>

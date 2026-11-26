@@ -1,0 +1,9 @@
+<map id="MainWidget::toggle_scratchpad_mode" name="MainWidget::toggle_scratchpad_mode">
+<area shape="rect" id="Node000001" title=" " alt="" coords="275,69,424,109"/>
+<area shape="rect" id="Node000002" href="$classCopyDrawingsFromScratchpadCommand.html#ac004a1efd48b43144f661a328d26ab81" title=" " alt="" coords="5,5,227,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="262,68,189,48,190,43,263,63"/>
+<area shape="rect" id="Node000003" href="$classCopyScreenshotToScratchpad.html#ae3d520b9e0b82672f5ea1692601ee887" title=" " alt="" coords="9,69,223,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="261,92,223,92,223,87,261,87"/>
+<area shape="rect" id="Node000004" href="$classToggleScratchpadMode.html#a2c7a94bfb239a8b16432e80c0f701733" title=" " alt="" coords="30,133,202,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="263,116,190,136,189,131,262,110"/>
+</map>

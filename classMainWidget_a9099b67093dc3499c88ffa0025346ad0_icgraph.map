@@ -1,0 +1,5 @@
+<map id="MainWidget::delete_freehand_drawings" name="MainWidget::delete_freehand_drawings">
+<area shape="rect" id="Node000001" title=" " alt="" coords="307,5,460,45"/>
+<area shape="rect" id="Node000002" href="$classDeleteFreehandDrawingsCommand.html#af489320e5416b96291c66b2c051987bd" title=" " alt="" coords="5,5,259,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="293,28,259,28,259,23,293,23"/>
+</map>

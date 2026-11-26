@@ -1,0 +1,7 @@
+<map id="BookMark::get_rectangle" name="BookMark::get_rectangle">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,20,191,45"/>
+<area shape="rect" id="Node000002" href="$structAbsoluteRect.html#a25ab1a0f75b68895abb220e9b2237a32" title=" " alt="" coords="239,20,441,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,30,225,30,225,35,191,35"/>
+<area shape="rect" id="Node000003" href="$structEnhancedRect.html#ab425995677d1b2660335322e95478e5d" title=" " alt="" coords="489,5,667,60"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="441,30,476,30,476,35,441,35"/>
+</map>

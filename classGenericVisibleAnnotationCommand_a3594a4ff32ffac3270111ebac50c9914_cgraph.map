@@ -1,0 +1,13 @@
+<map id="GenericVisibleAnnotationCommand::perform_with_selected_index" name="GenericVisibleAnnotationCommand::perform_with_selected_index">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,77,192,132"/>
+<area shape="rect" id="Node000002" href="$classGenericVisibleAnnotationCommand.html#ad0a9081aa88f760e8233289369e9adbe" title=" " alt="" coords="242,5,429,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="188,75,231,61,233,67,190,80"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a299dcabc8cd3f485362926dc69f70d69" title=" " alt="" coords="240,85,431,125"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="192,102,226,102,226,107,192,107"/>
+<area shape="rect" id="Node000005" href="$classMainWidget.html#a14ea1c520636c0461655e315ecad8a08" title=" " alt="" coords="240,149,431,189"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="193,127,248,143,247,148,191,132"/>
+<area shape="rect" id="Node000004" href="$classPdfViewWidget.html#a38206a82dd5b064ae54845a4b046e627" title=" " alt="" coords="479,85,679,125"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="431,102,465,102,465,107,431,107"/>
+<area shape="rect" id="Node000006" href="$classPdfViewWidget.html#a858d414421d2a85215be572b205fdcfd" title=" " alt="" coords="483,149,674,189"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="431,166,470,166,470,171,431,171"/>
+</map>

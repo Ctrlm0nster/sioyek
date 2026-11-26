@@ -1,0 +1,13 @@
+<map id="Document::add_pending_bookmark" name="Document::add_pending_bookmark">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,185,95"/>
+<area shape="rect" id="Node000002" href="$classDocument.html#a6837cedaeb30c03fe3e1cba789c0b8b2" title=" " alt="" coords="233,5,424,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="177,53,263,31,264,37,178,58"/>
+<area shape="rect" id="Node000004" href="$classDocument.html#add192a2d0e9f80da440a225547f12c87" title=" " alt="" coords="235,55,423,95"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="186,73,221,73,221,78,186,78"/>
+<area shape="rect" id="Node000005" href="$structAnnotation.html#a3b6fe498218278779b40d8bcc121d3f6" title=" " alt="" coords="255,119,402,159"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="170,93,243,113,241,118,168,98"/>
+<area shape="rect" id="Node000003" href="$classDocument.html#a19c247a93996cb294e872ae8cb80635a" title=" " alt="" coords="472,5,627,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="424,15,458,15,458,21,424,21"/>
+<area shape="rect" id="Node000006" href="$structAnnotation.html#aa9293d9583039a7ffb79a58b2813edce" title=" " alt="" coords="476,119,623,159"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="403,137,462,137,462,142,403,142"/>
+</map>

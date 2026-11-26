@@ -1,0 +1,9 @@
+<map id="MainWidget::execute_command" name="MainWidget::execute_command">
+<area shape="rect" id="Node000001" title="Dispatch and execute a Sioyek command by name (e.g." alt="" coords="255,63,413,103"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a50e717278f9543347db6c133dd27b773" title=" " alt="" coords="5,5,207,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="241,62,185,48,187,43,242,57"/>
+<area shape="rect" id="Node000003" href="$classCustomCommand.html#ac1a19c0cde26230159172c5225acdbf6" title=" " alt="" coords="7,70,205,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="241,85,206,85,206,80,241,80"/>
+<area shape="rect" id="Node000004" href="$classExecuteCommand.html#adb5f3c61987055002e02fbc60a193be4" title=" " alt="" coords="6,119,206,145"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="242,105,166,122,165,117,241,100"/>
+</map>

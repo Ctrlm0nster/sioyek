@@ -1,0 +1,11 @@
+<map id="FilteredSelectTableWindowClass&lt; T &gt;" name="FilteredSelectTableWindowClass&lt; T &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,1160,209,1429"/>
+<area shape="rect" id="Node000002" href="$classBaseSelectorWidget.html" title=" " alt="" coords="11,591,204,1111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="110,1125,110,1160,105,1160,105,1125"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="51,287,121,353"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="90,366,100,590,94,590,85,366"/>
+<area shape="rect" id="Node000004" href="$classMySortFilterProxyModel.html" title=" " alt="" coords="146,120,351,520"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="198,521,183,576,178,574,193,520"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="169,5,329,71"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="251,84,251,120,246,120,246,84"/>
+</map>

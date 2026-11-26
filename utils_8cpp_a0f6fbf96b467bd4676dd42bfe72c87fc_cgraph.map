@@ -1,0 +1,11 @@
+<map id="get_line_begins_and_ends_from_histogram" name="get_line_begins_and_ends_from_histogram">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,176,69"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="52,30,50,20,56,11,70,5,91,3,115,6,128,13,125,18,113,11,91,8,71,10,59,15,55,21,57,28"/>
+<area shape="rect" id="Node000002" href="$utils_8cpp.html#a5c2956173b821ad12ed2247dfdbe02b2" title=" " alt="" coords="419,37,537,62"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,38,224,35,297,32,371,35,405,37,405,43,371,40,297,38,224,40,176,43"/>
+<area shape="rect" id="Node000003" href="$utils_8cpp.html#a138053a782b34b4fe63648060224d76e" title=" " alt="" coords="224,74,371,99"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="177,62,213,69,212,74,176,67"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="448,38,442,28,445,19,458,12,478,10,503,14,513,22,509,26,500,18,478,15,459,17,449,22,447,28,453,35"/>
+<area shape="poly" id="edge5_Node000003_Node000002" title=" " alt="" coords="359,71,405,62,406,67,360,77"/>
+<area shape="poly" id="edge6_Node000003_Node000003" title=" " alt="" coords="268,75,261,66,265,56,277,50,297,47,322,51,332,60,329,64,320,56,297,53,278,55,269,59,267,65,272,72"/>
+</map>

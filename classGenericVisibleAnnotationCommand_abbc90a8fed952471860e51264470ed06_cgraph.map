@@ -1,0 +1,37 @@
+<map id="GenericVisibleAnnotationCommand::handle_indices_pre_perform" name="GenericVisibleAnnotationCommand::handle_indices_pre_perform">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,139,200,193"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#af7951f6ab399a01a0d86851028bf33f6" title=" " alt="" coords="248,139,409,193"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,163,234,163,234,169,200,169"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a333a90667ea058f36537cd87251c283f" title=" " alt="" coords="493,5,623,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="349,137,394,87,424,61,456,40,478,30,480,35,459,44,427,65,398,91,353,140"/>
+<area shape="rect" id="Node000005" href="$classDocument.html#a8ae6a2825385324e6068453a4bcf51d2" title=" " alt="" coords="459,55,657,80"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="368,136,410,111,456,89,478,81,479,86,458,94,412,116,371,141"/>
+<area shape="rect" id="Node000006" href="$classDocument.html#a07061e589dc7e1c7ee2068b3cd3252ac" title=" " alt="" coords="463,104,653,129"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="409,146,484,130,485,135,410,151"/>
+<area shape="rect" id="Node000007" href="$structBookMark.html#a4bf5643095a01c5cd1ff8e0a85bc211f" title=" " alt="" coords="465,153,651,179"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="410,163,452,163,452,169,410,169"/>
+<area shape="rect" id="Node000010" href="$classPdfViewWidget.html#a863b0c9e7e19067f434c263319e2c3ba" title=" " alt="" coords="483,203,633,243"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="411,184,470,199,469,204,409,189"/>
+<area shape="rect" id="Node000011" href="$classPdfViewWidget.html#a3d66231245f272913338b2c5ef6a8e2c" title=" " alt="" coords="467,267,649,307"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="365,191,408,223,459,253,473,260,471,265,456,258,405,228,362,196"/>
+<area shape="rect" id="Node000012" href="$structAbsoluteRect.html#aabf9cefaee365adb869d2a0cf53c90ab" title=" " alt="" coords="457,332,659,357"/>
+<area shape="poly" id="edge11_Node000002_Node000012" title=" " alt="" coords="348,192,392,256,423,289,459,317,473,325,470,329,456,322,420,293,388,259,343,195"/>
+<area shape="rect" id="Node000004" href="$classDocumentView.html#acfa88cf915c8bae19ac83d1aa9b42dd1" title=" " alt="" coords="707,5,928,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="623,15,693,15,693,21,623,21"/>
+<area shape="rect" id="Node000008" href="$structAbsoluteRect.html#a25ab1a0f75b68895abb220e9b2237a32" title=" " alt="" coords="716,153,919,179"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="651,163,702,163,702,169,651,169"/>
+<area shape="rect" id="Node000009" href="$structEnhancedRect.html#ab425995677d1b2660335322e95478e5d" title=" " alt="" coords="999,139,1176,193"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="919,163,984,163,984,169,919,169"/>
+<area shape="rect" id="Node000013" href="$classDocument.html#a21f80dd2d2dda39007fadb4a9abac5cf" title="Transform an absolute rectangle to page&#45;relative rectangle coordinates." alt="" coords="741,325,894,365"/>
+<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="659,342,727,342,727,347,659,347"/>
+<area shape="rect" id="Node000014" href="$structDocumentRect.html#aafeec2e9a605413812dc732fdbfc9343" title=" " alt="" coords="976,245,1199,271"/>
+<area shape="poly" id="edge13_Node000013_Node000014" title=" " alt="" coords="864,322,975,281,1009,271,1011,277,977,286,866,327"/>
+<area shape="rect" id="Node000015" href="$structEnhancedRect.html#a4d0866a1bcd13c32ebfa6e329d2dff7b" title=" " alt="" coords="1003,295,1172,335"/>
+<area shape="poly" id="edge14_Node000013_Node000015" title=" " alt="" coords="894,334,988,323,989,329,894,339"/>
+<area shape="rect" id="Node000016" href="$structAbsoluteDocumentPos.html#ab384396defecb4fad40f924db42cbc4c" title=" " alt="" coords="1003,359,1172,399"/>
+<area shape="poly" id="edge15_Node000013_Node000016" title=" " alt="" coords="895,352,989,364,988,369,894,357"/>
+<area shape="rect" id="Node000018" href="$structEnhancedRect.html#a2f9b9a7752abd1b699a5693c1632775d" title=" " alt="" coords="1002,424,1173,449"/>
+<area shape="poly" id="edge17_Node000013_Node000018" title=" " alt="" coords="862,362,916,386,977,409,1010,418,1008,423,975,414,914,391,860,367"/>
+<area shape="rect" id="Node000017" href="$classDocument.html#a96a3741801def570bd1a2d614dde2d5f" title="Transform continuous absolute document coordinates to page&#45;relative coordinates." alt="" coords="1247,359,1400,399"/>
+<area shape="poly" id="edge16_Node000016_Node000017" title=" " alt="" coords="1172,377,1233,377,1233,382,1172,382"/>
+</map>

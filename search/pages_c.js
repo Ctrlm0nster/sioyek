@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['based_20cache_20invalidation_0',['4. Epoch-Based Cache Invalidation',['../md_docs_2architecture.html#sec-epoch',1,'']]],
+  ['battery_20life_1',['🖤 5. Pure Black OLED (True Deep Black for High Battery Life)',['../md_docs_2configuration.html#autotoc_md78',1,'']]],
+  ['behavior_2',['Startup &amp;amp; Window Behavior',['../md_docs_2configuration.html#autotoc_md82',1,'']]],
+  ['benchmarking_20fixtures_3',['5. Benchmarking &amp;amp; Fixtures',['../md_BUILDING.html#autotoc_md156',1,'']]],
+  ['black_20for_20high_20battery_20life_4',['🖤 5. Pure Black OLED (True Deep Black for High Battery Life)',['../md_docs_2configuration.html#autotoc_md78',1,'']]],
+  ['black_20oled_20true_20deep_20black_20for_20high_20battery_20life_5',['🖤 5. Pure Black OLED (True Deep Black for High Battery Life)',['../md_docs_2configuration.html#autotoc_md78',1,'']]],
+  ['blending_6',['5. Transparent Vector Overlay Blending',['../md_docs_2architecture.html#sec-overlay',1,'']]],
+  ['blurry_20text_20on_20fractional_20displays_20125_20150_20175_7',['Blurry Text on Fractional Displays (125%, 150%, 175%)',['../md_docs_2troubleshooting.html#autotoc_md119',1,'']]],
+  ['blush_20clean_8',['❄️ 2. Nord (Arctic, North-Blush Clean)',['../md_docs_2configuration.html#autotoc_md75',1,'']]],
+  ['bookmarks_9',['Bookmarks',['../md_docs_2user-guide.html#autotoc_md49',1,'2. Searchable Text Bookmarks'],['../md_docs_2keybindings.html#marks--bookmarks',1,'Marks &amp;amp; Bookmarks']]],
+  ['bookmarks_20_3a_10',['Safe Cache Reset (Preserves your highlights, marks, and bookmarks):',['../md_docs_2troubleshooting.html#autotoc_md128',1,'']]],
+  ['bookmarks_20reading_20positions_20_3a_11',['User Data Storage (Highlights, Bookmarks, Reading Positions):',['../md_docs_2troubleshooting.html#autotoc_md129',1,'']]],
+  ['bookmarks_3a_20your_20reading_20memory_12',['7. Marks &amp;amp; Bookmarks: Your Reading Memory',['../md_docs_2user-guide.html#sec-marks',1,'']]],
+  ['build_13',['1. Development &amp;amp; Build',['../md_BUILDING.html#autotoc_md151',1,'']]],
+  ['build_20and_20run_14',['Build and run',['../md_BUILDING.html#autotoc_md149',1,'']]],
+  ['build_20failures_15',['6. Missing Submodules or Build Failures',['../md_docs_2troubleshooting.html#sec-missing-submodules',1,'']]],
+  ['build_20run_16',['3. Build &amp;amp; Run',['../index.html#autotoc_md7',1,'']]],
+  ['build_20the_20reader_20with_20cmake_20and_20ninja_17',['Build the reader with CMake and Ninja',['../md_docs_2troubleshooting.html#autotoc_md132',1,'']]],
+  ['build_20without_20installing_18',['Build without installing',['../md_PACKAGING.html#autotoc_md172',1,'']]],
+  ['building_20and_20maintaining_20sioyek_20on_20arch_20linux_19',['Building and maintaining Sioyek on Arch Linux',['../md_BUILDING.html',1,'']]],
+  ['builds_20',['Hardened and sanitizer builds',['../md_BUILDING.html#autotoc_md170',1,'']]],
+  ['busy_20polling_21',['3.1 Eliminating Busy Polling',['../md_docs_2architecture.html#autotoc_md141',1,'']]]
+];

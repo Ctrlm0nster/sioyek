@@ -1,0 +1,7 @@
+<map id="MainWidget::handle_undo_marked_data" name="MainWidget::handle_undo_marked_data">
+<area shape="rect" id="Node000001" title=" " alt="" coords="256,37,409,77"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#aceff3feac51f6fd987ecd9a02fbb24d2" title=" " alt="" coords="10,5,203,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="242,47,203,42,204,36,243,42"/>
+<area shape="rect" id="Node000003" href="$classUndoMarkedDataCommand.html#ae2d93dfbf0dd6d86f7e88fc1ed8cc983" title=" " alt="" coords="5,69,208,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="243,73,208,78,208,72,242,67"/>
+</map>

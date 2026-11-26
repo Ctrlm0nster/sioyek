@@ -1,0 +1,9 @@
+<map id="MainWidget::current_document_page_count" name="MainWidget::current_document_page_count">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,23,181,63"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a333a90667ea058f36537cd87251c283f" title=" " alt="" coords="250,5,381,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,31,236,24,237,30,182,36"/>
+<area shape="rect" id="Node000004" href="$classDocument.html#a2f79df9ddd1b39e93b5dfb1dbef13ec3" title="Get total number of pages in the document." alt="" coords="229,55,401,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="182,50,216,54,215,59,181,55"/>
+<area shape="rect" id="Node000003" href="$classDocumentView.html#acfa88cf915c8bae19ac83d1aa9b42dd1" title=" " alt="" coords="449,5,671,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="381,15,435,15,435,21,381,21"/>
+</map>

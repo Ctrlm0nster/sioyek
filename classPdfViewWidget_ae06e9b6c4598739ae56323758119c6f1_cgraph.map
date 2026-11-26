@@ -1,0 +1,20 @@
+<map id="PdfViewWidget::set_tag_prefix" name="PdfViewWidget::set_tag_prefix">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,49,155,89"/>
+<area shape="rect" id="Node000002" href="$utils_8cpp.html#ae77ffb9e9981cb2a68ec4d173b383625" title=" " alt="" coords="203,57,305,82"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,67,189,67,189,72,155,72"/>
+<area shape="poly" id="edge11_Node000002_Node000002" title=" " alt="" coords="228,58,222,48,225,39,236,32,254,30,275,33,284,42,281,46,273,38,254,35,238,37,230,42,228,48,232,55"/>
+<area shape="rect" id="Node000003" href="$namespaceutf8.html#a4a1157ef2f85d4bc8366dbbea20dcb48" title=" " alt="" coords="353,57,464,82"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="306,67,339,67,339,72,306,72"/>
+<area shape="poly" id="edge10_Node000003_Node000003" title=" " alt="" coords="383,58,377,48,380,39,391,32,409,30,430,33,439,42,435,46,428,38,409,35,393,37,384,42,382,48,387,55"/>
+<area shape="rect" id="Node000004" href="$namespaceutf8.html#a3827e78596fc38cfdebd721e9c45c901" title="The library API &#45; functions intended to be called by the users." alt="" coords="512,57,616,82"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="464,67,498,67,498,72,464,72"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="538,58,532,48,535,39,546,32,564,30,585,33,594,42,591,46,583,38,564,35,548,37,540,42,538,48,542,55"/>
+<area shape="rect" id="Node000005" href="$classutf8_1_1invalid__code__point.html#a46f27dd1c5b286936ec58baca3ca6220" title=" " alt="" coords="664,5,856,45"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="616,55,657,46,658,51,617,60"/>
+<area shape="rect" id="Node000006" href="$namespaceutf8_1_1internal.html#a97b553137aaeda6e8ca6f8d46f78fd79" title=" " alt="" coords="691,93,829,133"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="617,78,678,92,676,97,616,83"/>
+<area shape="poly" id="edge7_Node000006_Node000006" title=" " alt="" coords="723,94,721,84,727,75,740,69,760,67,783,70,795,77,793,81,781,75,760,72,741,74,730,79,726,85,728,92"/>
+<area shape="rect" id="Node000007" href="$namespaceutf8_1_1internal.html#a31a185a6bc8b9bf454191a8a95a93595" title=" " alt="" coords="904,93,1029,133"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="830,111,890,111,890,116,830,116"/>
+<area shape="poly" id="edge9_Node000007_Node000007" title=" " alt="" coords="928,94,926,84,932,75,946,69,967,67,991,70,1004,77,1001,82,989,75,967,72,947,74,935,79,931,85,933,92"/>
+</map>

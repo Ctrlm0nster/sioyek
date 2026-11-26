@@ -1,0 +1,7 @@
+<map id="MainWidget::clear_keyboard_select_highlights" name="MainWidget::clear_keyboard_select_highlights">
+<area shape="rect" id="Node000001" title=" " alt="" coords="276,37,483,77"/>
+<area shape="rect" id="Node000002" href="$classGenericVisibleSelectCommand.html#aa0157a08ac6accac36dd02b2af8204dd" title=" " alt="" coords="5,5,228,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="262,46,228,42,229,36,263,40"/>
+<area shape="rect" id="Node000003" href="$classKeyboardSelectPointCommand.html#aecd0cc880dabfa6d1df4d5cbebb47849" title=" " alt="" coords="5,69,228,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="263,74,229,78,228,73,262,69"/>
+</map>

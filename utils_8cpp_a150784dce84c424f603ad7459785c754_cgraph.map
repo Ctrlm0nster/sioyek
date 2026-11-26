@@ -1,0 +1,10 @@
+<map id="search_google_scholar" name="search_google_scholar">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,176,55"/>
+<area shape="poly" id="edge5_Node000001_Node000001" title=" " alt="" coords="55,31,47,21,51,11,66,5,91,3,121,6,133,15,130,20,119,11,91,8,67,10,55,15,52,20,59,28"/>
+<area shape="rect" id="Node000002" href="$utils_8cpp.html#aaaa5a52d506c369244fa21a50c9345cb" title=" " alt="" coords="224,29,395,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,39,210,39,210,45,176,45"/>
+<area shape="poly" id="edge4_Node000002_Node000002" title=" " alt="" coords="278,31,271,21,275,11,288,5,309,3,335,6,346,15,343,19,333,11,309,8,289,10,279,15,277,20,282,28"/>
+<area shape="rect" id="Node000003" href="$utils_8cpp.html#a7d9bd9cacd03478c1fcfeae0004f8946" title=" " alt="" coords="443,29,555,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="395,39,429,39,429,45,395,45"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="467,31,461,21,464,11,477,5,499,3,525,6,536,15,532,19,523,11,499,8,479,10,468,15,466,20,472,28"/>
+</map>

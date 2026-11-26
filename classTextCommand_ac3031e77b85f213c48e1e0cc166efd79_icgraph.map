@@ -1,0 +1,9 @@
+<map id="TextCommand::text_requirement_name" name="TextCommand::text_requirement_name">
+<area shape="rect" id="Node000001" title=" " alt="" coords="579,42,860,67"/>
+<area shape="rect" id="Node000002" href="$classPasswordCommand.html#a4867b98c3e5345621293130330dd4c8d" title=" " alt="" coords="317,5,504,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="572,43,504,37,504,32,572,38"/>
+<area shape="rect" id="Node000003" href="$classTextCommand.html#a5b7e31360fb926c57c8a6473b66bb9d5" title=" " alt="" coords="291,70,531,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="566,71,531,74,531,69,565,66"/>
+<area shape="rect" id="Node000004" href="$classEditSelectedBookmarkCommand.html#a3b63017be575ebafad0947939d3a69b6" title=" " alt="" coords="5,63,243,103"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="277,85,243,85,243,80,277,80"/>
+</map>

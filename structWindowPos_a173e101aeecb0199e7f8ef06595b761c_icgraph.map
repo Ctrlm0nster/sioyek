@@ -1,0 +1,24 @@
+<map id="WindowPos::to_document" name="WindowPos::to_document">
+<area shape="rect" id="Node000001" title=" " alt="" coords="777,173,968,198"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a68183c6e53d4d94b962b47f5349f6f8f" title=" " alt="" coords="547,37,729,77"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="835,168,675,80,677,75,838,164"/>
+<area shape="rect" id="Node000004" href="$classSelectionIndicator.html#a7330e5cf6c2f329f80aa52e512d9c961" title=" " alt="" coords="569,133,707,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="765,173,707,165,708,160,766,168"/>
+<area shape="rect" id="Node000007" href="$classMainWidget.html#a3e10309aaf630dcd311ae669a8f93ae8" title=" " alt="" coords="552,197,724,237"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="766,203,724,208,724,203,766,197"/>
+<area shape="rect" id="Node000011" href="$coordinates_8cpp.html#a65f3b28022308cd9c3a6087e79da2312" title=" " alt="" coords="585,286,691,311"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="834,207,667,288,664,284,832,202"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#af5e2978097738b38ba93121ee3b06694" title=" " alt="" coords="311,5,463,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="532,47,463,38,464,32,533,41"/>
+<area shape="rect" id="Node000005" href="$classMainWidget.html#a44dee5e7fc13d3684575bb242a8e7d41" title=" " alt="" coords="311,69,463,109"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="554,135,463,111,464,106,556,130"/>
+<area shape="rect" id="Node000006" href="$classMainWidget.html#a7029bfac493d8c6fd3e226c7c7807032" title=" " alt="" coords="311,133,464,173"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="555,156,464,156,464,151,555,151"/>
+<area shape="rect" id="Node000008" href="$classMainWidget.html#a4d8568ba7482246277c1deb52963c43f" title=" " alt="" coords="305,197,470,237"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="538,220,470,220,470,215,538,215"/>
+<area shape="rect" id="Node000010" href="$classKeyboardSelectPointCommand.html#aecd0cc880dabfa6d1df4d5cbebb47849" title=" " alt="" coords="276,261,499,301"/>
+<area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="547,243,467,264,466,259,545,238"/>
+<area shape="rect" id="Node000009" href="$classKeyboardSelectPointCommand.html#a2140e18905b69a4c05100095727dafbc" title=" " alt="" coords="5,197,228,237"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="291,220,228,220,228,215,291,215"/>
+<area shape="poly" id="edge11_Node000011_Node000011" title=" " alt="" coords="680,277,669,268,638,265,613,267,599,272,597,277,604,284,600,288,592,278,596,268,612,262,638,259,671,263,684,273"/>
+</map>

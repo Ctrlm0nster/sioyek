@@ -1,0 +1,13 @@
+<map id="MainWidget::get_current_tab_index" name="MainWidget::get_current_tab_index">
+<area shape="rect" id="Node000001" title=" " alt="" coords="517,101,700,141"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a27f1b2d63fec67355b73a89ec9f47e0e" title=" " alt="" coords="298,69,459,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="503,109,459,103,460,98,504,104"/>
+<area shape="rect" id="Node000005" href="$classMainWidget.html#a15668856b27904a457a16e220c1b3833" title=" " alt="" coords="288,133,469,173"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="504,139,470,143,469,138,503,133"/>
+<area shape="rect" id="Node000003" href="$classGotoNextTabCommand.html#a9fedaa0115f5020bba6480ade46239d6" title=" " alt="" coords="36,5,209,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="284,69,203,48,204,43,286,63"/>
+<area shape="rect" id="Node000004" href="$classGotoPrevTabCommand.html#a4802c02d05f7443188b852d87724a903" title=" " alt="" coords="37,69,208,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="284,92,208,92,208,87,284,87"/>
+<area shape="rect" id="Node000006" href="$classGotoLoadedDocumentCommand.html#a3b762ae0142c7181a9875e90f05c1a4b" title=" " alt="" coords="5,133,240,173"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="274,156,240,156,240,151,274,151"/>
+</map>

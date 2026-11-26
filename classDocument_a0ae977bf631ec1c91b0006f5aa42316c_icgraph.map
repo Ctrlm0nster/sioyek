@@ -1,0 +1,7 @@
+<map id="Document::add_bookmark" name="Document::add_bookmark">
+<area shape="rect" id="Node000001" title=" " alt="" coords="508,13,703,38"/>
+<area shape="rect" id="Node000002" href="$classDocumentView.html#aaac8ba0db21a16ee03a1deae6673f65d" title=" " alt="" coords="235,13,460,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="494,28,460,28,460,23,494,23"/>
+<area shape="rect" id="Node000003" href="$classAddBookmarkCommand.html#ae84afab853a4186f2e03277694f79a94" title=" " alt="" coords="5,5,187,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="221,28,187,28,187,23,221,23"/>
+</map>

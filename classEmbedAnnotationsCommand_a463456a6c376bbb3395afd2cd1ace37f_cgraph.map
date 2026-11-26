@@ -1,0 +1,9 @@
+<map id="EmbedAnnotationsCommand::get_file_path_requirement_root_dir" name="EmbedAnnotationsCommand::get_file_path_requirement_root_dir">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,16,217,71"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a333a90667ea058f36537cd87251c283f" title=" " alt="" coords="277,5,408,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="217,29,263,24,264,29,218,34"/>
+<area shape="rect" id="Node000004" href="$classDocument.html#a19c247a93996cb294e872ae8cb80635a" title=" " alt="" coords="265,55,420,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="218,52,252,55,251,61,217,57"/>
+<area shape="rect" id="Node000003" href="$classDocumentView.html#acfa88cf915c8bae19ac83d1aa9b42dd1" title=" " alt="" coords="468,5,689,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="408,15,455,15,455,21,408,21"/>
+</map>

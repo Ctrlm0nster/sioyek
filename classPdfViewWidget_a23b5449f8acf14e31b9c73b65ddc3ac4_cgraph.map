@@ -1,0 +1,31 @@
+<map id="PdfViewWidget::render_ui_icon_for_current_color_mode" name="PdfViewWidget::render_ui_icon_for_current_color_mode">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,177,176,231"/>
+<area shape="rect" id="Node000002" href="$utils_8cpp.html#ae11dd7e59b71db1da3b3ed5d05f56bfc" title=" " alt="" coords="240,41,423,66"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="134,174,297,71,300,76,137,179"/>
+<area shape="rect" id="Node000004" href="$classPdfViewWidget.html#a88f2e232da7e9a083c85ce2617b4973a" title=" " alt="" coords="240,143,423,183"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="176,187,226,178,227,183,177,192"/>
+<area shape="rect" id="Node000009" href="$utils_8cpp.html#a164fe1010061ac09cf37e9233e04ec94" title=" " alt="" coords="292,231,371,257"/>
+<area shape="poly" id="edge15_Node000001_Node000009" title=" " alt="" coords="177,216,278,233,278,238,176,221"/>
+<area shape="rect" id="Node000010" href="$classVulkanCanvas.html#ad4670c7d1d6ef39df07fe2fe118318ef" title="Lazily allocate and return a QPainter targeting the transparent overlay surface." alt="" coords="224,294,439,319"/>
+<area shape="poly" id="edge17_Node000001_Node000010" title=" " alt="" coords="147,229,225,266,280,287,278,292,223,271,144,234"/>
+<area shape="poly" id="edge4_Node000002_Node000002" title=" " alt="" coords="292,42,284,32,288,22,304,16,331,14,365,18,378,27,375,32,363,23,331,19,306,21,292,26,289,32,296,39"/>
+<area shape="rect" id="Node000003" href="$utils_8cpp.html#a69d655d02666939218c3a0dac18fc728" title=" " alt="" coords="721,117,840,142"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="366,38,426,21,504,6,547,3,590,4,633,10,674,23,703,39,728,60,766,104,762,107,725,64,700,43,672,28,632,16,590,9,547,8,505,12,428,26,368,43"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="748,118,741,108,744,99,758,92,781,90,809,94,820,103,816,107,806,99,781,95,759,97,748,102,746,108,752,115"/>
+<area shape="rect" id="Node000005" href="$classPdfViewWidget.html#a0d3c15153f7be2470e54cf8a6d5385ac" title=" " alt="" coords="487,185,673,239"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="423,178,474,188,473,194,422,183"/>
+<area shape="rect" id="Node000006" href="$utils_8h.html#a762d4dd998502d656df7fe23c6a9d0e2" title=" " alt="" coords="744,218,817,243"/>
+<area shape="poly" id="edge11_Node000004_Node000006" title=" " alt="" coords="418,181,440,193,456,208,464,223,472,237,488,248,518,259,550,266,616,267,679,258,731,245,732,250,680,263,617,272,550,271,517,264,485,253,468,241,459,226,451,211,437,197,415,185"/>
+<area shape="rect" id="Node000007" href="$utils_8cpp.html#aab1ac201d9123a658bf7035431caaabe" title=" " alt="" coords="543,62,617,87"/>
+<area shape="poly" id="edge9_Node000004_Node000007" title=" " alt="" coords="376,140,486,96,529,84,530,89,488,101,378,145"/>
+<area shape="rect" id="Node000008" href="$utils_8cpp.html#a0be341680d342c30ed0478e812329138" title=" " alt="" coords="543,135,617,161"/>
+<area shape="poly" id="edge12_Node000004_Node000008" title=" " alt="" coords="423,155,529,148,529,154,423,160"/>
+<area shape="poly" id="edge7_Node000005_Node000006" title=" " alt="" coords="674,218,730,223,730,229,673,223"/>
+<area shape="poly" id="edge8_Node000006_Node000006" title=" " alt="" coords="748,220,741,210,744,200,758,194,781,191,809,195,820,204,816,208,806,200,781,197,759,199,748,204,746,209,752,216"/>
+<area shape="poly" id="edge10_Node000007_Node000007" title=" " alt="" coords="547,64,540,54,544,44,557,38,580,35,608,39,619,48,616,52,606,44,580,41,559,43,548,48,545,53,551,60"/>
+<area shape="poly" id="edge13_Node000008_Node000003" title=" " alt="" coords="617,142,708,134,708,139,618,147"/>
+<area shape="poly" id="edge14_Node000008_Node000008" title=" " alt="" coords="547,137,540,127,544,117,557,111,580,109,608,113,619,122,616,126,606,117,580,114,559,116,548,121,545,126,551,134"/>
+<area shape="poly" id="edge16_Node000009_Node000009" title=" " alt="" coords="292,233,284,223,288,213,304,207,331,205,365,209,378,218,375,222,363,214,331,210,306,212,292,217,289,222,296,230"/>
+<area shape="rect" id="Node000011" href="$classVulkanCanvas.html#a922ca3b9ff3c97681fe8959aa9aece1f" title="Hook for subclasses to configure font engines and anti&#45;aliasing on the QPainter overlay." alt="" coords="491,315,669,355"/>
+<area shape="poly" id="edge18_Node000010_Node000011" title=" " alt="" coords="439,316,478,321,477,326,438,321"/>
+</map>

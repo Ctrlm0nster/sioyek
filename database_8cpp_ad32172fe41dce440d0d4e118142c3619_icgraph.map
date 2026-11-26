@@ -1,0 +1,11 @@
+<map id="version_callback" name="version_callback">
+<area shape="rect" id="Node000001" title=" " alt="" coords="573,29,704,55"/>
+<area shape="poly" id="edge5_Node000001_Node000001" title=" " alt="" coords="673,19,663,11,638,8,617,10,606,15,604,20,610,28,606,31,599,21,603,11,616,5,638,3,665,6,677,15"/>
+<area shape="rect" id="Node000002" href="$classDatabaseManager.html#aa74712169f3b31bce26f522fd3c517c4" title=" " alt="" coords="354,22,525,62"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="559,45,525,45,525,39,559,39"/>
+<area shape="rect" id="Node000003" href="$classDatabaseManager.html#a3a271f7ca2ccee2d14ec2488bba79433" title=" " alt="" coords="113,22,306,62"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="341,45,307,45,307,39,341,39"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#a700a0caa5b70a06d1064e576f9f3cf65" title=" " alt="" coords="10,29,65,55"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="99,45,65,45,65,39,99,39"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="68,19,59,11,38,8,20,10,10,15,8,20,14,28,9,31,3,21,6,11,18,5,38,3,61,6,71,15"/>
+</map>

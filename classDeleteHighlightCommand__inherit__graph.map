@@ -1,0 +1,9 @@
+<map id="DeleteHighlightCommand" name="DeleteHighlightCommand">
+<area shape="rect" id="Node000001" title=" " alt="" coords="21,1079,229,1199"/>
+<area shape="rect" id="Node000002" href="$classGenericHighlightCommand.html" title=" " alt="" coords="18,821,233,1031"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="128,1044,128,1079,123,1079,123,1044"/>
+<area shape="rect" id="Node000003" href="$classGenericVisibleSelectCommand.html" title=" " alt="" coords="5,459,245,773"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="128,787,128,821,123,821,123,787"/>
+<area shape="rect" id="Node000004" href="$classCommand.html" title=" " alt="" coords="13,5,238,411"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="128,424,128,458,123,458,123,424"/>
+</map>

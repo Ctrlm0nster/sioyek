@@ -1,0 +1,5 @@
+<map id="VulkanCanvas::initializeScene" name="VulkanCanvas::initializeScene">
+<area shape="rect" id="Node000001" title="Pure virtual hook invoked during GPU initialization to build widget&#45;specific scene resources." alt="" coords="231,5,408,45"/>
+<area shape="rect" id="Node000002" href="$classVulkanCanvas.html#a696fb76e346014d6b4c1359511b62cc6" title="Initialize QRhi pipelines, texture samplers, and SPIR&#45;V shader state." alt="" coords="5,13,183,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="217,28,183,28,183,23,217,23"/>
+</map>

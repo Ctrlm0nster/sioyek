@@ -1,0 +1,9 @@
+<map id="MainWidget::move_document_screens" name="MainWidget::move_document_screens">
+<area shape="rect" id="Node000001" title=" " alt="" coords="464,35,681,75"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a27878e15acc36912d8cabbb48e4106e2" title=" " alt="" coords="264,35,416,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="450,57,416,57,416,52,450,52"/>
+<area shape="rect" id="Node000003" href="$classScreenDownCommand.html#a222edd213357935a0f580bd94359dae2" title=" " alt="" coords="21,5,200,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="250,46,200,39,200,34,251,41"/>
+<area shape="rect" id="Node000004" href="$classScreenUpCommand.html#a692a00337bf19a0711f7cc42c076dcde" title=" " alt="" coords="5,70,216,95"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="251,68,215,73,214,67,250,63"/>
+</map>

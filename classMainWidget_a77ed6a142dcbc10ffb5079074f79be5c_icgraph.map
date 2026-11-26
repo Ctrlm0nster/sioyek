@@ -1,0 +1,7 @@
+<map id="MainWidget::set_hand_drawing_mode" name="MainWidget::set_hand_drawing_mode">
+<area shape="rect" id="Node000001" title=" " alt="" coords="507,5,673,45"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a82ed8795ab717767cb18b29008daf773" title=" " alt="" coords="268,5,459,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="493,28,459,28,459,23,493,23"/>
+<area shape="rect" id="Node000003" href="$classToggleFreehandDrawingMode.html#aefdc595f79846ef9dd430ee050312747" title=" " alt="" coords="5,5,220,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="254,28,220,28,220,23,254,23"/>
+</map>

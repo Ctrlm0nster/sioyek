@@ -1,0 +1,19 @@
+<map id="TouchConfigMenu::TouchConfigMenu" name="TouchConfigMenu::TouchConfigMenu">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,237,264,262"/>
+<area shape="rect" id="Node000002" href="$classMySortFilterProxyModel.html#a1802e526a7b0280724b15534fce61fb3" title=" " alt="" coords="334,5,521,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,235,166,199,204,150,253,99,311,55,322,49,324,54,313,60,257,103,209,154,171,202,146,238"/>
+<area shape="rect" id="Node000003" href="$classTouchConfigMenu.html#a8eb043459c073a02bfe1ea36f6de8ef5" title=" " alt="" coords="319,69,536,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="148,234,215,179,261,147,311,119,328,112,330,117,313,124,264,152,218,183,152,239"/>
+<area shape="rect" id="Node000004" href="$classTouchConfigMenu.html#a1cbf065d2a5aa8f940667814931749ed" title=" " alt="" coords="312,133,543,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="168,234,311,183,338,175,339,180,313,188,170,239"/>
+<area shape="rect" id="Node000005" href="$classTouchConfigMenu.html#a969b98604e9c55c48f5615836d361c18" title=" " alt="" coords="312,197,543,237"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="251,234,298,229,298,234,251,239"/>
+<area shape="rect" id="Node000006" href="$classTouchConfigMenu.html#a72ba8cf22edb44cdf2176223f7ba8e88" title=" " alt="" coords="317,261,538,301"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="251,259,303,265,302,270,251,265"/>
+<area shape="rect" id="Node000007" href="$classTouchConfigMenu.html#ac1806a7a1f0db55a54906b1c9ff30300" title=" " alt="" coords="317,325,537,365"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="170,260,313,311,339,319,338,324,311,316,168,265"/>
+<area shape="rect" id="Node000008" href="$classTouchConfigMenu.html#a70bb401e0643d665d095b6002ab8f859" title=" " alt="" coords="323,389,532,429"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="152,260,218,315,264,347,313,375,330,382,328,387,311,380,261,352,215,319,148,264"/>
+<area shape="rect" id="Node000009" href="$classTouchConfigMenu.html#a3b55189540e5e6245d4f6bf5a40c8867" title=" " alt="" coords="320,453,535,493"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="146,261,171,296,209,345,257,396,313,439,324,445,322,450,311,444,253,400,204,348,166,300,142,264"/>
+</map>

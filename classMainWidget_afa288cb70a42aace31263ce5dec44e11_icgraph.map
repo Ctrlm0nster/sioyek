@@ -1,0 +1,5 @@
+<map id="MainWidget::is_index_ready" name="MainWidget::is_index_ready">
+<area shape="rect" id="Node000001" title="Check whether document reference and equation indexing has completed." alt="" coords="300,5,463,45"/>
+<area shape="rect" id="Node000002" href="$classWaitForIndexingToFinishCommand.html#a702cd246b365671e59ee0635ea87182b" title=" " alt="" coords="5,5,252,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="286,28,252,28,252,23,286,23"/>
+</map>

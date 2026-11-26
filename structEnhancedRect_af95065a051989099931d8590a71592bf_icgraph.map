@@ -1,0 +1,11 @@
+<map id="EnhancedRect::union_rect" name="EnhancedRect::union_rect">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1000,13,1191,38"/>
+<area shape="rect" id="Node000002" href="$classScratchPad.html#a9755dac41273911134f113ebde58f78b" title=" " alt="" coords="732,13,952,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="986,28,952,28,952,23,986,23"/>
+<area shape="rect" id="Node000003" href="$classScratchPad.html#ac09555de34df5642427e1a198757ae26" title=" " alt="" coords="503,13,684,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="718,28,684,28,684,23,718,23"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#a39b38cfccb8a3e6b37f16d6ed918c62d" title=" " alt="" coords="267,5,455,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="489,28,455,28,455,23,489,23"/>
+<area shape="rect" id="Node000005" href="$classCopyScreenshotToScratchpad.html#ae3d520b9e0b82672f5ea1692601ee887" title=" " alt="" coords="5,5,219,45"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="253,28,219,28,219,23,253,23"/>
+</map>

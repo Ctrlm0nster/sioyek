@@ -1,0 +1,13 @@
+<map id="MainWidget::handle_search_paper_name" name="MainWidget::handle_search_paper_name">
+<area shape="rect" id="Node000001" title=" " alt="" coords="531,101,691,141"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a5fe76238a151843bf18816f38166f40d" title=" " alt="" coords="296,101,483,141"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="517,124,483,124,483,119,517,119"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a50e717278f9543347db6c133dd27b773" title=" " alt="" coords="26,5,227,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="336,98,247,60,210,48,211,43,249,55,338,93"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#a2d1fe0808150002e7cf4b2af8a1202cd" title=" " alt="" coords="25,69,229,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="282,111,228,104,229,99,283,106"/>
+<area shape="rect" id="Node000005" href="$classKeyboardSmartjumpCommand.html#a24801225d5e15b2203a6095a72b04c10" title=" " alt="" coords="15,133,238,173"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="283,137,238,142,238,137,282,132"/>
+<area shape="rect" id="Node000006" href="$classSmartJumpUnderCursorCommand.html#aeb46d64b79d5e7d6470aca143066dcd2" title=" " alt="" coords="5,197,248,237"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="338,150,249,188,211,200,210,195,247,183,336,145"/>
+</map>

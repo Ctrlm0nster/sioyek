@@ -1,0 +1,9 @@
+<map id="MainWidget::export_javascript_api" name="MainWidget::export_javascript_api">
+<area shape="rect" id="Node000001" title=" " alt="" coords="665,5,816,45"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a04666bf128b020bcb7d511119eb2f89e" title=" " alt="" coords="463,5,617,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="651,28,617,28,617,23,651,23"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a05181c36b6a619cf3a9d6bd577d7f53c" title=" " alt="" coords="215,5,415,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="449,28,415,28,415,23,449,23"/>
+<area shape="rect" id="Node000004" href="$classJavascriptCommand.html#a2c1102a425b248f37a290c0a0999d0ab" title=" " alt="" coords="5,5,167,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="201,28,167,28,167,23,201,23"/>
+</map>

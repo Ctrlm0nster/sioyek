@@ -1,0 +1,25 @@
+<map id="open_file_url" name="open_file_url">
+<area shape="rect" id="Node000001" title=" " alt="" coords="636,185,741,210"/>
+<area shape="poly" id="edge11_Node000001_Node000001" title=" " alt="" coords="715,174,707,166,689,163,673,165,665,170,663,176,668,183,663,186,658,176,660,167,671,160,689,158,710,161,719,170"/>
+<area shape="rect" id="Node000002" href="$utils_8cpp.html#a245822e3f9cf68a129af3a877d053f43" title=" " alt="" coords="495,159,576,185"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="622,189,576,181,577,176,623,184"/>
+<area shape="rect" id="Node000011" href="$utils_8cpp.html#a0df3b86b3350c49fedb9d0de6ed98824" title=" " alt="" coords="483,209,588,234"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="623,210,589,216,588,210,622,205"/>
+<area shape="poly" id="edge6_Node000002_Node000002" title=" " alt="" coords="562,149,554,141,535,138,520,140,511,145,510,150,514,158,510,161,504,151,507,141,518,135,535,133,556,136,565,145"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#ae300f20659bf0141b944f48768bb41c7" title=" " alt="" coords="253,5,405,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="517,149,482,103,459,80,433,60,404,45,406,40,436,55,463,76,486,100,521,146"/>
+<area shape="rect" id="Node000005" href="$classMainWidget.html#a75f191f200d0eb8469b64aef095ca1a4" title=" " alt="" coords="253,69,405,109"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="498,155,434,125,397,112,399,107,436,120,500,150"/>
+<area shape="rect" id="Node000007" href="$classKeysCommand.html#aed0b05a91c316b3db23e1c3b49f5163f" title=" " alt="" coords="239,134,419,159"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="481,168,418,160,419,155,481,163"/>
+<area shape="rect" id="Node000008" href="$classKeysUserCommand.html#a0b9e3e2a062e67b982a9983c29b187f9" title=" " alt="" coords="223,183,434,209"/>
+<area shape="poly" id="edge8_Node000002_Node000008" title=" " alt="" coords="481,181,434,186,434,181,481,176"/>
+<area shape="rect" id="Node000009" href="$classPrefsCommand.html#afdb438d53335d58e4ec44232c7ee36dc" title=" " alt="" coords="237,233,420,258"/>
+<area shape="poly" id="edge9_Node000002_Node000009" title=" " alt="" coords="497,193,484,200,460,213,436,224,397,235,396,230,434,219,458,208,481,195,495,188"/>
+<area shape="rect" id="Node000010" href="$classPrefsUserCommand.html#a7e75855079f74cc1693203a4211c24da" title=" " alt="" coords="223,282,435,307"/>
+<area shape="poly" id="edge10_Node000002_Node000010" title=" " alt="" coords="491,194,485,199,470,218,462,236,454,255,436,273,414,284,412,280,433,269,449,252,457,234,465,215,481,195,488,190"/>
+<area shape="rect" id="Node000004" href="$classKeysUserAllCommand.html#a4d4fa6d927a03d39cbee3f168f7eafe3" title=" " alt="" coords="7,5,173,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="239,28,174,28,174,23,239,23"/>
+<area shape="rect" id="Node000006" href="$classPrefsUserAllCommand.html#ac158f0bda3df8351581d9e081bd569ae" title=" " alt="" coords="5,69,175,109"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="239,92,175,92,175,87,239,87"/>
+</map>

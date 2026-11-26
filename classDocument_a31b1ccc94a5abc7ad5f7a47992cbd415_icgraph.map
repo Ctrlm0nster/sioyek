@@ -1,0 +1,9 @@
+<map id="Document::set_should_render_pdf_annotations" name="Document::set_should_render_pdf_annotations">
+<area shape="rect" id="Node000001" title=" " alt="" coords="484,37,667,77"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#ad94a642b2b715f92dc91516477b0b144" title=" " alt="" coords="287,37,436,77"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="470,60,436,60,436,55,470,55"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a50e717278f9543347db6c133dd27b773" title=" " alt="" coords="21,5,223,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="273,48,223,41,223,36,273,43"/>
+<area shape="rect" id="Node000004" href="$classTogglePDFAnnotationsCommand.html#a42f0b06a53fcca571808a3456eb17636" title=" " alt="" coords="5,69,239,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="273,72,239,76,239,71,273,66"/>
+</map>

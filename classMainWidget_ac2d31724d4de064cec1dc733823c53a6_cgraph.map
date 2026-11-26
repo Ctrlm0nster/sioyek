@@ -1,0 +1,9 @@
+<map id="MainWidget::update_selected_bookmark_font_size" name="MainWidget::update_selected_bookmark_font_size">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,23,228,63"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a333a90667ea058f36537cd87251c283f" title=" " alt="" coords="310,5,441,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="228,30,296,23,296,28,228,35"/>
+<area shape="rect" id="Node000004" href="$classDocument.html#a8ae6a2825385324e6068453a4bcf51d2" title=" " alt="" coords="276,55,475,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="228,51,263,54,262,60,228,56"/>
+<area shape="rect" id="Node000003" href="$classDocumentView.html#acfa88cf915c8bae19ac83d1aa9b42dd1" title=" " alt="" coords="523,5,744,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="441,15,509,15,509,21,441,21"/>
+</map>

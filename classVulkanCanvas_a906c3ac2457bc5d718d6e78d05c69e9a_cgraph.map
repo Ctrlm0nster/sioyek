@@ -1,0 +1,5 @@
+<map id="VulkanCanvas::blendFunc" name="VulkanCanvas::blendFunc">
+<area shape="rect" id="Node000001" title="Set color blending factors for source and destination." alt="" coords="5,5,192,31"/>
+<area shape="rect" id="Node000002" href="$classVulkanCanvas.html#a92ae8512130cbcae8ad69eb55238e5b6" title="Set separate color and alpha blending factors." alt="" coords="240,5,485,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,15,226,15,226,21,192,21"/>
+</map>

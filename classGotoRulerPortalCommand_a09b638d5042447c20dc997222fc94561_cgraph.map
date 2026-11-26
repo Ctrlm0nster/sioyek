@@ -1,0 +1,9 @@
+<map id="GotoRulerPortalCommand::on_cancel" name="GotoRulerPortalCommand::on_cancel">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,27,197,67"/>
+<area shape="rect" id="Node000002" href="$classCommand.html#afb19c25d326eb40366e27c65e605a5ef" title=" " alt="" coords="253,5,416,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="197,33,239,27,240,33,198,38"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#addcedecaee8044f4c153550306510a4f" title=" " alt="" coords="245,55,424,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="198,56,232,60,231,66,197,62"/>
+<area shape="rect" id="Node000004" href="$classPdfViewWidget.html#a3d66231245f272913338b2c5ef6a8e2c" title=" " alt="" coords="472,55,655,95"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="424,73,459,73,459,78,424,78"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="GenericGotoLocationCommand" name="GenericGotoLocationCommand">
+<area shape="rect" id="Node000001" title=" " alt="" coords="371,459,612,604"/>
+<area shape="rect" id="Node000003" href="$classGotoBookmarkCommand.html" title=" " alt="" coords="5,652,231,757"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="359,596,232,654,230,649,357,591"/>
+<area shape="rect" id="Node000004" href="$classGotoHighlightCommand.html" title=" " alt="" coords="255,652,480,757"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="434,617,407,654,403,650,429,613"/>
+<area shape="rect" id="Node000005" href="$classGotoPortalListCommand.html" title=" " alt="" coords="504,652,729,757"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="554,613,581,650,577,654,550,617"/>
+<area shape="rect" id="Node000006" href="$classShowMarks.html" title=" " alt="" coords="753,652,979,757"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="626,591,754,649,752,654,624,596"/>
+<area shape="rect" id="Node000002" href="$classCommand.html" title=" " alt="" coords="379,5,604,411"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="494,424,494,458,489,458,489,424"/>
+</map>

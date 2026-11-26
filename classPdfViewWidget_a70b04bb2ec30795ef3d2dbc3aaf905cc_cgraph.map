@@ -1,0 +1,11 @@
+<map id="PdfViewWidget::set_overview_page" name="PdfViewWidget::set_overview_page">
+<area shape="rect" id="Node000001" title="Configure or dismiss the active overview portal overlay." alt="" coords="5,69,155,109"/>
+<area shape="rect" id="Node000002" href="$classDocument.html#a72e3f8c2ab273af9da41ac1872c5d2cb" title=" " alt="" coords="203,77,388,102"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,87,189,87,189,92,155,92"/>
+<area shape="rect" id="Node000003" href="$classDocument.html#adbcc93f0b9462518db6e06db7387732d" title="Get the cumulative vertical document offset up to the top of the given page." alt="" coords="438,5,606,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="341,74,436,47,438,52,342,79"/>
+<area shape="rect" id="Node000004" href="$classDocument.html#a81ed14e7ce10f1da72821d48bebae3de" title="Get the physical height of a specific page in points." alt="" coords="443,69,601,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="388,87,430,87,430,92,388,92"/>
+<area shape="rect" id="Node000005" href="$classDocument.html#a2f79df9ddd1b39e93b5dfb1dbef13ec3" title="Get total number of pages in the document." alt="" coords="436,134,608,159"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="347,99,459,128,457,133,346,105"/>
+</map>

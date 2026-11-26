@@ -1,0 +1,20 @@
+<map id="DocumentView::shrink_selection" name="DocumentView::shrink_selection">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,90,173,130"/>
+<area shape="rect" id="Node000002" href="$utils_8cpp.html#ae92628016017f248ca5a20f45eb52dda" title=" " alt="" coords="502,29,627,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="133,87,175,71,221,58,291,47,362,40,488,37,488,42,362,45,292,52,222,63,176,76,135,92"/>
+<area shape="rect" id="Node000004" href="$utils_8cpp.html#a33ba5e35a8e3bf5ae05260e777599ff4" title=" " alt="" coords="221,97,405,123"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="174,107,207,107,207,113,174,113"/>
+<area shape="rect" id="Node000007" href="$classDocument.html#a68875be3194ab47f70b763345c41098e" title=" " alt="" coords="234,147,393,187"/>
+<area shape="poly" id="edge11_Node000001_Node000007" title=" " alt="" coords="169,127,222,141,221,146,167,133"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="532,31,525,21,528,11,542,5,565,3,593,6,604,16,600,20,590,11,565,8,543,10,532,15,530,20,536,28"/>
+<area shape="rect" id="Node000003" href="$utils_8cpp.html#a0427155864cc7897ebd490169d9f8b66" title=" " alt="" coords="724,29,807,55"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="628,39,710,39,710,45,628,45"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="732,31,725,21,729,11,743,5,765,3,793,6,804,16,801,20,791,11,765,8,744,10,733,15,731,20,737,28"/>
+<area shape="poly" id="edge7_Node000004_Node000002" title=" " alt="" coords="361,95,503,56,504,61,362,100"/>
+<area shape="poly" id="edge8_Node000004_Node000004" title=" " alt="" coords="277,99,269,89,273,79,288,73,313,71,345,75,357,84,354,88,343,79,313,76,289,78,277,83,274,88,281,95"/>
+<area shape="rect" id="Node000005" href="$structDocumentRect.html#aafeec2e9a605413812dc732fdbfc9343" title=" " alt="" coords="453,91,676,116"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="405,105,440,104,440,109,406,110"/>
+<area shape="rect" id="Node000006" href="$utils_8cpp.html#abaf5b738a95a3347adebc048776b877e" title=" " alt="" coords="511,164,618,189"/>
+<area shape="poly" id="edge9_Node000004_Node000006" title=" " alt="" coords="363,120,503,158,502,163,361,125"/>
+<area shape="poly" id="edge10_Node000006_Node000006" title=" " alt="" coords="532,165,525,156,528,146,542,140,565,137,593,141,604,150,600,154,590,146,565,143,543,145,532,149,530,155,536,162"/>
+</map>

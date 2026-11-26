@@ -1,0 +1,9 @@
+<map id="DatabaseManager::select_all_highlight_ids" name="DatabaseManager::select_all_highlight_ids">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,59,193,99"/>
+<area shape="rect" id="Node000002" href="$database_8cpp.html#ad77f45a9efe658d1de01992ff6d673c4" title=" " alt="" coords="241,29,345,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,59,227,52,228,57,194,64"/>
+<area shape="rect" id="Node000003" href="$database_8cpp.html#a217069675f1b7778afff1c22e66709ef" title=" " alt="" coords="246,103,341,128"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="194,94,233,101,232,107,193,99"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="262,31,255,21,258,11,272,5,293,3,320,6,331,15,327,19,318,11,293,8,273,10,262,15,260,20,266,28"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="262,104,255,94,258,84,272,78,293,76,320,80,331,88,327,92,318,84,293,81,273,83,262,88,260,94,266,101"/>
+</map>

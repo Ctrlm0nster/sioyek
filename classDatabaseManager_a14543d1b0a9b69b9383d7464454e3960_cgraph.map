@@ -1,0 +1,9 @@
+<map id="DatabaseManager::run_schema_query" name="DatabaseManager::run_schema_query">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,59,176,99"/>
+<area shape="rect" id="Node000002" href="$database_8cpp.html#ad77f45a9efe658d1de01992ff6d673c4" title=" " alt="" coords="225,29,329,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,60,211,52,213,58,177,65"/>
+<area shape="rect" id="Node000003" href="$database_8cpp.html#a00a323bdb137d2be95edb3baaaf1a17e" title=" " alt="" coords="224,103,331,128"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="177,93,211,100,210,105,176,98"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="246,31,240,21,243,11,256,5,277,3,303,6,314,15,310,19,301,11,277,8,258,10,247,15,245,20,251,28"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="246,104,240,94,243,84,256,78,277,76,303,80,314,88,310,92,301,84,277,81,258,83,247,88,245,94,251,101"/>
+</map>

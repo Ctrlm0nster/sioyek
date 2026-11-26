@@ -1,0 +1,16 @@
+<map id="Document::get_portal_index_with_uuid" name="Document::get_portal_index_with_uuid">
+<area shape="rect" id="Node000001" title=" " alt="" coords="700,77,863,117"/>
+<area shape="rect" id="Node000002" href="$classDocument.html#aceb62db3669d4be32a85458c6ea96a5e" title=" " alt="" coords="469,77,652,117"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="686,99,652,99,652,94,686,94"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a7278eba4b907f1c77583b2323cfe9d5a" title=" " alt="" coords="273,55,418,80"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="456,85,418,80,419,75,456,80"/>
+<area shape="rect" id="Node000006" href="$classMainWidget.html#a0203919e0cc710c2e2abf97beac3457e" title=" " alt="" coords="269,105,421,145"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="456,113,422,117,421,112,455,108"/>
+<area shape="poly" id="edge5_Node000003_Node000003" title=" " alt="" coords="384,45,373,37,345,33,323,35,311,40,308,46,315,53,310,56,303,46,307,36,321,30,345,28,375,32,387,41"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#a1710c804f090c9c005612b755a46de47" title=" " alt="" coords="17,5,209,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="271,54,173,33,174,28,272,49"/>
+<area shape="rect" id="Node000005" href="$classMainWidget.html#a793192d445eb63f8a62cc8b646f3cea2" title=" " alt="" coords="26,55,201,80"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="259,70,201,70,201,65,259,65"/>
+<area shape="rect" id="Node000007" href="$classGotoPortalListCommand.html#a1f7a973e94ac1711f19ff354ff0b93c3" title=" " alt="" coords="5,105,221,145"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="256,127,222,127,222,122,256,122"/>
+</map>

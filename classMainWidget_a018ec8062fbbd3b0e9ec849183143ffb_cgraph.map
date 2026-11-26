@@ -1,0 +1,11 @@
+<map id="MainWidget::toggle_scratchpad_mode" name="MainWidget::toggle_scratchpad_mode">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,101,155,141"/>
+<area shape="rect" id="Node000002" href="$classPdfViewWidget.html#ac32607d96bf486195ae3334f6339f3a0" title=" " alt="" coords="219,5,369,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,99,202,55,219,48,221,53,204,60,117,104"/>
+<area shape="rect" id="Node000003" href="$classDocumentView.html#ae2b7a34cc16aa31df076576cd28491b4" title=" " alt="" coords="203,69,385,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="155,108,189,102,189,108,156,113"/>
+<area shape="rect" id="Node000004" href="$classPdfViewWidget.html#a448561dcc67421efcbad6b471c77b43d" title=" " alt="" coords="219,133,369,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="156,130,206,138,205,143,155,135"/>
+<area shape="rect" id="Node000005" href="$classTouchDrawControls.html#a654c944a4052c8f124918b9369f641aa" title=" " alt="" coords="212,197,376,237"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="117,139,204,183,221,190,219,195,202,188,115,144"/>
+</map>

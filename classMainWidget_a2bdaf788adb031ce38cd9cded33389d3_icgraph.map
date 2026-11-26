@@ -1,0 +1,14 @@
+<map id="MainWidget::add_portal" name="MainWidget::add_portal">
+<area shape="rect" id="Node000001" title=" " alt="" coords="459,70,636,95"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a50e717278f9543347db6c133dd27b773" title=" " alt="" coords="6,5,207,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="486,69,410,53,306,40,207,33,208,27,306,35,411,48,487,64"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a3cedd5ea0b2414cafcccea4e6b9a0a4f" title=" " alt="" coords="257,63,409,103"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="445,85,410,85,410,80,445,80"/>
+<area shape="rect" id="Node000005" href="$classMainWidget.html#a40558ac84e52048234ac9d5d96ad9748" title=" " alt="" coords="256,127,411,167"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="492,102,402,129,400,124,490,97"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="243,63,186,48,187,43,245,58"/>
+<area shape="rect" id="Node000004" href="$classPortalCommand.html#a6199a464e04f5316b736c5ac4b0eb028" title=" " alt="" coords="13,70,200,95"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="243,85,200,85,200,80,243,80"/>
+<area shape="rect" id="Node000006" href="$classPortalToOverviewCommand.html#a0cfbaf556d3c0b9128d4549d8ff876ac" title=" " alt="" coords="5,127,208,167"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="242,149,208,149,208,144,242,144"/>
+</map>

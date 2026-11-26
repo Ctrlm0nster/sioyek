@@ -1,0 +1,13 @@
+<map id="Document::absolute_to_page_rect" name="Document::absolute_to_page_rect">
+<area shape="rect" id="Node000001" title="Transform an absolute rectangle to page&#45;relative rectangle coordinates." alt="" coords="5,87,159,127"/>
+<area shape="rect" id="Node000002" href="$structDocumentRect.html#aafeec2e9a605413812dc732fdbfc9343" title=" " alt="" coords="207,5,429,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,85,157,62,206,41,235,32,237,37,208,46,160,67,118,90"/>
+<area shape="rect" id="Node000003" href="$structEnhancedRect.html#a4d0866a1bcd13c32ebfa6e329d2dff7b" title=" " alt="" coords="233,55,403,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="159,94,220,86,220,91,159,100"/>
+<area shape="rect" id="Node000004" href="$structAbsoluteDocumentPos.html#ab384396defecb4fad40f924db42cbc4c" title=" " alt="" coords="233,119,403,159"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="159,115,220,123,220,129,159,120"/>
+<area shape="rect" id="Node000006" href="$structEnhancedRect.html#a2f9b9a7752abd1b699a5693c1632775d" title=" " alt="" coords="233,184,403,209"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="118,125,160,148,208,169,237,178,235,183,206,174,157,153,115,130"/>
+<area shape="rect" id="Node000005" href="$classDocument.html#a96a3741801def570bd1a2d614dde2d5f" title="Transform continuous absolute document coordinates to page&#45;relative coordinates." alt="" coords="477,119,631,159"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="403,137,463,137,463,142,403,142"/>
+</map>

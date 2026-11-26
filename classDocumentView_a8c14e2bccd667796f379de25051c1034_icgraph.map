@@ -1,0 +1,9 @@
+<map id="DocumentView::zoom_in" name="DocumentView::zoom_in">
+<area shape="rect" id="Node000001" title=" " alt="" coords="484,31,667,56"/>
+<area shape="rect" id="Node000002" href="$classZoomInCommand.html#af66a4f17a480c82460ee8015d1164a27" title=" " alt="" coords="237,5,436,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="470,35,436,31,436,26,471,30"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a4af1262b608f1e4bd5188655b134e2cc" title=" " alt="" coords="265,55,409,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="470,57,409,63,408,57,470,51"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#a90ee19ed3124206e464a05af4c3f5a60" title=" " alt="" coords="5,55,189,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="251,70,189,70,189,65,251,65"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="ToggleFastreadCommand::perform" name="ToggleFastreadCommand::perform">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,192,45"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a27b3632386b1d918cc591ef24cf971c1" title=" " alt="" coords="240,5,389,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,23,226,23,226,28,192,28"/>
+<area shape="rect" id="Node000003" href="$classPdfViewWidget.html#ab4c04b666c077f21abbae933c373f4bb" title=" " alt="" coords="437,5,608,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="390,23,424,23,424,28,390,28"/>
+</map>

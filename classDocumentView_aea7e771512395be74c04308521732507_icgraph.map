@@ -1,0 +1,21 @@
+<map id="DocumentView::zoom_in_cursor" name="DocumentView::zoom_in_cursor">
+<area shape="rect" id="Node000001" title=" " alt="" coords="707,109,871,149"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a7278eba4b907f1c77583b2323cfe9d5a" title=" " alt="" coords="495,29,641,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="736,105,658,70,619,57,621,52,660,65,738,100"/>
+<area shape="rect" id="Node000005" href="$classZoomInCursorCommand.html#add7fc349bb0c5816ed39f2cd30f1bd87" title=" " alt="" coords="477,79,659,119"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="692,119,659,114,659,109,693,113"/>
+<area shape="rect" id="Node000006" href="$classMainWidget.html#a4af1262b608f1e4bd5188655b134e2cc" title=" " alt="" coords="261,144,405,169"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="693,137,406,155,405,150,693,132"/>
+<area shape="rect" id="Node000008" href="$classDocumentView.html#a0d7e34a46ef26f8edbd17c033ac57345" title=" " alt="" coords="486,194,650,234"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="725,156,621,196,620,191,723,151"/>
+<area shape="poly" id="edge4_Node000002_Node000002" title=" " alt="" coords="607,20,596,11,568,8,545,10,532,15,530,20,536,28,532,31,525,21,529,11,543,5,568,3,598,6,610,15"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a1710c804f090c9c005612b755a46de47" title=" " alt="" coords="237,5,429,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="481,36,429,30,430,25,482,31"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#a793192d445eb63f8a62cc8b646f3cea2" title=" " alt="" coords="246,55,421,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="482,54,421,61,421,55,481,49"/>
+<area shape="rect" id="Node000007" href="$classMainWidget.html#a90ee19ed3124206e464a05af4c3f5a60" title=" " alt="" coords="5,144,189,169"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="247,159,189,159,189,154,247,154"/>
+<area shape="poly" id="edge10_Node000008_Node000006" title=" " alt="" coords="472,193,385,172,387,167,473,188"/>
+<area shape="rect" id="Node000009" href="$classZoomOutCursorCommand.html#a3aafde3fbbe66f08efec6c6dd5ed4d3f" title=" " alt="" coords="237,194,429,234"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="472,217,430,217,430,211,472,211"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="DocumentView::zoom_out_cursor" name="DocumentView::zoom_out_cursor">
+<area shape="rect" id="Node000001" title=" " alt="" coords="477,35,641,75"/>
+<area shape="rect" id="Node000002" href="$classZoomOutCursorCommand.html#a3aafde3fbbe66f08efec6c6dd5ed4d3f" title=" " alt="" coords="237,5,429,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="463,45,429,40,430,35,464,40"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a4af1262b608f1e4bd5188655b134e2cc" title=" " alt="" coords="261,70,405,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="464,69,406,76,405,71,463,64"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#a90ee19ed3124206e464a05af4c3f5a60" title=" " alt="" coords="5,70,189,95"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="247,85,189,85,189,80,247,80"/>
+</map>

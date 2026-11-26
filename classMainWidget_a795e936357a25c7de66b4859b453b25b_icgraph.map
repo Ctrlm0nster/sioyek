@@ -1,0 +1,12 @@
+<map id="MainWidget::begin_portal_move" name="MainWidget::begin_portal_move">
+<area shape="rect" id="Node000001" title=" " alt="" coords="517,55,751,80"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a7278eba4b907f1c77583b2323cfe9d5a" title=" " alt="" coords="285,29,430,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="503,58,430,51,430,46,504,53"/>
+<area shape="rect" id="Node000005" href="$classMainWidget.html#a48ae6c49931be9590a2edda847dadad3" title=" " alt="" coords="245,79,469,104"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="504,81,470,84,469,79,504,76"/>
+<area shape="poly" id="edge4_Node000002_Node000002" title=" " alt="" coords="403,20,400,15,392,12,357,8,330,10,315,15,312,20,320,27,316,31,307,21,312,11,329,5,357,3,393,7,404,11,408,17"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a1710c804f090c9c005612b755a46de47" title=" " alt="" coords="5,5,197,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="271,37,197,30,198,24,271,31"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#a793192d445eb63f8a62cc8b646f3cea2" title=" " alt="" coords="14,55,189,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="271,53,189,61,189,56,271,48"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="DocumentView::toggle_text_mark" name="DocumentView::toggle_text_mark">
+<area shape="rect" id="Node000001" title=" " alt="" coords="444,5,613,45"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#ab0f0c1c404d7f47a60a7b04ba0e58023" title=" " alt="" coords="244,5,396,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="430,28,396,28,396,23,430,23"/>
+<area shape="rect" id="Node000003" href="$classToggleTextMarkCommand.html#ac2f09522eea105363153389929f37c18" title=" " alt="" coords="5,5,196,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="230,28,196,28,196,23,230,23"/>
+</map>

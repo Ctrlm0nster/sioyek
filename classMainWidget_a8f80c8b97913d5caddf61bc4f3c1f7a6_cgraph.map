@@ -1,0 +1,26 @@
+<map id="MainWidget::handle_stop_search" name="MainWidget::handle_stop_search">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,119,157,159"/>
+<area shape="rect" id="Node000002" href="$classPdfViewWidget.html#a9635c35e6b646ba729b444566ffb0244" title=" " alt="" coords="209,87,380,127"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="157,125,195,119,196,124,158,130"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a3e223d01496671cc00641b08669a0a15" title=" " alt="" coords="205,151,384,191"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="158,147,192,152,191,158,157,153"/>
+<area shape="rect" id="Node000004" href="$classSearchButtons.html#ab508ca04bd0a03199e7c8774fd88d163" title=" " alt="" coords="432,158,651,183"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="384,168,418,168,418,173,384,173"/>
+<area shape="rect" id="Node000005" href="$classTouchSearchButtons.html#ab02508bd54667e2f95982e4c826ac309" title=" " alt="" coords="699,120,860,160"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="640,155,685,149,686,155,640,161"/>
+<area shape="rect" id="Node000007" href="$classTouchSearchButtons.html#a8227d61cc483ae793c0278c98e010646" title=" " alt="" coords="1109,103,1263,143"/>
+<area shape="poly" id="edge11_Node000004_Node000007" title=" " alt="" coords="585,181,674,202,793,220,859,225,927,225,995,218,1060,203,1110,180,1151,150,1154,154,1112,184,1062,208,996,223,928,230,859,230,793,226,673,207,584,186"/>
+<area shape="rect" id="Node000009" href="$classTouchSearchButtons.html#a57b5240b5db523c0841e7f0d2a2b15ce" title=" " alt="" coords="1109,12,1263,52"/>
+<area shape="poly" id="edge12_Node000004_Node000009" title=" " alt="" coords="563,155,620,123,703,82,802,41,855,24,907,11,955,4,1004,3,1095,11,1095,16,1004,8,956,9,909,16,856,29,804,46,706,87,622,128,565,160"/>
+<area shape="rect" id="Node000011" href="$classTouchSearchButtons.html#ae072733696572464126a37e8926e98b1" title=" " alt="" coords="1109,220,1263,260"/>
+<area shape="poly" id="edge13_Node000004_Node000011" title=" " alt="" coords="568,181,626,208,699,231,805,245,912,251,1011,250,1096,246,1096,251,1012,255,912,256,804,251,698,236,625,213,566,186"/>
+<area shape="rect" id="Node000006" href="$classTouchSearchButtons.html#a3e59291b9362e8c8fcc5ab17e3c790f7" title=" " alt="" coords="908,89,1061,129"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="860,125,893,120,894,125,861,130"/>
+<area shape="rect" id="Node000008" href="$classTouchSearchButtons.html#a77b4efd06f77e5e10270820b9e6093ab" title=" " alt="" coords="908,25,1061,65"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="819,117,907,75,922,68,924,73,909,80,821,122"/>
+<area shape="rect" id="Node000010" href="$classTouchSearchButtons.html#a45b5c6f9647842b734e189e6e225de65" title=" " alt="" coords="908,153,1061,193"/>
+<area shape="poly" id="edge9_Node000005_Node000010" title=" " alt="" coords="861,150,895,156,894,161,860,156"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="1062,112,1096,114,1095,119,1061,117"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="1061,37,1095,35,1096,41,1062,43"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="1046,191,1112,213,1111,218,1045,196"/>
+</map>

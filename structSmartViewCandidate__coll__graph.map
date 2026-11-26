@@ -1,0 +1,15 @@
+<map id="SmartViewCandidate" name="SmartViewCandidate">
+<area shape="rect" id="Node000001" title=" " alt="" coords="74,1325,225,1471"/>
+<area shape="rect" id="Node000002" href="$classDocument.html" title="Thread&#45;safe document model managing MuPDF structures, layout geometry, and annotations." alt="" coords="5,925,221,1255"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,1254,142,1309,136,1309,130,1255"/>
+<area shape="rect" id="Node000003" href="$structAbsoluteRect.html" title=" " alt="" coords="245,1007,435,1173"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="291,1174,205,1313,200,1310,287,1171"/>
+<area shape="rect" id="Node000004" href="$structEnhancedRect.html" title=" " alt="" coords="250,556,430,876"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="343,890,343,1007,337,1007,337,890"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="289,260,348,325"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="324,339,335,556,329,556,318,339"/>
+<area shape="rect" id="Node000006" href="$structEnhancedRect.html" title=" " alt="" coords="373,120,534,465"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="406,479,385,556,380,555,401,478"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="442,5,465,71"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="456,84,456,120,451,120,451,84"/>
+</map>

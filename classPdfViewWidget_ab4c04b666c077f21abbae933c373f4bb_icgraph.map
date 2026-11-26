@@ -1,0 +1,7 @@
+<map id="PdfViewWidget::toggle_fastread_mode" name="PdfViewWidget::toggle_fastread_mode">
+<area shape="rect" id="Node000001" title=" " alt="" coords="437,5,608,45"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a27b3632386b1d918cc591ef24cf971c1" title=" " alt="" coords="240,5,389,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="424,28,390,28,390,23,424,23"/>
+<area shape="rect" id="Node000003" href="$classToggleFastreadCommand.html#a99a6f13bd49d92c39f5adbeafccac2e6" title=" " alt="" coords="5,5,192,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="226,28,192,28,192,23,226,23"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="MainWidget::handle_portal" name="MainWidget::handle_portal">
+<area shape="rect" id="Node000001" title=" " alt="" coords="255,35,407,75"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a50e717278f9543347db6c133dd27b773" title=" " alt="" coords="5,5,207,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="240,46,206,41,207,36,241,40"/>
+<area shape="rect" id="Node000003" href="$classPortalCommand.html#a6199a464e04f5316b736c5ac4b0eb028" title=" " alt="" coords="13,70,199,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="241,68,200,74,199,68,240,63"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="global_bookmark_select_callback" name="global_bookmark_select_callback">
+<area shape="rect" id="Node000001" title=" " alt="" coords="747,29,928,69"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="877,18,863,11,837,8,815,10,802,15,797,21,799,28,794,30,791,20,798,10,814,5,837,3,864,6,879,13"/>
+<area shape="rect" id="Node000002" href="$classDatabaseManager.html#a2e2a5040d874620a7dac9b2c328a8387" title=" " alt="" coords="509,29,699,69"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="733,52,699,52,699,47,733,47"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a405bd1920a428374eee2d8933b14bbe8" title=" " alt="" coords="283,29,461,69"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="495,52,462,52,462,47,495,47"/>
+<area shape="rect" id="Node000004" href="$classGotoBookmarkGlobalCommand.html#a7db5eebab2ebe06333bab36197db3669" title=" " alt="" coords="5,29,235,69"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="269,52,235,52,235,47,269,47"/>
+</map>

@@ -1,0 +1,26 @@
+<map id="VulkanCanvas::vertexAttribute" name="VulkanCanvas::vertexAttribute">
+<area shape="rect" id="Node000001" title="Configure floating&#45;point vertex attribute pointer layout." alt="" coords="977,131,1197,157"/>
+<area shape="rect" id="Node000002" href="$classPdfViewWidget.html#aba8fc0e6a28cb725a8dcd01032fa9fbb" title=" " alt="" coords="508,69,665,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1019,131,929,115,789,101,665,94,666,89,790,96,930,109,1020,126"/>
+<area shape="rect" id="Node000006" href="$classPdfViewWidget.html#a1b8568d44b003f85231fe4892c75b493" title=" " alt="" coords="746,7,903,47"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="1047,127,928,70,877,49,879,44,930,66,1050,123"/>
+<area shape="rect" id="Node000008" href="$classPdfViewWidget.html#a7a2de044b327cd9de859168654f06d46" title="Pure virtual hook invoked during GPU initialization to build widget&#45;specific scene resources." alt="" coords="732,239,917,279"/>
+<area shape="poly" id="edge10_Node000001_Node000008" title=" " alt="" coords="1050,165,930,222,884,241,882,236,928,218,1048,161"/>
+<area shape="rect" id="Node000009" href="$classVulkanCanvas.html#a81a11ad2d94156f8a94123084a5b23e2" title="Configure integer vertex attribute layout without floating&#45;point conversion." alt="" coords="720,124,929,164"/>
+<area shape="poly" id="edge11_Node000001_Node000009" title=" " alt="" coords="964,147,930,147,930,141,964,141"/>
+<area shape="rect" id="Node000010" href="$classPdfViewWidget.html#a61396366219f72441eb29bde5ffc021d" title=" " alt="" coords="501,133,672,173"/>
+<area shape="poly" id="edge14_Node000001_Node000010" title=" " alt="" coords="1024,162,930,179,825,185,720,179,672,173,673,167,720,173,825,180,929,173,1023,157"/>
+<area shape="rect" id="Node000003" href="$classPdfViewWidget.html#a7b983e7fb3cc4b306be2d531642a6594" title=" " alt="" coords="255,19,453,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="494,69,406,47,407,42,495,64"/>
+<area shape="rect" id="Node000005" href="$classPdfViewWidget.html#adbe2d74c76fd707e9f69fa87b4daa3aa" title=" " alt="" coords="269,69,439,109"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="494,92,439,92,439,87,494,87"/>
+<area shape="rect" id="Node000004" href="$classPdfViewWidget.html#ab1b6da7af4f4ecce9c051af6d2d5d8b0" title="Pure virtual hook called to record high&#45;level page and document draw calls." alt="" coords="5,49,207,74"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="242,48,207,52,206,47,241,43"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="255,81,207,75,207,70,255,76"/>
+<area shape="rect" id="Node000007" href="$classPdfViewWidget.html#a90363c42393521a426a3ed61f08ca134" title=" " alt="" coords="501,5,672,45"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="732,29,672,28,672,23,732,23"/>
+<area shape="poly" id="edge8_Node000007_Node000003" title=" " alt="" coords="488,31,454,32,454,26,487,26"/>
+<area shape="poly" id="edge9_Node000007_Node000005" title=" " alt="" coords="501,52,428,72,427,67,499,46"/>
+<area shape="poly" id="edge12_Node000009_Node000010" title=" " alt="" coords="706,151,672,153,672,147,706,146"/>
+<area shape="poly" id="edge13_Node000010_Node000005" title=" " alt="" coords="499,132,427,112,428,107,501,127"/>
+</map>

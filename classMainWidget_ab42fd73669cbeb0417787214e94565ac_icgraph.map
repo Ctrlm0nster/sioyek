@@ -1,0 +1,7 @@
+<map id="MainWidget::goto_mark" name="MainWidget::goto_mark">
+<area shape="rect" id="Node000001" title=" " alt="" coords="260,31,439,56"/>
+<area shape="rect" id="Node000002" href="$classSearchCommand.html#a6c9d4498f37582c30afe7aafe16a5ed2" title=" " alt="" coords="5,5,212,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="246,35,212,32,212,26,246,30"/>
+<area shape="rect" id="Node000003" href="$classGotoMark.html#aec61ae707d425611ac2e39e16daaf225" title=" " alt="" coords="35,55,182,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="247,56,182,63,182,57,246,51"/>
+</map>

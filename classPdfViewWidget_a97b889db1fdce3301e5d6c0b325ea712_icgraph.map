@@ -1,0 +1,7 @@
+<map id="PdfViewWidget::show_rect_hints" name="PdfViewWidget::show_rect_hints">
+<area shape="rect" id="Node000001" title=" " alt="" coords="445,5,608,45"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a4fc3783862e58d26f4968908dec87be1" title=" " alt="" coords="248,5,397,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="432,28,397,28,397,23,432,23"/>
+<area shape="rect" id="Node000003" href="$classToggleRectHintsCommand.html#a5c7d081cc887e0923b3e3693d01fc834" title=" " alt="" coords="5,5,200,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="234,28,200,28,200,23,234,23"/>
+</map>

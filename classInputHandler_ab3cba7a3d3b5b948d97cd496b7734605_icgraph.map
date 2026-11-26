@@ -1,0 +1,9 @@
+<map id="InputHandler::is_on_final_or_root_node" name="InputHandler::is_on_final_or_root_node">
+<area shape="rect" id="Node000001" title=" " alt="" coords="496,23,645,63"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a0452032b756e46c7d39fc7bdd52cceb6" title=" " alt="" coords="273,31,448,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="482,46,448,46,448,41,482,41"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#ab611ce437761ff749e7b02703918ba5d" title=" " alt="" coords="14,5,217,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="259,36,216,31,217,26,260,30"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#af576f313b835f7d08175f33e7488b157" title=" " alt="" coords="5,55,225,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="260,56,226,59,225,54,259,51"/>
+</map>

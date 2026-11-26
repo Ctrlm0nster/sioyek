@@ -1,0 +1,7 @@
+<map id="MainWidget::handle_open_link" name="MainWidget::handle_open_link">
+<area shape="rect" id="Node000001" title=" " alt="" coords="264,23,416,63"/>
+<area shape="rect" id="Node000002" href="$classCopyLinkCommand.html#ac359dd145b6e563b75a26b93b4a56d71" title=" " alt="" coords="6,5,215,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="250,36,215,32,216,27,251,31"/>
+<area shape="rect" id="Node000003" href="$classOpenLinkCommand.html#a7312fe849f6ad68293c3fb82e9bbac28" title=" " alt="" coords="5,55,216,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="251,55,217,59,216,54,250,50"/>
+</map>

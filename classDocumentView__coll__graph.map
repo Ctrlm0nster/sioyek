@@ -1,0 +1,13 @@
+<map id="DocumentView" name="DocumentView">
+<area shape="rect" id="Node000001" title=" " alt="" coords="502,416,714,1065"/>
+<area shape="rect" id="Node000002" href="$classDatabaseManager.html" title=" " alt="" coords="5,43,213,308"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="199,306,227,344,361,494,492,626,488,630,357,498,223,347,194,310"/>
+<area shape="rect" id="Node000003" href="$classDocumentManager.html" title=" " alt="" coords="237,5,477,345"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="435,344,498,485,493,487,430,347"/>
+<area shape="rect" id="Node000004" href="$classCachedChecksummer.html" title=" " alt="" coords="501,103,715,248"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="611,249,611,399,605,399,605,249"/>
+<area shape="rect" id="Node000005" href="$classDocument.html" title="Thread&#45;safe document model managing MuPDF structures, layout geometry, and annotations." alt="" coords="739,11,955,340"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="780,341,723,475,718,473,775,339"/>
+<area shape="rect" id="Node000006" href="$structVirtualPos.html" title=" " alt="" coords="979,133,1059,218"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="1014,219,997,281,969,347,916,429,854,506,790,577,728,638,724,634,786,573,850,503,911,426,964,344,992,279,1009,218"/>
+</map>

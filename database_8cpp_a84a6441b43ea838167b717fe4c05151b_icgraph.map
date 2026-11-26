@@ -1,0 +1,10 @@
+<map id="mark_in_database_select_callback" name="mark_in_database_select_callback">
+<area shape="rect" id="Node000001" title=" " alt="" coords="693,29,881,69"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="827,18,813,11,787,8,765,10,751,15,746,21,749,28,744,30,741,20,748,10,764,5,787,3,815,6,830,13"/>
+<area shape="rect" id="Node000002" href="$classDatabaseManager.html#a2c6f861a3960d80de52c2dacb6773bba" title=" " alt="" coords="457,29,645,69"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="679,52,646,52,646,47,679,47"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a5e058577eae267fd0e52f9794058fb71" title=" " alt="" coords="257,29,409,69"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="443,52,410,52,410,47,443,47"/>
+<area shape="rect" id="Node000004" href="$classShowMarks.html#a5903a77adb6a40ac6260bddbbc1dc622" title=" " alt="" coords="5,29,209,69"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="244,52,210,52,210,47,244,47"/>
+</map>

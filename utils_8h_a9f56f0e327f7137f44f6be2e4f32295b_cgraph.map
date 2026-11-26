@@ -1,0 +1,12 @@
+<map id="find_expanding_rect" name="find_expanding_rect">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,43,159,68"/>
+<area shape="poly" id="edge6_Node000001_Node000001" title=" " alt="" coords="44,44,36,34,40,24,56,18,82,16,115,20,128,29,124,34,113,25,82,21,57,23,43,28,41,34,48,41"/>
+<area shape="rect" id="Node000002" href="$structDocumentRect.html#aafeec2e9a605413812dc732fdbfc9343" title=" " alt="" coords="207,5,429,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,41,224,30,224,35,160,46"/>
+<area shape="rect" id="Node000003" href="$utils_8cpp.html#ae92628016017f248ca5a20f45eb52dda" title=" " alt="" coords="255,79,381,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="159,64,242,77,241,82,159,70"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="285,80,278,70,282,60,295,54,318,52,346,56,357,65,354,69,344,61,318,57,297,59,286,64,283,70,289,77"/>
+<area shape="rect" id="Node000004" href="$utils_8cpp.html#a0427155864cc7897ebd490169d9f8b66" title=" " alt="" coords="477,79,560,104"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="381,89,463,89,463,94,381,94"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="486,80,479,70,482,60,496,54,519,52,547,56,558,65,554,69,544,61,519,57,497,59,486,64,484,70,490,77"/>
+</map>

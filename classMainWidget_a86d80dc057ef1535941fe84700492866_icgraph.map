@@ -1,0 +1,7 @@
+<map id="MainWidget::handle_move_smooth_hold" name="MainWidget::handle_move_smooth_hold">
+<area shape="rect" id="Node000001" title=" " alt="" coords="236,37,393,77"/>
+<area shape="rect" id="Node000002" href="$classMoveSmoothCommand.html#ada2c634fcd50e6062b778a0868966adc" title=" " alt="" coords="5,5,188,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="222,46,188,41,188,36,223,41"/>
+<area shape="rect" id="Node000003" href="$classMoveSmoothCommand.html#a0c73cadbc3f3430cc5081f562c1291a0" title=" " alt="" coords="5,69,188,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="223,73,188,79,188,73,222,68"/>
+</map>

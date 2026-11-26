@@ -1,0 +1,10 @@
+<map id="TouchSlider::TouchSlider" name="TouchSlider::TouchSlider">
+<area shape="rect" id="Node000001" title=" " alt="" coords="499,31,677,56"/>
+<area shape="rect" id="Node000002" href="$classFloatConfigUI.html#a3b8eed8810d2f00365d8fc8d10494ebb" title=" " alt="" coords="244,5,451,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="485,35,451,32,451,26,485,30"/>
+<area shape="rect" id="Node000004" href="$classIntConfigUI.html#afbc0622fd94a5a0d22d846102de98883" title=" " alt="" coords="260,55,435,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="485,56,435,61,435,56,485,51"/>
+<area shape="rect" id="Node000003" href="$classConfigCommand.html#aa22f004288468b2f112aa0eefe6dd66e" title=" " alt="" coords="5,31,196,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="231,33,197,36,196,31,230,27"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="246,60,196,55,197,50,247,55"/>
+</map>

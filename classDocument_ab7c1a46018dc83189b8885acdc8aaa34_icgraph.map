@@ -1,0 +1,15 @@
+<map id="Document::get_rect_vertically" name="Document::get_rect_vertically">
+<area shape="rect" id="Node000001" title=" " alt="" coords="729,69,880,109"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#af39493526a42b602f8a4e34e77faebf8" title=" " alt="" coords="525,69,681,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="715,92,682,92,682,87,715,87"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a50e717278f9543347db6c133dd27b773" title=" " alt="" coords="276,5,477,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="518,68,447,48,449,43,519,63"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#adffebaefcfca442297736f0026d34ea1" title=" " alt="" coords="285,69,468,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="511,92,468,92,468,87,511,87"/>
+<area shape="rect" id="Node000006" href="$classMainWidget.html#afc26e7675ac2cb274bfe6f04dceb2cb8" title=" " alt="" coords="295,133,458,173"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="519,116,449,136,447,131,518,111"/>
+<area shape="rect" id="Node000005" href="$classMoveTextMarkDownCommand.html#a51d42b5a54de3b19a8202cd27d58a8cb" title=" " alt="" coords="5,69,228,109"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="272,92,228,92,228,87,272,87"/>
+<area shape="rect" id="Node000007" href="$classMoveTextMarkUpCommand.html#a3d4d2b219d36e820334dd12d7bd73089" title=" " alt="" coords="15,133,218,173"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="282,156,218,156,218,151,282,151"/>
+</map>

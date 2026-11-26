@@ -1,0 +1,15 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,109,72,134"/>
+<area shape="rect" id="Node000001" href="$structEnhancedRect.html" title=" " alt="" coords="121,5,309,45"/>
+<area shape="poly" id="edge308_Node000000_Node000001" title=" " alt="" coords="61,97,88,75,119,55,144,43,147,48,121,60,91,80,65,101"/>
+<area shape="rect" id="Node000002" href="$structEnhancedRect.html" title=" " alt="" coords="127,69,304,109"/>
+<area shape="poly" id="edge309_Node000000_Node000002" title=" " alt="" coords="85,110,126,103,127,108,86,116"/>
+<area shape="rect" id="Node000003" href="$structEnhancedRect.html" title=" " alt="" coords="121,133,309,173"/>
+<area shape="poly" id="edge310_Node000000_Node000003" title=" " alt="" coords="86,127,122,134,121,139,85,132"/>
+<area shape="rect" id="Node000005" href="$structEnhancedRect.html" title=" " alt="" coords="120,197,311,237"/>
+<area shape="poly" id="edge312_Node000000_Node000005" title=" " alt="" coords="65,141,91,163,121,183,147,195,144,200,119,188,88,167,61,145"/>
+<area shape="rect" id="Node000004" href="$structAbsoluteRect.html" title=" " alt="" coords="394,141,502,166"/>
+<area shape="poly" id="edge311_Node000003_Node000004" title=" " alt="" coords="323,151,394,151,394,156,323,156"/>
+<area shape="rect" id="Node000006" href="$structNormalizedWindowRect.html" title=" " alt="" coords="359,205,537,230"/>
+<area shape="poly" id="edge313_Node000005_Node000006" title=" " alt="" coords="324,215,359,215,359,220,324,220"/>
+</map>

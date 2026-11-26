@@ -1,0 +1,11 @@
+<map id="Document::get_scratchpad_file_path" name="Document::get_scratchpad_file_path">
+<area shape="rect" id="Node000001" title=" " alt="" coords="512,39,708,79"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a03699df16aa7010e3a1a0e4b5a492612" title=" " alt="" coords="248,17,463,42"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="498,49,462,44,463,39,499,43"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#a601f90fc87c411b6e8c3f99129b5a0f9" title=" " alt="" coords="247,70,464,95"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="499,72,464,75,464,70,498,66"/>
+<area shape="rect" id="Node000003" href="$classLoadScratchpadCommand.html#a86f6ddbb0b121bb21ba92b1c050f9a39" title=" " alt="" coords="6,5,198,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="234,30,198,30,198,24,234,25"/>
+<area shape="rect" id="Node000005" href="$classSaveScratchpadCommand.html#ab662d4304de63f1c59a93eafcfda20b6" title=" " alt="" coords="5,69,199,109"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="233,89,199,89,199,84,233,83"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="Document::get_pdf_annotations" name="Document::get_pdf_annotations">
+<area shape="rect" id="Node000001" title=" " alt="" coords="540,46,771,71"/>
+<area shape="rect" id="Node000002" href="$classDocument.html#a563e7101c12ced620ef7a0b79ff282de" title=" " alt="" coords="265,17,492,42"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="526,48,492,44,493,39,527,42"/>
+<area shape="rect" id="Node000004" href="$classDocument.html#a266d1c3a97489173fb89125e056cdbe9" title=" " alt="" coords="267,70,491,95"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="527,72,491,76,491,70,526,67"/>
+<area shape="rect" id="Node000003" href="$classEmbedAnnotationsCommand.html#a95641a6515ff1081107fa19955c10771" title=" " alt="" coords="5,5,217,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="252,30,217,30,218,24,252,25"/>
+<area shape="rect" id="Node000005" href="$classImportAnnotationsCommand.html#a9acc3aadfe4bd6021c7447d1f13503a7" title=" " alt="" coords="6,69,217,109"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="253,88,217,89,217,84,253,83"/>
+</map>

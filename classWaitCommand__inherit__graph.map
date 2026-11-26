@@ -1,0 +1,7 @@
+<map id="WaitCommand" name="WaitCommand">
+<area shape="rect" id="Node000001" title=" " alt="" coords="29,732,207,877"/>
+<area shape="rect" id="Node000002" href="$classGenericWaitCommand.html" title=" " alt="" coords="5,459,231,684"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="121,698,121,732,115,732,115,698"/>
+<area shape="rect" id="Node000003" href="$classCommand.html" title=" " alt="" coords="5,5,231,411"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="121,424,121,458,115,458,115,424"/>
+</map>

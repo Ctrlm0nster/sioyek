@@ -1,0 +1,19 @@
+<map id="PdfViewWidget::render_highlight_window" name="PdfViewWidget::render_highlight_window">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,171,176,211"/>
+<area shape="rect" id="Node000002" href="$classVulkanCanvas.html#a92ae8512130cbcae8ad69eb55238e5b6" title="Set separate color and alpha blending factors." alt="" coords="224,5,469,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="102,170,148,105,183,69,223,40,235,33,238,38,225,44,186,73,152,108,106,173"/>
+<area shape="rect" id="Node000003" href="$classVulkanCanvas.html#a327ad225d0f26c0ab2b157294eaa666c" title="Upload raw vertex or index data into the currently bound buffer." alt="" coords="251,55,442,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="111,169,159,128,190,107,223,89,242,81,244,86,225,94,193,111,162,132,114,173"/>
+<area shape="rect" id="Node000004" href="$classVulkanCanvas.html#abbf1c49b9bebbd91e5b0bf9daf1a68eb" title="Disable a hardware graphics capability." alt="" coords="263,104,431,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="137,169,223,138,257,130,258,135,225,143,139,174"/>
+<area shape="rect" id="Node000005" href="$classVulkanCanvas.html#a097af6f678abdc017d0b0dd61c289a8f" title="Render non&#45;indexed geometric primitives from bound vertex arrays." alt="" coords="249,153,444,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="176,180,235,174,236,180,176,186"/>
+<area shape="rect" id="Node000006" href="$classVulkanCanvas.html#a42d8b1052353a366a166e1a78f2869db" title="Enable a hardware graphics capability (e.g." alt="" coords="264,203,429,228"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="176,197,251,204,250,209,176,202"/>
+<area shape="rect" id="Node000007" href="$classVulkanCanvas.html#aae4463152f0e7f9c876cac58f89fa089" title="Enable the specified vertex attribute array location." alt="" coords="235,252,458,277"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="143,209,225,237,263,246,262,252,223,242,141,214"/>
+<area shape="rect" id="Node000008" href="$classPdfViewWidget.html#a297d2d958ac8cf4a7fce7661dabc721d" title=" " alt="" coords="249,301,444,327"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="115,209,163,249,193,269,225,286,249,295,247,300,223,291,190,274,160,253,111,213"/>
+<area shape="rect" id="Node000009" href="$classVulkanCanvas.html#a931f4e090f24750d259718098bc8c7ad" title="Select the active SPIR&#45;V shader program for subsequent draw commands." alt="" coords="247,351,446,376"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="106,210,153,273,187,307,225,336,241,344,239,348,223,340,183,311,149,277,102,213"/>
+</map>

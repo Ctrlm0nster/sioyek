@@ -1,0 +1,8 @@
+<map id="PdfRenderer::join_threads" name="PdfRenderer::join_threads">
+<area shape="rect" id="Node000001" title="Signal all threads to terminate and wait for join completion." alt="" coords="255,43,445,68"/>
+<area shape="rect" id="Node000002" href="$classPdfRenderer.html#a28bf6ffc538f64d0123effb7e599f316" title="Destructor stopping all worker threads and releasing cached pixmaps." alt="" coords="5,5,207,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="253,43,189,33,190,28,253,38"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#a700a0caa5b70a06d1064e576f9f3cf65" title=" " alt="" coords="79,79,133,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="250,73,134,90,133,85,250,67"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="143,75,149,69,145,64,131,59,106,57,77,60,64,66,65,72,80,81,77,86,60,75,60,63,76,55,106,52,132,54,148,60,154,69,148,79"/>
+</map>

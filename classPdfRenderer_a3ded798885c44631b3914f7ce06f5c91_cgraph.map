@@ -1,0 +1,13 @@
+<map id="PdfRenderer::add_request" name="PdfRenderer::add_request">
+<area shape="rect" id="Node000001" title="Enqueue a high&#45;priority render request for a visible page or slice." alt="" coords="5,67,196,92"/>
+<area shape="rect" id="Node000002" href="$utils_8h.html#acc73828ae75f80861741658a826cab35" title=" " alt="" coords="447,29,623,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,64,181,44,244,27,292,22,342,20,435,25,435,31,342,26,293,27,244,33,183,49,131,69"/>
+<area shape="rect" id="Node000003" href="$utils_8h.html#a39a5b112fe951f467ae0db37d5869dea" title=" " alt="" coords="258,67,385,92"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="196,77,244,77,244,82,196,82"/>
+<area shape="rect" id="Node000004" href="$utils_8h.html#a0fa7a29c491aed321ee4d854decb9d80" title=" " alt="" coords="244,140,399,165"/>
+<area shape="poly" id="edge6_Node000001_Node000004" title=" " alt="" coords="141,90,270,133,268,138,139,95"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="500,31,492,21,496,11,511,5,535,3,564,6,576,15,573,20,562,11,535,8,512,10,500,15,497,20,504,28"/>
+<area shape="poly" id="edge4_Node000003_Node000002" title=" " alt="" coords="384,66,448,54,448,60,385,71"/>
+<area shape="poly" id="edge5_Node000003_Node000003" title=" " alt="" coords="286,68,279,58,283,48,297,42,321,40,351,44,363,53,360,57,349,49,321,45,299,47,287,52,284,58,291,65"/>
+<area shape="poly" id="edge7_Node000004_Node000004" title=" " alt="" coords="286,142,279,132,283,122,297,116,321,113,351,117,363,126,360,130,349,122,321,119,299,121,287,126,284,131,291,138"/>
+</map>

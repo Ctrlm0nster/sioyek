@@ -1,0 +1,9 @@
+<map id="TouchHighlightButtons::setHighlightType" name="TouchHighlightButtons::setHighlightType">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,22,173,62"/>
+<area shape="rect" id="Node000002" href="$utils_8cpp.html#ae11dd7e59b71db1da3b3ed5d05f56bfc" title=" " alt="" coords="221,29,404,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,39,208,39,208,45,173,45"/>
+<area shape="poly" id="edge4_Node000002_Node000002" title=" " alt="" coords="280,31,273,21,277,11,290,5,313,3,340,6,351,15,348,19,338,11,313,8,292,10,281,15,278,20,284,28"/>
+<area shape="rect" id="Node000003" href="$utils_8cpp.html#a69d655d02666939218c3a0dac18fc728" title=" " alt="" coords="452,29,571,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="405,39,438,39,438,45,405,45"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="479,31,472,21,475,11,489,5,511,3,538,6,550,15,546,19,536,11,511,8,490,10,479,15,477,20,483,28"/>
+</map>

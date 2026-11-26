@@ -1,0 +1,8 @@
+<map id="MoveSmoothCommand::perform_up" name="MoveSmoothCommand::perform_up">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,35,188,75"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a417592ee3bc8b3c38d08f9a5d9fc3cbb" title=" " alt="" coords="236,5,395,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="188,40,222,35,223,40,189,45"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a66c2d188896454c70354e9efb7a34144" title=" " alt="" coords="443,35,609,75"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="188,54,236,55,395,55,429,54,429,60,395,60,236,60,188,59"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="395,34,429,39,429,44,394,39"/>
+</map>

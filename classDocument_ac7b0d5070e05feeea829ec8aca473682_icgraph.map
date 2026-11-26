@@ -1,0 +1,23 @@
+<map id="Document::find_generic_with_string" name="Document::find_generic_with_string">
+<area shape="rect" id="Node000001" title=" " alt="" coords="956,117,1132,157"/>
+<area shape="rect" id="Node000002" href="$classDocumentView.html#a4f2ffb615bda1c123a25c0264df92248" title=" " alt="" coords="756,117,908,157"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="942,140,908,140,908,135,942,135"/>
+<area shape="rect" id="Node000003" href="$classDocumentView.html#ace0a07d54fc13ec70658ddba58f0e221" title=" " alt="" coords="545,21,703,61"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="774,114,667,64,669,59,776,109"/>
+<area shape="rect" id="Node000005" href="$classMainWidget.html#a5d57809dbb04313b7235ea98228ab8fe" title=" " alt="" coords="540,117,708,157"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="742,140,708,140,708,135,742,135"/>
+<area shape="rect" id="Node000010" href="$classMainWidget.html#a0f519de45e1dc6f99cea00fb031d8b0a" title=" " alt="" coords="551,181,697,221"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="754,164,690,184,689,179,753,159"/>
+<area shape="rect" id="Node000004" href="$classGotoDefinitionCommand.html#a67a90956751dd8b1e3ee8491cf34de5f" title=" " alt="" coords="293,5,476,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="531,38,476,34,476,29,532,33"/>
+<area shape="rect" id="Node000006" href="$classMainWidget.html#a49169009ea3b7e62cb793399cccc462a" title=" " alt="" coords="309,69,461,109"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="526,120,460,107,461,102,527,115"/>
+<area shape="rect" id="Node000009" href="$classOverviewDefinitionCommand.html#afc1fb6882f2c47e523e6f679e56d1c9c" title=" " alt="" coords="277,133,492,173"/>
+<area shape="poly" id="edge8_Node000005_Node000009" title=" " alt="" coords="526,147,492,149,492,144,526,141"/>
+<area shape="rect" id="Node000007" href="$classMainWidget.html#a48ae6c49931be9590a2edda847dadad3" title=" " alt="" coords="5,49,229,74"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="295,83,230,76,230,70,295,77"/>
+<area shape="rect" id="Node000008" href="$classMainWidget.html#a2d1fe0808150002e7cf4b2af8a1202cd" title=" " alt="" coords="15,99,219,139"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="295,102,220,110,219,105,295,96"/>
+<area shape="rect" id="Node000011" href="$classPortalToDefinitionCommand.html#a151c0cc226671bddacd5f2dd75b6f145" title=" " alt="" coords="283,197,487,237"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="537,210,487,213,487,208,537,204"/>
+</map>

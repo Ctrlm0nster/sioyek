@@ -1,0 +1,11 @@
+<map id="MainWidget::get_overview_position" name="MainWidget::get_overview_position">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,63,201,103"/>
+<area shape="rect" id="Node000002" href="$classDocument.html#aa666969289019e3c56e52d5e8855732d" title=" " alt="" coords="265,5,455,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,60,256,46,257,51,194,65"/>
+<area shape="rect" id="Node000004" href="$classDocumentView.html#acfa88cf915c8bae19ac83d1aa9b42dd1" title=" " alt="" coords="249,70,471,95"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="201,80,236,80,236,85,201,85"/>
+<area shape="rect" id="Node000005" href="$classPdfViewWidget.html#aac773ef7296693771a400b3368b250b6" title="Retrieve the current overview portal state." alt="" coords="285,120,435,160"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="194,100,272,118,271,123,193,105"/>
+<area shape="rect" id="Node000003" href="$classDocument.html#a96a3741801def570bd1a2d614dde2d5f" title="Transform continuous absolute document coordinates to page&#45;relative coordinates." alt="" coords="519,5,672,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="456,23,505,23,505,28,456,28"/>
+</map>

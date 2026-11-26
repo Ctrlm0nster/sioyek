@@ -1,0 +1,7 @@
+<map id="MainWidget::set_pen_drawing_mode" name="MainWidget::set_pen_drawing_mode">
+<area shape="rect" id="Node000001" title=" " alt="" coords="436,5,595,45"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a74896cdc419cf25f28f6b067df6e0728" title=" " alt="" coords="232,5,388,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="422,28,388,28,388,23,422,23"/>
+<area shape="rect" id="Node000003" href="$classTogglePenDrawingMode.html#adf1a0e70bc49c24891c15c861e6b8272" title=" " alt="" coords="5,5,184,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="218,28,184,28,184,23,218,23"/>
+</map>

@@ -1,0 +1,16 @@
+<map id="DatabaseManager::insert_highlight" name="DatabaseManager::insert_highlight">
+<area shape="rect" id="Node000001" title=" " alt="" coords="761,31,948,71"/>
+<area shape="rect" id="Node000002" href="$classDatabaseManager.html#ac5ad302d952089915f49dafbf2a8f8ed" title=" " alt="" coords="487,8,713,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="748,41,705,36,706,31,748,36"/>
+<area shape="rect" id="Node000005" href="$classDatabaseManager.html#adbcb73891ae9b6ead2b8fb5c3997ea85" title=" " alt="" coords="511,59,689,99"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="748,66,689,72,689,67,748,60"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a885e0314eaa71ed2a39c7eaa951c6357" title=" " alt="" coords="249,7,435,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="473,23,435,22,435,17,473,17"/>
+<area shape="rect" id="Node000004" href="$classImportCommand.html#a462efa205ea0e7170265caf23fde6fb3" title=" " alt="" coords="5,5,197,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="236,21,198,21,198,16,236,16"/>
+<area shape="rect" id="Node000006" href="$classDatabaseManager.html#aab1258137450325512140acbe68b12af" title=" " alt="" coords="245,63,439,103"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="497,84,439,85,439,79,497,78"/>
+<area shape="rect" id="Node000007" href="$main_8cpp.html#a700a0caa5b70a06d1064e576f9f3cf65" title=" " alt="" coords="74,79,129,104"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="232,90,129,93,129,88,232,84"/>
+<area shape="poly" id="edge7_Node000007_Node000007" title=" " alt="" coords="138,75,144,69,140,64,126,59,101,57,73,60,60,66,61,72,75,81,72,86,56,75,56,63,71,55,101,52,127,54,143,60,149,69,143,79"/>
+</map>

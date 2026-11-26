@@ -1,0 +1,11 @@
+<map id="DocumentView::goto_end" name="DocumentView::goto_end">
+<area shape="rect" id="Node000001" title=" " alt="" coords="476,74,664,99"/>
+<area shape="rect" id="Node000002" href="$classDocumentView.html#ac4543b399d92d3d92bc89792aea19c9b" title=" " alt="" coords="247,37,405,77"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="462,76,405,69,405,64,463,71"/>
+<area shape="rect" id="Node000005" href="$classGotoEndCommand.html#a0fe31ee963631d96fb0390fb5aabd0d4" title=" " alt="" coords="224,102,428,127"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="462,102,429,106,428,100,462,96"/>
+<area shape="rect" id="Node000003" href="$classNextChapterCommand.html#a8be1183ef53c4ed60fd5ba86e65e6dd7" title=" " alt="" coords="5,5,176,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="233,47,176,40,177,34,234,42"/>
+<area shape="rect" id="Node000004" href="$classPrevChapterCommand.html#a732eb4630b0f3ada91be9710aed0d0c8" title=" " alt="" coords="6,69,175,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="234,73,176,80,175,75,233,67"/>
+</map>

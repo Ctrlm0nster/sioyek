@@ -1,0 +1,20 @@
+<map id="Document::get_intersecting_visible_portals" name="Document::get_intersecting_visible_portals">
+<area shape="rect" id="Node000001" title=" " alt="" coords="731,133,933,173"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a16ffaa9550f24d06730e99966efb68bc" title=" " alt="" coords="516,133,683,173"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="717,156,683,156,683,151,717,151"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a13d77f663c261dae927eae17c42b35be" title=" " alt="" coords="296,5,448,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="563,127,519,92,467,60,440,48,442,43,469,55,522,88,567,122"/>
+<area shape="rect" id="Node000005" href="$classMainWidget.html#a812f47bf937d45464cc1643911084cc8" title=" " alt="" coords="277,69,467,109"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="513,132,443,112,444,107,515,127"/>
+<area shape="rect" id="Node000007" href="$classMainWidget.html#aafa0bb29547a07a001fa191de1eedfb7" title=" " alt="" coords="289,133,455,173"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="502,156,455,156,455,151,502,151"/>
+<area shape="rect" id="Node000008" href="$classGotoRulerPortalCommand.html#a49eaf21ff948c2deb896575856b44767" title=" " alt="" coords="21,161,213,201"/>
+<area shape="poly" id="edge9_Node000002_Node000008" title=" " alt="" coords="517,179,468,188,402,194,335,195,213,192,213,186,335,190,402,188,468,183,516,174"/>
+<area shape="rect" id="Node000009" href="$classGotoRulerPortalCommand.html#ae276ee1fd0c15a2e9dff2ba8e38eed6f" title=" " alt="" coords="276,248,468,288"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="556,183,469,232,428,250,425,245,467,227,554,178"/>
+<area shape="rect" id="Node000004" href="$classGotoRulerPortalCommand.html#a3184b0feefef186a1229469ab13dd2e9" title=" " alt="" coords="21,5,213,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="282,28,213,28,213,23,282,23"/>
+<area shape="rect" id="Node000006" href="$classOverviewRulerPortalCommand.html#a54af404e3441e761852ed887b1d9763a" title=" " alt="" coords="5,69,228,109"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="263,92,228,92,228,87,263,87"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="276,166,213,173,213,168,276,161"/>
+</map>

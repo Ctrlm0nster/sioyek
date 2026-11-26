@@ -1,0 +1,9 @@
+<map id="PdfViewWidget::clear_background_color" name="PdfViewWidget::clear_background_color">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,47,167,87"/>
+<area shape="rect" id="Node000002" href="$classVulkanCanvas.html#a5c18fcc5333425b0589f9aa34aa4ecf2" title="Clear specified frame buffer attachments." alt="" coords="231,5,385,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,47,236,31,237,36,168,52"/>
+<area shape="rect" id="Node000003" href="$classVulkanCanvas.html#ab88e9a854f72ff221578a10a7f1f020d" title="Set clear color for the swapchain color attachment." alt="" coords="215,55,401,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="167,65,201,65,201,70,167,70"/>
+<area shape="rect" id="Node000004" href="$classPdfViewWidget.html#a2a871cc167a59ce1717f12b82340365c" title=" " alt="" coords="224,105,392,145"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="165,85,217,99,216,104,163,90"/>
+</map>

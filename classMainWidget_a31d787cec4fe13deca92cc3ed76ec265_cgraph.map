@@ -1,0 +1,10 @@
+<map id="MainWidget::open_document_with_hash" name="MainWidget::open_document_with_hash">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,47,217,87"/>
+<area shape="rect" id="Node000002" href="$classCachedChecksummer.html#a55347faf712fe876823c110ba7890114" title=" " alt="" coords="285,5,457,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="217,47,271,38,272,44,218,52"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a707c7945190b5da6799af20f42e1f2cc" title="Open a PDF document from a filesystem path." alt="" coords="265,94,477,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="218,80,275,89,274,95,217,86"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="337,96,329,86,333,76,348,70,371,67,401,71,412,80,409,84,399,76,371,73,349,75,337,79,335,85,341,92"/>
+<area shape="rect" id="Node000004" href="$classPath.html#ab110e4586145d1e61dc3e1ba90d43799" title=" " alt="" coords="525,94,640,119"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="478,104,512,104,512,109,478,109"/>
+</map>

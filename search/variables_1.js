@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['back_5frect_5fhold_5fcommand_0',['BACK_RECT_HOLD_COMMAND',['../config_8cpp.html#a4825ce1f45c47f72eb15209b404d0902',1,'BACK_RECT_HOLD_COMMAND:&#160;config.cpp'],['../main__widget_8cpp.html#a4825ce1f45c47f72eb15209b404d0902',1,'BACK_RECT_HOLD_COMMAND:&#160;config.cpp'],['../pdf__view__widget_8cpp.html#a4825ce1f45c47f72eb15209b404d0902',1,'BACK_RECT_HOLD_COMMAND:&#160;config.cpp']]],
+  ['back_5frect_5ftap_5fcommand_1',['BACK_RECT_TAP_COMMAND',['../config_8cpp.html#a0f59a9368b58cbe2c17e00457f00f283',1,'BACK_RECT_TAP_COMMAND:&#160;config.cpp'],['../main__widget_8cpp.html#a0f59a9368b58cbe2c17e00457f00f283',1,'BACK_RECT_TAP_COMMAND:&#160;config.cpp'],['../pdf__view__widget_8cpp.html#a0f59a9368b58cbe2c17e00457f00f283',1,'BACK_RECT_TAP_COMMAND:&#160;config.cpp']]],
+  ['background_2',['background',['../structVulkanCanvas_1_1Impl.html#abdb2736e678b449c81c65769ec2545d1',1,'VulkanCanvas::Impl']]],
+  ['background_5fcolor_3',['BACKGROUND_COLOR',['../config_8cpp.html#ab59979f9d5ad64bbad3cab389c84fca2',1,'BACKGROUND_COLOR:&#160;config.cpp'],['../pdf__view__widget_8cpp.html#ab59979f9d5ad64bbad3cab389c84fca2',1,'BACKGROUND_COLOR:&#160;config.cpp'],['../TouchSettings_8cpp.html#ab59979f9d5ad64bbad3cab389c84fca2',1,'BACKGROUND_COLOR:&#160;config.cpp'],['../ui_8cpp.html#ab59979f9d5ad64bbad3cab389c84fca2',1,'BACKGROUND_COLOR:&#160;config.cpp']]],
+  ['background_5fpixel_5ffix_4',['BACKGROUND_PIXEL_FIX',['../config_8cpp.html#ac2b321db313d9b00fd9a2456f4dc66a2',1,'BACKGROUND_PIXEL_FIX:&#160;config.cpp'],['../pdf__view__widget_8cpp.html#ac2b321db313d9b00fd9a2456f4dc66a2',1,'BACKGROUND_PIXEL_FIX:&#160;config.cpp']]],
+  ['begin_5',['begin',['../structRange.html#adf048f5efe47c13dfb0792818a25fa8d',1,'Range']]],
+  ['begin_5findex_5fin_5fpage_6',['begin_index_in_page',['../structSearchResult.html#ae137af6c16fbccb788088148394ea3c1',1,'SearchResult']]],
+  ['begin_5fx_7',['begin_x',['../structBookMark.html#a2932d20fe8c347fd99ad60d6bc13070a',1,'BookMark']]],
+  ['begin_5fy_8',['begin_y',['../structBookMark.html#a31163689bd20da59c8f471742521666d',1,'BookMark']]],
+  ['bindings_9',['bindings',['../structVulkanCanvas_1_1Impl_1_1Texture.html#a4f0ec9210b8a78c4e36e0584a00a4611',1,'VulkanCanvas::Impl::Texture']]],
+  ['black_5fcolor_10',['BLACK_COLOR',['../config_8cpp.html#a41a3cbfe3f956b192fddfdac1944cedb',1,'BLACK_COLOR:&#160;config.cpp'],['../utils_8cpp.html#a41a3cbfe3f956b192fddfdac1944cedb',1,'BLACK_COLOR:&#160;config.cpp']]],
+  ['block_11',['block',['../structCharacterAddress.html#ae2d10f3cc4f380422f5aecf08a14e2c8',1,'CharacterAddress']]],
+  ['bom_12',['bom',['../namespaceutf8.html#ac7efcab62f51d362fc741657e60b9b1d',1,'utf8']]],
+  ['book_5fscan_5fpath_13',['BOOK_SCAN_PATH',['../config_8cpp.html#a7a9cd34ded3a50cfff24c419f775ce59',1,'BOOK_SCAN_PATH:&#160;config.cpp'],['../main__widget_8cpp.html#a7a9cd34ded3a50cfff24c419f775ce59',1,'BOOK_SCAN_PATH:&#160;config.cpp']]],
+  ['book_5fstate_14',['book_state',['../structDocumentViewState.html#a366b09d69a1364f77a4f716317af0bf5',1,'DocumentViewState::book_state'],['../structPortalViewState.html#a7a8936f464b366af76e79fb2b618193a',1,'PortalViewState::book_state']]],
+  ['bookmark_5fmove_5fdata_15',['bookmark_move_data',['../classMainWidget.html#a4dc48d7f4935bc1a22e4aa3e08182ee6',1,'MainWidget']]],
+  ['bookmark_5frect_5fsize_16',['BOOKMARK_RECT_SIZE',['../book_8cpp.html#a78c0ed2627023b25a6ce57dd7960333f',1,'BOOKMARK_RECT_SIZE:&#160;config.cpp'],['../config_8cpp.html#a78c0ed2627023b25a6ce57dd7960333f',1,'BOOKMARK_RECT_SIZE:&#160;config.cpp']]],
+  ['bool_5fdeserializer_17',['bool_deserializer',['../config_8cpp.html#a02854f95f3a7b8abcdaae41cc8b546b7',1,'config.cpp']]],
+  ['bottom_18',['bottom',['../structUIRange.html#a7c33065b23be03a0f2b5d120d254321b',1,'UIRange::bottom'],['../structUIRect.html#a74cd66de2b17b99ff3357e89501c03b2',1,'UIRect::bottom']]],
+  ['buffers_19',['buffers',['../structVulkanCanvas_1_1Impl.html#a2bbbe1bda1dc3fd8ab729d3533504a08',1,'VulkanCanvas::Impl']]],
+  ['buttons_20',['buttons',['../classAudioUI.html#a74ccc85d8e0ffa104fb767ae68c14c4a',1,'AudioUI']]]
+];

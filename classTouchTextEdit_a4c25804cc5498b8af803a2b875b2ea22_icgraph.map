@@ -1,0 +1,15 @@
+<map id="TouchTextEdit::set_text" name="TouchTextEdit::set_text">
+<area shape="rect" id="Node000001" title=" " alt="" coords="583,109,755,134"/>
+<area shape="rect" id="Node000002" href="$classDownloadOverviewPaperCommand.html#af7eda3f8d3a62c5ec084a0e57b105348" title=" " alt="" coords="283,5,535,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="631,105,585,82,534,60,496,48,498,43,536,55,588,77,634,100"/>
+<area shape="rect" id="Node000003" href="$classEditSelectedBookmarkCommand.html#aac8a3f2f47f812c268b592d7ebc95db5" title=" " alt="" coords="290,69,527,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="569,112,527,107,528,101,569,106"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#a63beb8fe2efb0a182ac254487de8f250" title=" " alt="" coords="309,133,509,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="569,136,509,144,508,138,569,131"/>
+<area shape="rect" id="Node000006" href="$classMainWidget.html#a5b86f7ca1ff81ac1c28e8e80951e1aed" title=" " alt="" coords="328,197,489,237"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="634,143,588,166,536,188,491,202,489,197,534,183,585,161,631,138"/>
+<area shape="rect" id="Node000005" href="$classMainWidget.html#a50e717278f9543347db6c133dd27b773" title=" " alt="" coords="19,133,221,173"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="295,156,221,156,221,151,295,151"/>
+<area shape="rect" id="Node000007" href="$classEditSelectedHighlightCommand.html#a7605ed19531afe894bc3e427337dd7f5" title=" " alt="" coords="5,197,235,237"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="314,220,235,220,235,215,314,215"/>
+</map>

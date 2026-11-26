@@ -1,0 +1,12 @@
+<map id="is_platform_control_pressed" name="is_platform_control_pressed">
+<area shape="rect" id="Node000001" title=" " alt="" coords="519,47,667,87"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="630,36,617,29,593,26,572,28,559,33,554,39,557,46,552,48,549,38,556,28,570,23,593,21,618,24,632,31"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a0452032b756e46c7d39fc7bdd52cceb6" title=" " alt="" coords="285,29,459,55"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="504,60,459,55,460,49,505,55"/>
+<area shape="rect" id="Node000005" href="$classMyLineEdit.html#a059ccd500b22459fe8d16e3b9f6a925b" title=" " alt="" coords="273,79,471,104"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="505,80,471,83,470,78,504,74"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#ab611ce437761ff749e7b02703918ba5d" title=" " alt="" coords="14,5,217,31"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="271,35,217,30,217,25,271,30"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#af576f313b835f7d08175f33e7488b157" title=" " alt="" coords="5,55,225,80"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="271,55,226,59,225,54,271,49"/>
+</map>

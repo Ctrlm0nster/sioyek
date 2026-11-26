@@ -1,0 +1,9 @@
+<map id="PdfRenderer::clear_cache" name="PdfRenderer::clear_cache">
+<area shape="rect" id="Node000001" title="Flush and clear all cached rendered page responses and textures." alt="" coords="5,35,148,75"/>
+<area shape="rect" id="Node000002" href="$classPdfRenderer.html#a6b5833abd80bb22311426c76c450010a" title="Evict least&#45;recently&#45;used page responses exceeding the cache capacity." alt="" coords="196,35,347,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,52,182,52,182,57,148,57"/>
+<area shape="rect" id="Node000003" href="$classPdfRenderer.html#a32b6e7465ea1f732bed0059c74b26778" title="Cancel all queued speculative (lookahead) render requests." alt="" coords="399,5,565,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="347,42,385,36,386,41,348,47"/>
+<area shape="rect" id="Node000004" href="$namespaceRenderImages.html#ad7a2328b89e15e92fd95421e8ac4c5ab" title="Remove and release the rasterized image associated with the specified handle." alt="" coords="395,70,569,95"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="348,62,382,67,381,72,347,67"/>
+</map>

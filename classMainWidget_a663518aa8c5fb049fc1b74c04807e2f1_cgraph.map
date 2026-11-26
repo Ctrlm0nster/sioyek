@@ -1,0 +1,9 @@
+<map id="MainWidget::should_show_status_label" name="MainWidget::should_show_status_label">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,69,156,109"/>
+<area shape="rect" id="Node000002" href="$classPdfViewWidget.html#a95e3f362e4f9deb45961c9d2e5331c87" title=" " alt="" coords="218,5,369,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,67,212,47,214,52,149,72"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a12eee0517ee900941fe331201e61bbf2" title=" " alt="" coords="204,69,383,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="156,87,190,87,190,92,156,92"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#a2b2d256e4b79b06092a70f12a054b2a7" title=" " alt="" coords="204,133,383,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="149,107,214,127,212,132,147,112"/>
+</map>

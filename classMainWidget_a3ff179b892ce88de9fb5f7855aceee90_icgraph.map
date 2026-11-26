@@ -1,0 +1,13 @@
+<map id="MainWidget::get_document_pos_under_window_pos" name="MainWidget::get_document_pos_under_window_pos">
+<area shape="rect" id="Node000001" title=" " alt="" coords="560,26,761,66"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a584a1f00e89eff5c5876887703ff5674" title=" " alt="" coords="299,90,470,130"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="561,72,471,93,469,88,560,67"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#aceff3feac51f6fd987ecd9a02fbb24d2" title=" " alt="" coords="11,26,204,66"/>
+<area shape="poly" id="edge6_Node000001_Node000003" title=" " alt="" coords="568,26,512,17,385,8,258,17,187,29,186,24,257,12,385,3,512,12,569,21"/>
+<area shape="rect" id="Node000005" href="$classMainWidget.html#ad67f9ee32c2dad3171a15d7f3c5a7c03" title=" " alt="" coords="257,26,512,66"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="546,49,512,49,512,44,546,44"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="285,90,194,69,195,64,287,85"/>
+<area shape="rect" id="Node000004" href="$classDownloadPaperUnderCursorCommand.html#a7ed8d57d4a01de5cfb7d062b46b42813" title=" " alt="" coords="5,90,209,130"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="286,113,210,113,210,108,286,108"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="244,49,204,49,204,44,244,44"/>
+</map>

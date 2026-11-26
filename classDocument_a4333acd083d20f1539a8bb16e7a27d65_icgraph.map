@@ -1,0 +1,7 @@
+<map id="Document::delete_all_page_drawings" name="Document::delete_all_page_drawings">
+<area shape="rect" id="Node000001" title=" " alt="" coords="491,5,652,45"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a584d8c8f78e3e1044b080f949367b1f7" title=" " alt="" coords="249,5,443,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="477,28,443,28,443,23,477,23"/>
+<area shape="rect" id="Node000003" href="$classClearCurrentPageDrawingsCommand.html#aeca40baf2493a441a96e75efca82d8b9" title=" " alt="" coords="5,5,201,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="236,28,201,28,201,23,236,23"/>
+</map>

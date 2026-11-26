@@ -1,0 +1,7 @@
+<map id="EditSelectedHighlightCommand" name="EditSelectedHighlightCommand">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,652,251,817"/>
+<area shape="rect" id="Node000002" href="$classTextCommand.html" title=" " alt="" coords="30,459,226,604"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,618,131,652,125,652,125,618"/>
+<area shape="rect" id="Node000003" href="$classCommand.html" title=" " alt="" coords="15,5,241,411"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="131,424,131,458,125,458,125,424"/>
+</map>

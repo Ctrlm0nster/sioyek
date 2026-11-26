@@ -1,0 +1,13 @@
+<map id="MySortFilterProxyModel::setFilterCustom" name="MySortFilterProxyModel::setFilterCustom">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,184,45"/>
+<area shape="rect" id="Node000002" href="$classMySortFilterProxyModel.html#a67792ffa8d5d3f6136e3d4639c04502a" title=" " alt="" coords="232,5,411,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="185,23,218,23,218,28,185,28"/>
+<area shape="rect" id="Node000003" href="$classMySortFilterProxyModel.html#a5d4a3f919d9967d68082b28960fde0ce" title=" " alt="" coords="459,5,637,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="411,23,445,23,445,28,411,28"/>
+<area shape="rect" id="Node000004" href="$classMySortFilterProxyModel.html#a35557ff72faec98026fc7a6b84021242" title=" " alt="" coords="925,5,1104,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="637,11,685,7,781,3,877,7,912,9,912,15,877,12,781,8,685,12,638,16"/>
+<area shape="rect" id="Node000005" href="$classMySortFilterProxyModel.html#a31bcd72af67464d18eb9da649e00d586" title=" " alt="" coords="685,45,877,85"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="638,38,672,44,671,49,637,43"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="877,46,911,40,912,46,878,51"/>
+<area shape="poly" id="edge6_Node000005_Node000005" title=" " alt="" coords="738,46,735,36,742,26,758,21,781,19,808,22,823,29,821,34,807,27,781,24,759,26,746,31,741,37,743,44"/>
+</map>

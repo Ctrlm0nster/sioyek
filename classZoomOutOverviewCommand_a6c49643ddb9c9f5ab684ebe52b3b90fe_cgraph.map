@@ -1,0 +1,9 @@
+<map id="ZoomOutOverviewCommand::perform" name="ZoomOutOverviewCommand::perform">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,217,45"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#aec7d72d1fe67af548ac42c0ff8a94d13" title=" " alt="" coords="265,5,437,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="217,23,251,23,251,28,217,28"/>
+<area shape="rect" id="Node000003" href="$classPdfViewWidget.html#a80423973a18e056bc578aad568365ea4" title=" " alt="" coords="485,5,651,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="438,23,472,23,472,28,438,28"/>
+<area shape="rect" id="Node000004" href="$classPdfViewWidget.html#a4abd68fe51c7c9a317e76887515ac41a" title=" " alt="" coords="699,5,864,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="651,23,685,23,685,28,651,28"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="BookMark::rect" name="BookMark::rect">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,69,127,95"/>
+<area shape="rect" id="Node000002" href="$structAbsoluteRect.html#a25ab1a0f75b68895abb220e9b2237a32" title=" " alt="" coords="175,20,377,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,67,207,46,209,51,121,72"/>
+<area shape="rect" id="Node000004" href="$structBookMark.html#a715aea8ae2643d8d9c3e1fd2f2cab4af" title=" " alt="" coords="195,69,357,95"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="127,79,181,79,181,85,127,85"/>
+<area shape="rect" id="Node000005" href="$structBookMark.html#a015c822eef5326fb5a6b57ff814b402e" title=" " alt="" coords="201,119,351,144"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="121,92,209,113,207,118,120,97"/>
+<area shape="rect" id="Node000003" href="$structEnhancedRect.html#ab425995677d1b2660335322e95478e5d" title=" " alt="" coords="425,5,603,60"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="377,30,412,30,412,35,377,35"/>
+</map>

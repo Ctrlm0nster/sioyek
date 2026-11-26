@@ -1,0 +1,9 @@
+<map id="DocumentView::zoom_out" name="DocumentView::zoom_out">
+<area shape="rect" id="Node000001" title=" " alt="" coords="496,31,688,56"/>
+<area shape="rect" id="Node000002" href="$classZoomOutCommand.html#a36adf7459560480c6ad4f12eb74f4ec5" title=" " alt="" coords="237,5,448,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="482,35,448,31,449,26,482,30"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a4af1262b608f1e4bd5188655b134e2cc" title=" " alt="" coords="271,55,415,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="483,57,415,63,415,58,482,51"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#a90ee19ed3124206e464a05af4c3f5a60" title=" " alt="" coords="5,55,189,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="257,70,190,70,190,65,257,65"/>
+</map>

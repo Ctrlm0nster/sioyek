@@ -1,0 +1,15 @@
+<map id="find_shrinking_rect_word" name="find_shrinking_rect_word">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,79,189,104"/>
+<area shape="poly" id="edge6_Node000001_Node000001" title=" " alt="" coords="57,80,48,70,52,60,69,54,97,52,133,56,143,61,147,66,142,69,139,65,131,61,97,57,70,59,56,64,53,70,61,77"/>
+<area shape="rect" id="Node000002" href="$structDocumentRect.html#aafeec2e9a605413812dc732fdbfc9343" title=" " alt="" coords="237,5,460,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,76,237,39,269,31,270,36,238,45,132,81"/>
+<area shape="rect" id="Node000003" href="$utils_8cpp.html#ae92628016017f248ca5a20f45eb52dda" title=" " alt="" coords="286,79,411,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="189,89,272,89,272,94,189,94"/>
+<area shape="rect" id="Node000005" href="$utils_8cpp.html#abaf5b738a95a3347adebc048776b877e" title=" " alt="" coords="295,152,402,177"/>
+<area shape="poly" id="edge7_Node000001_Node000005" title=" " alt="" coords="143,102,292,146,291,151,141,107"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="316,80,309,70,312,60,326,54,349,52,377,56,388,65,384,69,374,61,349,57,327,59,316,64,314,70,320,77"/>
+<area shape="rect" id="Node000004" href="$utils_8cpp.html#a0427155864cc7897ebd490169d9f8b66" title=" " alt="" coords="508,79,591,104"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="412,89,494,89,494,94,412,94"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="516,80,509,70,513,60,527,54,549,52,577,56,588,65,585,69,575,61,549,57,528,59,517,64,515,70,521,77"/>
+<area shape="poly" id="edge8_Node000005_Node000005" title=" " alt="" coords="316,153,309,144,312,134,326,128,349,125,377,129,388,138,384,142,374,134,349,131,327,133,316,137,314,143,320,150"/>
+</map>

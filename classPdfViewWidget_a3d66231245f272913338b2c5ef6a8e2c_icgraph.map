@@ -1,0 +1,49 @@
+<map id="PdfViewWidget::set_should_highlight_words" name="PdfViewWidget::set_should_highlight_words">
+<area shape="rect" id="Node000001" title=" " alt="" coords="793,435,976,475"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a6cdbd7861b27b3c63865dd60ad497b3b" title=" " alt="" coords="539,69,745,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="869,423,821,311,785,245,743,182,707,143,670,112,673,108,711,139,747,178,790,242,826,309,874,421"/>
+<area shape="rect" id="Node000005" href="$classMainWidget.html#a2cab78c3ffe04690cdf612e5e7da9c7a" title=" " alt="" coords="566,192,718,232"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="855,426,743,305,666,234,669,230,747,301,859,422"/>
+<area shape="rect" id="Node000007" href="$classMainWidget.html#af7951f6ab399a01a0d86851028bf33f6" title=" " alt="" coords="561,315,723,370"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="827,431,701,373,703,368,829,426"/>
+<area shape="rect" id="Node000012" href="$classMainWidget.html#aafa0bb29547a07a001fa191de1eedfb7" title=" " alt="" coords="559,435,725,475"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="779,457,725,457,725,452,779,452"/>
+<area shape="rect" id="Node000014" href="$classMainWidget.html#a4d8568ba7482246277c1deb52963c43f" title=" " alt="" coords="559,499,725,539"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="796,481,719,501,718,496,794,476"/>
+<area shape="rect" id="Node000016" href="$classMainWidget.html#af5db3ea98cc094742ea7410f538a1649" title=" " alt="" coords="559,595,725,635"/>
+<area shape="poly" id="edge15_Node000001_Node000016" title=" " alt="" coords="845,485,747,553,678,597,675,592,744,548,842,481"/>
+<area shape="rect" id="Node000020" href="$classMainWidget.html#addcedecaee8044f4c153550306510a4f" title=" " alt="" coords="553,819,731,859"/>
+<area shape="poly" id="edge19_Node000001_Node000020" title=" " alt="" coords="866,488,658,820,654,817,861,485"/>
+<area shape="rect" id="Node000003" href="$classGenericVisibleSelectCommand.html#aa0157a08ac6accac36dd02b2af8204dd" title=" " alt="" coords="268,5,491,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="545,69,461,48,463,43,546,63"/>
+<area shape="rect" id="Node000004" href="$classKeyboardSelectPointCommand.html#aecd0cc880dabfa6d1df4d5cbebb47849" title=" " alt="" coords="268,69,491,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="525,92,491,92,491,87,525,87"/>
+<area shape="rect" id="Node000006" href="$classKeyboardSelectCommand.html#a4fb85b30ebe3c0a47fb8ea893db19045" title=" " alt="" coords="284,133,475,173"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="552,195,469,176,470,171,553,190"/>
+<area shape="rect" id="Node000008" href="$classMainWidget.html#a066269ffc4dd044b1cef68119e004406" title=" " alt="" coords="303,198,455,253"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="579,311,490,266,455,253,457,248,492,262,582,306"/>
+<area shape="rect" id="Node000010" href="$classGenericVisibleAnnotationCommand.html#abbc90a8fed952471860e51264470ed06" title=" " alt="" coords="282,277,477,331"/>
+<area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="548,332,477,321,477,316,548,326"/>
+<area shape="rect" id="Node000011" href="$classMainWidget.html#ac1aad3254ed2ded4581502a8146a6c6b" title=" " alt="" coords="289,355,469,410"/>
+<area shape="poly" id="edge10_Node000007_Node000011" title=" " alt="" coords="548,360,470,372,469,366,547,354"/>
+<area shape="rect" id="Node000009" href="$classGenericHighlightCommand.html#a0c7aa7edb3a9b569f5f07cf1479c014c" title=" " alt="" coords="5,205,220,245"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="289,228,220,228,220,223,289,223"/>
+<area shape="rect" id="Node000013" href="$classGotoRulerPortalCommand.html#a49eaf21ff948c2deb896575856b44767" title=" " alt="" coords="283,435,475,475"/>
+<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="545,457,476,457,476,452,545,452"/>
+<area shape="rect" id="Node000015" href="$classKeyboardSelectPointCommand.html#a2140e18905b69a4c05100095727dafbc" title=" " alt="" coords="268,499,491,539"/>
+<area shape="poly" id="edge14_Node000014_Node000015" title=" " alt="" coords="546,521,491,521,491,516,546,516"/>
+<area shape="rect" id="Node000017" href="$classKeyboardOverviewCommand.html#a20416c3656f6646c9aba21943acccd7f" title=" " alt="" coords="273,563,485,603"/>
+<area shape="poly" id="edge16_Node000016_Node000017" title=" " alt="" coords="545,606,485,598,486,593,546,600"/>
+<area shape="rect" id="Node000018" href="$classKeyboardSelectCommand.html#a767fab49425b23bf8aa91f483f21f24f" title=" " alt="" coords="284,627,475,667"/>
+<area shape="poly" id="edge17_Node000016_Node000018" title=" " alt="" coords="546,629,475,638,475,632,545,624"/>
+<area shape="rect" id="Node000019" href="$classKeyboardSmartjumpCommand.html#a0bd7c74d4ef11009dfdf8c91b49411d2" title=" " alt="" coords="268,691,491,731"/>
+<area shape="poly" id="edge18_Node000016_Node000019" title=" " alt="" coords="586,643,492,681,455,693,454,688,490,676,584,638"/>
+<area shape="rect" id="Node000021" href="$classGotoRulerPortalCommand.html#a09b638d5042447c20dc997222fc94561" title=" " alt="" coords="283,755,475,795"/>
+<area shape="poly" id="edge20_Node000020_Node000021" title=" " alt="" coords="545,818,461,797,463,792,546,813"/>
+<area shape="rect" id="Node000022" href="$classGotoRulerPortalCommand.html#a3184b0feefef186a1229469ab13dd2e9" title=" " alt="" coords="283,819,475,859"/>
+<area shape="poly" id="edge21_Node000020_Node000022" title=" " alt="" coords="539,841,476,841,476,836,539,836"/>
+<area shape="rect" id="Node000023" href="$classKeyboardOverviewCommand.html#aed984438bd35a8259e6dc0b63516b5ca" title=" " alt="" coords="273,883,485,923"/>
+<area shape="poly" id="edge22_Node000020_Node000023" title=" " alt="" coords="546,865,463,885,461,880,545,859"/>
+<area shape="rect" id="Node000024" href="$classKeyboardSmartjumpCommand.html#a24801225d5e15b2203a6095a72b04c10" title=" " alt="" coords="268,947,491,987"/>
+<area shape="poly" id="edge23_Node000020_Node000024" title=" " alt="" coords="605,869,553,904,492,937,461,949,459,944,490,932,550,899,602,865"/>
+</map>

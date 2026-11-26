@@ -1,0 +1,9 @@
+<map id="PdfViewWidget::get_overview_rect_pixel_perfect" name="PdfViewWidget::get_overview_rect_pixel_perfect">
+<area shape="rect" id="Node000001" title=" " alt="" coords="720,5,879,60"/>
+<area shape="rect" id="Node000002" href="$classPdfViewWidget.html#aaa2636bdec379330ae204553fdc4949b" title="Render the floating overview portal window." alt="" coords="501,13,672,53"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="706,35,672,35,672,30,706,30"/>
+<area shape="rect" id="Node000003" href="$classPdfViewWidget.html#a7b983e7fb3cc4b306be2d531642a6594" title=" " alt="" coords="255,20,453,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="487,35,454,35,454,30,487,30"/>
+<area shape="rect" id="Node000004" href="$classPdfViewWidget.html#ab1b6da7af4f4ecce9c051af6d2d5d8b0" title="Pure virtual hook called to record high&#45;level page and document draw calls." alt="" coords="5,20,207,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="241,35,207,35,207,30,241,30"/>
+</map>

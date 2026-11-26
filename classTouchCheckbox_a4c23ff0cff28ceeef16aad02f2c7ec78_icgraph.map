@@ -1,0 +1,9 @@
+<map id="TouchCheckbox::handleCancel" name="TouchCheckbox::handleCancel">
+<area shape="rect" id="Node000001" title=" " alt="" coords="771,5,989,31"/>
+<area shape="rect" id="Node000002" href="$classTouchCheckbox.html#ae284553284c773cc005827d4ea438ae2" title=" " alt="" coords="491,5,723,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="757,21,723,21,723,15,757,15"/>
+<area shape="rect" id="Node000003" href="$classBoolConfigUI.html#ac043be812245b47bbc86a7418a94ba34" title=" " alt="" coords="244,5,443,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="477,21,443,21,443,15,477,15"/>
+<area shape="rect" id="Node000004" href="$classConfigCommand.html#aa22f004288468b2f112aa0eefe6dd66e" title=" " alt="" coords="5,5,196,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="230,21,196,21,196,15,230,15"/>
+</map>

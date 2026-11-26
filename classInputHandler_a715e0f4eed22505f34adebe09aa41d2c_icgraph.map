@@ -1,0 +1,15 @@
+<map id="InputHandler::get_event_key" name="InputHandler::get_event_key">
+<area shape="rect" id="Node000001" title=" " alt="" coords="755,42,964,67"/>
+<area shape="rect" id="Node000002" href="$classInputHandler.html#a50ea7ef9536e8fa8e43442ded6a14248" title=" " alt="" coords="523,5,702,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="741,43,702,39,703,33,741,38"/>
+<area shape="rect" id="Node000004" href="$classInputHandler.html#a660fd3a7dd33312ba61cb33e42fb028f" title=" " alt="" coords="519,70,707,95"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="741,71,707,75,707,69,741,65"/>
+<area shape="rect" id="Node000003" href="$classMyLineEdit.html#a059ccd500b22459fe8d16e3b9f6a925b" title=" " alt="" coords="273,13,471,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="510,28,471,28,471,23,510,23"/>
+<area shape="rect" id="Node000005" href="$classMainWidget.html#a0452032b756e46c7d39fc7bdd52cceb6" title=" " alt="" coords="285,70,459,95"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="505,85,460,85,460,80,505,80"/>
+<area shape="rect" id="Node000006" href="$classMainWidget.html#ab611ce437761ff749e7b02703918ba5d" title=" " alt="" coords="14,45,217,70"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="271,75,217,70,217,65,271,70"/>
+<area shape="rect" id="Node000007" href="$classMainWidget.html#af576f313b835f7d08175f33e7488b157" title=" " alt="" coords="5,94,225,119"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="271,95,226,99,225,94,271,89"/>
+</map>

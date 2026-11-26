@@ -1,0 +1,9 @@
+<map id="MainWidget::show_contextual_context_menu" name="MainWidget::show_contextual_context_menu">
+<area shape="rect" id="Node000001" title=" " alt="" coords="477,27,696,67"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a49169009ea3b7e62cb793399cccc462a" title=" " alt="" coords="277,27,429,67"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="463,50,429,50,429,45,463,45"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a48ae6c49931be9590a2edda847dadad3" title=" " alt="" coords="5,5,229,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="263,39,219,33,220,28,264,34"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#a2d1fe0808150002e7cf4b2af8a1202cd" title=" " alt="" coords="15,55,219,95"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="264,61,220,66,219,61,263,55"/>
+</map>

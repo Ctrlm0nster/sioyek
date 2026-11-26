@@ -1,0 +1,7 @@
+<map id="PdfRenderer::add_password" name="PdfRenderer::add_password">
+<area shape="rect" id="Node000001" title="Register a decryption password for a password&#45;protected PDF." alt="" coords="487,13,689,38"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a11529fe5ab1a886c0b9fa2a25020aa64" title=" " alt="" coords="237,13,439,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="473,28,439,28,439,23,473,23"/>
+<area shape="rect" id="Node000003" href="$classEnterPasswordCommand.html#ab31a82bc30cd33b69445af4f97365562" title=" " alt="" coords="5,5,189,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="224,28,189,28,189,23,224,23"/>
+</map>

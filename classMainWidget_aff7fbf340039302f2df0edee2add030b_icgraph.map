@@ -1,0 +1,19 @@
+<map id="MainWidget::reset_highlight_links" name="MainWidget::reset_highlight_links">
+<area shape="rect" id="Node000001" title=" " alt="" coords="513,101,719,141"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a50e717278f9543347db6c133dd27b773" title=" " alt="" coords="264,5,465,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="557,98,464,60,431,48,432,43,466,55,559,93"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a5d53a857af329524a31cc70876a4d527" title=" " alt="" coords="289,69,441,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="499,109,441,102,441,96,500,104"/>
+<area shape="rect" id="Node000006" href="$classMainWidget.html#ac5369e83f51410604042d10ab44fbb50" title=" " alt="" coords="289,133,441,173"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="500,139,441,146,441,141,499,134"/>
+<area shape="rect" id="Node000008" href="$classMainWidget.html#a092ff54744299ecf4c8f9997cd09f73c" title=" " alt="" coords="289,197,441,237"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="559,149,466,188,432,200,431,195,464,183,557,144"/>
+<area shape="rect" id="Node000004" href="$classCopyLinkCommand.html#ac359dd145b6e563b75a26b93b4a56d71" title=" " alt="" coords="6,31,215,57"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="275,76,182,59,183,54,276,71"/>
+<area shape="rect" id="Node000005" href="$classOpenLinkCommand.html#a7312fe849f6ad68293c3fb82e9bbac28" title=" " alt="" coords="5,81,216,106"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="275,93,216,94,216,89,275,88"/>
+<area shape="rect" id="Node000007" href="$classOverviewLinkCommand.html#addb64b84e2ea338929236cb8a6fc56f5" title=" " alt="" coords="21,133,200,173"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="275,156,200,156,200,151,275,151"/>
+<area shape="rect" id="Node000009" href="$classPortalToLinkCommand.html#ab00e287a383690c49e1006ba95881725" title=" " alt="" coords="27,197,195,237"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="275,220,195,220,195,215,275,215"/>
+</map>

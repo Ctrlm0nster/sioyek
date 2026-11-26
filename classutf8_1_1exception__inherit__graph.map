@@ -1,0 +1,13 @@
+<map id="utf8::exception" name="utf8::exception">
+<area shape="rect" id="Node000001" title=" " alt="" coords="278,119,390,184"/>
+<area shape="rect" id="Node000003" href="$classutf8_1_1invalid__code__point.html" title=" " alt="" coords="5,232,167,352"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="267,188,181,234,168,242,165,237,178,230,264,184"/>
+<area shape="rect" id="Node000004" href="$classutf8_1_1invalid__utf16.html" title=" " alt="" coords="191,239,325,345"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="312,198,289,240,284,238,308,195"/>
+<area shape="rect" id="Node000005" href="$classutf8_1_1invalid__utf8.html" title=" " alt="" coords="349,239,474,345"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="361,195,385,238,380,240,356,198"/>
+<area shape="rect" id="Node000006" href="$classutf8_1_1not__enough__room.html" title=" " alt="" coords="498,259,663,325"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="404,185,487,230,533,257,530,262,485,234,401,189"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="281,5,387,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="337,84,337,119,331,119,331,84"/>
+</map>

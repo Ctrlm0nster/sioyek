@@ -1,0 +1,8 @@
+<map id="MainWidget::toggle_dark_mode" name="MainWidget::toggle_dark_mode">
+<area shape="rect" id="Node000001" title=" " alt="" coords="252,51,401,91"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#a700a0caa5b70a06d1064e576f9f3cf65" title=" " alt="" coords="77,29,132,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="238,62,132,48,132,43,239,57"/>
+<area shape="rect" id="Node000003" href="$classToggleDarkModeCommand.html#a8f6ce0a0a729f99efb81d8042e7f0e6f" title=" " alt="" coords="5,79,204,119"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="239,85,205,89,204,84,238,80"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="141,24,143,18,139,14,126,10,105,8,79,10,67,16,67,22,79,31,75,35,62,25,63,13,78,5,105,3,127,4,142,9,149,17,146,26"/>
+</map>

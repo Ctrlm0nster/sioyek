@@ -1,0 +1,9 @@
+<map id="MainWidget::toggle_rect_hints" name="MainWidget::toggle_rect_hints">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,69,155,109"/>
+<area shape="rect" id="Node000002" href="$classPdfViewWidget.html#abda29c1544a8ad71d58cb1573b3891f5" title=" " alt="" coords="225,5,382,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,67,219,47,221,52,151,72"/>
+<area shape="rect" id="Node000003" href="$classPdfViewWidget.html#a7e955fd92b21dd01cc20e28918f7b5b6" title=" " alt="" coords="203,69,404,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="155,87,189,87,189,92,155,92"/>
+<area shape="rect" id="Node000004" href="$classPdfViewWidget.html#a97b889db1fdce3301e5d6c0b325ea712" title=" " alt="" coords="222,133,385,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="151,107,221,127,219,132,150,112"/>
+</map>

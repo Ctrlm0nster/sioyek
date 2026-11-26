@@ -1,0 +1,7 @@
+<map id="OverviewTouchMoveData" name="OverviewTouchMoveData">
+<area shape="rect" id="Node000001" title=" " alt="" coords="110,221,290,287"/>
+<area shape="rect" id="Node000002" href="$structAbsoluteDocumentPos.html" title=" " alt="" coords="5,5,195,131"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,130,123,164,138,196,147,208,143,211,134,199,118,166,107,132"/>
+<area shape="rect" id="Node000003" href="$structNormalizedWindowPos.html" title=" " alt="" coords="219,5,383,131"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="298,132,290,166,274,199,264,212,260,208,270,196,285,164,293,131"/>
+</map>

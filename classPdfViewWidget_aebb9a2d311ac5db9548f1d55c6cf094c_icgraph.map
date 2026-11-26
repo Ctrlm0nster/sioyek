@@ -1,0 +1,11 @@
+<map id="PdfViewWidget::get_background_color" name="PdfViewWidget::get_background_color">
+<area shape="rect" id="Node000001" title=" " alt="" coords="940,5,1091,45"/>
+<area shape="rect" id="Node000002" href="$classPdfViewWidget.html#a235cc2c91a7b709abb10d73464b96dbb" title=" " alt="" coords="720,5,892,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="926,28,892,28,892,23,926,23"/>
+<area shape="rect" id="Node000003" href="$classPdfViewWidget.html#aaa2636bdec379330ae204553fdc4949b" title="Render the floating overview portal window." alt="" coords="501,5,672,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="706,28,672,28,672,23,706,23"/>
+<area shape="rect" id="Node000004" href="$classPdfViewWidget.html#a7b983e7fb3cc4b306be2d531642a6594" title=" " alt="" coords="255,13,453,38"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="487,28,454,28,454,23,487,23"/>
+<area shape="rect" id="Node000005" href="$classPdfViewWidget.html#ab1b6da7af4f4ecce9c051af6d2d5d8b0" title="Pure virtual hook called to record high&#45;level page and document draw calls." alt="" coords="5,13,207,38"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="241,28,207,28,207,23,241,23"/>
+</map>

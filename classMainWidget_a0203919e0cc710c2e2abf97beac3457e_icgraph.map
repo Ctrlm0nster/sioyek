@@ -1,0 +1,5 @@
+<map id="MainWidget::handle_goto_portal_list" name="MainWidget::handle_goto_portal_list">
+<area shape="rect" id="Node000001" title=" " alt="" coords="269,5,421,45"/>
+<area shape="rect" id="Node000002" href="$classGotoPortalListCommand.html#a1f7a973e94ac1711f19ff354ff0b93c3" title=" " alt="" coords="5,5,221,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="256,28,222,28,222,23,256,23"/>
+</map>

@@ -1,0 +1,17 @@
+<map id="pdf_viewer/coordinates.h" name="pdf_viewer/coordinates.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="195,5,381,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,80,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="249,33,94,78,93,73,248,28"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="105,79,205,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="268,33,190,74,187,70,265,28"/>
+<area shape="rect" id="Node000004" href="$render__types_8h.html" title="Core types and CPU&#45;side raster image registry for Sioyek&#39;s rendering subsystem." alt="" coords="229,79,347,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="291,31,291,65,285,65,285,31"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="372,79,457,104"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="310,28,383,69,381,74,307,33"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="482,79,545,104"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="325,28,470,74,468,79,323,33"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="207,152,273,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="282,106,258,142,253,139,278,103"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="298,152,371,177"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="298,103,322,139,317,142,293,106"/>
+</map>

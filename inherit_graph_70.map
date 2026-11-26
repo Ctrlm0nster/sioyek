@@ -1,0 +1,91 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,1033,84,1059"/>
+<area shape="rect" id="Node000001" href="$classAndroidSelector.html" title=" " alt="" coords="185,120,311,145"/>
+<area shape="poly" id="edge324_Node000000_Node000001" title=" " alt="" coords="44,1019,51,835,66,560,77,421,92,299,109,206,119,175,130,155,155,137,184,129,185,134,157,142,134,158,124,177,114,208,97,300,83,422,71,560,56,835,49,1020"/>
+<area shape="rect" id="Node000002" href="$classBaseSelectorWidget.html" title=" " alt="" coords="171,169,325,195"/>
+<area shape="poly" id="edge325_Node000000_Node000002" title=" " alt="" coords="44,1020,50,922,64,775,89,602,107,514,129,428,155,356,186,289,237,194,241,196,190,291,160,358,135,429,112,515,94,603,69,775,55,922,50,1020"/>
+<area shape="rect" id="Node000008" href="$classConfigUI.html" title=" " alt="" coords="209,441,287,467"/>
+<area shape="poly" id="edge331_Node000000_Node000008" title=" " alt="" coords="43,1020,47,904,59,741,69,657,84,581,104,519,116,495,130,476,147,463,168,455,209,449,209,454,169,460,150,468,134,480,121,497,109,521,90,583,75,658,64,741,52,904,49,1020"/>
+<area shape="rect" id="Node000019" href="$classDrawControlsUI.html" title=" " alt="" coords="186,491,310,516"/>
+<area shape="poly" id="edge342_Node000000_Node000019" title=" " alt="" coords="44,1019,49,912,62,764,73,689,87,620,106,564,130,525,156,508,185,500,187,506,158,513,134,529,111,566,93,622,78,690,67,764,54,912,49,1019"/>
+<area shape="rect" id="Node000020" href="$classHighlightButtons.html" title=" " alt="" coords="183,540,313,565"/>
+<area shape="poly" id="edge343_Node000000_Node000020" title=" " alt="" coords="44,1020,51,922,65,789,76,721,90,660,108,609,130,575,154,559,182,550,183,556,156,563,134,579,113,612,96,661,81,722,70,789,56,922,50,1020"/>
+<area shape="rect" id="Node000021" href="$classSearchButtons.html" title=" " alt="" coords="190,589,306,615"/>
+<area shape="poly" id="edge344_Node000000_Node000021" title=" " alt="" coords="45,1019,53,930,68,812,80,753,93,699,110,654,130,624,158,607,189,599,190,604,160,611,134,628,115,657,99,700,85,754,74,813,58,931,50,1020"/>
+<area shape="rect" id="Node000022" href="$classSelectionIndicator.html" title=" " alt="" coords="179,639,317,664"/>
+<area shape="poly" id="edge345_Node000000_Node000022" title=" " alt="" coords="46,1019,55,940,72,837,97,738,112,700,130,673,152,658,178,650,179,655,155,663,134,677,117,702,102,740,77,838,60,941,51,1020"/>
+<area shape="rect" id="Node000023" href="$classTouchAudioButtons.html" title=" " alt="" coords="175,688,321,713"/>
+<area shape="poly" id="edge346_Node000000_Node000023" title=" " alt="" coords="47,1019,58,950,76,862,100,779,114,746,130,724,150,710,173,702,175,707,153,715,134,728,119,749,105,780,81,863,63,951,52,1020"/>
+<area shape="rect" id="Node000024" href="$classTouchCheckbox.html" title=" " alt="" coords="187,737,309,763"/>
+<area shape="poly" id="edge347_Node000000_Node000024" title=" " alt="" coords="44,1019,48,967,60,901,71,866,86,832,106,801,130,773,156,757,186,749,187,754,159,762,134,777,110,804,91,835,76,868,66,902,53,968,49,1020"/>
+<area shape="rect" id="Node000025" href="$classTouchCommandSelector.html" title=" " alt="" coords="159,787,337,812"/>
+<area shape="poly" id="edge348_Node000000_Node000025" title=" " alt="" coords="46,1019,53,976,68,923,92,869,110,844,130,823,157,807,160,812,134,827,114,847,97,871,73,924,58,977,51,1020"/>
+<area shape="rect" id="Node000026" href="$classTouchConfigMenu.html" title=" " alt="" coords="180,836,316,861"/>
+<area shape="poly" id="edge349_Node000000_Node000026" title=" " alt="" coords="49,1019,59,985,75,945,99,906,130,872,154,859,179,851,181,856,156,863,134,876,103,909,80,948,64,987,54,1021"/>
+<area shape="rect" id="Node000027" href="$classTouchCopyOptions.html" title=" " alt="" coords="177,885,319,911"/>
+<area shape="poly" id="edge350_Node000000_Node000027" title=" " alt="" coords="54,1020,84,969,105,943,131,921,152,910,176,902,177,907,154,915,133,926,109,947,88,972,59,1022"/>
+<area shape="rect" id="Node000028" href="$classTouchDeleteButton.html" title=" " alt="" coords="175,935,321,960"/>
+<area shape="poly" id="edge351_Node000000_Node000028" title=" " alt="" coords="65,1021,94,994,131,970,174,955,176,960,133,975,98,998,69,1025"/>
+<area shape="rect" id="Node000029" href="$classTouchDrawControls.html" title=" " alt="" coords="175,984,321,1009"/>
+<area shape="poly" id="edge352_Node000000_Node000029" title=" " alt="" coords="97,1029,131,1019,185,1007,186,1012,133,1025,98,1034"/>
+<area shape="rect" id="Node000030" href="$classTouchFilteredSelectWidget.html" title=" " alt="" coords="132,1033,364,1059"/>
+<area shape="poly" id="edge353_Node000000_Node000030" title=" " alt="" coords="98,1043,132,1043,132,1049,98,1049"/>
+<area shape="rect" id="Node000031" href="$classTouchGenericButtons.html" title=" " alt="" coords="169,1083,327,1108"/>
+<area shape="poly" id="edge354_Node000000_Node000031" title=" " alt="" coords="98,1059,133,1069,182,1080,181,1085,131,1074,97,1064"/>
+<area shape="rect" id="Node000032" href="$classTouchHighlightButtons.html" title=" " alt="" coords="164,1132,332,1157"/>
+<area shape="poly" id="edge355_Node000000_Node000032" title=" " alt="" coords="68,1067,97,1094,133,1118,164,1130,163,1135,131,1123,94,1098,64,1071"/>
+<area shape="rect" id="Node000033" href="$classTouchListView.html" title=" " alt="" coords="191,1181,305,1207"/>
+<area shape="poly" id="edge356_Node000000_Node000033" title=" " alt="" coords="59,1070,88,1121,109,1147,133,1168,161,1181,191,1188,190,1193,159,1186,131,1172,105,1150,83,1124,54,1073"/>
+<area shape="rect" id="Node000034" href="$classTouchMacroEditor.html" title=" " alt="" coords="179,1231,317,1256"/>
+<area shape="poly" id="edge357_Node000000_Node000034" title=" " alt="" coords="54,1072,64,1105,80,1145,103,1184,134,1217,155,1230,180,1237,178,1242,153,1234,130,1221,98,1188,75,1148,59,1107,49,1073"/>
+<area shape="rect" id="Node000035" href="$classTouchMainMenu.html" title=" " alt="" coords="185,1280,311,1305"/>
+<area shape="poly" id="edge358_Node000000_Node000035" title=" " alt="" coords="51,1072,58,1115,72,1168,97,1222,113,1246,134,1267,158,1281,185,1288,184,1293,156,1286,130,1271,109,1249,92,1224,67,1170,53,1116,46,1073"/>
+<area shape="rect" id="Node000036" href="$classTouchMarkSelector.html" title=" " alt="" coords="175,1329,321,1355"/>
+<area shape="poly" id="edge359_Node000000_Node000036" title=" " alt="" coords="49,1072,53,1125,65,1191,76,1225,91,1259,110,1289,134,1316,153,1329,176,1336,174,1341,151,1334,130,1320,106,1293,86,1261,71,1227,60,1192,47,1125,43,1073"/>
+<area shape="rect" id="Node000037" href="$classTouchPageSelector.html" title=" " alt="" coords="177,1379,319,1404"/>
+<area shape="poly" id="edge360_Node000000_Node000037" title=" " alt="" coords="52,1072,63,1142,81,1230,105,1313,119,1344,134,1365,154,1379,177,1386,176,1392,152,1384,130,1369,114,1347,100,1315,76,1231,58,1142,47,1073"/>
+<area shape="rect" id="Node000038" href="$classTouchRangeSelectUI.html" title=" " alt="" coords="171,1428,325,1453"/>
+<area shape="poly" id="edge361_Node000000_Node000038" title=" " alt="" coords="51,1072,60,1151,77,1254,102,1352,117,1390,134,1415,151,1427,171,1435,169,1440,149,1432,130,1419,112,1392,97,1354,72,1255,55,1152,46,1073"/>
+<area shape="rect" id="Node000039" href="$classTouchRectangleSelectUI.html" title=" " alt="" coords="159,1477,337,1503"/>
+<area shape="poly" id="edge362_Node000000_Node000039" title=" " alt="" coords="50,1072,58,1161,74,1279,85,1338,99,1392,115,1435,134,1464,160,1481,157,1485,130,1468,110,1438,93,1393,80,1339,68,1280,53,1162,45,1073"/>
+<area shape="rect" id="Node000040" href="$classTouchSearchButtons.html" title=" " alt="" coords="171,1527,325,1552"/>
+<area shape="poly" id="edge363_Node000000_Node000040" title=" " alt="" coords="50,1072,56,1170,70,1303,81,1370,96,1431,113,1480,134,1514,151,1526,172,1534,170,1539,149,1531,130,1517,108,1483,90,1432,76,1371,65,1303,51,1170,44,1072"/>
+<area shape="rect" id="Node000041" href="$classTouchSettings.html" title=" " alt="" coords="192,1576,304,1601"/>
+<area shape="poly" id="edge364_Node000000_Node000041" title=" " alt="" coords="49,1073,54,1180,67,1328,78,1402,93,1470,111,1526,134,1563,161,1580,192,1587,191,1592,159,1585,130,1567,106,1528,87,1472,73,1403,62,1328,49,1180,44,1073"/>
+<area shape="rect" id="Node000042" href="$classTouchSlider.html" title=" " alt="" coords="200,1625,296,1651"/>
+<area shape="poly" id="edge365_Node000000_Node000042" title=" " alt="" coords="49,1072,52,1188,64,1351,75,1434,90,1509,109,1571,121,1595,134,1612,148,1623,164,1631,200,1637,199,1643,163,1636,145,1628,130,1616,116,1597,104,1573,84,1511,69,1435,59,1351,47,1188,43,1072"/>
+<area shape="rect" id="Node000043" href="$classTouchTextEdit.html" title=" " alt="" coords="193,1675,303,1700"/>
+<area shape="poly" id="edge366_Node000000_Node000043" title=" " alt="" coords="48,1072,50,1197,61,1375,71,1466,87,1548,107,1616,120,1642,134,1662,146,1672,161,1679,193,1686,192,1691,159,1684,143,1676,130,1665,115,1645,102,1618,81,1550,66,1466,56,1375,45,1197,43,1072"/>
+<area shape="rect" id="Node000044" href="$classTouchTextSelectionButtons.html" title=" " alt="" coords="150,1724,346,1749"/>
+<area shape="poly" id="edge367_Node000000_Node000044" title=" " alt="" coords="48,1072,49,1206,58,1398,68,1497,84,1587,105,1661,119,1690,134,1711,151,1724,148,1728,130,1715,114,1692,100,1663,78,1589,63,1498,52,1399,43,1206,43,1072"/>
+<area shape="rect" id="Node000003" href="$classCommandSelector.html" title=" " alt="" coords="459,5,601,31"/>
+<area shape="poly" id="edge326_Node000002_Node000003" title=" " alt="" coords="337,169,362,155,374,142,381,128,385,99,390,69,397,54,410,40,433,27,458,19,459,24,435,31,414,44,402,57,395,71,391,100,386,130,379,145,366,159,339,174"/>
+<area shape="rect" id="Node000004" href="$classFileSelector.html" title=" " alt="" coords="481,55,579,80"/>
+<area shape="poly" id="edge327_Node000002_Node000004" title=" " alt="" coords="337,167,362,154,378,140,386,123,394,106,411,90,445,75,480,68,481,73,446,80,413,95,398,110,390,126,382,143,366,159,340,171"/>
+<area shape="rect" id="Node000005" href="$classFilteredSelectTableWindowClass.html" title=" " alt="" coords="431,105,629,145"/>
+<area shape="poly" id="edge328_Node000002_Node000005" title=" " alt="" coords="324,164,431,142,432,147,325,169"/>
+<area shape="rect" id="Node000006" href="$classFilteredSelectWindowClass.html" title=" " alt="" coords="412,169,648,195"/>
+<area shape="poly" id="edge329_Node000002_Node000006" title=" " alt="" coords="338,179,412,179,412,185,338,185"/>
+<area shape="rect" id="Node000007" href="$classFilteredTreeSelect.html" title=" " alt="" coords="442,219,618,244"/>
+<area shape="poly" id="edge330_Node000002_Node000007" title=" " alt="" coords="335,194,457,216,456,221,334,200"/>
+<area shape="rect" id="Node000009" href="$classAudioUI.html" title=" " alt="" coords="493,268,567,293"/>
+<area shape="poly" id="edge332_Node000008_Node000009" title=" " alt="" coords="266,429,325,365,366,331,411,302,452,287,492,280,493,286,454,293,413,307,369,335,329,369,270,432"/>
+<area shape="rect" id="Node000010" href="$classBoolConfigUI.html" title=" " alt="" coords="477,317,583,343"/>
+<area shape="poly" id="edge333_Node000008_Node000010" title=" " alt="" coords="275,431,335,390,411,352,476,334,477,339,413,356,338,395,278,435"/>
+<area shape="rect" id="Node000011" href="$classColor3ConfigUI.html" title=" " alt="" coords="471,367,589,392"/>
+<area shape="poly" id="edge334_Node000008_Node000011" title=" " alt="" coords="299,434,411,401,470,388,471,393,413,406,300,440"/>
+<area shape="rect" id="Node000012" href="$classColor4ConfigUI.html" title=" " alt="" coords="471,416,589,441"/>
+<area shape="poly" id="edge335_Node000008_Node000012" title=" " alt="" coords="300,447,470,431,470,437,301,452"/>
+<area shape="rect" id="Node000013" href="$classFloatConfigUI.html" title=" " alt="" coords="475,465,585,491"/>
+<area shape="poly" id="edge336_Node000008_Node000013" title=" " alt="" coords="301,456,475,471,474,476,301,461"/>
+<area shape="rect" id="Node000014" href="$classIntConfigUI.html" title=" " alt="" coords="483,515,577,540"/>
+<area shape="poly" id="edge337_Node000008_Node000014" title=" " alt="" coords="301,459,365,476,389,488,413,500,483,517,482,523,411,504,387,492,363,480,300,464"/>
+<area shape="rect" id="Node000015" href="$classMacroConfigUI.html" title=" " alt="" coords="471,564,589,589"/>
+<area shape="poly" id="edge338_Node000008_Node000015" title=" " alt="" coords="301,454,334,461,366,476,383,494,391,514,398,532,414,549,441,563,472,571,470,576,440,568,410,553,393,535,386,516,378,497,362,480,332,466,300,459"/>
+<area shape="rect" id="Node000016" href="$classPageSelectorUI.html" title=" " alt="" coords="470,613,590,639"/>
+<area shape="poly" id="edge339_Node000008_Node000016" title=" " alt="" coords="301,452,335,459,366,476,379,491,387,507,391,539,395,570,401,585,414,599,440,614,470,622,469,627,438,619,410,603,397,588,389,572,385,540,382,509,375,494,362,480,333,464,300,457"/>
+<area shape="rect" id="Node000017" href="$classRangeConfigUI.html" title=" " alt="" coords="471,663,589,688"/>
+<area shape="poly" id="edge340_Node000008_Node000017" title=" " alt="" coords="301,451,335,458,366,476,383,497,390,520,391,564,391,607,398,628,414,648,440,664,471,672,469,677,438,669,410,652,393,630,386,608,385,564,385,521,378,500,362,480,333,463,300,456"/>
+<area shape="rect" id="Node000018" href="$classRectangleConfigUI.html" title=" " alt="" coords="459,712,601,737"/>
+<area shape="poly" id="edge341_Node000008_Node000018" title=" " alt="" coords="301,450,335,457,352,465,366,476,386,504,394,533,394,561,391,590,387,618,387,645,395,672,414,699,435,713,459,721,457,726,432,718,410,703,390,675,382,646,381,618,385,589,389,561,389,533,381,506,362,480,349,470,333,463,300,455"/>
+</map>

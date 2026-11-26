@@ -1,0 +1,16 @@
+<map id="get_word_rect_list_from_flat_chars" name="get_word_rect_list_from_flat_chars">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,59,147,99"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="38,60,36,50,42,41,56,35,76,33,100,36,112,43,110,48,98,41,76,38,57,40,45,45,41,51,43,58"/>
+<area shape="rect" id="Node000002" href="$utils_8cpp.html#a3f7c8abf278818ca6f3d7ddc6443d265" title=" " alt="" coords="195,67,357,92"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="147,77,181,77,181,82,147,82"/>
+<area shape="poly" id="edge9_Node000002_Node000002" title=" " alt="" coords="243,68,236,58,240,48,253,42,276,40,304,44,315,53,312,57,302,49,276,45,255,47,244,52,241,58,247,65"/>
+<area shape="rect" id="Node000003" href="$utils_8cpp.html#aa4c0946e741daccf59292bffe379ac08" title=" " alt="" coords="431,29,534,55"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="346,64,417,51,418,56,347,69"/>
+<area shape="rect" id="Node000004" href="$utils_8cpp.html#a98f0337eaecadfc804cfe7600fbc0436" title=" " alt="" coords="405,103,560,128"/>
+<area shape="poly" id="edge5_Node000002_Node000004" title=" " alt="" coords="350,89,396,98,395,103,349,95"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="449,31,442,21,446,11,460,5,483,3,511,6,522,16,519,20,509,11,483,8,461,10,450,15,447,20,454,28"/>
+<area shape="poly" id="edge8_Node000004_Node000004" title=" " alt="" coords="449,104,442,94,446,84,460,78,483,76,511,80,522,89,519,93,509,85,483,81,461,83,450,88,447,94,454,101"/>
+<area shape="rect" id="Node000005" href="$utils_8cpp.html#a34f8620f96a354a1403fae37e8785ad1" title=" " alt="" coords="608,103,767,128"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="560,113,594,113,594,118,560,118"/>
+<area shape="poly" id="edge7_Node000005_Node000005" title=" " alt="" coords="654,104,647,94,651,84,664,78,687,76,716,80,727,89,723,93,713,85,687,81,666,83,654,88,652,94,658,101"/>
+</map>

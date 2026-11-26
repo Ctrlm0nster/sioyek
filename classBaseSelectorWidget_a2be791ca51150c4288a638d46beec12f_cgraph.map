@@ -1,0 +1,11 @@
+<map id="BaseSelectorWidget::simulate_move_up" name="BaseSelectorWidget::simulate_move_up">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,79,160,119"/>
+<area shape="rect" id="Node000002" href="$ui_8cpp.html#a5581d58686317ae9a4134abdb0fe1d6b" title=" " alt="" coords="209,29,360,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="153,77,225,56,227,61,154,82"/>
+<area shape="rect" id="Node000003" href="$classBaseSelectorWidget.html#ac57eaf267e653f8765bde75f1c948722" title=" " alt="" coords="208,79,361,119"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="160,97,194,97,194,102,160,102"/>
+<area shape="rect" id="Node000004" href="$ui_8cpp.html#a9b16a3bb22de8606039a6e9ea3eca843" title=" " alt="" coords="211,167,358,207"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="131,117,227,159,225,164,129,122"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="252,31,245,21,248,11,262,5,285,3,313,6,324,16,320,20,310,11,285,8,263,10,252,15,250,20,256,28"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="247,168,245,158,251,149,264,143,285,141,308,144,321,151,318,156,306,149,285,146,266,148,254,153,250,159,252,166"/>
+</map>

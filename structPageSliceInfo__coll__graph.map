@@ -1,0 +1,13 @@
+<map id="PageSliceInfo" name="PageSliceInfo">
+<area shape="rect" id="Node000001" title="Information about a visible page sub&#45;slice or tile." alt="" coords="52,1121,153,1207"/>
+<area shape="rect" id="Node000002" href="$structNormalizedWindowRect.html" title=" " alt="" coords="5,925,200,1051"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,1051,105,1104,100,1104,100,1051"/>
+<area shape="rect" id="Node000003" href="$structEnhancedRect.html" title=" " alt="" coords="11,556,194,876"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="105,890,105,925,100,925,100,890"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="52,260,111,325"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="86,339,97,556,92,556,81,339"/>
+<area shape="rect" id="Node000005" href="$structEnhancedRect.html" title=" " alt="" coords="135,120,297,465"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="169,479,148,556,143,555,164,478"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="205,5,227,71"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="219,84,219,120,213,120,213,84"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="BaseSelectorWidget::get_selected_item" name="BaseSelectorWidget::get_selected_item">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,35,159,75"/>
+<area shape="rect" id="Node000002" href="$classBaseSelectorWidget.html#afa5147eea5c5e785d1bae36ac7dab16d" title=" " alt="" coords="207,5,363,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,41,193,36,193,41,159,46"/>
+<area shape="rect" id="Node000003" href="$classBaseSelectorWidget.html#ac57eaf267e653f8765bde75f1c948722" title=" " alt="" coords="411,35,564,75"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="159,54,207,55,363,55,397,54,397,59,363,60,207,60,159,59"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="363,34,398,39,397,44,362,39"/>
+</map>

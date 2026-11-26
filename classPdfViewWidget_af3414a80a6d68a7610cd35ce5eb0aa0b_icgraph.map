@@ -1,0 +1,11 @@
+<map id="PdfViewWidget::clear_tag_prefix" name="PdfViewWidget::clear_tag_prefix">
+<area shape="rect" id="Node000001" title=" " alt="" coords="492,69,653,109"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a541b1bb4ffa798a72eec02d979847b49" title=" " alt="" coords="276,69,444,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="478,92,444,92,444,87,478,87"/>
+<area shape="rect" id="Node000003" href="$classKeyboardSelectPointCommand.html#aecd0cc880dabfa6d1df4d5cbebb47849" title=" " alt="" coords="5,5,228,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="269,68,193,48,194,43,271,63"/>
+<area shape="rect" id="Node000004" href="$classKeyboardSelectPointCommand.html#a2140e18905b69a4c05100095727dafbc" title=" " alt="" coords="5,69,228,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="262,92,228,92,228,87,262,87"/>
+<area shape="rect" id="Node000005" href="$classOpenLinkCommand.html#a1708afc430953da63ac6ab5461b3183c" title=" " alt="" coords="27,133,206,173"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="271,115,194,136,193,131,269,110"/>
+</map>

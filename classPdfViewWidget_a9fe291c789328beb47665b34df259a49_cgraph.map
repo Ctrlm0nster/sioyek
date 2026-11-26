@@ -1,0 +1,27 @@
+<map id="PdfViewWidget::document_to_overview_rect" name="PdfViewWidget::document_to_overview_rect">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,101,200,141"/>
+<area shape="rect" id="Node000002" href="$structNormalizedWindowRect.html#ad94247d3ab55da4914b8acc184458e05" title=" " alt="" coords="252,5,439,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="145,99,247,55,267,47,269,52,249,60,147,104"/>
+<area shape="rect" id="Node000003" href="$structDocumentRect.html#afb07b97d1ebcc765839c07c6aa789204" title=" " alt="" coords="259,69,432,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="200,106,245,100,245,105,201,111"/>
+<area shape="rect" id="Node000004" href="$classPdfViewWidget.html#ad5305d053bf4b0db3cd72a1cf75c6fd4" title=" " alt="" coords="248,133,443,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="201,132,235,136,234,141,200,137"/>
+<area shape="rect" id="Node000013" href="$structDocumentRect.html#abdf624c76e18845f6289948764daf2e6" title=" " alt="" coords="258,198,433,223"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="146,139,249,183,277,192,276,197,247,188,144,144"/>
+<area shape="rect" id="Node000005" href="$classDocument.html#a66caf693ee3c3c8ca06881d325325c1f" title=" " alt="" coords="517,69,679,109"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="424,131,505,110,506,115,426,136"/>
+<area shape="rect" id="Node000007" href="$classPdfViewWidget.html#ab6531fe15aa3a57dd127be1e9d686b42" title=" " alt="" coords="491,133,705,173"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="443,151,477,151,477,156,443,156"/>
+<area shape="rect" id="Node000008" href="$classPdfViewWidget.html#aa6ac8f1df48e3e7432b914aaa87d9cbe" title=" " alt="" coords="513,197,683,237"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="426,171,506,191,505,197,424,176"/>
+<area shape="rect" id="Node000006" href="$classDocument.html#aa8809fa0693369d107b7820c53b4e06d" title=" " alt="" coords="767,69,930,109"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="680,87,754,87,754,92,680,92"/>
+<area shape="rect" id="Node000009" href="$classDocument.html#aa666969289019e3c56e52d5e8855732d" title=" " alt="" coords="753,140,944,180"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="683,195,747,180,748,186,684,200"/>
+<area shape="rect" id="Node000011" href="$classPdfViewWidget.html#afb63aba8098194ed19824709479b5b8a" title=" " alt="" coords="773,205,925,230"/>
+<area shape="poly" id="edge10_Node000008_Node000011" title=" " alt="" coords="684,215,759,215,759,220,684,220"/>
+<area shape="rect" id="Node000012" href="$classDocument.html#a9bfa001954e6981ee2cf08f5e1f042f2" title="Get the physical width of a specific page in points." alt="" coords="770,255,927,295"/>
+<area shape="poly" id="edge11_Node000008_Node000012" title=" " alt="" coords="684,234,757,251,756,256,683,239"/>
+<area shape="rect" id="Node000010" href="$classDocument.html#a96a3741801def570bd1a2d614dde2d5f" title="Transform continuous absolute document coordinates to page&#45;relative coordinates." alt="" coords="992,140,1145,180"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="944,157,978,157,978,163,944,163"/>
+</map>

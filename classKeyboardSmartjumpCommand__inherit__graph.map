@@ -1,0 +1,7 @@
+<map id="KeyboardSmartjumpCommand" name="KeyboardSmartjumpCommand">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,652,244,817"/>
+<area shape="rect" id="Node000002" href="$classTextCommand.html" title=" " alt="" coords="27,459,223,604"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="127,618,127,652,122,652,122,618"/>
+<area shape="rect" id="Node000003" href="$classCommand.html" title=" " alt="" coords="12,5,237,411"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="127,424,127,458,122,458,122,424"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="PdfViewWidget::render_ui_icon_for_current_color_mode" name="PdfViewWidget::render_ui_icon_for_current_color_mode">
+<area shape="rect" id="Node000001" title=" " alt="" coords="720,5,891,60"/>
+<area shape="rect" id="Node000002" href="$classPdfViewWidget.html#a7b983e7fb3cc4b306be2d531642a6594" title=" " alt="" coords="255,20,453,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="706,32,672,31,501,31,454,32,453,27,501,26,672,26,706,27"/>
+<area shape="rect" id="Node000004" href="$classPdfViewWidget.html#a4bd30547a4ecb564aafccaad6de89df6" title=" " alt="" coords="501,41,672,81"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="707,48,673,52,672,47,706,43"/>
+<area shape="rect" id="Node000003" href="$classPdfViewWidget.html#ab1b6da7af4f4ecce9c051af6d2d5d8b0" title="Pure virtual hook called to record high&#45;level page and document draw calls." alt="" coords="5,20,207,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="241,35,207,35,207,30,241,30"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="487,51,453,47,454,42,488,46"/>
+</map>

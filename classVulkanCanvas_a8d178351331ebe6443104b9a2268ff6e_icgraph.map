@@ -1,0 +1,7 @@
+<map id="VulkanCanvas::resizeScene" name="VulkanCanvas::resizeScene">
+<area shape="rect" id="Node000001" title="Pure virtual hook invoked when the widget surface dimensions change." alt="" coords="231,31,429,56"/>
+<area shape="rect" id="Node000002" href="$classVulkanCanvas.html#a696fb76e346014d6b4c1359511b62cc6" title="Initialize QRhi pipelines, texture samplers, and SPIR&#45;V shader state." alt="" coords="5,5,183,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="217,34,182,30,183,25,217,29"/>
+<area shape="rect" id="Node000003" href="$classVulkanCanvas.html#a7d38fd7b4da9bba66e8b542e37ef6326" title="Execute the frame render pass and submit recorded draw commands." alt="" coords="13,55,175,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="217,57,176,62,175,56,217,52"/>
+</map>

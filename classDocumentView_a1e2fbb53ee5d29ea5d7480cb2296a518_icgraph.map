@@ -1,0 +1,10 @@
+<map id="DocumentView::get_page_chapter_index" name="DocumentView::get_page_chapter_index">
+<area shape="rect" id="Node000001" title=" " alt="" coords="731,29,919,69"/>
+<area shape="poly" id="edge4_Node000001_Node000001" title=" " alt="" coords="866,18,851,11,825,8,801,10,787,15,782,21,785,28,779,30,777,20,784,10,800,5,825,3,853,6,868,13"/>
+<area shape="rect" id="Node000002" href="$classDocumentView.html#ad0ab8fc1d9ca965e242b82d4292fc7c6" title=" " alt="" coords="480,29,683,69"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="717,52,683,52,683,47,717,47"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#ac0695691cb6a93016fe460b9d188a349" title=" " alt="" coords="280,29,432,69"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="466,52,432,52,432,47,466,47"/>
+<area shape="rect" id="Node000004" href="$classGotoTableOfContentsCommand.html#a1fb718643d0fa5ba46d66f01c5e36ff4" title=" " alt="" coords="5,29,232,69"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="266,52,232,52,232,47,266,47"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="EditVisibleAnnotationCommand::EditVisibleAnnotationCommand" name="EditVisibleAnnotationCommand::EditVisibleAnnotationCommand">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,13,243,53"/>
+<area shape="rect" id="Node000002" href="$classGenericVisibleAnnotationCommand.html#a8fff17d730a88e7600faf0ccfcd8f368" title=" " alt="" coords="291,5,553,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="243,30,277,30,277,35,243,35"/>
+<area shape="rect" id="Node000003" href="$classGenericVisibleSelectCommand.html#a537141678a72ef700c25851d8dd23a58" title=" " alt="" coords="601,13,832,53"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="554,30,587,30,587,35,554,35"/>
+<area shape="rect" id="Node000004" href="$classCommand.html#a176d97aca72ef53dbb4d71a3578d8772" title=" " alt="" coords="880,20,1044,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="832,30,866,30,866,35,832,35"/>
+</map>

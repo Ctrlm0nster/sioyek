@@ -1,0 +1,13 @@
+<map id="DatabaseManager::run_schema_query" name="DatabaseManager::run_schema_query">
+<area shape="rect" id="Node000001" title=" " alt="" coords="602,37,773,77"/>
+<area shape="rect" id="Node000002" href="$classDatabaseManager.html#a5d22b94f664a68d2f879eb861472bbe7" title=" " alt="" coords="354,5,554,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="588,46,554,42,555,36,589,41"/>
+<area shape="rect" id="Node000005" href="$classDatabaseManager.html#a5f316f14b4ca810e5b39b41e038ccddd" title=" " alt="" coords="354,69,554,109"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="589,74,555,78,554,73,588,68"/>
+<area shape="rect" id="Node000003" href="$classDatabaseManager.html#a3a271f7ca2ccee2d14ec2488bba79433" title=" " alt="" coords="113,37,306,77"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="341,43,307,47,306,42,340,38"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#a700a0caa5b70a06d1064e576f9f3cf65" title=" " alt="" coords="10,45,65,70"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="99,60,65,60,65,55,99,55"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="68,34,59,26,38,23,20,25,10,30,8,36,14,43,9,46,3,36,6,27,18,20,38,18,61,21,71,30"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="340,77,306,73,307,67,341,72"/>
+</map>

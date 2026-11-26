@@ -1,0 +1,13 @@
+<map id="MainWidget::get_tag_rect" name="MainWidget::get_tag_rect">
+<area shape="rect" id="Node000001" title=" " alt="" coords="720,77,909,102"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#af4bf42c5007583c7477f2f7920d211d9" title=" " alt="" coords="515,69,672,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="706,92,672,92,672,87,706,87"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a2cab78c3ffe04690cdf612e5e7da9c7a" title=" " alt="" coords="279,5,431,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="504,68,430,48,431,43,506,63"/>
+<area shape="rect" id="Node000005" href="$classKeyboardOverviewCommand.html#aed984438bd35a8259e6dc0b63516b5ca" title=" " alt="" coords="249,69,461,109"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="501,92,462,92,462,87,501,87"/>
+<area shape="rect" id="Node000006" href="$classKeyboardSmartjumpCommand.html#a24801225d5e15b2203a6095a72b04c10" title=" " alt="" coords="244,133,467,173"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="506,116,431,136,430,131,504,110"/>
+<area shape="rect" id="Node000004" href="$classKeyboardSelectCommand.html#a4fb85b30ebe3c0a47fb8ea893db19045" title=" " alt="" coords="5,5,196,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="265,28,196,28,196,23,265,23"/>
+</map>

@@ -1,0 +1,14 @@
+<map id="PdfViewWidget::find_search_results_breakpoint_helper" name="PdfViewWidget::find_search_results_breakpoint_helper">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1255,29,1455,84"/>
+<area shape="poly" id="edge6_Node000001_Node000001" title=" " alt="" coords="1396,18,1381,11,1355,8,1332,10,1318,15,1312,21,1312,29,1306,29,1307,19,1315,10,1331,5,1355,3,1383,6,1399,14"/>
+<area shape="rect" id="Node000002" href="$classPdfViewWidget.html#a6ba1e107b5e001912794fb125b2cb919" title=" " alt="" coords="1007,37,1207,77"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1241,59,1207,59,1207,54,1241,54"/>
+<area shape="rect" id="Node000003" href="$classPdfViewWidget.html#acfb4e0b7b89b54b12f6ae2e763dbaa63" title=" " alt="" coords="723,37,959,77"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="993,59,959,59,959,54,993,54"/>
+<area shape="rect" id="Node000004" href="$classPdfViewWidget.html#aa28d340b45c6b52085393e0c85b46dd7" title=" " alt="" coords="501,37,675,77"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="709,59,675,59,675,54,709,54"/>
+<area shape="rect" id="Node000005" href="$classPdfViewWidget.html#a7b983e7fb3cc4b306be2d531642a6594" title=" " alt="" coords="255,44,453,69"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="488,59,453,59,453,54,488,54"/>
+<area shape="rect" id="Node000006" href="$classPdfViewWidget.html#ab1b6da7af4f4ecce9c051af6d2d5d8b0" title="Pure virtual hook called to record high&#45;level page and document draw calls." alt="" coords="5,44,207,69"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="241,59,207,59,207,54,241,54"/>
+</map>

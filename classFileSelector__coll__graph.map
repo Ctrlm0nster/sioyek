@@ -1,0 +1,11 @@
+<map id="FileSelector" name="FileSelector">
+<area shape="rect" id="Node000001" title=" " alt="" coords="21,1160,183,1320"/>
+<area shape="rect" id="Node000002" href="$classBaseSelectorWidget.html" title=" " alt="" coords="5,591,199,1111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,1125,105,1160,99,1160,99,1125"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="45,287,116,353"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="85,366,94,590,89,590,80,366"/>
+<area shape="rect" id="Node000004" href="$classMySortFilterProxyModel.html" title=" " alt="" coords="141,120,346,520"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="193,521,178,576,173,574,188,520"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="163,5,323,71"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="246,84,246,120,241,120,241,84"/>
+</map>

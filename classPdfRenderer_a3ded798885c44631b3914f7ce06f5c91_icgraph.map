@@ -1,0 +1,5 @@
+<map id="PdfRenderer::add_request" name="PdfRenderer::add_request">
+<area shape="rect" id="Node000001" title="Enqueue a high&#45;priority render request for a visible page or slice." alt="" coords="292,5,483,31"/>
+<area shape="rect" id="Node000002" href="$classPdfRenderer.html#a1f03b3b9cc836b8fba5e99e15eb61fd5" title="Look up a rendered page handle, returning a closest&#45;zoom placeholder if still rasterizing." alt="" coords="5,5,244,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="278,21,244,21,244,15,278,15"/>
+</map>

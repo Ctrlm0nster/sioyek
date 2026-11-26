@@ -1,0 +1,17 @@
+<map id="SymbolCommand::SymbolCommand" name="SymbolCommand::SymbolCommand">
+<area shape="rect" id="Node000001" title=" " alt="" coords="305,183,568,209"/>
+<area shape="rect" id="Node000002" href="$classAddHighlightCommand.html#ad84810997d4e96ed1f2873a2815b73c2" title=" " alt="" coords="41,5,222,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="411,176,345,118,302,86,256,60,221,46,223,41,258,55,305,82,348,113,415,172"/>
+<area shape="rect" id="Node000003" href="$classExternalSearchCommand.html#ab3cd81ef02c39ab08116cdd96b4ba53a" title=" " alt="" coords="34,69,229,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="395,180,330,152,256,124,217,112,218,107,258,119,332,147,397,175"/>
+<area shape="rect" id="Node000004" href="$classGotoMark.html#a8450e0c4a6b5ff80948b8eae296e0477" title=" " alt="" coords="52,134,211,159"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="343,184,210,162,211,157,344,178"/>
+<area shape="rect" id="Node000005" href="$classSetFreehandType.html#a7efe7076b0f6e7f1cc34d6beff235864" title=" " alt="" coords="5,183,257,209"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="292,199,257,199,257,193,292,193"/>
+<area shape="rect" id="Node000006" href="$classSetMark.html#a6fccd39a43a04ba2c083365312a04094" title=" " alt="" coords="62,233,201,258"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="344,214,202,237,201,232,344,208"/>
+<area shape="rect" id="Node000007" href="$classSetSelectHighlightTypeCommand.html#ad4154305f2221641371e72bcda16c209" title=" " alt="" coords="8,283,255,323"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="396,217,332,244,258,272,214,285,213,280,256,267,330,239,394,212"/>
+<area shape="rect" id="Node000008" href="$classToggleDrawingMask.html#a5bd7442322b540a2608d213f8765c751" title=" " alt="" coords="51,347,212,387"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="415,220,348,279,305,310,258,337,213,354,211,349,256,332,302,306,345,274,411,216"/>
+</map>

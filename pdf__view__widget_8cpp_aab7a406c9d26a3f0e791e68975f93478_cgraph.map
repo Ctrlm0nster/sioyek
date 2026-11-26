@@ -1,0 +1,8 @@
+<map id="generate_bezier_with_endpoints_and_velocity" name="generate_bezier_with_endpoints_and_velocity">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,188,69"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="65,30,63,20,68,11,79,5,97,3,117,6,128,13,125,17,115,11,97,8,81,10,71,15,68,21,70,28"/>
+<area shape="rect" id="Node000002" href="$structVec.html#a6e6e5f8bf577ba75a710d2d73008f9c4" title=" " alt="" coords="236,11,297,37"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="188,33,222,28,223,33,188,38"/>
+<area shape="rect" id="Node000003" href="$structVec.html#ab034ad7661ec4aacc94ce883077a2ae1" title=" " alt="" coords="236,61,297,86"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="188,60,223,65,222,70,188,65"/>
+</map>

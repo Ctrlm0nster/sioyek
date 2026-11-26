@@ -1,0 +1,6 @@
+<map id="CharacterAddress" name="CharacterAddress">
+<area shape="rect" id="Node000001" title=" " alt="" coords="49,405,178,651"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="180,497,197,507,205,528,202,541,195,551,191,548,197,539,199,528,193,510,177,502"/>
+<area shape="rect" id="Node000002" href="$classDocument.html" title="Thread&#45;safe document model managing MuPDF structures, layout geometry, and annotations." alt="" coords="5,5,221,335"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,335,116,389,111,389,111,335"/>
+</map>

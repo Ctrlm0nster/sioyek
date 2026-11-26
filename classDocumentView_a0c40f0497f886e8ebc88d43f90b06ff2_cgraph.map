@@ -1,0 +1,26 @@
+<map id="DocumentView::get_offset_x" name="DocumentView::get_offset_x">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,213,213,239"/>
+<area shape="rect" id="Node000002" href="$classDocumentView.html#afb8536808a70c14a51a3b2ec44660e2a" title=" " alt="" coords="261,206,432,246"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="214,223,248,223,248,229,214,229"/>
+<area shape="rect" id="Node000003" href="$classDocumentView.html#ac800f6c72307254fbdfd362151182e18" title=" " alt="" coords="501,113,655,153"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="387,204,479,162,499,155,500,160,481,167,389,208"/>
+<area shape="rect" id="Node000004" href="$classDocumentView.html#a7b048cd2f1648153050b1d124c1ea679" title=" " alt="" coords="497,177,659,217"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="432,213,483,206,483,211,433,218"/>
+<area shape="rect" id="Node000007" href="$classDocument.html#a9bfa001954e6981ee2cf08f5e1f042f2" title="Get the physical width of a specific page in points." alt="" coords="756,234,913,274"/>
+<area shape="poly" id="edge9_Node000002_Node000007" title=" " alt="" coords="433,228,743,246,742,251,432,234"/>
+<area shape="rect" id="Node000010" href="$structDocumentPos.html#a3b3b747bb52554fd9dac8992308e4c63" title=" " alt="" coords="480,299,676,324"/>
+<area shape="poly" id="edge10_Node000002_Node000010" title=" " alt="" coords="403,244,531,291,529,296,401,249"/>
+<area shape="rect" id="Node000005" href="$classDocument.html#ad2048d0f289faeb7f0b40321bc5447d4" title=" " alt="" coords="724,5,945,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="658,174,674,163,686,148,693,134,697,103,701,72,709,56,722,41,730,35,733,40,726,45,713,59,706,73,702,104,698,135,691,151,678,167,661,179"/>
+<area shape="rect" id="Node000006" href="$classDocument.html#a81ed14e7ce10f1da72821d48bebae3de" title="Get the physical height of a specific page in points." alt="" coords="756,55,913,95"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="653,174,674,163,689,149,698,134,707,120,722,105,741,95,744,99,726,110,711,123,702,137,693,152,678,167,655,179"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="660,212,743,231,742,236,659,217"/>
+<area shape="rect" id="Node000008" href="$classDocument.html#affeb52c635bb9acbb3fed4eb12a7101d" title=" " alt="" coords="756,119,913,159"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="659,176,742,157,743,162,660,181"/>
+<area shape="rect" id="Node000009" href="$classDocument.html#a2f79df9ddd1b39e93b5dfb1dbef13ec3" title="Get total number of pages in the document." alt="" coords="749,184,921,209"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="659,194,735,194,735,199,659,199"/>
+<area shape="rect" id="Node000011" href="$classDocument.html#a66caf693ee3c3c8ca06881d325325c1f" title=" " alt="" coords="753,298,916,338"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="676,311,740,313,739,318,676,317"/>
+<area shape="rect" id="Node000012" href="$classDocument.html#aa8809fa0693369d107b7820c53b4e06d" title=" " alt="" coords="993,298,1156,338"/>
+<area shape="poly" id="edge12_Node000011_Node000012" title=" " alt="" coords="916,315,980,315,980,321,916,321"/>
+</map>

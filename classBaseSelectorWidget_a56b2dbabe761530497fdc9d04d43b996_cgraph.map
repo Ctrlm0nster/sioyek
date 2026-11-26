@@ -1,0 +1,8 @@
+<map id="BaseSelectorWidget::simulate_move_down" name="BaseSelectorWidget::simulate_move_down">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,47,179,87"/>
+<area shape="rect" id="Node000002" href="$classBaseSelectorWidget.html#ac57eaf267e653f8765bde75f1c948722" title=" " alt="" coords="239,5,393,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,48,225,39,226,45,179,53"/>
+<area shape="rect" id="Node000003" href="$ui_8cpp.html#aa5dee154596831273f118ab067daa1ff" title=" " alt="" coords="227,94,405,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="179,80,231,89,230,94,178,85"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="279,96,272,86,276,76,291,70,316,67,348,71,360,81,356,85,346,76,316,73,292,75,279,80,277,85,284,92"/>
+</map>

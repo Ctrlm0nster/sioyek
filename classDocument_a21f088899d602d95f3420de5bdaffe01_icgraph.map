@@ -1,0 +1,21 @@
+<map id="Document::get_bookmark_index_at_pos" name="Document::get_bookmark_index_at_pos">
+<area shape="rect" id="Node000001" title=" " alt="" coords="796,109,987,149"/>
+<area shape="rect" id="Node000002" href="$classMainWidget.html#a7278eba4b907f1c77583b2323cfe9d5a" title=" " alt="" coords="560,29,705,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="836,105,747,70,701,57,702,52,749,65,838,100"/>
+<area shape="rect" id="Node000005" href="$classMainWidget.html#aec1f9d262d8092d77b8f9069432cfa0e" title=" " alt="" coords="517,79,748,119"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="782,119,748,115,748,110,783,114"/>
+<area shape="rect" id="Node000006" href="$classMainWidget.html#a48ae6c49931be9590a2edda847dadad3" title=" " alt="" coords="5,144,229,169"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="782,135,230,155,230,150,782,130"/>
+<area shape="rect" id="Node000007" href="$classMainWidget.html#aae809bd59d76c29c5b67e5350469aa41" title=" " alt="" coords="523,194,742,234"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="818,155,695,197,693,191,816,150"/>
+<area shape="poly" id="edge4_Node000002_Node000002" title=" " alt="" coords="679,20,676,15,668,12,633,8,605,10,590,15,587,20,595,27,591,31,582,21,586,11,604,5,633,3,669,7,679,11,683,17"/>
+<area shape="rect" id="Node000003" href="$classMainWidget.html#a1710c804f090c9c005612b755a46de47" title=" " alt="" coords="277,5,469,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="546,37,470,30,470,24,547,31"/>
+<area shape="rect" id="Node000004" href="$classMainWidget.html#a793192d445eb63f8a62cc8b646f3cea2" title=" " alt="" coords="286,55,461,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="546,53,461,61,461,56,546,48"/>
+<area shape="rect" id="Node000008" href="$classMainWidget.html#a49169009ea3b7e62cb793399cccc462a" title=" " alt="" coords="297,194,449,234"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="510,217,450,217,450,211,510,211"/>
+<area shape="poly" id="edge9_Node000008_Node000006" title=" " alt="" coords="283,197,174,172,176,167,285,191"/>
+<area shape="rect" id="Node000009" href="$classMainWidget.html#a2d1fe0808150002e7cf4b2af8a1202cd" title=" " alt="" coords="15,194,219,234"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="283,217,220,217,220,211,283,211"/>
+</map>
