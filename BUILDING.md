@@ -71,9 +71,15 @@ and the respective dependency directories.
 From the repository root:
 
 ```sh
-scripts/dev-build.sh
+cmake --preset dev
+cmake --build --preset dev
 scripts/dev-run.sh "$PWD/tutorial.pdf"
 ```
+
+For an optimized build, use `cmake --preset release` followed by
+`cmake --build --preset release`. The presets use Ninja, write to
+`build/dev` and `build/release` respectively, and generate a
+`compile_commands.json` in each build directory.
 
 ### Mise task runner
 

@@ -13,12 +13,9 @@ run = "scripts/dev-build.sh"
 description = "Build optimized release binary with CMake and Ninja"
 alias = ["release"]
 run = '''
-build_release() {
-  local build_dir="${SIOYEK_RELEASE_DIR:-build/release}"
-  cmake -S . -B "$build_dir" -G Ninja -DCMAKE_BUILD_TYPE=Release "$@"
+build_dir="${SIOYEK_RELEASE_DIR:-build/release}"
+cmake --preset release -B "$build_dir" "$@" &&
   cmake --build "$build_dir" --parallel "${SIOYEK_JOBS:-2}"
-}
-build_release "$@"
 '''
 
 [tasks.docs]
