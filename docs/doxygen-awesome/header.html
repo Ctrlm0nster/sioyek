@@ -28,7 +28,6 @@ $treeview
 $search
 $mathjax
 $darkmode
-$mermaidjs
 <link href="$relpath^$stylesheet" rel="stylesheet" type="text/css" />
 $extrastylesheet
 <script type="text/javascript" src="$relpath^doxygen-awesome-darkmode-toggle.js"></script>
@@ -38,6 +37,74 @@ $extrastylesheet
     DoxygenAwesomeDarkModeToggle.init()
     DoxygenAwesomeParagraphLink.init()
     DoxygenAwesomeInteractiveToc.init()
+</script>
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+    function getPreferredTheme() {
+        if (document.documentElement.classList.contains('dark-mode')) return 'dark';
+        const saved = localStorage.getItem('doxygen-awesome-dark-mode-toggle');
+        if (saved !== null) return saved === 'true' ? 'dark' : 'default';
+        return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+    }
+
+    async function renderMermaidDiagrams() {
+        const theme = getPreferredTheme();
+        mermaid.initialize({
+            startOnLoad: false,
+            theme: theme,
+            securityLevel: 'loose'
+        });
+
+        const targets = document.querySelectorAll('.mermaid, .mermaidgraph pre');
+        if (targets.length === 0) return;
+
+        targets.forEach(el => {
+            if (!el.getAttribute('data-mermaid-src')) {
+                el.setAttribute('data-mermaid-src', el.textContent);
+            }
+        });
+
+        try {
+            await mermaid.run({
+                querySelector: '.mermaid, .mermaidgraph pre'
+            });
+        } catch (e) {
+            console.warn('Mermaid rendering exception:', e);
+        }
+    }
+
+    let reRenderTimeout = null;
+    function scheduleThemeReRender() {
+        if (reRenderTimeout) clearTimeout(reRenderTimeout);
+        reRenderTimeout = setTimeout(async () => {
+            const targets = document.querySelectorAll('.mermaid, .mermaidgraph pre');
+            targets.forEach(el => {
+                const src = el.getAttribute('data-mermaid-src');
+                if (src) {
+                    el.removeAttribute('data-processed');
+                    el.textContent = src;
+                }
+            });
+            await renderMermaidDiagrams();
+        }, 80);
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', renderMermaidDiagrams);
+    } else {
+        renderMermaidDiagrams();
+    }
+
+    const observer = new MutationObserver(mutations => {
+        for (const m of mutations) {
+            if (m.attributeName === 'class') {
+                scheduleThemeReRender();
+                break;
+            }
+        }
+    });
+    observer.observe(document.documentElement, { attributes: true });
 </script>
 </head>
 <body>

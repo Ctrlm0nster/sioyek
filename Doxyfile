@@ -126,18 +126,20 @@ HTML_FILE_EXTENSION    = .html
 HTML_HEADER            = docs/doxygen-awesome/header.html
 HTML_FOOTER            = docs/doxygen-awesome/footer.html
 HTML_EXTRA_STYLESHEET  = docs/doxygen-awesome/doxygen-awesome.css \
-                         docs/doxygen-awesome/doxygen-awesome-sidebar-only.css
+                         docs/doxygen-awesome/doxygen-awesome-sidebar-only.css \
+                         docs/doxygen-awesome/sioyek.css
 HTML_EXTRA_FILES       = docs/doxygen-awesome/doxygen-awesome-darkmode-toggle.js \
                          docs/doxygen-awesome/doxygen-awesome-paragraph-link.js \
                          docs/doxygen-awesome/doxygen-awesome-interactive-toc.js \
                          LICENSE
 HTML_COLORSTYLE        = LIGHT
-DISABLE_INDEX          = YES
 GENERATE_TREEVIEW      = YES
 TREEVIEW_WIDTH         = 335
 EXT_LINKS_IN_WINDOW    = NO
 HTML_FORMULA_FORMAT    = png
 SEARCHENGINE           = YES
+MERMAID_RENDER_MODE    = CLIENT_SIDE
+MERMAID_JS_URL         = https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs
 
 # LaTeX Output
 GENERATE_LATEX         = NO

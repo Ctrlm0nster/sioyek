@@ -1,0 +1,42 @@
+/* Keep the search control visible when the desktop sidebar replaces the menu. */
+@media screen and (min-width: 768px) {
+    #main-menu > #searchBoxPos2 {
+        display: block;
+    }
+}
+
+/* Beautiful Mermaid Diagram Styling */
+.mermaidgraph {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    padding: 1.5rem 1rem;
+    background: var(--page-background-color, #ffffff);
+    border: 1px solid var(--separator-color, #e0e0e0);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    overflow-x: auto;
+}
+
+html.dark-mode .mermaidgraph {
+    background: var(--page-background-color, #1e1e2e);
+    border-color: var(--separator-color, #313244);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.mermaidgraph pre.mermaid {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: inline-block;
+    text-align: center;
+    max-width: 100%;
+}
+
+.mermaidgraph svg {
+    max-width: 100%;
+    height: auto;
+    font-family: inherit !important;
+}
