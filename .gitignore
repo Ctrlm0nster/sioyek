@@ -364,7 +364,6 @@ libs/*
 lib_debug/*
 lib_release/*
 *.rc
-pdf_viewer/fonts/*
 *.stash
 pdf_viewer/todo.txt
 sioyek_log.txt

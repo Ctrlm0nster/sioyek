@@ -1,8 +1,7 @@
 # Building and maintaining Sioyek on Arch Linux
 
 CMake + Ninja is required for the Vulkan renderer and its embedded SPIR-V
-shaders. The legacy qmake project stops with a migration message. Do not use
-`build_linux.sh`: it is a legacy qmake script that removes `build/`.
+shaders. Use the development or packaging commands below.
 
 ## Dependencies
 

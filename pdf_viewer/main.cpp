@@ -39,7 +39,6 @@
 #include <qdir.h>
 
 #include <mupdf/fitz.h>
-#include "sqlite3.h"
 
 
 #include "input.h"

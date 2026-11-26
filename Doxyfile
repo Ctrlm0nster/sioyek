@@ -89,18 +89,10 @@ FILE_PATTERNS          = *.c \
 
 RECURSIVE              = YES
 
-EXCLUDE                = pdf_viewer/sqlite3.h \
-                         pdf_viewer/sqlite3ext.h \
-                         pdf_viewer/sqlite3.c \
-                         pdf_viewer/shell.c \
-                         pdf_viewer/rapidfuzz_amalgamated.hpp \
+EXCLUDE                = pdf_viewer/rapidfuzz_amalgamated.hpp \
                          pdf_viewer/synctex
 
-EXCLUDE_PATTERNS       = */sqlite3.h \
-                         */sqlite3ext.h \
-                         */sqlite3.c \
-                         */shell.c \
-                         */rapidfuzz_amalgamated.hpp \
+EXCLUDE_PATTERNS       = */rapidfuzz_amalgamated.hpp \
                          */stb_*.h \
                          */synctex/* \
                          */mupdf/* \

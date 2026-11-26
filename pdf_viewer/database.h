@@ -6,7 +6,7 @@
 #include <iostream>
 #include <string>
 #include <mutex>
-#include "sqlite3.h"
+#include <sqlite3.h>
 #include "book.h"
 
 class CachedChecksummer;

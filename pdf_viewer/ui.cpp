@@ -5,12 +5,6 @@
 #include <QTapGesture>
 #include <main_widget.h>
 
-#include <QQuickView>
-#include <QQmlComponent>
-#include <QQuickItem>
-#include <QQmlEngine>
-#include <QQuickWidget>
-#include <QFile>
 #include "touchui/TouchSlider.h"
 #include "touchui/TouchConfigMenu.h"
 #include "touchui/TouchSettings.h"
@@ -747,7 +741,6 @@ void SearchButtons::resizeEvent(QResizeEvent* resize_event) {
     move((parent_width - width) / 2, parent_height - 3 * height / 2);
 }
 
-//ConfigUI::ConfigUI(MainWidget* parent) : QQuickWidget(parent){
 ConfigUI::ConfigUI(std::string name, MainWidget* parent) : QWidget(parent) {
     main_widget = parent;
     config_name = name;
@@ -784,34 +777,6 @@ Color3ConfigUI::Color3ConfigUI(std::string name, MainWidget* parent, float* conf
             main_widget->persist_config();
         }
         });
-
-    //    QQmlEngine* engine = new QQmlEngine();
-    //    QQmlComponent* component = new QQmlComponent(engine, QUrl("qrc:/pdf_viewer/qml/MyColorPicker.qml"), this);
-    //    QObject *object = component->create();
-    //    QQuickItem *item = qobject_cast<QQuickItem*>(object);
-
-    //    QFile source_file("qrc:/pdf_viewer/qml/MyColorPicker.qml");
-    //    QString source = source_file.readAll();
-
-    //    QQuickWidget* quick_widget(source, this);
-    //    QUrl url("qrc:/pdf_viewer/qml/MyColorPicker.qml");
-    //    color_picker = new QQuickWidget(url, this);
-    //    color_picker->setSizePolicy(QSizePolicy::Policy::Maximum, QSizePolicy::Policy::Maximum);
-    //    color_picker->show();
-    //    TouchSlider* slider = new TouchSlider(0, 100, 25, this);
-    //    QObject::connect(slider, &TouchSlider::itemSelected, [&](int selected_value){
-    //        qDebug() << "selected " << selected_value << "\n";
-
-    //    });
-
-
-    //    QObject::connect(color_picker, SIGNAL()
-
-    //    QQuickWidget
-    //    QQuickView* view = new QQuickView();
-    //    view->setSource(QUrl("qrc:/pdf_viewer/qml/MyColorPicker.qml"));
-    //    view->show();
-
 
 }
 

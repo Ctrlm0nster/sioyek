@@ -135,8 +135,9 @@ Sioyek vendors a pinned version of MuPDF 1.26.11 as a git submodule:
 git submodule update --init --recursive
 ```
 
-### Error: `Do not run build_linux.sh`
-`build_linux.sh` is a legacy QMake build script that is deprecated. Use CMake + Ninja:
+### Build the reader with CMake and Ninja
+
+From the repository root, run either command:
 ```sh
 scripts/dev-build.sh
 # or:
