@@ -1,5 +1,4 @@
 #include "touchui/TouchGenericButtons.h"
-#include <qstringlistmodel.h>
 
 
 TouchGenericButtons::TouchGenericButtons(std::vector<std::wstring> buttons, std::vector<std::wstring> tips, bool top, QWidget* parent) : QWidget(parent) {

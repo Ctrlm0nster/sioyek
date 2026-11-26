@@ -9,12 +9,8 @@
 #include <cmath>
 #include <limits>
 #include <condition_variable>
-#include <variant>
-#include <unordered_map>
 #include <map>
 #include <optional>
-#include <iostream>
-#include <functional>
 #include <thread>
 
 #include <qobject.h>

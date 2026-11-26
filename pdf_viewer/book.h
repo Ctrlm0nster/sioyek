@@ -5,9 +5,6 @@
 #include <string>
 #include <variant>
 #include <mupdf/fitz.h>
-//#include <gl/glew.h>
-#include "render_types.h"
-#include <variant>
 #include <qjsonobject.h>
 #include <qdatetime.h>
 #include <qpixmap.h>
@@ -288,12 +285,6 @@ struct TocNode {
 
 class Document;
 
-struct CachedPageData {
-    Document* doc = nullptr;
-    int page;
-    float zoom_level;
-};
-
 enum class ReferenceType {
     Generic,
     Equation,
@@ -316,18 +307,6 @@ struct SmartViewCandidate {
     DocumentPos get_docpos(DocumentView* view);
     AbsoluteDocumentPos get_abspos(DocumentView* view);
 };
-
-// Legacy page metadata. RenderHandle identifies an owned CPU image; each
-// Vulkan widget creates its own device-local texture from that image.
-struct CachedPage {
-    CachedPageData cached_page_data;
-    fz_pixmap* cached_page_pixmap = nullptr;
-
-    // last_access_time is used to garbage collect old pages
-    unsigned int last_access_time;
-    RenderHandle cached_page_texture;
-};
-bool operator==(const CachedPageData& lhs, const CachedPageData& rhs);
 
 
 /*

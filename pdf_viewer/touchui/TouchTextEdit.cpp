@@ -1,5 +1,4 @@
 #include "touchui/TouchTextEdit.h"
-#include "utils.h"
 
 
 TouchTextEdit::TouchTextEdit(QString name, QString initial_value, QWidget* parent, bool is_password) : QWidget(parent), is_password(is_password) {

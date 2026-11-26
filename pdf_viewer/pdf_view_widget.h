@@ -13,7 +13,6 @@
 
 #include "coordinates.h"
 #include "book.h"
-#include "path.h"
 
 /**
  * @file pdf_view_widget.h

@@ -37,17 +37,15 @@
 
 
 #include <QKeyEvent>
+#include <QScopedValueRollback>
 #include <qlabel.h>
 #include <qlineedit.h>
-#include <qlistview.h>
 #include <qpushbutton.h>
-#include <qsortfilterproxymodel.h>
 #include <qstringlistmodel.h>
 #include <qtextedit.h>
 #include <qtimer.h>
 #include <qtreeview.h>
 #include <qwindow.h>
-#include <qstandardpaths.h>
 #include <qprocess.h>
 #include <qguiapplication.h>
 #include <qmimedata.h>
@@ -58,12 +56,10 @@
 #include <qlocalsocket.h>
 #include <qbytearray.h>
 #include <qscrollbar.h>
-#include <qtexttospeech.h>
 #include <qwidget.h>
 #include <qjsengine.h>
 #include <qqmlengine.h>
 #include <qtextdocumentfragment.h>
-#include <qmenubar.h>
 #include <qstylehints.h>
 
 #include <mupdf/fitz.h>
@@ -78,17 +74,17 @@
 #include "document_view.h"
 #include "pdf_view_widget.h"
 #include "config.h"
-#include "utf8.h"
 #include "synctex/synctex_parser.h"
 #include "path.h"
 #include "touchui/TouchMarkSelector.h"
+#include "touchui/TouchGenericButtons.h"
+#include "touchui/TouchTextEdit.h"
 #include "checksum.h"
 #include "touchui/TouchSettings.h"
 
 #include "main_widget.h"
 
 extern "C" {
-    #include <fzf/fzf.h>
 }
 
 
@@ -1315,9 +1311,7 @@ MainWidget::MainWidget(fz_context* mupdf_context,
     });
 
 
-#if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
     set_color_mode_to_system_theme();
-#endif
 
     setFocus();
 }
@@ -4749,11 +4743,9 @@ void MainWidget::changeEvent(QEvent* event) {
         }
     }
 
-#if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
     if (event->type() == QEvent::ThemeChange) {
-      set_color_mode_to_system_theme();
+        set_color_mode_to_system_theme();
     }
-#endif
 
     QWidget::changeEvent(event);
 }
@@ -7213,7 +7205,6 @@ void MainWidget::set_custom_color_mode() {
 
 
 void MainWidget::set_color_mode_to_system_theme() {
-#if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
     if (USE_SYSTEM_THEME) {
         QStyleHints *style_hints =  QGuiApplication::styleHints();
         if (style_hints->colorScheme() == Qt::ColorScheme::Light){
@@ -7228,7 +7219,6 @@ void MainWidget::set_color_mode_to_system_theme() {
             }
         }
     }
-#endif
 }
 
 void MainWidget::update_highlight_buttons_position() {
@@ -8654,17 +8644,11 @@ TextToSpeechHandler* MainWidget::get_tts() {
 
     tts = new QtTextToSpeechHandler();
 
-
-    //void sayingWord(const QString &word, qsizetype id, qsizetype start, qsizetype length);
-
-#if QT_VERSION >= QT_VERSION_CHECK(6, 6, 0)
-
     tts_has_pause_resume_capability = tts->is_pausable();
     if (tts->is_word_by_word()) {
         word_by_word_reading = true;
     }
-    
-    //void aboutToSynthesize(qsizetype id);
+
     tts->set_word_callback([&](int start, int length) {
         if (is_reading) {
             if (start >= tts_corresponding_line_rects.size()) return;
@@ -8765,18 +8749,6 @@ TextToSpeechHandler* MainWidget::get_tts() {
             }
         }
     });
-
-#else
-    QObject::connect(tts, &QTextToSpeech::stateChanged, [&](QTextToSpeech::State state) {
-        if ((state == QTextToSpeech::Ready) || (state == QTextToSpeech::Error)) {
-            if (is_reading) {
-                move_visual_mark(1);
-                //read_current_line();
-                invalidate_render();
-            }
-        }
-        });
-#endif
 
     return tts;
 }

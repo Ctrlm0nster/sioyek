@@ -1,9 +1,7 @@
 #pragma once
 
-#include <iostream>
 #include <optional>
 #include <vector>
-#include <iostream>
 #include <string>
 #include <mutex>
 #include <sqlite3.h>

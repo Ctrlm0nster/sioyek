@@ -2,7 +2,6 @@
 #include <vector>
 #include <string>
 #include <optional>
-#include <iostream>
 #include <thread>
 #include <mutex>
 #include <map>
@@ -17,7 +16,6 @@
 #include <qobject.h>
 #include <qnetworkreply.h>
 #include <qjsondocument.h>
-#include <qurlquery.h>
 
 #include "book.h"
 #include "coordinates.h"

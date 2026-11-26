@@ -7,7 +7,6 @@
 #include <qfile.h>
 
 #include "pdf_view_widget.h"
-#include "path.h"
 #include "book.h"
 #include "document.h"
 #include "document_view.h"

@@ -3,15 +3,12 @@
 #include <fstream>
 #include <functional>
 #include <iostream>
-#include <sstream>
 #include <string>
 #include <vector>
 #include <deque>
 #include <map>
-#include <set>
 #include <regex>
 #include <optional>
-#include <memory>
 #include <mutex>
 #include <chrono>
 #include <cstdint>
@@ -20,14 +17,12 @@
 
 #include <QKeyEvent>
 #include <qstandarditemmodel.h>
-#include <qpoint.h>
 #include <qjsonarray.h>
 #include <qtexttospeech.h>
 
 #include <mupdf/fitz.h>
 
 #include "book.h"
-#include "utf8.h"
 #include "coordinates.h"
 
 #define LL_ITER(name, start) for(auto name=start;(name);name=name->next)

@@ -12,13 +12,6 @@ bool operator==(const DocumentViewState& lhs, const DocumentViewState& rhs)
         (lhs.document_path == rhs.document_path);
 }
 
-bool operator==(const CachedPageData& lhs, const CachedPageData& rhs) {
-    if (lhs.doc != rhs.doc) return false;
-    if (lhs.page != rhs.page) return false;
-    if (lhs.zoom_level != rhs.zoom_level) return false;
-    return true;
-}
-
 Portal Portal::with_src_offset(float src_offset)
 {
     Portal res = Portal();

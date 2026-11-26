@@ -1,5 +1,6 @@
 #include "pdf_renderer.h"
 #include <algorithm>
+#include <iostream>
 #include <cstdlib>
 
 static void require(bool condition, const char* message) {

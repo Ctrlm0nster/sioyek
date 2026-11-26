@@ -4,13 +4,8 @@
 #include <string>
 #include <assert.h>
 #include <utility>
-#include <algorithm>
-#include <thread>
 #include <optional>
 #include <deque>
-#include <mutex>
-
-#include <mupdf/fitz.h>
 
 #include "coordinates.h"
 #include "book.h"

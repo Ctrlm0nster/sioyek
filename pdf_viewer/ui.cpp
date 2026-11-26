@@ -1,4 +1,5 @@
 #include "ui.h"
+#include <qboxlayout.h>
 #include <qfiledialog.h>
 
 #include <QItemSelectionModel>

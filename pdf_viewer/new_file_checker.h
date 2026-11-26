@@ -3,7 +3,6 @@
 #include <vector>
 #include <qstring.h>
 #include <qfilesystemwatcher.h>
-#include <qdir.h>
 
 class MainWidget;
 

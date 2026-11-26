@@ -11,9 +11,9 @@
 #include <mutex>
 
 #include <qnetworkaccessmanager.h>
-#include <qquickwidget.h>
 #include <qjsondocument.h>
 #include <qmainwindow.h>
+#include <qjsengine.h>
 #include <QElapsedTimer>
 
 #include "book.h"

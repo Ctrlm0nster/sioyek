@@ -1,6 +1,6 @@
 #include "touchui/TouchListView.h"
 #include <QVariant>
-#include "ui.h"
+#include <qstringlistmodel.h>
 
 #include "mysortfilterproxymodel.h"
 

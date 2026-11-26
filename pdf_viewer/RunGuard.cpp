@@ -1,8 +1,8 @@
 #include "RunGuard.h"
 
 #include <QCryptographicHash>
-#include <QtCore>
-#include <QTimer>
+#include <QCoreApplication>
+#include <QDebug>
 
 namespace
 {

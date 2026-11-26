@@ -1,4 +1,3 @@
-#include <cwctype>
 #include <cmath>
 #include <cassert>
 #include "utils.h"
@@ -19,15 +18,13 @@
 #include <qstringlist.h>
 #include <qcommandlineparser.h>
 #include <qdir.h>
-#include <qurl.h>
 #include <qnetworkaccessmanager.h>
-#include <qnetworkrequest.h>
 #include <qnetworkreply.h>
-#include <qscreen.h>
 #include <qjsonarray.h>
 #include <quuid.h>
 #include <qjsondocument.h>
 #include "path.h"
+#include "utf8.h"
 
 #include <mupdf/pdf.h>
 

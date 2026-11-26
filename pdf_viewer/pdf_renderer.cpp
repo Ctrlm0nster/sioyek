@@ -1,4 +1,5 @@
 #include "pdf_renderer.h"
+#include <iostream>
 #include "utils.h"
 #include <qdatetime.h>
 #include <algorithm>

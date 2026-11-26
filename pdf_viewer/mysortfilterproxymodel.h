@@ -1,7 +1,6 @@
 #pragma once
 #include <QString>
 #include <qsortfilterproxymodel.h>
-#include <map>
 #include <qmap.h>
 
 extern "C" {

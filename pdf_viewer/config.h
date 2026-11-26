@@ -4,10 +4,8 @@
 #include <string>
 #include <sstream>
 #include <fstream>
-#include <iostream>
 #include <optional>
 #include <variant>
-#include <map>
 #include <functional>
 #include <qwidget.h>
 #include <qabstractitemmodel.h>

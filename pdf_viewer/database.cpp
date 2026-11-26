@@ -1,4 +1,5 @@
 #include "database.h"
+#include <iostream>
 #include <sstream>
 #include <cassert>
 #include <utility>

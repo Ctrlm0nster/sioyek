@@ -1,12 +1,11 @@
 #include <cmath>
 
 #include "document_view.h"
+#include <iostream>
 #include "checksum.h"
 #include "database.h"
 #include "document.h"
-#include "qlogging.h"
 #include "utils.h"
-#include "config.h"
 #include "ui.h"
 
 extern float MOVE_SCREEN_PERCENTAGE;

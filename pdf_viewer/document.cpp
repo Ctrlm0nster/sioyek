@@ -1,9 +1,9 @@
 #include "document.h"
 #include <algorithm>
+#include <iostream>
 #include <thread>
 #include <cmath>
 #include "coordinates.h"
-#include "utf8.h"
 #include <qfileinfo.h>
 #include <qdatetime.h>
 #include <map>
@@ -14,10 +14,6 @@
 #include "path.h"
 #include <qjsonarray.h>
 #include <qjsonobject.h>
-#include <qjsondocument.h>
-#include <qdir.h>
-#include <qstandardpaths.h>
-#include <set>
 
 #include <mupdf/pdf.h>
 

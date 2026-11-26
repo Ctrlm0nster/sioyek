@@ -16,6 +16,8 @@
 #include <qfileinfo.h>
 #include <qclipboard.h>
 #include <qguiapplication.h>
+#include <qapplication.h>
+#include <qtimer.h>
 
 #include "coordinates.h"
 #include "utils.h"
@@ -24,6 +26,7 @@
 #include "ui.h"
 #include "document.h"
 #include "document_view.h"
+#include "touchui/TouchTextEdit.h"
 
 
 extern bool SHOULD_WARN_ABOUT_USER_KEY_OVERRIDE;

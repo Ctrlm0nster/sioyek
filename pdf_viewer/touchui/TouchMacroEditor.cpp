@@ -1,6 +1,4 @@
 #include "touchui/TouchMacroEditor.h"
-#include "utils.h"
-#include <qstandarditemmodel.h>
 #include <qsortfilterproxymodel.h>
 #include "main_widget.h"
 #include <qstringlistmodel.h>

@@ -11,32 +11,17 @@
 
 #include <QDebug>
 #include <qapplication.h>
-#include <qpushbutton.h>
 #include <qwindow.h>
 #include <QKeyEvent>
-#include <qlineedit.h>
-#include <qtreeview.h>
-#include <qsortfilterproxymodel.h>
-#include <qabstractitemmodel.h>
-#include <qtimer.h>
-#include <qdatetime.h>
-#include <qstackedwidget.h>
-#include <qboxlayout.h>
-#include <qlistview.h>
-#include <qstringlistmodel.h>
-#include <qlabel.h>
-#include <qtextedit.h>
 #include <qfilesystemwatcher.h>
-
-
 #include <qfontdatabase.h>
-#include <qstandarditemmodel.h>
-#include <qscrollarea.h>
 #include <qdesktopservices.h>
-#include <qprocess.h>
 #include <qstandardpaths.h>
 #include <qcommandlineparser.h>
 #include <qdir.h>
+#include <qurlquery.h>
+#include <qquickwindow.h>
+#include <qqml.h>
 
 #include <mupdf/fitz.h>
 
@@ -57,16 +42,11 @@
 #include "checksum.h"
 #include "OpenWithApplication.h"
 #include "new_file_checker.h"
-
-#define FTS_FUZZY_MATCH_IMPLEMENTATION
-#include "fts_fuzzy_match.h"
-#undef FTS_FUZZY_MATCH_IMPLEMENTATION
+#include "mysortfilterproxymodel.h"
 
 #ifndef MAX_PATH
 #define MAX_PATH PATH_MAX
 #endif
-
-//#define LINUX_STANDARD_PATHS
 
 
 std::string APPLICATION_VERSION = "3.0.0-dev";
@@ -173,20 +153,14 @@ QStringList convert_arguments(QStringList input_args) {
 void configure_paths() {
     Path parent_path(QCoreApplication::applicationDirPath().toStdWString());
 
-
-
-
     QStringList all_config_paths = QStandardPaths::standardLocations(QStandardPaths::AppConfigLocation);
     for (int i = all_config_paths.size() - 1; i >= 0; i--) {
         user_config_paths.push_back(Path(all_config_paths.at(i).toStdWString()).slash(L"prefs_user.config"));
         user_keys_paths.push_back(Path(all_config_paths.at(i).toStdWString()).slash(L"keys_user.config"));
     }
 
-#ifdef LINUX_STANDARD_PATHS
     Path home_path(QDir::homePath().toStdWString());
     standard_data_path = home_path.slash(L".local").slash(L"share").slash(L"sioyek");
-    Path standard_config_path = Path(L"/etc/sioyek");
-#ifdef SIOYEK_INSTALL_DATA_DIR
     Path read_only_data_path(utf8_decode(SIOYEK_INSTALL_DATA_DIR));
     Path installed_resources = parent_path.slash(utf8_decode(SIOYEK_RELATIVE_DATA_DIR));
     if (installed_resources.slash(L"prefs.config").file_exists()) {
@@ -196,9 +170,6 @@ void configure_paths() {
     if (build_resources.slash(L"prefs.config").file_exists()) {
         read_only_data_path = build_resources;
     }
-#else
-    Path read_only_data_path = Path(L"/usr/share/sioyek");
-#endif
     standard_data_path.create_directories();
 
     default_config_path = read_only_data_path.slash(L"prefs.config");
@@ -209,40 +180,6 @@ void configure_paths() {
     global_database_file_path = standard_data_path.slash(L"shared.db");
     tutorial_path = read_only_data_path.slash(L"tutorial.pdf");
     last_opened_file_address_path = standard_data_path.slash(L"last_document_path.txt");
-#else
-    char* APPDIR = std::getenv("XDG_DATA_HOME");
-    Path linux_home_path(QDir::homePath().toStdWString());
-
-    if (!APPDIR) {
-        APPDIR = std::getenv("HOME");
-        standard_data_path = Path(utf8_decode(APPDIR));
-        standard_data_path = standard_data_path.slash(L".local").slash(L"share");
-    } else {
-        standard_data_path = Path(utf8_decode(APPDIR));
-    }
-
-    standard_data_path = standard_data_path.slash(L"sioyek");
-    standard_data_path.create_directories();
-
-    default_config_path = parent_path.slash(L"prefs.config");
-    //user_config_path = standard_data_path.slash(L"prefs_user.config");
-    user_config_paths.push_back(standard_data_path.slash(L"prefs_user.config"));
-    default_keys_path = parent_path.slash(L"keys.config");
-    user_keys_paths.push_back(standard_data_path.slash(L"keys_user.config"));
-    database_file_path = standard_data_path.slash(L"test.db");
-    local_database_file_path = standard_data_path.slash(L"local.db");
-    global_database_file_path = standard_data_path.slash(L"shared.db");
-    tutorial_path = standard_data_path.slash(L"tutorial.pdf");
-    last_opened_file_address_path = standard_data_path.slash(L"last_document_path.txt");
-
-    Path linux_standard_config_path = linux_home_path.slash(L".config").slash(L"sioyek");
-    user_keys_paths.push_back(linux_standard_config_path.slash(L"keys_user.config"));
-    user_config_paths.push_back(linux_standard_config_path.slash(L"prefs_user.config"));
-
-    if (!tutorial_path.file_exists()) {
-        copy_file(parent_path.slash(L"tutorial.pdf"), tutorial_path);
-    }
-#endif
     auto_config_path = standard_data_path.slash(L"auto.config");
     // user_config_paths.insert(user_config_paths.begin(), auto_config_path);
     downloaded_papers_path = standard_data_path.slash(L"downloads");

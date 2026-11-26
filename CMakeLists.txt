@@ -124,11 +124,6 @@ target_sources(sioyek PUBLIC
       pdf_viewer/synctex/synctex_parser_utils.c pdf_viewer/synctex/synctex_parser_utils.h
 )
 
-
-target_compile_definitions(sioyek PRIVATE
-      LINUX_STANDARD_PATHS
-)
-
 find_package(ZLIB REQUIRED)
 find_package(HarfBuzz REQUIRED)
 find_package(SQLite3 REQUIRED)
@@ -146,13 +141,6 @@ elseif(TARGET HarfBuzz::HarfBuzz)
   set(SIOYEK_HARFBUZZ_LIBS HarfBuzz::HarfBuzz)
 else()
   set(SIOYEK_HARFBUZZ_LIBS ${HARFBUZZ_LIBRARIES})
-endif()
-
-if((QT_VERSION_MAJOR GREATER 5))
-  target_compile_definitions(sioyek PRIVATE
-        SIOYEK_QT6
-  )
-
 endif()
 
 add_library(fzf STATIC
